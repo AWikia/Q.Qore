@@ -1,0 +1,575 @@
+/* Standard (V1) */
+:root {
+--background-image:url("headbg.jpg");
+--background-color:#e995ca;
+--link-color:24,187,197;
+--content-bg:#ffffff;
+--dropdown-bg:#FFFFFF;
+--content-border:#ccc;
+--content-color:#000000;
+--button-color:#18BBC5;
+--button-color-dark:#15A3AC;
+--button-color-text:white;
+--community-header-bg:0,0,255;
+--community-header-text:248,248,248;
+}
+
+/* Standard (V2) */
+:root {
+--background-image:url("headbg2.jpg");
+--background-color:#e995ca;
+--link-color:25,77,204;
+--content-bg:#ffffff;
+--dropdown-bg:#FFFFFF;
+--content-border:#ccc;
+--content-color:#010101;
+--button-color:#194cd1;
+--button-color-dark:#1643B8;
+--button-color-text:white;
+--community-header-bg:153,153,255;
+--community-header-text:23,23,23;
+}
+
+/* Standard (V3) */
+:root {
+--background-image:url("headbg7.jpg");
+--background-color:#672752;
+--link-color:232,30,40;
+--content-bg:#fffaf5;
+--dropdown-bg:#FFFFFF;
+--content-border:#bbbbbb;
+--content-color:#111122;
+--button-color:#CA3A22;
+--button-color-dark:#B1321D;
+--button-color-text:white;
+--community-header-bg:88,53,130;
+--community-header-text:248,248,248;
+}
+
+/* Standard (V4) */
+:root {
+--background-image:url("headbg7.jpg");
+--background-color:#672752;
+--link-color:232,30,40;
+--content-bg:#fffcfa;
+--dropdown-bg:#FFFFFF;
+--content-border:#bbbbbb;
+--content-color:#111122;
+--button-color:#583582;
+--button-color-dark:#693f9c;
+--button-color-text:white;
+--community-header-bg:202,58,34;
+--community-header-text:248,248,248;
+}
+
+/* Standard ~ */
+:root {
+--background-image:url("headbg8.jpg");
+--background-color:#67f0ff;
+--link-color:163,71,208;
+--content-bg:#fbedfe;
+--dropdown-bg:#FFFFFF;
+--content-border:#ffdc87;
+--content-color:#2a4b6c;
+--button-color:#7AB247;
+--button-color-dark:#8BCC51;
+--button-color-text:black;
+--community-header-bg:82,192,251;
+--community-header-text:248,248,248;
+}
+
+/* Standard Gloved Version ~~ */
+:root {
+--background-image:url("headbg.jpg");
+--background-color:#54d9f8;
+--link-color:134,4,152;
+--content-bg:#ffecff;
+--dropdown-bg:#F6EFF9;
+--content-border:#ddf759;
+--content-color:#2a2a2a;
+--button-color:#70C800;
+--button-color-dark:#62AF00;
+--button-color-text:white;
+--community-header-bg:80,103,155;
+--community-header-text:23,23,23;
+}
+
+/* Standard Dark Version ~ */
+:root {
+--background-image:url("headbg3.jpg");
+--background-color:#610038;
+--link-color:0,0,255;
+--content-bg:#282828;
+--dropdown-bg:#1A1A1A;
+--content-border:#cccccc;
+--content-color:#f9f9f9;
+--button-color:#00178C;
+--button-color-dark:#001BA5;
+--button-color-text:white;
+--community-header-bg:127,105,105;
+--community-header-text:248,248,248;
+}
+
+/* Standard Nightly Version */
+:root {
+--background-image:url("https://d1u5p3l4wpay3k.cloudfront.net/maia_gamepedia/9/98/Bg.jpg?version=b5f279562cd466d98662305ef384edb0");
+--background-color:#000;
+--link-color:0,255,255;
+--content-bg:#3a3a3a;
+--dropdown-bg:#232323;
+--content-border:#cccddd;
+--content-color:#c9d4d5;
+--button-color:#264774;
+--button-color-dark:#2E568D;
+--button-color-text:white;
+--community-header-bg:102,51,153;
+--community-header-text:248,248,248;
+}
+
+/* Standard Canary Version */
+:root {
+--background-image:url("canary.jpg");
+--background-color:#fcc101;
+--link-color:231,105,1;
+--content-bg:#ebe5da;
+--dropdown-bg:#FFFFFF;
+--content-border:#ebc780;
+--content-color:#1a1a1a;
+--button-color:#F5A14C;
+--button-color-dark:#DC9044;
+--button-color-text:black;
+--community-header-bg:225,171,24;
+--community-header-text:248,248,248;
+}
+
+/* Standard Developer Edition Version */
+:root {
+--background-image:url("dev.jpg");
+--background-color:#0000aa;
+--link-color:0,170,255;
+--content-bg:#0000a8;
+--dropdown-bg:#7D7FD0;
+--content-border:#aaaacc;
+--content-color:#f9f9f9;
+--button-color:#00699E;
+--button-color-dark:#005884;
+--button-color-text:white;
+--community-header-bg:22,196,196;
+--community-header-text:248,248,248;
+}
+
+/* Agent */
+:root {
+--background-image:url("headbg.jpg");
+--background-color:#aa00aa;
+--link-color:221,154,255;
+--content-bg:#1aef28;
+--dropdown-bg:#89F093;
+--content-border:#b0a1ee;
+--content-color:#002200;
+--button-color:#18C5BB;
+--button-color-dark:#15ACA3;
+--button-color-text:white;
+--community-header-bg:170,153,0;
+--community-header-text:248,248,248;
+}
+
+/* Sagent */
+:root {
+--background-image:url("headbg4.jpg");
+--background-color:#e95500;
+--link-color:148,24,197;
+--content-bg:#fdfeff;
+--dropdown-bg:#FFFFFF;
+--content-border:#eee;
+--content-color:#1a2a3a;
+--button-color:#FF7E09;
+--button-color-dark:#E67108;
+--button-color-text:white;
+--community-header-bg:255,126,9;
+--community-header-text:248,248,248;
+}
+
+/* Flipin */
+:root {
+--background-image:url("headbg.jpg");
+--background-color:#9e55ac;
+--link-color:129,187,92;
+--content-bg:#ffffff;
+--dropdown-bg:#FFFFFF;
+--content-border:#cccccc;
+--content-color:#000000;
+--button-color:#81BB5C;
+--button-color-dark:#6FA24F;
+--button-color-text:black;
+--community-header-bg:0,0,255;
+--community-header-text:248,248,248;
+}
+
+/* Gleun */
+:root {
+--background-image:url("headbg6.jpg");
+--background-color:#ac599e;
+--link-color:92,187,129;
+--content-bg:#ffffff;
+--dropdown-bg:#FFFFFF;
+--content-border:#cccccc;
+--content-color:#000000;
+--button-color:#5CBB81;
+--button-color-dark:#4FA26F;
+--button-color-text:black;
+--community-header-bg:255,0,0;
+--community-header-text:248,248,248;
+}
+
+/* GleunFlippin */
+:root {
+--background-image:url("headbg6.jpg");
+--background-color:#ca95e9;
+--link-color:197,187,24;
+--content-bg:#ffffff;
+--dropdown-bg:#FFFFFF;
+--content-border:#cccccc;
+--content-color:#000000;
+--button-color:#C5BB18;
+--button-color-dark:#ACA315;
+--button-color-text:white;
+--community-header-bg:255,0,0;
+--community-header-text:248,248,248;
+}
+
+/* Classic ~ */
+:root {
+--background-image:url("headbg.jpg");
+--background-color:#3975a9;
+--link-color:0,0,159;
+--content-bg:#d6cec8;
+--dropdown-bg:#E2E1DF;
+--content-border:#848484;
+--content-color:#000000;
+--button-color:#08226C;
+--button-color-dark:#061A52;
+--button-color-text:white;
+--community-header-bg:46,84,146;
+--community-header-text:248,248,248;
+}
+
+/* Greeny ~ */
+:root {
+--background-image:url("headbg.jpg");
+--background-color:#aaffaa;
+--link-color:24,255,187;
+--content-bg:#22bb22;
+--dropdown-bg:#8DD890;
+--content-border:#00aaff;
+--content-color:#d9e9f9;
+--button-color:#32DC32;
+--button-color-dark:#2CC32C;
+--button-color-text:white;
+--community-header-bg:34,170,51;
+--community-header-text:248,248,248;
+}
+
+/* Brightness A */
+:root {
+--background-image:url("");
+--background-color:#000000;
+--link-color:128,128,255;
+--content-bg:#000000;
+--dropdown-bg:#080808;
+--content-border:#00ff00;
+--content-color:#ffff00;
+--button-color:#008000;
+--button-color-dark:#006600;
+--button-color-text:white;
+--community-header-bg:0,0,255;
+--community-header-text:248,248,248;
+}
+
+/* Brightness B */
+:root {
+--background-image:url("");
+--background-color:#000000;
+--link-color:128,128,255;
+--content-bg:#000000;
+--dropdown-bg:#080808;
+--content-border:#c0c0c0;
+--content-color:#00ff00;
+--button-color:#0000FF;
+--button-color-dark:#0000E6;
+--button-color-text:white;
+--community-header-bg:0,255,255;
+--community-header-text:248,248,248;
+}
+
+/* Brightness C */
+:root {
+--background-image:url("");
+--background-color:#000000;
+--link-color:255,255,0;
+--content-bg:#000000;
+--dropdown-bg:#080808;
+--content-border:#3ff23f;
+--content-color:#ffffff;
+--button-color:#1AEBFF;
+--button-color-dark:#17D4E6;
+--button-color-text:white;
+--community-header-bg:55,0,110;
+--community-header-text:248,248,248;
+}
+
+/* Brightness D */
+:root {
+--background-image:url("");
+--background-color:#ffffff;
+--link-color:0,0,159;
+--content-bg:#ffffff;
+--dropdown-bg:#FFFFFF;
+--content-border:#600000;
+--content-color:#000000;
+--button-color:#37006E;
+--button-color-dark:#2A0054;
+--button-color-text:white;
+--community-header-bg:0,0,0;
+--community-header-text:248,248,248;
+}
+
+/* Gaming Wiki (V1) */
+:root {
+--background-image:url("headbg5.jpg");
+--background-color:#76f6ff;
+--link-color:128,0,128;
+--content-bg:#e0e8ee;
+--dropdown-bg:#E7EDF1;
+--content-border:#ffc0cb;
+--content-color:#1a2b3c;
+--button-color:#E78097;
+--button-color-dark:#CE7286;
+--button-color-text:black;
+--community-header-bg:195,132,223;
+--community-header-text:23,23,23;
+}
+
+/* Gaming Wiki (V2) */
+:root {
+--background-image:url("headbg5.jpg");
+--background-color:#76f6ff;
+--link-color:145,19,206;
+--content-bg:#34ecc6;
+--dropdown-bg:#95EFDE;
+--content-border:#e78097;
+--content-color:#341b23;
+--button-color:#FFE2AC;
+--button-color-dark:#E6CB9B;
+--button-color-text:black;
+--community-header-bg:192,14,4;
+--community-header-text:248,248,248;
+}
+
+/* Gaming Wiki */
+:root {
+--background-image:url("grwbg.jpg");
+--background-color:#28d96d;
+--link-color:79,14,141;
+--content-bg:#fecb3c;
+--dropdown-bg:#F5DF9D;
+--content-border:#c3b0a9;
+--content-color:#1c6945;
+--button-color:#F8523C;
+--button-color-dark:#DF4935;
+--button-color-text:black;
+--community-header-bg:252,221,94;
+--community-header-text:23,23,23;
+}
+
+/* Grays ~ */
+:root {
+--background-image:url("");
+--background-color:#eee;
+--link-color:187,187,187;
+--content-bg:#ffffff;
+--dropdown-bg:#FFFFFF;
+--content-border:#cccccc;
+--content-color:#000000;
+--button-color:#CCCCCC;
+--button-color-dark:#E6E6E6;
+--button-color-text:black;
+--community-header-bg:255,255,255;
+--community-header-text:23,23,23;
+}
+
+/* MameDev */
+:root {
+--background-image:url("");
+--background-color:#f8f8f8;
+--link-color:76,139,202;
+--content-bg:#a6e2fa;
+--dropdown-bg:#CBEAF7;
+--content-border:#85b5c8;
+--content-color:#3a3a3a;
+--button-color:#4698C6;
+--button-color-dark:#3D84AD;
+--button-color-text:black;
+--community-header-bg:165,181,198;
+--community-header-text:23,23,23;
+}
+
+/* WDS ~ */
+:root {
+--background-image:url("");
+--background-color:#f6f6f6;
+--link-color:0,183,224;
+--content-bg:#ffffff;
+--dropdown-bg:#FFFFFF;
+--content-border:#cccccc;
+--content-color:#1a1a1a;
+--button-color:#00B7E0;
+--button-color-dark:#00A2C7;
+--button-color-text:white;
+--community-header-bg:64,74,87;
+--community-header-text:248,248,248;
+}
+
+/* Zekzphire Faces ~ */
+:root {
+--background-image:url("");
+--background-color:#a2ddfe;
+--link-color:225,74,34;
+--content-bg:#fefeff;
+--dropdown-bg:#FFFFFF;
+--content-border:#7e787d;
+--content-color:#020002;
+--button-color:#FEAFD3;
+--button-color-dark:#E59DBE;
+--button-color-text:black;
+--community-header-bg:99,157,4;
+--community-header-text:248,248,248;
+}
+
+/* Horoscope Referata */
+:root {
+--background-image:url("https://upload.wikimedia.org/wikipedia/commons/8/89/Meister_von_San_Vitale_in_Ravenna.jpg");
+--background-color:#4b0082;
+--link-color:75,255,130;
+--content-bg:#961e76;
+--dropdown-bg:#C48DB8;
+--content-border:#add8e7;
+--content-color:#d3e4e5;
+--button-color:#800080;
+--button-color-dark:#660066;
+--button-color-text:white;
+--community-header-bg:128,0,128;
+--community-header-text:248,248,248;
+}
+
+/* A Help Wiki */
+:root {
+--background-image:url("http://a-help.referata.com/w/images/Besto-BACK.jpg");
+--background-color:#012e55;
+--link-color:169,206,58;
+--content-bg:#ffffff;
+--dropdown-bg:#FFFFFF;
+--content-border:#cccccc;
+--content-color:#1a1a1a;
+--button-color:#F15920;
+--button-color-dark:#D84F1C;
+--button-color-text:white;
+--community-header-bg:241,89,32;
+--community-header-text:248,248,248;
+}
+
+/* Mpisto Scenes (V1) */
+:root {
+--background-image:url("headbg.jpg");
+--background-color:#a99b3a;
+--link-color:24,170,213;
+--content-bg:#abc123;
+--dropdown-bg:#CEDA91;
+--content-border:#ace135;
+--content-color:#000111;
+--button-color:#3D3D99;
+--button-color-dark:#32327F;
+--button-color-text:white;
+--community-header-bg:61,61,153;
+--community-header-text:248,248,248;
+}
+
+/* Mpisto Scenes ~ */
+:root {
+--background-image:url("headbg8.jpg");
+--background-color:#52c0fb;
+--link-color:122,178,71;
+--content-bg:#f0f8ff;
+--dropdown-bg:#FFFFFF;
+--content-border:#abc123;
+--content-color:#000011;
+--button-color:#FF7F50;
+--button-color-dark:#E67248;
+--button-color-text:black;
+--community-header-bg:140,204,81;
+--community-header-text:23,23,23;
+}
+
+/* Besto Besigns */
+:root {
+--background-image:url("");
+--background-color:#000000;
+--link-color:255,127,80;
+--content-bg:#f0f8ff;
+--dropdown-bg:#EFF4F9;
+--content-border:#ff7f50;
+--content-color:#ff7f50;
+--button-color:#DCDCDC;
+--button-color-dark:#C3C3C3;
+--button-color-text:black;
+--community-header-bg:220,220,220;
+--community-header-text:23,23,23;
+}
+
+/* Best Beta */
+:root {
+--background-image:url("headbg.jpg");
+--background-color:#e995ca;
+--link-color:24,187,197;
+--content-bg:#ffffff;
+--dropdown-bg:#FFFFFF;
+--content-border:#000000;
+--content-color:#000000;
+--button-color:#18BBC5;
+--button-color-dark:#15A3AC;
+--button-color-text:white;
+--community-header-bg:24,187,197;
+--community-header-text:248,248,248;
+}
+
+/* Latex ~ */
+:root {
+--background-image:url("headbg7.jpg");
+--background-color:#ff3333;
+--link-color:23,23,230;
+--content-bg:#e6e6ff;
+--dropdown-bg:#EAECF9;
+--content-border:#b3b3b3;
+--content-color:#1a1a1a;
+--button-color:#404080;
+--button-color-dark:#4C4C99;
+--button-color-text:white;
+--community-header-bg:0,0,204;
+--community-header-text:248,248,248;
+}
+
+/* Sharp X1 ~ */
+:root {
+--background-image:url("");
+--background-color:#ff00ff;
+--link-color:255,255,0;
+--content-bg:#ffffff;
+--dropdown-bg:#FFFFFF;
+--content-border:#00ff00;
+--content-color:#000000;
+--button-color:#00FFFF;
+--button-color-dark:#00E6E6;
+--button-color-text:white;
+--community-header-bg:0,0,255;
+--community-header-text:248,248,248;
+}
