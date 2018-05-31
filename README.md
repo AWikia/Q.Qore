@@ -7,8 +7,9 @@ https://hm100.github.io/Mpisto/Ryneeeel%20Grooze%20Chancelog.html - Changelog
 
 https://hm100.github.io/Mpisto/Options.html - Settings
 
-
 https://hm100.github.io/Mpisto/Ryneeeel%20Grooze.html - Main Page
+
+https://hm100.github.io/Mpisto/Ryneeeel%20Grooze%20Contributions.html - Rules
 
 https://hm100.github.io/Mpisto/Ryneeeel%20Grooze%20Element%20Translation.html - Elements Translation
 
