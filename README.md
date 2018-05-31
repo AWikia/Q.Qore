@@ -21,9 +21,9 @@ https://hm100.github.io/Mpisto/Ryneeeel%20Grooze%20(Store).html - Store
 https://hm100.github.io/Mpisto/Ryneeeel%20Grooze%20(Mobile).html - Mercury
 
 # Browser Requirements
-Internet Explorer 11 (Not Recommended)
+Internet Explorer 11 (Not Recommended however most features that depend on CSS variables won't work.)
 
-Edge 15 (Not Recommended), Edge 16+ (Recommended)
+Edge 15 (Not Recommended due to bugs in CSS variables), Edge 16+ (Recommended)
 
 Chrome 49 - 54 (Not Recommended), Chrome 55+ (Most Recommended Browser)
 
