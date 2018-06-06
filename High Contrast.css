@@ -1,6 +1,5 @@
 /* Buttons */
-
-body:not(.contrast):not(.basic) .highcontrastbutton.wds-button {
+body:not(.contrast):not(.basic) .highcontrastbutton.wds-dropdown {
   display:none;
 }
 
@@ -10,8 +9,8 @@ body:not(.contrast):not(.basic) .clearhighcontrastbutton.wds-button {
 
 
 @supports (--color:red) {
-body:not(.contrast):not(.basic) .highcontrastbutton.wds-button {
-  display:inline-flex;
+body:not(.contrast):not(.basic) .highcontrastbutton.wds-dropdown {
+  display:inline-block;
 }
 
 
