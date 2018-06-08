@@ -1,4 +1,5 @@
 /* Buttons */
+
 body:not(.contrast):not(.basic) .highcontrastbutton.wds-dropdown {
   display:none;
 }
@@ -7,6 +8,9 @@ body:not(.contrast):not(.basic) .clearhighcontrastbutton.wds-button {
   display:none;
 }
 
+.mpisto-options-content .highcontrastmodes {
+  display:none;
+}
 
 @supports (--color:red) {
 body:not(.contrast):not(.basic) .highcontrastbutton.wds-dropdown {
@@ -20,6 +24,14 @@ body:not(.contrast):not(.basic) .highcontrastbutton.wds-dropdown {
 
 .highcontrastbutton .wds-button {
   vertical-align:baseline;
+}
+
+.mpisto-options-content .contrastnotice {
+  display:none;
+}
+
+.mpisto-options-content .highcontrastmodes {
+  display:block;
 }
 }
 /* Remove the default High Contrast mode for Edge 15+ since we use our version of HighContrast, improved than ever */
@@ -39,7 +51,7 @@ body:not(.contrast):not(.basic) .highcontrastbutton.wds-dropdown {
   -webkit-backdrop-filter:none!important;
 }
 
-.basic *,.basic :before,.basicc  {
+.basic *,.basic :before,.basic :after  {
   -webkit-filter:none!important;
   filter:none!important;
   backdrop-filter:none!important;
@@ -47,7 +59,7 @@ body:not(.contrast):not(.basic) .highcontrastbutton.wds-dropdown {
 }
 
 
-.contrast :not(.wds-dropdown):not(time):not(.wds-list):not(input):before,.contrast :not(.wds-dropdown):not(.wds-community-header):not(.wds-list):not(input):after, .basic .wds-community-header:before, .basic header.mpisto-navbar:after, .basic footer.mpisto-footer:after, .basic header.mpisto-footer-container:after, .basic .mpisto-option-pane:after, .basic .mpisto-content:after, .basic .mpisto-option-way:after,.basic header.mpisto-navbar:before, .basic footer.mpisto-footer:before, .basic header.mpisto-footer-container:before, .basic .mpisto-option-pane:before, .basic .mpisto-content:before, .basic .mpisto-option-way:before  {
+.contrast :not(.wds-dropdown):not(.wds-community-header):not(time):not(.wds-list):not(input):before,.contrast :not(.wds-dropdown):not(.wds-community-header):not(.wds-list):not(input):after, .basic header.mpisto-navbar:after, .basic footer.mpisto-footer:after, .basic header.mpisto-footer-container:after, .basic .mpisto-option-pane:after, .basic .mpisto-content:after, .basic .mpisto-option-way:after,.basic header.mpisto-navbar:before, .basic footer.mpisto-footer:before, .basic header.mpisto-footer-container:before, .basic .mpisto-option-pane:before, .basic .mpisto-content:before, .basic .mpisto-option-way:before  {
 display:none!important;
 }
 
@@ -73,6 +85,11 @@ display:none!important;
   color:var(--button-color-text);
   border-color:currentcolor!important;
 }
+
+.main .contrast .wds-community-header:before {
+    background-image:none;
+}
+
 
 /*
 .contrast header.mpisto-navbar {
@@ -152,49 +169,30 @@ background-color:var(--dropdown-bg);
 }
 
 /* Options */
-.contrast .mpisto-option-way input[type="checkbox"], .contrast .mpisto-option-way input[type="radio"] {
+.contrast input[type="checkbox"], .contrast input[type="radio"] {
 box-shadow:0 0 0px 1px var(--content-color)!important;
 }
 
 
-.contrast .mpisto-option-way input[type="checkbox"]:hover, .contrast .mpisto-option-way input[type="radio"]:hover {
+.contrast input[type="checkbox"]:hover, .contrast input[type="radio"]:hover {
 box-shadow:0 0 0px 1px rgb(var(--link-color))!important;
 }
 
 
-.contrast .mpisto-option-way input[type="checkbox"]:active, .contrast .mpisto-option-way input[type="radio"]:active {
+.contrast input[type="checkbox"]:active, .contrast input[type="radio"]:active {
 box-shadow:0 0 0px 1px var(--content-color)!important;
 }
 
-.contrast .mpisto-option-way input[type="checkbox"]:checked, .contrast .mpisto-option-way input[type="radio"]:checked {
+.contrast input[type="checkbox"]:checked, .contrast input[type="radio"]:checked {
 box-shadow:0 0 0px 1px var(--button-color)!important;
 }
 
-
-.contrast .mpisto-option-way input[type="checkbox"]:checked:active, .contrast .mpisto-option-way input[type="radio"]:checked:active {
-box-shadow:0 0 0px 1px var(--button-color-text)!important;
-}
-
-.contrast .lightbox input[type="checkbox"], .contrast .lightbox input[type="radio"] {
-box-shadow:0 0 0px 1px var(--content-color)!important;
+.contrast input[type="checkbox"]:checked:hover, .contrast input[type="radio"]:checked:hover {
+box-shadow:0 0 0px 1px var(--button-color-dark)!important;
 }
 
 
-.contrast .lightbox input[type="checkbox"]:hover, .contrast .lightbox input[type="radio"]:hover {
-box-shadow:0 0 0px 1px rgb(var(--link-color))!important;
-}
-
-
-.contrast .lightbox input[type="checkbox"]:active, .contrast .lightbox input[type="radio"]:active {
-box-shadow:0 0 0px 1px var(--content-color)!important;
-}
-
-.contrast .lightbox input[type="checkbox"]:checked, .contrast .lightbox input[type="radio"]:checked {
-box-shadow:0 0 0px 1px var(--button-color)!important;
-}
-
-
-.contrast .lightbox input[type="checkbox"]:checked:active, .contrast .lightbox input[type="radio"]:checked:active {
+.contrast input[type="checkbox"]:checked:active, .contrast input[type="radio"]:checked:active {
 box-shadow:0 0 0px 1px var(--button-color-text)!important;
 }
 
@@ -209,6 +207,47 @@ box-shadow:0 0 0px 1px var(--button-color-text)!important;
 color:inherit;
 }
 
+
+/* Lightbox button stylings. Based on Community Header button theming on non-contrast modes */
+.contrast .lightbox h1 .wds-button, .contrast .lightbox h2 .wds-button, .contrast .lightbox footer .wds-button  {
+background-color:rgb(var(--community-header-text));
+color:rgb(var(--community-header-bg));
+border-color:rgb(var(--community-header-text));
+-webkit-background-clip:padding;
+background-clip:padding-box;
+}
+
+.contrast .lightbox h1 .wds-button:hover, .contrast .lightbox h2 .wds-button:hover, .contrast .lightbox footer .wds-button:hover  {
+background-color:rgba(var(--community-header-text), 0.8);
+color:rgb(var(--community-header-bg));
+border-color:rgba(var(--community-header-text), 0.8);
+}
+
+
+.contrast .lightbox h1 .wds-button.wds-is-secondary, .contrast .lightbox h2 .wds-button.wds-is-secondary, .contrast .lightbox footer .wds-button.wds-is-secondary  {
+color:rgb(var(--community-header-text));
+background-color:transparent;
+border-color:rgb(var(--community-header-text));
+}
+
+.contrast .lightbox h1 .wds-button.wds-is-secondary:hover, .contrast .lightbox h2 .wds-button.wds-is-secondary:hover, .contrast .lightbox footer .wds-button.wds-is-secondary:hover {
+color:rgba(var(--community-header-text), 0.8);
+background-color:transparent;
+border-color:rgba(var(--community-header-text), 0.8);
+}
+
+
+.contrast .lightbox h1 .wds-button.wds-is-text, .contrast .lightbox h2 .wds-button.wds-is-text, .contrast .lightbox footer .wds-button.wds-is-text  {
+color:rgb(var(--community-header-text));
+background-color:transparent;
+border:0;
+}
+
+.contrast .lightbox h1 .wds-button.wds-is-text:hover, .contrast .lightbox h2 .wds-button.wds-is-text:hover, .contrast .lightbox footer .wds-button.wds-is-text:hover {
+color:rgba(var(--community-header-text), 0.8);
+background-color:transparent;
+border:0;
+}
 
 
 /* Selection Styles per B19 */
