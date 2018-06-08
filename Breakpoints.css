@@ -1,4 +1,3 @@
-
 /** Breakpoints for mpisto Zekzphire **/
 /* XS */
 @media only screen and (max-width:753px) {
@@ -23,7 +22,7 @@ margin-top:8px!important;
 }
 */
 
-.mpisto-grooze {
+.mpisto-2018 {
   background-image:none!important
 }
 
@@ -169,8 +168,8 @@ footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container td h2 {
 font-size:20px;
 }
 
-.main body {
-background-image:none;
+body, .mpisto-2018 {
+background-image:none!important; /* Don't use a background image for smaller breakpoints */
 }
 
 header.mpisto-navbar .companylink {

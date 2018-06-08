@@ -322,6 +322,10 @@ header.mpisto-navbar .link {
   color:#39424d;
 }
 
+header.mpisto-navbar .link:hover, header.mpisto-navbar .wds-dropdown:hover .link {
+    color:#00B7E0;
+}
+
 footer.mpisto-footer {
 display:inherit;
 background-color:#fff;
@@ -333,9 +337,7 @@ padding:0;
 
 footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container td a:not(.wds-button):hover {
     color:#ccc;
-    color:var(--content-border);
     border-color:#39242d;
-    border-color:var(--content-color)
 }
 
 footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container th::after, footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container td::after {
