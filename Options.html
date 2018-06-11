@@ -3,7 +3,7 @@
 </defs>
 
 <html class="main">
-  <body class="mpisto-2018 options" id="Handler">
+  <body class="mpisto-2018 options theme-A" id="Handler">
 <header class="mpisto-navbar">
   <div class="mpisto-navbar-wrapper">
     <a class="link" style="font-family:'Play', Jura, cursive;">Mpisto War</a>
@@ -127,24 +127,36 @@
     </h1>
 
     <a class="option-link p1" onclick="p1()">
-    <span>General</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-gear" />
+                  </svg> <span>General</span>
     </a>
     <a class="option-link p2" onclick="p2()">
-    <span>Editing</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-pencil" />
+                  </svg> <span>Editing</span>
     </a>
     <a class="option-link p3" onclick="p3()">
-    <span>Accessibility</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-help" />
+                  </svg> <span>Accessibility</span>
     </a>
     <a class="option-link p4" onclick="p4()">
-    <span>Theme Designer</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-controls" />
+                  </svg> <span>Theme Designer</span>
     </a>
     <a class="option-link p5" onclick="p5()">
-    <span>Site</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-community" />
+                  </svg> <span>Site</span>
     </a>
     </section>
     
     <section class="mpisto-option-way p1">
-    <h1>General Preferences</h1>
+    <h1><a class="toggle" onclick="TogglePane()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-menu" />
+                  </svg></a> General Preferences</h1>
     <div>
               <div class="wds-dropdown">				
                 <div class="wds-button wds-is-squished wds-dropdown__toggle">	
@@ -197,7 +209,9 @@
     </section>
 
     <section class="mpisto-option-way p2">
-    <h1>Editing Preferences</h1>
+    <h1><a class="toggle" onclick="TogglePane()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-menu" />
+                  </svg></a> Editing Preferences</h1>
     <div>
               <div class="wds-dropdown">				
                 <div class="wds-button wds-is-squished wds-dropdown__toggle">	
@@ -251,7 +265,9 @@
     </section>
     
     <section class="mpisto-option-way p3">
-    <h1>Accessibility Preferences</h1>
+    <h1><a class="toggle" onclick="TogglePane()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-menu" />
+                  </svg></a> Accessibility Preferences</h1>
     <div>
               <div class="wds-dropdown">				
                 <div class="wds-button wds-is-squished wds-dropdown__toggle">	
@@ -266,23 +282,17 @@
                   </ul>
                 </div>
               </div>
-    <h2>High Contrast</h2>
-    Default HC theme:
+    <h2>Rendering Mode</h2>
+    Default mode:
     <br>
-    <input type="radio" name="21" id="201" checked onclick="HCclear()"></input> <label for="201">Disabled</label>
+    <input type="radio" name="21" id="201" checked onclick="HCclear()"></input> <label for="201">Normal</label>
     <br>
     <div class="highcontrastmodes">
-    <input type="radio" name="21" id="202" onclick="HCa()"></input> <label for="202">Yellow/Black</label>
+    <input type="radio" name="21" id="202" onclick="HCcustom0()"></input> <label for="202">High Constrast (Windows 10 Themes)</label>
     <br>
-    <input type="radio" name="21" id="203" onclick="HCb()"></input> <label for="203">Green/Black</label>
+    <input type="radio" name="21" id="203" onclick="HCcustom()"></input> <label for="203">High Constrast (Wiki Themes)</label>
     <br>
-    <input type="radio" name="21" id="204" onclick="HCc()"></input> <label for="204">Black</label>
-    <br>
-    <input type="radio" name="21" id="205" onclick="HCd()"></input> <label for="205">White</label>
-    <br>
-    <input type="radio" name="21" id="206" onclick="HCcustom()"></input> <label for="206">Wiki's Theme</label>
-    <br>
-    <input type="radio" name="21" id="207" onclick="HCcustom2()"></input> <label for="207">Almost Disabled</label>
+    <input type="radio" name="21" id="204" onclick="HCcustom2()"></input> <label for="204">Performance</label>
     </div>
     <div class="contrastnotice">
     Your browser does not support CSS variables which are required for High Contrast Mode to work
@@ -295,7 +305,9 @@
     </section>
     
     <section class="mpisto-option-way p4">
-    <h1>Theme Designer Preferences</h1>
+    <h1><a class="toggle" onclick="TogglePane()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-menu" />
+                  </svg></a> Theme Designer Preferences</h1>
     <div>
               <div class="wds-dropdown">				
                 <div class="wds-button wds-is-squished wds-dropdown__toggle">	
@@ -315,6 +327,11 @@
     <div class="contrastnotice">
     Your browser does not support CSS variables which are required for Theme Designer to work. You can use Theme Designer through but contents will only be visible to browsers that support CSS variables.
     </div>
+    <br>
+    <input type="radio" name="31" id="302" onclick="HCa()" checked></input> <label for="302">Theme A</label>
+    <input type="radio" name="31" id="303" onclick="HCb()"></input> <label for="303">Theme B</label>
+    <input type="radio" name="31" id="304" onclick="HCc()"></input> <label for="304">Theme C</label>
+    <input type="radio" name="31" id="305" onclick="HCd()"></input> <label for="305">Theme D</label>
     <h2>Body</h2>
     <label>Background-color:</label> <input type="color" value="#e995ca" class="wds-button wds-is-square"></input>
     <br><br>
@@ -351,7 +368,9 @@
     </section>
     
     <section class="mpisto-option-way p5">
-    <h1>Site Preferences</h1>
+    <h1><a class="toggle" onclick="TogglePane()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-menu" />
+                  </svg></a> Site Preferences</h1>
     <div>
               <div class="wds-dropdown">				
                 <div class="wds-button wds-is-squished wds-dropdown__toggle">	
@@ -432,67 +451,60 @@
 function HCclear() {
     var x = document.getElementById("Handler");
         x.className = x.className.replace(" contrast", "");
-        x.className = x.className.replace(" hc1", "");
-        x.className = x.className.replace(" hc2", "");
-        x.className = x.className.replace(" hc3", "");
-        x.className = x.className.replace(" hc4", "");
         x.className = x.className.replace(" basic", "");
+        x.className = x.className.replace(" win10", "");
 }
 
 // High Contast Themes
 function HCa() {
     var x = document.getElementById("Handler");
-    if (x.className.indexOf("contrast") == -1) {
-        x.className += " contrast";
+    if (x.className.indexOf("theme-A") == -1) {
+        x.className += " theme-A";
     }
-    if (x.className.indexOf("hc1") == -1) {
-        x.className += " hc1";
-    }
-        x.className = x.className.replace(" hc2", "");
-        x.className = x.className.replace(" hc3", "");
-        x.className = x.className.replace(" hc4", "");
-        x.className = x.className.replace(" basic", "");
+        x.className = x.className.replace(" theme-B", "");
+        x.className = x.className.replace(" theme-C", "");
+        x.className = x.className.replace(" theme-D", "");
 }
 
 function HCb() {
     var x = document.getElementById("Handler");
-    if (x.className.indexOf("contrast") == -1) {
-        x.className += " contrast";
+    if (x.className.indexOf("theme-B") == -1) {
+        x.className += " theme-B";
     }
-    if (x.className.indexOf("hc2") == -1) {
-        x.className += " hc2";
-    }
-        x.className = x.className.replace(" hc1", "");
-        x.className = x.className.replace(" hc3", "");
-        x.className = x.className.replace(" hc4", "");
-        x.className = x.className.replace(" basic", "");
+        x.className = x.className.replace(" theme-A", "");
+        x.className = x.className.replace(" theme-C", "");
+        x.className = x.className.replace(" theme-D", "");
 }
 
 function HCc() {
     var x = document.getElementById("Handler");
-    if (x.className.indexOf("contrast") == -1) {
-        x.className += " contrast";
+    if (x.className.indexOf("theme-C") == -1) {
+        x.className += " theme-C";
     }
-    if (x.className.indexOf("hc3") == -1) {
-        x.className += " hc3";
-    }
-        x.className = x.className.replace(" hc1", "");
-        x.className = x.className.replace(" hc2", "");
-        x.className = x.className.replace(" hc4", "");
-        x.className = x.className.replace(" basic", "");
+        x.className = x.className.replace(" theme-A", "");
+        x.className = x.className.replace(" theme-B", "");
+        x.className = x.className.replace(" theme-D", "");
 }
 
 function HCd() {
     var x = document.getElementById("Handler");
+    if (x.className.indexOf("theme-D") == -1) {
+        x.className += " theme-D";
+    }
+        x.className = x.className.replace(" theme-A", "");
+        x.className = x.className.replace(" theme-B", "");
+        x.className = x.className.replace(" theme-C", "");
+}
+
+
+function HCcustom0() {
+    var x = document.getElementById("Handler");
     if (x.className.indexOf("contrast") == -1) {
         x.className += " contrast";
     }
-    if (x.className.indexOf("hc4") == -1) {
-        x.className += " hc4";
+    if (x.className.indexOf("win10") == -1) {
+        x.className += " win10";
     }
-        x.className = x.className.replace(" hc1", "");
-        x.className = x.className.replace(" hc2", "");
-        x.className = x.className.replace(" hc3", "");
         x.className = x.className.replace(" basic", "");
 }
 
@@ -501,10 +513,7 @@ function HCcustom() {
     if (x.className.indexOf("contrast") == -1) {
         x.className += " contrast";
     }
-        x.className = x.className.replace(" hc1", "");
-        x.className = x.className.replace(" hc2", "");
-        x.className = x.className.replace(" hc3", "");
-        x.className = x.className.replace(" hc4", "");
+        x.className = x.className.replace(" win10", "");
         x.className = x.className.replace(" basic", "");
 }
 
@@ -513,13 +522,10 @@ function HCcustom2() {
     if (x.className.indexOf("basic") == -1) {
         x.className += " basic";
     }
-        x.className = x.className.replace(" hc1", "");
-        x.className = x.className.replace(" hc2", "");
-        x.className = x.className.replace(" hc3", "");
-        x.className = x.className.replace(" hc4", "");
         x.className = x.className.replace(" contrast", "");
-}
+        x.className = x.className.replace(" win10", "");
 
+}
 function BarSwitch() {
     var x = document.getElementById("Handler");
     if (x.className.indexOf("bar-hidden") == -1) {
@@ -535,6 +541,7 @@ function p1() {
         x.className = x.className.replace(" page-3", "");
         x.className = x.className.replace(" page-4", "");
         x.className = x.className.replace(" page-5", "");
+        x.className = x.className.replace(" pane-on", "");        
     if (x.className.indexOf("page-1") == -1) {
         x.className += " page-1";
     }
@@ -547,6 +554,7 @@ function p2() {
         x.className = x.className.replace(" page-3", "");
         x.className = x.className.replace(" page-4", "");
         x.className = x.className.replace(" page-5", "");
+        x.className = x.className.replace(" pane-on", "");        
     if (x.className.indexOf("page-2") == -1) {
         x.className += " page-2";
     }
@@ -559,6 +567,7 @@ function p3() {
         x.className = x.className.replace(" page-2", "");
         x.className = x.className.replace(" page-4", "");
         x.className = x.className.replace(" page-5", "");
+        x.className = x.className.replace(" pane-on", "");        
     if (x.className.indexOf("page-3") == -1) {
         x.className += " page-3";
     }
@@ -570,6 +579,7 @@ function p4() {
         x.className = x.className.replace(" page-2", "");
         x.className = x.className.replace(" page-3", "");
         x.className = x.className.replace(" page-5", "");
+        x.className = x.className.replace(" pane-on", "");        
     if (x.className.indexOf("page-4") == -1) {
         x.className += " page-4";
     }
@@ -581,11 +591,21 @@ function p5() {
         x.className = x.className.replace(" page-2", "");
         x.className = x.className.replace(" page-3", "");
         x.className = x.className.replace(" page-4", "");
+        x.className = x.className.replace(" pane-on", "");        
     if (x.className.indexOf("page-5") == -1) {
         x.className += " page-5";
     }
 }
 
+
+function TogglePane() {
+    var x = document.getElementById("OptionsContent");
+    if (x.className.indexOf("pane-on") == -1) {
+        x.className += " pane-on";
+    } else {
+        x.className = x.className.replace(" pane-on", "");
+    }
+}
 
 /* Dropdown
 function dropFunction() {
