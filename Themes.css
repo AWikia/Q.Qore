@@ -78,7 +78,7 @@
 --community-header-text:248,248,248;
 }
 
-/* Standard ~ */
+/* Standard (V6) */
 :root {
 --background-image:url("headbg9.jpg");
 --background-color:#ffa257;
@@ -93,6 +93,23 @@
 --community-header-bg:230,162,138;
 --community-header-text:23,23,23;
 }
+
+/* Standard ~ */
+:root {
+--background-image:url("headbg9.jpg");
+--background-color:#ffa257;
+--link-color:255,0,0;
+--content-bg:#fcf0f2;
+--dropdown-bg:#ffffff;
+--content-border:#bdbdbd;
+--content-color:#1f0000;
+--button-color:#e6a28a;
+--button-color-dark:#cc8166;
+--button-color-text:black;
+--community-header-bg:241,12,53;
+--community-header-text:248,248,248;
+}
+
 
 /* Standard Gloved Version ~~ */
 :root {
@@ -619,5 +636,53 @@
 --button-color-dark:#19FFFF;
 --button-color-text:white;
 --community-header-bg:0,0,255;
+--community-header-text:248,248,248;
+}
+
+/* Medicore */
+:root {
+--background-image:url("headbg2.jpg");
+--background-color:#18bbc5;
+--link-color:103,214,225;
+--content-bg:#ece1c1;
+--dropdown-bg:#EDEADC;
+--content-border:#ffa500;
+--content-color:#2b2b2b;
+--button-color:#A1774F;
+--button-color-dark:#875D35;
+--button-color-text:black;
+--community-header-bg:112,200,0;
+--community-header-text:248,248,248;
+}
+
+/* Maxthon */
+:root {
+--background-image:url("headbg4.jpg");
+--background-color:#c9e2f8;
+--link-color:255,50,194;
+--content-bg:#ffe6f8;
+--dropdown-bg:#F6ECF6;
+--content-border:#ff5b63;
+--content-color:#1a2b3c;
+--button-color:#F7C854;
+--button-color-dark:#DEAD35;
+--button-color-text:black;
+--community-header-bg:135,228,209;
+--community-header-text:23,23,23;
+}
+
+/* Prism */
+:root {
+--background-image:url("prism.png");
+--background-color:#f20c0c;
+--link-color:187,34,34;
+--content-bg:#e00045;
+--dropdown-bg:#E77FA1;
+--content-border:#f5cbdd;
+--content-color:#e9e9e9;
+--button-color:#ED0111;
+--button-color-dark:#FF1A2A;
+--button-color-text:white;
+--community-header-bg:237,173,200;
 --community-header-text:248,248,248;
 }
