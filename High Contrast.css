@@ -42,7 +42,7 @@ body:not(.contrast):not(.basic) .highcontrastbutton.wds-dropdown {
 
 
 /* CSS configuration for Brightness */
-.contrast *,.contrast :before,.contrast  {
+.contrast *,.contrast :before,.contrast :after  {
   text-shadow:none!important;
   box-shadow:none!important;
   -webkit-filter:none!important;
@@ -59,15 +59,15 @@ body:not(.contrast):not(.basic) .highcontrastbutton.wds-dropdown {
 }
 
 
-.contrast :not(.wds-dropdown):not(.wds-community-header):not(time):not(.wds-list):not(input):before,.contrast :not(.wds-dropdown):not(.wds-community-header):not(.wds-list):not(input):after, .basic header.mpisto-navbar:after, .basic footer.mpisto-footer:after, .basic header.mpisto-footer-container:after, .basic .mpisto-option-pane:after, .basic .mpisto-content:after, .basic .mpisto-option-way:after,.basic header.mpisto-navbar:before, .basic footer.mpisto-footer:before, .basic header.mpisto-footer-container:before, .basic .mpisto-option-pane:before, .basic .mpisto-content:before, .basic .mpisto-option-way:before  {
+.contrast :not(.wds-dropdown):not(.wds-community-header):not(time):not(.wds-list):not(input):before,.contrast :not(.wds-dropdown):not(.wds-community-header):not(.wds-list):not(.mpisto-article-wrapper):not(input):after, .basic header.mpisto-navbar:after, .basic footer.mpisto-footer:after, .basic header.mpisto-footer-container:after, .basic .mpisto-option-pane:after, .basic .mpisto-content:after, .basic .mpisto-option-way:after,.basic header.mpisto-navbar:before, .basic footer.mpisto-footer:before, .basic header.mpisto-footer-container:before, .basic .mpisto-option-pane:before, .basic .mpisto-content:before, .basic .mpisto-option-way:before  {
 display:none!important;
 }
 
-.contrast .mpisto-content, .contrast .mpisto-option-way, .basic .mpisto-content, .basic .mpisto-option-way {
+.contrast .mpisto-content, .contrast .mpisto-option-way, .contrast .pane-on .mpisto-article-wrapper:after, .basic .mpisto-content, .basic .mpisto-option-way {
   background-color:var(--content-bg);
 }
 
-.contrast header.mpisto-footer-container, .contrast .mpisto-option-pane, .basic header.mpisto-footer-container, .basic .mpisto-option-pane {
+.contrast header.mpisto-footer-container, .contrast .mpisto-option-pane, .contrast .theme-portal, .basic header.mpisto-footer-container, .basic .mpisto-option-pane {
   background-color:var(--dropdown-bg);
 }
 
@@ -75,9 +75,17 @@ display:none!important;
   background-color:var(--content-color);
 }
 
+.contrast .pane-on .mpisto-article-wrapper:after {
+  opacity:1;
+}
 
+
+/* Header Buttons - Based on Win8-10 High Contrast titlebar button styling */
 .main .contrast .wds-community-header .wds-button.wds-is-secondary {
-  background-color:rgb(var(--community-header-bg));
+  background-color:var(--content-bg);
+  color:var(--content-color);
+  border-color:transparent!important;
+  background-clip:padding-box;
 }
 
 .main .contrast .wds-community-header .wds-button.wds-is-secondary:hover {
@@ -90,6 +98,12 @@ display:none!important;
     background-image:none;
 }
 
+/* Theme Portal */
+.contrast .theme-portal .link:hover {
+  color:var(--content-bg);
+  background-color:var(--content-color);
+  border-bottom-color:var(--content-bg);
+}
 
 /*
 .contrast header.mpisto-navbar {
@@ -357,7 +371,7 @@ color:var(--button-color);
 }
 
 /* Themes */
-.hc1 {
+.contrast.win10.theme-A {
 --background-image:url("");
 --background-color:#000000;
 --link-color:128,128,255;
@@ -372,7 +386,7 @@ color:var(--button-color);
 --community-header-text:248,248,248;
 }
 
-.hc2 {
+.contrast.win10.theme-B {
 --background-image:url("");
 --background-color:#000000;
 --link-color:128,128,255;
@@ -387,7 +401,7 @@ color:var(--button-color);
 --community-header-text:248,248,248;
 }
 
-.hc3 {
+.contrast.win10.theme-C {
 --background-image:url("");
 --background-color:#000000;
 --link-color:255,255,0;
@@ -403,7 +417,7 @@ color:var(--button-color);
 }
 
 
-.hc4 {
+.contrast.win10.theme-D {
 --background-image:url("");
 --background-color:#ffffff;
 --link-color:0,0,159;
