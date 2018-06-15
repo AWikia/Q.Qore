@@ -120,7 +120,7 @@
 <!-- End Gap -->
 
 <section class="mpisto-options-content page-1" id="OptionsContent">
-    <nav class="mpisto-article-wrapper">
+    <nav class="mpisto-article-wrapper" onclick="RemovePanes()">
     <section class="mpisto-option-pane">
     <h1>
     Preferences
@@ -327,7 +327,9 @@
     <div class="contrastnotice">
     Your browser does not support CSS variables which are required for Theme Designer to work. You can use Theme Designer through but contents will only be visible to browsers that support CSS variables.
     </div>
-    <br>
+    <h2>Theme</h2>
+    Default theme<br>This will be used as target theme to modify as an Admin:
+    </br>
     <input type="radio" name="31" id="302" onclick="HCa()" checked></input> <label for="302">Theme A</label>
     <input type="radio" name="31" id="303" onclick="HCb()"></input> <label for="303">Theme B</label>
     <input type="radio" name="31" id="304" onclick="HCc()"></input> <label for="304">Theme C</label>
@@ -535,6 +537,16 @@ function BarSwitch() {
     }
 }
 
+function RemovePanes() {
+    var x = document.getElementById("OptionsContent");
+    if (x.className.indexOf("pane-on") == -1) {
+     // Empty
+    } else {
+     // Empty
+    }
+}
+
+
 function p1() {
     var x = document.getElementById("OptionsContent");
         x.className = x.className.replace(" page-2", "");
@@ -606,6 +618,18 @@ function TogglePane() {
         x.className = x.className.replace(" pane-on", "");
     }
 }
+
+/* Make SmartTVs recognize cursors */
+if (navigator.userAgent.match("SmartTV")) {
+document.getElementById("Handler").className += " smart"
+}
+
+
+/* Mobile Only CSS */
+if (navigator.userAgent.match("Mobile")) {
+document.getElementById("Handler").className += " phone"
+}
+
 
 /* Dropdown
 function dropFunction() {

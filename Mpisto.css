@@ -119,6 +119,10 @@ display:none;
 }
 
 
+.mobile-data {
+  display:none;
+}
+
 hr.mobile-data {
   background-color:#ccc;
   background-color:var(--content-border);
@@ -861,18 +865,18 @@ font-weight:600;
 -ms-flex-pack:center;
 justify-content:center;
 letter-spacing:.15px;
-line-height:16px;
+line-height:1.3em;
 margin:0;
 min-height:18px;
 outline:0;
-padding:7px 18px;
+padding:14px 18px;
 text-decoration:none;
 text-transform:uppercase;
 transition-duration:.3s;
 transition-property:background-color,border-color,color;
 vertical-align:top;
 -webkit-appearance:none;
-border-radius:3px;
+border-radius:0px;
 }
 
 .wds-button.wds-is-active,.wds-button:active,.wds-button:focus:not(:disabled),.wds-button:hover:not(:disabled){
@@ -909,7 +913,7 @@ cursor:url("default.cur"), default;
 opacity:.5;
 pointer-events:none}
 
-/*
+
 .wds-button.wds-is-squished{
 font-size:10px;
 padding:7px 12px;
@@ -919,19 +923,20 @@ padding:7px 12px;
 height:13px
 }
 
+
 .wds-button.wds-is-stretched{
 padding:28px 18px 27px
 }
-*/
+
 .wds-button.wds-is-full-width{
 display:-ms-flexbox;
 display:flex
 }
 
 .wds-button.wds-is-square{
-height:36px;
-min-width:36px;
-width:36px;
+height:45px;
+min-width:45px;
+width:45px;
 -ms-flex-align:center;align-items:
 center;display:
 -ms-inline-flexbox;
@@ -976,12 +981,17 @@ justify-content:flex-start
 height:auto;
 margin-left:auto;
 margin-right:-1px;
-padding:7px 12px;
+/*  padding:7px 12px; */
 }
 
 .wds-community-header__wiki-buttons > .wds-dropdown .wds-button {
-  padding:7px 12px;
+/*  padding:7px 12px; */
 }
+
+.wds-community-header__wiki-buttons .wds-button {
+  min-height:20px;
+}
+
 
 .wds-button-group>.wds-button:hover{
 z-index:1
@@ -1680,32 +1690,41 @@ width:280px;
 }
 
 .mpisto-module {
-background-color:#fff;
-background-color:var(--dropdown-bg);
+/*
 border:1px solid #ccc;
 border:1px solid var(--content-border);
+*/
+background-color:#fff;
+background-color:var(--dropdown-bg);
+box-shadow:0 0 12px #ccc, 0 0 7px -1px #000, 0 0 17px -0.5px #fff;
+box-shadow:0 0 12px var(--content-border), 0 0 7px -1px #000, 0 0 17px -0.5px #fff;
 min-height:20px;
-padding:0 5px;
-margin:10px 0 20px;
+padding:0 10px;
+margin:10px 0 25px;
 }
 
 .mpisto-module h2 {
-background-color:#fff;
-background-color:var(--dropdown-bg);
-padding:5px;
-display:flex;
-font-size:15px;
-font-weight:600;
-align-items:center;
+/*
 border-bottom:1px solid #ccc;
 border-bottom:1px solid var(--content-border);
-margin:0 -5px 2.5px;
+*/
+background-color:#fff;
+background-color:var(--content-bg);
+padding:10px;
+display:flex;
+font-size:16px;
+font-weight:600;
+align-items:center;
+margin:0 -10px 5px;
 position:relative;
 z-index:1;
+border-top-left-radius:inherit;
+border-top-right-radius:inherit;
 }
 
+
 .mpisto-module h2 .wds-icon {
-margin-right:5px;
+margin-right:10px;
 }
 
 
@@ -1720,40 +1739,76 @@ content:"";
 display:block;
 background-color:#000;
 background-color:var(--content-color);
-opacity:0.1;
+opacity:0.06;
+border-top-left-radius:inherit;
+border-top-right-radius:inherit;
 }
 
+.mpisto-module h2::before {
+position:absolute;
+top:0;
+left:0;
+height: 100%;
+width: 100%;
+z-index:-1;
+content:"";
+display:block;
+background-color:#ccc;
+background-color:var(--content-border);
+opacity:0.06;
+border-top-left-radius:inherit;
+border-top-right-radius:inherit;
+}
+
+
 .mpisto-module ul {
-margin:2.5px 0;
+margin:5px 0 7.5px;
 list-style-type:none;
-padding:0  0 2.5px 0;
+padding:0;
+}
+
+.mpisto-module.discord-module {
+   padding-left:5px;
+   padding-right:5px;
+}
+
+.mpisto-module.discord-module h2 {
+    margin-left:-5px;
+    margin-right:-5px;
 }
 
 .mpisto-module.discord-module ul {
   display:block;
-  padding-top:2.5px
+  padding-top:5px;
 }
 
 .mpisto-module.discord-module ul li {
   text-align:center;
 }
 
-.mpisto-module .communication-rules {
-padding:2.5px 0 5px;
-border-bottom:1px solid #ccc;
-border-bottom:1px solid var(--content-border);
-font-size:14px;
-display:block;
-margin-bottom:2.5px;
+.mpisto-module.discord-module .buttons {
+  margin-left:-5px;
+  margin-right:-5px;
 }
 
-.mpisto-module .stats {
-padding:2.5px 0 5px;
+.mpisto-module .communication-rules {
+padding:5px 0 10px;
 border-bottom:1px solid #ccc;
 border-bottom:1px solid var(--content-border);
 font-size:14px;
 display:block;
 margin-bottom:5px;
+}
+
+.mpisto-module .stats {
+/*
+border-bottom:1px solid #ccc;
+border-bottom:1px solid var(--content-border);
+*/
+padding:2.5px 0 5px;
+font-size:14px;
+display:block;
+margin-bottom:10px;
 }
 
 
@@ -1762,16 +1817,17 @@ font-weight:600;
 font-size:14px;
 text-align:left;
 margin:0;
-padding:2.5px 0;
+padding:2px 0;
+border-bottom:1px solid #ccc;
+border-bottom:1px solid var(--content-border);
 }
 
 .mpisto-module ul > li:first-child {
 padding-top:0;
 }
 
-.mpisto-module ul > li {
-border-bottom:1px solid #ccc;
-border-bottom:1px solid var(--content-border);
+.mpisto-module ul > li:last-child {
+border-bottom:0;
 }
 
 .mpisto-module ul > li > span {
@@ -1785,18 +1841,44 @@ content: " ~ ";
 }
 
 .mpisto-module .buttons {
-padding:2.5px 0 5px;
+padding:10px;
+margin:0 -10px;
 display:flex;
 flex-wrap:wrap;
 justify-content:flex-end;
+border-bottom-left-radius:inherit;
+border-bottom-right-radius:inherit;
+position:relative;
+z-index:1;
+background-color:#fff;
+background-color:var(--dropdown-bg);
 }
 
+
 .mpisto-module .buttons * {
-margin:1px;
+margin:2px;
 }
 
 .mpisto-module .buttons .wds-button {
 min-height:14px;
+}
+
+
+
+.mpisto-module .buttons::after {
+position:absolute;
+top:0;
+left:0;
+height: 100%;
+width: 100%;
+z-index:-1;
+content:"";
+display:block;
+background-color:#000;
+background-color:var(--content-color);
+opacity:0.1;
+border-bottom-left-radius:inherit;
+border-bottom-right-radius:inherit;
 }
 
 /* Extras */
@@ -3014,7 +3096,6 @@ border:1px solid currentColor;
   background-color:black;
   background-color: var(--content-color);
   content: "";
-  cursor: default;
   opacity:0.5;
   -webkit-backdrop-filter:blur(24px);
   backdrop-filter:blur(24px);
@@ -3238,5 +3319,36 @@ margin-right:0;
 }
 
 .theme-A .theme-portal .link.themea .wds-icon, .theme-B .theme-portal .link.themeb .wds-icon, .theme-C .theme-portal .link.themec .wds-icon, .theme-D .theme-portal .link.themed .wds-icon, body:not(.basic):not(.contrast) .theme-portal .link.theme0 .wds-icon, .contrast.win10 .theme-portal .link.theme1 .wds-icon, .contrast:not(.win10) .theme-portal .link.theme2 .wds-icon, .basic .theme-portal .link.theme3 .wds-icon {
+  display:block;
+}
+
+/* Disable custom cursors for Smart TVs because it fall backs to normal ones */
+.smart {
+  cursor:auto;
+}
+
+.smart abbr[title] {
+  cursor:help;
+}
+
+.smart :not(.unset)[disabled] {
+cursor:not-allowed!important;
+}
+
+.smart textarea, .smart [contenteditable], .smart header.mpisto-navbar .search .search-input, .smart .mpisto-input {
+  cursor:text;
+}
+
+.smart .wds-dropdown .link, .smart .wds-button, .smart .wds-button:disabled, .smart .wds-dropdown__toggle, .smart .wds-is-disabled, .smart .wds-community-header__local-navigation a[href="#"], .smart .wds-tabs__tab {
+  cursor:default
+}
+
+.smart a:hover, .smart .notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child):not(.empty), .smart .notification.wds-dropdown-level-2__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child):not(.empty), .smart a.wds-button, .smart button.wds-button, .smart .editor-header .wordmark, .smart .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square {
+cursor:pointer;
+}
+
+/** Mobile Only CSS **/
+/* Show the Mobile site link */
+.phone .mobile-data {
   display:block;
 }

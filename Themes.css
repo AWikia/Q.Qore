@@ -639,7 +639,7 @@
 --community-header-text:248,248,248;
 }
 
-/* Medicore */
+/* Medicore ~ */
 :root {
 --background-image:url("headbg2.jpg");
 --background-color:#18bbc5;
@@ -655,7 +655,7 @@
 --community-header-text:248,248,248;
 }
 
-/* Maxthon */
+/* Maxthon ~ */
 :root {
 --background-image:url("headbg4.jpg");
 --background-color:#c9e2f8;
@@ -671,7 +671,7 @@
 --community-header-text:23,23,23;
 }
 
-/* Prism */
+/* Prism ~ */
 :root {
 --background-image:url("prism.png");
 --background-color:#f20c0c;
