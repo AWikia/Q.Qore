@@ -195,6 +195,16 @@ border-radius:15px;
 flex-grow:1;
 }
 
+.page-wrapper .store-content .store-items .wds-button.col.wds-is-secondary.shared {
+color:#3fcf08;
+border-color:#3fcf08;
+}
+
+.page-wrapper .store-content .store-items .wds-button.col.wds-is-secondary.shared:hover, .page-wrapper .store-content .store-items .wds-button.col.wds-is-secondary.shared:active, .page-wrapper .store-content .store-items .wds-button.col.wds-is-secondary.shared:focus {
+  color:#82f855;
+  border-color:#82f855;
+}
+
 .page-wrapper .store-content .store-items .wds-button.col:hover {
     background-color:rgba(10,10,10,0.01);
 }
