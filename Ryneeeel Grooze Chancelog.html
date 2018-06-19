@@ -7,8 +7,6 @@
 <header class="mpisto-navbar">
   <div class="mpisto-navbar-wrapper">
     <a class="link" style="font-family:'Play', Jura, cursive;">Mpisto War</a>
-    <a class="link companylink">Company</a>
-    <a class="link companylink">Hiring</a>
     <div class="wds-dropdown">
       <a class="link">Explore <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
@@ -16,8 +14,8 @@
       </a>
       <div class="wds-dropdown__content">
         <ul class="wds-list wds-is-linked">
-          <li class="company-small"><a>Company</a></li>
-          <li class="company-small"><a>Hiring</a></li>
+          <li><a>Company</a></li>
+          <li><a>Hiring</a></li>
           <li><a>A Wiki - Techno Wiki</a></li>
           <li><a>A Wiki - Dev Wiki</a></li>
           <li><a>A Wiki Foundation</a></li>
@@ -426,6 +424,68 @@
     <div class="mpisto-article-wrapper">
       <article class="mpisto-article">
       <!--Start Article-->
+      <!--6-->
+      <h2>IB6</h2>
+        <ul>
+        <li>
+         Sixth Revision, Based on Desktop Build 400 and includes the following changes:
+        <ul>
+        <li>
+        Theme Update
+        </li>
+        <li>
+        Floating banners that are placed before the page header are supported with <code>floatingbanner</code> element
+        </li>
+        <li>
+        Social Button colors are now available everywhere. Log in Buttons now use these colors instead of wiki colors
+        </li>
+        <li>
+        Fixed Serious color lag when hovering on buttons using the Dark theme
+        </li>
+        <li>
+        Dropped legacy Sharing Options
+        </li>
+        <li>
+        Enchancements to Preferences
+        </li>
+        <li>
+        Unified the Company links to appear in <b>Explore</b> menu at all breakpoints
+        </li>
+        <li>
+        New layout for picking preferences pane
+        </li>
+        <li>
+        CSS Fixes
+        </li>
+        <li>
+        Some CSS corrections, the way Firefox also handle it properly. Options, Editor and lightboxes now handle height in ViewPort units instead of height to handle layouts properly
+        </li>
+        <li>
+        Gave Rail Modules rounded corners and 2 times better shadow
+        </li>
+        <li>
+        Modules on High contrast now use sharp shadows instead of borders
+        </li>
+        Bug fixes
+        </li>
+        <li>
+        Banner Notification icon that appears before the text is unthemable to match Zekzphire Zentral
+        </li>
+        <li>
+        High Contrast Notification fixes
+        </li>
+        <li>
+        Added banner notifications to the system. To use them, you must use wds prefix in it
+        </li>
+        <li>
+        Added note to Sharing options since those were ignored
+        </li>
+        <li>
+        Bug fixes
+        </li>
+        </ul>
+        </li>
+        </ul
       <!--5-->
       <h2>IB5</h2>
         <ul>
@@ -940,6 +1000,8 @@ function BarSwitch() {
     }
 }
 
+
+
 /* Make SmartTVs recognize cursors */
 if (navigator.userAgent.match("SmartTV")) {
 document.getElementById("Handler").className += " smart"
@@ -950,6 +1012,7 @@ document.getElementById("Handler").className += " smart"
 if (navigator.userAgent.match("Mobile")) {
 document.getElementById("Handler").className += " phone"
 }
+
 
 
 /* Dropdown
