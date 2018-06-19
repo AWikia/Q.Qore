@@ -16,6 +16,8 @@ https://hm100.github.io/Mpisto/Ryneeeel%20Grooze%20Editor.html - Editor
 
 https://hm100.github.io/Mpisto/Ryneeeel%20Grooze%20Icons.html - EraIcons testcase
 
+https://hm100.github.io/Mpisto/Ryneeeel%20Grooze%20Banner.html - Floaring Banners testcase
+
 https://hm100.github.io/Mpisto/Ryneeeel%20Grooze%20(Anons).html - Anon Interface
 
 https://hm100.github.io/Mpisto/Ryneeeel%20Grooze%20(Store).html - Store
