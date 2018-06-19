@@ -94,7 +94,7 @@
 --community-header-text:23,23,23;
 }
 
-/* Standard ~ */
+/* Standard (V7) */
 :root {
 --background-image:url("headbg9.jpg");
 --background-color:#ffa257;
@@ -110,6 +110,21 @@
 --community-header-text:248,248,248;
 }
 
+/* Standard ~ */
+:root {
+--background-image:url("headbg2.jpg");
+--background-color:#599ace;
+--link-color:114,137,218;
+--content-bg:#d9e9f9;
+--dropdown-bg:#E4EDF6;
+--content-border:#b2b2b2;
+--content-color:#10001a;
+--button-color:#4E5D94;
+--button-color-dark:#6C7BAD;
+--button-color-text:white;
+--community-header-bg:25,161,95;
+--community-header-text:248,248,248;
+}
 
 /* Standard Gloved Version ~~ */
 :root {
@@ -137,7 +152,7 @@
 --content-border:#cccccc;
 --content-color:#f9f9f9;
 --button-color:#00178C;
---button-color-dark:#152DD6;
+--button-color-dark:#1029A5;
 --button-color-text:white;
 --community-header-bg:127,105,105;
 --community-header-text:248,248,248;
