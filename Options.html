@@ -7,8 +7,6 @@
 <header class="mpisto-navbar">
   <div class="mpisto-navbar-wrapper">
     <a class="link" style="font-family:'Play', Jura, cursive;">Mpisto War</a>
-    <a class="link companylink">Company</a>
-    <a class="link companylink">Hiring</a>
     <div class="wds-dropdown">
       <a class="link">Explore <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
@@ -16,8 +14,8 @@
       </a>
       <div class="wds-dropdown__content">
         <ul class="wds-list wds-is-linked">
-          <li class="company-small"><a>Company</a></li>
-          <li class="company-small"><a>Hiring</a></li>
+          <li><a>Company</a></li>
+          <li><a>Hiring</a></li>
           <li><a>A Wiki - Techno Wiki</a></li>
           <li><a>A Wiki - Dev Wiki</a></li>
           <li><a>A Wiki Foundation</a></li>
@@ -125,7 +123,7 @@
     <h1>
     Preferences
     </h1>
-
+    <div>
     <a class="option-link p1" onclick="p1()">
                       <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-gear" />
@@ -151,6 +149,7 @@
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-community" />
                   </svg> <span>Site</span>
     </a>
+    </div>
     </section>
     
     <section class="mpisto-option-way p1">
@@ -179,8 +178,11 @@
     <input type="checkbox" name="02" id="11"></input><label for="11">Receive Notifications in E-mail</label>
     <br>
     <input type="checkbox" name="02" id="12" checked></input><label for="12">Watch threads when posting on it</label>
+     <div hidden>
     <h2>Sharing</h2>
     Allow sharing from:
+    <br>
+    Note that this only takes effect to flags invoking sharing model
     <br>
     <input type="checkbox" name="03" id="21" checked></input><label for="21">Google Plus</label>   
     <br>
@@ -193,6 +195,7 @@
     <input type="checkbox" name="03" id="25" checked></input><label for="25">Reddit</label>   
     <br>
     <input type="checkbox" name="03" id="26"></input><label for="26">Blogger</label>   
+    </div>
     <h2>Date and Time</h2>
     <label>Time Zone:</label>
     <input class="mpisto-input" placeholder="Hours" style="width:70px"></input>
