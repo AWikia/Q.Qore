@@ -239,6 +239,8 @@ border-bottom:2px solid var(--content-border);
 top:0;
 z-index:100;
 clear:both;
+box-shadow:0 0 9px #ccc, 0 0 2.5px #000, 0 0 1.5px #fff;
+box-shadow:0 0 9px var(--content-border), 0 0 2.5px #000, 0 0 1.5px #fff;
 }
 
 header.mpisto-navbar .mpisto-navbar-wrapper {
@@ -954,7 +956,6 @@ border-width:1px;
 -moz-box-sizing:content-box;
      box-sizing:content-box;
 cursor:url("default.cur"), default;
-
 display:-ms-inline-flexbox;
 display:-webkit-inline-flex;
 display:-moz-inline-box;
@@ -966,11 +967,11 @@ font-weight:600;
    -moz-box-pack:center;
         justify-content:center;
 letter-spacing:.15px;
-line-height:1.3em;
+line-height:16px;
 margin:0;
 min-height:18px;
 outline:0;
-padding:14px 18px;
+padding:7px 18px;
 text-decoration:none;
 text-transform:uppercase;
 -webkit-transition-duration:.3s;
@@ -981,7 +982,7 @@ text-transform:uppercase;
 transition-property:background-color,border-color,color;
 vertical-align:top;
 -webkit-appearance:none;
-border-radius:0px;
+border-radius:3px;
 }
 
 .wds-button.wds-is-active,.wds-button:active,.wds-button:focus:not(:disabled),.wds-button:hover:not(:disabled){
@@ -1018,7 +1019,7 @@ cursor:url("default.cur"), default;
 opacity:.5;
 pointer-events:none}
 
-
+/*
 .wds-button.wds-is-squished{
 font-size:10px;
 padding:7px 12px;
@@ -1032,6 +1033,7 @@ height:13px
 .wds-button.wds-is-stretched{
 padding:28px 18px 27px
 }
+*/
 
 .wds-button.wds-is-full-width{
 display:-ms-flexbox;
@@ -1041,14 +1043,14 @@ display:flex
 }
 
 .wds-button.wds-is-square{
-height:45px;
-min-width:45px;
-width:45px;
--ms-flex-align:center;-webkit-align-items:
-center;-moz-box-align:
-center;align-items:
-center;display:
--ms-inline-flexbox;
+height:36px;
+min-width:36px;
+width:36px;
+-ms-flex-align:center;
+-webkit-align-items:center;
+   -moz-box-align:center;
+        align-items:center;
+display:-ms-inline-flexbox;
 display:-webkit-inline-flex;
 display:-moz-inline-box;
 display:inline-flex;
@@ -1102,11 +1104,11 @@ display:inline-flex;
 height:auto;
 margin-left:auto;
 margin-right:-1px;
-/*  padding:7px 12px; */
+padding:7px 12px;
 }
 
 .wds-community-header__wiki-buttons > .wds-dropdown .wds-button {
-/*  padding:7px 12px; */
+  padding:7px 3px; 
 }
 
 .wds-community-header__wiki-buttons .wds-button {
@@ -1677,13 +1679,15 @@ width:100%;
 min-height:50px;
 border-top:2px solid #ccc;
 border-top:2px solid var(--content-border);
-margin:24px 0 0;
+margin:30px 0 0;
 color:#fff;
 color:var(--dropdown-bg);
 font-family:"Open Sans", cursive;
 position:relative;
 z-index:49;
 padding:0 0 22px;
+box-shadow:0 0 9px #ccc, 0 0 2.5px #000, 0 0 1.5px #fff;
+box-shadow:0 0 9px var(--content-border), 0 0 2.5px #000, 0 0 1.5px #fff;
 }
 
 /* Glass effect for browsers with backdrop filter, use opaque for others */
@@ -2542,7 +2546,7 @@ padding-bottom:34px;
 .editor-header {
   position:-webkit-sticky;
   position:sticky;
-  top:86px;
+  top:84px;
 }
 }
 
@@ -2798,19 +2802,25 @@ background-color:var(--dropdown-bg);
 visibility:hidden;
 opacity:0;
 position:absolute;
-z-index:100;
+z-index:1000;
 border-bottom:2px solid #ccc;
 border-bottom:2px solid var(--content-border);
 top:-51px;
+-webkit-filter:brightness(1.5);
+        filter:brightness(1.5);
 }
 
 .pane-on .mpisto-option-pane {
--webkit-transition:opacity 1s ease 1ms, top 1s ease 1ms;
--o-transition:opacity 1s ease 1ms, top 1s ease 1ms;
-transition:opacity 1s ease 1ms, top 1s ease 1ms;
+-webkit-transition:opacity 0.99s ease-in-out 3ms, top 0.99s ease-in-out 3ms, -webkit-filter 0.99s ease-in-out 3ms;
+transition:opacity 0.99s ease-in-out 3ms, top 0.99s ease-in-out 3ms, -webkit-filter 0.99s ease-in-out 3ms;
+-o-transition:opacity 0.99s ease-in-out 3ms, top 0.99s ease-in-out 3ms, filter 0.99s ease-in-out 3ms;
+transition:opacity 0.99s ease-in-out 3ms, top 0.99s ease-in-out 3ms, filter 0.99s ease-in-out 3ms;
+transition:opacity 0.99s ease-in-out 3ms, top 0.99s ease-in-out 3ms, filter 0.99s ease-in-out 3ms, -webkit-filter 0.99s ease-in-out 3ms;
 opacity:1;
 top:0;
 visibility:visible;
+-webkit-filter:brightness(1);
+        filter:brightness(1);
 }
 
 .mpisto-option-pane div {
@@ -2837,8 +2847,8 @@ visibility:visible;
     opacity:0.6;
     top:0;
     left:0;
-    -webkit-backdrop-filter:blur(17px) saturate(1.1);
-    backdrop-filter:blur(17px) saturate(1.1);
+    -webkit-backdrop-filter:blur(17px) saturate(1.5);
+    backdrop-filter:blur(17px) saturate(1.5);
 }
 
 
@@ -3582,12 +3592,12 @@ margin-right:0;
   display:none;
   width:100%;
   height:35px;
-  font-size:12px;
+  font-size:11px;
   border-bottom:2px solid var(--content-border);
-  color:var(--content-color);
+  color:var(--dropdown-bg);
   position:relative;
   z-index:55;
-  margin:-20px 0 20px;
+  margin:-22px 0 20px;
   box-shadow:0 0 9px #ccc, 0 0 2.5px #000, 0 0 1.5px #fff;
   box-shadow:0 0 9px var(--content-border), 0 0 2.5px #000, 0 0 1.5px #fff;
 }
@@ -3599,12 +3609,26 @@ margin-right:0;
     position: absolute;
     width: 100%;
     z-index: -1;
-  background-color:var(--dropdown-bg);
-    opacity:0.88;
+  background-color:var(--content-color);
+    opacity:0.76;
     top:0;
     left:0;
-  -webkit-backdrop-filter:blur(10px) saturate(2);
-  backdrop-filter:blur(10px) saturate(2);
+  -webkit-backdrop-filter:blur(4.5px);
+  backdrop-filter:blur(4.5px);
+}
+
+.theme-portal::before {
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    background-color: #000;
+    -webkit-backdrop-filter: none;
+    opacity: 0.2;
+    top: 0px;
+    left: 0px;
 }
 
 
@@ -3612,23 +3636,33 @@ margin-right:0;
 .theme-portal {
   position:-webkit-sticky;
   position:sticky;
-  top:51px;
+  top:49px;
 }
 }
 
 
-@supports (--link-color:red) {
+@supports (--link-color:red) or ((-webkit-filter: saturate(0)) or (filter: saturate(0))) or (-webkit-filter:(saturate(0))) {
   .theme-portal {
     display:-webkit-flex;
     display:-moz-box;
     display:-ms-flexbox;
     display:flex;
   }
+  /* !important is required to those rules to avoid unexpected results */
+  body:not(.options):not(.mpisto-2018-mobile) header.mpisto-navbar {
+    border-bottom-width:0!important;
+    box-shadow:none!important;
+  }
 }
 
+
+@supports not (--link-color:red) {
+    .theme-portal .link .themea, .theme-portal .link .themeb, .theme-portal .link .themec, .theme-portal .link .themed, .theme-portal .link .theme0, .theme-portal .link .theme1, .theme-portal .link .theme2, .theme-portal .link .theme3 {
+        display:none!important; /* !important needed to avoid custom CSS override the displayment of the links */
+    }
+}
   .theme-portal .link {
-  border-right:1px solid var(--content-border);
-  padding:0 10px;
+  padding:0 8px;
   display:-webkit-inline-flex;
   display:-moz-inline-box;
   display:-ms-inline-flexbox;
@@ -3642,9 +3676,9 @@ margin-right:0;
       -ms-flex-pack:center;
           justify-content:center;
   height:35px;
-  -webkit-transition:background-color 75ms linear 1ms, color 275ms cubic-bezier(0.3, 0.55, 0.4, 1.7) 4ms, border-color 275ms cubic-bezier(0.3, 0.55, 0.4, 1.7) 4ms;
-  -o-transition:background-color 75ms linear 1ms, color 275ms cubic-bezier(0.3, 0.55, 0.4, 1.7) 4ms, border-color 275ms cubic-bezier(0.3, 0.55, 0.4, 1.7) 4ms;
-  transition:background-color 75ms linear 1ms, color 275ms cubic-bezier(0.3, 0.55, 0.4, 1.7) 4ms, border-color 275ms cubic-bezier(0.3, 0.55, 0.4, 1.7) 4ms;
+  -webkit-transition:background-color 70ms linear 1ms, color 275ms cubic-bezier(0.3, 0.55, 0.4, 1.7) 4ms, border-color 275ms cubic-bezier(0.3, 0.55, 0.4, 1.7) 4ms;
+  -o-transition:background-color 70ms linear 1ms, color 275ms cubic-bezier(0.3, 0.55, 0.4, 1.7) 4ms, border-color 275ms cubic-bezier(0.3, 0.55, 0.4, 1.7) 4ms;
+  transition:background-color 70ms linear 1ms, color 275ms cubic-bezier(0.3, 0.55, 0.4, 1.7) 4ms, border-color 275ms cubic-bezier(0.3, 0.55, 0.4, 1.7) 4ms;
   color:inherit;
   border-bottom:2px solid transparent;
   -webkit-flex:1;
@@ -3656,26 +3690,26 @@ margin-right:0;
   }
   
   .theme-portal .seperator {
-    padding:0 10px;
+    padding:0 6px;
   }
-  
- .theme-portal .link:last-child {
-    border-right:0;
-    }
-    
+      
   .theme-portal .link:hover {
       color:rgb(var(--link-color));
       background-color:rgba(var(--link-color), 0.15);
       border-bottom-color:rgb(var(--link-color));
   }    
    
-.theme-A .theme-portal .link.themea, .theme-B .theme-portal .link.themeb, .theme-C .theme-portal .link.themec, .theme-D .theme-portal .link.themed, body:not(.basic):not(.contrast) .theme-portal .link.theme0, .contrast.win10 .theme-portal .link.theme1, .contrast:not(.win10) .theme-portal .link.theme2, .basic .theme-portal .link.theme3 {
+.theme-A .theme-portal .link.themea, .theme-B .theme-portal .link.themeb, .theme-C .theme-portal .link.themec, .theme-D .theme-portal .link.themed, 
+body:not(.basic):not(.contrast) .theme-portal .link.theme0, .contrast.win10 .theme-portal .link.theme1, .contrast:not(.win10) .theme-portal .link.theme2, .basic .theme-portal .link.theme3,
+body:not(.filterA):not(.filterB):not(.filterC) .theme-portal .link.theme10, .filterA .theme-portal .link.theme11, .filterB .theme-portal .link.theme12, .filterC .theme-portal .link.theme13 {
     background-color:var(--button-color);
     color:var(--button-color-text);
     border-bottom-color:var(--button-color-text);
 }
 
-.theme-A .theme-portal .link.themea:hover, .theme-B .theme-portal .link.themeb:hover, .theme-C .theme-portal .link.themec:hover, .theme-D .theme-portal .link.themed:hover, body:not(.basic):not(.contrast) .theme-portal .link.theme0:hover, .contrast.win10 .theme-portal .link.theme1:hover, .contrast:not(.win10) .theme-portal .link.theme2:hover, .basic .theme-portal .link.theme3:hover {
+.theme-A .theme-portal .link.themea:hover, .theme-B .theme-portal .link.themeb:hover, .theme-C .theme-portal .link.themec:hover, .theme-D .theme-portal .link.themed:hover, 
+body:not(.basic):not(.contrast) .theme-portal .link.theme0:hover, .contrast.win10 .theme-portal .link.theme1:hover, .contrast:not(.win10) .theme-portal .link.theme2:hover, .basic .theme-portal .link.theme3:hover,
+body:not(.filterA):not(.filterB):not(.filterC) .theme-portal .link.theme10:hover, .filterA .theme-portal .link.theme11:hover, .filterB .theme-portal .link.theme12:hover, .filterC .theme-portal .link.theme13:hover {
     background-color:var(--button-color-dark);
     color:var(--button-color-text);
     border-bottom-color:var(--button-color-text);
@@ -3702,7 +3736,7 @@ margin-right:0;
   min-width:11px;
 }
 
-.theme-A .theme-portal .link.themea .wds-icon, .theme-B .theme-portal .link.themeb .wds-icon, .theme-C .theme-portal .link.themec .wds-icon, .theme-D .theme-portal .link.themed .wds-icon, body:not(.basic):not(.contrast) .theme-portal .link.theme0 .wds-icon, .contrast.win10 .theme-portal .link.theme1 .wds-icon, .contrast:not(.win10) .theme-portal .link.theme2 .wds-icon, .basic .theme-portal .link.theme3 .wds-icon {
+.theme-A .theme-portal .link.themea .wds-icon, .theme-B .theme-portal .link.themeb .wds-icon, .theme-C .theme-portal .link.themec .wds-icon, .theme-D .theme-portal .link.themed .wds-icon, body:not(.basic):not(.contrast) .theme-portal .link.theme0 .wds-icon, .contrast.win10 .theme-portal .link.theme1 .wds-icon, .contrast:not(.win10) .theme-portal .link.theme2 .wds-icon, .basic .theme-portal .link.theme3 .wds-icon, body:not(.filterA):not(.filterB):not(.filterC) .theme-portal .link.theme10 .wds-icon, .filterA .theme-portal .link.theme11 .wds-icon, .filterB .theme-portal .link.theme12 .wds-icon, .filterC .theme-portal .link.theme13 .wds-icon {
   display:block;
 }
 
@@ -3730,7 +3764,7 @@ margin-right:0;
 .wds-banner-notification__container {
   position:-webkit-sticky;
   position:sticky;
-  top:86px;
+  top:84px;
   z-index:60;
 }
 }
