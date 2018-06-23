@@ -3593,7 +3593,9 @@ margin-right:0;
   width:100%;
   height:35px;
   font-size:11px;
+  border-bottom:2px solid #ccc;
   border-bottom:2px solid var(--content-border);
+  color:#fff;
   color:var(--dropdown-bg);
   position:relative;
   z-index:55;
@@ -3609,6 +3611,7 @@ margin-right:0;
     position: absolute;
     width: 100%;
     z-index: -1;
+    background-color:#000;
   background-color:var(--content-color);
     opacity:0.76;
     top:0;
@@ -3657,7 +3660,7 @@ margin-right:0;
 
 
 @supports not (--link-color:red) {
-    .theme-portal .link .themea, .theme-portal .link .themeb, .theme-portal .link .themec, .theme-portal .link .themed, .theme-portal .link .theme0, .theme-portal .link .theme1, .theme-portal .link .theme2, .theme-portal .link .theme3 {
+    .theme-portal .link.themea, .theme-portal .link.themeb, .theme-portal .link.themec, .theme-portal .link.themed, .theme-portal .link.theme0, .theme-portal .link.theme1, .theme-portal .link.theme2, .theme-portal .link.theme3 {
         display:none!important; /* !important needed to avoid custom CSS override the displayment of the links */
     }
 }
@@ -3694,24 +3697,33 @@ margin-right:0;
   }
       
   .theme-portal .link:hover {
+      color:#18bbc5;
       color:rgb(var(--link-color));
+      background-color:rgb(24,187,197,0.15);
       background-color:rgba(var(--link-color), 0.15);
+      border-bottom-color:#18bbc5;
       border-bottom-color:rgb(var(--link-color));
   }    
    
 .theme-A .theme-portal .link.themea, .theme-B .theme-portal .link.themeb, .theme-C .theme-portal .link.themec, .theme-D .theme-portal .link.themed, 
 body:not(.basic):not(.contrast) .theme-portal .link.theme0, .contrast.win10 .theme-portal .link.theme1, .contrast:not(.win10) .theme-portal .link.theme2, .basic .theme-portal .link.theme3,
 body:not(.filterA):not(.filterB):not(.filterC) .theme-portal .link.theme10, .filterA .theme-portal .link.theme11, .filterB .theme-portal .link.theme12, .filterC .theme-portal .link.theme13 {
+    background-color:#18bbc5;
     background-color:var(--button-color);
+    color:white;
     color:var(--button-color-text);
+     border-bottom-color:white;
     border-bottom-color:var(--button-color-text);
 }
 
 .theme-A .theme-portal .link.themea:hover, .theme-B .theme-portal .link.themeb:hover, .theme-C .theme-portal .link.themec:hover, .theme-D .theme-portal .link.themed:hover, 
 body:not(.basic):not(.contrast) .theme-portal .link.theme0:hover, .contrast.win10 .theme-portal .link.theme1:hover, .contrast:not(.win10) .theme-portal .link.theme2:hover, .basic .theme-portal .link.theme3:hover,
 body:not(.filterA):not(.filterB):not(.filterC) .theme-portal .link.theme10:hover, .filterA .theme-portal .link.theme11:hover, .filterB .theme-portal .link.theme12:hover, .filterC .theme-portal .link.theme13:hover {
+    background-color:#31D5DF;
     background-color:var(--button-color-dark);
+    color:white;
     color:var(--button-color-text);
+     border-bottom-color:white;
     border-bottom-color:var(--button-color-text);
 }
 
