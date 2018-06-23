@@ -308,8 +308,14 @@ border:0;
 }
 
 
+[class*="filter"] .theme-portal {
+  position:sticky;
+    top:49px;
+}
+
+
 [class*="filter"] .top-gap {
-  padding:10.53px;
+  padding:11px;
 }
 
 
