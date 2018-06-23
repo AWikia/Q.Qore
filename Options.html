@@ -8,10 +8,10 @@
   <div class="mpisto-navbar-wrapper">
     <a class="link" style="font-family:'Play', Jura, cursive;">Mpisto War</a>
     <div class="wds-dropdown">
-      <a class="link">Explore <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
+      <div class="link">Explore <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
 </svg>
-      </a>
+      </div>
       <div class="wds-dropdown__content">
         <ul class="wds-list wds-is-linked">
           <li><a>Company</a></li>
@@ -300,10 +300,26 @@
     <div class="contrastnotice">
     Your browser does not support CSS variables which are required for High Contrast Mode to work
     </div>
-    <h2>Misc</h2>
-    <input type="checkbox" name="22" id="211"></input> <label for="211">Edit pages by double clicking on its title</label>
+    <h2>Color Filters</h2>
+    Default filter:
     <br>
-    <input type="checkbox" name="22" id="212"></input> <label for="212">Watch/Unwatch pages by clicking on its title for more than 4 seconds</label>
+    <input type="radio" name="22" id="211" checked onclick="HCa1()"></input> <label for="211">None</label>
+    <br>
+    <div class="highcontrastmodes">
+    <input type="radio" name="22" id="212" onclick="HCb1()"></input> <label for="212">Grayscale</label>
+    <br>
+    <input type="radio" name="22" id="213" onclick="HCc1()"></input> <label for="213">Inverted Colors</label>
+    <br>
+    <input type="radio" name="22" id="214" onclick="HCd1()"></input> <label for="214">Inverted Grayscale</label>
+    </div>
+    <div class="contrastnotice">
+    Your browser does not support CSS filters which are required for Color Filters to work
+    </div>
+
+    <h2>Misc</h2>
+    <input type="checkbox" name="23" id="221"></input> <label for="221">Edit pages by double clicking on its title</label>
+    <br>
+    <input type="checkbox" name="23" id="222"></input> <label for="222">Watch/Unwatch pages by clicking on its title for more than 4 seconds</label>
     </div>
     </section>
     
@@ -452,6 +468,41 @@
 </head>
 
 <script>
+// Filters
+function HCa1() {
+    var x = document.getElementById("Handler");
+        x.className = x.className.replace(" filterA", "");
+        x.className = x.className.replace(" filterB", "");
+        x.className = x.className.replace(" filterC", "");
+}
+
+function HCb1() {
+    var x = document.getElementById("Handler");
+    if (x.className.indexOf("filterA") == -1) {
+        x.className += " filterA";
+    }
+        x.className = x.className.replace(" filterB", "");
+        x.className = x.className.replace(" filterC", "");
+}
+
+function HCc1() {
+    var x = document.getElementById("Handler");
+    if (x.className.indexOf("filterB") == -1) {
+        x.className += " filterB";
+    }
+        x.className = x.className.replace(" filterA", "");
+        x.className = x.className.replace(" filterC", "");
+}
+
+function HCd1() {
+    var x = document.getElementById("Handler");
+    if (x.className.indexOf("filterC") == -1) {
+        x.className += " filterC";
+    }
+        x.className = x.className.replace(" filterA", "");
+        x.className = x.className.replace(" filterB", "");
+}
+
 // Restore High Contrast
 function HCclear() {
     var x = document.getElementById("Handler");

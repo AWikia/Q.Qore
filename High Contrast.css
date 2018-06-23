@@ -12,6 +12,21 @@ body:not(.contrast):not(.basic) .clearhighcontrastbutton.wds-button {
   display:none;
 }
 
+
+.mpisto-options-content .filtermodes {
+  display:none;
+}
+
+@supports (filter:saturate(0)) or (-webkit-filter:saturate(0)) {
+.mpisto-options-content .filternotice {
+  display:none;
+}
+
+.mpisto-options-content .filtermodes {
+  display:block;
+}
+}
+
 @supports (--color:red) {
 body:not(.contrast):not(.basic) .highcontrastbutton.wds-dropdown {
   display:inline-block;
@@ -59,7 +74,7 @@ body:not(.contrast):not(.basic) .highcontrastbutton.wds-dropdown {
 }
 
 
-.contrast :not(.wds-dropdown):not(.wds-community-header):not(time):not(.wds-list):not(input):before,.contrast :not(.wds-dropdown):not(.wds-community-header):not(.wds-list):not(.mpisto-article-wrapper):not(input):after, .basic header.mpisto-navbar:after, .basic footer.mpisto-footer:after, .basic header.mpisto-footer-container:after, .basic .mpisto-option-pane:after, .basic .mpisto-content:after, .basic .mpisto-option-way:after,.basic header.mpisto-navbar:before, .basic footer.mpisto-footer:before, .basic header.mpisto-footer-container:before, .basic .mpisto-option-pane:before, .basic .mpisto-content:before, .basic .mpisto-option-way:before  {
+.contrast :not(.wds-dropdown):not(.wds-community-header):not(time):not(.wds-list):not(input):before,.contrast :not(.wds-dropdown):not(.wds-community-header):not(.wds-list):not(.mpisto-article-wrapper):not(input):after, .basic header.mpisto-navbar:after, .basic footer.mpisto-footer:after, .basic header.mpisto-footer-container:after, .basic .mpisto-option-pane:after, .basic .mpisto-content:after, .basic .mpisto-option-way:after, .basic .theme-portal:after,.basic header.mpisto-navbar:before, .basic footer.mpisto-footer:before, .basic header.mpisto-footer-container:before, .basic .mpisto-option-pane:before, .basic .mpisto-content:before, .basic .mpisto-option-way:before, .basic .theme-portal:before  {
 display:none!important;
 }
 
@@ -71,7 +86,7 @@ display:none!important;
   background-color:var(--dropdown-bg);
 }
 
-.contrast header.mpisto-navbar, .contrast footer.mpisto-footer, .basic header.mpisto-navbar, .basic footer.mpisto-footer {
+.contrast header.mpisto-navbar, .contrast footer.mpisto-footer, .contrast .theme-portal, .basic header.mpisto-navbar, .basic footer.mpisto-footer, .basic .theme-portal {
   background-color:var(--content-color);
 }
 
@@ -79,6 +94,20 @@ display:none!important;
   opacity:1;
 }
 
+.filterA {
+  -webkit-filter:saturate(0);
+  filter:saturate(0);
+}
+
+.filterB {
+  -webkit-filter:hue-rotate(180deg) invert(1);
+  filter:hue-rotate(180deg) invert(1);
+}
+
+.filterC {
+  -webkit-filter:saturate(0) hue-rotate(180deg) invert(1);
+  filter:saturate(0) hue-rotate(180deg) invert(1);
+}
 
 /* Header Buttons - Based on Win8-10 High Contrast titlebar button styling */
 .main .contrast .wds-community-header .wds-button.wds-is-secondary {
@@ -100,9 +129,9 @@ display:none!important;
 
 /* Theme Portal */
 .contrast .theme-portal .link:hover {
-  color:var(--content-bg);
-  background-color:var(--content-color);
-  border-bottom-color:var(--content-bg);
+  color:var(--content-color);
+  background-color:var(--content-bg);
+  border-bottom-color:var(--content-color);
 }
 
 /*
@@ -271,6 +300,33 @@ background-color:transparent;
 border:0;
 }
 
+
+/* Fix for Edge in Filters */
+@supports (position:-ms-page) and (position:sticky) {
+[class*="filter"] header.mpisto-navbar, [class*="filter"] header.mpisto-footer-container {
+  position:sticky;
+}
+
+
+[class*="filter"] .top-gap {
+  padding:10.53px;
+}
+
+
+[class*="filter"] footer.mpisto-footer, [class*="filter"].options .top-gap {
+padding:0;
+}
+
+[class*="filter"]{
+margin-top:0;
+margin-bottom:-24px;
+}
+
+[class*="filter"].options {
+  margin-bottom:0; /* Rollback bottom margin set by Color Filter being enabled on MS Edge because bottom toolbar does not vitrually exist in Preferences */
+}
+
+}
 
 /* Selection Styles per B19 */
 .contrast ::selection {

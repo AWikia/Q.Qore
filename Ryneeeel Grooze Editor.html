@@ -14,10 +14,10 @@
   <div class="mpisto-navbar-wrapper">
     <a class="link" style="font-family:'Play', Jura, cursive;">Mpisto War</a>
     <div class="wds-dropdown">
-      <a class="link">Explore <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
+      <div class="link">Explore <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
 </svg>
-      </a>
+      </div>
       <div class="wds-dropdown__content">
         <ul class="wds-list wds-is-linked">
           <li><a>Company</a></li>
@@ -149,9 +149,22 @@
       <a class="link theme3" onclick="HCcustom2()"><svg version="1.1" width="28" height="38" class="wds-icon" viewBox="-1 -1 28 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark-circle" />
 </svg> <span>Performance</span></a>
+       <div class="separator"></div>
+      <a class="link theme10" onclick="HCa1()"><svg version="1.1" width="28" height="38" class="wds-icon" viewBox="-1 -1 28 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark-circle" />
+</svg> <span>off</span></a>
+      <a class="link theme11" onclick="HCb1()"><svg version="1.1" width="28" height="38" class="wds-icon" viewBox="-1 -1 28 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark-circle" />
+</svg> <span>Gray</span></a>
+      <a class="link theme12" onclick="HCc1()"><svg version="1.1" width="28" height="38" class="wds-icon" viewBox="-1 -1 28 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark-circle" />
+</svg> <span>Invert</span></a>
+      <a class="link theme13" onclick="HCd1()"><svg version="1.1" width="28" height="38" class="wds-icon" viewBox="-1 -1 28 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark-circle" />
+</svg> <span>Inv-Gray</span></a>
     </nav>
 
-
+<!--
 <header class="wds-community-header" id="CommunityHeader">	
   <div class="wds-community-header__wordmark">		
     <a accesskey="z">			
@@ -185,7 +198,7 @@
         <div class="wds-dropdown">
           <div class="wds-button wds-is-secondary wds-is-squished wds-dropdown__toggle">				
             <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon-small wds-icon">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-grid" />
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-more" />
             </svg>			
           </div>
           <div class="wds-dropdown__content wds-is-right-aligned">		
@@ -316,7 +329,7 @@
   </nav>
 </header>
 
-<!-- End Header -->
+ End Header -->
 
 <header class="editor-header">
 <img src="Wordmark.png" class="wordmark" />
@@ -1000,49 +1013,6 @@ Can be found on Chancelog page
 
 <!-- End Article -->
 
-<header class="mpisto-footer-container">
-  <div>
-  <a class="item">
-  <span>Follow Article</span>
-  </a>
-    <div class="wds-dropdown">
-      <a class="item"><span>My tools</span>
-                   <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
-                  </svg>
-      </a>
-      <div class="wds-dropdown__content wds-is-not-scrollable">
-        <ul class="wds-list wds-is-linked">
-          <li><a>History</a></li>
-          <li><a>What links here</a></li>
-          <li><a>Theme Designer</a></li>
-          <li><a>Public Logs</a></li>
-          <li><a>Recent Bashes</a></li>
-        </ul>
-      </div>
-    </div>
-  <a class="item">
-  <span>Admin Dashboard</span>
-  </a>
-  <a class="item">
-<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-gear-small" />
-                  </svg>
-  <span>Customize</span>
-  </a>
-  </div>
-</header>
-<!--
-  <nav>
-<a onclick="BarSwitch()">                 <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wrapper-chevron">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
-                  </svg>
-</a>
-  </nav>
--->
-
-<!-- End Toolbar -->
-
 <footer class="mpisto-footer" id="Footer">
   <table class="mpisto-wrapper">
     <thead class="mpisto-footer-container">
@@ -1108,6 +1078,50 @@ Can be found on Chancelog page
   </table>
 </footer>
 <!-- End Footer -->
+<header class="mpisto-footer-container">
+  <div>
+  <a class="item">
+  <span>Follow Article</span>
+  </a>
+    <div class="wds-dropdown">
+      <a class="item"><span>My tools</span>
+                   <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
+                  </svg>
+      </a>
+      <div class="wds-dropdown__content wds-is-not-scrollable">
+        <ul class="wds-list wds-is-linked">
+          <li><a>History</a></li>
+          <li><a>What links here</a></li>
+          <li><a>Theme Designer</a></li>
+          <li><a>Public Logs</a></li>
+          <li><a>Recent Bashes</a></li>
+        </ul>
+      </div>
+    </div>
+  <a class="item">
+  <span>Admin Dashboard</span>
+  </a>
+  <a class="item">
+<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-gear-small" />
+                  </svg>
+  <span>Customize</span>
+  </a>
+  </div>
+</header>
+<!--
+  <nav>
+<a onclick="BarSwitch()">                 <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wrapper-chevron">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
+                  </svg>
+</a>
+  </nav>
+-->
+
+<!-- End Toolbar -->
+
+
 <div class="lightbox-container" id="modal1">
     <div class="lightbox">
       <h1><span>Add Image</span> <a class="wds-button wds-is-square wds-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
@@ -1373,6 +1387,41 @@ Can be found on Chancelog page
 </head>
 
 <script>
+// Filters
+function HCa1() {
+    var x = document.getElementById("Handler");
+        x.className = x.className.replace(" filterA", "");
+        x.className = x.className.replace(" filterB", "");
+        x.className = x.className.replace(" filterC", "");
+}
+
+function HCb1() {
+    var x = document.getElementById("Handler");
+    if (x.className.indexOf("filterA") == -1) {
+        x.className += " filterA";
+    }
+        x.className = x.className.replace(" filterB", "");
+        x.className = x.className.replace(" filterC", "");
+}
+
+function HCc1() {
+    var x = document.getElementById("Handler");
+    if (x.className.indexOf("filterB") == -1) {
+        x.className += " filterB";
+    }
+        x.className = x.className.replace(" filterA", "");
+        x.className = x.className.replace(" filterC", "");
+}
+
+function HCd1() {
+    var x = document.getElementById("Handler");
+    if (x.className.indexOf("filterC") == -1) {
+        x.className += " filterC";
+    }
+        x.className = x.className.replace(" filterA", "");
+        x.className = x.className.replace(" filterB", "");
+}
+
 // Restore High Contrast
 function HCclear() {
     var x = document.getElementById("Handler");
