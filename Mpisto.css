@@ -824,7 +824,7 @@ font-family:"Open Sans", serif;
 
 /* Gap */
 .top-gap {
-padding:31.5px;
+padding:48px;
 }
 
 /* Avatars */
@@ -3597,12 +3597,14 @@ margin-right:0;
   border-bottom:2px solid var(--content-border);
   color:#fff;
   color:var(--dropdown-bg);
-  position:relative;
+  position:fixed;
   z-index:55;
   margin:-22px 0 20px;
   box-shadow:0 0 9px #ccc, 0 0 2.5px #000, 0 0 1.5px #fff;
   box-shadow:0 0 9px var(--content-border), 0 0 2.5px #000, 0 0 1.5px #fff;
+  top:71px;
 }
+
 
 .theme-portal:after {
     content: "";
@@ -3632,15 +3634,6 @@ margin-right:0;
     opacity: 0.2;
     top: 0px;
     left: 0px;
-}
-
-
-@supports ((position: -webkit-sticky) or (position: sticky)) or (position:-webkit-sticky) {
-.theme-portal {
-  position:-webkit-sticky;
-  position:sticky;
-  top:49px;
-}
 }
 
 
