@@ -106,6 +106,7 @@ abbr[title] {
 button, input {
 position:relative;
 font-family:inherit;
+box-shadow:none;
 /* mInerva Specific Code */
 (M)text-shadow:none;
 (M)-webkit-user-select:all;
@@ -209,6 +210,7 @@ resize:none;
   image-rendering:crisp-edges;               /* CSS4 Proposed  */
   -ms-interpolation-mode:nearest-neighbor;   /* IE8+           */
   -qq-image-blurring:cross;                  /* 4x4 Web 1-2    */
+border-radius:0; /* Remove initial border-radius set by some agents such as FF for Android in input fields */
 }
 
 /* Global Nav
@@ -824,7 +826,7 @@ font-family:"Open Sans", serif;
 
 /* Gap */
 .top-gap {
-padding:48px;
+padding:31.5px;
 }
 
 /* Avatars */
@@ -3649,6 +3651,15 @@ margin-right:0;
     border-bottom-width:0!important;
     box-shadow:none!important;
   }
+
+.top-gap {
+padding:48px;
+}
+
+.options .top-gap {
+padding:21.5px!Important;
+}
+
 }
 
 
