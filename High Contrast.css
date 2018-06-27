@@ -224,7 +224,7 @@ box-shadow:0 0 0 3px var(--content-border)!important;
 box-shadow:0 0 0px 1px var(--content-color)!important;
 }
 
-
+/*
 .contrast input[type="checkbox"]:hover, .contrast input[type="radio"]:hover {
 box-shadow:0 0 0px 1px rgb(var(--link-color))!important;
 }
@@ -246,7 +246,7 @@ box-shadow:0 0 0px 1px var(--button-color-dark)!important;
 .contrast input[type="checkbox"]:checked:active, .contrast input[type="radio"]:checked:active {
 box-shadow:0 0 0px 1px var(--button-color-text)!important;
 }
-
+*/
 
 .contrast .page-1 .option-link.p1, .contrast .page-2 .option-link.p2, .contrast .page-3 .option-link.p3, .contrast .page-4 .option-link.p4, .contrast .page-5 .option-link.p5  {
   background-color:var(--button-color-text);
@@ -258,6 +258,10 @@ box-shadow:0 0 0px 1px var(--button-color-text)!important;
 color:inherit;
 }
 
+
+.contrast .mpisto-option-way > div .fieldset {
+  background-image:none;
+}
 
 /* Lightbox button stylings. Based on Community Header button theming on non-contrast modes */
 .contrast .mpisto-module .buttons .wds-button, .contrast .lightbox h1 .wds-button, .contrast .lightbox h2 .wds-button, .contrast .lightbox footer .wds-button  {
@@ -320,10 +324,10 @@ border:0;
 
 
 [class*="filter"] footer.mpisto-footer, [class*="filter"].options .top-gap {
-padding:0;
+padding:0!important;
 }
 
-[class*="filter"]{
+body[class*="filter"]{
 margin-top:0;
 margin-bottom:-24px;
 }
