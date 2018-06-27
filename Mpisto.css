@@ -339,13 +339,6 @@ aside, nav {
   (M)box-shadow:none;
 }
 
-svg, svg * {
--webkit-user-select:none!important;
--moz-user-select:none!important;
--ms-user-select:none!important;
-user-select:none!important;
-}
-
 /* No borders on injected SVGs */
 svg > use {
   (M)outline:0;
