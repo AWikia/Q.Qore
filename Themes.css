@@ -110,7 +110,7 @@
 --community-header-text:248,248,248;
 }
 
-/* Standard ~ */
+/* Standard (V8) */
 :root {
 --background-image:url("headbg2.jpg");
 --background-color:#599ace;
@@ -123,6 +123,22 @@
 --button-color-dark:#6C7BAD;
 --button-color-text:white;
 --community-header-bg:25,161,95;
+--community-header-text:248,248,248;
+}
+
+/* Standard ~ */
+:root {
+--background-image:url("headbg7.jpg");
+--background-color:#ff0000;
+--link-color:78,93,148;
+--content-bg:#fefff1;
+--dropdown-bg:#F5F8F3;
+--content-border:#b0cccc;
+--content-color:#3c1a2b;
+--button-color:#404A57;
+--button-color-dark:#5E6670;
+--button-color-text:white;
+--community-header-bg:149,49,81;
 --community-header-text:248,248,248;
 }
 
@@ -206,6 +222,23 @@
 --community-header-text:23,23,23;
 }
 
+/* Standard Beta Version */
+:root {
+--background-image:url("headbg6-1.jpg");
+--background-color:#ac599e;
+--link-color:92,187,129;
+--content-bg:#ffffff;
+--dropdown-bg:#FFFFFF;
+--content-border:#cacaca;
+--content-color:#000000;
+--button-color:#5CBB81;
+--button-color-dark:#7ED5A0;
+--button-color-text:white;
+--community-header-bg:255,0,0;
+--community-header-text:248,248,248;
+}
+
+
 /* Standard Developer Edition Version */
 :root {
 --background-image:url("dev.jpg");
@@ -220,6 +253,22 @@
 --button-color-text:white;
 --community-header-bg:22,196,196;
 --community-header-text:248,248,248;
+}
+
+/* Standard Developer Version */
+:root {
+--background-image:url("headbg6-2.jpg");
+--background-color:#d9d9d9;
+--link-color:187,187,187;
+--content-bg:#ffffff;
+--dropdown-bg:#FFFFFF;
+--content-border:#cacaca;
+--content-color:#000000;
+--button-color:#CCCCCC;
+--button-color-dark:#B3B3B3;
+--button-color-text:black;
+--community-header-bg:170,170,170;
+--community-header-text:23,23,23;
 }
 
 /* Agent */
@@ -269,6 +318,8 @@
 --community-header-bg:0,0,255;
 --community-header-text:248,248,248;
 }
+
+
 
 /* Gleun */
 :root {
