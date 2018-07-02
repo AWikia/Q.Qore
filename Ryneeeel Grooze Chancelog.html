@@ -4,16 +4,37 @@
 
 <html class="main">
   <body class="mpisto-2018 theme-A" id="Handler">
-<header class="mpisto-navbar">
+  <script>
+
+function GNavSearch() {
+    var x = document.getElementById("GlobalNavigation");
+    if (x.className.indexOf("active-search") == -1) {
+        x.className += " active-search";
+    }
+}
+
+function GNavSearchOff() {
+    var x = document.getElementById("GlobalNavigation");
+        x.className = x.className.replace(" active-search", "");
+}
+
+/* CSS for App */
+if (navigator.userAgent.match("MW18")) {
+document.getElementById("Handler").className += " mpisto-servers"
+}
+
+  </script>
+<header class="mpisto-navbar" id="GlobalNavigation">
   <div class="mpisto-navbar-wrapper">
     <a class="link" style="font-family:'Play', Jura, cursive;">Mpisto War</a>
     <div class="wds-dropdown">
-      <div class="link">Explore <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
+      <div class="link company">Explore <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
 </svg>
       </div>
       <div class="wds-dropdown__content">
         <ul class="wds-list wds-is-linked">
+          <li class="servers-only"><a href="http://github.com/HM100/Mpisto">Github</a></li>
           <li><a>Company</a></li>
           <li><a>Hiring</a></li>
           <li><a>A Wiki - Techno Wiki</a></li>
@@ -24,11 +45,17 @@
       </div>
     </div>
     <div class="search">
-    <input class="search-input" placeholder="search on Mpisto..."></input>
-    <button class="wds-button wds-is-squished wds-is-secondary search-button"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+    <input class="search-input" placeholder="search on Mpisto..." onclick="GNavSearch()"></input>
+    <div class="wds-button-group search-buttons">
+    <button class="wds-button wds-is-squished wds-is-secondary close-button search-form-button" onclick="GNavSearchOff()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" />
+</svg>
+    </button>
+    <button class="wds-button wds-is-squished wds-is-secondary search-button search-form-button"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass" />
 </svg>
     </button>
+    </div>
     </div>
     <div class="user">
       <div class="wds-dropdown">
@@ -109,6 +136,10 @@
       </a>
     </div>
   </div>
+  <div class="panther-slot-wrapper">
+    <a class="wds-button wds-is-fandom-color" href="http://fandomdesignsystem.com">Panther Site</a>
+  </div>
+
 </header>
 
 <!-- End Global Nav -->
@@ -447,6 +478,54 @@
     <div class="mpisto-article-wrapper">
       <article class="mpisto-article">
       <!--Start Article-->
+      <!--9-->
+      <h2>IB9</h2>
+        <ul>
+        <li>
+        Ninth Revision, Based on Desktop Build 550 and includes the following changes:
+        <ul>
+        <li>
+        Implemented <code>theme-color</code> meta tag for the Central Wiki
+        </li>
+        <li>
+        Made Panther slot hidden from Mpisto Servers
+        </li>
+        <li>
+        CSS fixes
+        </li>
+        <li>
+        Added Panther Slot to GN (Only on Desktop skin on Central Wiki and only while logged in)
+        </li>
+        <li>
+        Some fixes to GN
+        </li>
+        <li>
+        Global Navigation now allows full Acryllic again
+        </li>
+        <li>
+        Dropped 1500px Breakpoint (Now 1500px+ screens redirect to 1280px breakpoint)
+        </li>
+        <li>
+        Single Colon for checkbox stylings changed to double ones (The Way Firefox also working)
+        </li>
+        <li>
+        Increased transparency of Editor header, allowing more color to show and reduced everything except buttons and height of the element to 90% of normal to allow more text to be shown
+        </li>
+        <li>
+        Added a cube in Filter Modes to check if colors are correct
+        </li>
+        <li>
+        Global Navigation now has JS Gestures and made it better
+        </li>
+        <li>
+        Global Navigation now has unprefixed ID selector to macth Amanda and Nile5
+        </li>
+        <li>
+        Bug fixes
+        </li>
+        </ul>
+        </li>
+        </ul>
       <!--8-->
       <h2>IB8</h2>
         <ul>
@@ -1028,6 +1107,7 @@
 <head>
 <title>Mpisto War 2018</title>
 <meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#4800ff">
 <link rel="stylesheet" type="text/css" href="Mpisto.css"> <!-- Main CSS -->
 <link rel="stylesheet" type="text/css" href="Breakpoints.css"> <!-- Non wds-breakpoint CSS --> 
 <link rel="stylesheet" type="text/css" href="MpistoAgent.css"> <!-- Custom CSS -->
