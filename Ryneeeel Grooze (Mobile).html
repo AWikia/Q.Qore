@@ -5,16 +5,36 @@
 <html class="main">
   <body class="mpisto-2018-mobile" id="Handler">
 
-<header class="mpisto-navbar">
+  <script>
+
+function GNavSearch() {
+    var x = document.getElementById("GlobalNavigation");
+    if (x.className.indexOf("active-search") == -1) {
+        x.className += " active-search";
+    }
+}
+
+function GNavSearchOff() {
+    var x = document.getElementById("GlobalNavigation");
+        x.className = x.className.replace(" active-search", "");
+}
+/* CSS for App */
+if (navigator.userAgent.match("MW18")) {
+document.getElementById("Handler").className += " mpisto-servers"
+}
+
+  </script>
+<header class="mpisto-navbar" id="GlobalNavigation">
   <div class="mpisto-navbar-wrapper">
     <a class="link" style="font-family:'Play', Jura, cursive;">Mpisto War</a>
     <div class="wds-dropdown">
-      <div class="link">Explore <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" viewBox="0 0 12 12">
-  <path d="M6 9l4-5H2" fill-rule="evenodd"/>
+      <div class="link company">Explore <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
 </svg>
       </div>
       <div class="wds-dropdown__content">
         <ul class="wds-list wds-is-linked">
+          <li class="servers-only"><a href="http://github.com/HM100/Mpisto">Github</a></li>
           <li><a>Company</a></li>
           <li><a>Hiring</a></li>
           <li><a>A Wiki - Techno Wiki</a></li>
@@ -25,11 +45,17 @@
       </div>
     </div>
     <div class="search">
-    <input class="search-input" placeholder="search on Mpisto..."></input>
-    <button class="wds-button wds-is-squished wds-is-secondary search-button"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small" viewBox="0 0 24 24">
-  <g fill-rule="evenodd"><path d="M21.747 20.524l-4.872-4.871a.864.864 0 1 0-1.222 1.222l4.871 4.872a.864.864 0 1 0 1.223-1.223z"/><path d="M3.848 10.763a6.915 6.915 0 0 1 6.915-6.915 6.915 6.915 0 0 1 6.915 6.915 6.915 6.915 0 0 1-6.915 6.915 6.915 6.915 0 0 1-6.915-6.915zm-1.729 0a8.643 8.643 0 0 0 8.644 8.644 8.643 8.643 0 0 0 8.644-8.644 8.643 8.643 0 0 0-8.644-8.644 8.643 8.643 0 0 0-8.644 8.644z"/></g>
+    <input class="search-input" placeholder="search on Mpisto..." onclick="GNavSearch()"></input>
+    <div class="wds-button-group search-buttons">
+    <button class="wds-button wds-is-squished wds-is-secondary close-button search-form-button" onclick="GNavSearchOff()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" />
 </svg>
     </button>
+    <button class="wds-button wds-is-squished wds-is-secondary search-button search-form-button"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass" />
+</svg>
+    </button>
+    </div>
     </div>
     <div class="user">
       <div class="wds-dropdown">
@@ -334,6 +360,7 @@
 <head>
 <title>Mpisto War 2018</title>
 <meta name="viewport" content="width=device-width, user-scalable=no">
+<meta name="theme-color" content="#4800ff">
 <link rel="stylesheet" type="text/css" href="Mpisto.css"> <!-- Main CSS -->
 <link rel="stylesheet" type="text/css" href="Breakpoints.css"> <!-- Breakpoint CSS -->
 <link rel="stylesheet" type="text/css" href="Mobile.css"> <!-- Mobile CSS -->

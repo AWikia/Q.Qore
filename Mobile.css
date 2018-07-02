@@ -383,7 +383,7 @@ width:calc(1118px - 36px);
 /* Some fixes for the search input */
 header.mpisto-navbar .search .search-input {
 font-family:inherit;
-font-size:13.5px;
+font-size:13px;
 line-height:normal;
 background-color:transparent;
     border-color:#39242d;
@@ -407,13 +407,6 @@ header.mpisto-navbar:after, footer.mpisto-footer:after {
   -webkit-backdrop-filter:none;
   backdrop-filter:none;
 }
-}
-
-@media only screen and (min-width:1280px) and (max-width:1499px) {
-.page-wrapper {
-width:1246px;
-width:calc(1246px - 36px);
-}
 
 .page-wrapper .store-content .store-items .wds-button .wds-button {
 width:70px;
@@ -426,12 +419,14 @@ width:60px;
 height:60px;
 }
 
+
 }
+
 
 @media only screen and (min-width:1500px) {
 .page-wrapper {
-width:1466px;
-width:calc(1466px - 36px);
+width:1246px;
+width:calc(1246px - 36px);
 }
 
 .page-wrapper .store-content .store-header {
