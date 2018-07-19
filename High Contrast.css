@@ -211,7 +211,7 @@ background-color:var(--dropdown-bg);
 .main .contrast .wds-banner-notification__container{box-shadow:0 2px 0 2px rgba(0,0,0,.2), 0 2px 0 2px rgba(255,255,255,0.2)!important;}
 
 /* Modules */
-.contrast .mpisto-module {
+.contrast .mpisto-module, .contrast .lightbox {
 box-shadow:0 0 0 3px var(--content-border)!important;
 }
 
@@ -303,29 +303,28 @@ border:0;
 
 /* Fix for Edge in Filters */
 @supports (position:-ms-page) and (position:sticky) {
-[class*="filter"] header.mpisto-navbar, [class*="filter"] header.mpisto-footer-container {
+[class*="filter"] header.mpisto-footer-container {
   position:sticky;
 }
 
 
-[class*="filter"] .theme-portal {
+[class*="filter"] [style*="visibility:"] * {
+  display:none;
+}
+
+[class*="filter"] .mpisto-gnav {
   position:sticky;
-    top:49px;
 }
 
 
 [class*="filter"] .top-gap {
-  padding:11px;
+  margin-top:20px;
 }
 
 
-[class*="filter"] footer.mpisto-footer, [class*="filter"].options .top-gap {
-padding:0!important;
-}
 
 body[class*="filter"]{
 margin-top:0;
-margin-bottom:-24px;
 }
 
 [class*="filter"].options {
