@@ -24,6 +24,12 @@ document.getElementById("Handler").className += " mpisto-servers"
 }
 
   </script>
+<div style="visibility:hidden">
+<header class="mpisto-navbar">
+</header>
+</div>
+
+<div class="mpisto-gnav">
 <header class="mpisto-navbar" id="GlobalNavigation">
   <div class="mpisto-navbar-wrapper">
     <a class="link" style="font-family:'Play', Jura, cursive;">Mpisto War</a>
@@ -41,17 +47,18 @@ document.getElementById("Handler").className += " mpisto-servers"
           <li><a>A Wiki - Dev Wiki</a></li>
           <li><a>A Wiki Foundation</a></li>
           <li><a>More Wikis</a></li>
+          <li class="create-wiki-small"><a class="wds-button wds-is-secondary wds-is-squished createwiki">Create a Wiki</a></li>
         </ul>
       </div>
     </div>
     <div class="search">
     <input class="search-input" placeholder="search on Mpisto..." onclick="GNavSearch()"></input>
     <div class="wds-button-group search-buttons">
-    <button class="wds-button wds-is-squished wds-is-secondary close-button search-form-button" onclick="GNavSearchOff()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+    <button class="wds-button wds-is-squished wds-is-text close-button search-form-button" onclick="GNavSearchOff()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" />
 </svg>
     </button>
-    <button class="wds-button wds-is-squished wds-is-secondary search-button search-form-button"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+    <button class="wds-button wds-is-squished search-button search-form-button"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass" />
 </svg>
     </button>
@@ -59,8 +66,8 @@ document.getElementById("Handler").className += " mpisto-servers"
     </div>
     <div class="user">
       <div class="wds-dropdown">
-        <div class="link wds-dropdown__toggle"><img class="mpisto-avatar" src="HM100.png"></img> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" viewBox="0 0 12 12">
-  <path d="M6 9l4-5H2" fill-rule="evenodd"/>
+        <div class="link wds-dropdown__toggle"><img class="mpisto-avatar" src="HM100.png"></img> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
 </svg>
     </div>
         <div class="wds-dropdown__content wds-is-left-aligned">
@@ -70,18 +77,21 @@ document.getElementById("Handler").className += " mpisto-servers"
           </ul>
         </div>
       </div>
- 
-    </div>
+      </div>
     <div class="wiki">
       <a class="wds-button wds-is-secondary wds-is-squished createwiki">Create a Wiki</a>
-      <a class="wds-button wds-is-secondary wds-is-squished icon-createwiki">
-       <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" viewBox="0 0 12 12">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-plus" />
-  </svg>
-      </a>
     </div>
   </div>
 </header>
+
+<!-- End Global Nav -->
+
+</div>
+  <div class="top-gap"></div>
+  
+<!-- End Gap -->
+  
+<!-- End Gap -->
 
 <div class="ember-application" id="ember-container"><div class="ember-view" id="ember313"><div class=" application-wrapper games-vertical ember-view" id="ember319">	<div class="site-head-container ember-view site-head-headroom site-head-headroom-top headroom--not-bottom" id="ember668"><!----><div class="site-head-wrapper">
 	<nav class="site-head no-shadow">
