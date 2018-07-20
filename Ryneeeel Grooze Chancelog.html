@@ -24,6 +24,14 @@ document.getElementById("Handler").className += " mpisto-servers"
 }
 
   </script>
+<div style="visibility:hidden">
+<header class="mpisto-navbar">
+</header>
+<nav class="theme-portal">
+</nav>
+</div>
+
+<div class="mpisto-gnav">
 <header class="mpisto-navbar" id="GlobalNavigation">
   <div class="mpisto-navbar-wrapper">
     <a class="link" style="font-family:'Play', Jura, cursive;">Mpisto War</a>
@@ -41,17 +49,18 @@ document.getElementById("Handler").className += " mpisto-servers"
           <li><a>A Wiki - Dev Wiki</a></li>
           <li><a>A Wiki Foundation</a></li>
           <li><a>More Wikis</a></li>
+          <li class="create-wiki-small"><a class="wds-button wds-is-secondary wds-is-squished createwiki">Create a Wiki</a></li>
         </ul>
       </div>
     </div>
     <div class="search">
     <input class="search-input" placeholder="search on Mpisto..." onclick="GNavSearch()"></input>
     <div class="wds-button-group search-buttons">
-    <button class="wds-button wds-is-squished wds-is-secondary close-button search-form-button" onclick="GNavSearchOff()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+    <button class="wds-button wds-is-squished wds-is-text close-button search-form-button" onclick="GNavSearchOff()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" />
 </svg>
     </button>
-    <button class="wds-button wds-is-squished wds-is-secondary search-button search-form-button"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+    <button class="wds-button wds-is-squished search-button search-form-button"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass" />
 </svg>
     </button>
@@ -104,7 +113,7 @@ document.getElementById("Handler").className += " mpisto-servers"
            </li>
           </ul>
         </div>
-      </div>  
+      </div>
        <div class="wds-dropdown">
         <div class="link wds-dropdown__toggle"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-flag" /> 
@@ -125,28 +134,16 @@ document.getElementById("Handler").className += " mpisto-servers"
            </li>
           </ul>
         </div>
-      </div>        
-    </div>
+      </div>            
+    
     <div class="wiki">
       <a class="wds-button wds-is-secondary wds-is-squished createwiki">Create a Wiki</a>
-      <a class="wds-button wds-is-secondary wds-is-squished icon-createwiki">
-       <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-plus" />
-  </svg>
-      </a>
     </div>
   </div>
-  <div class="panther-slot-wrapper">
-    <a class="wds-button wds-is-fandom-color" href="http://fandomdesignsystem.com">Panther Site</a>
-  </div>
-
 </header>
 
 <!-- End Global Nav -->
 
-  <div class="top-gap"></div>
-  
-<!-- End Gap -->
 
     <nav class="theme-portal">
       <a class="link themea" onclick="HCa()"><svg version="1.1" width="28" height="38" class="wds-icon" viewBox="-1 -1 28 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -187,9 +184,14 @@ document.getElementById("Handler").className += " mpisto-servers"
       <a class="link theme13" onclick="HCd1()"><svg version="1.1" width="28" height="38" class="wds-icon" viewBox="-1 -1 28 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark-circle" />
 </svg> <span>Inv-Gray</span></a>
+
     </nav>
+</div>
+  <div class="top-gap"></div>
+  
+<!-- End Gap -->
 
-
+<section class="mpisto-content" id="Content">
 <header class="wds-community-header" id="CommunityHeader">	
   <div class="wds-community-header__wordmark">		
     <a accesskey="z">			
@@ -371,7 +373,6 @@ document.getElementById("Handler").className += " mpisto-servers"
 
 <!-- End Header -->
 
-<section class="mpisto-content" id="Content">
   <div class="mpisto-wrapper">
     <header class="mpisto-page-header" id ="PageHeader">
       <div class="mpisto-page-header-main">
@@ -478,11 +479,80 @@ document.getElementById("Handler").className += " mpisto-servers"
     <div class="mpisto-article-wrapper">
       <article class="mpisto-article">
       <!--Start Article-->
+      <!--11-->
+      <h2>IB11</h2>
+        <ul>
+        <li>
+        Eleventh Revision, Based on Desktop Build 650 and includes the following changes:
+        <ul>
+        <li>
+        Introduced Store Notifications
+        </li>
+        <li>
+        Major Global Nav and theme portal redesign
+        </li>
+        <li>
+        Dropped Panther slot from Central Wiki and Global Notifications from Beta Wiki (Changed back to Local Notifications again) and Developer Wiki now has notifications controller and container
+        </li>
+        <li>
+        Tweaks to GN
+        </li>
+        <li>
+        Mobile Site fixes
+        </li>
+        <li>
+        Minor Tweaks to global nav search design
+        </li>
+        <li>
+        Global Nav Search Buttons have been modified
+        </li>
+        <li>
+        Added with-panther class to <code>mpisto-navbar-wrapper</code> on Central Wiki outside of Mercury and Anons to make styling even more easier and panther slot way has been modified a bit
+        </li>
+        <li>
+        Added support for making CSS styling using LESS. More info about it can be found <a href="http://lesscss.org/">here</a>. See also the related <a href="https://en.wikipedia.org/wiki/Less_(stylesheet_language)">Wikipedia Article</a>
+        </li>
+        <li>
+        Added support for indeterminate checkboxes. IE and Edge shows a square while the rest engines uses a minus sign
+        </li>
+        <li>
+        Rail Module h2's z-index downgraded to 0, the way dropdowns will no longer be overlapped
+        </li>
+        <li>
+        Rebased the main content area container. Note: Custom CSS needs to be updated to account for the new syntax if you have one
+        </li>
+        <li>
+        Fixed some High Contrast Bugs
+        </li>
+        <li>
+        Redesigned Modals
+        </li>
+        <li>
+        Fixed some display errors
+        </li>
+        <li>
+        Updates to Global Navigation CSS
+        </li>
+        <li>
+        Explore Menu can no longer be opened while search is active once again
+        </li>
+        <li>
+        CSS fixes
+        </li>
+        <li>
+        Created an Updated version of Global Nav and Theme Portal
+        </li>
+        <li>
+        Bug fixes
+        </li>
+        </ul>
+        </li>
+        </ul>
       <!--10-->
       <h2>IB10</h2>
         <ul>
         <li>
-        Tenth Revision, Based on Desktop Build 550 and includes the following changes:
+        Tenth Revision, Based on Desktop Build 600 and includes the following changes:
         <ul>
         <li>
         Slight Theme Update

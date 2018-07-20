@@ -4,11 +4,11 @@
 /*.mpisto-grooze {
 display:inline!important;
 }*/
-.mpisto-content, .main .wds-community-header, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .lightbox, .mpisto-options-content {
+.mpisto-content, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .lightbox, .mpisto-options-content {
 width:100%!important;
 }
 
-.mpisto-content, .main .wds-community-header, .mpisto-editors-content, .lightbox, .mpisto-options-content {
+.mpisto-content, .mpisto-editors-content, .lightbox, .mpisto-options-content {
 width:calc(100% - 36px)!important;
 }
 
@@ -64,7 +64,7 @@ padding-right:24px;
 }
 */
 
-.mpisto-content, .main .wds-community-header, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .lightbox, .mpisto-options-content {
+.mpisto-content, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .lightbox, .mpisto-options-content {
 width:754px;
 }
 
@@ -74,7 +74,7 @@ header.mpisto-navbar .mpisto-navbar-wrapper {
   padding-right:10px;
 }
 
-.mpisto-content, .main .wds-community-header, .mpisto-editors-content, .mpisto-options-content {
+.mpisto-content, .mpisto-editors-content, .mpisto-options-content {
 width:calc(754px - 36px);
 }
 
@@ -91,12 +91,12 @@ footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container th.mpisto-footer-b
 font-size:14px;
 }
 
-.wds-button.icon-createwiki {
-display:inline-flex!important;
+header.mpisto-navbar .wiki {
+display:none!important;
 }
 
-.wds-button.createwiki {
-display:none!important;
+header.mpisto-navbar .wds-list.wds-is-linked > li.create-wiki-small {
+display:flex!important;
 }
 
 footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container td {
@@ -142,7 +142,7 @@ padding-right:10px;
 }
 */
 
-.mpisto-content, .main .wds-community-header, header.mpisto-navbar .mpisto-navbar-wrapper, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .lightbox, .mpisto-options-content {
+.mpisto-content, header.mpisto-navbar .mpisto-navbar-wrapper, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .lightbox, .mpisto-options-content {
 width:988px;
 }
 
@@ -150,7 +150,7 @@ header.mpisto-footer-container > div {
   width:988px;
 }
 
-.mpisto-content, .main .wds-community-header, .mpisto-editors-content {
+.mpisto-content, .mpisto-editors-content {
 width:calc(988px - 36px);
 }
 
@@ -210,7 +210,7 @@ padding-right:30px;
 }
 */
 
-.mpisto-content, .main .wds-community-header, header.mpisto-navbar .mpisto-navbar-wrapper, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .mpisto-options-content, .lightbox {
+.mpisto-content, header.mpisto-navbar .mpisto-navbar-wrapper, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .mpisto-options-content, .lightbox {
 width:1246px;
 }
 
@@ -218,7 +218,7 @@ header.mpisto-footer-container > div {
   width:1246px;
 }
 
-.mpisto-content, .main .wds-community-header, .mpisto-editors-content {
+.mpisto-content, .mpisto-editors-content {
 width:calc(1246px - 36px);
 }
 

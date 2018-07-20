@@ -25,6 +25,14 @@ document.getElementById("Handler").className += " mpisto-servers"
 }
 
   </script>
+<div style="visibility:hidden">
+<header class="mpisto-navbar">
+</header>
+<nav class="theme-portal">
+</nav>
+</div>
+
+<div class="mpisto-gnav">
 <header class="mpisto-navbar" id="GlobalNavigation">
   <div class="mpisto-navbar-wrapper">
     <a class="link" style="font-family:'Play', Jura, cursive;">Mpisto War</a>
@@ -42,17 +50,18 @@ document.getElementById("Handler").className += " mpisto-servers"
           <li><a>A Wiki - Dev Wiki</a></li>
           <li><a>A Wiki Foundation</a></li>
           <li><a>More Wikis</a></li>
+          <li class="create-wiki-small"><a class="wds-button wds-is-secondary wds-is-squished createwiki">Create a Wiki</a></li>
         </ul>
       </div>
     </div>
     <div class="search">
     <input class="search-input" placeholder="search on Mpisto..." onclick="GNavSearch()"></input>
     <div class="wds-button-group search-buttons">
-    <button class="wds-button wds-is-squished wds-is-secondary close-button search-form-button" onclick="GNavSearchOff()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+    <button class="wds-button wds-is-squished wds-is-text close-button search-form-button" onclick="GNavSearchOff()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" />
 </svg>
     </button>
-    <button class="wds-button wds-is-squished wds-is-secondary search-button search-form-button"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+    <button class="wds-button wds-is-squished search-button search-form-button"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass" />
 </svg>
     </button>
@@ -126,27 +135,16 @@ document.getElementById("Handler").className += " mpisto-servers"
            </li>
           </ul>
         </div>
-      </div>           
-    </div>
+      </div>            
+    
     <div class="wiki">
       <a class="wds-button wds-is-secondary wds-is-squished createwiki">Create a Wiki</a>
-      <a class="wds-button wds-is-secondary wds-is-squished icon-createwiki">
-       <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-plus" />
-  </svg>
-      </a>
     </div>
-  </div>
-  <div class="panther-slot-wrapper">
-    <a class="wds-button wds-is-fandom-color" href="http://fandomdesignsystem.com">Panther Site</a>
   </div>
 </header>
 
 <!-- End Global Nav -->
 
-  <div class="top-gap"></div>
-  
-<!-- End Gap -->
 
     <nav class="theme-portal">
       <a class="link themea" onclick="HCa()"><svg version="1.1" width="28" height="38" class="wds-icon" viewBox="-1 -1 28 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -187,9 +185,14 @@ document.getElementById("Handler").className += " mpisto-servers"
       <a class="link theme13" onclick="HCd1()"><svg version="1.1" width="28" height="38" class="wds-icon" viewBox="-1 -1 28 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark-circle" />
 </svg> <span>Inv-Gray</span></a>
+
     </nav>
+</div>
+  <div class="top-gap"></div>
+  
+<!-- End Gap -->
 
-
+<section class="mpisto-content" id="Content">
 <header class="wds-community-header" id="CommunityHeader">	
   <div class="wds-community-header__wordmark">		
     <a accesskey="z">			
@@ -371,7 +374,6 @@ document.getElementById("Handler").className += " mpisto-servers"
 
 <!-- End Header -->
 
-<section class="mpisto-content" id="Content">
   <div class="mpisto-wrapper">
     <header class="mpisto-page-header" id ="PageHeader">
       <div class="mpisto-page-header-main">

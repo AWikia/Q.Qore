@@ -321,6 +321,10 @@ height:30px;
     display:none;
 }
 
+.top-gap {
+margin:0!important;
+}
+
 }
 
 
@@ -335,12 +339,85 @@ header.mpisto-navbar:after, header.mpisto-navbar:before, footer.mpisto-footer:af
 }
 
 header.mpisto-navbar .link {
-  color:#39424d;
+  color:#cccccc;
 }
 
 header.mpisto-navbar .link:hover, header.mpisto-navbar .wds-dropdown:hover .link {
-    color:#00B7E0;
+    color:#39424d;
 }
+
+header.mpisto-navbar .wds-list.wds-is-linked > li > .wds-button.wds-is-secondary {
+color:#00B7E0;
+border-color:#00B7E0;
+}
+
+header.mpisto-navbar .wds-list.wds-is-linked > li > .wds-button.wds-is-secondary:hover, header.mpisto-navbar .wds-list.wds-is-linked > li > .wds-button.wds-is-secondary:active {
+color:rgba(0,183,224,0.8);
+border-color:rgba(0,183,224,0.8);
+background-color:rgba(0,183,224,0.2);
+}
+
+header.mpisto-navbar .link .wds-icon.wds-dropdown__toggle-chevron {
+color:#00B7E0;
+}
+
+
+header.mpisto-navbar .wiki .wds-button.wds-is-secondary {
+  color:#ccc;
+  border-color:#ccc;
+}
+
+header.mpisto-navbar .wiki .wds-button.wds-is-secondary:hover {
+  color:#39424d;
+  border-color:#39424d;
+}
+
+header.mpisto-navbar.active-search .search .search-input::-webkit-input-placeholder { /* Old Webkit */
+  color:#39424d;
+}
+
+header.mpisto-navbar.active-search .search .search-input:ms-input-placeholder { /* Internet Explorer */
+  color:#39424d;
+}
+
+header.mpisto-navbar.active-search .search .search-input::ms-input-placeholder { /* Microsoft Edge */
+  color:#39424d;
+}
+
+header.mpisto-navbar.active-search .search .search-input::-moz-placeholder { /* Old Firefox */
+  color:#39424d;
+}
+
+header.mpisto-navbar.active-search .search .search-input::placeholder { /* Standard */
+  color:#39424d;
+}
+
+
+header.mpisto-navbar .search .wds-button:not(.wds-is-secondary):not(.wds-is-text) {
+  color:#fff;
+  border-color:#ccc;
+  background-color:#ccc;
+}
+
+header.mpisto-navbar .search .wds-button:not(.wds-is-secondary):not(.wds-is-text):hover, header.mpisto-navbar .search .wds-button:not(.wds-is-secondary):not(.wds-is-text):active, header.mpisto-navbar .search .wds-button:not(.wds-is-secondary):not(.wds-is-text):focus {
+  border-color:#39424d;
+  background-color:#39424d;
+}
+
+header.mpisto-navbar .search .wds-button.wds-is-text:not(.wds-is-secondary) {
+  color:#ccc;
+}
+
+header.mpisto-navbar .search .wds-button.wds-is-text:hover, header.mpisto-navbar .search .wds-button.wds-is-text:active, header.mpisto-navbar .search .wds-button.wds-is-text:focus {
+  color:#39424d;
+}
+
+
+body:not(.mpisto-servers) header.mpisto-navbar .mpisto-navbar-wrapper.with-panther {
+padding-right:0!important;
+}
+
+
 
 footer.mpisto-footer {
 display:inherit;
@@ -364,13 +441,20 @@ footer.mobile-footer, .site-head-container {
 display:none;
 }
 
-.main:not(.store) body {
-margin-top:calc(3.46rem - 5px)!important;
+.main body {
+margin-top:0!important;
+}
+
+.main:not(.store) .top-gap {
+margin:0;
+}
+
+.store .top-gap {
+margin-top:20px;
 }
 
 .main .wds-community-header {
     display:block;
-    margin-top:calc(3.46rem + 16px);
 }
 
 .page-wrapper {
@@ -380,6 +464,21 @@ width:calc(1118px - 36px);
 }
 
 
+.notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child) div h6 {
+  line-height:0;
+  font-size:11px;
+}
+
+.notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child) a div h3 {
+  margin:0;
+  line-height:1;
+}
+
+.notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child) a img {
+  line-height:nomral;
+  vertical-align:middle;
+}
+
 /* Some fixes for the search input */
 header.mpisto-navbar .search .search-input {
 font-family:inherit;
@@ -387,9 +486,12 @@ font-size:13px;
 line-height:normal;
 background-color:transparent;
     border-color:#39242d;
-  color:#39424d;
 }
 
+header.mpisto-navbar.active-search .search .search-input {
+  color:#39424d;
+
+}
 
 /* Some fixes for the Desktop Footer */
 footer.mpisto-footer h1, footer.mpisto-footer h2, footer.mpisto-footer h3, footer.mpisto-footer h4, footer.mpisto-footer h5, footer.mpisto-footer h6 {
