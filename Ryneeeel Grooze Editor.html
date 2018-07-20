@@ -73,10 +73,74 @@ document.getElementById("Handler").className += " mpisto-servers"
     </div>
     </div>
     <div class="user">
-        <a class="link" href="#modal1"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user" /></svg>  <span>My Account</span>
-    </a>
+      <div class="wds-dropdown">
+        <div class="link wds-dropdown__toggle"><img class="mpisto-avatar" src="HM100.png"></img> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
+</svg>
     </div>
+        <div class="wds-dropdown__content wds-is-left-aligned">
+          <ul class="wds-list wds-is-linked">
+           <li><a>View Profile</a></li>
+           <li><a>Log Out</a></li>
+          </ul>
+        </div>
+      </div>
+ 
+       <div class="wds-dropdown">
+        <div class="link wds-dropdown__toggle"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-bell" /> 
+</svg> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
+</svg>
+    </div>
+        <div class="wds-dropdown__content wds-is-right-aligned wds-is-not-scrollable notification">
+          <ul class="wds-list wds-has-lines-between wds-has-ellipsis">
+           <li class="notification">
+           <a>
+           <div class="wrapper">
+           <img class="mpisto-avatar" src="Frouda.jpg"></img><div><h3>Make your wiki even more better</h3> <br><h6>By Frouda<time>01 Mar 2018</time></h6></div>
+           </div>
+           </a>
+           </li>
+           <li class="notification">
+           <a>
+           <div class="wrapper">
+           <img class="mpisto-avatar" src="Zekzphire.png"></img><div><h3>Building a successfull site</h3> <br><h6>By Zekzphire<time>26 Feb 2018</time></h6></div>
+           </div>
+           </a>
+           </li>
+           <li class="empty">
+           No notifications
+           </li>
+           <li>
+           <div>
+           <a href="#" class="markasread">Mark as read</a>
+           </div>
+           </li>
+          </ul>
+        </div>
+      </div>
+       <div class="wds-dropdown">
+        <div class="link wds-dropdown__toggle"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-flag" /> 
+</svg> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
+</svg>
+    </div>
+        <div class="wds-dropdown__content wds-is-right-aligned wds-is-not-scrollable flags-dropdown">
+          <ul class="wds-list wds-has-lines-between wds-has-ellipsis">
+           <li>
+           <button class="wds-button wds-is-squished wds-is-full-width">Manage Flags</button>
+           </li>
+           <li>
+           <button class="wds-button wds-is-squished wds-is-full-width">Enforce Flags</button>
+           </li>
+           <li>
+           <button class="wds-button wds-is-squished wds-is-full-width">Clear all Flags</button>
+           </li>
+          </ul>
+        </div>
+      </div>            
     
     <div class="wiki">
       <a class="wds-button wds-is-secondary wds-is-squished createwiki">Create a Wiki</a>
