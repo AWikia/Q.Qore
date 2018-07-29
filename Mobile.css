@@ -376,11 +376,11 @@ header.mpisto-navbar.active-search .search .search-input::-webkit-input-placehol
   color:#39424d;
 }
 
-header.mpisto-navbar.active-search .search .search-input:ms-input-placeholder { /* Internet Explorer */
+header.mpisto-navbar.active-search .search .search-input:-ms-input-placeholder { /* Internet Explorer */
   color:#39424d;
 }
 
-header.mpisto-navbar.active-search .search .search-input::ms-input-placeholder { /* Microsoft Edge */
+header.mpisto-navbar.active-search .search .search-input::-ms-input-placeholder { /* Microsoft Edge */
   color:#39424d;
 }
 
