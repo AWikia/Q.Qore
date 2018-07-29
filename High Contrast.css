@@ -74,7 +74,7 @@ body:not(.contrast):not(.basic) .highcontrastbutton.wds-dropdown {
 }
 
 
-.contrast :not(.wds-dropdown):not(.wds-community-header):not(time):not(.wds-list):not(input):before,.contrast :not(.wds-dropdown):not(.wds-community-header):not(.wds-list):not(.mpisto-article-wrapper):not(input):after, .basic header.mpisto-navbar:after, .basic footer.mpisto-footer:after, .basic header.mpisto-footer-container:after, .basic .mpisto-option-pane:after, .basic .mpisto-content:after, .basic .mpisto-option-way:after, .basic .theme-portal:after,.basic header.mpisto-navbar:before, .basic footer.mpisto-footer:before, .basic header.mpisto-footer-container:before, .basic .mpisto-option-pane:before, .basic .mpisto-content:before, .basic .mpisto-option-way:before, .basic .theme-portal:before  {
+.contrast :not(.wds-dropdown):not(.wds-community-header):not(time):not(.wds-list):not(input):before,.contrast :not(.wds-dropdown):not(.wds-community-header):not(.wds-list):not(.mpisto-article-wrapper):not(input):not(em):after, .basic header.mpisto-navbar:after, .basic footer.mpisto-footer:after, .basic header.mpisto-footer-container:after, .basic .mpisto-option-pane:after, .basic .mpisto-content:after, .basic .mpisto-option-way:after, .basic .theme-portal:after,.basic header.mpisto-navbar:before, .basic footer.mpisto-footer:before, .basic header.mpisto-footer-container:before, .basic .mpisto-option-pane:before, .basic .mpisto-content:before, .basic .mpisto-option-way:before, .basic .theme-portal:before  {
 display:none!important;
 }
 
@@ -95,18 +95,18 @@ display:none!important;
 }
 
 .filterA {
-  -webkit-filter:saturate(0);
-  filter:saturate(0);
+  -webkit-filter:saturate(0.02) sepia(2%);
+  filter:saturate(0.02) sepia(2%);
 }
 
 .filterB {
-  -webkit-filter:hue-rotate(180deg) invert(1);
-  filter:hue-rotate(180deg) invert(1);
+  -webkit-filter:hue-rotate(180deg) invert(0.98) sepia(2%);
+  filter:hue-rotate(180deg) invert(0.98) sepia(2%);
 }
 
 .filterC {
-  -webkit-filter:saturate(0) hue-rotate(180deg) invert(1);
-  filter:saturate(0) hue-rotate(180deg) invert(1);
+  -webkit-filter:saturate(0.02) hue-rotate(180deg) invert(0.98) sepia(2%);
+  filter:saturate(0.02) hue-rotate(180deg) invert(0.98) sepia(2%);
 }
 
 /* Header Buttons - Based on Win8-10 High Contrast titlebar button styling */
@@ -257,6 +257,15 @@ color:inherit;
 
 .contrast .mpisto-option-way > div .fieldset {
   background-image:none;
+}
+
+/* Masthead */
+.contrast .mpisto-userpages-header .mpisto-profile-masthead hgroup, .contrast .mpisto-userpages-header .mpisto-userpages-main{
+	background-image:none
+}
+
+.contrast .mpisto-userpages-header .mpisto-profile-masthead {
+	box-shadow:0 0 0 1px var(--content-border)!important;
 }
 
 /* Lightbox button stylings. Based on Community Header button theming on non-contrast modes */

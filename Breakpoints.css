@@ -132,6 +132,20 @@ column-count:1;
   width:100%;
 }
 
+.mpisto-userpages-header .mpisto-userpages-main .mpisto-avatar {
+	width:63px;
+	height:63px;
+	border-width:3px;
+}
+
+.mpisto-userpages-header .mpisto-profile-masthead header {
+	flex-direction:column;
+}
+
+.mpisto-userpages-header .mpisto-profile-masthead section {
+	width:100%!important;
+}
+
 }
 
 /* M */
@@ -168,6 +182,14 @@ width:calc(988px - 72px);
 column-count:3;
 }
 
+.mpisto-userpages-header .mpisto-profile-masthead .left-pane {
+	width:50%;
+}
+
+.mpisto-userpages-header .mpisto-profile-masthead .right-pane {
+	width:50%;
+}
+
 }
 
 /* S + M */
@@ -197,7 +219,10 @@ font-size:28px;
   flex-direction:column;
 }
 
-
+.mpisto-userpages-header .mpisto-userpages-main .mpisto-avatar {
+	-o-object-fit:cover;
+	object-fit:cover;
+}
 }
 
 
