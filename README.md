@@ -21,6 +21,8 @@ These wrappers use the Desktop Skin also known as Mpistoskin2 or Mpisto War 2018
 
 [Floaring Banners testcase](https://hm100.github.io/Mpisto/Ryneeeel%20Grooze%20Banner.html)
 
+[User Profile Masthead](https://hm100.github.io/Mpisto/Ryneeeel%20Grooze%20User.html)
+
 [Anon Interface](https://hm100.github.io/Mpisto/Ryneeeel%20Grooze%20(Anons).html)
 ## Mobile aka Mercury
 Thse wrappers use the Mobile Skin also known as Mercury, with credits to FANDOM for the wrapper of this skin:
@@ -36,6 +38,6 @@ Edge 15 (Not Recommended due to bugs in CSS variables), Edge 16+ (Recommended)
 
 Chrome 49 - 54 (Not Recommended), Chrome 55+ (Most Recommended Browser)
 
-Firefox 31 - 49 (Not Recommended), Firefox 50 - 57 (Recommended for Desktop, with bugs), Firefox 58+ (Partially Recommended, but fully Recommended for Mercury)
+Firefox 31 - 49 (Not Recommended), Firefox 50+ (May Sometimes not recommended but still useful)
 
 Safari 9.1 (Not Recommended), Safari 10+ (Recommended)
