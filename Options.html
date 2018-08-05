@@ -3,7 +3,7 @@
 </defs>
 
 <html class="main">
-  <body class="mpisto-2018 options theme-A" id="Handler">
+  <body class="mpisto-2018 options theme-A" style="overflow:hidden;" id="Handler">
   <script>
 
 function GNavSearch() {
@@ -372,9 +372,15 @@ document.getElementById("Handler").className += " mpisto-servers"
     <div class="filtermodes">
     <input type="radio" name="22" id="212" onclick="HCb1()"></input> <label for="212">Grayscale</label>
     <br>
-    <input type="radio" name="22" id="213" onclick="HCc1()"></input> <label for="213">Inverted Colors</label>
+    <input type="radio" name="22" id="213" onclick="HCc1()"></input> <label for="213">Inverted Grayscale</label>
     <br>
-    <input type="radio" name="22" id="214" onclick="HCd1()"></input> <label for="214">Inverted Grayscale</label>
+    <input type="radio" name="22" id="214" onclick="HCd1()"></input> <label for="214">Inverted Colors</label>
+    <br>
+    <input type="radio" name="22" id="215" onclick="HCe1()"></input> <label for="215">Night Colors</label>
+    <br>
+    <input type="radio" name="22" id="216" onclick="HCf1()"></input> <label for="216">Super Satura Colors</label>
+    <br>
+    <input type="radio" name="22" id="217" onclick="HCg1()"></input> <label for="217">Yellow/Black</label>
     </div>
     <div class="filternotice">
     Your browser does not support CSS filters which are required for Color Filters to work
@@ -490,7 +496,10 @@ document.getElementById("Handler").className += " mpisto-servers"
     <br>
     Current wordmark:<div class="options-preview" style="background-image:url('Wordmark.png'); width:250px; height:65px; background-repeat:no-repeat; background-position:center;"></div><input type="file"></input>
     <br><br>
-    <label>Wiki-URL:</label><input class="mpisto-input" value="mpisto-zekzphire-2018" placeholder="Wiki URL" style></input>
+    <label>Wiki-URL:</label><input class="mpisto-input" value="mpisto-war-2018" placeholder="Wiki URL" ></input>
+    <br>
+    <input type="checkbox" name="32" id="311"></input> <label for="311">Don't add the<b> Wiki</b> suffix to the compiled sitename</label>
+
     </fieldset>
     </div>
     
@@ -677,13 +686,10 @@ document.getElementById("Handler").className += " mpisto-servers"
 <link rel="stylesheet" type="text/css" href="Breakpoints.css"> <!-- Non wds-breakpoint CSS --> 
 <link rel="stylesheet" type="text/css" href="MpistoAgent.css"> <!-- Custom CSS -->
 <link rel="stylesheet" type="text/css" href="High Contrast.css"> <!-- High Contrast CSS -->
-
 </head>
-
 <script>
 // Pollyfils for Options.html
 function sleep(ms) { setTimeout(RemovePane, 250)  }
-
 
 // Filters
 function HCa1() {
@@ -691,6 +697,9 @@ function HCa1() {
         x.className = x.className.replace(" filterA", "");
         x.className = x.className.replace(" filterB", "");
         x.className = x.className.replace(" filterC", "");
+        x.className = x.className.replace(" filterD", "");
+        x.className = x.className.replace(" filterE", "");
+        x.className = x.className.replace(" filterF", "");
 }
 
 function HCb1() {
@@ -700,6 +709,9 @@ function HCb1() {
     }
         x.className = x.className.replace(" filterB", "");
         x.className = x.className.replace(" filterC", "");
+        x.className = x.className.replace(" filterD", "");
+        x.className = x.className.replace(" filterE", "");
+        x.className = x.className.replace(" filterF", "");
 }
 
 function HCc1() {
@@ -709,6 +721,9 @@ function HCc1() {
     }
         x.className = x.className.replace(" filterA", "");
         x.className = x.className.replace(" filterC", "");
+        x.className = x.className.replace(" filterD", "");
+        x.className = x.className.replace(" filterE", "");
+        x.className = x.className.replace(" filterF", "");
 }
 
 function HCd1() {
@@ -718,7 +733,48 @@ function HCd1() {
     }
         x.className = x.className.replace(" filterA", "");
         x.className = x.className.replace(" filterB", "");
+        x.className = x.className.replace(" filterD", "");
+        x.className = x.className.replace(" filterE", "");
+        x.className = x.className.replace(" filterF", "");
 }
+
+function HCe1() {
+    var x = document.getElementById("Handler");
+    if (x.className.indexOf("filterD") == -1) {
+        x.className += " filterD";
+    }
+        x.className = x.className.replace(" filterA", "");
+        x.className = x.className.replace(" filterB", "");
+        x.className = x.className.replace(" filterC", "");
+        x.className = x.className.replace(" filterE", "");
+        x.className = x.className.replace(" filterF", "");
+}
+
+function HCf1() {
+    var x = document.getElementById("Handler");
+    if (x.className.indexOf("filterE") == -1) {
+        x.className += " filterE";
+    }
+        x.className = x.className.replace(" filterA", "");
+        x.className = x.className.replace(" filterB", "");
+        x.className = x.className.replace(" filterC", "");
+        x.className = x.className.replace(" filterD", "");
+        x.className = x.className.replace(" filterF", "");
+}
+
+function HCg1() {
+    var x = document.getElementById("Handler");
+    if (x.className.indexOf("filterF") == -1) {
+        x.className += " filterF";
+    }
+        x.className = x.className.replace(" filterA", "");
+        x.className = x.className.replace(" filterB", "");
+        x.className = x.className.replace(" filterC", "");
+        x.className = x.className.replace(" filterD", "");
+        x.className = x.className.replace(" filterE", "");
+}
+
+
 
 // Restore High Contrast
 function HCclear() {

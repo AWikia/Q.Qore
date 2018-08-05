@@ -427,11 +427,49 @@ padding:0;
 }
 
 
+header.mpisto-footer .wds-button.wds-is-secondary {
+  color:#ccc;
+  border-color:#ccc;
+}
 
-footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container td a:not(.wds-button):hover {
+header.mpisto-footer .wds-button.wds-is-secondary:hover {
+  color:#39242d;
+  border-color:#39242d;
+}
+
+
+header.mpisto-footer .wds-button:not(.wds-is-secondary):not(.wds-is-text) {
+  color:#fff;
+  border-color:#ccc;
+  background-color:#ccc;
+}
+
+header.mpisto-footer .wds-button:not(.wds-is-secondary):not(.wds-is-text):hover, header.mpisto-footer .wds-button:not(.wds-is-secondary):not(.wds-is-text):active, header.mpisto-footer .wds-button:not(.wds-is-secondary):not(.wds-is-text):focus {
+  border-color:#39242d;
+  background-color:#39242d;
+}
+
+header.mpisto-footer .wds-button.wds-is-text:not(.wds-is-secondary) {
+  color:#ccc;
+  border:0;
+}
+
+header.mpisto-footer .wds-button.wds-is-text:hover, header.mpisto-footer .wds-button.wds-is-text:active, header.mpisto-footer .wds-button.wds-is-text:focus {
+  color:#39242d;
+}
+
+
+
+footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container td a:not(.wds-button) {
     color:#ccc;
     border-color:#39242d;
 }
+
+footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container td a:not(.wds-button):hover {
+    border-color:#ccc;
+    color:#39242d;
+}
+
 
 footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container th::after, footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container td::after {
     background-color:#39242d;

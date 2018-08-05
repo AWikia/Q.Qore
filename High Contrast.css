@@ -66,7 +66,7 @@ body:not(.contrast):not(.basic) .highcontrastbutton.wds-dropdown {
   -webkit-backdrop-filter:none!important;
 }
 
-.basic *,.basic :before,.basic :after  {
+.basic *,.basic :before,.basic :after, [class*="filter"] *, [class*="filter"] :before, [class*="filter"] :after  {
   -webkit-filter:none!important;
   filter:none!important;
   backdrop-filter:none!important;
@@ -94,19 +94,46 @@ display:none!important;
   opacity:1;
 }
 
-.filterA {
-  -webkit-filter:saturate(0.02) sepia(2%);
-  filter:saturate(0.02) sepia(2%);
+.FilterA {
+-webkit-filter:saturate(0);
+filter:saturate(0);
+-webkit-backdrop-filter:saturate(0);
+backdrop-filter:saturate(0)
 }
 
-.filterB {
-  -webkit-filter:hue-rotate(180deg) invert(0.98) sepia(2%);
-  filter:hue-rotate(180deg) invert(0.98) sepia(2%);
+.FilterB {
+-webkit-filter:saturate(0) invert(1) ;
+filter:saturate(0) invert(1) ;
+-webkit-backdrop-filter:saturate(0) invert(1) ;
+backdrop-filter:saturate(0) invert(1) ;
 }
 
-.filterC {
-  -webkit-filter:saturate(0.02) hue-rotate(180deg) invert(0.98) sepia(2%);
-  filter:saturate(0.02) hue-rotate(180deg) invert(0.98) sepia(2%);
+.FilterC {
+-webkit-filter:invert(1) ;
+filter:invert(1) ;
+-webkit-backdrop-filter:invert(1) ;
+backdrop-filter:invert(1) ;
+}
+
+.FilterD {
+-webkit-filter:invert(1) hue-rotate(180deg) brightness(1.1) saturate(1.5) contrast(0.9);
+filter:invert(1) hue-rotate(180deg) brightness(1.1) saturate(1.5) contrast(0.9);
+-webkit-backdrop-filter:invert(1) hue-rotate(180deg) brightness(1.1) saturate(1.5) contrast(0.9);
+backdrop-filter:invert(1) hue-rotate(180deg) brightness(1.1) saturate(1.5) contrast(0.9);
+}
+
+.FilterE {
+-webkit-filter:brightness(1.1) saturate(1.5) contrast(0.9);
+filter:brightness(1.1) saturate(1.5) contrast(0.9);
+-webkit-backdrop-filter:brightness(1.1) saturate(1.5) contrast(0.9);
+backdrop-filter:brightness(1.1) saturate(1.5) contrast(0.9);
+}
+
+.FilterF {
+-webkit-filter:sepia(1) hue-rotate(210deg) invert(1) brightness(1.1) saturate(1.5) contrast(0.9);
+filter:sepia(1) hue-rotate(210deg) invert(1)  brightness(1.1) saturate(1.5) contrast(0.9);
+-webkit-backdrop-filter:sepia(1) hue-rotate(210deg) invert(1)  brightness(1.1) saturate(1.5) contrast(0.9);
+backdrop-filter:sepia(1) hue-rotate(210deg) invert(1) brightness(1.1) saturate(1.5) contrast(0.9);
 }
 
 /* Header Buttons - Based on Win8-10 High Contrast titlebar button styling */
