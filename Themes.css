@@ -75,7 +75,7 @@
 --button-color-dark:#60992D;
 --button-color-text:black;
 --community-header-bg:82,192,251;
---community-header-text:52c0fb;
+--community-header-text:23,23,23;
 }
 
 /* Standard (V6) */
@@ -594,7 +594,7 @@
 }
 
 
-/* WDS ~ */
+/* WDS (V1) */
 :root {
 --background-image:url("");
 --background-color:#f6f6f6;
@@ -609,6 +609,23 @@
 --community-header-bg:64,74,87;
 --community-header-text:248,248,248;
 }
+
+/* WDS ~ */
+:root {
+--background-image:url("");
+--background-color:#f6f6f6;
+--link-color:0,214,214;
+--content-bg:#ffffff;
+--dropdown-bg:#FFFFFF;
+--content-border:#cccccc;
+--content-color:#002a32;
+--button-color:#00D6D6;
+--button-color-dark:#18F0F0;
+--button-color-text:white;
+--community-header-bg:19,40,44;
+--community-header-text:248,248,248;
+}
+
 
 /* Zekzphire Faces ~ */
 :root {
