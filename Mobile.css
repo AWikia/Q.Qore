@@ -75,6 +75,7 @@ background-color:rgba(19,40,44,0.4);
 	border-style:none none solid;
 	padding:0 18px 5px;
 	max-width:768px;
+	border-width:0 0 1px;
 }
 
 .mobile-header .meter {
@@ -87,6 +88,7 @@ background-color:rgba(19,40,44,0.4);
 	padding:5px 18px;
 	max-width:768px;
 	border-style:none none solid;
+	border-width:0 0 1px;
 }
 
 .mobile-header .buttons {
