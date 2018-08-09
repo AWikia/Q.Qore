@@ -24,6 +24,16 @@ if (navigator.userAgent.match("MW18")) {
 document.getElementById("Handler").className += " mpisto-servers"
 }
 
+function toggleMenu() {
+    var x = document.getElementById("Handler");
+    if (x.className.indexOf("menuvisible") == -1) {
+        x.className += " menuvisible";
+    } else {
+        x.className = x.className.replace(" menuvisible", "");
+    }
+}
+
+
   </script>
 <div style="visibility:hidden">
 <header class="mpisto-navbar">
@@ -117,22 +127,79 @@ document.getElementById("Handler").className += " mpisto-servers"
 </header>
 
 <!-- End Global Nav -->
+<header class="mpisto-navbar active-search" id="MobileNavigation">
+  <div class="mpisto-navbar-wrapper">
+    <a class="link" style="font-family:'Play', Jura, cursive;">Mpisto</a>
+    <div class="search">
+    <input class="search-input" placeholder="search on Mpisto..."></input>
+    <div class="wds-button-group search-buttons">
+    <button class="wds-button wds-is-squished wds-is-text search-button search-form-button"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass" />
+</svg>
+    </button>
+    </div>
+    </div>
+    <div class="user">
+    <a class="link" onclick="toggleMenu()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small user">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user" />
+</svg> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small close">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" />
+</svg></a>
+    </div>
+  </div>
+</header>
+
+<!-- End Global Nav -->
 
 
 </div>
+<div class="mobile-drawer">
+	<div class="wrapper">
+		<img class="wds-avatar" src="HM100.png"></img>
+		<span class="name">HM100</span>
+		<div class="wrapper-content">
+		 Welcome Back!!!
+			<br>
+			<span class="name">Mpisto</span>
+			<div class="wds-button-group">
+				<a class="wds-button">Company</a>
+				<a class="wds-button">Hiring</a>
+				<a class="wds-button">Create a Wiki</a>
+				<a class="wds-button">Explore more wikis</a>
+			</div>
+			<span class="name">User Info</span>
+			<div>1530 <b>Edits</b></div>
+			<div>7446 <b>Global Edits</b></div>
+			<div>Male <b>Gender</b></div>
+			<span class="name">User Actions</span>
+			<div class="wds-button-group">
+				<a class="wds-button">Profile</a>
+				<a class="wds-button">Talk</a>
+				<a class="wds-button">Preferences</a>
+				<a class="wds-button">Help</a>
+			</div>
+		</div>
+			<div class="wds-button-group">
+				<a class="wds-button wds-is-text">Log out HM100</a>
+			</div>
+	</div>
+</div>
+
   <div class="top-gap"></div>
   
 <!-- End Gap -->
+  
+<!-- End Gap -->
 
-<div class="ember-application" id="ember-container"><div class="ember-view" id="ember313"><div class=" application-wrapper games-vertical ember-view" id="ember319">	<div class="site-head-container ember-view site-head-headroom site-head-headroom-top headroom--not-bottom" id="ember668"><!----><div class="site-head-wrapper">
+<!--<div class="ember-application" id="ember-container"><div class="ember-view" id="ember313"><div class=" application-wrapper games-vertical ember-view" id="ember319">	<div class="site-head-container ember-view" id="ember668"><!--<div class="site-head-wrapper">
 	<nav class="site-head no-shadow">
 		<div class="site-head__nav-icon-wrapper">
 			<a class="site-head-icon site-head-icon-nav icon-button ember-view" id="ember669"><svg xmlns="http://www.w3.org/2000/svg" class="icon-button-icon" role="img" width="24" height="24">  <path d="M 23 11 L 1 11 C 0.448 11 0 11.448 0 12 C 0 12.552 0.448 13 1 13 L 23 13 C 23.552 13 24 12.552 24 12 C 24 11.448 23.552 11 23 11 Z M 23 4 L 1 4 C 0.448 4 0 4.448 0 5 C 0 5.552 0.448 6 1 6 L 23 6 C 23.552 6 24 5.552 24 5 C 24 4.448 23.552 4 23 4 Z M 23 18 L 1 18 C 0.448 18 0 18.448 0 19 C 0 19.552 0.448 20 1 20 L 23 20 C 23.552 20 24 19.552 24 19 C 24 18.448 23.552 18 23 18 Z" />
 </svg>
 </a>
-<!---->		</div>
+<!---		</div>
 		<div class="site-logo">
-			<a style="font-family:'Play', Jura, cursive;, sans serif; font-size:22px;" data-ember-action="" data-ember-action-670="670">
+			<a style="font-family:'Play', Jura, cursive;, sans serif; font-size:22px" data-ember-action="" data-ember-action-670="670">
 				Mpisto War
 			</a>
 		</div>
@@ -141,17 +208,108 @@ document.getElementById("Handler").className += " mpisto-servers"
   <path transform="translate(2 2)" d="M 1.84783 8.76294 C 1.84783 4.94345 4.94345 1.84783 8.76294 1.84783 C 12.5824 1.84783 15.6781 4.94345 15.6781 8.76294 C 15.6781 12.5824 12.5824 15.6781 8.76294 15.6781 C 4.94345 15.6781 1.84783 12.5824 1.84783 8.76294 L 1.84783 8.76294 L 1.84783 8.76294 Z M 0.119048 8.76294 C 0.119048 13.5372 3.98867 17.4068 8.76294 17.4068 C 13.5372 17.4068 17.4068 13.5372 17.4068 8.76294 C 17.4068 3.98867 13.5372 0.119048 8.76294 0.119048 C 3.98867 0.119048 0.119048 3.98867 0.119048 8.76294 L 0.119048 8.76294 L 0.119048 8.76294 Z" /></svg>
 </a>
 		</div>
-<!---->	</nav>
+<!--	</nav>
+</div>-->
 </div>
-</div>
-<nav class="collapsed ember-view" id="ember672"><div class="side-nav-drawer">
+<!--<nav class="collapsed ember-view" id="ember672"><div class="side-nav-drawer">
 	<div class="side-nav-drawer__content">
-		<!---->
+		<!-
 	</div>
 </div>
-</nav>
-
+</nav>-->	
 	<div class="page-wrapper">
+
+<header class="mobile-header">
+	<div class="sitename">
+		<b>Mpisto War 2018</b>
+	</div>
+	<div class="meter">
+	<span><b>1</b> Shared</span>
+	<span><b>43</b> Components</span>
+	</div>
+	<div class="buttons wds-button-group">
+		<div class="wds-dropdown">
+			<div class="wds-button wds-dropdown__toggle"><span>Actions</span> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" viewBox="0 0 12 12">
+              <path d="M6 9l4-5H2" fill-rule="evenodd"/>
+            </svg></div>
+                <div class="wds-dropdown__content wds-is-left-aligned">
+                  <ul class="wds-list wds-is-linked">
+                    <li>
+                    <a>GMK Pages</a>
+                    </li>
+                    <li>
+                    <a>Special Pages</a>
+                    </li>
+                    <li>
+                    <a>Bash</a>
+                    </li>
+                    <li>
+                    <a>Command Line Prompt</a>
+                    </li>
+                    <li>
+                    <a>Printable Version</a>
+                    </li>
+                    <li>
+                    <a>Export as PDF</a>
+                    </li>
+                    <li>
+                    <a>Export article HTML source</a>
+                    </li>
+                  </ul>
+              </div>		
+		</div>
+		<a class="wds-button"><span>Forum</span></a>
+		<a class="wds-button"><span>Questions?</span></a>
+      <a title="Owned Items" class="wds-button wds-is-squished store-button">				
+        <svg version="1.1" class="wds-icon-small wds-icon" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+        <path fill="currentcolor" d="M52.053 0c-1.28 3.968-2.56 7.893-2.56 13.141v991.104c0 9.259 2.603 14.507 7.851 19.755l487.040-515.968-492.331-508.032zM577.237 542.208l125.909 129.92-179.755 102.4s-228.48 129.877-354.475 202.197l408.32-434.517zM611.413 506.752l135.083 140.459c21.163-11.776 186.496-106.325 210.091-119.467 24.917-14.421 22.4-34.133 1.237-44.629-19.584-10.88-184.917-105.6-209.92-120.96l-136.491 144.597zM577.152 472.619l127.317-135.211-181.717-103.723s-296.235-169.472-394.795-226.048l449.195 464.981z"></path>
+        </svg>
+      </a>
+      <a title="Store Activity" class="wds-button store-button">				
+        <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon-small wds-icon" viewBox="0 0 18 18">
+          <path d="M10.75 17.002a1.5 1.5 0 0 1-1.449-1.11L6.934 7.099 5.881 9.586a1.499 1.499 0 0 1-1.381.916h-3a1.5 1.5 0 1 1 0-3h2.005l2.363-5.584c.25-.591.839-.97 1.485-.912a1.5 1.5 0 0 1 1.345 1.106l2.337 8.679.949-2.351a1.5 1.5 0 0 1 1.391-.938H16.5a1.5 1.5 0 0 1 0 3h-2.114l-2.246 5.562a1.5 1.5 0 0 1-1.39.938"/>
+        </svg>			
+      </a>
+        <div class="wds-dropdown shortcuts">
+          <div class="wds-button wds-dropdown__toggle">				
+            <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon-small wds-icon" viewBox="0 0 24 24">
+              <path d="M12 21a2 2 0 1 0 .001-3.999A2 2 0 0 0 12 21m0-7a2 2 0 1 0 .001-3.999A2 2 0 0 0 12 14m0-7a2 2 0 1 0 .001-3.999A2 2 0 0 0 12 7" fill-rule="evenodd"/>
+            </svg>			
+          </div>
+          <div class="wds-dropdown__content wds-is-right-aligned">		
+            <ul class="wds-list wds-is-linked">					
+              <li>						
+                <a>        <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon-tiny wds-icon" viewBox="0 0 18 18">
+          <path d="M10.75 17.002a1.5 1.5 0 0 1-1.449-1.11L6.934 7.099 5.881 9.586a1.499 1.499 0 0 1-1.381.916h-3a1.5 1.5 0 1 1 0-3h2.005l2.363-5.584c.25-.591.839-.97 1.485-.912a1.5 1.5 0 0 1 1.345 1.106l2.337 8.679.949-2.351a1.5 1.5 0 0 1 1.391-.938H16.5a1.5 1.5 0 0 1 0 3h-2.114l-2.246 5.562a1.5 1.5 0 0 1-1.39.938"/>
+        </svg>			
+ Activity</a>					
+              </li>					
+              <li>						
+                <a><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny" viewBox="0 0 24 24">
+                  <path d="M23.6 6.2c-.3-.2-.6-.2-.9-.1L17 8.5V5c0-.6-.4-1-1-1H1c-.6 0-1 .4-1 1v14c0 .6.4 1 1 1h15c.6 0 1-.4 1-1v-3.5l5.6 2.4c.1.1.3.1.4.1.2 0 .4-.1.6-.2.3-.2.4-.5.4-.8V7c0-.3-.2-.6-.4-.8z" fill-rule="evenodd"/>
+              	</svg> Videos</a>					
+              </li>					
+              <li>						
+                <a><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny" viewBox="0 0 24 24">
+                  <g fill-rule="evenodd"><path d="M3 4h18v8.737l-3.83-3.191a.916.916 0 0 0-1.282.108l-4.924 5.744-3.891-3.114a.92.92 0 0 0-1.146 0L3 14.626V4zm19-2H2a1 1 0 0 0-1 1v18a1 1 0 0 0 1 1h20a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1z"/><path d="M9 10c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2"/></g></symbol><symbol id="wds-icons-information" viewBox="0 0 24 24"><path d="M14 18h-4a1 1 0 1 1 0-2h1v-4h-1a1 1 0 1 1 0-2h2a1 1 0 0 1 1 1v5h1a1 1 0 1 1 0 2zM11 6a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0V6zm1-6C5.383 0 0 5.383 0 12s5.383 12 12 12 12-5.383 12-12S18.617 0 12 0z" fill-rule="evenodd"/>
+              	</svg> Images</a>					
+              </li>		
+              <li>						
+                <a><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny" viewBox="0 0 24 24">
+  <path d="M23 4h-4.2c.1-.3.2-.6.2-1 0-1.7-1.3-3-3-3-2 0-3.2 1.3-4 2.5C11.2 1.3 10 0 8 0 6.3 0 5 1.3 5 3c0 .4.1.7.2 1H1c-.6 0-1 .4-1 1v2c0 .6.4 1 1 1h22c.6 0 1-.4 1-1V5c0-.6-.4-1-1-1zm-7-2c.6 0 1 .4 1 1s-.4 1-1 1h-2.5c.4-.9 1.3-2 2.5-2zM7 3c0-.6.4-1 1-1 1.2 0 2.1 1.1 2.5 2H8c-.6 0-1-.4-1-1zm4 7H3c-.6 0-1 .4-1 1v12c0 .6.4 1 1 1h8V10zm10 0h-8v14h8c.6 0 1-.4 1-1V11c0-.6-.4-1-1-1z" fill-rule="evenodd"/>
+  </svg> Theme Creator</a>					
+              </li>		
+              <li>						
+                <a><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny" viewBox="0 0 24 24">
+                  <path d="M12 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6m-7.389-.049A1.683 1.683 0 0 1 3.055 10H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h1.055a1.683 1.683 0 0 1 1.565 1.069 1.684 1.684 0 0 1-.359 1.842l-.746.746a.999.999 0 0 0 0 1.414l1.414 1.414a.999.999 0 0 0 1.414 0l.746-.746a1.684 1.684 0 0 1 1.862-.35c.633.26 1.049.871 1.049 1.556V22a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-1.055a1.683 1.683 0 0 1 1.069-1.565 1.684 1.684 0 0 1 1.842.359l.746.746a.999.999 0 0 0 1.414 0l1.414-1.414a.999.999 0 0 0 0-1.414l-.746-.746a1.684 1.684 0 0 1-.35-1.862A1.683 1.683 0 0 1 20.945 14H22a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1h-1.055a1.683 1.683 0 0 1-1.565-1.069 1.684 1.684 0 0 1 .359-1.842l.746-.746a.999.999 0 0 0 0-1.414l-1.414-1.414a.999.999 0 0 0-1.414 0l-.746.746a1.684 1.684 0 0 1-1.862.35A1.683 1.683 0 0 1 14 3.055V2a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v1.055A1.683 1.683 0 0 1 8.931 4.62a1.684 1.684 0 0 1-1.842-.359l-.746-.746a.999.999 0 0 0-1.414 0L3.515 4.929a.999.999 0 0 0 0 1.414l.746.746a1.684 1.684 0 0 1 .35 1.862" fill-rule="evenodd"/>
+              	</svg> Special Pages</a>					
+              </li>		
+            </ul>
+          </div>
+        </div>
+	</div>
+</header>
+
 <header class="wds-community-header" id="CommunityHeader">	
   <div class="wds-community-header__wordmark">		
     <a accesskey="z">			
@@ -167,19 +325,18 @@ document.getElementById("Handler").className += " mpisto-servers"
       <span class="wds-community-header__counter-label">Shared</span>	
     </div>	
     <div class="wds-community-header__counter wds-is-article">		
-      <span class="wds-community-header__counter-value">42</span>		
+      <span class="wds-community-header__counter-value">43</span>		
       <span class="wds-community-header__counter-label">Components</span>	
     </div>	
     <div class="wds-community-header__wiki-buttons wds-button-group">			
       <a title="Owned Items" class="wds-button wds-is-squished wds-is-secondary">				
                 <svg version="1.1" class="wds-icon-small wds-icon" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
         <path fill="currentcolor" d="M52.053 0c-1.28 3.968-2.56 7.893-2.56 13.141v991.104c0 9.259 2.603 14.507 7.851 19.755l487.040-515.968-492.331-508.032zM577.237 542.208l125.909 129.92-179.755 102.4s-228.48 129.877-354.475 202.197l408.32-434.517zM611.413 506.752l135.083 140.459c21.163-11.776 186.496-106.325 210.091-119.467 24.917-14.421 22.4-34.133 1.237-44.629-19.584-10.88-184.917-105.6-209.92-120.96l-136.491 144.597zM577.152 472.619l127.317-135.211-181.717-103.723s-296.235-169.472-394.795-226.048l449.195 464.981z"></path>
-        </svg>	<span>Items</span>
+        </svg>	<span>Items</span></a>
       <a title="Store Activity" class="wds-button wds-is-squished wds-is-secondary">				
         <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon-small wds-icon" viewBox="0 0 18 18">
           <path d="M10.75 17.002a1.5 1.5 0 0 1-1.449-1.11L6.934 7.099 5.881 9.586a1.499 1.499 0 0 1-1.381.916h-3a1.5 1.5 0 1 1 0-3h2.005l2.363-5.584c.25-.591.839-.97 1.485-.912a1.5 1.5 0 0 1 1.345 1.106l2.337 8.679.949-2.351a1.5 1.5 0 0 1 1.391-.938H16.5a1.5 1.5 0 0 1 0 3h-2.114l-2.246 5.562a1.5 1.5 0 0 1-1.39.938"/>
         </svg>			
-      </a>
       </a>
         <div class="wds-dropdown">
           <div class="wds-button wds-is-secondary wds-is-squished wds-dropdown__toggle">				
@@ -475,6 +632,15 @@ document.getElementById("Handler").className += " mpisto-servers"
   </svg>
             </div>
           <span>Shared Component Blocker</span>
+          <span class="price">Free</span>
+        </a>
+        <a class="wds-button wds-is-secondary col">
+            <div class="wds-button wds-is-text wds-is-square">
+            <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon" viewBox="0 0 24 24">
+  <path d="M1.487 5.166a.973.973 0 0 0-.356 1.33l9.247 16.017a.972.972 0 0 0 1.33.357.973.973 0 0 0 .356-1.33L2.817 5.522a.973.973 0 0 0-1.33-.356m9.481 9.39c1.172-2.065 2.62-2.225 4.537-2.225l.977.004c1.776 0 3.825-.138 5.676-1.796.352-.316.435-.835.199-1.245l-4.5-7.794a1.003 1.003 0 0 0-1.542-.236c-1.31 1.2-2.763 1.3-4.26 1.3l-1.146-.007c-1.984 0-4.218.223-5.878 2.728l5.567 9.643a1 1 0 0 0 .37-.372" fill-rule="evenodd"/>
+  </svg>
+            </div>
+          <span>Skin Switcher</span>
           <span class="price">Free</span>
         </a>
         </nav>
