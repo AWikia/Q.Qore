@@ -2,7 +2,6 @@
 display:block;
 }
 
-
 :root, .wds-button {
 	/* Override some variables used in Body and some wds-components */
 --background-image:url("");
