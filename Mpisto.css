@@ -188,6 +188,7 @@ textarea, [contenteditable] {
 textarea {
 	border-color: #27a0da;
 	background-image:none;
+-webkit-appearance:none;
 }
 
 .error, .alert, .success, .info {
@@ -582,7 +583,7 @@ display:flex;
    -moz-box-flex:1;
     -ms-flex:1;
         flex:1;
-padding:0 0 5px 5px;
+padding:5px 0 5px 5px;
 -webkit-transition:-webkit-flex 150ms;
 transition:-webkit-flex 150ms;
 -o-transition:flex 150ms;
@@ -728,6 +729,7 @@ transition:border-color 270ms;
 cursor:url("text.cur"), text;
 border-radius:3px;
 background-image:none;
+-webkit-appearance:none;
 }
 
 header.mpisto-navbar.active-search .search .search-input {
@@ -2215,6 +2217,7 @@ transition:border 300ms;
 cursor:url("text.cur"), text;
 border-radius:3px;
 background-image:none;
+-webkit-appearance:none;
 }
 
 .mpisto-input:hover {
@@ -4328,7 +4331,7 @@ border:1px solid currentColor;
 outline:0;
 cursor:url("default.cur"), default;
 border-radius:3px;
-background-image:none; /* Fixing iOS Safari adding default pic */
+-webkit-appearance:none;
 }
 
 input[type="file"]::-webkit-file-upload-button:hover {
