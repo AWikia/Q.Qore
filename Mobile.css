@@ -72,6 +72,7 @@ background-color:rgba(19,40,44,0.4);
 	justify-content:center;
 	border-bottom:1px solid;
 	border-image:linear-gradient(to right, rgb(19,40,44), rgb(248,248,248), rgb(19,40,44)) 40;
+	border-style:none none solid;
 	padding:0 18px 5px;
 	max-width:768px;
 }
@@ -85,6 +86,7 @@ background-color:rgba(19,40,44,0.4);
 	border-image:linear-gradient(to right, rgb(19,40,44), rgb(248,248,248), rgb(19,40,44)) 40;
 	padding:5px 18px;
 	max-width:768px;
+	border-style:none none solid;
 }
 
 .mobile-header .buttons {
