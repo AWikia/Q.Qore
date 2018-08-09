@@ -24,12 +24,12 @@ These wrappers use the Desktop Skin also known as Mpistoskin2 or Mpisto War 2018
 [User Profile Masthead](https://awikia.github.io/Mpisto/Ryneeeel%20Grooze%20User.html)
 
 [Anon Interface](https://awikia.github.io/Mpisto/Ryneeeel%20Grooze%20(Anons).html)
-## Mobile aka Mercury
-Thse wrappers use the Mobile Skin also known as Mercury, with credits to FANDOM for the wrapper of this skin:
+## Mobile aka Mpistomobile2, fork of Mercury
+Thse wrappers use the Mobile Skin also known as Mpistomobile2 which is a fork of Mercury Skin, with credits to FANDOM for the wrapper of Mercury skin:
 
 [Store](https://awikia.github.io/Mpisto/Ryneeeel%20Grooze%20(Store).html)
 
-[Mercury](https://awikia.github.io/Mpisto/Ryneeeel%20Grooze%20(Mobile).html)
+[Mobile Main Page](https://awikia.github.io/Mpisto/Ryneeeel%20Grooze%20(Mobile).html)
 
 # Browser Requirements
 Internet Explorer 11 (Not Recommended however most features that depend on CSS variables won't work.)
