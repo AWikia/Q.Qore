@@ -573,6 +573,48 @@ function HCg1() {
     <div class="mpisto-article-wrapper">
       <article class="mpisto-article">
       <!--Start Article-->
+      <!--15-->
+      <h2>IB15</h2>
+        <ul>
+        <li>
+        Fifteenth Revision, Based on Desktop Build 775 and includes the following changes:
+        <ul>
+        <li>
+        Dropped blend modes. All browsers should see similar masthead gradient.
+        </li>
+        <li>
+        Switched masthead gradient theming to use blending edges. Browsers not supporting it will see a legal fallback that should work
+        </li>
+        <li>
+        Switched masthead gradient theming to use translucent gray instead of hover button color as color stop so as to always dark and not light in some situations
+        </li>
+        <li>
+        Global Staff members now have the ability to Global Block users. Function only exists on Central Wiki for staff only
+        </li>
+        <li>
+        Major button and header theming theresholds editions using brightness function 
+        </li>
+        <li>
+        Added limited Reaction Support
+        </li>
+        <li>
+        Switched chat parser to Mprilyiaano from Slack due to recent hackers redirecting the servers
+        </li>
+        <li>
+        Removed rounded corners from main content area
+        </li>
+        <li>
+        Minor Tweaks to Content Space
+        </li>
+        <li>
+        Updated the Satura Filter lumination to <code>brightness(0.9) saturate(1.4) contrast(1.15) hue-rotate(+1deg)</code> from <code>brightness(1.1) saturate(1.5) contrast(0.9)</code>
+        </li>
+        <li>
+        Bug fixes
+        </li>
+        </ul>
+        </li>
+        </ul>
       <!--14-->
       <h2>IB14</h2>
         <ul>
@@ -1531,6 +1573,13 @@ if (navigator.userAgent.match("SmartTV")) {
 document.getElementById("Handler").className += " smart"
 }
 
+if (navigator.userAgent.match("Macintosh")) {
+document.getElementById("Handler").className += " osx"
+}
+
+if (navigator.userAgent.match("Linux")) {
+document.getElementById("Handler").className += " xubuntu"
+}
 
 /* Mobile Only CSS */
 if (navigator.userAgent.match("Mobile")) {
