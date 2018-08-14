@@ -49,6 +49,31 @@ border-color:rgba(248,248,248);
 background-color:rgba(19,40,44,0.2);
 }
 
+.main .wds-community-header .wds-community-header__sitename a, .main .wds-community-header .wds-tabs__tab-label,  .main .wds-community-header .wds-tabs__tab-label a, .main .wds-community-header .wds-community-header__counter {
+color:rgba(248,248,248);
+}
+
+.main .wds-community-header .wds-community-header__sitename a:hover, .main .wds-community-header .wds-tabs__tab:hover,  .main .wds-community-header .wds-tabs__tab:hover .wds-tabs__tab-label,  .main .wds-community-header .wds-tabs__tab:hover .wds-tabs__tab-label>a {
+color:rgba(248,248,248,0.8);
+}
+
+.main .wds-community-header .wds-button-group > .wds-dropdown:not(:last-child) .wds-button {
+border-right-color:rgb(248,248,248);
+}
+
+.main .wds-community-header .wds-button-group > .wds-dropdown:not(:first-child) .wds-button {
+border-left-color:rgb(248,248,248);
+}
+
+.main .wds-community-header .wds-button-group > .wds-dropdown:not(:last-child) .wds-button:hover {
+border-right-color:rgba(248,248,248,0.8);
+}
+
+.main .wds-community-header .wds-button-group > .wds-dropdown:not(:first-child) .wds-button:hover {
+border-left-color:rgba(248,248,248,0.8);
+}
+
+
 
 .mobile-header {
 	color:rgb(248,248,248);
