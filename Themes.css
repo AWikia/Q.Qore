@@ -11,7 +11,7 @@
 --button-color-dark:#03A2AC;
 --button-color-text:black;
 --community-header-bg:0,0,255;
---community-header-text:248,248,248;
+--community-header-text:23,23,23;
 }
 
 /* Standard (V2) */
@@ -40,8 +40,8 @@
 --content-border:#bbbbbb;
 --content-color:#111122;
 --button-color:#CA3A22;
---button-color-dark:#B1230C;
---button-color-text:black;
+--button-color-dark:#E4553D;
+--button-color-text:white;
 --community-header-bg:88,53,130;
 --community-header-text:248,248,248;
 }
@@ -59,7 +59,7 @@
 --button-color-dark:#724F9B;
 --button-color-text:white;
 --community-header-bg:202,58,34;
---community-header-text:23,23,23;
+--community-header-text:248,248,248;
 }
 
 /* Standard (V5) */
@@ -72,8 +72,8 @@
 --content-border:#ffdc87;
 --content-color:#2a4b6c;
 --button-color:#7AB247;
---button-color-dark:#60992D;
---button-color-text:black;
+--button-color-dark:#96CC65;
+--button-color-text:white;
 --community-header-bg:82,192,251;
 --community-header-text:23,23,23;
 }
@@ -171,7 +171,7 @@
 --button-color-dark:#8C2CCE;
 --button-color-text:black;
 --community-header-bg:0,191,255;
---community-header-text:248,248,248;
+--community-header-text:23,23,23;
 }
 
 /* Standard Gloved Version ~~ */
@@ -219,7 +219,7 @@
 --button-color-dark:#3C5E8D;
 --button-color-text:white;
 --community-header-bg:102,51,153;
---community-header-text:23,23,23;
+--community-header-text:248,248,248;
 }
 
 /* Standard Canary Version (V1) */
@@ -251,7 +251,7 @@
 --button-color-dark:#FF8C1C;
 --button-color-text:white;
 --community-header-bg:161,119,79;
---community-header-text:23,23,23;
+--community-header-text:248,248,248;
 }
 
 /* Standard Beta Version */
@@ -267,7 +267,7 @@
 --button-color-dark:#3FA265;
 --button-color-text:black;
 --community-header-bg:255,0,0;
---community-header-text:23,23,23;
+--community-header-text:248,248,248;
 }
 
 
@@ -281,8 +281,8 @@
 --content-border:#aaaacc;
 --content-color:#f9f9f9;
 --button-color:#00699E;
---button-color-dark:#127DB7;
---button-color-text:white;
+--button-color-dark:#005884;
+--button-color-text:black;
 --community-header-bg:22,196,196;
 --community-header-text:23,23,23;
 }
@@ -313,8 +313,8 @@
 --content-border:#b0a1ee;
 --content-color:#002200;
 --button-color:#18C5BB;
---button-color-dark:#31DFD5;
---button-color-text:white;
+--button-color-dark:#03ACA2;
+--button-color-text:black;
 --community-header-bg:170,153,0;
 --community-header-text:248,248,248;
 }
@@ -329,10 +329,10 @@
 --content-border:#eee;
 --content-color:#1a2a3a;
 --button-color:#FF7E09;
---button-color-dark:#E66D00;
---button-color-text:black;
+--button-color-dark:#FF8B22;
+--button-color-text:white;
 --community-header-bg:255,126,9;
---community-header-text:23,23,23;
+--community-header-text:248,248,248;
 }
 
 /* Flipin */
@@ -348,7 +348,7 @@
 --button-color-dark:#65A23F;
 --button-color-text:black;
 --community-header-bg:0,0,255;
---community-header-text:248,248,248;
+--community-header-text:23,23,23;
 }
 
 
@@ -366,7 +366,7 @@
 --button-color-dark:#3FA265;
 --button-color-text:black;
 --community-header-bg:255,0,0;
---community-header-text:23,23,23;
+--community-header-text:248,248,248;
 }
 
 /* GleunFlippin */
@@ -382,7 +382,7 @@
 --button-color-dark:#ACA203;
 --button-color-text:black;
 --community-header-bg:255,0,0;
---community-header-text:23,23,23;
+--community-header-text:248,248,248;
 }
 
 /* Classic ~ */
@@ -398,7 +398,7 @@
 --button-color-dark:#173485;
 --button-color-text:white;
 --community-header-bg:46,84,146;
---community-header-text:23,23,23;
+--community-header-text:248,248,248;
 }
 
 /* Greeny ~ */
@@ -411,10 +411,10 @@
 --content-border:#00aaff;
 --content-color:#d9e9f9;
 --button-color:#32DC32;
---button-color-dark:#18C318;
---button-color-text:black;
+--button-color-dark:#50F650;
+--button-color-text:white;
 --community-header-bg:34,170,51;
---community-header-text:23,23,23;
+--community-header-text:248,248,248;
 }
 
 /* Brightness A */
@@ -430,7 +430,7 @@
 --button-color-dark:#0F990F;
 --button-color-text:white;
 --community-header-bg:0,0,255;
---community-header-text:248,248,248;
+--community-header-text:23,23,23;
 }
 
 /* Brightness B */
@@ -443,8 +443,8 @@
 --content-border:#c0c0c0;
 --content-color:#00ff00;
 --button-color:#0000FF;
---button-color-dark:#1919FF;
---button-color-text:white;
+--button-color-dark:#0000E6;
+--button-color-text:black;
 --community-header-bg:0,255,255;
 --community-header-text:23,23,23;
 }
@@ -510,7 +510,7 @@
 --button-color-dark:#E6C384;
 --button-color-text:black;
 --community-header-bg:192,14,4;
---community-header-text:23,23,23;
+--community-header-text:248,248,248;
 }
 
 /* Gaming Wiki (V3) */
@@ -523,8 +523,8 @@
 --content-border:#c3b0a9;
 --content-color:#1c6945;
 --button-color:#F8523C;
---button-color-dark:#DF351F;
---button-color-text:black;
+--button-color-dark:#FF6B57;
+--button-color-text:white;
 --community-header-bg:252,221,94;
 --community-header-text:23,23,23;
 }
@@ -604,8 +604,8 @@
 --content-border:#cccccc;
 --content-color:#1a1a1a;
 --button-color:#00B7E0;
---button-color-dark:#19D1FA;
---button-color-text:white;
+--button-color-dark:#00A2C7;
+--button-color-text:black;
 --community-header-bg:64,74,87;
 --community-header-text:248,248,248;
 }
@@ -620,8 +620,8 @@
 --content-border:#cccccc;
 --content-color:#002a32;
 --button-color:#00D6D6;
---button-color-dark:#18F0F0;
---button-color-text:white;
+--button-color-dark:#00BDBD;
+--button-color-text:black;
 --community-header-bg:19,40,44;
 --community-header-text:248,248,248;
 }
@@ -669,10 +669,10 @@
 --content-border:#cccccc;
 --content-color:#1a1a1a;
 --button-color:#F15920;
---button-color-dark:#d93007;
---button-color-text:black;
+--button-color-dark:#FF713B;
+--button-color-text:white;
 --community-header-bg:241,89,32;
---community-header-text:23,23,23;
+--community-header-text:248,248,248;
 }
 
 /* Mpisto Scenes (V1) */
@@ -685,10 +685,10 @@
 --content-border:#ace135;
 --content-color:#000111;
 --button-color:#3D3D99;
---button-color-dark:#26267F;
---button-color-text:black;
+--button-color-dark:#5959B2;
+--button-color-text:white;
 --community-header-bg:61,61,153;
---community-header-text:23,23,23;
+--community-header-text:248,248,248;
 }
 
 /* Mpisto Scenes ~ */
@@ -752,7 +752,7 @@
 --button-color-dark:#5C5C99;
 --button-color-text:white;
 --community-header-bg:0,0,204;
---community-header-text:248,248,248;
+--community-header-text:23,23,23;
 }
 
 /* Sharp X1 ~ */
@@ -768,7 +768,7 @@
 --button-color-dark:#00e6e6;
 --button-color-text:black;
 --community-header-bg:0,0,255;
---community-header-text:248,248,248;
+--community-header-text:23,23,23;
 }
 
 /* Medicore ~ */
@@ -781,8 +781,8 @@
 --content-border:#ffa500;
 --content-color:#2b2b2b;
 --button-color:#A1774F;
---button-color-dark:#875D35;
---button-color-text:black;
+--button-color-dark:#BA936E;
+--button-color-text:white;
 --community-header-bg:112,200,0;
 --community-header-text:248,248,248;
 }
@@ -832,7 +832,7 @@
 --button-color-dark:#FF5719;
 --button-color-text:white;
 --community-header-bg:50,205,50;
---community-header-text:23,23,23;
+--community-header-text:248,248,248;
 }
 
 /* PokeViews B */
@@ -848,7 +848,7 @@
 --button-color-dark:#E6D8B3;
 --button-color-text:black;
 --community-header-bg:210,105,30;
---community-header-text:23,23,23;
+--community-header-text:248,248,248;
 }
 
 /* FANDOM 2.0 */
@@ -861,8 +861,8 @@
 --content-border:#00d6d6;
 --content-color:#002a32;
 --button-color:#00D6D6;
---button-color-dark:#18F0F0;
---button-color-text:white;
+--button-color-dark:#00BDBD;
+--button-color-text:black;
 --community-header-bg:19,40,44;
 --community-header-text:248,248,248;
 }
