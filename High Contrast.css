@@ -116,24 +116,24 @@ backdrop-filter:invert(1) ;
 }
 
 .FilterD {
--webkit-filter:invert(1) hue-rotate(180deg) brightness(1.1) saturate(1.5) contrast(0.9);
-filter:invert(1) hue-rotate(180deg) brightness(1.1) saturate(1.5) contrast(0.9);
--webkit-backdrop-filter:invert(1) hue-rotate(180deg) brightness(1.1) saturate(1.5) contrast(0.9);
-backdrop-filter:invert(1) hue-rotate(180deg) brightness(1.1) saturate(1.5) contrast(0.9);
+-webkit-filter:invert(1) hue-rotate(181deg) brightness(0.9) saturate(1.4) contrast(1.15);
+filter:invert(1) hue-rotate(181deg) brightness(0.9) saturate(1.4) contrast(1.15);
+-webkit-backdrop-filter:invert(1) hue-rotate(181deg) brightness(0.9) saturate(1.4) contrast(1.15);
+backdrop-filter:invert(1) hue-rotate(181deg) brightness(0.9) saturate(1.4) contrast(1.15);
 }
 
 .FilterE {
--webkit-filter:brightness(1.1) saturate(1.5) contrast(0.9);
-filter:brightness(1.1) saturate(1.5) contrast(0.9);
--webkit-backdrop-filter:brightness(1.1) saturate(1.5) contrast(0.9);
-backdrop-filter:brightness(1.1) saturate(1.5) contrast(0.9);
+-webkit-filter:brightness(0.9) saturate(1.4) contrast(1.15) hue-rotate(1deg);
+filter:brightness(0.9) saturate(1.4) contrast(1.15) hue-rotate(1deg);
+-webkit-backdrop-filter:brightness(0.9) saturate(1.4) contrast(1.15) hue-rotate(1deg);
+backdrop-filter:brightness(0.9) saturate(1.4) contrast(1.15) hue-rotate(1deg);
 }
 
 .FilterF {
--webkit-filter:sepia(1) hue-rotate(210deg) invert(1) brightness(1.1) saturate(1.5) contrast(0.9);
-filter:sepia(1) hue-rotate(210deg) invert(1)  brightness(1.1) saturate(1.5) contrast(0.9);
--webkit-backdrop-filter:sepia(1) hue-rotate(210deg) invert(1)  brightness(1.1) saturate(1.5) contrast(0.9);
-backdrop-filter:sepia(1) hue-rotate(210deg) invert(1) brightness(1.1) saturate(1.5) contrast(0.9);
+-webkit-filter:sepia(1) hue-rotate(211deg) invert(1) brightness(0.9) saturate(1.4) contrast(1.15);
+filter:sepia(1) hue-rotate(211deg) invert(1)  brightness(0.9) saturate(1.4) contrast(1.15);
+-webkit-backdrop-filter:sepia(1) hue-rotate(211deg) invert(1)  brightness(0.9) saturate(1.4) contrast(1.15);
+backdrop-filter:sepia(1) hue-rotate(211deg) invert(1) brightness(0.9) saturate(1.4) contrast(1.15);
 }
 
 /* Header Buttons - Based on Win8-10 High Contrast titlebar button styling */
@@ -467,7 +467,8 @@ color:var(--button-color);
 --button-color-dark:#0F990F;
 --button-color-text:white;
 --community-header-bg:0,0,255;
---community-header-text:248,248,248;
+--community-header-text:23,23,23;
+;
 }
 
 .contrast.win10.theme-B {
@@ -479,8 +480,8 @@ color:var(--button-color);
 --content-border:#c0c0c0;
 --content-color:#00ff00;
 --button-color:#0000FF;
---button-color-dark:#1919FF;
---button-color-text:white;
+--button-color-dark:#0000E6;
+--button-color-text:black;
 --community-header-bg:0,255,255;
 --community-header-text:23,23,23;
 }
