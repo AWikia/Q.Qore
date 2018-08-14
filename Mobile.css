@@ -37,16 +37,16 @@ background-image:linear-gradient(to left,rgba(19,40,44, 0) 200px,rgb(19,40,44) 4
 	background-color:rgb(19,40,44);
 }
 
-.main .wds-community-header .wds-button.wds-is-secondary {
+.main .wds-community-header .wds-button.wds-is-secondary:hover {
 color:rgba(248,248,248,0.8);
 border-color:rgba(248,248,248,0.8);
-background-color:rgba(19,40,44,0.2);
+background-color:rgba(19,40,44,0.4);
 }
 
-.main .wds-community-header .wds-button.wds-is-secondary:hover {
+.main .wds-community-header .wds-button.wds-is-secondary {
 color:rgba(248,248,248);
 border-color:rgba(248,248,248);
-background-color:rgba(19,40,44,0.4);
+background-color:rgba(19,40,44,0.2);
 }
 
 
