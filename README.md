@@ -32,7 +32,7 @@ These wrappers use the Desktop Skin also known as Mpistochat2 or Mpisto War 2018
 
 ## Mobile
 ### Mobile/Main aka Mpistomobile2, fork of Mercury
-Those wrappers use the Mobile Skin also known as Mpistomobile2 which is a fork of Mercury Skin, with credits to FANDOM for the wrapper of Mercury skin:
+These wrappers use the Mobile Skin also known as Mpistomobile2 which is a fork of Mercury Skin, with credits to FANDOM for the wrapper of Mercury skin:
 
 [Store](https://awikia.github.io/Mpisto/Ryneeeel%20Grooze%20(Store).html)
 
