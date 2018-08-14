@@ -2,7 +2,8 @@
 OpenSource Mpirthi Project with great modern browser support.
 
 # Wrappers
-## Desktop aka Mpistoskin2
+## Desktop
+### Desktop/Main aka Mpistoskin2
 These wrappers use the Desktop Skin also known as Mpistoskin2 or Mpisto War 2018:
 
 [Changelog](https://awikia.github.io/Mpisto/Ryneeeel%20Grooze%20Chancelog.html)
@@ -24,8 +25,13 @@ These wrappers use the Desktop Skin also known as Mpistoskin2 or Mpisto War 2018
 [User Profile Masthead](https://awikia.github.io/Mpisto/Ryneeeel%20Grooze%20User.html)
 
 [Anon Interface](https://awikia.github.io/Mpisto/Ryneeeel%20Grooze%20(Anons).html)
-## Mobile aka Mpistomobile2, fork of Mercury
-Thse wrappers use the Mobile Skin also known as Mpistomobile2 which is a fork of Mercury Skin, with credits to FANDOM for the wrapper of Mercury skin:
+### Desktop/Chat aka Mpistochat2
+These wrappers use the Desktop Skin also known as Mpistochat2 or Mpisto War 2018 Chatroom, powered by Mprilyiaano Services for Chatting:
+[Main](https://awikia.github.io/Mpisto/Ryneeeel%20Grooze%20Chat.html)
+
+## Mobile
+### Mobile/Mainaka aka Mpistomobile2, fork of Mercury
+Those wrappers use the Mobile Skin also known as Mpistomobile2 which is a fork of Mercury Skin, with credits to FANDOM for the wrapper of Mercury skin:
 
 [Store](https://awikia.github.io/Mpisto/Ryneeeel%20Grooze%20(Store).html)
 
