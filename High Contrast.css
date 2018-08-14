@@ -338,6 +338,7 @@ border:0;
 
 
 /* Fix in Filters */
+@supports (position:sticky) or (position:-webkit-sticky) {
 [class*="filter"] header.mpisto-footer-container {
   position:-webkit-sticky;
   position:sticky;
@@ -362,10 +363,9 @@ border:0;
 
 body[class*="filter"]{
 margin-top:0;
+margin-bottom:-20px;
 }
 
-[class*="filter"].options {
-  margin-bottom:0; /* Rollback bottom margin set by Color Filter being enabled on MS Edge because bottom toolbar does not vitrually exist in Preferences */
 }
 
 
