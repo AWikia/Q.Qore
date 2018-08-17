@@ -5262,7 +5262,7 @@ cursor:url("OSX/banned.cur"), not-allowed!important;
   cursor:url("OSX/default.cur"), default;
 }
 
-.osx a, .osx a:hover, .osx .notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child):not(.empty), .osx .notification.wds-dropdown-level-2__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child):not(.empty), .osx a.wds-button, .osx button.wds-button, .osx .editor-header .wordmark, .osx .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, .osx .wds-banner-notification__close, .osx a label, .osx a input[type="checkbox"], .osx a input[type="radio"] {
+.osx a, .osx a:hover, .osx .notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child):not(.empty), .osx .notification.wds-dropdown-level-2__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child):not(.empty), .osx a.wds-button, .osx button.wds-button, .osx .editor-header .wordmark, .osx .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, .osx .wds-banner-notification__close, .osx a label, .osx a input[type="checkbox"], .osx a input[type="radio"], .osx label {
 cursor:url("OSX/hand.cur"), pointer;
 }
 
@@ -5287,7 +5287,7 @@ cursor:url("Lenux/banned.cur"), not-allowed!important;
   cursor:url("Lenux/default.cur"), default;
 }
 
-.xubuntu a,.xubuntu a:hover, .xubuntu .notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child):not(.empty), .xubuntu .notification.wds-dropdown-level-2__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child):not(.empty), .xubuntu a.wds-button, .xubuntu button.wds-button, .xubuntu .editor-header .wordmark, .xubuntu .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, .xubuntu .wds-banner-notification__close, .xubuntu a label, .xubuntu a input[type="checkbox"], .xubuntu a input[type="radio"] {
+.xubuntu a,.xubuntu a:hover, .xubuntu .notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child):not(.empty), .xubuntu .notification.wds-dropdown-level-2__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child):not(.empty), .xubuntu a.wds-button, .xubuntu button.wds-button, .xubuntu .editor-header .wordmark, .xubuntu .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, .xubuntu .wds-banner-notification__close, .xubuntu a label, .xubuntu a input[type="checkbox"], .xubuntu a input[type="radio"], .xubuntu label {
 cursor:url("Lenux/hand.cur"), pointer;
 }
 
