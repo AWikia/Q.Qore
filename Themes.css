@@ -158,7 +158,7 @@
 --community-header-text:248,248,248;
 }
 
-/* Standard ~ */
+/* Standard (V11) */
 :root {
 --background-image:url("headbg8.jpg");
 --background-color:#9df6fe;
@@ -171,6 +171,22 @@
 --button-color-dark:#8C2CCE;
 --button-color-text:black;
 --community-header-bg:0,191,255;
+--community-header-text:23,23,23;
+}
+
+/* Standard ~ */
+:root {
+--background-image:url("headbg9.jpg");
+--background-color:#ffddbb;
+--link-color:224,57,135;
+--content-bg:#feb0a4;
+--dropdown-bg:#F5D2CE;
+--content-border:#9214da;
+--content-color:#700658;
+--button-color:#F838A9;
+--button-color-dark:#DF1C8E;
+--button-color-text:black;
+--community-header-bg:222,50,204;
 --community-header-text:23,23,23;
 }
 
