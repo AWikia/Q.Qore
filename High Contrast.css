@@ -199,6 +199,17 @@ backdrop-filter:sepia(1) hue-rotate(211deg) invert(1) brightness(0.9) saturate(1
   color:var(--button-color-text)!important;
 }
 
+/* Floating buttons */
+.contrast .wds-floating-button {
+	box-shadow:0 0 0 1.4px currentColor!important;
+}
+
+.contrast .wds-floating-button:hover {
+	background-color:var(--button-color)!important;
+	color:var(--button-color-text)!important;
+}
+
+
 .contrast stroke {
   color:var(--content-color)!important;
 }
