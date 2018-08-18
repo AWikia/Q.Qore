@@ -185,19 +185,18 @@ document.getElementById("Handler").className += " mpisto-servers"
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-menu" />
                   </svg></a> General Preferences</h1>
     <div>
-              <div class="wds-dropdown">				
-                <div class="wds-button wds-is-squished wds-dropdown__toggle">	
-                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
+			<div class="wds-floating-button-group option-controls">
+				<a class="wds-floating-button" title="Reset this page to defaults">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-refresh" />
                   </svg>
-                </div>
-                <div class="wds-dropdown__content wds-is-left-aligned wds-is-not-scrollable">					
-                  <ul class="wds-list wds-is-linked">						
-                    <li><a>Reset this page to defaults</a></li>
-                    <li><a>Reset all pages to defaults</a></li>
-                  </ul>
-                </div>
-              </div>
+				</a>
+				<a class="wds-floating-button critical" title="Reset all pages to defaults">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-refresh" />
+                  </svg>
+				</a>
+			</div>
     <div class="fieldset">
     <fieldset>
     <legend>Pages</legend>
@@ -238,7 +237,33 @@ document.getElementById("Handler").className += " mpisto-servers"
     <legend>Avatar</legend>
     <label>Avatar Pic (.png/.jpg/.gif needed, up to 1000KB possible, gets updated to your base account)</label>
     <br>
-    Current avatar: <img class="options-avatar" src="HM100.png"></img>  <input type="file"></input>
+    Current avatar: <img class="options-avatar" src="HM100.png"></img> 
+    <div class="wds-dropdown upload-actions wds-no-chevron">
+		<div class="wds-floating-button">
+		<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-plus" />
+         </svg></div>
+         <div class="wds-dropdown__content wds-is-not-scrollable">
+			<ul class="wds-list">
+			<li class="wds-is-hidden">
+				<input name="05" id="41" type="file"></input>
+			</li>
+			<li>
+				<div class="wds-floating-button-group wds-is-vertical">
+					<a class="wds-floating-button" title="Wiki Files">		<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-community" />
+         </svg></a>
+					<a class="wds-floating-button accent" title="Webcam">		<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-camera" />
+         </svg></a>
+					<label for="41"><a class="wds-floating-button" title="Local Storage">		<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-upload" />
+         </svg></a></label>
+				</div>
+			</li>
+			</ul>
+         </div>
+    </div>
     <br>
     <br>
     <button class="wds-button wds-is-squished wds-is-full-width">Remove avatar</button>
@@ -252,19 +277,18 @@ document.getElementById("Handler").className += " mpisto-servers"
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-menu" />
                   </svg></a> Editing Preferences</h1>
     <div>
-              <div class="wds-dropdown">				
-                <div class="wds-button wds-is-squished wds-dropdown__toggle">	
-                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
+			<div class="wds-floating-button-group option-controls">
+				<a class="wds-floating-button" title="Reset this page to defaults">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-refresh" />
                   </svg>
-                </div>
-                <div class="wds-dropdown__content wds-is-left-aligned wds-is-not-scrollable">					
-                  <ul class="wds-list wds-is-linked">						
-                    <li><a>Reset this page to defaults</a></li>
-                    <li><a>Reset all pages to defaults</a></li>
-                  </ul>
-                </div>
-              </div>
+				</a>
+				<a class="wds-floating-button critical" title="Reset all pages to defaults">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-refresh" />
+                  </svg>
+				</a>
+			</div>
     <div class="fieldset">
     <fieldset>
     <legend>Editing Experience</legend>
@@ -328,20 +352,18 @@ document.getElementById("Handler").className += " mpisto-servers"
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-menu" />
                   </svg></a> Accessibility Preferences</h1>
     <div>
-              <div class="wds-dropdown">				
-                <div class="wds-button wds-is-squished wds-dropdown__toggle">	
-                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
+			<div class="wds-floating-button-group option-controls">
+				<a class="wds-floating-button" title="Reset this page to defaults">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-refresh" />
                   </svg>
-                </div>
-                <div class="wds-dropdown__content wds-is-left-aligned wds-is-not-scrollable">					
-                  <ul class="wds-list wds-is-linked">						
-                    <li><a>Reset this page to defaults</a></li>
-                    <li><a>Reset all pages to defaults</a></li>
-                  </ul>
-                </div>
-              </div>
-
+				</a>
+				<a class="wds-floating-button critical" title="Reset all pages to defaults">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-refresh" />
+                  </svg>
+				</a>
+			</div>
     <div class="fieldset">
     <fieldset>
     <legend>Rendering Mode</legend>
@@ -437,21 +459,33 @@ document.getElementById("Handler").className += " mpisto-servers"
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-menu" />
                   </svg></a> Theme Designer Preferences</h1>
     <div>
-              <div class="wds-dropdown">				
-                <div class="wds-button wds-is-squished wds-dropdown__toggle">	
-                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
+			<div class="wds-floating-button-group option-controls">
+				<a class="wds-floating-button" title="Load theme from Store">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-document" />
                   </svg>
-                </div>
-                <div class="wds-dropdown__content wds-is-left-aligned wds-is-not-scrollable">					
-                  <ul class="wds-list wds-is-linked">						
-                    <li><a>Load theme from Store</a></li>
-                    <li><a href="#modal1">Submit theme to Store</a></li>
-                    <li><a>Reset to Standard theme</a></li>
-                    <li><a>Download theme to your Computer</a></li>
-                  </ul>
-                </div>
-              </div>		
+				</a>
+				<a class="wds-floating-button" href="#modal1" title="Submit theme to Store">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-upload" />
+                  </svg>
+				</a>
+				<a class="wds-floating-button accent" href="#modal1" title="Reset to Standard theme">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-undo" />
+                  </svg>
+				</a>
+				<a class="wds-floating-button" href="#modal1" title="Download theme to your computer">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-download" />
+                  </svg>
+				</a>
+				<a class="wds-floating-button critical" title="Reset all other pages to defaults">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-refresh" />
+                  </svg>
+				</a>
+			</div>
 
     <div class="fieldset">
     <fieldset>
@@ -479,7 +513,33 @@ document.getElementById("Handler").className += " mpisto-servers"
     <br><br>
     <label>Background-image: (.png/.jpg/.gif needed, up to 480KB possible)</label>
     <br>
-    Current Background:<div class="options-preview" style="background-image:url('headbg.jpg'); background-image:var(--background-image);"></div><input type="file"></input>
+    Current Background:<div class="options-preview" style="background-image:url('headbg.jpg'); background-image:var(--background-image);"></div>
+    <div class="wds-dropdown upload-actions wds-no-chevron">
+		<div class="wds-floating-button">
+		<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-plus" />
+         </svg></div>
+         <div class="wds-dropdown__content wds-is-not-scrollable">
+			<ul class="wds-list">
+			<li class="wds-is-hidden">
+				<input name="05" id="41-5" type="file"></input>
+			</li>
+			<li>
+				<div class="wds-floating-button-group wds-is-vertical">
+					<a class="wds-floating-button" title="Wiki Files">		<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-community" />
+         </svg></a>
+					<a class="wds-floating-button accent" title="Webcam">		<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-camera" />
+         </svg></a>
+					<label for="41-5"><a class="wds-floating-button" title="Local Storage">		<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-upload" />
+         </svg></a></label>
+				</div>
+			</li>
+			</ul>
+         </div>
+    </div>
     </fieldset>
     </div>
 
@@ -490,11 +550,63 @@ document.getElementById("Handler").className += " mpisto-servers"
     <br><br>
     <label>Header-image: (.png/.jpg/.gif needed, up to 480KB possible)</label>
     <br>
-    Current Graphic:<div class="options-preview" style="background-image:url('Graphic.png'); width:410px; height:100px; background-repeat:no-repeat; background-position:center; background-size:contain;"></div><input type="file"></input>
+    Current Graphic:<div class="options-preview" style="background-image:url('Graphic.png'); width:410px; height:100px; background-repeat:no-repeat; background-position:center; background-size:contain;"></div>
+    <div class="wds-dropdown upload-actions wds-no-chevron">
+		<div class="wds-floating-button">
+		<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-plus" />
+         </svg></div>
+         <div class="wds-dropdown__content wds-is-not-scrollable">
+			<ul class="wds-list">
+			<li class="wds-is-hidden">
+				<input name="05" id="42" type="file"></input>
+			</li>
+			<li>
+				<div class="wds-floating-button-group wds-is-vertical">
+					<a class="wds-floating-button" title="Wiki Files">		<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-community" />
+         </svg></a>
+					<a class="wds-floating-button accent" title="Webcam">		<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-camera" />
+         </svg></a>
+					<label for="42"><a class="wds-floating-button" title="Local Storage">		<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-upload" />
+         </svg></a></label>
+				</div>
+			</li>
+			</ul>
+         </div>
+    </div>
     <br><br>
     <label>Header-wordmark: (.png needed, up to 600KB possible, up to 250 in width and 65 in height)</label>
     <br>
-    Current wordmark:<div class="options-preview" style="background-image:url('Wordmark.png'); width:250px; height:65px; background-repeat:no-repeat; background-position:center;"></div><input type="file"></input>
+    Current wordmark:<div class="options-preview" style="background-image:url('Wordmark.png'); width:250px; height:65px; background-repeat:no-repeat; background-position:center;"></div>
+    <div class="wds-dropdown upload-actions wds-no-chevron">
+		<div class="wds-floating-button">
+		<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-plus" />
+         </svg></div>
+         <div class="wds-dropdown__content wds-is-not-scrollable">
+			<ul class="wds-list">
+			<li class="wds-is-hidden">
+				<input name="05" id="42-5" type="file"></input>
+			</li>
+			<li>
+				<div class="wds-floating-button-group wds-is-vertical">
+					<a class="wds-floating-button" title="Wiki Files">		<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-community" />
+         </svg></a>
+					<a class="wds-floating-button accent" title="Webcam">		<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-camera" />
+         </svg></a>
+					<label for="42-5"><a class="wds-floating-button" title="Local Storage">		<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-upload" />
+         </svg></a></label>
+				</div>
+			</li>
+			</ul>
+         </div>
+    </div>
     <br><br>
     <label>Wiki-URL:</label><input class="mpisto-input" value="mpisto-war-2018" placeholder="Wiki URL" ></input>
     <br>
@@ -542,20 +654,18 @@ document.getElementById("Handler").className += " mpisto-servers"
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-menu" />
                   </svg></a> Site Preferences</h1>
     <div>
-              <div class="wds-dropdown">				
-                <div class="wds-button wds-is-squished wds-dropdown__toggle">	
-                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
+			<div class="wds-floating-button-group option-controls">
+				<a class="wds-floating-button" title="Reset this page to defaults">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-refresh" />
                   </svg>
-                </div>
-                <div class="wds-dropdown__content wds-is-left-aligned wds-is-not-scrollable">					
-                  <ul class="wds-list wds-is-linked">						
-                    <li><a>Reset this page to defaults</a></li>
-                    <li><a>Reset all pages to defaults</a></li>
-                  </ul>
-                </div>
-              </div>
-              
+				</a>
+				<a class="wds-floating-button critical" title="Reset all pages to defaults">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-refresh" />
+                  </svg>
+				</a>
+			</div>
     <div class="fieldset">
     <fieldset>
     <legend>Date and Time for logged-out users</legend>
@@ -867,6 +977,12 @@ function BarSwitch() {
 function RemovePane() {
     var x = document.getElementById("OptionsContent");
         x.className = x.className.replace(" pane-on", "");
+	    setTimeout(RemoveTransition, 990) 
+}
+
+function RemoveTransition() {
+    var x = document.getElementById("OptionsContent");
+        x.className = x.className.replace(" transition-on", "");
 }
 
 
