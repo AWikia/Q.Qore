@@ -11,6 +11,8 @@ function GNavSearch() {
     var x = document.getElementById("GlobalNavigation");
     if (x.className.indexOf("active-search") == -1) {
         x.className += " active-search";
+       } else {
+          x.className = x.className.replace(" active-search", "");
     }
 }
 
@@ -39,88 +41,58 @@ function toggleMenu() {
 </div>
 
 <div class="mpisto-gnav">
-<header class="mpisto-navbar" id="GlobalNavigation">
-  <div class="mpisto-navbar-wrapper">
-    <a class="link" style="font-family:'Play', Jura, cursive;">Mpisto War</a>
-    <div class="wds-dropdown">
-      <div class="link company">Explore <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
-</svg>
-      </div>
-      <div class="wds-dropdown__content">
-        <ul class="wds-list wds-is-linked">
-          <li class="servers-only"><a href="http://github.com/HM100/Mpisto">Github</a></li>
-          <li><a>Company</a></li>
-          <li><a>Hiring</a></li>
-          <li><a>A Wiki - Techno Wiki</a></li>
-          <li><a>A Wiki - Dev Wiki</a></li>
-          <li><a>A Wiki Foundation</a></li>
-          <li><a>More Wikis</a></li>
-          <li class="create-wiki-small"><a class="wds-button wds-is-secondary wds-is-squished createwiki">Create a Wiki</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="search">
-    <input class="search-input" placeholder="search on Mpisto..." onclick="GNavSearch()"></input>
-    <div class="wds-button-group search-buttons">
-    <button class="wds-button wds-is-squished wds-is-text close-button search-form-button" onclick="GNavSearchOff()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" />
-</svg>
-    </button>
-    <button class="wds-button wds-is-squished search-button search-form-button"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass" />
-</svg>
-    </button>
-    </div>
-    </div>
-    <div class="user">
-      <div class="wds-dropdown">
-        <div class="link wds-dropdown__toggle"><img class="mpisto-avatar" src="HM100.png"></img> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
-</svg>
-    </div>
-        <div class="wds-dropdown__content wds-is-left-aligned">
-          <ul class="wds-list wds-is-linked">
-           <li><a>View Profile</a></li>
-           <li><a>Log Out</a></li>
-          </ul>
-        </div>
-      </div>
-      </div>
-    <div class="wiki">
-      <a class="wds-button wds-is-secondary wds-is-squished createwiki">Create a Wiki</a>
-    </div>
-  </div>
-</header>
-
-<!-- End Global Nav -->
-
-<header class="mpisto-navbar active-search" id="MobileNavigation">
-  <div class="mpisto-navbar-wrapper">
-    <a class="link" style="font-family:'Play', Jura, cursive;">Mpisto</a>
-    <div class="search">
-    <input class="search-input" placeholder="search on Mpisto..."></input>
-    <div class="wds-button-group search-buttons">
-    <button class="wds-button wds-is-squished wds-is-text search-button search-form-button"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass" />
-</svg>
-    </button>
-    </div>
-    </div>
-    <div class="user">
-    <a class="link" onclick="toggleMenu()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small user">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user" />
-</svg> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small close">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" />
-</svg></a>
-    </div>
-  </div>
-</header>
+	<header class="table mpisto-global-navigation" id="GlobalNavigation">
+		<div class="mpisto-global-navigation-wrapper">
+			<div class="tr">
+			<div class="wds-dropdown">
+				<div class="link wds-dropdown__toggle cell">
+					<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon ">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-menu" /> 
+				</div>
+				  <div class="wds-dropdown__content wds-is-left-aligned">
+					<ul class="wds-list wds-is-linked">
+					  <li class="servers-only"><a href="http://github.com/Awikia/Mpisto">Github</a></li>
+					  <li><a>Company</a></li>
+					  <li><a>Hiring</a></li>
+					  <li><a>A Wiki - Techno Wiki</a></li>
+					  <li><a>A Wiki - Dev Wiki</a></li>
+					  <li><a>A Wiki Foundation</a></li>
+					  <li><a>More Wikis</a></li>
+					  <li class="create-wiki"><a class="wds-button wds-is-secondary wds-is-squished createwiki">Create a Wiki</a></li>
+					</ul>
+				  </div>
+			</div>
+				<a class="company cell link">
+					<span class="search-on">Mpisto War</span>
+					<input type="search" class="mpisto-input search-off" placeholder="Search on Mpisto..."></input>
+				</a>
+				  <div class="wds-dropdown">
+					<div class="link cell wds-dropdown__toggle"><img class="mpisto-avatar" src="HM100.png"></img>
+				</div>
+					<div class="wds-dropdown__content wds-is-left-aligned">
+					  <ul class="wds-list wds-is-linked">
+					   <li><a>View Profile</a></li>
+					   <li><a>Log Out</a></li>
+					  </ul>
+					</div>
+				  </div>
+				<a class="link cell" onclick="GNavSearch()">
+					<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon  search-on">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass" /> 
+					</svg>
+					<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon  search-off">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" /> 
+					</svg>
+				</a>
+			</div>
+		</div>
+	</header>
 
 <!-- End Global Nav -->
 
 
 </div>
+<!--
 <div class="mobile-drawer">
 	<div class="wrapper">
 		<img class="wds-avatar" src="HM100.png"></img>
@@ -152,7 +124,7 @@ function toggleMenu() {
 			</div>
 	</div>
 </div>
-
+-->
   <div class="top-gap"></div>
   
 <!-- End Gap -->
@@ -198,7 +170,43 @@ function toggleMenu() {
 			<div class="wds-button wds-dropdown__toggle"><span>Actions</span> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" viewBox="0 0 12 12">
               <path d="M6 9l4-5H2" fill-rule="evenodd"/>
             </svg></div>
-                <div class="wds-dropdown__content wds-is-left-aligned">
+          <div class="wds-is-not-scrollable wds-dropdown__content wds-is-left-aligned">		
+            <ul class="wds-list wds-is-linked wds-has-bolded-items">					
+              <li class="wds-dropdown-level-2">						
+                <a class="wds-dropdown-level-2__toggle">
+                  <span>User Actions</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown-chevron" viewBox="0 0 12 12">
+                    <path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
+                  </svg>
+                </a>
+                <div class="wds-dropdown-level-2__content">
+                  <ul class="wds-list wds-is-linked">
+                    <li>
+                    <a>View Profile</a>
+                    </li>
+                    <li>
+                    <a>Talk Page</a>
+                    </li>
+                    <li>
+                    <a>Preferences</a>
+                    </li>
+                    <li>
+                    <a>Help</a>
+                    </li>
+                    <li>
+                    <a>Log Out</a>
+                    </li>
+                  </ul>
+              </div>		
+              </li>					
+              <li class="wds-dropdown-level-2">						
+                <a class="wds-dropdown-level-2__toggle">
+                  <span>Wiki Actions</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown-chevron" viewBox="0 0 12 12">
+                    <path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
+                  </svg>
+                </a>
+                <div class="wds-dropdown-level-2__content">
                   <ul class="wds-list wds-is-linked">
                     <li>
                     <a>GMK Pages</a>
@@ -223,6 +231,9 @@ function toggleMenu() {
                     </li>
                   </ul>
               </div>		
+              </li>					
+            </ul>
+          </div>
 		</div>
 		<a class="wds-button"><span>Forum</span></a>
 		<a class="wds-button"><span>Questions?</span></a>
