@@ -25,6 +25,10 @@ backdrop-filter:none!important;
 -webkit-backdrop-filter:none!important;
 }
 
+.createwiki {
+	display:none!important;
+}
+
 .main .wds-community-header {
 background-color:rgb(19,40,44);
 }
@@ -151,6 +155,14 @@ border-right-color:rgb(19,40,44);
 border-left-color:rgb(19,40,44);
 }
 
+.mpisto-gnav {
+	background-color:#00d6d6;
+	color:white; /* Actually compiles to black by themedesigner but we need white for mobile skin to emulate fandom 2.0 default button styling */
+}
+
+.mpisto-global-navigation .link:hover, .mpisto-global-navigation .wds-dropdown:hover .link {
+	background-color:#007070;
+}
 
 body {
 margin:0!important;
@@ -664,12 +676,14 @@ padding:5px 0 0;
 
 @media only screen and (max-width:1023px) {
 
-#GlobalNavigation {
+footer.mpisto-footer {
 display:none;
 }
 
-footer.mpisto-footer {
-display:none;
+/* Show profile layout menu into right align when only search is after the user menu */
+.mpisto-global-navigation .link.company + .wds-dropdown .wds-is-left-aligned{
+	left:auto;
+	right:0;
 }
 
 .page-wrapper .store-content, 
@@ -737,7 +751,7 @@ margin:0 -1px -1px;
 border-top:1px solid #ccc;
 }
 */
-footer.mobile-footer, #MobileNavigation {
+footer.mobile-footer {
 display:none;
 }
 
