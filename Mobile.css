@@ -83,7 +83,6 @@ border-left-color:rgba(248,248,248,0.8);
 	flex-direction:column;
 	width:100%;
 	min-height:18px;
-	margin-top:2px;
 	padding:5px 0;
 	font-weight:300;
 	font-size:16px;
@@ -756,7 +755,7 @@ margin-top:0!important;
 
 
 .top-gap {
-margin-top:22px;
+margin-top:20px;
 }
 
 .main .wds-community-header {
