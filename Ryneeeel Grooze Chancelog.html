@@ -10,6 +10,8 @@ function GNavSearch() {
     var x = document.getElementById("GlobalNavigation");
     if (x.className.indexOf("active-search") == -1) {
         x.className += " active-search";
+    } else {
+        x.className = x.className.replace(" active-search", "");
     }
 }
 
@@ -17,7 +19,6 @@ function GNavSearchOff() {
     var x = document.getElementById("GlobalNavigation");
         x.className = x.className.replace(" active-search", "");
 }
-
 /* CSS for App */
 if (navigator.userAgent.match("MW18")) {
 document.getElementById("Handler").className += " mpisto-servers"
@@ -25,66 +26,51 @@ document.getElementById("Handler").className += " mpisto-servers"
 
   </script>
 <div style="visibility:hidden">
-<header class="mpisto-navbar">
+<header class="mpisto-global-navigation">
 </header>
-<nav class="theme-portal">
-</nav>
+<header class="theme-portal">
+</header>
 </div>
 
 <div class="mpisto-gnav">
-<header class="mpisto-navbar" id="GlobalNavigation">
-  <div class="mpisto-navbar-wrapper">
-    <a class="link" style="font-family:'Play', Jura, cursive;">Mpisto War</a>
-    <div class="wds-dropdown">
-      <div class="link company">Explore <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
-</svg>
-      </div>
-      <div class="wds-dropdown__content">
-        <ul class="wds-list wds-is-linked">
-          <li class="servers-only"><a href="http://github.com/HM100/Mpisto">Github</a></li>
-          <li><a>Company</a></li>
-          <li><a>Hiring</a></li>
-          <li><a>A Wiki - Techno Wiki</a></li>
-          <li><a>A Wiki - Dev Wiki</a></li>
-          <li><a>A Wiki Foundation</a></li>
-          <li><a>More Wikis</a></li>
-          <li class="create-wiki-small"><a class="wds-button wds-is-secondary wds-is-squished createwiki">Create a Wiki</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="search">
-    <input class="search-input" placeholder="search on Mpisto..." onclick="GNavSearch()"></input>
-    <div class="wds-button-group search-buttons">
-    <button class="wds-button wds-is-squished wds-is-text close-button search-form-button" onclick="GNavSearchOff()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" />
-</svg>
-    </button>
-    <button class="wds-button wds-is-squished search-button search-form-button"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass" />
-</svg>
-    </button>
-    </div>
-    </div>
-    <div class="user">
-      <div class="wds-dropdown">
-        <div class="link wds-dropdown__toggle"><img class="mpisto-avatar" src="HM100.png"></img> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
-</svg>
-    </div>
-        <div class="wds-dropdown__content wds-is-left-aligned">
-          <ul class="wds-list wds-is-linked">
-           <li><a>View Profile</a></li>
-           <li><a>Log Out</a></li>
-          </ul>
-        </div>
-      </div>
- 
+	<header class="table mpisto-global-navigation" id="GlobalNavigation">
+		<div class="mpisto-global-navigation-wrapper">
+			<div class="tr">
+			<div class="wds-dropdown">
+				<div class="link wds-dropdown__toggle cell">
+					<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon ">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-menu" /> 
+				</div>
+				  <div class="wds-dropdown__content wds-is-left-aligned">
+					<ul class="wds-list wds-is-linked">
+					  <li class="servers-only"><a href="http://github.com/Awikia/Mpisto">Github</a></li>
+					  <li><a>Company</a></li>
+					  <li><a>Hiring</a></li>
+					  <li><a>A Wiki - Techno Wiki</a></li>
+					  <li><a>A Wiki - Dev Wiki</a></li>
+					  <li><a>A Wiki Foundation</a></li>
+					  <li><a>More Wikis</a></li>
+					  <li class="create-wiki"><a class="wds-button wds-is-secondary wds-is-squished createwiki">Create a Wiki</a></li>
+					</ul>
+				  </div>
+			</div>
+				<a class="company cell link">
+					<span class="search-on">Mpisto War</span>
+					<input type="search" class="mpisto-input search-off" placeholder="Search on Mpisto..."></input>
+				</a>
+				  <div class="wds-dropdown">
+					<div class="link cell wds-dropdown__toggle"><img class="mpisto-avatar" src="HM100.png"></img>
+				</div>
+					<div class="wds-dropdown__content wds-is-left-aligned">
+					  <ul class="wds-list wds-is-linked">
+					   <li><a>View Profile</a></li>
+					   <li><a>Log Out</a></li>
+					  </ul>
+					</div>
+				  </div>
        <div class="wds-dropdown">
-        <div class="link wds-dropdown__toggle"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+        <div class="link cell wds-dropdown__toggle"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon ">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-bell" /> 
-</svg> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
 </svg>
     </div>
         <div class="wds-dropdown__content wds-is-right-aligned wds-is-not-scrollable notification">
@@ -115,10 +101,8 @@ document.getElementById("Handler").className += " mpisto-servers"
         </div>
       </div>
        <div class="wds-dropdown">
-        <div class="link wds-dropdown__toggle"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+        <div class="link cell wds-dropdown__toggle"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon ">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-flag" /> 
-</svg> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
 </svg>
     </div>
         <div class="wds-dropdown__content wds-is-right-aligned wds-is-not-scrollable flags-dropdown">
@@ -135,14 +119,17 @@ document.getElementById("Handler").className += " mpisto-servers"
           </ul>
         </div>
       </div>            
-    
-    <div class="wiki">
-      <a class="wds-button wds-is-secondary wds-is-squished createwiki">Create a Wiki</a>
-    </div>
-  </div>
-</header>
-
-<!-- End Global Nav -->
+				<a class="link cell" onclick="GNavSearch()">
+					<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon  search-on">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass" /> 
+					</svg>
+					<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon  search-off">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" /> 
+					</svg>
+				</a>
+			</div>
+		</div>
+	</header>
 
 
     <nav class="theme-portal">
@@ -573,6 +560,30 @@ function HCg1() {
     <div class="mpisto-article-wrapper">
       <article class="mpisto-article">
       <!--Start Article-->
+      <!--17-->
+      <h2>IB17</h2>
+        <ul>
+        <li>
+        Seventeenth Revision, Based on Desktop Build 825 and includes the following changes:
+        <ul>
+        <li>
+        Some patches to Global Nav
+        </li>
+        <li>
+        Hugely redesigned the Global Navigation for the Desktop site, matching MpistoLite but does not have full parity with the style
+        </li>
+        <li>
+        Two Pane preferences page has been added to Tablet Landscape breakpoint as well
+        </li>
+        <li>
+        Made Article Wrapper to lay into two columns again
+        </li>
+        <li>
+        Bug fixes
+        </li>
+        </ul>
+        </li>
+        </ul>
       <!--16-->
       <h2>IB16</h2>
         <ul>
@@ -760,7 +771,6 @@ function HCg1() {
         Fixes to Masthead Header
         </li>
         <li>
-        <li>
         Released a newer User Profile Masthead container which replaces the regular page header from all User Pages. For Discord and A Secure accounts, you can hover on the user name to get a tooltip showing your ID tag (Only on Desktop)
         </li>
         <li>
@@ -923,7 +933,7 @@ function HCg1() {
         Global Navigation now has JS Gestures and made it better
         </li>
         <li>
-        Global Navigation now has unprefixed ID selector to macth Amanda and Nile5
+        Global Navigation now has unprefixed ID selector to match Amanda and Nile5
         </li>
         <li>
         Bug fixes
