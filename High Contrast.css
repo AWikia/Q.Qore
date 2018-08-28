@@ -17,6 +17,67 @@ body:not(.contrast):not(.basic) .clearhighcontrastbutton.wds-button {
   display:none;
 }
 
+.mpisto-options-content .reduced-motion {
+	display:none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+.mpisto-options-content .reduced-motion {
+	display:block;
+}
+
+.mpisto-options-content .prm-option {
+	display:none!important;
+}
+
+
+.mpisto-options-content .filtermodes {
+  display:none!important;
+}
+
+*,:before,:after {
+	transition-property:color,background-color,border-color,column-rule-color,outline-color,fill,text-shadow,box-shadow,visibility,display!important;
+	animation:none!important;
+	-webkit-backdrop-filter:none!important;
+	backdrop-filter:none!important;
+	background-blend-mode:nomral!important;
+	mix-blend-mode:nomral!important;
+}
+
+.theme-portal .link.theme10, .theme-portal .link.theme11, .theme-portal .link.theme12, .theme-portal .link.theme13, .theme-portal .link.theme14, .theme-portal .link.theme15, .theme-portal .link.theme16 {
+	display:none!important
+}
+}
+
+.prm .mpisto-options-content .reduced-motion {
+	display:block;
+}
+
+.prm .mpisto-options-content .filtermodes {
+  display:none!important;
+}
+
+.prm *,.prm :before,.prm :after, .prm {
+	transition-property:color,background-color,border-color,column-rule-color,outline-color,fill,text-shadow,box-shadow,visibility,display!important;
+	animation:none!important;
+	-webkit-backdrop-filter:none!important;
+	backdrop-filter:none!important;
+	background-blend-mode:nomral!important;
+	mix-blend-mode:nomral!important;
+}
+
+.prm {
+	-webkit-filter:none!important;
+	filter:none!important;
+}
+
+.prm .theme-portal .link.theme10, .prm .theme-portal .link.theme11, .prm .theme-portal .link.theme12, .prm .theme-portal .link.theme13, .prm .theme-portal .link.theme14, .prm .theme-portal .link.theme15, .prm .theme-portal .link.theme16 {
+	display:none!important
+}
+
+
+
+
 @supports (filter:saturate(0)) or (-webkit-filter:saturate(0)) {
 .mpisto-options-content .filternotice {
   display:none;
@@ -64,6 +125,8 @@ body:not(.contrast):not(.basic) .highcontrastbutton.wds-dropdown {
   filter:none!important;
   backdrop-filter:none!important;
   -webkit-backdrop-filter:none!important;
+	background-blend-mode:nomral!important;
+	mix-blend-mode:nomral!important;
 }
 
 .basic *,.basic :before,.basic :after, [class*="filter"] *, [class*="filter"] :before, [class*="filter"] :after  {
@@ -71,6 +134,7 @@ body:not(.contrast):not(.basic) .highcontrastbutton.wds-dropdown {
   filter:none!important;
   backdrop-filter:none!important;
   -webkit-backdrop-filter:none!important;
+	background-blend-mode:nomral!important;
 }
 
 
@@ -196,6 +260,7 @@ backdrop-filter:sepia(1) hue-rotate(211deg) invert(1) brightness(0.9) saturate(1
 /* Floating buttons */
 .contrast .wds-floating-button {
 	box-shadow:0 0 0 1.4px currentColor!important;
+	transition-property:color,background-color,box-shadow;
 }
 
 .contrast .wds-floating-button:hover {
@@ -208,7 +273,7 @@ backdrop-filter:sepia(1) hue-rotate(211deg) invert(1) brightness(0.9) saturate(1
   color:var(--content-color)!important;
 }
 
-.contrast pre, .contrast code, .basic pre, .basic code {
+.contrast pre, .contrast code {
   background-color:var(--content-bg);
   color:var(--content-color);
   border-color:var(--content-border);

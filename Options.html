@@ -213,6 +213,25 @@ document.getElementById("Handler").className += " mpisto-servers"
     </div>
 
     <div class="fieldset">
+    <fieldset>
+    <legend>Font Stack</legend>
+    Font Family:
+    <br>
+    <input type="radio" name="06" id="51" checked onclick="fontclear()"></input> <label for="51">Default</label>
+    <br>
+    <input type="radio" name="06" id="52" onclick="fontb()"></input> <label for="52">Ryneeeel Zekzphire Zentral</label>
+    <br>
+    <input type="radio" name="06" id="53" onclick="fontc()"></input> <label for="53">Pre-Source Sans</label>
+    <br>
+    <input type="radio" name="06" id="54" onclick="fontd()"></input> <label for="54">Pre-Open Sans</label>
+    <br>
+    <input type="radio" name="06" id="55" onclick="fonta()"></input> <label for="55">Operating System
+    </label>
+    </fieldset>
+    </div>
+
+
+    <div class="fieldset">
     <fieldset>    
     <legend>Date and Time</legend>
     <label>Time Zone:</label>
@@ -398,6 +417,10 @@ document.getElementById("Handler").className += " mpisto-servers"
     <div class="filternotice">
     Your browser does not support CSS filters which are required for Color Filters to work
     </div>
+    <div class="reduced-motion
+    ">
+    Your device has enabled the reduced motion preference which must be disabled for Color Filters to work
+    </div>
     <div class="fieldset">
     <fieldset>
     <legend>Preview</legend>
@@ -436,9 +459,10 @@ document.getElementById("Handler").className += " mpisto-servers"
     <div class="fieldset">
     <fieldset>
     <legend>Misc</legend>
-    <input type="checkbox" name="23" id="221"></input> <label for="221">Edit pages by double clicking on its title</label>
+    <div class="prm-option"><input type="checkbox" name="23" id="221" onclick="prmon()"></input> <label for="221">Use Reduced Motion experience</label></div>
+    <input type="checkbox" name="23" id="222"></input> <label for="222">Edit pages by double clicking on its title</label>
     <br>
-    <input type="checkbox" name="23" id="222"></input> <label for="222">Watch/Unwatch pages by clicking on its title for more than 4 seconds</label>
+    <input type="checkbox" name="23" id="223"></input> <label for="223">Watch/Unwatch pages by clicking on its title for more than 4 seconds</label>
     </fieldset>
     </div>
     
@@ -875,7 +899,65 @@ function HCg1() {
         x.className = x.className.replace(" filterE", "");
 }
 
+function prmon() {
+    var x = document.getElementById("Handler");
+    if (x.className.indexOf("prm") == -1) {
+        x.className += " prm";
+    } else {
+        x.className = x.className.replace(" prm", "");
+}
+}
 
+
+
+function fontclear() {
+    var x = document.getElementById("Handler");
+        x.className = x.className.replace(" system-font", "");
+        x.className = x.className.replace(" rzz-font", "");
+        x.className = x.className.replace(" mob-font", "");
+        x.className = x.className.replace(" mob2-font", "");
+}
+
+function fonta() {
+    var x = document.getElementById("Handler");
+    if (x.className.indexOf("system-font") == -1) {
+        x.className += " system-font";
+    }
+        x.className = x.className.replace(" rzz-font", "");
+        x.className = x.className.replace(" mob-font", "");
+        x.className = x.className.replace(" mob2-font", "");
+}
+
+
+function fontb() {
+    var x = document.getElementById("Handler");
+    if (x.className.indexOf("rzz-font") == -1) {
+        x.className += " rzz-font";
+    }
+        x.className = x.className.replace(" system-font", "");
+        x.className = x.className.replace(" mob-font", "");
+        x.className = x.className.replace(" mob2-font", "");
+}
+
+function fontc() {
+    var x = document.getElementById("Handler");
+    if (x.className.indexOf("mob-font") == -1) {
+        x.className += " mob-font";
+    }
+        x.className = x.className.replace(" system-font", "");
+        x.className = x.className.replace(" rzz-font", "");
+        x.className = x.className.replace(" mob2-font", "");
+}
+
+function fontd() {
+    var x = document.getElementById("Handler");
+    if (x.className.indexOf("mob2-font") == -1) {
+        x.className += " mob2-font";
+    }
+        x.className = x.className.replace(" system-font", "");
+        x.className = x.className.replace(" rzz-font", "");
+        x.className = x.className.replace(" mob-font", "");
+}
 
 // Restore High Contrast
 function HCclear() {
