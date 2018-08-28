@@ -1,9 +1,28 @@
-@import url('https://fonts.googleapis.com/css?family=Jura:300,400,500,600,700&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
-@import url("https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&subset=latin-ext");
-@import url("https://fonts.googleapis.com/css?family=Fira+Sans:100,200,300,400,500,600,700,800,900&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese");
-@import url('https://fonts.googleapis.com/css?family=Advent+Pro:100,200,300,400,500,600,700&subset=greek,latin-ext');
+/** Primary Fonts **/
+/* 
+**
+Gothic A1 = Korean
+M PLUS 1p = Japana
+Promt = Thailandish
+Source Sans Pro = Rest
+**
+*/
+@import url('https://fonts.googleapis.com/css?family=Gothic+A1:100,200,300,400,500,600,700,800,900|M+PLUS+1p:100,300,400,500,700,800,900|Prompt:100,200,300,400,500,600,700,800,900|Source+Sans+Pro:200,300,400,600,700,900&subset=cyrillic,cyrillic-ext,greek,greek-ext,hebrew,japanese,korean,latin-ext,thai,vietnamese');
+/** Secondary Fonts **/
+/* 
+**
+Nanum Gothic = Korean
+M PLUS Rounded 1c = Japana and Evraika
+Mitr = Thailandish
+Jura = Greek and Kyrillic
+Raleway = Rest
+**
+*/
+@import url('https://fonts.googleapis.com/css?family=Jura:300,400,500,600,700|M+PLUS+Rounded+1c:100,300,400,500,700,800|Mitr:200,300,400,500,600,700|Nanum+Gothic:400,700,800|Raleway:100,200,300,400,500,600,700,800,900&subset=cyrillic,cyrillic-ext,greek,greek-ext,hebrew,japanese,korean,latin-ext,thai,vietnamese');
+/* Old Fonts */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
 @import url('https://fonts.googleapis.com/css?family=Play:400,700&subset=cyrillic,cyrillic-ext,greek,latin-ext,vietnamese');
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:100,200,300,400,500,600,700,800,900&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese");
 
 :root {
 --background-image:url("headbg9.jpg");
@@ -23,7 +42,6 @@
 .theme-B {
 --background-image:url("headbg.jpg");
 --background-color:#54d9f8;
---link-color:134,4,152;
 --link-color:134,4,152;
 --content-bg:#ffecff;
 --dropdown-bg:#F6EFF9;
@@ -80,7 +98,7 @@ overflow:hidden!important;
 
 body {
 margin:8px auto 0;
-font-family:Open Sans, "Trebuchet MS", sans-serif;
+font-family:Source Sans Pro, "Trebuchet MS", "Prompt",  "M PLUS 1p", "Gothic A1", sans-serif;
 background-image:url("headbg.jpg");
 background-image:var(--background-image);
 background-color:#e995ca;
@@ -96,6 +114,23 @@ border-radius:1px; /* mInerva and some other browsers do not render local attach
 -ms-scroll-chaining:none;
     overscroll-behavior:none;
 }
+
+.main .system-font {
+font-family: system-ui, -qq-osfont, -apple-system, BlinkMacSystemFont, "Segoe UI", "MLS Sans", "MLSystem", "Roboto", "Oxygen", "Ubuntu", "Cantarell","Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif!important; /* MLS Sans must be above Oxygen and Roboto because Mpisto OS contains both fonts and can cause problems - MLSystem is for MLS Challenge and below - -qq-osfont is for Qorta Web 4-5 and mInerva 4.5-5.1 which works like system-ui but only on Windows - -apple-system and BlinkMacSystemFont are equilavant of system-ui only for Apple Mac Computers */
+}
+
+.main .rzz-font {
+font-family:Yu Gothic UI, Segoe UI, Ubuntu, Roboto, Droid Sans, Calibri, sans-serif!important; /* Use the set of given fonts and fallback to others if some of them don't exist and use sans otherwise */
+}
+
+.main .mob-font {
+font-family:Open Sans, "Trebuchet MS", sans-serif!important; /* Use the preloaded open sans font instead of the Source Sans Pro font */
+}
+
+.main .mob2-font {
+font-family:Fira Sans, "Verdana", sans-serif!important; /* Use the preloaded fira sans font instead of the Source Sans Pro font */
+}
+
 
 .mpisto-2018 {
 overflow-x:hidden!important;
@@ -159,7 +194,7 @@ h3.mobile-data a {
           transition-delay:0.05s;
   color:#18bbc5;
   color:rgba(var(--link-color), 1);
-  font-family:"Play", Jura, cursive;
+  font-family:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Nanum Gothic", cursive;
 }
 
 h3.mobile-data a:hover {
@@ -309,7 +344,7 @@ background-color:var(--button-color);
 box-shadow: 0 0 3px #000, 0 0 3px #fff;
 color:black;
 color:var(--button-color-text);
-font-family:"Open Sans", cursive;
+font-family:"Source Sans Pro", "Prompt",  "M PLUS 1p", "Gothic A1", cursive;
 -moz-box-sizing:content-box;
      box-sizing:content-box;
 z-index:100;
@@ -366,12 +401,12 @@ background-clip:border-box;
 		margin-top:45%;
 	}
 	.mpisto-global-navigation .link .mpisto-avatar {
-		border-radius:15%;
 		width:24px;
 		height:24px;
 		min-width:24px;
 		min-height:24px;
 		border-width:1px;
+		opacity:1;
 	}
 	.mpisto-global-navigation .link:hover, .mpisto-global-navigation .wds-dropdown:hover .link {
 		background-color:#03a1ab;
@@ -521,7 +556,7 @@ cursor:url("Windows/hand.cur"), pointer;
 
 
 label, input[type="checkbox"], input[type="radio"] {
-cursor:url("Windows/default.cur"), default;
+cursor:inherit;
 }
 
 a label, a input[type="checkbox"], a input[type="radio"] {
@@ -951,6 +986,10 @@ display:table;
        box-sizing:border-box;
   border:0;
   border-radius:50%;
+  background-blend-mode:normal;
+  width:28px;
+  height:28px;
+  opacity:1;
 }
 
 .notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child) a > .wrapper div {
@@ -966,7 +1005,7 @@ display:table;
   color:var(--content-color);
   text-decoration:none;
   margin:0;
-  font-family:"Play", Jura, cursive;
+  font-family:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Nanum Gothic", cursive;
 }
 
 .notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li.new a div h3 {
@@ -1099,7 +1138,7 @@ display:table;
   color:var(--content-color);
   text-decoration:none;
   margin:0;
-  font-family:"Play", Jura, cursive;
+  font-family:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Nanum Gothic", cursive;
 }
 
 .notification.wds-dropdown-level-2__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li.new a div h3 {
@@ -1167,7 +1206,7 @@ margin-left:9px;
 
 /* Time elements containing "~" */
 time:before, time:after {
-font-family:"Open Sans", serif;
+font-family:"Fira Sans", serif;
 }
 
 
@@ -1182,8 +1221,13 @@ margin-top:12px;
 width:28px;
 min-width:28px;
 height:28px;
-border:2px solid currentcolor;
-border-radius:1000px;
+border:1.25px solid currentcolor;
+background-blend-mode:soft-light;
+-webkit-box-decoration-break:clone;
+box-decoration-break:clone;
+border-radius:15%;
+opacity:0.99;
+-qq-imaage-flip:noflip; /* Avoid flipping images by some custom CSSes */
   image-rendering:initial;                  /* CSS4 Proposed  */
   -ms-interpolation-mode:bicubic;           /* IE8+           */
   -qq-image-blurring:tick;                  /* 4x4 Web 1-2    */
@@ -1191,18 +1235,19 @@ border-radius:1000px;
 
 .mpisto-avatar-group {
 position:relative;
-margin:8px 16px 4px 30px;
+margin:8px 20px 8px 20px;
 }
 
 .mpisto-avatar-group > .mpisto-avatar {
-  -moz-box-sizing:border-box;
-       box-sizing:border-box;
+  -moz-box-sizing:content-box;
+       box-sizing:content-box;
   z-index:auto;
   position:relative;
+  background-blend-mode:color-burn;
 }
 
 .mpisto-avatar-group > .mpisto-avatar:not(:first-child):not(:only-child) {
-  margin-left:-16px;
+  margin-left:-14px;
 }
 
 .wds-avatar{
@@ -1211,6 +1256,7 @@ min-width:28px;
 width:28px;
 border:2px solid currentColor;
 border-radius:50%;
+-qq-imaage-flip:noflip; /* Avoid flipping images by some custom CSSes */
   image-rendering:initial;                  /* CSS4 Proposed  */
   -ms-interpolation-mode:bicubic;           /* IE8+           */
   -qq-image-blurring:tick;                  /* 4x4 Web 1-2    */
@@ -2004,7 +2050,9 @@ text-align:right;
 	height:126px;
 	-moz-box-sizing:border-box;
 	     box-sizing:border-box;
-	border-width:6px;
+	border-width:5px;
+	opacity:1;
+	background-blend-mode:normal;
 }
 
 .mpisto-userpages-header .mpisto-profile-masthead {
@@ -2412,7 +2460,7 @@ border-top:2px solid var(--content-border);
 margin:30px 0 0;
 color:#fff;
 color:var(--dropdown-bg);
-font-family:"Open Sans", cursive;
+font-family:"Source Sans Pro", "Prompt",  "M PLUS 1p", "Gothic A1", cursive;
 position:relative;
 z-index:49;
 padding:0 0 22px;
@@ -2539,7 +2587,7 @@ footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container th h1 {
 /*
 font-weight:900;
 */
-font-family:"Play", Jura, cursive;
+font-family:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Nanum Gothic", cursive;
 font-weight:700;
 font-size:33px;
 display:inline;
@@ -3910,115 +3958,55 @@ text-align:center;
 
 .page-1 .mpisto-option-way.p1 {
 display:block;
+display:-webkit-flex;
+display:-moz-box;
+display:-ms-flexbox;
+display:flex;
 }
-
-.page-1 .mpisto-option-way.p2 {
-display:none;
-}
-
-.page-1 .mpisto-option-way.p3 {
-display:none;
-}
-
-.page-1 .mpisto-option-way.p4 {
-display:none;
-}
-
-.page-1 .mpisto-option-way.p5 {
-display:none;
-}
-
-
 .page-2 .mpisto-option-way.p2 {
 display:block;
+display:-webkit-flex;
+display:-moz-box;
+display:-ms-flexbox;
+display:flex;
 }
-
-.page-2 .mpisto-option-way.p1 {
-display:none;
-}
-
-.page-2 .mpisto-option-way.p3 {
-display:none;
-}
-
-.page-2 .mpisto-option-way.p4 {
-display:none;
-}
-
-.page-2 .mpisto-option-way.p5 {
-display:none;
-}
-
 .page-3 .mpisto-option-way.p3 {
 display:block;
+display:-webkit-flex;
+display:-moz-box;
+display:-ms-flexbox;
+display:flex;
 }
-
-.page-3 .mpisto-option-way.p1 {
-display:none;
-}
-
-.page-3 .mpisto-option-way.p2 {
-display:none;
-}
-
-.page-3 .mpisto-option-way.p4 {
-display:none;
-}
-
-.page-3 .mpisto-option-way.p5 {
-display:none;
-}
-
-
 .page-4 .mpisto-option-way.p4 {
 display:block;
+display:-webkit-flex;
+display:-moz-box;
+display:-ms-flexbox;
+display:flex;
 }
-
-.page-4 .mpisto-option-way.p1 {
-display:none;
-}
-
-.page-4 .mpisto-option-way.p3 {
-display:none;
-}
-
-.page-4 .mpisto-option-way.p2 {
-display:none;
-}
-
-.page-4 .mpisto-option-way.p5 {
-display:none;
-}
-
-
 .page-5 .mpisto-option-way.p5 {
 display:block;
-}
-
-.page-5 .mpisto-option-way.p1 {
-display:none;
-}
-
-.page-5 .mpisto-option-way.p3 {
-display:none;
-}
-
-.page-5 .mpisto-option-way.p2 {
-display:none;
-}
-
-.page-5 .mpisto-option-way.p4 {
-display:none;
+display:-webkit-flex;
+display:-moz-box;
+display:-ms-flexbox;
+display:flex;
 }
 
 
 .mpisto-option-way {
+    display:none;
+    -webkit-flex-direction:column;
+       -moz-box-orient:vertical;
+       -moz-box-direction:normal;
+        -ms-flex-direction:column;
+            flex-direction:column;
     position:relative;
     background-color:white;
     background-color:var(--content-bg);
     width:-webkit-calc(100% - 280px);
     width:calc(100% - 280px);
     font-size:15px;
+    
 }
 
 
@@ -4060,12 +4048,21 @@ height:calc(100vh - 139px);
   font-size:34px;
   font-weight:800;
   display:block;
+  display:-webkit-flex;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-align-items:center;
+     -moz-box-align:center;
+      -ms-flex-align:center;
+          align-items:center;
   padding:10px 0 6px 10px;
   margin:0;
   border-bottom:1px solid #ccc;
   border-bottom:1px solid var(--content-border);
   position:relative;
   z-index:1;
+  height:63px;
 }
 
 .mpisto-option-way h1::before {
@@ -4099,6 +4096,7 @@ height:calc(100vh - 139px);
 .mpisto-option-way h1 .toggle {
   color:inherit;
   display:none;
+  margin-right:6px;
 }
 
 
