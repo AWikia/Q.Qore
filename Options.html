@@ -217,16 +217,15 @@ document.getElementById("Handler").className += " mpisto-servers"
     <legend>Font Stack</legend>
     Font Family:
     <br>
-    <input type="radio" name="06" id="51" checked onclick="fontclear()"></input> <label for="51">Default</label>
+    <input type="radio" name="06" id="51" checked onclick="fontclear()"></input> <label for="51">Standard</label>
     <br>
-    <input type="radio" name="06" id="52" onclick="fontb()"></input> <label for="52">Ryneeeel Zekzphire Zentral</label>
+    <input type="radio" name="06" id="52" onclick="fontb()"></input> <label for="52">A Secure (Formerly Ryneeeel Zekzphire Zentral)</label>
     <br>
-    <input type="radio" name="06" id="53" onclick="fontc()"></input> <label for="53">Pre-Source Sans</label>
+    <input type="radio" name="06" id="53" onclick="fontc()"></input> <label for="53">Open Sans</label>
     <br>
-    <input type="radio" name="06" id="54" onclick="fontd()"></input> <label for="54">Pre-Open Sans</label>
+    <input type="radio" name="06" id="54" onclick="fontd()"></input> <label for="54">Fira Sans</label>
     <br>
-    <input type="radio" name="06" id="55" onclick="fonta()"></input> <label for="55">Operating System
-    </label>
+    <input type="radio" name="06" id="55" onclick="fonta()"></input> <label for="55">OS Standard</label>
     </fieldset>
     </div>
 
@@ -528,7 +527,7 @@ document.getElementById("Handler").className += " mpisto-servers"
     <br><br>
     <label>Background-image: (.png/.jpg/.gif needed, up to 480KB possible)</label>
     <br>
-    Current Background:<div class="options-preview" style="background-image:url('headbg.jpg'); background-image:var(--background-image);"></div>
+    Current Background:<div class="options-preview" style="background-image:url('headbg.jpg'); background-image:var(--background-image); background-size:contain; background-repeat:no-repeat; background-position:center;"></div>
     <div class="wds-dropdown upload-actions wds-no-chevron">
 		<div class="wds-floating-button">
 		<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
@@ -565,7 +564,7 @@ document.getElementById("Handler").className += " mpisto-servers"
     <br><br>
     <label>Header-image: (.png/.jpg/.gif needed, up to 480KB possible)</label>
     <br>
-    Current Graphic:<div class="options-preview" style="background-image:url('Graphic.png'); width:410px; height:100px; background-repeat:no-repeat; background-position:center; background-size:contain;"></div>
+    Current Graphic:<div class="options-preview" style="background-image:url('Graphic.png'); width:100%; max-width:410px; height:100px; background-repeat:no-repeat; background-position:center; background-size:contain;"></div>
     <div class="wds-dropdown upload-actions wds-no-chevron">
 		<div class="wds-floating-button">
 		<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
@@ -595,7 +594,7 @@ document.getElementById("Handler").className += " mpisto-servers"
     <br><br>
     <label>Header-wordmark: (.png needed, up to 600KB possible, up to 250 in width and 65 in height)</label>
     <br>
-    Current wordmark:<div class="options-preview" style="background-image:url('Wordmark.png'); width:250px; height:65px; background-repeat:no-repeat; background-position:center;"></div>
+    Current wordmark:<div class="options-preview" style="background-image:url('Wordmark.png'); width:100%; max-width:250px; background-size:contain; height:65px; background-repeat:no-repeat; background-position:center;"></div>
     <div class="wds-dropdown upload-actions wds-no-chevron">
 		<div class="wds-floating-button">
 		<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
