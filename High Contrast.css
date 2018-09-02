@@ -36,7 +36,7 @@ body:not(.contrast):not(.basic) .clearhighcontrastbutton.wds-button {
 }
 
 *,:before,:after {
-	transition-property:color,background-color,border-color,column-rule-color,outline-color,fill,text-shadow,box-shadow,visibility,display!important;
+	transition-property:color,background-color,border-color,column-rule-color,outline-color,fill,text-shadow,box-shadow,visibility,display, opacity!important;
 	animation:none!important;
 	-webkit-backdrop-filter:none!important;
 	backdrop-filter:none!important;
@@ -46,6 +46,11 @@ body:not(.contrast):not(.basic) .clearhighcontrastbutton.wds-button {
 
 .theme-portal .link.theme10, .theme-portal .link.theme11, .theme-portal .link.theme12, .theme-portal .link.theme13, .theme-portal .link.theme14, .theme-portal .link.theme15, .theme-portal .link.theme16 {
 	display:none!important
+}
+
+.mpisto-option-pane {
+top:0!important;
+filter:none!important;
 }
 }
 
@@ -58,7 +63,7 @@ body:not(.contrast):not(.basic) .clearhighcontrastbutton.wds-button {
 }
 
 .prm *,.prm :before,.prm :after, .prm {
-	transition-property:color,background-color,border-color,column-rule-color,outline-color,fill,text-shadow,box-shadow,visibility,display!important;
+	transition-property:color,background-color,border-color,column-rule-color,outline-color,fill,text-shadow,box-shadow,visibility,display, opacity!important;
 	animation:none!important;
 	-webkit-backdrop-filter:none!important;
 	backdrop-filter:none!important;
@@ -75,6 +80,10 @@ body:not(.contrast):not(.basic) .clearhighcontrastbutton.wds-button {
 	display:none!important
 }
 
+.prm .mpisto-option-pane {
+top:0!important;
+filter:none!important;
+}
 
 
 
