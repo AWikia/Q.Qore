@@ -25,6 +25,8 @@ These wrappers use the Desktop Skin also known as Mpistoskin2 or Mpisto War 2018
 [User Profile Masthead](https://awikia.github.io/Mpisto/Ryneeeel%20Grooze%20User.html)
 
 [Anon Interface](https://awikia.github.io/Mpisto/Ryneeeel%20Grooze%20(Anons).html)
+
+[Main Page (With Spotlight footer)](https://awikia.github.io/Mpisto/Ryneeeel%20Grooze%20(Spotlight).html)
 ### Desktop/Chat aka Mpistochat2
 These wrappers use the Desktop Skin also known as Mpistochat2 or Mpisto War 2018 Chatroom, powered by Mprilyiaano Services for Chatting:
 
