@@ -24,8 +24,8 @@
 --content-border:#ccc;
 --content-color:#010101;
 --button-color:#194cd1;
---button-color-dark:#0335B8;
---button-color-text:black;
+--button-color-dark:#3366EB;
+--button-color-text:white;
 --community-header-bg:153,153,255;
 --community-header-text:23,23,23;
 }
@@ -72,8 +72,8 @@
 --content-border:#ffdc87;
 --content-color:#2a4b6c;
 --button-color:#7AB247;
---button-color-dark:#96CC65;
---button-color-text:white;
+--button-color-dark:#60992D;
+--button-color-text:black;
 --community-header-bg:82,192,251;
 --community-header-text:23,23,23;
 }
@@ -123,7 +123,7 @@
 --button-color-dark:#6C7BAD;
 --button-color-text:white;
 --community-header-bg:25,161,95;
---community-header-text:248,248,248;
+--community-header-text:23,23,23;
 }
 
 /* Standard (V9) */
@@ -174,7 +174,7 @@
 --community-header-text:23,23,23;
 }
 
-/* Standard ~ */
+/* Standard (V12) */
 :root {
 --background-image:url("headbg9.jpg");
 --background-color:#ffddbb;
@@ -190,6 +190,22 @@
 --community-header-text:23,23,23;
 }
 
+/* Standard ~ */
+:root {
+--background-image:url("headbg9.jpg");
+--background-color:#ffddbb;
+--link-color:224,57,135;
+--content-bg:#f2c4b8;
+--dropdown-bg:#EFDCD8;
+--content-border:#9214da;
+--content-color:#700658;
+--button-color:#DC32CC;
+--button-color-dark:#C518B3;
+--button-color-text:black;
+--community-header-bg:248,56,169;
+--community-header-text:23,23,23;
+}
+
 /* Standard Gloved Version ~~ */
 :root {
 --background-image:url("headbg.jpg");
@@ -200,10 +216,10 @@
 --content-border:#ddf759;
 --content-color:#2a2a2a;
 --button-color:#70C800;
---button-color-dark:#88E216;
---button-color-text:white;
+--button-color-dark:#62AF00;
+--button-color-text:black;
 --community-header-bg:80,103,155;
---community-header-text:23,23,23;
+--community-header-text:248,248,248;
 }
 
 /* Standard Dark Version ~ */
@@ -264,8 +280,8 @@
 --content-border:#c9b991;
 --content-color:#2b2b2b;
 --button-color:#FE7E03;
---button-color-dark:#FF8C1C;
---button-color-text:white;
+--button-color-dark:#E57000;
+--button-color-text:black;
 --community-header-bg:161,119,79;
 --community-header-text:248,248,248;
 }
@@ -297,8 +313,8 @@
 --content-border:#aaaacc;
 --content-color:#f9f9f9;
 --button-color:#00699E;
---button-color-dark:#005884;
---button-color-text:black;
+--button-color-dark:#1280B7;
+--button-color-text:white;
 --community-header-bg:22,196,196;
 --community-header-text:23,23,23;
 }
@@ -332,7 +348,7 @@
 --button-color-dark:#03ACA2;
 --button-color-text:black;
 --community-header-bg:170,153,0;
---community-header-text:248,248,248;
+--community-header-text:23,23,23;
 }
 
 /* Sagent */
@@ -345,10 +361,10 @@
 --content-border:#eee;
 --content-color:#1a2a3a;
 --button-color:#FF7E09;
---button-color-dark:#FF8B22;
---button-color-text:white;
+--button-color-dark:#E66D00;
+--button-color-text:black;
 --community-header-bg:255,126,9;
---community-header-text:248,248,248;
+--community-header-text:23,23,23;
 }
 
 /* Flipin */
@@ -427,10 +443,10 @@
 --content-border:#00aaff;
 --content-color:#d9e9f9;
 --button-color:#32DC32;
---button-color-dark:#50F650;
---button-color-text:white;
+--button-color-dark:#18C318;
+--button-color-text:black;
 --community-header-bg:34,170,51;
---community-header-text:248,248,248;
+--community-header-text:23,23,23;
 }
 
 /* Brightness A */
@@ -558,7 +574,7 @@
 --button-color-dark:#E3C23E;
 --button-color-text:black;
 --community-header-bg:178,43,178;
---community-header-text:23,23,23;
+--community-header-text:248,248,248;
 }
 
 /* Grays ~ */
@@ -768,7 +784,7 @@
 --button-color-dark:#5C5C99;
 --button-color-text:white;
 --community-header-bg:0,0,204;
---community-header-text:23,23,23;
+--community-header-text:248,248,248;
 }
 
 /* Sharp X1 ~ */
@@ -800,7 +816,7 @@
 --button-color-dark:#BA936E;
 --button-color-text:white;
 --community-header-bg:112,200,0;
---community-header-text:248,248,248;
+--community-header-text:23,23,23;
 }
 
 /* Maxthon ~ */
@@ -848,7 +864,7 @@
 --button-color-dark:#FF5719;
 --button-color-text:white;
 --community-header-bg:50,205,50;
---community-header-text:248,248,248;
+--community-header-text:23,23,23;
 }
 
 /* PokeViews B */
