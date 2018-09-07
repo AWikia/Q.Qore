@@ -160,6 +160,10 @@ border-left-color:rgb(19,40,44);
 	color:white; /* Actually compiles to black by themedesigner but we need white for mobile skin to emulate fandom 2.0 default button styling */
 }
 
+.mpisto-gnav:after {
+	display:none;
+}
+
 .mpisto-global-navigation .link:hover, .mpisto-global-navigation .wds-dropdown:hover .link {
 	background-color:#007070;
 }
@@ -206,7 +210,7 @@ min-height:50px;
 background-color:#fff;
 margin:20px 0 0;
 /*font-family:Arial Nova, sans-serif;*/
-font-family:"Open Sans", cursive;
+font-family:"Source Sans Pro", "Prompt",  "M PLUS 1p", "Gothic A1", cursive;
 min-height:50px;
 color:inherit;
 }
