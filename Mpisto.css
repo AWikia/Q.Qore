@@ -125,6 +125,7 @@ body:after {
 	display:block;
 	content:"";
 	background:inherit;
+	background-attachment:fixed;
 	z-index:-1;
 }
 
@@ -392,8 +393,6 @@ background-clip:border-box;
 	background-color:blue;
 	background-color:rgb(var(--community-header-bg));
 	opacity:0.95;
-	-webkit-filter:invert(1) hue-rotate(180deg);
-	filter:invert(1) hue-rotate(180deg);
 	-webkit-backdrop-filter:invert(1) hue-rotate(180deg) saturate(1.1);
 	backdrop-filter:invert(1) hue-rotate(180deg) saturate(1.1);
 	z-index:-1;
