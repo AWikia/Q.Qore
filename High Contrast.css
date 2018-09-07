@@ -22,6 +22,10 @@ body:not(.contrast):not(.basic) .clearhighcontrastbutton.wds-button {
 }
 
 @media (prefers-reduced-motion: reduce) {
+.mpisto-gnav::after {
+	opacity:1;
+}
+
 .mpisto-options-content .reduced-motion {
 	display:block;
 }
@@ -40,8 +44,8 @@ body:not(.contrast):not(.basic) .clearhighcontrastbutton.wds-button {
 	animation:none!important;
 	-webkit-backdrop-filter:none!important;
 	backdrop-filter:none!important;
-	background-blend-mode:nomral!important;
-	mix-blend-mode:nomral!important;
+	background-blend-mode:normal!important;
+	mix-blend-mode:normal!important;
 }
 
 .theme-portal .link.theme10, .theme-portal .link.theme11, .theme-portal .link.theme12, .theme-portal .link.theme13, .theme-portal .link.theme14, .theme-portal .link.theme15, .theme-portal .link.theme16 {
@@ -53,6 +57,11 @@ top:0!important;
 filter:none!important;
 }
 }
+
+.prm .mpisto-gnav::after, .basic .mpisto-gnav::after, .contrast .mpisto-gnav::after {
+	opacity:1;
+}
+
 
 .prm .mpisto-options-content .reduced-motion {
 	display:block;
@@ -67,8 +76,8 @@ filter:none!important;
 	animation:none!important;
 	-webkit-backdrop-filter:none!important;
 	backdrop-filter:none!important;
-	background-blend-mode:nomral!important;
-	mix-blend-mode:nomral!important;
+	background-blend-mode:normal!important;
+	mix-blend-mode:normal!important;
 }
 
 .prm {
@@ -134,20 +143,25 @@ body:not(.contrast):not(.basic) .highcontrastbutton.wds-dropdown {
   filter:none!important;
   backdrop-filter:none!important;
   -webkit-backdrop-filter:none!important;
-	background-blend-mode:nomral!important;
-	mix-blend-mode:nomral!important;
+	background-blend-mode:normal!important;
+	mix-blend-mode:normal!important;
 }
 
-.basic *,.basic :before,.basic :after, [class*="filter"] *, [class*="filter"] :before, [class*="filter"] :after  {
+.basic *,.basic :before,.basic :after {
   -webkit-filter:none!important;
   filter:none!important;
   backdrop-filter:none!important;
   -webkit-backdrop-filter:none!important;
-	background-blend-mode:nomral!important;
+	mix-blend-mode:normal!important;
+}
+
+[class*="filter"] *, [class*="filter"] :before, [class*="filter"] :after  {
+  backdrop-filter:none!important;
+  -webkit-backdrop-filter:none!important;
 }
 
 
-.contrast :not(.wds-dropdown):not(.wds-community-header):not(time):not(.wds-list):not(input):before,.contrast :not(.wds-dropdown):not(.wds-community-header):not(.wds-list):not(.mpisto-article-wrapper):not(input):not(em):after, .basic header.mpisto-navbar:after, .basic footer.mpisto-footer:after, .basic header.mpisto-footer-container:after, .basic .mpisto-option-pane:after, .basic .mpisto-content:after, .basic .mpisto-option-way:after, .basic .theme-portal:after,.basic header.mpisto-navbar:before, .basic footer.mpisto-footer:before, .basic header.mpisto-footer-container:before, .basic .mpisto-option-pane:before, .basic .mpisto-content:before, .basic .mpisto-option-way:before, .basic .theme-portal:before  {
+.contrast :not(.wds-dropdown):not(.wds-community-header):not(time):not(.wds-list):not(input):before,.contrast :not(.wds-dropdown):not(.wds-community-header):not(.wds-list):not(.mpisto-article-wrapper):not(.mpisto-gnav):not(input):not(em):after, .basic header.mpisto-navbar:after, .basic footer.mpisto-footer:after, .basic header.mpisto-footer-container:after, .basic .mpisto-option-pane:after, .basic .mpisto-content:after, .basic .mpisto-option-way:after, .basic .theme-portal:after,.basic header.mpisto-navbar:before, .basic footer.mpisto-footer:before, .basic header.mpisto-footer-container:before, .basic .mpisto-option-pane:before, .basic .mpisto-content:before, .basic .mpisto-option-way:before, .basic .theme-portal:before  {
 display:none!important;
 }
 
@@ -170,43 +184,70 @@ display:none!important;
 .FilterA {
 -webkit-filter:saturate(0);
 filter:saturate(0);
--webkit-backdrop-filter:saturate(0);
-backdrop-filter:saturate(0)
 }
 
 .FilterB {
 -webkit-filter:saturate(0) invert(1) ;
 filter:saturate(0) invert(1) ;
--webkit-backdrop-filter:saturate(0) invert(1) ;
-backdrop-filter:saturate(0) invert(1) ;
 }
 
 .FilterC {
 -webkit-filter:invert(1) ;
 filter:invert(1) ;
--webkit-backdrop-filter:invert(1) ;
-backdrop-filter:invert(1) ;
 }
 
 .FilterD {
 -webkit-filter:invert(1) hue-rotate(181deg) brightness(0.9) saturate(1.4) contrast(1.15);
 filter:invert(1) hue-rotate(181deg) brightness(0.9) saturate(1.4) contrast(1.15);
--webkit-backdrop-filter:invert(1) hue-rotate(181deg) brightness(0.9) saturate(1.4) contrast(1.15);
-backdrop-filter:invert(1) hue-rotate(181deg) brightness(0.9) saturate(1.4) contrast(1.15);
 }
 
 .FilterE {
 -webkit-filter:brightness(0.9) saturate(1.4) contrast(1.15) hue-rotate(1deg);
 filter:brightness(0.9) saturate(1.4) contrast(1.15) hue-rotate(1deg);
--webkit-backdrop-filter:brightness(0.9) saturate(1.4) contrast(1.15) hue-rotate(1deg);
-backdrop-filter:brightness(0.9) saturate(1.4) contrast(1.15) hue-rotate(1deg);
 }
 
 .FilterF {
 -webkit-filter:sepia(1) hue-rotate(211deg) invert(1) brightness(0.9) saturate(1.4) contrast(1.15);
 filter:sepia(1) hue-rotate(211deg) invert(1)  brightness(0.9) saturate(1.4) contrast(1.15);
+}
+
+/* Edge and Safari fix */
+@supports (position:-ms-page) or (position:-webkit-sticky) {
+
+.FilterA {
+-webkit-backdrop-filter:saturate(0);
+backdrop-filter:saturate(0)
+}
+
+.FilterB {
+-webkit-backdrop-filter:saturate(0) invert(1) ;
+backdrop-filter:saturate(0) invert(1) ;
+}
+
+.FilterC {
+-webkit-backdrop-filter:invert(1) ;
+backdrop-filter:invert(1) ;
+}
+
+.FilterD {
+-webkit-backdrop-filter:invert(1) hue-rotate(181deg) brightness(0.9) saturate(1.4) contrast(1.15);
+backdrop-filter:invert(1) hue-rotate(181deg) brightness(0.9) saturate(1.4) contrast(1.15);
+}
+
+.FilterE {
+-webkit-backdrop-filter:brightness(0.9) saturate(1.4) contrast(1.15) hue-rotate(1deg);
+backdrop-filter:brightness(0.9) saturate(1.4) contrast(1.15) hue-rotate(1deg);
+}
+
+.FilterF {
 -webkit-backdrop-filter:sepia(1) hue-rotate(211deg) invert(1)  brightness(0.9) saturate(1.4) contrast(1.15);
 backdrop-filter:sepia(1) hue-rotate(211deg) invert(1) brightness(0.9) saturate(1.4) contrast(1.15);
+}
+
+
+body:after {
+	display:none!important;
+}
 }
 
 /* Header Buttons - Based on Win8-10 High Contrast titlebar button styling */
@@ -350,7 +391,7 @@ box-shadow:0 0 0px 1px var(--button-color-text)!important;
 }
 */
 
-.contrast .page-1 .option-link.p1, .contrast .page-2 .option-link.p2, .contrast .page-3 .option-link.p3, .contrast .page-4 .option-link.p4, .contrast .page-5 .option-link.p5  {
+.contrast .page-1 .option-link.p1, .contrast .page-2 .option-link.p2, .contrast .page-3 .option-link.p3, .contrast .page-4 .option-link.p4, .contrast .page-5 .option-link.p5, .contrast .page-6 .option-link.p6  {
   background-color:var(--button-color-text);
   border-color:var(--button-color);
   color:var(--button-color);
