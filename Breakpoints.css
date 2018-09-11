@@ -70,11 +70,12 @@ padding-right:24px;
 }
 */
 
-header.mpisto-navbar .mpisto-navbar-wrapper, header.mpisto-global-navigation .mpisto-global-navigation-wrapper {
+header.mpisto-navbar .mpisto-navbar-wrapper, header.mpisto-global-navigation .mpisto-global-navigation-wrapper,header.mpisto-footer-container > div  {
   width:100%;
   width:-webkit-calc(100% - 20px);
   width:calc(100% - 20px);
 }
+	
 
 /*.mpisto-content, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .lightbox, .mpisto-options-content {
 width:754px;
@@ -89,9 +90,7 @@ width:calc(754px - 72px);
 }
 
 
-header.mpisto-footer-container > div {
-  width:754px;
-}
+
 */
 footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container th.mpisto-footer-bar h3 {
 font-size:14px;
