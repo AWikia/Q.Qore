@@ -193,25 +193,25 @@ filter:saturate(0) invert(1) ;
 
 .FilterC {
 -webkit-filter:invert(1) ;
-filter:invert(1) ;
+filter:invert(1);
 (M)filter:invert(1) hue-rotate(180deg); /* mInerva bRowser also does and 180deg hue shift on invertion */
 }
 
 .FilterD {
--webkit-filter:invert(1) hue-rotate(181deg) brightness(0.9) saturate(1.4) contrast(1.15);
-filter:invert(1) hue-rotate(181deg) brightness(0.9) saturate(1.4) contrast(1.15);
-(M)filter:invert(1) hue-rotate(1deg) brightness(0.9) saturate(1.4) contrast(1.15); /* mInerva bRowser also does and 180deg hue shift on invertion */
+-webkit-filter:invert(1) hue-rotate(181deg) brightness(1.01) saturate(1.15) contrast(1.25) ;
+filter:invert(1) hue-rotate(181deg) brightness(1.01) saturate(1.15) contrast(1.25);
+(M)filter:invert(1) hue-rotate(1deg) brightness(1.01) saturate(1.15) contrast(1.25); /* mInerva bRowser also does and 180deg hue shift on invertion */
 }
 
 .FilterE {
--webkit-filter:brightness(0.9) saturate(1.4) contrast(1.15) hue-rotate(1deg);
-filter:brightness(0.9) saturate(1.4) contrast(1.15) hue-rotate(1deg);
+-webkit-filter:brightness(1.01) saturate(1.15) contrast(1.25) hue-rotate(1deg);
+filter:brightness(1.01) saturate(1.15) contrast(1.25) hue-rotate(1deg);
 }
 
 .FilterF {
--webkit-filter:sepia(1) hue-rotate(211deg) invert(1) brightness(0.9) saturate(1.4) contrast(1.15);
-filter:sepia(1) hue-rotate(211deg) invert(1)  brightness(0.9) saturate(1.4) contrast(1.15);
-(M)filter:sepia(1) hue-rotate(31deg) invert(1) brightness(0.9) saturate(1.4) contrast(1.15); /* mInerva bRowser also does and 180deg hue shift on invertion */
+-webkit-filter:sepia(1) hue-rotate(211deg) invert(1) brightness(1.01) saturate(1.15) contrast(1.25);
+filter:sepia(1) hue-rotate(211deg) invert(1) brightness(1.01) saturate(1.15) contrast(1.25);
+(M)filter:sepia(1) hue-rotate(31deg) invert(1) brightness(1.01) saturate(1.15) contrast(1.25); /* mInerva bRowser also does and 180deg hue shift on invertion */
 }
 
 /* Edge and Safari fix */
