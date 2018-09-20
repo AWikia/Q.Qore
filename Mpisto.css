@@ -21,10 +21,17 @@ Raleway = Rest
 @import url('https://fonts.googleapis.com/css?family=Jura:300,400,500,600,700|M+PLUS+Rounded+1c:100,300,400,500,700,800|Mitr:200,300,400,500,600,700|Nanum+Gothic:400,700,800|Raleway:100,200,300,400,500,600,700,800,900&subset=cyrillic,cyrillic-ext,greek,greek-ext,hebrew,japanese,korean,latin-ext,thai,vietnamese');
 /* Arniki Forniki and MpistoMobile2 */
 @import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900&subset=cyrillic,hebrew,latin-ext');
+/* Misc */
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&subset=latin-ext');
 /* Old Fonts */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
 @import url('https://fonts.googleapis.com/css?family=Play:400,700&subset=cyrillic,cyrillic-ext,greek,latin-ext,vietnamese');
 @import url("https://fonts.googleapis.com/css?family=Fira+Sans:100,200,300,400,500,600,700,800,900&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese");
+
+@font-face {
+    font-family: LCD;
+    src: url('https://images.wikia.nocookie.net/__cb20161004075228/24wikia/images/d/db/LCD_ITC-Normal.otf') format('opentype'),url('https://images.wikia.nocookie.net/__cb20161004075229/24wikia/images/a/a5/LCD_ITC-Normal.woff') format('woff'),url('https://images.wikia.nocookie.net/__cb20161004075228/24wikia/images/1/1e/LCD_ITC-N0ormal.ttf') format('truetype')
+}
 
 :root {
 --background-image:url("headbg9.jpg");
@@ -159,6 +166,10 @@ font-family:Rubik, "Arial", sans-serif!important; /* Uses Rubik Font */
 font-family:Gabriela, Microsoft Sans Serif, Futura,"Arial", sans-serif!important; /* Uses a font stack suitable for High Contrast Mode */
 }
 
+.main .mob5-font {
+font-family:Lato, Carlito, "Verdana", sans-serif!important; /* Uses a font stack suitable for High Contrast Mode */
+}
+
 .mpisto-2018 {
 overflow-x:hidden!important;
 }
@@ -194,7 +205,6 @@ font-family:inherit;
 text-shadow:none;
 /* mInerva Specific Code */
 (M)-webkit-user-select:all;
-
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -255,6 +265,10 @@ cursor:url("Windows/banned.cur"),not-allowed!important;
 
 textarea, [contenteditable] {
   cursor:url("Windows/text.cur"), text;
+}
+
+input[type="datetime-local"], input[type="date"], input[type="time"], input[type="week"], input[type="month"], input[type="year"] { /* Year is non-standard Qorta/mInerva input type */
+font-family:"LCD", monospace;
 }
 
 textarea {
@@ -414,11 +428,11 @@ background-clip:border-box;
 	content:"";
 	background-color:blue;
 	background-color:rgb(var(--community-header-bg));
-	opacity:0.95;
-	-webkit-backdrop-filter:invert(1) hue-rotate(180deg) saturate(1.1);
-	backdrop-filter:invert(1) hue-rotate(180deg) saturate(1.1);
-	(M)-webkit-backdrop-filter:invert(1) saturate(1.1);
-	(M)backdrop-filter:invert(1) saturate(1.1);
+	opacity:0.9;
+	-webkit-backdrop-filter:invert(1) hue-rotate(180deg) saturate(1.2) blur(7px);
+	backdrop-filter:invert(1) hue-rotate(180deg) saturate(1.2) blur(7px);
+	(M)-webkit-backdrop-filter:invert(1) saturate(1.2) blur(7px);
+	(M)backdrop-filter:invert(1) saturate(1.2) blur(7px);
 	z-index:-1;
 }
 
@@ -432,7 +446,7 @@ background-clip:border-box;
 	}
 	.mpisto-global-navigation-wrapper {
 		margin:0 auto;
-		width:1118px;
+		width:1066px;
 	}
 	.mpisto-global-navigation .link {
 		-webkit-transition:all 400ms ease;
@@ -557,7 +571,7 @@ position:relative;
 
 header.mpisto-navbar .mpisto-navbar-wrapper {
 margin:0 auto;
-width:1118px;
+width:1066px;
 display:-webkit-box;
 display:-webkit-flex;
 display:-ms-flexbox;
@@ -668,6 +682,9 @@ label {
 	display:inline;
 	font-size:20px;
 	background:transparent;
+	-webkit-transition:background-color 50ms;
+	-o-transition:background-color 50ms;
+	transition:background-color 50ms;
 }
 
 .wds-dropdown__content .wds-list label {
@@ -689,6 +706,13 @@ background-color:rgba(var(--link-color), 0.65);
 mark * {
 color:inherit;
 }
+
+input[type="checkbox"] + label:active, input[type="radio"] + label:active,
+input[type="checkbox"]:active + label, input[type="radio"]:active + label {
+background-color:rgba(24,187,197, 0.65);
+background-color:rgba(var(--link-color), 0.65);
+}
+
 
 header.mpisto-navbar .link {
 /*color:var(--content-color);
@@ -1963,7 +1987,7 @@ border-color:var(--content-border);
 .main .wds-dropdown__content .wds-list.wds-is-linked .wds-dropdown-level-2 .wds-dropdown-level-2__content{background-color:var(--dropdown-bg);border:1px solid var(--content-border);-webkit-box-shadow:0 2px 6px 0 rgba(0,0,0,.2), 0 2px 6px 0 rgba(255,255,255,0.2);box-shadow:0 2px 6px 0 rgba(0,0,0,.2), 0 2px 6px 0 rgba(255,255,255,0.2);
 }
 
-.wds-community-header{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;background-position:right center;background-repeat:no-repeat;-o-background-size:contain;background-size:contain;height:105px;position:relative;z-index:1}@media only screen and (max-width:1151px){.wds-community-header{height:115px}}.wds-community-header::before{content:'';display:block;height:100%;position:absolute;width:100%;z-index:-1}.wds-community-header__wordmark{float:left;height:65px;margin:20px 0 20px 20px;max-width:250px;width:auto}.wds-community-header__wordmark img{height:auto;max-height:100%;max-width:100%;width:auto}@media only screen and (max-width:1151px){.wds-community-header__wordmark{height:49px;margin-bottom:0;max-width:175px}}.wds-community-header__top-container{display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:flex;height:59px}.wds-community-header__sitename{-ms-flex:1;-webkit-box-flex:1;-webkit-flex:1;flex:1;font-size:28px;font-weight:600;line-height:1;margin:25px 0 0 18px;overflow:hidden}.wds-community-header__sitename a{text-decoration:none}@media only screen and (max-width:1151px){.wds-community-header__top-container{height:69px}.wds-community-header__sitename{font-size:24px;margin-top:20px;max-height:72px;white-space:normal;word-wrap:break-word}}@media only screen and (min-width:1152px){.wds-community-header__sitename a{display:inline-block;height:100%;line-height:1.2;text-decoration:none}.wds-community-header__sitename{-o-text-overflow:ellipsis;text-overflow:ellipsis;white-space:nowrap}}.wds-community-header__counter{font-weight:600;text-align:right;margin:17px 0 20px 20px}.wds-community-header__counter-value{display:block;font-size:24px;line-height:1}@media only screen and (max-width:1151px){.wds-community-header__counter{margin-top:22px}.wds-community-header__counter-value{font-size:18px}}.wds-community-header__counter-label{display:block;font-size:12px;line-height:1;margin-top:3px;text-transform:uppercase}.wds-community-header__wiki-buttons{margin:20px 20px auto 15px}.wds-community-header__local-navigation{display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:flex;height:46px;padding-left:6px}.wds-community-header__local-navigation a[href="#"]{cursor:url("Windows/default.cur"), default;}.wds-community-header__local-navigation .wds-dropdown__toggle-chevron{opacity:.5}.wds-community-header__local-navigation .wds-dropdown:hover .wds-dropdown__toggle-chevron{opacity:1}@media only screen and (max-width:1151px){.wds-community-header__counter-label{font-size:10px}.wds-community-header__local-navigation{clear:both}}@media only screen and (max-width:1023px){.wds-community-header__local-navigation .wds-tabs__tab-label{font-size:10px}}
+.wds-community-header{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;background-position:right center;background-repeat:no-repeat;-o-background-size:contain;background-size:contain;height:105px;position:relative;z-index:1}@media only screen and (max-width:1099px){.wds-community-header{height:115px}}.wds-community-header::before{content:'';display:block;height:100%;position:absolute;width:100%;z-index:-1}.wds-community-header__wordmark{float:left;height:65px;margin:20px 0 20px 20px;max-width:250px;width:auto}.wds-community-header__wordmark img{height:auto;max-height:100%;max-width:100%;width:auto}@media only screen and (max-width:1099px){.wds-community-header__wordmark{height:49px;margin-bottom:0;max-width:175px}}.wds-community-header__top-container{display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:flex;height:59px}.wds-community-header__sitename{-ms-flex:1;-webkit-box-flex:1;-webkit-flex:1;flex:1;font-size:28px;font-weight:600;line-height:1;margin:25px 0 0 18px;overflow:hidden}.wds-community-header__sitename a{text-decoration:none}@media only screen and (max-width:1099px){.wds-community-header__top-container{height:69px}.wds-community-header__sitename{font-size:24px;margin-top:20px;max-height:72px;white-space:normal;word-wrap:break-word}}@media only screen and (min-width:1100px){.wds-community-header__sitename a{display:inline-block;height:100%;line-height:1.2;text-decoration:none}.wds-community-header__sitename{-o-text-overflow:ellipsis;text-overflow:ellipsis;white-space:nowrap}}.wds-community-header__counter{font-weight:600;text-align:right;margin:17px 0 20px 20px}.wds-community-header__counter-value{display:block;font-size:24px;line-height:1}@media only screen and (max-width:1099px){.wds-community-header__counter{margin-top:22px}.wds-community-header__counter-value{font-size:18px}}.wds-community-header__counter-label{display:block;font-size:12px;line-height:1;margin-top:3px;text-transform:uppercase}.wds-community-header__wiki-buttons{margin:20px 20px auto 15px}.wds-community-header__local-navigation{display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:flex;height:46px;padding-left:6px}.wds-community-header__local-navigation a[href="#"]{cursor:url("Windows/default.cur"), default;}.wds-community-header__local-navigation .wds-dropdown__toggle-chevron{opacity:.5}.wds-community-header__local-navigation .wds-dropdown:hover .wds-dropdown__toggle-chevron{opacity:1}@media only screen and (max-width:1099px){.wds-community-header__counter-label{font-size:10px}.wds-community-header__local-navigation{clear:both}}@media only screen and (max-width:959px){.wds-community-header__local-navigation .wds-tabs__tab-label{font-size:10px}}
 /* Tabs */
 .wds-tabs{-ms-flex-align:end;-webkit-box-align:end;-webkit-align-items:flex-end;align-items:flex-end;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:flex;list-style:none;margin:0;padding:0}
 
@@ -2008,8 +2032,8 @@ background-image:linear-gradient(to left,rgba(0,0,255, 0) 200px,rgb(0,0,255) 430
 background-image:-webkit-linear-gradient(right,rgba(var(--community-header-bg), 0) 200px,rgb(var(--community-header-bg)) 430px), -webkit-linear-gradient(right,rgba(var(--community-header-text),0) 200px,rgb(var(--community-header-text)) 430px);
 background-image:-o-linear-gradient(right,rgba(var(--community-header-bg), 0) 200px,rgb(var(--community-header-bg)) 430px), -o-linear-gradient(right,rgba(var(--community-header-text),0) 200px,rgb(var(--community-header-text)) 430px);
 background-image:linear-gradient(to left,rgba(var(--community-header-bg), 0) 200px,rgb(var(--community-header-bg)) 430px), linear-gradient(to left,rgba(var(--community-header-text),0) 200px,rgb(var(--community-header-text)) 430px);
--webkit-backdrop-filter:blur(3px) brightness(0.9) saturate(1.4) contrast(1.15) hue-rotate(1deg);
-backdrop-filter:blur(3px) brightness(0.9) saturate(1.4) contrast(1.15) hue-rotate(1deg);
+-webkit-backdrop-filter:blur(3px) brightness(1.01) saturate(1.15) contrast(1.25) hue-rotate(1deg);
+backdrop-filter:blur(3px) brightness(1.01) saturate(1.15) contrast(1.25) hue-rotate(1deg);
 border-radius:inherit;
 }
 
@@ -2085,9 +2109,7 @@ border-left-color:rgba(var(--community-header-text),0.8);
 
 
 .mpisto-content {
-  width:1118px;
-  width:-webkit-calc(1118px - 36px);
-  width:calc(1118px - 36px);
+  width:1066px;
 /*  background-color:white;
   background-color:var(--content-bg);
 */  min-height:50px;
@@ -2918,6 +2940,46 @@ padding-bottom:4px;
 font-weight:bold;
 }
 
+input[type="number"] {
+	border-radius:10px;
+	color:#040404;
+	background-color:#fdfdfd;
+	-webkit-box-shadow:inset 0 2px #d4d5d5;
+	        box-shadow:inset 0 2px #d4d5d5;
+	border-color:#1a1a1a;
+	border-style:solid;
+	font-family:"LCD", Clockopia, monospace;
+	font-size:12px;
+}
+
+input[type="number"]::-ms-input-placeholder {
+	font-family:Arial, Liberation Sans, sans-seirf;
+}
+
+
+
+input[type="number"]:-ms-input-placeholder {
+	font-family:Arial, Liberation Sans, sans-seirf;
+}
+
+
+input[type="number"]::-placeholder {
+	font-family:Arial, Liberation Sans, sans-seirf;
+}
+
+
+input[type="number"]:placeholder-shown {
+	font-family:Arial, Liberation Sans, sans-seirf;
+}
+
+/* Hide Spin buttons from number input type */
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
 .mpisto-input {
 font-family:inherit;
@@ -3078,9 +3140,7 @@ border:1px solid #ccc;
 border:1px solid var(--content-border);
 border-top-style:hidden;
 border-bottom-style:hidden;
-width:1118px;
-width:-webkit-calc(1118px - 72px);
-width:calc(1118px - 72px);
+width:1066px;
 border-spacing:0;
 margin:0 auto;
 color:inherit;
@@ -3978,7 +4038,7 @@ header.mpisto-footer-container:hover, .mpisto-servers header.mpisto-footer-conta
 }
 
 header.mpisto-footer-container > div {
-  width:1118px;
+  width:1066px;
   height:22px;
   position:relative;
   display:-webkit-box;
@@ -4110,9 +4170,7 @@ padding-bottom:34px;
 }
 
 .mpisto-editors-content {
-  width:1118px;
-  width:-webkit-calc(1118px - 36px);
-  width:calc(1118px - 36px);
+  width:1066px;
   border:1px solid #ccc;
   border:1px solid var(--content-border);
   border-top:0;
@@ -4323,8 +4381,7 @@ list-style:none!important;
 /*
   color:rgb(248,248,248);
   color:rgb(var(--community-header-text));
-  width:1118px;
-  width:calc(1118px - 36px);
+  width:1066px;
   */
   padding:0.9px 9px;
   display:-webkit-box;
@@ -4605,9 +4662,7 @@ padding:21.5px;
 
 .mpisto-options-content {
 padding:0;
-width:1118px;
-width:-webkit-calc(1118px - 36px);
-width:calc(1118px - 36px);
+width:1066px;
 border:1px solid #ccc;
 border:1px solid var(--content-border);
 border-top:0;
@@ -5038,7 +5093,7 @@ vertical-align:middle;
 	        flex:1;
 }
 
-@media only screen and (max-width:559px), (min-width:800px) and (max-width:804px) {
+@media only screen and (max-width:574px){
 .mpisto-option-way .store-cards{
 	-webkit-box-orient:vertical;
 	-webkit-box-direction:normal;
@@ -5453,9 +5508,7 @@ border:1px solid currentColor;
   background-color:#fff;
   background-color:var(--content-bg);
   min-height:200px;
-  width:1118px;
-  width:-webkit-calc(1118px - 72px);
-  width:calc(1118px - 72px);
+  width:1066px;
   border-radius:12px;
 	-webkit-box-shadow:0 2px 2px #ccc, 0 0 6px -1px #000, 0 0 10px -0.5px #fff;
 	        box-shadow:0 2px 2px #ccc, 0 0 6px -1px #000, 0 0 10px -0.5px #fff;
@@ -6342,4 +6395,4 @@ cursor:url("Lenux/hand.cur"), pointer;
 	-moz-text-size-adjust:100%;
 	-ms-text-size-adjust:100%;
 	    text-size-adjust:100%;
-}
+} 
