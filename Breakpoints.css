@@ -1,22 +1,15 @@
 /** Breakpoints for mpisto Zekzphire **/
 /* S */
-@media only screen and (max-width:1023px) {
+@media only screen and (max-width:959px) {
 /*.mpisto-grooze {
 display:inline!important;
 }*/
 .mpisto-content, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .lightbox, .mpisto-options-content {
-width:100%!important;
+  width:100%!important;
+  width:-webkit-calc(100% - 34px)!important;
+  width:calc(100% - 34px)!important;
 }
 
-.mpisto-content, .mpisto-editors-content, .lightbox, .mpisto-options-content {
-width:-webkit-calc(100% - 36px)!important;
-width:calc(100% - 36px)!important;
-}
-
-footer.mpisto-footer .mpisto-wrapper, .lightbox {
-width:-webkit-calc(100% - 72px)!important;
-width:calc(100% - 72px)!important;
-}
 
 
 .mpisto-option-way h1 {
@@ -72,8 +65,8 @@ padding-right:24px;
 
 header.mpisto-navbar .mpisto-navbar-wrapper, header.mpisto-global-navigation .mpisto-global-navigation-wrapper, header.mpisto-footer-container > div  {
   width:100%;
-  width:-webkit-calc(100% - 20px);
-  width:calc(100% - 20px);
+  width:-webkit-calc(100% - 34px);
+  width:calc(100% - 34px);
 }
 
 /*.mpisto-content, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .lightbox, .mpisto-options-content {
@@ -170,10 +163,6 @@ width:100%;
 	width:100%!important;
 }
 
-}
-
-/* Single-pane Options */
-@media only screen and (max-width:799px){
 .mpisto-option-pane {
 width:100%;
 overflow-x:auto;
@@ -289,8 +278,8 @@ padding:4px;
 }
 }
 
-/* Smaller Text for 600-959 pixel screens */
-@media only screen and (min-width:800px) and (max-width:959px) { /* min-width was 700 */
+/* Smaller Text for 600-959 pixel screens 
+@media only screen and (min-width:800px) and (max-width:959px) {
 .mpisto-option-pane {
 	padding:8px;
 	width:252px;
@@ -301,7 +290,6 @@ padding:4px;
 }
 
 .mpisto-option-way {
-	width:-webkit-calc(100% - 252px);
 	width:calc(100% - 252px);
 }
 
@@ -334,6 +322,7 @@ padding:14px 3.5px;
 }
 
 }
+*/
 
 /*@media only screen and (min-width:640px) and (max-width:699px) {
 .mpisto-option-pane {
@@ -380,7 +369,7 @@ padding:12px 3px;
 */
 
 /* M */
-@media only screen and (min-width:1024px) and (max-width:1151px) {
+@media only screen and (min-width:960px) and (max-width:1099px) {
 /*.mpisto-content {
 padding-left:10px;
 padding-right:10px;
@@ -388,21 +377,11 @@ padding-right:10px;
 */
 
 .mpisto-content, header.mpisto-navbar .mpisto-navbar-wrapper, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .lightbox, .mpisto-options-content, header.mpisto-global-navigation .mpisto-global-navigation-wrapper {
-width:988px;
+width:926px;
 }
 
 header.mpisto-footer-container > div {
-  width:988px;
-}
-
-.mpisto-content, .mpisto-editors-content, .mpisto-options-content {
-width:-webkit-calc(988px - 36px);
-width:calc(988px - 36px);
-}
-
-footer.mpisto-footer .mpisto-wrapper, .lightbox {
-width:-webkit-calc(988px - 72px);
-width:calc(988px - 72px);
+  width:926px;
 }
 
 
@@ -417,7 +396,7 @@ width:calc(988px - 72px);
 }
 
 /* S + M */
-@media only screen and (max-width:1151px) {
+@media only screen and (max-width:1099px) {
 footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container td h2 {
 font-size:20px;
 }
@@ -450,7 +429,7 @@ font-size:28px;
 
 
 /* XL */
-@media only screen and (min-width:1500px) and (max-width:1719px) {
+@media only screen and (min-width:1400px) and (max-width:1599px) {
 /*.mpisto-content {
 padding-left:30px;
 padding-right:30px;
@@ -458,22 +437,13 @@ padding-right:30px;
 */
 
 .mpisto-content, header.mpisto-navbar .mpisto-navbar-wrapper, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .mpisto-options-content, .lightbox, header.mpisto-global-navigation .mpisto-global-navigation-wrapper {
-width:1246px;
+width:1146px;
 }
 
 header.mpisto-footer-container > div {
-  width:1246px;
+  width:1146px;
 }
 
-.mpisto-content, .mpisto-editors-content {
-width:-webkit-calc(1246px - 36px);
-width:calc(1246px - 36px);
-}
-
-footer.mpisto-footer .mpisto-wrapper, .lightbox {
-width:-webkit-calc(1246px - 72px);
-width:calc(1246px - 72px);
-}
 
 
 .mpisto-article h1 {
@@ -504,7 +474,7 @@ font-size:18px;
 }
 
 /* XXL */
-@media only screen and (min-width:1720px) {
+@media only screen and (min-width:1600px) {
 /*.mpisto-content {
 padding-left:30px;
 padding-right:30px;
@@ -512,21 +482,11 @@ padding-right:30px;
 */
 
 .mpisto-content, header.mpisto-navbar .mpisto-navbar-wrapper, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .mpisto-options-content, .lightbox, header.mpisto-global-navigation .mpisto-global-navigation-wrapper {
-width:1466px;
+width:1346px;
 }
 
 header.mpisto-footer-container > div {
-  width:1466px;
-}
-
-.mpisto-content, .mpisto-editors-content {
-width:-webkit-calc(1466px - 36px);
-width:calc(1466px - 36px);
-}
-
-footer.mpisto-footer .mpisto-wrapper, .lightbox {
-width:-webkit-calc(1466px - 72px);
-width:calc(1466px - 72px);
+  width:1346px;
 }
 
 
@@ -568,7 +528,7 @@ font-size:19px;
 
 
 /* XL + XXL */
-@media only screen and (min-width:1500px) {
+@media only screen and (min-width:1400px) {
 footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container th h1 {
 font-size:40px;
 }
