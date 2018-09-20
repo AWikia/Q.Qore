@@ -45,8 +45,8 @@ Internet Explorer 11 (Not Recommended however most features that depend on CSS v
 
 Edge 15 (Not Recommended due to bugs in CSS variables), Edge 16+ (Recommended)
 
-Chrome 49 - 54 (Not Recommended), Chrome 55+ (Most Recommended Browser)
+Chrome 49 - 58 (Not Recommended), Chrome 59+ (Most Recommended Browser)
 
-Firefox 31 - 49 (Not Recommended), Firefox 50+ (May Sometimes not recommended but still useful)
+Firefox 31 - 53 (Not Recommended), Firefox 54+ (May Sometimes not recommended but still useful)
 
 Safari 9.1 (Not Recommended), Safari 10+ (Recommended)
