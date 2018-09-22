@@ -254,14 +254,14 @@ body:after {
 }
 
 /* Header Buttons - Based on Win8-10 High Contrast titlebar button styling */
-.main .contrast .wds-community-header .wds-button.wds-is-secondary {
+.main .contrast .wds-community-header .wds-button.wds-is-secondary, .contrast .lightbox h1 .wds-button.wds-is-square {
   background-color:var(--content-bg);
   color:var(--content-color);
   border-color:transparent!important;
-  background-clip:padding-box;
+  background-clip:padding-box!important;
 }
 
-.main .contrast .wds-community-header .wds-button.wds-is-secondary:hover {
+.main .contrast .wds-community-header .wds-button.wds-is-secondary:hover, .contrast .lightbox h1 .wds-button.wds-is-square:hover {
   background-color:var(--button-color);
   color:var(--button-color-text);
   border-color:currentcolor!important;
@@ -338,7 +338,7 @@ background-color:var(--button-color);
 }
 
 
-.contrast .mpisto-module h2, .contrast .lightbox h1, .contrast .lightbox h2, .contrast .lightbox footer, .contrast .mpisto-module .buttons {
+.contrast .mpisto-module h2, /*.contrast .lightbox h1,*/ .contrast .lightbox h2, /*.contrast .lightbox footer*/, .contrast .mpisto-module .buttons {
   background-color:rgb(var(--community-header-bg));
   color:rgb(var(--community-header-text));
   z-index:initial;
@@ -361,7 +361,16 @@ background-color:var(--dropdown-bg);
 .main .contrast .wds-banner-notification__container{box-shadow:0 2px 0 2px rgba(0,0,0,.2), 0 2px 0 2px rgba(255,255,255,0.2)!important;}
 
 /* Modules */
-.contrast .mpisto-module, .contrast .lightbox {
+.contrast .lightbox {
+	border-color:rgb(var(--community-header-text));
+	background-color:rgb(var(--community-header-bg));
+}
+
+
+.contrast .lightbox .footer {
+	border-color:var(--content-color);
+}
+.contrast .mpisto-module {
 box-shadow:0 0 0 3px var(--content-border)!important;
 }
 
@@ -428,7 +437,7 @@ color:inherit;
 }
 
 /* Lightbox button stylings. Based on Community Header button theming on non-contrast modes */
-.contrast .mpisto-module .buttons .wds-button, .contrast .lightbox h1 .wds-button, .contrast .lightbox h2 .wds-button, .contrast .lightbox footer .wds-button  {
+.contrast .mpisto-module .buttons .wds-button, /*.contrast .lightbox h1 .wds-button, */.contrast .lightbox h2 .wds-button, /*.contrast .lightbox footer .wds-button*/  {
 background-color:rgb(var(--community-header-text));
 color:rgb(var(--community-header-bg));
 border-color:rgb(var(--community-header-text));
@@ -436,33 +445,33 @@ border-color:rgb(var(--community-header-text));
 background-clip:padding-box;
 }
 
-.contrast .lightbox h1 .wds-button:hover, .contrast .lightbox h2 .wds-button:hover, .contrast .lightbox footer .wds-button:hover, .contrast .mpisto-module .buttons .wds-button:hover  {
+/*.contrast .lightbox h1 .wds-button:hover,*/ .contrast .lightbox h2 .wds-button:hover, /*.contrast .lightbox footer .wds-button:hover,*/ .contrast .mpisto-module .buttons .wds-button:hover  {
 background-color:rgba(var(--community-header-text), 0.8);
 color:rgb(var(--community-header-bg));
 border-color:rgba(var(--community-header-text), 0.8);
 }
 
 
-.contrast .lightbox h1 .wds-button.wds-is-secondary, .contrast .lightbox h2 .wds-button.wds-is-secondary, .contrast .lightbox footer .wds-button.wds-is-secondary, .contrast .mpisto-module .buttons .wds-button.wds-is-secondary  {
+/*.contrast .lightbox h1 .wds-button.wds-is-secondary,*/ .contrast .lightbox h2 .wds-button.wds-is-secondary, /*.contrast .lightbox footer .wds-button.wds-is-secondary,*/ .contrast .mpisto-module .buttons .wds-button.wds-is-secondary  {
 color:rgb(var(--community-header-text));
 background-color:transparent;
 border-color:rgb(var(--community-header-text));
 }
 
-.contrast .lightbox h1 .wds-button.wds-is-secondary:hover, .contrast .lightbox h2 .wds-button.wds-is-secondary:hover, .contrast .lightbox footer .wds-button.wds-is-secondary:hover, .contrast .mpisto-module .buttons .wds-button.wds-is-secondary:hover {
+/*.contrast .lightbox h1 .wds-button.wds-is-secondary:hover,*/ .contrast .lightbox h2 .wds-button.wds-is-secondary:hover, /*.contrast .lightbox footer .wds-button.wds-is-secondary:hover,*/ .contrast .mpisto-module .buttons .wds-button.wds-is-secondary:hover {
 color:rgba(var(--community-header-text), 0.8);
 background-color:transparent;
 border-color:rgba(var(--community-header-text), 0.8);
 }
 
 
-.contrast .lightbox h1 .wds-button.wds-is-text, .contrast .lightbox h2 .wds-button.wds-is-text, .contrast .lightbox footer .wds-button.wds-is-text, .contrast .mpisto-module .buttons .wds-button.wds-is-text  {
+/*.contrast .lightbox h1 .wds-button.wds-is-text,*/ .contrast .lightbox h2 .wds-button.wds-is-text, /*.contrast .lightbox footer .wds-button.wds-is-text,*/ .contrast .mpisto-module .buttons .wds-button.wds-is-text  {
 color:rgb(var(--community-header-text));
 background-color:transparent;
 border:0;
 }
 
-.contrast .lightbox h1 .wds-button.wds-is-text:hover, .contrast .lightbox h2 .wds-button.wds-is-text:hover, .contrast .lightbox footer .wds-button.wds-is-text:hover, .contrast .mpisto-module .buttons .wds-button.wds-is-text:hover {
+/*.contrast .lightbox h1 .wds-button.wds-is-text:hover,*/ /*.contrast .lightbox h2 .wds-button.wds-is-text:hover,*/ .contrast .lightbox footer .wds-button.wds-is-text:hover, .contrast .mpisto-module .buttons .wds-button.wds-is-text:hover {
 color:rgba(var(--community-header-text), 0.8);
 background-color:transparent;
 border:0;
