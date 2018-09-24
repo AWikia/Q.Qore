@@ -338,7 +338,7 @@ background-color:var(--button-color);
 }
 
 
-.contrast .mpisto-module h2, /*.contrast .lightbox h1,*/ .contrast .lightbox h2, /*.contrast .lightbox footer*/, .contrast .mpisto-module .buttons {
+.contrast .mpisto-module h2, /*.contrast .lightbox h1,*/ .contrast .lightbox h2, /*.contrast .lightbox footer,*/ .contrast .mpisto-module .buttons {
   background-color:rgb(var(--community-header-bg));
   color:rgb(var(--community-header-text));
   z-index:initial;
