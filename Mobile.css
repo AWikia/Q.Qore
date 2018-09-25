@@ -678,7 +678,23 @@ padding:5px 0 0;
 	clear:both;
 }
 
-@media only screen and (max-width:1023px) {
+.notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child) div h6 {
+  line-height:0;
+  font-size:11px;
+}
+
+.notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child) a div h3 {
+  margin:0;
+  line-height:1;
+}
+
+.notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child) a img {
+  line-height:nomral;
+  vertical-align:middle;
+}
+
+
+@media only screen and (max-width:959px) {
 
 footer.mpisto-footer {
 display:none;
@@ -722,7 +738,7 @@ body:not(.menuvisible) header.mpisto-navbar svg.close {
 
 }
 
-@media only screen and (max-width:1151px) {
+@media only screen and (max-width:1099px) {
 .page-wrapper .store-content .store-header {
 font-size:32px;
 min-height:40px;
@@ -745,7 +761,7 @@ height:30px;
 }
 }
 
-@media only screen and (min-width:1024px) {
+@media only screen and (min-width:960px) {
 .mobile-header {
 	display:none; /* Not showing two community headers */
 }
@@ -783,27 +799,12 @@ margin-top:20px;
 
 .page-wrapper {
 margin:0 auto;
-width:988px;
-width:calc(988px - 36px);
+width:926px;
 box-shadow:0 2px 6px 0 rgba(0,0,0,.2), 0 2px 6px 0 rgba(255,255,255,0.2);
 border-top:1px solid transparent;
 background-clip:padding-box;
 }
 
-.notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child) div h6 {
-  line-height:0;
-  font-size:11px;
-}
-
-.notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child) a div h3 {
-  margin:0;
-  line-height:1;
-}
-
-.notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child) a img {
-  line-height:nomral;
-  vertical-align:middle;
-}
 
 /* Some fixes for the Desktop Footer */
 footer.mpisto-footer h1, footer.mpisto-footer h2, footer.mpisto-footer h3, footer.mpisto-footer h4, footer.mpisto-footer h5, footer.mpisto-footer h6 {
@@ -823,10 +824,9 @@ header.mpisto-navbar:after, footer.mpisto-footer:after {
 }
 }
 
-@media only screen and (min-width:1152px) {
+@media only screen and (min-width:1100px) {
 .page-wrapper {
-width:1118px;
-width:calc(1118px - 36px);
+width:1066px;
 }
 
 
@@ -846,10 +846,9 @@ height:60px;
 }
 
 
-@media only screen and (min-width:1500px) {
+@media only screen and (min-width:1400px) {
 .page-wrapper {
-width:1246px;
-width:calc(1246px - 36px);
+width:1146px;
 }
 
 .page-wrapper .store-content .store-header {
@@ -877,4 +876,10 @@ width:75px;
 height:75px;
 }
 
+}
+
+@media only screen and (min-width:1600px) {
+.page-wrapper {
+width:1346px;
+}
 }
