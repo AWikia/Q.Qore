@@ -564,8 +564,8 @@ document.getElementById("Handler").className += " mpisto-servers"
     <fieldset>    
     <legend>Date and Time</legend>
     <label>Time Zone:</label>
-    <input class="mpisto-input" type="number" placeholder="Hours" style="width:70px"></input>
-    <input class="mpisto-input" type="number" placeholder="Minutes" style="width:70px"></input>
+    <input type="number" placeholder="Hours" style="width:70px"></input>
+    <input type="number" placeholder="Minutes" style="width:70px"></input>
     <br>
     <input type="checkbox" name="04" id="31" checked></input><label for="31">Use browser defaults (Overrides the above settings)</label>   
     </fieldset>
@@ -608,8 +608,49 @@ document.getElementById("Handler").className += " mpisto-servers"
     <button class="wds-button wds-is-squished wds-is-full-width">Remove avatar</button>
     </fieldset>
     </div>
+    <div class="fieldset">
+    <fieldset>
+    <legend>Secondary Account</legend>
+    <label>Account Name (Must differ from main account's name)</label> <input class="mpisto-input" value="HM100alt" placeholder="Alt account name"></input>
+    <br>
+    <label>Avatar Pic (.png/.jpg/.gif needed, up to 1000KB possible, gets updated to your base account, seen on MpistoLite while editing articles, must differ from main account's avatar)</label>
+    <br>
+    Current avatar: <img class="options-avatar" src="HM100alt.png"></img> 
+    <div class="wds-dropdown upload-actions wds-no-chevron">
+		<div class="wds-floating-button">
+		<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-plus" />
+         </svg></div>
+         <div class="wds-dropdown__content wds-is-not-scrollable">
+			<ul class="wds-list">
+			<li class="wds-is-hidden">
+				<input name="05" id="41-1" type="file"></input>
+			</li>
+			<li>
+				<div class="wds-floating-button-group wds-is-vertical">
+					<a class="wds-floating-button" title="Wiki Files">		<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-community" />
+         </svg></a>
+					<a class="wds-floating-button accent" title="Webcam">		<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-camera" />
+         </svg></a>
+					<label for="41-1"><a class="wds-floating-button" title="Local Storage">		<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-upload" />
+         </svg></a></label>
+				</div>
+			</li>
+			</ul>
+         </div>
+    </div>
+    <br>
+    <br>
+    <button class="wds-button wds-is-squished">Remove avatar</button>
+    <button class="wds-button wds-is-squished">Reset Name</button>
+    </fieldset>
+    </div>
     </div>
     </section>
+
 
     <section class="mpisto-option-way p2">
     <h1><a class="toggle" onclick="TogglePane()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
@@ -1014,8 +1055,8 @@ document.getElementById("Handler").className += " mpisto-servers"
     <fieldset>
     <legend>Date and Time for logged-out users</legend>
     <label>Time Zone:</label>
-    <input class="mpisto-input" type="Number" placeholder="Hours" style="width:70px"></input>
-    <input class="mpisto-input" type="Number" placeholder="Minutes" style="width:70px"></input>
+    <input type="number" placeholder="Hours" style="width:70px"></input>
+    <input type="number" placeholder="Minutes" style="width:70px"></input>
     </fieldset>
     </div>
 
