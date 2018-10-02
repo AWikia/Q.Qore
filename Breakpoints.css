@@ -1,4 +1,18 @@
 /** Breakpoints for mpisto Zekzphire **/
+/* Widescreen Mode */
+.wide {
+    transform: scalex(0.8);
+    background-color: black;
+    width: calc(100% / 0.8);
+    position: relative;
+    left: -12.5%;
+}
+
+.wide .mpisto-content, .wide footer.mpisto-footer .mpisto-wrapper, .wide .mpisto-editors-content, .wide .lightbox, .wide .mpisto-options-content, .wide header.mpisto-global-navigation .mpisto-global-navigation-wrapper, .wide header.mpisto-footer-container > div, .wide header.mpisto-navbar .mpisto-navbar-wrapper {
+	width:calc(1066px / 0.8)!important;
+}
+
+
 /* S */
 @media only screen and (max-width:959px) {
 /*.mpisto-grooze {
@@ -6,16 +20,17 @@ display:inline!important;
 }*/
 .mpisto-content, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .lightbox, .mpisto-options-content {
   width:100%!important;
-  width:-webkit-calc(100% - 34px)!important;
   width:calc(100% - 34px)!important;
 }
 
+.wide .mpisto-content, .wide footer.mpisto-footer .mpisto-wrapper, .wide .mpisto-editors-content, .wide .lightbox, .wide .mpisto-options-content, .wide header.mpisto-global-navigation .mpisto-global-navigation-wrapper, .wide header.mpisto-footer-container > div, .wide header.mpisto-navbar .mpisto-navbar-wrapper {
+	width:calc(100% - (34px / 0.8))!important;
+}
 
 
 .mpisto-option-way h1 {
 	white-space:nowrap;
-	-o-text-overflow:ellipsis;
-	   text-overflow:ellipsis;
+	text-overflow:ellipsis;
 	overflow:hidden;
 }
 
@@ -65,7 +80,6 @@ padding-right:24px;
 
 header.mpisto-navbar .mpisto-navbar-wrapper, header.mpisto-global-navigation .mpisto-global-navigation-wrapper, header.mpisto-footer-container > div  {
   width:100%;
-  width:-webkit-calc(100% - 34px);
   width:calc(100% - 34px);
 }
 
@@ -95,9 +109,6 @@ display:none!important;
 }
 
 header.mpisto-navbar .wds-list.wds-is-linked > li.create-wiki-small {
-display:-webkit-box!important;
-display:-webkit-flex!important;
-display:-ms-flexbox!important;
 display:flex!important;
 }
 
@@ -121,20 +132,12 @@ width:100%;
 }
 
 .mpisto-wrapper .mpisto-article-wrapper {
-  -webkit-flex-wrap:nowrap;
-      -ms-flex-wrap:nowrap;
-          flex-wrap:nowrap;
-  -webkit-box-orient:vertical;
-  -webkit-box-direction:normal;
-  -webkit-flex-direction:column;
-      -ms-flex-direction:column;
-          flex-direction:column;
+  flex-wrap:nowrap;
+  flex-direction:column;
 }
 
 .editor-header {
--webkit-flex-wrap:wrap;
-    -ms-flex-wrap:wrap;
-        flex-wrap:wrap;
+flex-wrap:wrap;
 height:auto;
 width:100%;
 }
@@ -152,11 +155,7 @@ width:100%;
 }
 
 .mpisto-userpages-header .mpisto-profile-masthead header {
-	-webkit-box-orient:vertical;
-	-webkit-box-direction:normal;
-	-webkit-flex-direction:column;
-	    -ms-flex-direction:column;
-	        flex-direction:column;
+	flex-direction:column;
 }
 
 .mpisto-userpages-header .mpisto-profile-masthead section {
@@ -173,26 +172,20 @@ position:absolute;
 z-index:1000;
 border-width:0 1px 2px;
 top:-51px;
--webkit-filter:brightness(1.5);
-        filter:brightness(1.5);
+filter:brightness(1.5);
 display:inline-block; /* Required or else IE but not Edge will not show properly */
 }
 
 
 .transition-on .mpisto-option-pane {
--webkit-transition:opacity 0.99s ease-in-out 3ms, top 0.99s ease-in-out 3ms, visibility 0.99s ease-in-out 3ms, -webkit-filter 0.99s ease-in-out 3ms;
-transition:opacity 0.99s ease-in-out 3ms, top 0.99s ease-in-out 3ms, visibility 0.99s ease-in-out 3ms, -webkit-filter 0.99s ease-in-out 3ms;
--o-transition:opacity 0.99s ease-in-out 3ms, top 0.99s ease-in-out 3ms, filter 0.99s ease-in-out 3ms, visibility 0.99s ease-in-out 3ms;
 transition:opacity 0.99s ease-in-out 3ms, top 0.99s ease-in-out 3ms, filter 0.99s ease-in-out 3ms, visibility 0.99s ease-in-out 3ms;
-transition:opacity 0.99s ease-in-out 3ms, top 0.99s ease-in-out 3ms, filter 0.99s ease-in-out 3ms, visibility 0.99s ease-in-out 3ms, -webkit-filter 0.99s ease-in-out 3ms;
 }
 
 .pane-on .mpisto-option-pane {
 visibility:visible;
 opacity:1;
 top:0;
--webkit-filter:brightness(1);
-        filter:brightness(1);
+filter:brightness(1);
 }
 
 .pane-on .mpisto-article-wrapper{
@@ -217,15 +210,8 @@ top:0;
 }
 
 .mpisto-option-pane div {
-  -webkit-box-orient:horizontal;
-  -webkit-box-direction:normal;
-  -webkit-flex-direction:row;
-      -ms-flex-direction:row;
-          flex-direction:row;
-  -webkit-box-pack:start;
-  -webkit-justify-content:flex-start;
-      -ms-flex-pack:start;
-          justify-content:flex-start;
+  flex-direction:row;
+  justify-content:flex-start;
 }
 
 .mpisto-option-way h1 .toggle {
@@ -237,20 +223,10 @@ width:100%;
 }
 
 .option-link {
--webkit-box-orient:vertical;
--webkit-box-direction:normal;
--webkit-flex-direction:column;
-    -ms-flex-direction:column;
-        flex-direction:column;
--webkit-box-flex:1;
--webkit-flex:1;
-    -ms-flex:1;
-        flex:1;
+flex-direction:column;
+flex:1;
 padding:4px;
--webkit-box-align:stretch;
--webkit-align-items:stretch;
-    -ms-flex-align:stretch;
-        align-items:stretch;
+align-items:stretch;
 }
 
 .option-link span {
@@ -380,6 +356,11 @@ padding-right:10px;
 width:926px;
 }
 
+.wide .mpisto-content, .wide footer.mpisto-footer .mpisto-wrapper, .wide .mpisto-editors-content, .wide .lightbox, .wide .mpisto-options-content, .wide header.mpisto-global-navigation .mpisto-global-navigation-wrapper, .wide header.mpisto-footer-container > div, .wide header.mpisto-navbar .mpisto-navbar-wrapper {
+	width:calc(926px / 0.8)!important;
+}
+
+
 header.mpisto-footer-container > div {
   width:926px;
 }
@@ -419,8 +400,7 @@ font-size:28px;
 
 .sourceon .article-area {
 -webkit-column-count:1;
--moz-column-count:1;
-     column-count:1;
+column-count:1;
 }
 
 
@@ -439,6 +419,11 @@ padding-right:30px;
 .mpisto-content, header.mpisto-navbar .mpisto-navbar-wrapper, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .mpisto-options-content, .lightbox, header.mpisto-global-navigation .mpisto-global-navigation-wrapper {
 width:1146px;
 }
+
+.wide .mpisto-content, .wide footer.mpisto-footer .mpisto-wrapper, .wide .mpisto-editors-content, .wide .lightbox, .wide .mpisto-options-content, .wide header.mpisto-global-navigation .mpisto-global-navigation-wrapper, .wide header.mpisto-footer-container > div, .wide header.mpisto-navbar .mpisto-navbar-wrapper {
+	width:calc(1146px / 0.8)!important;
+}
+
 
 header.mpisto-footer-container > div {
   width:1146px;
@@ -484,6 +469,11 @@ padding-right:30px;
 .mpisto-content, header.mpisto-navbar .mpisto-navbar-wrapper, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .mpisto-options-content, .lightbox, header.mpisto-global-navigation .mpisto-global-navigation-wrapper {
 width:1346px;
 }
+
+.wide .mpisto-content, .wide footer.mpisto-footer .mpisto-wrapper, .wide .mpisto-editors-content, .wide .lightbox, .wide .mpisto-options-content, .wide header.mpisto-global-navigation .mpisto-global-navigation-wrapper, .wide header.mpisto-footer-container > div, .wide header.mpisto-navbar .mpisto-navbar-wrapper {
+	width:calc(1346px / 0.8)!important;
+}
+
 
 header.mpisto-footer-container > div {
   width:1346px;
