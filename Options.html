@@ -213,6 +213,8 @@ document.getElementById("Handler").className += " mpisto-servers"
     <fieldset>     
      <legend>Misc</legend>
     <input type="checkbox" name="03" id="21" onclick="NoPix()" checked></input><label for="21">Always pixelate images</label>
+    <br>
+    <input type="checkbox" name="03" id="22" onclick="Widescreen()"></input><label for="22" title="Widescreen mode drops any stretching when using a monitor with lower aspect ratio resolution than the default ones and it is not set to pillarbox (i.e. 1024x768 resolution on a 1360x760 monitor)">Widescreen Mode</label>
     </fieldset>
     </div>
 
@@ -830,6 +832,7 @@ document.getElementById("Handler").className += " mpisto-servers"
     <fieldset>
     <legend>Misc</legend>
     <div class="prm-option"><input type="checkbox" name="23" id="221" onclick="prmon()"></input> <label for="221">Use Reduced Motion experience</label></div>
+    <div class="prt-option"><input type="checkbox" name="23" id="224" onclick="prton()"></input> <label for="224">Use Reduced Transparency experience</label></div>
     <input type="checkbox" name="23" id="222"></input> <label for="222">Edit pages by double clicking on its title</label>
     <br>
     <input type="checkbox" name="23" id="223"></input> <label for="223">Watch/Unwatch pages by clicking on its title for more than 4 seconds</label>
@@ -1644,6 +1647,14 @@ function prmon() {
 }
 }
 
+function prton() {
+    var x = document.getElementById("Handler");
+    if (x.className.indexOf("prt") == -1) {
+        x.className += " prt";
+    } else {
+        x.className = x.className.replace(" prt", "");
+}
+}
 
 
 function fontclear() {
@@ -1980,6 +1991,16 @@ function NoPix() {
         x.className = x.className.replace(" pixelatedoff", "");
     }
 }
+
+function Widescreen() {
+    var x = document.querySelector('html');
+    if (x.className.indexOf("wide") == -1) {
+        x.className += " wide";
+    } else {
+        x.className = x.className.replace(" wide", "");
+    }
+}
+
 
 
 /* Some JS for some older browsers */
