@@ -34,64 +34,64 @@ Raleway = Rest
 }
 
 :root {
---background-image:url("grwbg.jpg");
---background-color:#ff00ff;
---link-color:40,217,109;
---content-bg:#d99f6c;
---dropdown-bg:#E4CAB4;
---content-border:#fba944;
---content-color:#1c6945;
---button-color:#fcd32b;
---button-color-dark:#E3C23E;
+--background-image:url("A Wikia Cover.png");
+--background-color:#01d7e5;
+--link-color:26,74,74;
+--content-bg:#f5f5f5;
+--dropdown-bg:#FFFFFF;
+--content-border:#cccddd;
+--content-color:#010000;
+--button-color:#18BBC6;
+--button-color-dark:#03A2AD;
 --button-color-text:black;
---community-header-bg:178,43,178;
---community-header-text:248,248,248;
+--community-header-bg:8,156,166;
+--community-header-text:23,23,23;
 }
 
 .theme-B {
---background-image:url("grwbg.jpg");
---background-color:#28d96d;
---link-color:79,14,141;
---content-bg:#fecb3c;
---dropdown-bg:#F5DF9D;
---content-border:#c3b0a9;
---content-color:#1c6945;
---button-color:#F8523C;
---button-color-dark:#FF6B57;
---button-color-text:white;
---community-header-bg:252,221,94;
---community-header-text:23,23,23;
+--background-image:url("headbg.jpg");
+--background-color:#54d9f8;
+--link-color:134,4,152;
+--content-bg:#ffecff;
+--dropdown-bg:#F6EFF9;
+--content-border:#ddf759;
+--content-color:#2a2a2a;
+--button-color:#70C800;
+--button-color-dark:#62AF00;
+--button-color-text:black;
+--community-header-bg:80,103,155;
+--community-header-text:248,248,248;
 }
 
 
 .theme-C {
---background-image:url("headbg5.jpg");
---background-color:#76f6ff;
---link-color:145,19,206;
---content-bg:#34ecc6;
---dropdown-bg:#95EFDE;
---content-border:#e78097;
---content-color:#341b23;
---button-color:#FFE2AC;
---button-color-dark:#E6C384;
---button-color-text:black;
---community-header-bg:192,14,4;
+--background-image:url("headbg3.jpg");
+--background-color:#610038;
+--link-color:0,0,255;
+--content-bg:#282828;
+--dropdown-bg:#1A1A1A;
+--content-border:#cccccc;
+--content-color:#f9f9f9;
+--button-color:#00178C;
+--button-color-dark:#1029A5;
+--button-color-text:white;
+--community-header-bg:127,105,105;
 --community-header-text:248,248,248;
 }
 
 
 .theme-D {
---background-image:url("headbg5.jpg");
---background-color:#76f6ff;
---link-color:128,0,128;
---content-bg:#e0e8ee;
---dropdown-bg:#E7EDF1;
---content-border:#ffc0cb;
---content-color:#1a2b3c;
---button-color:#E78097;
---button-color-dark:#CE5D76;
+--background-image:url("headbg4.jpg");
+--background-color:#e95500;
+--link-color:148,24,197;
+--content-bg:#fdfeff;
+--dropdown-bg:#FFFFFF;
+--content-border:#eee;
+--content-color:#1a2a3a;
+--button-color:#FF7E09;
+--button-color-dark:#E66D00;
 --button-color-text:black;
---community-header-bg:195,132,223;
+--community-header-bg:255,126,9;
 --community-header-text:23,23,23;
 }
 
