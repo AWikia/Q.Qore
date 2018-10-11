@@ -1,4 +1,4 @@
-﻿/** Primary Fonts **/
+/** Primary Fonts **/
 /* 
 **
 Gothic A1 = Korean
@@ -62,6 +62,7 @@ Raleway = Rest
 --community-header-bg:80,103,155;
 --community-header-text:248,248,248;
 }
+
 
 .theme-C {
 --background-image:url("headbg3.jpg");
@@ -419,7 +420,7 @@ background-clip:border-box;
 	content:"";
 	background-color:blue;
 	background-color:rgb(var(--community-header-bg));
-	opacity:0.9;
+	opacity:0.8;
 	-webkit-backdrop-filter:invert(1) hue-rotate(180deg) saturate(1.2) blur(7px);
 	backdrop-filter:invert(1) hue-rotate(180deg) saturate(1.2) blur(7px);
 	(M)-webkit-backdrop-filter:invert(1) saturate(1.2) blur(7px);
@@ -1897,6 +1898,183 @@ border-left-color:rgba(var(--community-header-text),0.8);
 */
 }
 
+/* Color header */
+@-webkit-keyframes color-header-hover {
+	0%		{ background-color:transparent; }
+	50%  	{ background-color:rgba(23,23,23,0.2);background-color:rgba(var(--community-header-text),0.2); }
+	100%	{ background-color:transparent; }
+}
+
+
+@-o-keyframes color-header-hover {
+	0%		{ background-color:transparent; }
+	50%  	{ background-color:rgba(23,23,23,0.2);background-color:rgba(var(--community-header-text),0.2); }
+	100%	{ background-color:transparent; }
+	100%	{ background-color:transparent; }
+}
+
+
+@keyframes color-header-hover {
+	0%		{ background-color:transparent; }
+	50%  	{ background-color:rgba(23,23,23,0.2);background-color:rgba(var(--community-header-text),0.2); }
+	100%	{ background-color:transparent; }
+}
+
+	.mpisto-header-container {
+		margin:-1px;
+		color:rgb(23,23,23);
+		color:rgb(var(--community-header-text));
+		background-color:blue;
+		background-color:rgb(var(--community-header-bg));
+		z-index:10;
+		position:relative;
+		
+	}
+
+	.mpisto-header-container .wds-dropdown {
+		display:table-cell;
+	}
+
+
+	.mpisto-header-container + .wds-community-header {
+		display:none!important;
+	}
+
+	.color-header {
+		min-height:60px;
+	}
+	
+	.color-header .wordmark img {
+		height:54px;
+		margin:0 10px;
+		vertical-align:middle;
+	}
+
+
+	.color-header .counters {
+		height:60px;
+		padding:0 16px;
+		font-size:16px;
+		font-weight:500;
+		text-align:left;
+	}
+
+	
+	.color-header .counter {
+		white-space:nowrap;
+	}
+
+	.color-header .counter big {
+		font-weight:bolder;
+		font-size:120%;
+	}
+	
+
+	.mpisto-header-container .link {
+		-webkit-transition:color 400ms ease, background-color 300ms linear 200ms;
+		-o-transition:color 400ms ease, background-color 300ms linear 200ms;
+		transition:color 400ms ease, background-color 300ms linear 200ms;
+		padding: 0 10px;
+		height:inherit;
+		color:inherit;
+		text-decoration:none!important;
+		font-size:18px;
+	}
+
+	.color-header .link {
+		padding: 0 12px;
+		height:60px;
+	}
+	
+	.color-header .wds-dropdown {
+		height:inherit;
+		display:inline-block;
+	}
+	
+	.color-nav .wds-dropdown {
+		height:30px;
+	}
+
+	.color-nav .link {
+		width:100%;
+		white-space:nowrap;
+	}
+	
+	.mpisto-header-container .link:hover, .mpisto-header-container .wds-dropdown:hover .link {
+		-webkit-animation: 600ms linear 200ms infinite normal color-header-hover;
+		     -o-animation: 600ms linear 200ms infinite normal color-header-hover;
+		        animation: 600ms linear 200ms infinite normal color-header-hover;
+		background-color:rgba(23,23,23,0.2);
+		background-color:rgba(var(--community-header-text),0.2);
+	}
+	
+	.color-header .title {
+		width:100%;
+		line-height:1.4;
+		font-size:28px;
+		font-weight:800;
+		height:60px;
+		padding:0 16px;
+		font-family:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Nanum Gothic", cursive;
+		font-family:var(--secondary-font), cursive;
+		white-space:pre-wrap;
+		overflow:hidden;
+		text-overflow:ellipsis;
+	}
+
+	.color-header .title a {
+		text-decoration:none;
+		color:inherit;
+		transition:opacity 180ms;
+		overflow:hidden;
+		text-overflow:ellipsis;
+	}
+
+	.color-header .title a:hover {
+		opacity:0.7;
+	}
+	
+	.color-nav {
+		height:30px;
+		width:100%;
+		position:relative;
+	}
+
+@media only screen and (max-width:754px) {
+	.color-header .wordmark {
+		display:none;
+	}
+}
+
+@media only screen and (max-width:959px) {
+	.color-header .title {
+		font-size:20px;
+		padding:0 14px;
+		height:55px;
+	}
+
+	.color-header .link {
+		padding:0 10px;
+		height:55px;
+	}
+
+	.color-header .counters {
+		padding:0 14px;
+		font-size:14px;
+		height:55px;
+	}
+
+	.color-header {
+		min-height:55px;
+	}
+	
+	.color-header .wordmark img {
+		height:50px;
+	}
+
+
+
+}
 
 .mpisto-content {
   width:1066px;
@@ -1933,39 +2111,22 @@ backdrop-filter:blur(5px) contrast(110%) saturate(110%);
 */border-radius:inherit;
 }
 
-/* Create Overlay for the Acryllic in black color */
-.mpisto-content:before {
-position:absolute;
-top:-1px;
-left:-1px;
-display:block;
-z-index:1;
-background-color:transparent!important;
-border-width:1px;
-border-style:solid;
-border-color:rgba(0,0,255,0.8);
-border-color:rgba(var(--community-header-bg),0.8);
-filter:saturate(250%) contrast(200%) brightness(80%)!important;
-width:100%;
-height:100%;
-content:"";
-border-radius:inherit;
-pointer-events:none;
-}
 
 .mpisto-wrapper {
   position:relative;
 }
 .mpisto-content .mpisto-wrapper {
-/*  border:1px solid #ccc;
+  border:1px solid #ccc;
   border:1px solid var(--content-border);
-*/
   padding:0 18px 18px;
   border-bottom-left-radius:inherit;
   border-bottom-right-radius:inherit;
 }
 
 .mpisto-spotlight-footer {
+  border:1px solid #ccc;
+  border:1px solid var(--content-border);
+  border-top:0;
   position:relative;
   z-index:6;
   margin:-1px 0 0;
@@ -2672,8 +2833,8 @@ min-height:50px;
 border-top:2px solid #ccc;
 border-top:2px solid var(--content-border);
 margin:30px 0 0;
-color:#fff;
-color:var(--dropdown-bg);
+color:#000;
+color:var(--content-color);
 font-family:"Source Sans Pro", "Prompt",  "M PLUS 1p", "Gothic A1", cursive;
 position:relative;
 z-index:49;
@@ -2697,14 +2858,21 @@ footer.mpisto-footer:after {
     position: absolute;
     width: 100%;
     z-index: -1;
-    background-color:#000;
-    background-color:var(--content-color);
-    opacity:0.66;
+    background-color:#ffffff;
+    background-color:var(--dropdown-bg);
+    opacity:0.8;
     top:0;
     left:0;
-   -webkit-backdrop-filter: saturate(350%) brightness(105%) sepia(40%) grayscale(40%) hue-rotate(6deg) blur(1.2px);
-    backdrop-filter: saturate(350%) brightness(105%) sepia(40%) grayscale(40%) hue-rotate(6deg) blur(1.2px);}
+	-webkit-backdrop-filter:invert(1) hue-rotate(180deg) saturate(1.2) blur(7px);
+	backdrop-filter:invert(1) hue-rotate(180deg) saturate(1.2) blur(7px);
+	(M)-webkit-backdrop-filter:invert(1) saturate(1.2) blur(7px);
+	(M)backdrop-filter:invert(1) saturate(1.2) blur(7px);
 
+/*
+   -webkit-backdrop-filter: saturate(350%) brightness(105%) sepia(40%) grayscale(40%) hue-rotate(6deg) blur(1.2px);
+    backdrop-filter: saturate(350%) brightness(105%) sepia(40%) grayscale(40%) hue-rotate(6deg) blur(1.2px);
+*/
+}
 
 /* Create Overlay for the Acryllic in black color */
 footer.mpisto-footer::before {
@@ -2737,10 +2905,10 @@ footer.mpisto-footer .wds-button.wds-is-secondary {
 }
 
 footer.mpisto-footer .wds-button.wds-is-secondary:hover {
-  color:#ffffff;
-  color:var(--dropdown-bg);
-  border-color:#ffffff;
-  border-color:var(--dropdown-bg);
+  color:#000;
+  color:var(--content-color);
+  border-color:#000;
+  border-color:var(--content-color);
 }
 
 
@@ -2754,10 +2922,10 @@ footer.mpisto-footer .wds-button:not(.wds-is-secondary):not(.wds-is-text) {
 }
 
 footer.mpisto-footer .wds-button:not(.wds-is-secondary):not(.wds-is-text):hover, footer.mpisto-footer .wds-button:not(.wds-is-secondary):not(.wds-is-text):active, footer.mpisto-footer .wds-button:not(.wds-is-secondary):not(.wds-is-text):focus {
-  border-color:#ffffff;
-  border-color:var(--dropdown-bg);
-  background-color:#ffffff;
-  background-color:var(--dropdown-bg);
+  border-color:#000;
+  border-color:var(--content-color);
+  background-color:#000;
+  background-color:var(--content-color);
 }
 
 footer.mpisto-footer .wds-button.wds-is-text:not(.wds-is-secondary) {
@@ -2767,8 +2935,8 @@ footer.mpisto-footer .wds-button.wds-is-text:not(.wds-is-secondary) {
 }
 
 footer.mpisto-footer .wds-button.wds-is-text:hover, footer.mpisto-footer .wds-button.wds-is-text:active, footer.mpisto-footer .wds-button.wds-is-text:focus {
-  color:#ffffff;
-  color:var(--dropdown-bg);
+  color:#000;
+  color:var(--content-color);
 }
 
 
@@ -2845,8 +3013,8 @@ width: 100%;
 z-index:-1;
 content:"";
 display:block;
-background-color:#fff;
-background-color:var(--content-bg);
+background-color:#000;
+background-color:var(--content-color);
 opacity:0.11;
 }
 
@@ -2872,8 +3040,8 @@ width: 100%;
 z-index:-1;
 content:"";
 display:block;
-background-color:#fff;
-background-color:var(--dropdown-bg);
+background-color:#000;
+background-color:var(--content-color);
 opacity:0.035;
 }
 
@@ -2894,13 +3062,13 @@ clear:both;
 float:left;
  color:#ccc;
  color:var(--content-border);
-border-bottom:4px solid #fff;
-border-bottom:4px solid var(--dropdown-bg);
+border-bottom:4px solid #000;
+border-bottom:4px solid var(--content-color);
 }
 
 footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container td a:not(.wds-button):hover {
-    color:#fff;
-    color:var(--dropdown-bg);
+    color:#000;
+    color:var(--content-color);
     border-color:#ccc;
     border-color:var(--content-border);
 }

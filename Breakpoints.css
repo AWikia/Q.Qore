@@ -1,4 +1,4 @@
-﻿/** Breakpoints for mpisto Zekzphire **/
+/** Breakpoints for mpisto Zekzphire **/
 /* Widescreen Mode */
 .wide {
     transform: scalex(0.8);
@@ -8,6 +8,7 @@
     left: -12.5%;
     letter-spacing:0.1px;
 }
+
 
 .wide .mpisto-content, .wide footer.mpisto-footer .mpisto-wrapper, .wide .mpisto-editors-content, .wide .lightbox, .wide .mpisto-options-content, .wide header.mpisto-global-navigation .mpisto-global-navigation-wrapper, .wide header.mpisto-footer-container > div, .wide header.mpisto-navbar .mpisto-navbar-wrapper {
 	width:calc(1066px / 0.8)!important;
@@ -381,10 +382,6 @@ header.mpisto-footer-container > div {
 @media only screen and (max-width:1099px) {
 footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container td h2 {
 font-size:20px;
-}
-
-body:after, .mpisto-2018 {
-background-image:none!important; /* Don't use a background image for smaller breakpoints */
 }
 
 
