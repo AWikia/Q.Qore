@@ -269,7 +269,7 @@ box-shadow:0 4px 0 6px rgba(0,0,0,.4), 0 4px 0 6px rgba(255,255,255,0.4)!importa
 	color:inherit;
 }
 
-.contrast :not(.wds-dropdown):not(.wds-community-header):not(time):not(.wds-list):not(input):not(.mpisto-content):before,.contrast :not(.wds-dropdown):not(.wds-community-header):not(.wds-list):not(.mpisto-article-wrapper):not(input):not(em):after, .basic header.mpisto-navbar:after, .basic footer.mpisto-footer:after, .basic header.mpisto-footer-container:after, .basic .mpisto-option-pane:after, .basic .mpisto-content:after, .basic .mpisto-option-way:after, .basic .theme-portal:after,.basic header.mpisto-navbar:before, .basic footer.mpisto-footer:before, .basic header.mpisto-footer-container:before, .basic .mpisto-option-pane:before, .basic .mpisto-option-way:before, .basic .theme-portal:before  {
+.contrast :not(.wds-dropdown):not(.wds-community-header):not(time):not(.wds-list):not(input):not(.mpisto-content):before,.contrast :not(.wds-dropdown):not(.wds-community-header):not(.wds-list):not(.mpisto-article-wrapper):not(.mpisto-header-container):not(input):not(em):after, .basic header.mpisto-navbar:after, .basic footer.mpisto-footer:after, .basic header.mpisto-footer-container:after, .basic .mpisto-option-pane:after, .basic .mpisto-content:after, .basic .mpisto-option-way:after, .basic .theme-portal:after,.basic header.mpisto-navbar:before, .basic footer.mpisto-footer:before, .basic header.mpisto-footer-container:before, .basic .mpisto-option-pane:before, .basic .mpisto-option-way:before, .basic .theme-portal:before  {
 display:none!important;
 }
 
@@ -344,9 +344,8 @@ filter:brightness(1.01) saturate(1.15) contrast(1.25) hue-rotate(1deg);
 }
 
 .FilterF {
--webkit-filter:sepia(1) hue-rotate(211deg) invert(1) brightness(1.01) saturate(1.15) contrast(1.25);
-filter:sepia(1) hue-rotate(211deg) invert(1) brightness(1.01) saturate(1.15) contrast(1.25);
-(M)filter:sepia(1) hue-rotate(31deg) invert(1) brightness(1.01) saturate(1.15) contrast(1.25); /* mInerva bRowser also does and 180deg hue shift on invertion */
+-webkit-filter:hue-rotate(181deg) brightness(1.01) saturate(1.15) contrast(1.25) ;
+filter:hue-rotate(181deg) brightness(1.01) saturate(1.15) contrast(1.25);
 }
 
 /* Edge and Safari fix */
