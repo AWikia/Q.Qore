@@ -437,6 +437,10 @@ height:45px;
 color:#1a1a1a;
 }
 
+.page-wrapper .store-content .store-header:not(.small) {
+-webkit-text-fill-color:white;
+}
+
 .page-wrapper .store-content .store-header {
 font-size:46px;
 display:flex;
@@ -450,7 +454,6 @@ font-weight:600;
 width:100%;
 background-color:rgba(242,242,242,0.75);
 -webkit-text-stroke:2px #002a32;
--webkit-text-fill-color:white;
 z-index:5;
 }
 
@@ -501,7 +504,6 @@ line-height:1;
 font-weight:400;
 background-color:#f6f6f6;
 -webkit-text-stroke:0;
--webkit-text-fill-color:currentColor;
 }
 
 .page-wrapper .store-content .store-header.small .wds-icon:not(.wds-icon-small) {
