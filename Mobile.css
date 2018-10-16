@@ -22,7 +22,7 @@ font-family:"Noto Sans", "Noto Sans KR", "Noto Sans JP", sans-serif;
 display:block;
 }
 
-*, :before, :after {
+*:not(.store-header), :not(.store-header):before, :not(.store-header):after {
 backdrop-filter:none!important;
 -webkit-backdrop-filter:none!important;
 }
@@ -37,6 +37,20 @@ margin:-1px;
 color:whitesmoke;
 background-image:none;
 }
+
+	.color-header .title a {
+		text-decoration:none;
+		color:inherit;
+		transition:color 400ms ease;
+		overflow:hidden;
+		text-overflow:ellipsis;
+	}
+
+	.color-header .title a:hover {
+		opacity:1;
+		color:white;
+	}
+
 
 .main .wds-community-header::before {
 background-image:linear-gradient(to left,rgba(24,187,198, 0) 200px,rgb(24,187,198) 430px), linear-gradient(to left,rgba(248,248,248, 0) 200px,rgb(248,248,248) 430px);
@@ -103,6 +117,8 @@ border-left-color:rgba(248,248,248,0.8);
 	padding:5px 0;
 	font-weight:300;
 	font-size:16px;
+	position:relative;
+	z-index:10;
 }
 
 .mobile-header b {
@@ -421,15 +437,71 @@ height:45px;
 color:#1a1a1a;
 }
 
+.page-wrapper .store-content .store-header {
+font-size:46px;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:20px 18px;
+min-height:60px;
+margin:0 0 10px;
+line-height:0.6;
+font-weight:600;
+width:100%;
+background-color:rgba(242,242,242,0.75);
+-webkit-text-stroke:2px #002a32;
+-webkit-text-fill-color:white;
+z-index:5;
+}
+
+.page-wrapper .store-content .store-header .counters {
+		padding:0 10px;
+		font-size:16px;
+		font-weight:500;
+		text-align:left;
+		display:flex;
+		justify-content:center;
+		flex-direction:column;
+	}
+
+	
+.page-wrapper .store-content .counter {
+		white-space:nowrap;
+		vertical-align:middle;
+	}
+
+.page-wrapper .store-content .counter big {
+		font-weight:bolder;
+		font-size:120%;
+	}
+
+
+
+@media only screen and (min-height:480px) {
+	@supports (position:sticky) or (position:-webkit-sticky) {
+		.page-wrapper .store-content .store-header:not(.small) {
+			position:-webkit-sticky;
+			position:sticky;
+			top:49px;
+			-webkit-backdrop-filter:blur(18px) grayscale(25%) sepia(25%);
+			backdrop-filter:blur(18px) grayscale(25%) sepia(25%);
+		}
+	}
+}
+
+
+
 
 .page-wrapper .store-content .store-header.small {
-font-size:30px;
+font-size:26px;
 justify-content:flex-start;
 min-height:50px;
 padding:20px 18px 20px 0;
 line-height:1;
 font-weight:400;
 background-color:#f6f6f6;
+-webkit-text-stroke:0;
+-webkit-text-fill-color:currentColor;
 }
 
 .page-wrapper .store-content .store-header.small .wds-icon:not(.wds-icon-small) {
@@ -457,19 +529,6 @@ font-size:12px; /* Resets font size made being to 0px by the past inline-block h
 vertical-align:middle;
 }
 
-.page-wrapper .store-content .store-header {
-font-size:46px;
-display:flex;
-align-items:center;
-justify-content:center;
-padding:20px 18px;
-min-height:60px;
-margin:0 0 10px;
-line-height:0.6;
-font-weight:600;
-width:100%;
-background-color:#f6f6f6;
-}
 
 .page-wrapper .store-content .store-sub {
 font-weight:300;
@@ -781,14 +840,19 @@ body:not(.menuvisible) header.mpisto-navbar svg.close {
 }
 
 @media only screen and (max-width:1099px) {
+.page-wrapper .store-content .store-header .counters {
+	font-size:14px;
+}
+
 .page-wrapper .store-content .store-header {
 font-size:32px;
 min-height:40px;
 line-height:1;
+-webkit-text-stroke-width:1px;
 }
 
 .page-wrapper .store-content .store-header.small {
-font-size:24px;
+font-size:20px;
 }
 
 .page-wrapper .store-content .store-items .wds-button .wds-button {
@@ -893,13 +957,19 @@ height:60px;
 width:1146px;
 }
 
+.page-wrapper .store-content .store-header .counters {
+	font-size:18px;
+}
+
+
 .page-wrapper .store-content .store-header {
 font-size:60px;
-min-height:80px;
+min-height:90px;
+-webkit-text-stroke-width:3.5px;
 }
 
 .page-wrapper .store-content .store-header.small {
-font-size:40px;
+font-size:36px;
 }
 
 
@@ -924,4 +994,19 @@ height:75px;
 .page-wrapper {
 width:1346px;
 }
+
+.page-wrapper .store-content .store-header .counters {
+	font-size:20px;
+}
+
+.page-wrapper .store-content .store-header {
+font-size:70px;
+min-height:100px;
+-webkit-text-stroke-width:4px;
+}
+
+.page-wrapper .store-content .store-header.small {
+font-size:38px;
+}
+
 }
