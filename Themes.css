@@ -11,7 +11,7 @@
 --button-color-dark:#03A2AC;
 --button-color-text:black;
 --community-header-bg:0,0,255;
---community-header-text:23,23,23;
+--community-header-text:248,248,248;
 }
 
 /* Standard (V2) */
@@ -72,8 +72,8 @@
 --content-border:#ffdc87;
 --content-color:#2a4b6c;
 --button-color:#7AB247;
---button-color-dark:#60992D;
---button-color-text:black;
+--button-color-dark:#96CC65;
+--button-color-text:white;
 --community-header-bg:82,192,251;
 --community-header-text:23,23,23;
 }
@@ -123,7 +123,7 @@
 --button-color-dark:#6C7BAD;
 --button-color-text:white;
 --community-header-bg:25,161,95;
---community-header-text:23,23,23;
+--community-header-text:248,248,248;
 }
 
 /* Standard (V9) */
@@ -219,7 +219,7 @@
 --button-color-dark:#03A2AD;
 --button-color-text:black;
 --community-header-bg:8,156,166;
---community-header-text:23,23,23;
+--community-header-text:248,248,248;
 }
 
 
@@ -233,8 +233,8 @@
 --content-border:#ddf759;
 --content-color:#2a2a2a;
 --button-color:#70C800;
---button-color-dark:#62AF00;
---button-color-text:black;
+--button-color-dark:#88E216;
+--button-color-text:white;
 --community-header-bg:80,103,155;
 --community-header-text:248,248,248;
 }
@@ -297,8 +297,8 @@
 --content-border:#c9b991;
 --content-color:#2b2b2b;
 --button-color:#FE7E03;
---button-color-dark:#E57000;
---button-color-text:black;
+--button-color-dark:#FF8C1C;
+--button-color-text:white;
 --community-header-bg:161,119,79;
 --community-header-text:248,248,248;
 }
@@ -365,7 +365,7 @@
 --button-color-dark:#03ACA2;
 --button-color-text:black;
 --community-header-bg:170,153,0;
---community-header-text:23,23,23;
+--community-header-text:248,248,248;
 }
 
 /* Sagent */
@@ -397,7 +397,7 @@
 --button-color-dark:#65A23F;
 --button-color-text:black;
 --community-header-bg:0,0,255;
---community-header-text:23,23,23;
+--community-header-text:248,248,248;
 }
 
 
@@ -460,10 +460,10 @@
 --content-border:#00aaff;
 --content-color:#d9e9f9;
 --button-color:#32DC32;
---button-color-dark:#18C318;
---button-color-text:black;
+--button-color-dark:#50F650;
+--button-color-text:white;
 --community-header-bg:34,170,51;
---community-header-text:23,23,23;
+--community-header-text:248,248,248;
 }
 
 /* Brightness A */
@@ -479,7 +479,7 @@
 --button-color-dark:#0F990F;
 --button-color-text:white;
 --community-header-bg:0,0,255;
---community-header-text:23,23,23;
+--community-header-text:248,248,248;
 }
 
 /* Brightness B */
@@ -492,8 +492,8 @@
 --content-border:#c0c0c0;
 --content-color:#00ff00;
 --button-color:#0000FF;
---button-color-dark:#0000E6;
---button-color-text:black;
+--button-color-dark:#1919FF;
+--button-color-text:white;
 --community-header-bg:0,255,255;
 --community-header-text:23,23,23;
 }
@@ -572,8 +572,8 @@
 --content-border:#c3b0a9;
 --content-color:#1c6945;
 --button-color:#F8523C;
---button-color-dark:#FF6B57;
---button-color-text:white;
+--button-color-dark:#DF351F;
+--button-color-text:black;
 --community-header-bg:252,221,94;
 --community-header-text:23,23,23;
 }
@@ -591,7 +591,7 @@
 --button-color-dark:#E3C23E;
 --button-color-text:black;
 --community-header-bg:178,43,178;
---community-header-text:248,248,248;
+--community-header-text:23,23,23;
 }
 
 /* Grays ~ */
@@ -817,7 +817,7 @@
 --button-color-dark:#00e6e6;
 --button-color-text:black;
 --community-header-bg:0,0,255;
---community-header-text:23,23,23;
+--community-header-text:248,248,248;
 }
 
 /* Medicore ~ */
@@ -833,7 +833,7 @@
 --button-color-dark:#BA936E;
 --button-color-text:white;
 --community-header-bg:112,200,0;
---community-header-text:23,23,23;
+--community-header-text:248,248,248;
 }
 
 /* Maxthon ~ */
@@ -881,7 +881,7 @@
 --button-color-dark:#FF5719;
 --button-color-text:white;
 --community-header-bg:50,205,50;
---community-header-text:23,23,23;
+--community-header-text:248,248,248;
 }
 
 /* PokeViews B */

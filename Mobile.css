@@ -201,6 +201,7 @@ border-left-color:rgb(24,187,198);
 	display:none;
 }
 
+
 .mpisto-global-navigation .link:hover, .mpisto-global-navigation .wds-dropdown:hover .link,
 .mpisto-header-container .link:hover, .mpisto-header-container .wds-dropdown:hover .link {
 	background-color:#00d7e6;
@@ -208,6 +209,7 @@ border-left-color:rgb(24,187,198);
 	-webkit-animation:none;
 	animation:none;
 	transition:color 400ms ease, background-color 400ms ease;
+	border-color:transparent;
 }
 
 	.mpisto-global-navigation .link .mpisto-input {

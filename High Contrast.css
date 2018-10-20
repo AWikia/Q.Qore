@@ -248,6 +248,23 @@ background-image:linear-gradient(to left,rgba(255,255,255, 0) 200px,rgb(var(--co
 }
 
 
+.contrast .color-header .link {
+	background-clip:padding-box;
+	background-color:var(--dropdown-bg);
+	color:var(--content-color);
+	transition-property:background-color, color, border-color;
+	transition-delay:0ms, 5ms, 5ms;
+	transition-duration:200ms, 5ms, 5ms;
+}
+
+.contrast .color-header .link:hover, .contrast .color-header .wds-dropdown:hover .link {
+	-webkit-animation:none;
+	animation:none;
+	color:var(--button-color-text);
+	border-color:currentColor;
+	background-color:var(--button-color);
+}
+
 .contrast .mpisto-gnav {
 	background-color:var(--content-bg);
 	box-shadow:inset 0 -1px var(--content-border)!important;
@@ -255,7 +272,11 @@ background-image:linear-gradient(to left,rgba(255,255,255, 0) 200px,rgb(var(--co
 }
 
 
-.contrast header.mpisto-navbar .wds-dropdown__content, .contrast header.mpisto-navbar .wds-dropdown-level-2__content, .contrast header.mpisto-global-navigation .wds-dropdown__content, .contrast header.mpisto-global-navigation .wds-dropdown-level-2__content {
+.contrast .wds-dropdown.wds-has-shadow .wds-dropdown__content {
+box-shadow:0 2px 0 4px rgba(0,0,0,.4), 0 2px 0 4px rgba(255,255,255,0.4)!important;
+}
+
+.contrast header.mpisto-navbar .wds-dropdown__content, .contrast header.mpisto-navbar .wds-dropdown-level-2__content, .contrast .wds-dropdown.wds-has-dark-shadow .wds-dropdown__content {
 box-shadow:0 4px 0 6px rgba(0,0,0,.4), 0 4px 0 6px rgba(255,255,255,0.4)!important;
 }
 
@@ -710,7 +731,7 @@ color:var(--button-color);
 --button-color-dark:#0F990F;
 --button-color-text:white;
 --community-header-bg:0,0,255;
---community-header-text:23,23,23;
+--community-header-text:248,248,248;
 ;
 }
 
@@ -723,8 +744,8 @@ color:var(--button-color);
 --content-border:#c0c0c0;
 --content-color:#00ff00;
 --button-color:#0000FF;
---button-color-dark:#0000E6;
---button-color-text:black;
+--button-color-dark:#1919FF;
+--button-color-text:white;
 --community-header-bg:0,255,255;
 --community-header-text:23,23,23;
 }
