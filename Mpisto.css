@@ -4843,6 +4843,7 @@ left:0;
 width:100%;
 height:100%;
 transition:inherit;
+box-sizing:content-box;
 }
 
 input[type="checkbox"]::after {
