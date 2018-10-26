@@ -3,23 +3,33 @@
 **
 Gothic A1 = Korean
 M PLUS 1p = Japana
-Promt = Thailandish
-Source Sans Pro = Rest
+Prompt = Thailandish
+Cairo = Arabic
+Ramabhadra = Telegu
+Catamaran = Tamil
+Source Sans Pro/Ubuntu = Rest
 **
 */
 @import url('https://fonts.googleapis.com/css?family=Gothic+A1:100,200,300,400,500,600,700,800,900|M+PLUS+1p:100,300,400,500,700,800,900|Prompt:100,200,300,400,500,600,700,800,900|Source+Sans+Pro:200,300,400,600,700,900&subset=cyrillic,cyrillic-ext,greek,greek-ext,hebrew,japanese,korean,latin-ext,thai,vietnamese');
+
+@import url('https://fonts.googleapis.com/css?family=Cairo:200,300,400,600,700,900|Catamaran:100,200,300,400,500,600,700,800,900|Ramabhadra|Ubuntu:300,400,500,700&subset=arabic,cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,tamil,telugu');
 /** Secondary Fonts **/
 /* 
 **
-Nanum Gothic = Korean
+Jua (Formerly Nanum Gothic) = Korean
 M PLUS Rounded 1c = Japana and Evraika
 Mitr = Thailandish
+Mada = Arabic
+NTR = Telegu
+Pavanam = Tamil
 Jura = Greek and Kyrillic
 Raleway = Rest
 **
 */
 @import url('https://fonts.googleapis.com/css?family=Jura:300,400,500,600,700|M+PLUS+Rounded+1c:100,300,400,500,700,800|Mitr:200,300,400,500,600,700|Nanum+Gothic:400,700,800|Raleway:100,200,300,400,500,600,700,800,900&subset=cyrillic,cyrillic-ext,greek,greek-ext,hebrew,japanese,korean,latin-ext,thai,vietnamese');
-/* Arniki Forniki and MpistoMobile2 */
+
+@import url('https://fonts.googleapis.com/css?family=Jua|Mada:200,300,400,500,600,700,900|NTR|Pavanam&subset=arabic,korean,latin-ext,tamil,telugu');
+/* Arniki Forniki and former versions of MpistoMobile2 */
 @import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900&subset=cyrillic,hebrew,latin-ext');
 /* Misc */
 @import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&subset=latin-ext');
@@ -43,6 +53,10 @@ Raleway = Rest
     src:url('Arial.ttf') format('truetype');
 }
 
+@font-face {
+    font-family:  Source Pro Sans;
+    src:url('Source Pro Sans.ttf') format('truetype');
+}
 
 :root {
 --background-image:url("A Wikia Cover.png");
@@ -118,7 +132,9 @@ overflow:hidden!important;
 
 body {
 margin:0 auto;
-font-family:Source Sans Pro, "Trebuchet MS", "Prompt",  "M PLUS 1p", "Gothic A1", sans-serif;
+/*font-family:Source Sans Pro, "Trebuchet MS", "Prompt",  "M PLUS 1p", "Gothic A1", sans-serif;
+*/
+font-family:Ubuntu, "Verdana", "Prompt",  "M PLUS 1p", "Gothic A1", "Cairo", "Catamaran", "Ramabhadra", sans-serif;
 color:#000;
 color:var(--content-color);
 background-repeat:no-repeat;
@@ -180,7 +196,7 @@ font-family:Rubik, "Arial", sans-serif!important; /* Uses Rubik Font */
 }
 
 .main .mob4-font {
-font-family:Gabriela, Microsoft Sans Serif, Futura,"Arial", sans-serif!important; /* Uses a font stack suitable for High Contrast Mode */
+font-family:Source Pro Sans, Microsoft Sans Serif, Futura,"Arial", sans-serif!important; /* Uses a font stack suitable for High Contrast Mode */
 }
 
 .main .mob5-font {
@@ -188,7 +204,7 @@ font-family:Lato, Carlito, "Verdana", sans-serif!important; /* Uses a font stack
 }
 
 body {
---secondary-font:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Nanum Gothic";
+--secondary-font:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Jua", "Mada", "Pavanam", "NTR";
 --button-radius:4px;
 }
 
@@ -263,7 +279,7 @@ h3.mobile-data a {
   transition-delay:0.05s;
   color:#18bbc5;
   color:rgba(var(--link-color), 1);
-  font-family:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Nanum Gothic", cursive;
+  font-family:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Jua", "Mada", "Pavanam", "NTR", cursive;
   font-family:var(--secondary-font), cursive;
 }
 
@@ -414,7 +430,7 @@ position:fixed;
 color:rgb(248,248,248);
 color:rgb(var(--community-header-text));
 box-shadow: 0 0 3px #000, 0 0 3px #fff;
-font-family:"Source Sans Pro", "Prompt",  "M PLUS 1p", "Gothic A1", cursive;
+font-family:"Source Sans Pro", "Prompt",  "M PLUS 1p", "Gothic A1", "Cairo", "Catamaran", "Ramabhadra", cursive;
 box-sizing:content-box;
 z-index:100;
 display:flex;
@@ -471,10 +487,35 @@ background-color:rgba(var(--community-header-bg),0.8);
 		color:inherit;
 		text-decoration:none!important;
 		font-size:18px;
+		white-space:nowrap;
 	}
+	.mpisto-global-navigation .link big {
+		font-size:120%;
+		font-weight:lighter;
+	}
+
+	.mpisto-global-navigation .link small {
+		font-size:80%;
+		font-weight:bolder;
+	}
+
+	.mpisto-global-navigation .link small.name {
+		max-width:80px;
+		text-overflow:ellipsis;
+		overflow:hidden;
+		display:inline-block;
+		margin-left:1px;
+	}
+
+	@media only screen and (max-width:754px) {
+		.mpisto-global-navigation .link small.name {
+			display:none!important;
+		}
+	}
+
 	.mpisto-global-navigation .link .mpisto-input {
 		width:90%!important;
-		color:inherit!important;
+		color:inherit;
 		background-image:none;
 		background-color:rgba(248,248,248,0.2);
 		background-color:rgba(var(--community-header-text),0.2);		
@@ -502,19 +543,16 @@ background-color:rgba(var(--community-header-bg),0.8);
 
 	.mpisto-global-navigation .wds-dropdown {
 		display:table-cell;
+		vertical-align:top;
 	}
 	.mpisto-global-navigation .wds-dropdown .link {
-		display:inline-block;
 		vertical-align:middle;
 	}
 	.mpisto-global-navigation .wds-dropdown .link * {
 		display:table-cell;
 		vertical-align:middle;
-		height:inherit;
 	}
-	.mpisto-global-navigation .wds-dropdown .link .mpisto-avatar {
-		margin-top:45%;
-	}
+
 	.mpisto-global-navigation .link .mpisto-avatar {
 		width:24px;
 		height:24px;
@@ -522,6 +560,7 @@ background-color:rgba(var(--community-header-bg),0.8);
 		min-height:24px;
 		border-width:1px;
 		opacity:1;
+		display:inline;
 	}
 	.mpisto-global-navigation .link:hover, .mpisto-global-navigation .wds-dropdown:hover .link {
 /*		background-color:#03a1ab;
@@ -1064,7 +1103,7 @@ display:table;
   color:var(--content-color);
   text-decoration:none;
   margin:0;
-  font-family:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Nanum Gothic", cursive;
+  font-family:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Jua", "Mada", "Pavanam", "NTR", cursive;
   font-family:var(--secondary-font), cursive;
 }
 
@@ -1189,7 +1228,7 @@ display:table;
   color:var(--content-color);
   text-decoration:none;
   margin:0;
-  font-family:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Nanum Gothic", cursive;
+  font-family:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Jua", "Mada", "Pavanam", "NTR", cursive;
   font-family:var(--secondary-font), cursive;
 }
 
@@ -2120,7 +2159,7 @@ border-left-color:rgba(var(--community-header-text),0.8);
 		font-weight:800;
 		height:60px;
 		padding:0 16px;
-		font-family:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Nanum Gothic", cursive;
+		font-family:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Jua", "Mada", "Pavanam", "NTR", cursive;
 		font-family:var(--secondary-font), cursive;
 		white-space:pre-wrap;
 		overflow:hidden;
@@ -2769,7 +2808,7 @@ max-width:100%;
 word-wrap: break-word;
 border-bottom:1px solid #ccc;
 border-bottom:1px solid var(--content-border);
-font-family:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Nanum Gothic", cursive;
+font-family:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Jua", "Mada", "Pavanam", "NTR", cursive;
 font-family:var(--secondary-font), cursive;
 }
 
@@ -2967,13 +3006,13 @@ border-top:2px solid var(--content-border);
 margin:30px 0 0;
 color:#000;
 color:var(--content-color);
-font-family:"Source Sans Pro", "Prompt",  "M PLUS 1p", "Gothic A1", cursive;
+font-family:"Source Sans Pro", "Prompt",  "M PLUS 1p", "Gothic A1", "Cairo", "Catamaran", "Ramabhadra", cursive;
 position:relative;
 z-index:49;
 padding:0 0 22px;
 box-shadow:0 0 9px #ccc, 0 0 2.5px #000, 0 0 1.5px #fff;
 box-shadow:0 0 9px var(--content-border), 0 0 2.5px #000, 0 0 1.5px #fff;
-background-color:rgba(0,0,0,0);
+background-color:rgba(0,0,0,0.2);
 }
 
 /* Glass effect for browsers with backdrop filter, use opaque for others */
@@ -3005,20 +3044,6 @@ footer.mpisto-footer:after {
 */
 }
 
-/* Create Overlay for the Acryllic in black color */
-footer.mpisto-footer::before {
-    content: "";
-    display: block;
-    height: 100%;
-    position: absolute;
-    width: 100%;
-    z-index: -1;
-    background-color: #000;
-    -webkit-backdrop-filter: none;
-    opacity: 0.2;
-    top: 0px;
-    left: 0px;
-}
 
 
 footer.mpisto-footer .wds-button {
@@ -3104,7 +3129,7 @@ footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container th h1 {
 /*
 font-weight:900;
 */
-  font-family:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Nanum Gothic", cursive;
+  font-family:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Jua", "Mada", "Pavanam", "NTR", cursive;
   font-family:var(--secondary-font), cursive;
 font-weight:700;
 font-size:33px;
@@ -5120,12 +5145,12 @@ border:1px solid currentColor;
 */
 	min-height:200px;
 	width:1066px;
-	border-radius:12px;
+	border-radius:7px;
 	padding:0 7px 7px;
 	border:1px solid rgba(248,248,248,0.5);
 	border:1px solid rgba(var(--community-header-text),0.5);
 	color:rgb(248,248,248);
-	color:rgba(var(--community-header-text));
+	color:rgb(var(--community-header-text));
 	background-color:rgba(0,0,255,0.75);
 	background-color:rgba(var(--community-header-bg), 0.75);
 	box-shadow:0 2px 16px #000, 0 0 1px rgb(248,248,248), 0 0 1px rgb(248,248,248);
@@ -5227,7 +5252,7 @@ vertical-align:middle;
 	width:34px;
 	min-width:34px;
 	color:black;
-	color:var(--button-color-text)!;
+	color:var(--button-color-text);
 	border-radius:0 0 8px 8px;
 	border:1px solid;
 	background-clip:padding-box;
@@ -5246,7 +5271,7 @@ vertical-align:middle;
 
 .lightbox h1 .wds-button.wds-is-square:hover {
 	color:black;
-	color:var(--button-color-text)!;
+	color:var(--button-color-text);
 	background-color:#03a3ad;
 	background-color:var(--button-color-dark);
 	border:1px solid;
@@ -5955,7 +5980,7 @@ cursor:url("Lenux/banned.cur"), not-allowed!important;
   cursor:url("Lenux/default.cur"), default;
 }
 
-.xubuntu a,.xubuntu a:hover, .xubuntu .notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child):not(.empty), .xubuntu .notification.wds-dropdown-level-2__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child):not(.empty), .xubuntu a.wds-button, .xubuntu button.wds-button, .xubuntu .editor-header .wordmark, .xubuntu .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, .xubuntu .wds-banner-notification__close, .xubuntu a label, .xubuntu a input[type="checkbox"], .xubuntu a input[type="radio"], .lenux .wds-floating-button:not([disabled]), .lenux .wds-floating-button:not(.wds-is-disabled) {
+.xubuntu a,.xubuntu a:hover, .xubuntu .notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child):not(.empty), .xubuntu .notification.wds-dropdown-level-2__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child):not(.empty), .xubuntu a.wds-button, .xubuntu button.wds-button, .xubuntu .editor-header .wordmark, .xubuntu .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, .xubuntu .wds-banner-notification__close, .xubuntu a label, .xubuntu a input[type="checkbox"], .xubuntu a input[type="radio"], .xubuntu .wds-floating-button:not([disabled]), .xubuntu .wds-floating-button:not(.wds-is-disabled) {
 cursor:url("Lenux/hand.cur"), pointer;
 }
 

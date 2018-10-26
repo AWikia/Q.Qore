@@ -248,16 +248,19 @@ background-image:linear-gradient(to left,rgba(255,255,255, 0) 200px,rgb(var(--co
 }
 
 
+.contrast .mpisto-header-container .link {
+	transition-delay:0ms, 5ms, 5ms;
+	transition-duration:200ms, 5ms, 5ms;
+}
+
 .contrast .color-header .link {
 	background-clip:padding-box;
 	background-color:var(--dropdown-bg);
 	color:var(--content-color);
 	transition-property:background-color, color, border-color;
-	transition-delay:0ms, 5ms, 5ms;
-	transition-duration:200ms, 5ms, 5ms;
 }
 
-.contrast .color-header .link:hover, .contrast .color-header .wds-dropdown:hover .link {
+.contrast .mpisto-header-container .link:hover, .contrast .mpisto-header-container .wds-dropdown:hover .link {
 	-webkit-animation:none;
 	animation:none;
 	color:var(--button-color-text);

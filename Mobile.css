@@ -109,7 +109,7 @@ border-left-color:rgba(248,248,248,0.8);
 .mobile-header {
 	color:whitesmoke;
 	background-color:rgb(24,187,198);
-	display:flex;
+	display:none;
 	align-items:center;
 	flex-direction:column;
 	width:100%;
@@ -798,6 +798,16 @@ padding:5px 0 0;
   vertical-align:middle;
 }
 
+@media only screen and (max-width:754px) {
+.wds-community-header, .mpisto-header-container {
+    display:none;
+}
+
+.mobile-header {
+	display:flex;
+}
+
+}
 
 @media only screen and (max-width:959px) {
 
@@ -805,11 +815,11 @@ footer.mpisto-footer {
 display:none;
 }
 
-/* Show profile layout menu into right align when only search is after the user menu */
-.mpisto-global-navigation .link.company + .wds-dropdown .wds-is-left-aligned{
-	left:auto;
-	right:0;
+.wds-community-header, .mpisto-header-container {
+    margin:0;
+    padding:0 
 }
+
 
 .page-wrapper .store-content, 
 .page-wrapper .wiki-container{
@@ -817,9 +827,6 @@ border:0;
 }
 
 
-.wds-community-header, .mpisto-header-container {
-    display:none;
-}
 
 .top-gap {
 margin:0!important;
@@ -872,9 +879,6 @@ height:30px;
 }
 
 @media only screen and (min-width:960px) {
-.mobile-header {
-	display:none; /* Not showing two community headers */
-}
 
 /*.page-wrapper .store-content .store-footer {
 margin:0 -1px -1px;
