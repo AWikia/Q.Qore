@@ -38,6 +38,10 @@ Raleway = Rest
 @import url('https://fonts.googleapis.com/css?family=Play:400,700&subset=cyrillic,cyrillic-ext,greek,latin-ext,vietnamese');
 @import url("https://fonts.googleapis.com/css?family=Fira+Sans:100,200,300,400,500,600,700,800,900&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese");
 
+/* Serif */
+@import url('https://fonts.googleapis.com/css?family=Amiri:400,700|Cambo|David+Libre:400,500,700|Lora:400,700|Merriweather:300,400,700,900|Neuton:200,300,400,400i,700,800|Noto+Serif+JP:200,300,400,500,600,700,900|Noto+Serif:400,700|Pridi:200,300,400,500,600,700|Ramaraja|Song+Myung|Source+Serif+Pro:400,600,700&subset=arabic,cyrillic,cyrillic-ext,greek,greek-ext,hebrew,japanese,korean,latin-ext,telugu,thai,vietnamese');
+
+
 @font-face {
     font-family: LCD;
     src: url('https://images.wikia.nocookie.net/__cb20161004075228/24wikia/images/d/db/LCD_ITC-Normal.otf') format('opentype'),url('https://images.wikia.nocookie.net/__cb20161004075229/24wikia/images/a/a5/LCD_ITC-Normal.woff') format('woff'),url('https://images.wikia.nocookie.net/__cb20161004075228/24wikia/images/1/1e/LCD_ITC-N0ormal.ttf') format('truetype')
@@ -49,6 +53,12 @@ Raleway = Rest
 }
 
 @font-face {
+    font-family:  Georgia2;
+    src:url('Georgia.ttf') format('truetype');
+}
+
+
+@font-face {
     font-family:  Arial2;
     src:url('Arial.ttf') format('truetype');
 }
@@ -57,6 +67,12 @@ Raleway = Rest
     font-family:  Source Pro Sans;
     src:url('Source Pro Sans.ttf') format('truetype');
 }
+
+@font-face {
+    font-family:  Source Pro Serif;
+    src:url('Source Pro Serif.ttf') format('truetype');
+}
+
 
 :root {
 --background-image:url("A Wikia Cover.png");
@@ -156,7 +172,94 @@ touch-action:manipulation;
 (M)touch-action:auto; /* mInerva 11.5- can make unscrollable page with mouse and keyboard */
 }
 
-.mpisto-2018:after {
+.serif body {
+font-family:"Lora", "Liberation Serif", "Song Myung",  "Noto Serif JP", "David Libre", "Pridi", "Amiri", "Catamaran", "Ramaraja", serif;
+}
+
+
+.main .system-font {
+font-family: system-ui, -qq-osfont, -apple-system, BlinkMacSystemFont, "Segoe UI", "MLS Sans", "MLSystem", "Roboto", "Oxygen", "Ubuntu", "Cantarell","Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif!important; /* MLS Sans must be above Oxygen and Roboto because Mpisto OS contains both fonts and can cause problems - MLSystem is for MLS Challenge and below - -qq-osfont is for Qorta Web 4-5 and mInerva 4.5-5.1 which works like system-ui but only on Windows - -apple-system and BlinkMacSystemFont are equilavant of system-ui only for Apple Mac Computers */
+}
+
+.serif.main .system-font {
+font-family: system-ui, -qq-osfont, -apple-system, BlinkMacSystemFont, "Segoe UI", "MLS Sans", "MLSystem", "Roboto", "Oxygen", "Ubuntu", "Cantarell","Fira Sans", "Droid Sans", "Helvetica Neue", serif!important; /* MLS Sans must be above Oxygen and Roboto because Mpisto OS contains both fonts and can cause problems - MLSystem is for MLS Challenge and below - -qq-osfont is for Qorta Web 4-5 and mInerva 4.5-5.1 which works like system-ui but only on Windows - -apple-system and BlinkMacSystemFont are equilavant of system-ui only for Apple Mac Computers */
+}
+
+
+.main .rzz-font {
+font-family:Tahoma2, Yu Gothic UI, Segoe UI, MLS Sans, Ubuntu, Roboto, Droid Sans, Oxygen, Calibri, sans-serif!important; /* Use the set of given fonts and fallback to others if some of them don't exist and use sans otherwise */
+}
+
+.serif.main .rzz-font {
+font-family:Georgia2, Georgia, Yu Gothic UI, Segoe UI, MLS Sans, Ubuntu, Roboto, Droid Sans, Oxygen, Calibri, serif!important; /* Use the set of given fonts and fallback to others if some of them don't exist and use sans otherwise */
+}
+
+
+.main .mob-font {
+font-family:Open Sans, "Trebuchet MS", sans-serif!important; /* Use the preloaded open sans font instead of the Source Sans Pro font */
+}
+
+.serif.main .mob-font {
+font-family:Noto Serif, "Palatino", erif!important; /* Use the preloaded open sans font instead of the Source Sans Pro font */
+}
+
+
+.main .mob2-font {
+font-family:Fira Sans, "Verdana", sans-serif!important; /* Use the preloaded fira sans font instead of the Source Sans Pro font */
+}
+
+.serif.main .mob2-font {
+font-family:Neuton, "Liberation Serif", serif!important; /* Use the preloaded fira sans font instead of the Source Sans Pro font */
+}
+
+
+.main .mob3-font {
+font-family:Rubik, "Arial", sans-serif!important; /* Uses Rubik Font */
+}
+
+.serif.main .mob3-font {
+font-family:Merriweather, "Times New Roman", serif!important; /* Uses Rubik Font */
+}
+
+
+.main .mob4-font {
+font-family:Source Pro Sans, Microsoft Sans Serif, Futura,"Arial", sans-serif!important; /* Uses a font stack suitable for High Contrast Mode */
+}
+
+.serif.main .mob4-font {
+font-family:Source Pro Serif, Microsoft Sans Serif, Futura, "Times New Roman", serif!important; /* Uses a font stack suitable for High Contrast Mode */
+}
+
+
+.main .mob5-font {
+font-family:Lato, Carlito, "Verdana", sans-serif!important; /* Uses a font stack suitable for High Contrast Mode */
+}
+
+.serif.main .mob5-font {
+font-family:Cambo, Caladea, "Liberation Serif", serif!important; /* Uses a font stack suitable for High Contrast Mode */
+}
+
+
+.main .mob6-font {
+font-family:Source Sans Pro, "Verdana", sans-serif!important; /* Uses a font stack suitable for High Contrast Mode */
+}
+
+.serif.main .mob6-font {
+font-family:Source Serif Pro, "Liberation Serif", serif!important; /* Uses a font stack suitable for High Contrast Mode */
+}
+
+
+body {
+--secondary-font:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Jua", "Mada", "Pavanam", "NTR";
+--button-radius:4px;
+}
+
+.mpisto-2018 {
+overflow-x:hidden!important;
+}
+
+
+.mpisto-2018:not(.explorer):not(.edge):after {
 	top:0;
 	left:0;
 	width:100%;
@@ -174,45 +277,11 @@ touch-action:manipulation;
 
 }
 
-.main .system-font {
-font-family: system-ui, -qq-osfont, -apple-system, BlinkMacSystemFont, "Segoe UI", "MLS Sans", "MLSystem", "Roboto", "Oxygen", "Ubuntu", "Cantarell","Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif!important; /* MLS Sans must be above Oxygen and Roboto because Mpisto OS contains both fonts and can cause problems - MLSystem is for MLS Challenge and below - -qq-osfont is for Qorta Web 4-5 and mInerva 4.5-5.1 which works like system-ui but only on Windows - -apple-system and BlinkMacSystemFont are equilavant of system-ui only for Apple Mac Computers */
-}
-
-.main .rzz-font {
-font-family:Tahoma2, Yu Gothic UI, Segoe UI, MLS Sans, Ubuntu, Roboto, Droid Sans, Oxygen, Calibri, sans-serif!important; /* Use the set of given fonts and fallback to others if some of them don't exist and use sans otherwise */
-}
-
-.main .mob-font {
-font-family:Open Sans, "Trebuchet MS", sans-serif!important; /* Use the preloaded open sans font instead of the Source Sans Pro font */
-}
-
-.main .mob2-font {
-font-family:Fira Sans, "Verdana", sans-serif!important; /* Use the preloaded fira sans font instead of the Source Sans Pro font */
-}
-
-
-.main .mob3-font {
-font-family:Rubik, "Arial", sans-serif!important; /* Uses Rubik Font */
-}
-
-.main .mob4-font {
-font-family:Source Pro Sans, Microsoft Sans Serif, Futura,"Arial", sans-serif!important; /* Uses a font stack suitable for High Contrast Mode */
-}
-
-.main .mob5-font {
-font-family:Lato, Carlito, "Verdana", sans-serif!important; /* Uses a font stack suitable for High Contrast Mode */
-}
-
-body {
---secondary-font:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Jua", "Mada", "Pavanam", "NTR";
---button-radius:4px;
-}
-
-.mpisto-2018 {
-overflow-x:hidden!important;
+.mpisto-2018:not(.explorer):not(.edge) {
 background-color:transparent!important;
 background-image:none!Important;
 }
+
 
 
 body:not(.editor) .mpisto-article floatingbanner .wds-banner-notification__container {
@@ -241,6 +310,7 @@ abbr[title] {
 button, input {
 position:relative;
 font-family:inherit;
+text-transform:none; /* Drops the inheritance in Edge and Firefox */
 box-shadow:none;
 text-shadow:none;
 /* mInerva Specific Code */
@@ -314,6 +384,7 @@ textarea {
 	border-color: #27a0da;
 	background-image:none;
 -webkit-appearance:none;
+font-family:monospace;
 }
 
 .error, .alert, .success, .info {
@@ -427,8 +498,11 @@ top:0;
 left:0;
 width:100%;
 position:fixed;
-color:rgb(248,248,248);
+/*color:rgb(248,248,248);
 color:rgb(var(--community-header-text));
+*/
+color:#000;
+color:var(--content-color);
 box-shadow: 0 0 3px #000, 0 0 3px #fff;
 font-family:"Source Sans Pro", "Prompt",  "M PLUS 1p", "Gothic A1", "Cairo", "Catamaran", "Ramabhadra", cursive;
 box-sizing:content-box;
@@ -436,9 +510,11 @@ z-index:100;
 display:flex;
 flex-direction:column;
 background-clip:border-box;
-background-color:rgba(0,0,255,0.8);
-background-color:rgba(var(--community-header-bg),0.8);
 
+}
+
+.serif .mpisto-gnav {
+font-family:"Source Serif Pro", "Song Myung",  "Noto Serif JP", "David Libre", "Pridi", "Amiri", "Catamaran", "Ramaraja", cursive;
 }
 
 .mpisto-gnav::after {
@@ -452,23 +528,14 @@ background-color:rgba(var(--community-header-bg),0.8);
 /*	background-color:blue;
 	background-color:rgb(var(--community-header-bg));
 */
-	opacity:0.8;
-	-webkit-backdrop-filter:invert(1) hue-rotate(180deg) saturate(1.2) blur(6.5px);
+	background-color:#fff;
+	background-color:var(--content-bg);
+	opacity:0.9;
+/*	-webkit-backdrop-filter:invert(1) hue-rotate(180deg) saturate(1.2) blur(6.5px);
 	backdrop-filter:invert(1) hue-rotate(180deg) saturate(1.2) blur(6.5px);
-	z-index:-1;
+*/	z-index:-1;
 }
 
-/* Blink fix */
-@supports (-webkit-box-shadow:0 0 10px) and (not (-webkit-backdrop-filter:none)) {
-.mpisto-gnav {
-	background-color:transparent;
-}
-.mpisto-gnav::after {
-	background-color:blue;
-	background-color:rgb(var(--community-header-bg));
-
-}
-}
 	.mpisto-global-navigation {
 		height:49px;
 		box-sizing:border-box;
@@ -516,9 +583,6 @@ background-color:rgba(var(--community-header-bg),0.8);
 	.mpisto-global-navigation .link .mpisto-input {
 		width:90%!important;
 		color:inherit;
-		background-image:none;
-		background-color:rgba(248,248,248,0.2);
-		background-color:rgba(var(--community-header-text),0.2);		
 	}
 .mpisto-global-navigation .link input:-ms-input-placeholder { /* Internet Explorer */
   color:inherit;
@@ -566,11 +630,15 @@ background-color:rgba(var(--community-header-bg),0.8);
 /*		background-color:#03a1ab;
 		background-color:var(--button-color-dark);
 */
-		background-color:rgba(248,248,248,0.2);
+/*		background-color:rgba(248,248,248,0.2);
 		background-color:rgba(var(--community-header-text),0.2);
 		color:rgba(248,248,248,0.8);
 		color:rgba(var(--community-header-text), 0.8);
-
+*/
+	background-color:rgba(24,187,197, 0.2);
+	background-color:rgba(var(--link-color), 0.2);
+	color:#18bbc5;
+	color:rgb(var(--link-color));
 	}
 	.mpisto-global-navigation .link.company {
 		width:100%;
@@ -635,6 +703,7 @@ border-color:rgb(var(--link-color));
 background-color:transparent;
 background-clip:padding-box;
 display:flex;
+border-radius:100px;
 }
 
 header.mpisto-navbar .wds-list.wds-is-linked > li > .wds-button.wds-is-secondary:hover, header.mpisto-navbar .wds-list.wds-is-linked > li > .wds-button.wds-is-secondary:active, header.mpisto-navbar .wds-list.wds-is-linked > li:hover > .wds-button.wds-is-secondary,
@@ -696,11 +765,14 @@ text-decoration:none;
 color:#18bbc5;
 color:rgb(var(--link-color));
 cursor:url("Windows/hand.cur"), pointer;
+background-color:transparent;
 /* mInerva Specific Code */
 (M)font-weight:normal;
 }
 
 a:hover {
+color:#18bbc5;
+color:rgb(var(--link-color));
 text-decoration:underline;
 cursor:url("Windows/hand.cur"), pointer;
 }
@@ -2146,8 +2218,8 @@ border-left-color:rgba(var(--community-header-text),0.8);
 		color:rgba(var(--community-header-text), 0.8);
 	}
 
-@supports (display:-ms-grid) and (--s:red) {
-		.mpisto-header-container .link:hover, .mpisto-header-container .wds-dropdown:hover .link {
+@supports (--s:red) {
+		.edge .mpisto-header-container .link:hover,.edge .mpisto-header-container .wds-dropdown:hover .link {
 			animation:none;
 		}
 }
@@ -2155,7 +2227,7 @@ border-left-color:rgba(var(--community-header-text),0.8);
 	.color-header .title {
 		width:100%;
 		line-height:1.4;
-		font-size:28px;
+		font-size:30px;
 		font-weight:800;
 		height:60px;
 		padding:0 16px;
@@ -2193,7 +2265,7 @@ border-left-color:rgba(var(--community-header-text),0.8);
 
 @media only screen and (max-width:959px) {
 	.color-header .title {
-		font-size:20px;
+		font-size:22px;
 		padding:0 14px;
 		height:55px;
 	}
@@ -2285,6 +2357,10 @@ backdrop-filter:blur(5px) contrast(110%) saturate(110%);
   width:100%;
   min-height:18px;
   font-family:Tahoma2, Yu Gothic UI, Segoe UI, MLS Sans, Ubuntu, Roboto, Droid Sans, Oxygen, Calibri, sans-serif; /* Use A secure font stack */
+}
+
+.serif .mpisto-spotlight-footer {
+  font-family:Georgia2, Georgia, Yu Gothic UI, Segoe UI, MLS Sans, Ubuntu, Roboto, Droid Sans, Oxygen, Calibri, sans-serif; /* Use A secure font stack */
 }
 
 .mpisto-spotlight-footer::after {
@@ -2537,14 +2613,14 @@ left:0;
 }
 
 .mpisto-spotlight-footer nav item ul num {
-	font-family:Arial2, Arial, sans-serif;
+	font-family:Source Pro Sans, sans-serif;
 	color:#fff;
 	color:var(--content-bg);
 	background-color:#ccc;
 	background-color:var(--content-border);
 	border-radius:50%;
 	display:inline-flex;
-	font-size:24px;
+	font-size:26px;
 	align-items:center;
 	justify-content:center;
 	text-align:center;
@@ -2555,6 +2631,10 @@ left:0;
 	margin:0 5px 0 0;
 	-webkit-text-stroke:1px #000;
 	-webkit-text-stroke-color:var(--content-color);
+}
+
+.serif .mpisto-spotlight-footer nav item ul num {
+	font-family:Source Pro Serif, serif;
 }
 
 .mpisto-spotlight-footer nav item ul a {
@@ -2899,6 +2979,7 @@ input[type="number"] {
 	padding:8px 10px;
 	border:1px solid;
 	box-sizing:content-box;
+	-webkit-appearance:none;
 }
 
 input[type="number"]:focus {
@@ -3015,6 +3096,11 @@ box-shadow:0 0 9px var(--content-border), 0 0 2.5px #000, 0 0 1.5px #fff;
 background-color:rgba(0,0,0,0.2);
 }
 
+.serif footer.mpisto-footer {
+font-family:"Source Serif Pro", "Song Myung",  "Noto Serif JP", "David Libre", "Pridi", "Amiri", "Catamaran", "Ramaraja", cursive;
+}
+
+
 /* Glass effect for browsers with backdrop filter, use opaque for others */
 footer.mpisto-footer {
 background-color:transparent;
@@ -3032,12 +3118,12 @@ footer.mpisto-footer:after {
     z-index: -1;
     background-color:#ffffff;
     background-color:var(--dropdown-bg);
-    opacity:0.8;
+    opacity:0.9;
     top:0;
     left:0;
-	-webkit-backdrop-filter:invert(1) hue-rotate(180deg) saturate(1.2) blur(6.5px);
+/*	-webkit-backdrop-filter:invert(1) hue-rotate(180deg) saturate(1.2) blur(6.5px);
 	backdrop-filter:invert(1) hue-rotate(180deg) saturate(1.2) blur(6.5px);
-
+*/
 /*
    -webkit-backdrop-filter: saturate(350%) brightness(105%) sepia(40%) grayscale(40%) hue-rotate(6deg) blur(1.2px);
     backdrop-filter: saturate(350%) brightness(105%) sepia(40%) grayscale(40%) hue-rotate(6deg) blur(1.2px);
@@ -3054,10 +3140,10 @@ footer.mpisto-footer .wds-button {
 
 /* Button Styling */
 footer.mpisto-footer .wds-button.wds-is-secondary {
-  color:#ccc;
-  color:var(--content-border);
-  border-color:#ccc;
-  border-color:var(--content-border);
+  color:#18bbc5;
+  color:rgb(var(--link-color));
+  border-color:#18bbc5;
+  border-color:rgb(var(--link-color));
 }
 
 footer.mpisto-footer .wds-button.wds-is-secondary:hover {
@@ -3071,10 +3157,10 @@ footer.mpisto-footer .wds-button.wds-is-secondary:hover {
 footer.mpisto-footer .wds-button:not(.wds-is-secondary):not(.wds-is-text) {
   color:#000;
   color:var(--content-color);
-  border-color:#ccc;
-  border-color:var(--content-border);
-  background-color:#ccc;
-  background-color:var(--content-border);
+  border-color:#18bbc5;
+  border-color:rgb(var(--link-color));
+  background-color:#18bbc5;
+  background-color:rgb(var(--link-color));
 }
 
 footer.mpisto-footer .wds-button:not(.wds-is-secondary):not(.wds-is-text):hover, footer.mpisto-footer .wds-button:not(.wds-is-secondary):not(.wds-is-text):active, footer.mpisto-footer .wds-button:not(.wds-is-secondary):not(.wds-is-text):focus {
@@ -3085,8 +3171,8 @@ footer.mpisto-footer .wds-button:not(.wds-is-secondary):not(.wds-is-text):hover,
 }
 
 footer.mpisto-footer .wds-button.wds-is-text:not(.wds-is-secondary) {
-  color:#ccc;
-  color:var(--content-border);
+  color:#18bbc5;
+  color:rgb(var(--link-color));
   border:0;
 }
 
@@ -3216,8 +3302,8 @@ text-decoration:none;
 padding:6px 2px;
 clear:both;
 float:left;
- color:#ccc;
- color:var(--content-border);
+ color:#18bbc5;
+ color:rgb(var(--link-color));
 border-bottom:4px solid #000;
 border-bottom:4px solid var(--content-color);
 }
@@ -3225,8 +3311,8 @@ border-bottom:4px solid var(--content-color);
 footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container td a:not(.wds-button):hover {
     color:#000;
     color:var(--content-color);
-    border-color:#ccc;
-    border-color:var(--content-border);
+    border-color:#18bbc5;
+    border-color:rgb(var(--link-color));
 }
 
 
@@ -4065,8 +4151,8 @@ padding-bottom:34px;
   border-top:0;
   background-color:white;
   background-color:var(--content-bg);
-  box-shadow:0 0 7px 1.9px #ccc, 0 2px 6px 0 rgba(0,0,0,.2), 0 2px 6px 0 rgba(255,255,255,0.2);
-  box-shadow:0px 0 7px 1.9px var(--content-border),0 2px 6px 0 rgba(0,0,0,.2), 0 2px 6px 0 rgba(255,255,255,0.2);
+  box-shadow:0 0 7px 1.9px #ccc, 0 4px 8px 0 rgba(0,0,0,.4), 0 4px 8px 0 rgba(255,255,255,0.4);
+  box-shadow:0px 0 7px 1.9px var(--content-border), 0 4px 8px 0 rgba(0,0,0,.4), 0 4px 8px 0 rgba(255,255,255,0.4);
   margin:-20px auto 0;
   position:relative;
   z-index:2;
@@ -4465,8 +4551,8 @@ height:calc(100vh - 74px);
 z-index:3;
 margin:-20px auto 0;
 position:relative;
-box-shadow:0 0 7px 1.9px #ccc, 0 2px 6px 0 rgba(0,0,0,.2), 0 2px 6px 0 rgba(255,255,255,0.2);
-box-shadow:0px 0 7px 1.9px var(--content-border),0 2px 6px 0 rgba(0,0,0,.2), 0 2px 6px 0 rgba(255,255,255,0.2);
+box-shadow:0 0 7px 1.9px #ccc, 0 4px 8px 0 rgba(0,0,0,.4), 0 4px 8px 0 rgba(255,255,255,0.4);
+box-shadow:0px 0 7px 1.9px var(--content-border), 0 4px 8px 0 rgba(0,0,0,.4), 0 4px 8px 0 rgba(255,255,255,0.4);
 }
 
 
@@ -4685,6 +4771,7 @@ line-height:inherit;
 }
 
 .option-link {
+transition:all 400ms ease;
 font-size:21px;
 margin:6px;
 text-align:center;
@@ -4697,7 +4784,12 @@ align-items:center;
 justify-content:center;
 padding:16px 4px;
 background-clip:padding-box;
-border:4px dashed transparent;
+border:4px solid transparent;
+}
+
+.option-link:hover {
+color:#000;
+color:var(--content-color);
 }
 
 .option-link span {
@@ -4707,12 +4799,17 @@ margin-left:4px;
 
 
 .page-1 .option-link.p1, .page-2 .option-link.p2, .page-3 .option-link.p3, .page-4 .option-link.p4, .page-5 .option-link.p5, .page-6 .option-link.p6 {
-  background-color:#fff;
+/*  background-color:#fff;
   background-color:var(--content-bg);
   border-color:#ccc;
   border-color:var(--content-border);
+*/
   color:#18bbc5;
-  color:rgb(var(--link-color))
+  color:rgb(var(--link-color));
+  border-color:rgba(24,187,197, 0.2);
+  border-color:rgba(var(--link-color), 0.2);
+  background-color:rgba(24,187,197, 0.2);
+  background-color:rgba(var(--link-color), 0.2);
 }
 
 
@@ -5466,10 +5563,10 @@ body:not(.filterA):not(.filterB):not(.filterC):not(.filterD):not(.filterE):not(.
 /*		background-color:#03a1ab;
 		background-color:var(--button-color-dark);
 */
-		background-color:rgba(248,248,248,0.2);
-		background-color:rgba(var(--community-header-text),0.2);
-		color:rgba(248,248,248,0.8);
-		color:rgba(var(--community-header-text), 0.8);
+	background-color:rgba(24,187,197, 0.2);
+	background-color:rgba(var(--link-color), 0.2);
+	color:#18bbc5;
+	color:rgb(var(--link-color));
 
 }
 
@@ -5984,12 +6081,63 @@ cursor:url("Lenux/banned.cur"), not-allowed!important;
 cursor:url("Lenux/hand.cur"), pointer;
 }
 
+/* Edge Cursor fix */
+.edge {
+  cursor:auto;
+}
+
+.edge abbr[title] {
+  cursor:help;
+}
+
+.edge :not(.unset)[disabled] {
+cursor:not-allowed!important;
+}
+
+.edge textarea, .edge [contenteditable], .edge header.mpisto-navbar .search .search-input, .edge .mpisto-input {
+  cursor:text;
+}
+
+.edge .wds-dropdown .link, .edge .wds-button, .edge .wds-button:disabled, .edge .wds-dropdown__toggle, .edge .wds-is-disabled, .edge .wds-community-header__local-navigation a[href="#"], .edge .wds-tabs__tab {
+  cursor:default;
+}
+
+.edge a:hover, .edge .notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child):not(.empty), .edge .notification.wds-dropdown-level-2__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child):not(.empty), .edge a.wds-button, .edge button.wds-button, .edge .editor-header .wordmark, .edge .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, .edge .wds-banner-notification__close, .edge a label, .edge a input[type="checkbox"], .edge a input[type="radio"], .edge .wds-floating-button:not([disabled]), .edge .wds-floating-button:not(.wds-is-disabled) {
+cursor:pointer;
+}
+
 
 /** Mobile Only CSS **/
 /* Show the Mobile site link */
 .phone .mobile-data {
   display:block;
 }
+
+.phone {
+  cursor:auto;
+}
+
+.phone abbr[title] {
+  cursor:help;
+}
+
+.phone :not(.unset)[disabled] {
+cursor:not-allowed!important;
+}
+
+.phone textarea, .phone [contenteditable], .phone header.mpisto-navbar .search .search-input, .phone .mpisto-input {
+  cursor:text;
+}
+
+.phone .wds-dropdown .link, .phone .wds-button, .phone .wds-button:disabled, .phone .wds-dropdown__toggle, .phone .wds-is-disabled, .phone .wds-community-header__local-navigation a[href="#"], .phone .wds-tabs__tab {
+  cursor:pointer
+}
+
+.phone a:hover, .phone .notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child):not(.empty), .phone .notification.wds-dropdown-level-2__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child):not(.empty), .phone a.wds-button, .phone button.wds-button, .phone .editor-header .wordmark, .phone .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, .phone .wds-banner-notification__close, .phone a label, .phone a input[type="checkbox"], .phone a input[type="radio"], .phone .wds-floating-button:not([disabled]), .phone .wds-floating-button:not(.wds-is-disabled) {
+cursor:pointer;
+}
+
+
 
 .phone {
 	-webkit-text-size-adjust:100%;

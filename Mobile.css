@@ -248,8 +248,8 @@ main {
 overflow:hidden;
 }
 
-.osx .icon-button,[data-ember-action]{cursor:url("OSX/hand.cur"), pointer}
-.xubuntu .icon-button,[data-ember-action]{cursor:url("Lenux/hand.cur"), pointer}
+.osx .icon-button,.osx [data-ember-action]{cursor:url("OSX/hand.cur"), pointer}
+.xubuntu .icon-button,.xubuntu [data-ember-action]{cursor:url("Lenux/hand.cur"), pointer}
 
 /* Footer */
 footer.mobile-footer {

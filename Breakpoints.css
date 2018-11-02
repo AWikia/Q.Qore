@@ -15,6 +15,12 @@
 }
 
 
+@media only screen and (max-width:754px) {
+	.main .mpisto-2018 {
+		overflow:auto!important;
+	}
+}
+
 /* S */
 @media only screen and (max-width:959px) {
 /*.mpisto-grooze {
@@ -23,6 +29,10 @@ display:inline!important;
 .mpisto-content, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .lightbox, .mpisto-options-content {
   width:100%!important;
   width:calc(100% - 34px)!important;
+}
+
+.mpisto-2018 .mpisto-content, .mpisto-2018 footer.mpisto-footer .mpisto-wrapper, .mpisto-2018 .mpisto-editors-content, .mpisto-2018 .lightbox, .mpisto-2018 .mpisto-options-content, .mpisto-2018 header.mpisto-navbar .mpisto-navbar-wrapper, .mpisto-2018 header.mpisto-global-navigation .mpisto-global-navigation-wrapper, .mpisto-2018 header.mpisto-footer-container > div {
+	min-width:755px;
 }
 
 .wide .mpisto-content, .wide footer.mpisto-footer .mpisto-wrapper, .wide .mpisto-editors-content, .wide .lightbox, .wide .mpisto-options-content, .wide header.mpisto-global-navigation .mpisto-global-navigation-wrapper, .wide header.mpisto-footer-container > div, .wide header.mpisto-navbar .mpisto-navbar-wrapper {

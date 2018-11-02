@@ -72,7 +72,7 @@ filter:none!important;
 	opacity:0.7;
 }
 
-.mpisto-content .mpisto-wrapper::after, footer.mpisto-footer::after {
+.mpisto-content::after, footer.mpisto-footer::after {
 	opacity:0.9;
 }
 
@@ -148,7 +148,7 @@ filter:none!important;
 	opacity:0.7;
 }
 
-.prt .mpisto-content .mpisto-wrapper::after, .prt footer.mpisto-footer::after {
+.prt .mpisto-content::after, .prt footer.mpisto-footer::after {
 	opacity:0.9;
 }
 

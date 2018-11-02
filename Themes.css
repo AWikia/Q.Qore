@@ -915,3 +915,19 @@
 --community-header-bg:19,40,44;
 --community-header-text:248,248,248;
 }
+
+/* CSS Colors ~ */
+:root {
+--background-image:url("");
+--background-color:#ff6347;
+--link-color:205,133,63;
+--content-bg:#f5f5f5;
+--dropdown-bg:#FFFFFF;
+--content-border:#708090;
+--content-color:#000000;
+--button-color:#191970;
+--button-color-dark:#2C2C89;
+--button-color-text:white;
+--community-header-bg:210,105,30;
+--community-header-text:248,248,248;
+}

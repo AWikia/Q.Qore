@@ -204,7 +204,7 @@ function toggleMenu() {
 		<b>Mpisto War Store</b>
 	</div>
 	<div class="meter">
-	<span><b>44</b> Components</span>
+	<span><b>45</b> Components</span>
 	<span><b>6</b> Paid</span>
 	</div>
 	<div class="buttons wds-button-group">
@@ -342,7 +342,7 @@ function toggleMenu() {
 							<a class="wordmark cell" style="text-align:left"><img src="StoreMark.png"></img></a>
 							<h1 class="title cell" style="text-align:left"><a>Mpisto War Store</a></h1>
 							<div class="counters cell">
-								<div class="counter"><big>44</big> <span>Components</span></div>
+								<div class="counter"><big>45</big> <span>Components</span></div>
 								<div class="counter"><big>06</big> <span>Paid</span></div>
 							</div>
 				  <a title="Owned Items" class="link cell">				
@@ -480,7 +480,7 @@ function toggleMenu() {
       <span class="wds-community-header__counter-label">Shared</span>	
     </div>	
     <div class="wds-community-header__counter wds-is-article">		
-      <span class="wds-community-header__counter-value">44</span>		
+      <span class="wds-community-header__counter-value">45</span>		
       <span class="wds-community-header__counter-label">Components</span>	
     </div>	
     <div class="wds-community-header__wiki-buttons wds-button-group">			
@@ -810,7 +810,7 @@ function toggleMenu() {
   <path d="M23 4h-4.2c.1-.3.2-.6.2-1 0-1.7-1.3-3-3-3-2 0-3.2 1.3-4 2.5C11.2 1.3 10 0 8 0 6.3 0 5 1.3 5 3c0 .4.1.7.2 1H1c-.6 0-1 .4-1 1v2c0 .6.4 1 1 1h22c.6 0 1-.4 1-1V5c0-.6-.4-1-1-1zm-7-2c.6 0 1 .4 1 1s-.4 1-1 1h-2.5c.4-.9 1.3-2 2.5-2zM7 3c0-.6.4-1 1-1 1.2 0 2.1 1.1 2.5 2H8c-.6 0-1-.4-1-1zm4 7H3c-.6 0-1 .4-1 1v12c0 .6.4 1 1 1h8V10zm10 0h-8v14h8c.6 0 1-.4 1-1V11c0-.6-.4-1-1-1z" fill-rule="evenodd"/>
   </svg> <span>Download themes to Personalize your wiki easier</span> 
     		<div class="counters">
-				<div class="counter"><big>14</big> <span>Themes</span></div>
+				<div class="counter"><big>15</big> <span>Themes</span></div>
 				<div class="counter"><big>02</big> <span>Paid</span></div>
 			</div>
   <button class="wds-button wds-is-squished wds-is-secondary"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small" viewBox="0 0 24 24">
@@ -943,6 +943,15 @@ function toggleMenu() {
   </svg>
             </div>
           <span>Prism</span>
+          <span class="price">Free</span>
+        </a> 
+        <a class="wds-button wds-is-secondary col">
+            <div class="wds-button wds-is-text wds-is-square">
+            <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon" viewBox="0 0 24 24">
+  <path d="M23 4h-4.2c.1-.3.2-.6.2-1 0-1.7-1.3-3-3-3-2 0-3.2 1.3-4 2.5C11.2 1.3 10 0 8 0 6.3 0 5 1.3 5 3c0 .4.1.7.2 1H1c-.6 0-1 .4-1 1v2c0 .6.4 1 1 1h22c.6 0 1-.4 1-1V5c0-.6-.4-1-1-1zm-7-2c.6 0 1 .4 1 1s-.4 1-1 1h-2.5c.4-.9 1.3-2 2.5-2zM7 3c0-.6.4-1 1-1 1.2 0 2.1 1.1 2.5 2H8c-.6 0-1-.4-1-1zm4 7H3c-.6 0-1 .4-1 1v12c0 .6.4 1 1 1h8V10zm10 0h-8v14h8c.6 0 1-.4 1-1V11c0-.6-.4-1-1-1z" fill-rule="evenodd"/>
+  </svg>
+            </div>
+          <span>CSS Colors</span>
           <span class="price">Free</span>
         </a> 
 
@@ -1311,6 +1320,13 @@ if (navigator.userAgent.match("Linux")) {
 document.getElementById("Handler").className += " xubuntu"
 }
 
+if (navigator.userAgent.match("Trident")) {
+document.getElementById("Handler").className += " explorer"
+}
+
+if (navigator.userAgent.match("Edge")) {
+document.getElementById("Handler").className += " edge"
+}
 
 
 /* Dropdown
