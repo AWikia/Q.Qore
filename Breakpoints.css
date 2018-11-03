@@ -15,7 +15,7 @@
 }
 
 
-@media only screen and (max-width:754px) {
+@media only screen and (max-width:717px) {
 	.main .mpisto-2018 {
 		overflow:auto!important;
 	}
@@ -32,7 +32,7 @@ display:inline!important;
 }
 
 .mpisto-2018 .mpisto-content, .mpisto-2018 footer.mpisto-footer .mpisto-wrapper, .mpisto-2018 .mpisto-editors-content, .mpisto-2018 .lightbox, .mpisto-2018 .mpisto-options-content, .mpisto-2018 header.mpisto-navbar .mpisto-navbar-wrapper, .mpisto-2018 header.mpisto-global-navigation .mpisto-global-navigation-wrapper, .mpisto-2018 header.mpisto-footer-container > div {
-	min-width:755px;
+	min-width:718px;
 }
 
 .wide .mpisto-content, .wide footer.mpisto-footer .mpisto-wrapper, .wide .mpisto-editors-content, .wide .lightbox, .wide .mpisto-options-content, .wide header.mpisto-global-navigation .mpisto-global-navigation-wrapper, .wide header.mpisto-footer-container > div, .wide header.mpisto-navbar .mpisto-navbar-wrapper {
