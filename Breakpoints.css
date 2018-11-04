@@ -31,7 +31,7 @@ display:inline!important;
   width:calc(100% - 34px)!important;
 }
 
-.mpisto-2018 .mpisto-content, .mpisto-2018 footer.mpisto-footer .mpisto-wrapper, .mpisto-2018 .mpisto-editors-content, .mpisto-2018 .lightbox, .mpisto-2018 .mpisto-options-content, .mpisto-2018 header.mpisto-navbar .mpisto-navbar-wrapper, .mpisto-2018 header.mpisto-global-navigation .mpisto-global-navigation-wrapper, .mpisto-2018 header.mpisto-footer-container > div {
+.mpisto-2018 .mpisto-content, .mpisto-2018 footer.mpisto-footer, .mpisto-2018 .mpisto-editors-content, .mpisto-2018 .lightbox, .mpisto-2018 .mpisto-options-content, .mpisto-2018 header.mpisto-navbar .mpisto-navbar-wrapper, .mpisto-2018 header.mpisto-global-navigation .mpisto-global-navigation-wrapper, .mpisto-2018 header.mpisto-footer-container > div {
 	min-width:718px;
 }
 
