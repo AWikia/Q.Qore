@@ -1,0 +1,30 @@
+/* Headroom */
+.mpisto-gnav.headroom:after {
+	transition:background-color 400ms ease;
+	will-change:background-color;
+}
+
+.mpisto-gnav.headroom {
+	transition:transform 400ms ease;
+	will-change: color, background-color;
+}
+
+.mpisto-gnav.headroom--bottom {
+	transform:translateY(-100%);
+}
+
+.mpisto-gnav.headroom.headroom--not-top::after {
+	background-color:#000;
+	background-color:var(--content-color);
+}
+
+.mpisto-gnav.headroom.headroom--not-top {
+	color:#fff;
+	color:var(--content-bg);
+
+}
+
+.mpisto-gnav.headroom.headroom--not-top .wds-list {
+	color:#000;
+	color:var(--content-color);
+}

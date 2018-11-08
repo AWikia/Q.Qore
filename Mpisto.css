@@ -2939,6 +2939,10 @@ word-wrap: break-word;
 width:calc(-300px + 100%);
 }
 
+.mpisto-content.single .mpisto-article-wrapper .mpisto-article {
+	width:100%;
+}
+
 .mpisto-article h1, .mpisto-article h2, .mpisto-article h3, .mpisto-article h4, .mpisto-article h5, .mpisto-article h6 {
 margin:0.5em 0 .2em;
 }
@@ -2966,6 +2970,91 @@ padding-bottom:4px;
 .mpisto-article h3, .mpisto-article h4, .mpisto-article h5, .mpisto-article h6 {
 font-weight:bold;
 }
+
+.stats-table {
+	line-height:1.5;
+	width:90%;
+	margin:0 auto;
+	border-radius:1px;
+	margin:5px auto;
+	border:1px solid;
+	border-bottom:5px ridge #000;
+	border-bottom-color:var(--content-color);
+	border-collapse:collapse;
+}
+
+.stats-table th {
+	font-family:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Jua", "Mada", "Pavanam", "NTR", cursive;
+	font-family:var(--secondary-font), cursive;
+	font-weight:900;
+	text-align:center;
+	font-size:30px;
+}
+
+.stats-table th, .stats-table td {
+	border:1px solid;
+	padding:5px;
+	margin:1px 0;
+	text-align:center
+}
+
+.stats-table .name {
+	font-size:1.16em;
+	font-weight:500;
+	width:100%;
+	text-align:right;
+}
+
+.stats-table .progress {
+	width:280px;
+
+}
+
+.stats-table .progress span {
+	font-size:0.9em;
+	font-weight:600;
+	font-style:italic;
+	text-align:center;
+}
+
+.stats-table .progress progress {
+	width:280px;
+	-webkit-appearance:none;
+	border:1px solid currentColor;
+	height:1em;
+	background-color:#ffffff;
+	background-color:var(--dropdown-bg);
+	color:inherit;
+}
+
+.stats-table .progress progress::-webkit-progress-bar {
+	-webkit-appearance:none;
+	background-color:transparent;
+	border:0;
+}
+
+.stats-table .progress progress::-webkit-progress-value { /* Webkit and Blink */
+	-webkit-appearance:none;
+	background-color:#005fff;
+	background-image:linear-gradient(to right, #005fff 0 70px, #00bf32 0 140px, #ffbe00 0 210px, #ff4333 0 280px);
+	border:0;
+}
+
+.stats-table .progress progress::-moz-progress-bar { /* Gecko */
+	-webkit-appearance:none;
+	background-color:#005fff;
+	background-image:linear-gradient(to right, #005fff 0 70px, #00bf32 0 140px, #ffbe00 0 210px, #ff4333 0 280px);
+	border:0;
+}
+
+.stats-table .progress progress::-ms-fill { /* Nobody cares about IE */
+	-webkit-appearance:none;
+	background-color:#005fff;
+	background-image:linear-gradient(to right, #005fff 0 70px, #00bf32 0 140px, #ffbe00 0 210px, #ff4333 0 280px);
+	border:0;
+}
+
+
 
 input[type="number"] {
 	border-radius:10px;
@@ -5693,7 +5782,7 @@ border-left-style:solid
 /* Preview */
 .cube-container {
   transition: all 275ms cubic-bezier(0.3, 0.55, 0.4, 1.7) 8ms;
-  margin:20px auto;
+  margin:20px 0; /* Some spacing */
 }
 .cube-container div.container {
   width: 100px;
