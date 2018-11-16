@@ -2128,7 +2128,7 @@ border-left-color:rgba(var(--community-header-text),0.8);
 }
 
 @supports (background-blend-mode:overlay) {
-		body:not(.contrast) .mpisto-header-container::after {
+		body:not(.contrast):not(.contrast) .mpisto-header-container::after {
 			opacity:0.5;
 		}
 }
