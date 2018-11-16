@@ -40,7 +40,7 @@ Raleway = Rest
 
 /* Serif */
 @import url('https://fonts.googleapis.com/css?family=Amiri:400,700|Cambo|David+Libre:400,500,700|Lora:400,700|Merriweather:300,400,700,900|Neuton:200,300,400,400i,700,800|Noto+Serif+JP:200,300,400,500,600,700,900|Noto+Serif:400,700|Pridi:200,300,400,500,600,700|Ramaraja|Song+Myung|Source+Serif+Pro:400,600,700&subset=arabic,cyrillic,cyrillic-ext,greek,greek-ext,hebrew,japanese,korean,latin-ext,telugu,thai,vietnamese');
-
+@import url('https://fonts.googleapis.com/css?family=Arvo:400,700');
 
 @font-face {
     font-family: LCD;
@@ -209,7 +209,7 @@ font-family:Fira Sans, "Verdana", sans-serif!important; /* Use the preloaded fir
 }
 
 .serif.main .mob2-font {
-font-family:Neuton, "Liberation Serif", serif!important; /* Use the preloaded fira sans font instead of the Source Sans Pro font */
+font-family:Arvo, "Liberation Serif", serif!important; /* Use the preloaded fira sans font instead of the Source Sans Pro font */
 }
 
 
@@ -336,12 +336,18 @@ display:none;
   display:none;
 }
 
+
 hr.mobile-data {
   background-color:#ccc;
   background-color:var(--content-border);
   border:0;
   height:2px;
   margin:2px 0;
+}
+
+footer.mpisto-footer hr.mobile-data {
+	border:0;
+	background-color:transparent;
 }
 
 h3.mobile-data a {
@@ -353,10 +359,19 @@ h3.mobile-data a {
   font-family:var(--secondary-font), cursive;
 }
 
+footer.mpisto-footer h3.mobile-data a {
+	transition:all 500ms;
+}
+
 h3.mobile-data a:hover {
   text-decoration:none;
   color:rgba(24,187,197,0.8);
   color:rgba(var(--link-color), 0.8);
+}
+
+footer.mpisto-footer h3.mobile-data a:hover {
+  color:#ffffff;
+  color:var(--dropdown-bg);
 }
 
 
@@ -2128,7 +2143,7 @@ border-left-color:rgba(var(--community-header-text),0.8);
 }
 
 @supports (background-blend-mode:overlay) {
-		body:not(.contrast):not(.contrast) .mpisto-header-container::after {
+		body:not(.contrast):not(.edge) .mpisto-header-container::after {
 			opacity:0.5;
 		}
 }
@@ -3168,21 +3183,27 @@ min-width:768px;
 font-family:Arial Nova, sans-serif;
 background-color:#fff;
 background-color:var(--dropdown-bg);
+border-top:2px solid #ccc;
+border-top:2px solid var(--content-border);
+color:#000;
+color:var(--content-color);
 */
 width:100%;
 min-height:50px;
-border-top:2px solid #ccc;
-border-top:2px solid var(--content-border);
+background-color:#000;
+background-color:var(--content-color);
 margin:30px 0 0;
-color:#000;
-color:var(--content-color);
+color:#ffffff;
+color:var(--dropdown-bg);
+
 font-family:"Source Sans Pro", "Prompt",  "M PLUS 1p", "Gothic A1", "Cairo", "Catamaran", "Ramabhadra", cursive;
 position:relative;
 z-index:49;
 padding:0 0 22px;
-box-shadow:0 0 9px #ccc, 0 0 2.5px #000, 0 0 1.5px #fff;
-box-shadow:0 0 9px var(--content-border), 0 0 2.5px #000, 0 0 1.5px #fff;
-background-color:rgba(0,0,0,0.2);
+/*box-shadow:0 0 9px #ccc, 0 0 2.5px #000, 0 0 1.5px #fff;
+box-shadow:0 0 9px var(--content-border), 0 0 2.5px #000, 0 0 1.5px #fff;*/
+box-shadow: 0 0 3px #000, 0 0 3px #fff;
+
 }
 
 .serif footer.mpisto-footer {
@@ -3190,15 +3211,14 @@ font-family:"Source Serif Pro", "Song Myung",  "Noto Serif JP", "David Libre", "
 }
 
 
-/* Glass effect for browsers with backdrop filter, use opaque for others */
+/* Glass effect for browsers with backdrop filter, use opaque for others
 footer.mpisto-footer {
 background-color:transparent;
 }
 
 footer.mpisto-footer:after {
-    /*
+   
     background-color:var(--dropdown-bg);
-    */
     content: "";
     display: block;
     height: 100%;
@@ -3210,21 +3230,22 @@ footer.mpisto-footer:after {
     opacity:0.9;
     top:0;
     left:0;
-/*	-webkit-backdrop-filter:invert(1) hue-rotate(180deg) saturate(1.2) blur(6.5px);
+	-webkit-backdrop-filter:invert(1) hue-rotate(180deg) saturate(1.2) blur(6.5px);
 	backdrop-filter:invert(1) hue-rotate(180deg) saturate(1.2) blur(6.5px);
-*/
-/*
+
+
    -webkit-backdrop-filter: saturate(350%) brightness(105%) sepia(40%) grayscale(40%) hue-rotate(6deg) blur(1.2px);
     backdrop-filter: saturate(350%) brightness(105%) sepia(40%) grayscale(40%) hue-rotate(6deg) blur(1.2px);
-*/
-}
 
+}
+*/
 
 
 footer.mpisto-footer .wds-button {
 	border-radius:8px;
 	padding:8px 16px;
 	font-size:12.5px;
+	transition:all 500ms;
 }
 
 /* Button Styling */
@@ -3236,10 +3257,10 @@ footer.mpisto-footer .wds-button.wds-is-secondary {
 }
 
 footer.mpisto-footer .wds-button.wds-is-secondary:hover {
-  color:#000;
-  color:var(--content-color);
-  border-color:#000;
-  border-color:var(--content-color);
+  color:#ffffff;
+  color:var(--dropdown-bg);
+  border-color:#ffffff;
+  border-color:var(--dropdown-bg);
 }
 
 
@@ -3253,10 +3274,10 @@ footer.mpisto-footer .wds-button:not(.wds-is-secondary):not(.wds-is-text) {
 }
 
 footer.mpisto-footer .wds-button:not(.wds-is-secondary):not(.wds-is-text):hover, footer.mpisto-footer .wds-button:not(.wds-is-secondary):not(.wds-is-text):active, footer.mpisto-footer .wds-button:not(.wds-is-secondary):not(.wds-is-text):focus {
-  border-color:#000;
-  border-color:var(--content-color);
-  background-color:#000;
-  background-color:var(--content-color);
+  border-color:#ffffff;
+  border-color:var(--dropdown-bg);
+  background-color:#ffffff;
+  background-color:var(--dropdown-bg);
 }
 
 footer.mpisto-footer .wds-button.wds-is-text:not(.wds-is-secondary) {
@@ -3266,44 +3287,129 @@ footer.mpisto-footer .wds-button.wds-is-text:not(.wds-is-secondary) {
 }
 
 footer.mpisto-footer .wds-button.wds-is-text:hover, footer.mpisto-footer .wds-button.wds-is-text:active, footer.mpisto-footer .wds-button.wds-is-text:focus {
-  color:#000;
-  color:var(--content-color);
+  color:#ffffff;
+  color:var(--dropdown-bg);
 }
 
 
 footer.mpisto-footer .mpisto-wrapper {
 /*
 border-collapse:collapse;
-*/
 border:1px solid #ccc;
 border:1px solid var(--content-border);
 border-top-style:hidden;
 border-bottom-style:hidden;
+*/
 width:1066px;
 border-spacing:0;
 margin:0 auto;
 color:inherit;
 border-collapse:separate; /* Mac mInerva and QortaQorte uses border-collapse:collapse by default, leading to unexpected layout */
+display:table;
+}
+
+footer.mpisto-footer .mpisto-wrapper .mpisto-footer-overview {
+min-height:30px;
+display:inline-block;
+width:260px;
+vertical-align:middle;
 }
 
 footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container {
-min-height:30px;
+	width:calc(100% - 266px);
+	display:inline-block;
+	vertical-align:middle;
 }
 
-footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container > * > th,
+
+
+footer.mpisto-footer .mpisto-wrapper header {
+width:100%;
+text-align:left;
+font-weight:500;
+}
+
+footer.mpisto-footer .mpisto-wrapper .mpisto-footer-bar h3 {
+	text-align:center;
+	font-size:20px;
+}
+
+
+footer.mpisto-footer .mpisto-wrapper nav {
+text-align:left;
+font-weight:500;
+display:table-cell;
+}
+
+footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container nav {
+	width:2%;
+}
+
+
+footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container .app-download div {
+	display:table;
+	width:100%;
+}
+
+footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container .app-download span {
+	display:table-cell;
+}
+
+
+
+footer.mpisto-footer .mpisto-wrapper  h2 {
+	font-size:24px;
+	font-weight:bolder;
+	text-align:left;
+  font-family:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Jua", "Mada", "Pavanam", "NTR", cursive;
+  font-family:var(--secondary-font), cursive;
+}
+
+footer.mpisto-footer .mpisto-wrapper .overview {
+	display:block;
+}
+
+footer.mpisto-footer .mpisto-wrapper .link {
+  color:#18bbc5;
+  color:rgb(var(--link-color));
+  font-size:16px;
+	display:block;
+  text-decoration:none;
+  line-height:1.5;
+  transition:all 500ms;
+
+}
+
+footer.mpisto-footer .mpisto-wrapper .link:hover {
+  color:#ffffff;
+  color:var(--dropdown-bg);
+}
+
+
+footer.mpisto-footer .mpisto-wrapper .wordmark-container {
+	display:block;
+}
+
+
+
+footer.mpisto-footer .mpisto-wrapper .wordmark {
+	transition:opacity 500ms;
+}
+
+footer.mpisto-footer .mpisto-wrapper .wordmark:hover {
+	opacity:0.8;
+}
+
+/*footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container > * > th,
 footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container > * > td {
 border:1px solid #ccc;
 border:1px solid var(--content-border);
 }
 
-footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container th {
-width:100%;
-}
 
 footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container th h1 {
-/*
 font-weight:900;
-*/
+
   font-family:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Jua", "Mada", "Pavanam", "NTR", cursive;
   font-family:var(--secondary-font), cursive;
 font-weight:700;
@@ -3332,10 +3438,10 @@ footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container th:not(.mpisto-foo
 }
 
 footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container th::after {
-/*
+
 background-color:#000;
 background-color:var(--content-color);
-*/
+
 position:absolute;
 top:0;
 left:0;
@@ -3359,10 +3465,10 @@ padding:4px 8px 8px;
 
 
 footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container td::after {
-/*
+
 background-color:#000;
 background-color:var(--content-color);
-*/
+
 position:absolute;
 top:0;
 left:0;
@@ -3382,9 +3488,9 @@ font-weight:bolder;
 }
 
 footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container td a:not(.wds-button) {
-/*
+
 transition:all 275ms cubic-bezier(0.4, 0.55, 0.3, 1.7) 8ms;
-*/
+
 display:block;
 transition:all 150ms ease 12ms;
 text-decoration:none;
@@ -3408,7 +3514,7 @@ footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container td a:not(.wds-butt
 footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container td br + .wds-button {
 margin:7px 0;
 }
-
+*/
 .mpisto-right-pane {
 display:inline-block;
 padding:10px;

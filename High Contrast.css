@@ -307,7 +307,7 @@ body:not(.filterA):not(.filterB):not(.filterC):not(.filterD):not(.filterE):not(.
   background-color:var(--content-bg);
 }
 
-.contrast header.mpisto-footer-container, .contrast .mpisto-option-pane, .basic header.mpisto-footer-container, .basic .mpisto-option-pane, .contrast footer.mpisto-footer, .basic footer.mpisto-footer {
+.contrast header.mpisto-footer-container, .contrast .mpisto-option-pane, .basic header.mpisto-footer-container, .basic .mpisto-option-pane {
   background-color:var(--dropdown-bg);
 }
 
@@ -475,13 +475,13 @@ background-color:var(--button-color);
   position:static;
 }
 
-.contrast footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container th {
+/*.contrast footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container th {
   background-color:var(--button-color);
   color:var(--button-color-text);
   z-index:initial;
   position:static;
 }
-
+*/
 
 .contrast .lightbox-container:target {
 background-color:var(--dropdown-bg);

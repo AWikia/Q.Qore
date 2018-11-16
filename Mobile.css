@@ -1,8 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,500,700,900|Noto+Sans+KR:100,300,400,500,700,900|Noto+Sans:400,700&subset=cyrillic,cyrillic-ext,devanagari,greek,greek-ext,japanese,korean,latin-ext,vietnamese');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900|Noto+Sans+TC:100,300,400,500,700,900&subset=chinese-simplified,chinese-traditional,cyrillic,japanese,vietnamese');
 
 .mobile-data {
 display:block;
 }
+
+footer.mpisto-footer h3.mobile-data a {
+	color:#18bbc6;
+}
+
+footer.mpisto-footer h3.mobile-data a:hover {
+	color:#ffffff;
+}
+
 
 :root, .wds-button {
 	/* Override some variables used in Body and some wds-components */
@@ -18,7 +28,7 @@ display:block;
 --button-color-text:white;
 --community-header-bg:24,187,198;
 --community-header-text:248,248,248;
-font-family:"Noto Sans", "Noto Sans KR", "Noto Sans JP", sans-serif;
+font-family:"Noto Sans", "Noto Sans KR", "Noto Sans JP", "Noto Sans SC", "Noto Sans TC" sans-serif;
 display:block;
 }
 
@@ -649,59 +659,59 @@ padding-right:0!important;
 
 
 footer.mpisto-footer {
-background-color:#fff;
-color:#002a32;
+color:#ffffff;
+background-color:#002a32;
 padding:0;
 }
 
 
 footer.mpisto-footer .wds-button.wds-is-secondary {
-  color:#cccddd;
-  border-color:#cccddd;
+  color:#18bbc6;
+  border-color:#18bbc6;
 }
 
 footer.mpisto-footer .wds-button.wds-is-secondary:hover {
-  color:#39242d;
-  border-color:#39242d;
+  color:#ffffff;
+  border-color:#ffffff;
 }
 
 
 footer.mpisto-footer .wds-button:not(.wds-is-secondary):not(.wds-is-text) {
-  color:#fff;
-  border-color:#cccddd;
-  background-color:#cccddd;
+  color:#000000;
+  border-color:#18bbc6;
+  background-color:#18bbc6;
 }
 
 footer.mpisto-footer .wds-button:not(.wds-is-secondary):not(.wds-is-text):hover, footer.mpisto-footer .wds-button:not(.wds-is-secondary):not(.wds-is-text):active, footer.mpisto-footer .wds-button:not(.wds-is-secondary):not(.wds-is-text):focus {
-  border-color:#39242d;
-  background-color:#39242d;
+  border-color:#ffffff;
+  background-color:#ffffff;
 }
 
 footer.mpisto-footer .wds-button.wds-is-text:not(.wds-is-secondary) {
-  color:#cccddd;
+  color:#18bbc6;
   border:0;
 }
 
 footer.mpisto-footer .wds-button.wds-is-text:hover, footer.mpisto-footer .wds-button.wds-is-text:active, footer.mpisto-footer .wds-button.wds-is-text:focus {
-  color:#39242d;
+  color:#ffffff;
 }
 
 
 
-footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container td a:not(.wds-button) {
-    color:#cccddd;
-    border-color:#39242d;
+footer.mpisto-footer .mpisto-wrapper nav .link {
+    color:#18bbc6;
 }
 
-footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container td a:not(.wds-button):hover {
-    border-color:#cccddd;
-    color:#39242d;
+footer.mpisto-footer .mpisto-wrapper nav .link:hover {
+    color:#ffffff;
 }
 
 
-footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container th::after, footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container td::after {
+/*footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container th::after, footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container td::after {
     background-color:#39242d;
 }
+*/
+
 
 /* Some fixes for the search input */
 header.mpisto-navbar .search .search-input {
