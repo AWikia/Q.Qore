@@ -4238,7 +4238,7 @@ header.mpisto-footer-container {
   min-height:22px;
   width:100%;
   border:2px solid #18bbc5;
-  border:2px solid rgb(var(--link-color));
+  border-color:rgb(var(--link-color));
   border-left-width:0px;
   border-right-width:0px;
   border-bottom-width:0px;
