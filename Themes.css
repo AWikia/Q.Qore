@@ -5,6 +5,7 @@
 --link-color:24,187,197;
 --content-bg:#ffffff;
 --dropdown-bg:#FFFFFF;
+--emphasis-bg:#92DFE4;
 --content-border:#ccc;
 --content-color:#000000;
 --button-color:#18BBC5;
@@ -21,6 +22,7 @@
 --link-color:25,77,204;
 --content-bg:#ffffff;
 --dropdown-bg:#FFFFFF;
+--emphasis-bg:#92ABE7;
 --content-border:#ccc;
 --content-color:#010101;
 --button-color:#194cd1;
@@ -37,6 +39,7 @@
 --link-color:232,30,40;
 --content-bg:#fffaf5;
 --dropdown-bg:#FFFFFF;
+--emphasis-bg:#F49294;
 --content-border:#bbbbbb;
 --content-color:#111122;
 --button-color:#CA3A22;
@@ -53,6 +56,7 @@
 --link-color:232,30,40;
 --content-bg:#fffcfa;
 --dropdown-bg:#FFFFFF;
+--emphasis-bg:#F49396;
 --content-border:#bbbbbb;
 --content-color:#111122;
 --button-color:#583582;
@@ -68,7 +72,8 @@
 --background-color:#67f0ff;
 --link-color:163,71,208;
 --content-bg:#fbedfe;
---dropdown-bg:#F4EFF9;
+--dropdown-bg:#ffffff;
+--emphasis-bg:#D19EE8;
 --content-border:#ffdc87;
 --content-color:#2a4b6c;
 --button-color:#7AB247;
@@ -84,7 +89,8 @@
 --background-color:#ffa257;
 --link-color:255,0,0;
 --content-bg:#f9e6e8;
---dropdown-bg:#F3ECEE;
+--dropdown-bg:#ffffff;
+--emphasis-bg:#FC797A;
 --content-border:#bdbdbd;
 --content-color:#1f0000;
 --button-color:#F10C35;
@@ -101,6 +107,7 @@
 --link-color:255,0,0;
 --content-bg:#fcf0f2;
 --dropdown-bg:#ffffff;
+--emphasis-bg:#FE7E7F;
 --content-border:#bdbdbd;
 --content-color:#1f0000;
 --button-color:#e6a28a;
@@ -116,7 +123,8 @@
 --background-color:#599ace;
 --link-color:114,137,218;
 --content-bg:#d9e9f9;
---dropdown-bg:#E4EDF6;
+--dropdown-bg:#ffffff;
+--emphasis-bg:#A8BCEA;
 --content-border:#b2b2b2;
 --content-color:#10001a;
 --button-color:#4E5D94;
@@ -132,7 +140,8 @@
 --background-color:#ff0000;
 --link-color:78,93,148;
 --content-bg:#fefff1;
---dropdown-bg:#F5F8F3;
+--dropdown-bg:#ffffff;
+--emphasis-bg:#ABB2C5;
 --content-border:#b0cccc;
 --content-color:#3c1a2b;
 --button-color:#404A57;
@@ -149,6 +158,7 @@
 --link-color:78,93,148;
 --content-bg:#fffaf5;
 --dropdown-bg:#FFFFFF;
+--emphasis-bg:#ABB0C7;
 --content-border:#b0cccc;
 --content-color:#3c1a2b;
 --button-color:#953151;
@@ -164,7 +174,8 @@
 --background-color:#9df6fe;
 --link-color:128,0,128;
 --content-bg:#f8ceff;
---dropdown-bg:#F2E1F9;
+--dropdown-bg:#ffffff;
+--emphasis-bg:#BF6CC3;
 --content-border:#e75254;
 --content-color:#0a385a;
 --button-color:#A749E7;
@@ -181,6 +192,7 @@
 --link-color:224,57,135;
 --content-bg:#feb0a4;
 --dropdown-bg:#F5D2CE;
+--emphasis-bg:#F07896;
 --content-border:#9214da;
 --content-color:#700658;
 --button-color:#F838A9;
@@ -197,6 +209,7 @@
 --link-color:224,57,135;
 --content-bg:#f2c4b8;
 --dropdown-bg:#EFDCD8;
+--emphasis-bg:#EA82A1;
 --content-border:#9214da;
 --content-color:#700658;
 --button-color:#DC32CC;
@@ -213,6 +226,7 @@
 --link-color:26,74,74;
 --content-bg:#f5f5f5;
 --dropdown-bg:#FFFFFF;
+--emphasis-bg:#8DA4A4;
 --content-border:#cccddd;
 --content-color:#010000;
 --button-color:#18BBC6;
@@ -229,7 +243,8 @@
 --background-color:#54d9f8;
 --link-color:134,4,152;
 --content-bg:#ffecff;
---dropdown-bg:#F6EFF9;
+--dropdown-bg:#ffffff;
+--emphasis-bg:#C67ECE;
 --content-border:#ddf759;
 --content-color:#2a2a2a;
 --button-color:#70C800;
@@ -246,6 +261,7 @@
 --link-color:0,0,255;
 --content-bg:#282828;
 --dropdown-bg:#1A1A1A;
+--emphasis-bg:#15158E;
 --content-border:#cccccc;
 --content-color:#f9f9f9;
 --button-color:#00178C;
@@ -262,6 +278,7 @@
 --link-color:0,255,255;
 --content-bg:#3a3a3a;
 --dropdown-bg:#232323;
+--emphasis-bg:#1E9797;
 --content-border:#cccddd;
 --content-color:#c9d4d5;
 --button-color:#264774;
@@ -277,7 +294,8 @@
 --background-color:#fcc101;
 --link-color:231,105,1;
 --content-bg:#ebe5da;
---dropdown-bg:#ECEBE8;
+--dropdown-bg:#ffffff;
+--emphasis-bg:#E9AA73;
 --content-border:#ebc780;
 --content-color:#1a1a1a;
 --button-color:#F5A14C;
@@ -293,7 +311,8 @@
 --background-color:#f8e9ae;
 --link-color:175,66,0;
 --content-bg:#fbe7b5;
---dropdown-bg:#F4ECD6;
+--dropdown-bg:#ffffff;
+--emphasis-bg:#D7995F;
 --content-border:#c9b991;
 --content-color:#2b2b2b;
 --button-color:#FE7E03;
@@ -310,6 +329,7 @@
 --link-color:92,187,129;
 --content-bg:#ffffff;
 --dropdown-bg:#FFFFFF;
+--emphasis-bg:#B2DFC3;
 --content-border:#cacaca;
 --content-color:#000000;
 --button-color:#5CBB81;
@@ -327,6 +347,7 @@
 --link-color:0,170,255;
 --content-bg:#0000a8;
 --dropdown-bg:#7D7FD0;
+--emphasis-bg:#0050D1;
 --content-border:#aaaacc;
 --content-color:#f9f9f9;
 --button-color:#00699E;
@@ -343,6 +364,7 @@
 --link-color:187,187,187;
 --content-bg:#ffffff;
 --dropdown-bg:#FFFFFF;
+--emphasis-bg:#DFDFDF;
 --content-border:#cacaca;
 --content-color:#000000;
 --button-color:#CCCCCC;
@@ -358,7 +380,8 @@
 --background-color:#aa00aa;
 --link-color:221,154,255;
 --content-bg:#1aef28;
---dropdown-bg:#89F093;
+--dropdown-bg:#14791A;
+--emphasis-bg:#76C78E;
 --content-border:#b0a1ee;
 --content-color:#002200;
 --button-color:#18C5BB;
@@ -375,6 +398,7 @@
 --link-color:148,24,197;
 --content-bg:#fdfeff;
 --dropdown-bg:#FFFFFF;
+--emphasis-bg:#CB91E4;
 --content-border:#eee;
 --content-color:#1a2a3a;
 --button-color:#FF7E09;
@@ -391,6 +415,7 @@
 --link-color:129,187,92;
 --content-bg:#ffffff;
 --dropdown-bg:#FFFFFF;
+--emphasis-bg:#C3DFB2;
 --content-border:#cccccc;
 --content-color:#000000;
 --button-color:#81BB5C;
@@ -409,6 +434,7 @@
 --link-color:92,187,129;
 --content-bg:#ffffff;
 --dropdown-bg:#FFFFFF;
+--emphasis-bg:#B2DFC3;
 --content-border:#cccccc;
 --content-color:#000000;
 --button-color:#5CBB81;
@@ -425,6 +451,7 @@
 --link-color:197,187,24;
 --content-bg:#ffffff;
 --dropdown-bg:#FFFFFF;
+--emphasis-bg:#E4DF92;
 --content-border:#cccccc;
 --content-color:#000000;
 --button-color:#C5BB18;
@@ -441,6 +468,7 @@
 --link-color:0,0,159;
 --content-bg:#d6cec8;
 --dropdown-bg:#E2E1DF;
+--emphasis-bg:#8686D2;
 --content-border:#848484;
 --content-color:#000000;
 --button-color:#08226C;
@@ -456,7 +484,8 @@
 --background-color:#aaffaa;
 --link-color:24,255,187;
 --content-bg:#22bb22;
---dropdown-bg:#8DD890;
+--dropdown-bg:#186018;
+--emphasis-bg:#1DDB6A;
 --content-border:#00aaff;
 --content-color:#d9e9f9;
 --button-color:#32DC32;
@@ -473,6 +502,7 @@
 --link-color:128,128,255;
 --content-bg:#000000;
 --dropdown-bg:#080808;
+--emphasis-bg:#3C3C79;
 --content-border:#00ff00;
 --content-color:#ffff00;
 --button-color:#008000;
@@ -489,6 +519,7 @@
 --link-color:128,128,255;
 --content-bg:#000000;
 --dropdown-bg:#080808;
+--emphasis-bg:#3C3C79;
 --content-border:#c0c0c0;
 --content-color:#00ff00;
 --button-color:#0000FF;
@@ -505,6 +536,7 @@
 --link-color:255,255,0;
 --content-bg:#000000;
 --dropdown-bg:#080808;
+--emphasis-bg:#797900;
 --content-border:#3ff23f;
 --content-color:#ffffff;
 --button-color:#1AEBFF;
@@ -521,6 +553,7 @@
 --link-color:0,0,159;
 --content-bg:#ffffff;
 --dropdown-bg:#FFFFFF;
+--emphasis-bg:#8686D2;
 --content-border:#600000;
 --content-color:#000000;
 --button-color:#37006E;
@@ -536,7 +569,8 @@
 --background-color:#76f6ff;
 --link-color:128,0,128;
 --content-bg:#e0e8ee;
---dropdown-bg:#E7EDF1;
+--dropdown-bg:#ffffff;
+--emphasis-bg:#B37ABA;
 --content-border:#ffc0cb;
 --content-color:#1a2b3c;
 --button-color:#E78097;
@@ -553,6 +587,7 @@
 --link-color:145,19,206;
 --content-bg:#34ecc6;
 --dropdown-bg:#95EFDE;
+--emphasis-bg:#6085CA;
 --content-border:#e78097;
 --content-color:#341b23;
 --button-color:#FFE2AC;
@@ -569,6 +604,7 @@
 --link-color:79,14,141;
 --content-bg:#fecb3c;
 --dropdown-bg:#F5DF9D;
+--emphasis-bg:#AB7162;
 --content-border:#c3b0a9;
 --content-color:#1c6945;
 --button-color:#F8523C;
@@ -585,6 +621,7 @@
 --link-color:40,217,109;
 --content-bg:#d99f6c;
 --dropdown-bg:#E4CAB4;
+--emphasis-bg:#85BA6C;
 --content-border:#fba944;
 --content-color:#1c6945;
 --button-color:#fcd32b;
@@ -601,6 +638,7 @@
 --link-color:187,187,187;
 --content-bg:#ffffff;
 --dropdown-bg:#FFFFFF;
+--emphasis-bg:#DFDFDF;
 --content-border:#cccccc;
 --content-color:#000000;
 --button-color:#CCCCCC;
@@ -616,7 +654,8 @@
 --background-color:#f8f8f8;
 --link-color:76,139,202;
 --content-bg:#a6e2fa;
---dropdown-bg:#CBEAF7;
+--dropdown-bg:#ffffff;
+--emphasis-bg:#7BB9E3;
 --content-border:#85b5c8;
 --content-color:#3a3a3a;
 --button-color:#4698C6;
@@ -632,6 +671,7 @@
 --background-color:#f8f7f6;
 --link-color:70,198,138;
 --content-bg:#7e86ae;
+--emphasis-bg:#63A49D;
 --dropdown-bg:#B8BED3;
 --content-border:#8793cc;
 --content-color:#3a3a3a;
@@ -650,6 +690,7 @@
 --link-color:0,183,224;
 --content-bg:#ffffff;
 --dropdown-bg:#FFFFFF;
+--emphasis-bg:#86DDF1;
 --content-border:#cccccc;
 --content-color:#1a1a1a;
 --button-color:#00B7E0;
@@ -666,6 +707,7 @@
 --link-color:0,214,214;
 --content-bg:#ffffff;
 --dropdown-bg:#FFFFFF;
+--emphasis-bg:#86ECEC;
 --content-border:#cccccc;
 --content-color:#002a32;
 --button-color:#00D6D6;
@@ -683,6 +725,7 @@
 --link-color:225,74,34;
 --content-bg:#fefeff;
 --dropdown-bg:#FFFFFF;
+--emphasis-bg:#F0A996;
 --content-border:#7e787d;
 --content-color:#020002;
 --button-color:#FEAFD3;
@@ -698,7 +741,8 @@
 --background-color:#4b0082;
 --link-color:75,255,130;
 --content-bg:#961e76;
---dropdown-bg:#C48DB8;
+--dropdown-bg:#4F1640;
+--emphasis-bg:#72897C;
 --content-border:#add8e7;
 --content-color:#d3e4e5;
 --button-color:#800080;
@@ -715,6 +759,7 @@
 --link-color:169,206,58;
 --content-bg:#ffffff;
 --dropdown-bg:#FFFFFF;
+--emphasis-bg:#D6E8A2;
 --content-border:#cccccc;
 --content-color:#1a1a1a;
 --button-color:#F15920;
@@ -731,6 +776,7 @@
 --link-color:24,170,213;
 --content-bg:#abc123;
 --dropdown-bg:#CEDA91;
+--emphasis-bg:#65B677;
 --content-border:#ace135;
 --content-color:#000111;
 --button-color:#3D3D99;
@@ -747,6 +793,7 @@
 --link-color:122,178,71;
 --content-bg:#f0f8ff;
 --dropdown-bg:#FFFFFF;
+--emphasis-bg:#B8D7A8;
 --content-border:#abc123;
 --content-color:#000011;
 --button-color:#FF7F50;
@@ -762,7 +809,9 @@
 --background-color:#000000;
 --link-color:255,127,80;
 --content-bg:#f0f8ff;
---dropdown-bg:#EFF4F9;
+--dropdown-bg:#FFFFFF;
+--emphasis-bg:#FFC3AC;
+--emphasis-bg:#FFC3AC;
 --content-border:#ff7f50;
 --content-color:#ff7f50;
 --button-color:#DCDCDC;
@@ -795,6 +844,7 @@
 --link-color:23,23,230;
 --content-bg:#e6e6ff;
 --dropdown-bg:#EAECF9;
+--emphasis-bg:#92DFE4;
 --content-border:#b3b3b3;
 --content-color:#1a1a1a;
 --button-color:#404080;
@@ -811,6 +861,7 @@
 --link-color:255,255,0;
 --content-bg:#ffffff;
 --dropdown-bg:#FFFFFF;
+--emphasis-bg:#FFFF86;
 --content-border:#00ff00;
 --content-color:#000000;
 --button-color:#00FFFF;
@@ -826,7 +877,8 @@
 --background-color:#18bbc5;
 --link-color:103,214,225;
 --content-bg:#ece1c1;
---dropdown-bg:#EDEADC;
+--dropdown-bg:#ffffff;
+--emphasis-bg:#ADDCDF;
 --content-border:#ffa500;
 --content-color:#2b2b2b;
 --button-color:#A1774F;
@@ -842,7 +894,8 @@
 --background-color:#c9e2f8;
 --link-color:255,50,194;
 --content-bg:#ffe6f8;
---dropdown-bg:#F6ECF6;
+--dropdown-bg:#ffffff;
+--emphasis-bg:#FF91DF;
 --content-border:#ff5b63;
 --content-color:#1a2b3c;
 --button-color:#F7C854;
@@ -858,7 +911,8 @@
 --background-color:#f20c0c;
 --link-color:187,34,34;
 --content-bg:#e00045;
---dropdown-bg:#E77FA1;
+--dropdown-bg:#720828;
+--emphasis-bg:#CF1034;
 --content-border:#f5cbdd;
 --content-color:#e9e9e9;
 --button-color:#ED0111;
@@ -874,7 +928,8 @@
 --background-color:#32cd80;
 --link-color:255,127,80;
 --content-bg:#e6fae6;
---dropdown-bg:#EAF5ED;
+--dropdown-bg:#ffffff;
+--emphasis-bg:#F2C09F;
 --content-border:#aaccbb;
 --content-color:#2b1a2b;
 --button-color:#FF4500;
@@ -890,6 +945,7 @@
 --background-color:#ffc0cb;
 --link-color:50,205,50;
 --content-bg:#708090;
+--emphasis-bg:#52A463;
 --dropdown-bg:#B2BBC5;
 --content-border:#ffa500;
 --content-color:#ffeeff;
@@ -907,6 +963,7 @@
 --link-color:255,106,100;
 --content-bg:#f6f6f6;
 --dropdown-bg:#FFFFFF;
+--emphasis-bg:#FBB4B1;
 --content-border:#00d6d6;
 --content-color:#002a32;
 --button-color:#00D6D6;
@@ -923,6 +980,7 @@
 --link-color:205,133,63;
 --content-bg:#f5f5f5;
 --dropdown-bg:#FFFFFF;
+--emphasis-bg:#E2C09F;
 --content-border:#708090;
 --content-color:#000000;
 --button-color:#191970;

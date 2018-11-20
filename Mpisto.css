@@ -80,6 +80,7 @@ Raleway = Rest
 --link-color:26,74,74;
 --content-bg:#f5f5f5;
 --dropdown-bg:#FFFFFF;
+--emphasis-bg:#8DA4A4;
 --content-border:#cccddd;
 --content-color:#010000;
 --button-color:#18BBC6;
@@ -94,7 +95,8 @@ Raleway = Rest
 --background-color:#54d9f8;
 --link-color:134,4,152;
 --content-bg:#ffecff;
---dropdown-bg:#F6EFF9;
+--dropdown-bg:#ffffff;
+--emphasis-bg:#C67ECE;
 --content-border:#ddf759;
 --content-color:#2a2a2a;
 --button-color:#70C800;
@@ -111,6 +113,7 @@ Raleway = Rest
 --link-color:0,0,255;
 --content-bg:#282828;
 --dropdown-bg:#1A1A1A;
+--emphasis-bg:#15158E;
 --content-border:#cccccc;
 --content-color:#f9f9f9;
 --button-color:#00178C;
@@ -127,6 +130,7 @@ Raleway = Rest
 --link-color:148,24,197;
 --content-bg:#fdfeff;
 --dropdown-bg:#FFFFFF;
+--emphasis-bg:#CB91E4;
 --content-border:#eee;
 --content-color:#1a2a3a;
 --button-color:#FF7E09;
@@ -141,6 +145,23 @@ Raleway = Rest
 font-family:Trebuchet MS;
 }
 
+
+/* Special Hack for Edge and mInerva 6.5 - 7.5 */
+body * {
+--background-image:inherit;
+--background-color:inherit;
+--link-color:inherit;
+--content-bg:inherit;
+--dropdown-bg:inherit;
+--emphasis-bg:inherit;
+--content-border:inherit;
+--content-color:inherit;
+--button-color:inherit;
+--button-color-dark:inherit;
+--button-color-text:inherit;
+--community-header-bg:inherit;
+--community-header-text:inherit;
+}
 
 main {
 overflow:hidden!important;
@@ -2085,7 +2106,7 @@ border-left-color:rgba(var(--community-header-text),0.8);
 
 
 @-o-keyframes color-header-hover {
-	0%		{ background-color:transparent; border-color:transparent; }
+	0%		{ background-color:transparent; border-color:transparent;  }
 	50%  	{ background-color:rgba(248,248,248,0.2);background-color:rgba(var(--community-header-text),0.2); border-color:rgba(248,248,248,0.2);border-color:rgba(var(--community-header-text),0.2);}
 	100%	{ background-color:transparent; border-color:transparent; }
 }
@@ -2222,9 +2243,10 @@ border-left-color:rgba(var(--community-header-text),0.8);
 	}
 	
 	.mpisto-header-container .link:hover, .mpisto-header-container .wds-dropdown:hover .link {
-		-webkit-animation: 600ms linear 200ms infinite normal color-header-hover;
+/*		-webkit-animation: 600ms linear 200ms infinite normal color-header-hover;
 		     -o-animation: 600ms linear 200ms infinite normal color-header-hover;
 		        animation: 600ms linear 200ms infinite normal color-header-hover;
+*/
 		background-color:rgba(248,248,248,0.2);
 		background-color:rgba(var(--community-header-text),0.2);
 		border-color:rgba(248,248,248,0.2);
@@ -2232,12 +2254,6 @@ border-left-color:rgba(var(--community-header-text),0.8);
 		color:rgba(248,248,248,0.8);
 		color:rgba(var(--community-header-text), 0.8);
 	}
-
-@supports (--s:red) {
-		.edge .mpisto-header-container .link:hover,.edge .mpisto-header-container .wds-dropdown:hover .link {
-			animation:none;
-		}
-}
 	
 	.color-header .title {
 		width:100%;
@@ -3538,8 +3554,8 @@ border-radius:12px;
 .mpisto-module h2 {
 border-bottom:1px solid #ccc;
 border-bottom:1px solid var(--content-border);
-background-color:#fff;
-background-color:var(--content-bg);
+background-color:#92DFE4;
+background-color:var(--emphasis-bg);
 padding:8px;
 display:flex;
 font-size:16px;
@@ -3707,7 +3723,7 @@ border-bottom-right-radius:inherit;
 position:relative;
 z-index:1;
 background-color:#fff;
-background-color:var(--dropdown-bg);
+background-color:var(--content-bg);
 transition-property:margin, padding, visibility, height;
 transition-duration:200ms;
 border-top:1px solid #ccc;
@@ -4221,8 +4237,8 @@ header.mpisto-footer-container {
   z-index:51;
   min-height:22px;
   width:100%;
-  border:2px solid #ccc;
-  border:2px solid var(--content-border);
+  border:2px solid #18bbc5;
+  border:2px solid rgb(var(--link-color));
   border-left-width:0px;
   border-right-width:0px;
   border-bottom-width:0px;
@@ -4260,9 +4276,9 @@ header.mpisto-footer-container:after {
     position: absolute;
     width: 100%;
     z-index: -1;
-    background-color:#fff;
-    background-color:var(--dropdown-bg);
-    opacity:0.99;
+    background-color:#92DFE4;
+    background-color:var(--emphasis-bg);
+    opacity:0.98;
 /*   -webkit-backdrop-filter:blur(1.5px);
     backdrop-filter:blur(1.5px);
 */
@@ -4495,10 +4511,10 @@ list-style:none!important;
   margin:0 auto -1px;
   position:relative;
   z-index:10;
-  color:rgb(0,0,255);
-  color:rgb(var(--community-header-bg));
   border-bottom:1px solid #ccc;
   border-bottom:1px solid var(--content-border);
+  background-color:#92DFE4;
+  background-color:var(--emphasis-bg);
 
 }
 
@@ -4539,10 +4555,9 @@ list-style:none!important;
 }
 
 .editor-header h2 > a.mainpage {
-  color:rgb(0,0,255);
-  color:rgb(var(--community-header-bg));
+  color:inherit;
   text-decoration:none;
-  transition:color 0.16s;
+  transition:opacity 0.16s;
 }
 
 .editor-field {
@@ -4559,8 +4574,7 @@ flex:1;
 }
 
 .editor-header h2 > a.mainpage:hover {
-  color:rgba(0,0,255,0.8);
-  color:rgba(var(--community-header-bg),0.8);
+	opacity:0.8;
 }
 
 .article-area {
@@ -4893,6 +4907,8 @@ height:calc(100vh - 139px);
   margin:0;
   border-bottom:1px solid #ccc;
   border-bottom:1px solid var(--content-border);
+  background-color:#92DFE4;
+  background-color:var(--emphasis-bg);
   position:relative;
   z-index:1;
   height:63px;
@@ -4940,6 +4956,7 @@ height:calc(100vh - 139px);
   background-color:var(--dropdown-bg);
   border:1px solid #ccc;
   border:1px solid var(--content-border);
+  background-image:linear-gradient(to bottom, rgba(24,24,24,0.0), rgba(247,247,247,0.01), rgba(24,24,24,0));
 }
 
 .mpisto-option-way > div .fieldset fieldset {
@@ -4948,7 +4965,6 @@ border:0;
 padding-top:0;
 padding-bottom:0;
 line-height:inherit;
-  background-image:linear-gradient(to bottom, rgba(24,24,24,0.0), rgba(247,247,247,0.01), rgba(24,24,24,0));
 }
 
 .mpisto-option-way > div .fieldset fieldset legend {
@@ -4959,10 +4975,11 @@ line-height:inherit;
 }
 
 .mpisto-option-way > div .fieldset fieldset .fieldset {
-  border-color:#fff;
-  border-color:var(--content-bg);
-  background-image:linear-gradient(to bottom, rgba(24,24,24,0.1), rgba(24,24,24,0.1)), linear-gradient(to bottom, rgba(246,246,246,0.1), rgba(246,246,246,0.1));
-  background-color:transparent;
+  border-color:#000;
+  border-color:var(--content-color);
+  background-image:linear-gradient(to bottom, rgba(24,24,24,0.0), rgba(247,247,247,0.01), rgba(24,24,24,0));
+  background-color:#92DFE4;
+  background-color:var(--emphasis-bg);
 }
 
 .option-link {

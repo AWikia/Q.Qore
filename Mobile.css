@@ -833,8 +833,8 @@ footer.mpisto-footer {
 display:none;
 }
 
-.mpisto-gnav.headroom--unpinned {
-	transform:translateY(-100%);
+.mpisto-gnav.headroom--top {
+	box-shadow:none;
 }
 
 

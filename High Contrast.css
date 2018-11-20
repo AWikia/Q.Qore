@@ -215,6 +215,7 @@ body:not(.contrast):not(.basic) .highcontrastbutton.wds-dropdown {
 
 /* CSS configuration for Brightness */
 .contrast *,.contrast :before,.contrast :after  {
+	--emphasis-bg:var(--dropdown-bg)!important;
   text-shadow:none!important;
   box-shadow:none!important;
   -webkit-filter:none!important;
@@ -291,7 +292,7 @@ box-shadow:0 4px 0 6px rgba(0,0,0,.4), 0 4px 0 6px rgba(255,255,255,0.4)!importa
 	color:inherit;
 }
 
-.contrast :not(.wds-dropdown):not(.wds-community-header):not(time):not(.wds-list):not(input):not(.mpisto-content):before,.contrast :not(.wds-dropdown):not(.wds-community-header):not(.wds-list):not(.mpisto-article-wrapper):not(.mpisto-header-container):not(.mpisto-gnav):not(input):not(em):after, .basic header.mpisto-navbar:after, .basic footer.mpisto-footer:after, .basic header.mpisto-footer-container:after, .basic .mpisto-option-pane:after, .basic .mpisto-content:after, .basic .mpisto-option-way:after, .basic .theme-portal:after,.basic header.mpisto-navbar:before, .basic footer.mpisto-footer:before, .basic header.mpisto-footer-container:before, .basic .mpisto-option-pane:before, .basic .mpisto-option-way:before, .basic .theme-portal:before  {
+.contrast :not(.freepseudo):not(.wds-dropdown):not(.wds-community-header):not(time):not(.wds-list):not(input):not(.mpisto-content):before,.contrast :not(.freepseudo):not(.wds-dropdown):not(.wds-community-header):not(.wds-list):not(.mpisto-article-wrapper):not(.mpisto-header-container):not(.mpisto-gnav):not(input):not(em):after, .basic header.mpisto-navbar:after, .basic footer.mpisto-footer:after, .basic header.mpisto-footer-container:after, .basic .mpisto-option-pane:after, .basic .mpisto-content:after, .basic .mpisto-option-way:after, .basic .theme-portal:after,.basic header.mpisto-navbar:before, .basic footer.mpisto-footer:before, .basic header.mpisto-footer-container:before, .basic .mpisto-option-pane:before, .basic .mpisto-option-way:before, .basic .theme-portal:before  {
 display:none!important;
 }
 
@@ -307,9 +308,14 @@ body:not(.filterA):not(.filterB):not(.filterC):not(.filterD):not(.filterE):not(.
   background-color:var(--content-bg);
 }
 
-.contrast header.mpisto-footer-container, .contrast .mpisto-option-pane, .basic header.mpisto-footer-container, .basic .mpisto-option-pane {
+.contrast header.mpisto-footer-container, .contrast .mpisto-option-pane, .basic .mpisto-option-pane {
   background-color:var(--dropdown-bg);
 }
+
+.basic header.mpisto-footer-container {
+  background-color:var(--emphasis-bg);
+}
+
 
 .contrast header.mpisto-navbar, .basic header.mpisto-navbar {
   background-color:var(--content-color);
