@@ -2714,7 +2714,9 @@ text-align:right;
 
 .mpisto-userpages-header .mpisto-userpages-main .mpisto-avatar {
 	width:126px;
-	height:126px;
+	height:auto;
+	-o-object-fit:cover;
+	object-fit:cover;
 	box-sizing:border-box;
 	border-width:5px;
 	opacity:1;
