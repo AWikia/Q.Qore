@@ -171,6 +171,7 @@ width:100%;
 
 .mpisto-userpages-header .mpisto-profile-masthead section {
 	width:100%!important;
+	flex:none!important;
 }
 
 .mpisto-option-pane {
