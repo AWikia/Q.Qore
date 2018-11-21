@@ -162,7 +162,6 @@ width:100%;
 
 .mpisto-userpages-header .mpisto-userpages-main .mpisto-avatar {
 	width:63px;
-	height:63px;
 	border-width:3px;
 }
 
@@ -400,10 +399,6 @@ font-size:28px;
 }
 
 
-.mpisto-userpages-header .mpisto-userpages-main .mpisto-avatar {
-	-o-object-fit:cover;
-	object-fit:cover;
-}
 
 
 .sourceon .article-area {
