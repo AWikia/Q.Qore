@@ -279,6 +279,10 @@ body {
 overflow-x:hidden!important;
 }
 
+.secondary {
+  font-family:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Jua", "Mada", "Pavanam", "NTR", cursive;
+  font-family:var(--secondary-font), cursive;
+}
 
 .mpisto-2018:not(.explorer):not(.edge):after {
 	top:0;
@@ -332,6 +336,8 @@ button, input {
 position:relative;
 font-family:inherit;
 text-transform:none; /* Drops the inheritance in Edge and Firefox */
+letter-spacing:normal; /* Drops the inheritance of letter-spacing in Linux and Android Qorta Qorte */
+word-spacing:normal; /* Drops the inheritance of word-spacing in Linux and Android Qorta Qorte */
 box-shadow:none;
 text-shadow:none;
 /* mInerva Specific Code */
@@ -2069,28 +2075,28 @@ border-color:rgba(var(--community-header-text), 0.8);
 */
 }
 
-.main .wds-community-header .wds-button-group > .wds-dropdown:not(:last-child) .wds-button {
+.main .wds-community-header .wds-button-group > *:not(:last-child) .wds-button {
 border-right-color:transparent;
 /*border-right-color:rgb(248,248,248);
 border-right-color:rgb(var(--community-header-text));
 */
 }
 
-.main .wds-community-header .wds-button-group > .wds-dropdown:not(:first-child) .wds-button {
+.main .wds-community-header .wds-button-group > *:not(:first-child) .wds-button {
 border-left-color:transparent;
 /*border-left-color:rgb(248,248,248);
 border-left-color:rgb(var(--community-header-text));
 */
 }
 
-.main .wds-community-header .wds-button-group > .wds-dropdown:not(:last-child) .wds-button:hover {
+.main .wds-community-header .wds-button-group > *:not(:last-child) .wds-button:hover {
 border-right-color:transparent;
 /*border-right-color:rgba(248,248,248,0.8);
 border-right-color:rgba(var(--community-header-text),0.8);
 */
 }
 
-.main .wds-community-header .wds-button-group > .wds-dropdown:not(:first-child) .wds-button:hover {
+.main .wds-community-header .wds-button-group > *:not(:first-child) .wds-button:hover {
 border-left-color:transparent;
 /*border-left-color:rgba(248,248,248,0.8);
 border-left-color:rgba(var(--community-header-text),0.8);
@@ -2686,7 +2692,7 @@ left:0;
 	position:relative;
 	z-index:6;
 	width:100%;
-	font-size:20px;
+	font-size:18px;
 }
 
 .mpisto-userpages-header .mpisto-userpages-actions {
@@ -2713,7 +2719,7 @@ text-align:right;
 }
 
 .mpisto-userpages-header .mpisto-userpages-main .mpisto-avatar {
-	width:126px;
+	width:114px;
 	height:auto;
 	-o-object-fit:cover;
 	object-fit:cover;
@@ -2724,14 +2730,14 @@ text-align:right;
 }
 
 .mpisto-userpages-header .mpisto-profile-masthead {
-	border-radius:4px;
+	border-radius:5px;
 	box-shadow:0 0 9px 0.1px #ccc, 0 0 2.5px #000, 0 0 1.5px #fff;
 	box-shadow:0 0 9px 0.1px var(--content-border), 0 0 2.5px #000, 0 0 1.5px #fff;
 	flex-grow:1;
 	min-height:50px;
 	background-color:#fff;
 	background-color:var(--content-bg);
-	margin-left:10px;
+	margin-left:9px;
 	position:relative;
 	display:flex;
 	flex-direction:column;
@@ -2748,8 +2754,8 @@ text-align:right;
 	background-image:linear-gradient(to bottom, rgba(248,248,248,0.4) 35%, rgba(23,23,23,0.2) 70%);
 	color:black;
 	color:var(--button-color-text);
-	padding:10px;
-	margin:0 0 10px;
+	padding:9px;
+	margin:0 0 9px;
 	-webkit-text-fill-color:#18bbc5;
 	-webkit-text-fill-color:var(--button-color);
 	-webkit-text-stroke-color:#000;
@@ -2759,42 +2765,83 @@ text-align:right;
 
 
 .mpisto-userpages-header .mpisto-profile-masthead hgroup h1 {
-	font-size:36px;
+	font-size:32px;
 	font-weight:600;
-	margin:0 6px;
+	margin:0 5.5px;
 	padding:0;
 	line-height:1;
 	display:inline-block;
-	-webkit-text-stroke-width:1.55px;
+	-webkit-text-stroke-width:1.3px;
 	vertical-align:middle;
 }
 
 .mpisto-userpages-header .mpisto-profile-masthead hgroup span {
 	opacity:0.75;
-	font-size:20px;
+	font-size:18px;
 	line-height:1;
 	margin:0;
 	font-weight:300;
 	text-transform:lowercase;
 	display:inline-block;
-	-webkit-text-stroke-width:0.5px;
+	-webkit-text-stroke-width:0.45px;
 	vertical-align:middle;
 }
 
 
+.mpisto-userpages-header .mpisto-profile-masthead hgroup tag {
+	color:black;
+	color:var(--button-color-text);
+	border-radius:8px;
+	display:inline-block;
+	font-size:11px;
+	text-transform:uppercase;
+	letter-spacing:-0.1px;
+	word-spacing:0.1px;
+	vertical-align:middle;
+	padding:4px;
+	background-color:#03a2ac;
+	background-color:var(--button-color-dark);
+	margin:0 2px;
+	-webkit-text-fill-color:currentColor;
+	box-shadow:0 0 1px currentColor;
+}
+
+.mpisto-userpages-header .mpisto-profile-masthead hgroup tag.blocked {
+	color:black;
+	color:var(--button-color-text);
+	background-color:red;
+}
+
+.mpisto-userpages-header .mpisto-profile-masthead hgroup tag#Global {
+	background-color:black;
+	background-color:var(--button-color-text);
+	color:#03a2ac;
+	color:var(--button-color-dark);
+}
+
+
+.mpisto-userpages-header .mpisto-profile-masthead hgroup tag#Global.blocked {
+	background-color:black;
+	background-color:var(--button-color-text);
+	color:red;
+}
+
+
+
 .mpisto-userpages-header .mpisto-profile-masthead hgroup h2 {
-	font-size:26px;
+	font-size:24px;
 	font-weight:500;
-	margin:0 6px;
+	margin:0 5.5px;
 	padding:0;
 	line-height:1;
 	display:inline-block;
-	-webkit-text-stroke-width:0.7px;
+	-webkit-text-stroke-width:0.6px;
 	vertical-align:middle;
 }
 
 .mpisto-userpages-header .mpisto-profile-masthead hgroup a {
 	color:inherit;
+	-webkit-text-fill-color:currentColor; /* Required for Edge browser or else on High Contrast mode text gets unredable */
 }
 
 .mpisto-userpages-header .mpisto-profile-masthead hgroup a.edit {
@@ -2817,8 +2864,9 @@ text-align:right;
 }
 
 .mpisto-userpages-header .mpisto-profile-masthead section {
-	padding:0 10px 10px;
-	font-size:14px;
+	padding:0 9px 9px;
+	font-size:13px;
+	line-height:1.15;
 }
 
 .mpisto-userpages-header .mpisto-profile-masthead header {
@@ -2856,24 +2904,31 @@ text-align:right;
 
 .mpisto-userpages-header .mpisto-profile-masthead .left-pane .userlink div span {
 	display:block;
-	font-size:70%;
+	font-size:75%;
 	margin-left:5px;
 }
 
 
 .mpisto-userpages-header .mpisto-profile-masthead .right-pane {
 	width:45%;
-	padding-top:4px;
+	padding-top:3.5px;
 	display:flex;
 	flex-direction:column;
+	font-size:14px;
 }
 
 .mpisto-userpages-header .mpisto-profile-masthead section .wds-button-group {
 	display:flex;
 }
 
+.mpisto-userpages-header .mpisto-profile-masthead section .wds-button-group > .wds-button {
+	padding-left:10px;
+	padding-right:10px;
+}
+
 .mpisto-userpages-header .mpisto-profile-masthead section .wds-button {
 	flex-grow:1;
+	font-size:11px;
 }
 
 
@@ -3109,23 +3164,23 @@ input[type="number"]:focus {
 }
 
 input[type="number"]::-ms-input-placeholder {
-	font-family:Arial, Liberation Sans, sans-seirf;
+	font-family:Liberation Sans, Arial, sans-seirf;
 }
 
 
 
 input[type="number"]:-ms-input-placeholder {
-	font-family:Arial, Liberation Sans, sans-seirf;
+	font-family:Liberation Sans, Arial, sans-seirf;
 }
 
 
 input[type="number"]::-placeholder {
-	font-family:Arial, Liberation Sans, sans-seirf;
+	font-family:Liberation Sans, Arial, sans-seirf;
 }
 
 
 input[type="number"]:placeholder-shown {
-	font-family:Arial, Liberation Sans, sans-seirf;
+	font-family:Liberation Sans, Arial, sans-seirf;
 }
 
 /* Hide Spin buttons from number input type */
@@ -5904,6 +5959,20 @@ border-left-width:1px;
 border-left-style:solid
 }
 
+.wds-button-group>.wds-button:not(:first-child):not(:last-child),.wds-button-group>.wds-dropdown:not(:first-child):not(:last-child) .wds-button{
+  border-radius:0;
+}
+
+.wds-button-group>.wds-button:not(:last-child),.wds-button-group>.wds-dropdown:not(:last-child) .wds-button{
+border-bottom-right-radius:0;
+border-top-right-radius:0;
+}
+.wds-button-group>.wds-button:not(:first-child),.wds-button-group>.wds-dropdown:not(:first-child) .wds-button{
+border-bottom-left-radius:0;
+border-top-left-radius:0;
+}
+
+
 /* Preview */
 .cube-container {
   transition: all 275ms cubic-bezier(0.3, 0.55, 0.4, 1.7) 8ms;
@@ -6003,7 +6072,7 @@ border-left-style:solid
     border-bottom-left-radius: 0!important;
 }
 
-.mpisto-button-group > .mpisto-dropdown:last-child:not(:first-child) .mpisto-buttons2, .mpisto-button-group > .mpisto-dropdown:last-child:not(:first-child) .mpisto-buttons2-2nd, .mpisto-button-group > .mpisto-dropdowns2:last-child:not(:first-child) .mpisto-buttons2 {
+.mpisto-button-group > *:last-child:not(:first-child) .mpisto-buttons2, .mpisto-button-group > *:last-child:not(:first-child) .mpisto-buttons2-2nd {
     border-left-color: var(--content-bg);
     border-left-width: 1px;
     border-left-style: solid;
@@ -6011,7 +6080,7 @@ border-left-style:solid
     border-bottom-left-radius: 0!important;
 }
 
-.mpisto-button-group > .mpisto-dropdown:first-child:not(:last-child) .mpisto-buttons2, .mpisto-button-group > .mpisto-dropdown:first-child:not(:last-child) .mpisto-buttons2-2nd, .mpisto-button-group > .mpisto-dropdowns2:first-child:not(:last-child) .mpisto-buttons2, .mpisto-button-group > .mpisto-dropdowns2:first-child:not(:last-child) .mpisto-buttons2-2nd {
+.mpisto-button-group > *:first-child:not(:last-child) .mpisto-buttons2, .mpisto-button-group > *:first-child:not(:last-child) .mpisto-buttons2-2nd {
     border-right-color: var(--content-bg);
     border-right-width: 1px;
     border-right-style: solid;
@@ -6019,7 +6088,7 @@ border-left-style:solid
     border-bottom-right-radius: 0!important;
 }
 
-.mpisto-button-group > .mpisto-dropdown:not(:first-child):not(:last-child) .mpisto-buttons2, .mpisto-button-group > .mpisto-dropdown:not(:first-child):not(:last-child) .mpisto-buttons2-2nd, .mpisto-button-group > .mpisto-dropdowns2:not(:first-child):not(:last-child) .mpisto-buttons2, .mpisto-button-group > .mpisto-dropdowns2:not(:first-child):not(:last-child) .mpisto-buttons2-2nd {
+.mpisto-button-group > *:not(:first-child):not(:last-child) .mpisto-buttons2, .mpisto-button-group > *:not(:first-child):not(:last-child) .mpisto-buttons2-2nd {
     border-radius: 0!important;
     border-left-color: var(--content-bg);
     border-left-width: 1px;
@@ -6028,7 +6097,7 @@ border-left-style:solid
     border-right-width: 1px;
     border-right-style: solid;
 }
-.mpisto-button-group > .mpisto-dropdown .mpisto-buttons2, .mpisto-button-group > .mpisto-dropdowns2 .mpisto-buttons2 {
+.mpisto-button-group > * .mpisto-buttons2 {
     padding-left:10px;
     padding-right:10px;
 
