@@ -767,11 +767,26 @@ function HCg1() {
 				</div>
 				<br>
 			<div class="wds-button-group">
-              <a class="wds-button wds-is-squished">
-              <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user" />
-              </svg>
-              <span>Contributions</span></a>
+              <div class="wds-dropdown">
+				  <div class="wds-button wds-is-squished">
+				  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user" />
+				  </svg>
+				  <span>Contributions</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
+                  </svg></div>
+				  <div class="wds-dropdown__content wds-is-not-scrollable">
+						<ul class="wds-list wds-is-linked">
+							<li>
+							<a>Local Contributions</a>
+							</li>
+							<li>
+							<a>Global Contributions</a>
+							</li>
+						</ul>
+				  </div>
+              </div>
               <a class="wds-button wds-is-squished">
               <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-eye" />
