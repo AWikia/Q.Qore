@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Patrick+Hand|Roboto+Slab:100,300,400,700|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+﻿@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Patrick+Hand|Roboto+Slab:100,300,400,700|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
 
 @import url('https://fonts.googleapis.com/css?family=Carrois+Gothic|Coming+Soon|Gochi+Hand|Noto+Sans:400,700|Noto+Serif:400,700|Parisienne&subset=cyrillic,cyrillic-ext,devanagari,greek,greek-ext,latin-ext,vietnamese');
 
@@ -66,14 +66,14 @@ body *, :before, :after {
 	flex-direction:column;
 	width:100vw;
 	height:100vh;
-	min-width:1100px;
-	max-width:1600px;
+	min-width:1024px;
+	max-width:1680px;
 	margin:0 auto;
 	padding:10px;
 	overflow-y:hidden;
 }
 
-@media only screen and (max-width:1099px) {
+@media only screen and (max-width:1023px) {
 .chat-site-wrapper {
 	position:absolute;
 	height:100%;
@@ -110,16 +110,22 @@ body *, :before, :after {
 	align-items:center;
 	border-left:1px solid #ccc;
 	border-left-color:var(--content-border);
-	padding:0 5px;
+	padding:0 5px 0 10px;
 	height:75px;
 	margin-left:5px;
 }
 
 .chat-header .member-container .wds-avatar {
-	width:65px;
-	height:65px;
+	width:57px;
+	height:57px;
 	border-width:4px;
 	box-sizing:border-box;
+	border-color:#ccc;
+	border-color:var(--content-border);
+	padding:2px;
+	box-shadow:0 0 0 2px currentColor, 0 0 0 2px currentColor inset;
+	-webkit-filter:drop-shadow(0 0 4px rgba(23,23,23,0.9)) drop-shadow(0 0 4px rgba(248,248,248,0.9));
+	filter:drop-shadow(0 0 4px rgba(23,23,23,0.9)) drop-shadow(0 0 4px rgba(248,248,248,0.9));
 }
 
 .chat-header .member-container span {

@@ -1,4 +1,4 @@
-/* Buttons */
+﻿/* Buttons */
 
 body:not(.contrast):not(.basic) .highcontrastbutton.wds-dropdown {
   display:none;
@@ -308,7 +308,7 @@ body:not(.filterA):not(.filterB):not(.filterC):not(.filterD):not(.filterE):not(.
   background-color:var(--content-bg);
 }
 
-.contrast header.mpisto-footer-container, .contrast .mpisto-option-pane, .basic .mpisto-option-pane {
+.contrast header.mpisto-footer-container, .contrast .mpisto-option-pane {
   background-color:var(--dropdown-bg);
 }
 
