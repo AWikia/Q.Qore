@@ -21,7 +21,7 @@
 .mpisto-gnav.headroom.headroom--not-top {
 	color:#fff;
 	color:var(--content-bg);
-
+	box-shadow: 0 0 3px var(--content-color), 0 0 3px var(--dropdown-bg);
 }
 
 .mpisto-gnav.headroom.headroom--not-top .wds-list {

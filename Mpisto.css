@@ -64,9 +64,83 @@ Raleway = Rest
     src:url('Arial.ttf') format('truetype');
 }
 
+
+@font-face {
+    font-family:  Source Pro Sans;
+    src:url('Source Pro Sans T.ttf') format('truetype');
+	font-weight:100;
+}
+
+@font-face {
+    font-family:  Source Pro Sans;
+    src:url('Source Pro Sans EL.ttf') format('truetype');
+	font-weight:200;
+}
+
+@font-face {
+    font-family:  Source Pro Sans;
+    src:url('Source Pro Sans L.ttf') format('truetype');
+	font-weight:300;
+}
+
 @font-face {
     font-family:  Source Pro Sans;
     src:url('Source Pro Sans.ttf') format('truetype');
+}
+
+@font-face {
+    font-family:  Source Pro Sans;
+    src:url('Source Pro Sans M.ttf') format('truetype');
+	font-weight:500;
+}
+
+@font-face {
+    font-family:  Source Pro Sans;
+    src:url('Source Pro Sans SB.ttf') format('truetype');
+	font-weight:600;
+}
+
+@font-face {
+    font-family:  Source Pro Sans;
+    src:url('Source Pro Sans B.ttf') format('truetype');
+	font-weight:700;
+}
+
+@font-face {
+    font-family:  Source Pro Sans;
+    src:url('Source Pro Sans EB.ttf') format('truetype');
+	font-weight:800;
+}
+
+@font-face {
+    font-family:  Source Pro Sans;
+    src:url('Source Pro Sans H.ttf') format('truetype');
+	font-weight:900;
+}
+
+@font-face {
+    font-family:  Source Pro Sans;
+    src:url('Source Pro Sans B.ttf') format('truetype');
+	font-weight:900;
+}
+
+
+@font-face {
+    font-family:  Source Pro Serif;
+    src:url('Source Pro Serif T.ttf') format('truetype');
+	font-weight:100;
+}
+
+@font-face {
+    font-family:  Source Pro Serif;
+    src:url('Source Pro Serif EL.ttf') format('truetype');
+	font-weight:200;
+}
+
+@font-face {
+    font-family:  Source Pro Serif;
+    src:url('Source Pro Serif L.ttf') format('truetype');
+	font-weight:300;
 }
 
 @font-face {
@@ -74,6 +148,36 @@ Raleway = Rest
     src:url('Source Pro Serif.ttf') format('truetype');
 }
 
+@font-face {
+    font-family:  Source Pro Serif;
+    src:url('Source Pro Serif M.ttf') format('truetype');
+	font-weight:500;
+}
+
+@font-face {
+    font-family:  Source Pro Serif;
+    src:url('Source Pro Serif SB.ttf') format('truetype');
+	font-weight:600;
+}
+
+
+@font-face {
+    font-family:  Source Pro Serif;
+    src:url('Source Pro Serif B.ttf') format('truetype');
+	font-weight:700;
+}
+
+@font-face {
+    font-family:  Source Pro Serif;
+    src:url('Source Pro Serif EB.ttf') format('truetype');
+	font-weight:800;
+}
+
+@font-face {
+    font-family:  Source Pro Serif;
+    src:url('Source Pro Serif H.ttf') format('truetype');
+	font-weight:900;
+}
 
 :root {
 --background-image:url("A Wikia Cover.png");
@@ -2141,7 +2245,7 @@ border-left-color:rgba(var(--community-header-text),0.8);
 */
 }
 
-/* Color header */
+/* Color header 
 @-webkit-keyframes color-header-hover {
 	0%		{ background-color:transparent; border-color:transparent; }
 	50%  	{ background-color:rgba(248,248,248,0.2);background-color:rgba(var(--community-header-text),0.2); border-color:rgba(248,248,248,0.2);border-color:rgba(var(--community-header-text),0.2);}
@@ -2161,6 +2265,7 @@ border-left-color:rgba(var(--community-header-text),0.8);
 	50%  	{ background-color:rgba(248,248,248,0.2);background-color:rgba(var(--community-header-text),0.2); border-color:rgba(248,248,248,0.2);border-color:rgba(var(--community-header-text),0.2);}
 	100%	{ background-color:transparent; border-color:transparent; }
 }
+*/
 
 	.mpisto-header-container {
 		margin:-1px;
@@ -2173,9 +2278,7 @@ border-left-color:rgba(var(--community-header-text),0.8);
 		background-image:url("Graphic.png");
 		background-size:contain;
 		background-position:right;
-		background-repeat:no-repeat;
-		background-blend-mode:overlay;
-		
+		background-repeat:no-repeat;		
 	}
 
 	.mpisto-header-container::before {
@@ -2188,8 +2291,8 @@ border-left-color:rgba(var(--community-header-text),0.8);
     top:0;
     left:0;
     border-radius:inherit;
-	background-image:linear-gradient(to left,rgba(0,0,255, 0) 170px,rgba(255,255,255,0.4) 365px),linear-gradient(to left,rgba(0,0,255, 0) 170px,rgb(0,0,255) 365px);
-	background-image:linear-gradient(to left,rgba(0,0,255, 0) 170px,rgba(255,255,255,0.4) 365px),linear-gradient(to left,rgba(255,255,255, 0) 170px,rgb(var(--community-header-bg)) 365px);
+	background-image:linear-gradient(to left,rgba(0,0,255, 0.1) 170px,rgba(255,255,255,0.4) 365px),linear-gradient(to left,rgba(0,0,255, 0) 170px,rgb(0,0,255) 365px);
+	background-image:linear-gradient(to left,rgba(var(--community-header-text), 0.1) 170px,rgba(var(--community-header-text),0.4) 365px),linear-gradient(to left,rgba(255,255,255, 0) 170px,rgb(var(--community-header-bg)) 365px);
 }
 
 	.mpisto-header-container::after {
@@ -2201,17 +2304,12 @@ border-left-color:rgba(var(--community-header-text),0.8);
     z-index: -1;
     background-color:blue;
     background-color:rgb(var(--community-header-bg));
-    opacity:0.65;
+    opacity:0.6;
     top:0;
     left:0;
     border-radius:inherit;
 }
 
-@supports (background-blend-mode:overlay) {
-		body:not(.contrast):not(.edge) .mpisto-header-container::after {
-			opacity:0.5;
-		}
-}
 
 	.mpisto-header-container .wds-dropdown {
 		display:table-cell;
@@ -2255,9 +2353,9 @@ border-left-color:rgba(var(--community-header-text),0.8);
 	
 
 	.mpisto-header-container .link {
-		-webkit-transition:color 400ms ease, background-color 300ms linear 200ms, border-color 300ms linear 200ms;
-		-o-transition:color 400ms ease, background-color 300ms linear 200ms, border-color 300ms linear 200ms;
-		transition:color 400ms ease, background-color 300ms linear 200ms, border-color 300ms linear 200ms;
+		-webkit-transition:color 400ms ease, background-color 300ms linear 200ms, border-color 300ms linear 200ms, background-image 300ms linear 200ms;
+		-o-transition:color 400ms ease, background-color 300ms linear 200ms, border-color 300ms linear 200ms, background-image 300ms linear 200ms;
+		transition:color 400ms ease, background-color 300ms linear 200ms, border-color 300ms linear 200ms, background-image 300ms linear 200ms;
 		padding: 0 9px;
 		height:inherit;
 		color:inherit;
@@ -2265,6 +2363,7 @@ border-left-color:rgba(var(--community-header-text),0.8);
 		font-size:18px;
 		border:1px solid transparent;
 		box-sizing:border-box;
+		background-blend-mode:overlay;
 	}
 
 	.color-header .link {
@@ -2291,12 +2390,12 @@ border-left-color:rgba(var(--community-header-text),0.8);
 		     -o-animation: 600ms linear 200ms infinite normal color-header-hover;
 		        animation: 600ms linear 200ms infinite normal color-header-hover;
 */
-		background-color:rgba(248,248,248,0.2);
-		background-color:rgba(var(--community-header-text),0.2);
-		border-color:rgba(248,248,248,0.2);
-		border-color:rgba(var(--community-header-text),0.2);
-		color:rgba(248,248,248,0.8);
-		color:rgba(var(--community-header-text), 0.8);
+		background-color:rgba(0,0,255,0.5);
+		background-color:rgba(var(--community-header-bg),0.5);
+		border-color:rgba(248,248,248,0.5);
+		border-color:rgba(var(--community-header-text),0.25);
+		color:rgba(248,248,248,0.75);
+		color:rgba(var(--community-header-text), 0.75);
 	}
 	
 	.color-header .title {
@@ -2316,7 +2415,7 @@ border-left-color:rgba(var(--community-header-text),0.8);
 	.color-header .title a {
 		text-decoration:none;
 		color:inherit;
-		transition:opacity 400ms ease;
+		transition:opacity 400ms ease, color 400ms ease;
 		overflow:hidden;
 		text-overflow:ellipsis;
 	}
@@ -2332,11 +2431,6 @@ border-left-color:rgba(var(--community-header-text),0.8);
 		z-index:2;
 	}
 
-@media only screen and (max-width:754px) {
-	.color-header .wordmark {
-		display:none;
-	}
-}
 
 @media only screen and (max-width:959px) {
 	.color-header .title {
@@ -3313,8 +3407,8 @@ z-index:49;
 padding:0 0 22px;
 /*box-shadow:0 0 9px #ccc, 0 0 2.5px #000, 0 0 1.5px #fff;
 box-shadow:0 0 9px var(--content-border), 0 0 2.5px #000, 0 0 1.5px #fff;*/
-box-shadow: 0 0 3px #000, 0 0 3px #fff;
-
+box-shadow: 0 0 3px #000, 0 0 3px #ffffff;
+box-shadow: 0 0 3px var(--content-color), 0 0 3px var(--dropdown-bg);
 }
 
 .serif footer.mpisto-footer {

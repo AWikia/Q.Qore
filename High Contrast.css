@@ -250,8 +250,8 @@ background-image:linear-gradient(to left,rgba(255,255,255, 0) 200px,rgb(var(--co
 
 
 .contrast .mpisto-header-container .link {
-	transition-delay:0ms, 5ms, 5ms;
-	transition-duration:200ms, 5ms, 5ms;
+	transition-delay:0ms, 10ms, 10ms;
+	transition-duration:400ms, 10ms, 10ms;
 }
 
 .contrast .color-header .link {
