@@ -1,4 +1,4 @@
-﻿/** Primary Fonts **/
+/** Primary Fonts **/
 /* 
 **
 Gothic A1 = Korean
@@ -2034,8 +2034,8 @@ margin-left:0;
 
 .wds-dropdown.wds-is-active .wds-dropdown__toggle-chevron,.wds-dropdown:hover .wds-dropdown__toggle-chevron{-ms-transform:rotate(180deg);transform:rotate(180deg)}
 
-/*.wds-dropdown.wds-is-active.wds-has-dark-shadow::before,.wds-dropdown.wds-is-active.wds-has-shadow::before,.wds-dropdown:hover.wds-has-dark-shadow::before,.wds-dropdown:hover.wds-has-shadow::before{display:none}
-*/
+.wds-dropdown.wds-is-active.wds-has-dark-shadow::before,.wds-dropdown.wds-is-active.wds-has-shadow::before,.wds-dropdown:hover.wds-has-dark-shadow::before,.wds-dropdown:hover.wds-has-shadow::before{display:none}
+
 .wds-dropdown.wds-has-shadow .wds-dropdown__content{box-shadow:0 0 10px 0 rgba(26,26,26,.2)}
 
 .wds-dropdown.wds-has-dark-shadow .wds-dropdown__content{box-shadow:0 0 20px 0 rgba(26,26,26,.3)}
@@ -3335,7 +3335,7 @@ color:var(--content-color);
 border:1px solid var(--content-color);
 */
 border:solid transparent 1px;
-transition:border 176ms;
+transition:border 170ms, box-shadow 170ms;
 cursor:url("Windows/text.cur"), text;
 border-radius:1000px;
 -webkit-appearance:none;
@@ -3356,8 +3356,10 @@ opacity:1;
 	opacity:1;
 border-color:#18bbc5;
 border-color:var(--button-color);
-
+box-shadow:0 0 4px #ccc;
+box-shadow:0 0 4px var(--content-border);
 }
+
 .pageheader-search {
 margin-top:20px;
 float:right;
