@@ -544,7 +544,7 @@ footer.mpisto-footer h3.mobile-data a:hover {
 }
 
 
-:not(.unset)[disabled] {
+:not(.unset)[disabled], :not(.unset):disabled {
 -webkit-filter:grayscale(100%)!important;
 filter:grayscale(100%)!important;
 opacity:1!important;
@@ -6444,7 +6444,7 @@ left:100%;padding:10px 14px; position:absolute; top:-1px; color:black; font-size
   cursor:help;
 }
 
-.smart :not(.unset)[disabled] {
+.smart :not(.unset)[disabled], :not(.unset):disabled {
 cursor:not-allowed!important;
 }
 
@@ -6469,7 +6469,7 @@ cursor:pointer;
   cursor:url("OSX/help.cur"), help;
 }
 
-.osx :not(.unset)[disabled] {
+.osx :not(.unset)[disabled], :not(.unset):disabled {
 cursor:url("OSX/banned.cur"), not-allowed!important;
 }
 
@@ -6494,7 +6494,7 @@ cursor:url("OSX/hand.cur"), pointer;
   cursor:url("Lenux/help.cur"), help;
 }
 
-.xubuntu :not(.unset)[disabled] {
+.xubuntu :not(.unset)[disabled], :not(.unset):disabled {
 cursor:url("Lenux/banned.cur"), not-allowed!important;
 }
 
@@ -6519,7 +6519,7 @@ cursor:url("Lenux/hand.cur"), pointer;
   cursor:help;
 }
 
-.edge :not(.unset)[disabled] {
+.edge :not(.unset)[disabled], :not(.unset):disabled {
 cursor:not-allowed!important;
 }
 
@@ -6550,7 +6550,7 @@ cursor:pointer;
   cursor:help;
 }
 
-.phone :not(.unset)[disabled] {
+.phone :not(.unset)[disabled], :not(.unset):disabled {
 cursor:not-allowed!important;
 }
 
