@@ -245,42 +245,6 @@ document.getElementById("Handler").className += " mpisto-servers"
 	</span>
 		<div class="store-cards">
 
-			<div class="fieldset store-theme-card servers-only">
-			<fieldset>
-			<legend>System</legend>
-			<div style="font-family: system-ui, -qq-osfont, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'MLS Sans', 'MLSystem', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell','Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;">
-				<span style="font-size:200%;">
-					AaBbYyZz
-					<br>
-					ΑαΒβΥυΖζ
-				</span>
-				<br>
-				<span>
-				ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΥΩ
-				<br>
-				ABCDEFGHIJKLMNOPQRSTUVWXYZ
-				</span>
-				<br>
-				<span>
-				αβγδεζηθικλμνξοπρσςτυφχψω
-				<br>
-				abcdefghijklmnopqrstuvwxyz
-				</span>
-				<br>
-				<span style="font-size:150%;">
-				Lorem ipsum
-				</span>
-			</div>
-			<div class="wds-floating-button-group">
-				<a class="wds-floating-button" onclick="fonta()" title="Apply System to all Wikis">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark" />
-                  </svg>
-				</a>
-			</div>
-		   </fieldset>
-		   </div>
-
 			<div class="fieldset store-theme-card">
 			<fieldset>
 			<legend>Noto Sans</legend>
@@ -641,6 +605,41 @@ document.getElementById("Handler").className += " mpisto-servers"
 		   </fieldset>
 		   </div>
 
+			<div class="fieldset store-theme-card">
+			<fieldset>
+			<legend>System Font Family</legend>
+			<div style="font-family: system-ui, -qq-osfont, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'MLS Sans', 'MLSystem', 'Helvetica Neue', sans-serif;">
+				<span style="font-size:200%;">
+					AaBbYyZz
+					<br>
+					ΑαΒβΥυΖζ
+				</span>
+				<br>
+				<span>
+				ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΥΩ
+				<br>
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ
+				</span>
+				<br>
+				<span>
+				αβγδεζηθικλμνξοπρσςτυφχψω
+				<br>
+				abcdefghijklmnopqrstuvwxyz
+				</span>
+				<br>
+				<span style="font-size:150%;">
+				Lorem ipsum
+				</span>
+			</div>
+			<div class="wds-floating-button-group">
+				<a class="wds-floating-button" onclick="fonta()" title="Apply System Font Family to all Wikis">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark" />
+                  </svg>
+				</a>
+			</div>
+		   </fieldset>
+		   </div>
 		</div>
 		
     <input type="checkbox" name="06" id="59-1" onclick="Widescreen2()"></input> <label for="59-1">Apply Serif fonts where applyable</label>		
@@ -760,13 +759,35 @@ document.getElementById("Handler").className += " mpisto-servers"
     <div class="fieldset">
     <fieldset>
     <legend>Editing Experience</legend>
-    <input type="radio" name="11" id="101" checked></input> <label for="101">Automatic</label>
+    <input type="radio" name="11" id="101" checked onclick="CustomVEOff()"></input> <label for="101">Automatic</label>
     <br>
-    <input type="radio" name="11" id="102"></input> <label for="102">VisualEditor</label>
+    <input type="radio" name="11" id="102" onclick="CustomVEOff()"></input> <label for="102">VisualEditor</label>
     <br>
-    <input type="radio" name="11" id="103"></input> <label for="103">SourceEditor</label>
+    <input type="radio" name="11" id="103" onclick="CustomVEOff()"></input> <label for="103">SourceEditor</label>
     <br>
-    <input type="radio" name="11" id="104"></input> <label for="104">Always SourceEditor</label>
+    <input type="radio" name="11" id="104" onclick="CustomVEOff()"></input> <label for="104">Always SourceEditor</label>
+    <br>
+    <input type="radio" name="11" id="105" onclick="CustomVEOn()"></input> <label for="105">Custom</label>
+		<div class="fieldset">
+			<fieldset id="VEset" disabled>
+			<legend>Visual Editor Control</legend>
+			<input type="checkbox" name="14" id="131" indeterminate checked class="check" onclick="CustomVE1()"></input> <label for="131">Articles</label>
+			<br>
+			<input type="checkbox" name="14" id="132" indeterminate onclick="CustomVE2()"></input> <label for="132">Helpspace (GHA)</label>
+			<br>
+			<input type="checkbox" name="14" id="133" indeterminate onclick="CustomVE3()"></input> <label for="133">Projectspace (GPA)</label>
+			<br>
+			<input type="checkbox" name="14" id="134" indeterminate onclick="CustomVE4()"></input> <label for="134">Userspace (G[FTDGA]?UA)</label>
+			<br>
+			<input type="checkbox" name="14" id="135" indeterminate onclick="CustomVE5()"></input> <label for="135">Filespace (GFA)</label>
+			<pre>
+	Summary:
+		Unchecked = Always SourceEditor
+		Indeterminate = SourceEditor as default mode
+		Checked = VisualEditor as default mode
+			</pre>
+			</fieldset>
+		</div>
     </fieldset>
     </div>
 
@@ -807,12 +828,6 @@ document.getElementById("Handler").className += " mpisto-servers"
     </fieldset>
     </div>
     
-    <div class="fieldset">
-    <fieldset>
-    <legend>VisualEditor</legend>
-    <input type="checkbox" name="14" id="131"></input><label for="131">Apply effect to whole line caret cursor is if no text is selected</label>          
-    </fieldset>
-    </div>
     
     </div>
     </section>
@@ -1987,6 +2002,116 @@ function HCclear() {
        
        
         x.className = x.className.replace(" win10", "");
+}
+
+
+function CustomVEOn() {
+        document.getElementById("VEset").removeAttribute('disabled');
+}
+
+
+function CustomVEOff() {
+        document.getElementById("VEset").setAttribute('disabled', 'true');
+}
+
+function CustomVE1() {
+    var x = document.getElementById("131");
+    if (!(x.className.indexOf("check") == -1)) {
+        x.className = x.className.replace("check", "");
+        x.className = x.className.replace("med", "");
+ 		x.checked = false
+		x.indeterminate = false 
+    } else if (!(x.className.indexOf("med") == -1)) {
+        x.className += "check";
+        x.className = x.className.replace("med", "");
+		x.checked = true
+		x.indeterminate = false
+    } else {
+        x.className += "med";
+        x.className = x.className.replace("check", "");
+		x.checked = false
+		x.indeterminate = true
+    }
+}
+
+function CustomVE2() {
+    var x = document.getElementById("132");
+    if (!(x.className.indexOf("check") == -1)) {
+        x.className = x.className.replace("check", "");
+        x.className = x.className.replace("med", "");
+ 		x.checked = false
+		x.indeterminate = false 
+    } else if (!(x.className.indexOf("med") == -1)) {
+        x.className += "check";
+        x.className = x.className.replace("med", "");
+		x.checked = true
+		x.indeterminate = false
+    } else {
+        x.className += "med";
+        x.className = x.className.replace("check", "");
+		x.checked = false
+		x.indeterminate = true
+    }
+}
+
+function CustomVE3() {
+    var x = document.getElementById("133");
+    if (!(x.className.indexOf("check") == -1)) {
+        x.className = x.className.replace("check", "");
+        x.className = x.className.replace("med", "");
+ 		x.checked = false
+		x.indeterminate = false 
+    } else if (!(x.className.indexOf("med") == -1)) {
+        x.className += "check";
+        x.className = x.className.replace("med", "");
+		x.checked = true
+		x.indeterminate = false
+    } else {
+        x.className += "med";
+        x.className = x.className.replace("check", "");
+		x.checked = false
+		x.indeterminate = true
+    }
+}
+
+function CustomVE4() {
+    var x = document.getElementById("134");
+    if (!(x.className.indexOf("check") == -1)) {
+        x.className = x.className.replace("check", "");
+        x.className = x.className.replace("med", "");
+ 		x.checked = false
+		x.indeterminate = false 
+    } else if (!(x.className.indexOf("med") == -1)) {
+        x.className += "check";
+        x.className = x.className.replace("med", "");
+		x.checked = true
+		x.indeterminate = false
+    } else {
+        x.className += "med";
+        x.className = x.className.replace("check", "");
+		x.checked = false
+		x.indeterminate = true
+    }
+}
+
+function CustomVE5() {
+    var x = document.getElementById("135");
+    if (!(x.className.indexOf("check") == -1)) {
+        x.className = x.className.replace("check", "");
+        x.className = x.className.replace("med", "");
+ 		x.checked = false
+		x.indeterminate = false 
+    } else if (!(x.className.indexOf("med") == -1)) {
+        x.className += "check";
+        x.className = x.className.replace("med", "");
+		x.checked = true
+		x.indeterminate = false
+    } else {
+        x.className += "med";
+        x.className = x.className.replace("check", "");
+		x.checked = false
+		x.indeterminate = true
+    }
 }
 
 
