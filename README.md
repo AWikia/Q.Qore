@@ -34,7 +34,7 @@ These wrappers use the Desktop Skin also known as Mpistochat2 or Mpisto War 2018
 
 [Main](https://awikia.github.io/Mpisto/Ryneeeel%20Grooze%20Chat.html)
 ### Desktop/Player aka Mpistoplayer2
-These wrappers use the Desktop Skin also known as Mpistoplyaer2 or Mpisto War Player, using a Vector-based layout in Flexbox and has all the archived Amanda Amantoula libraries loaded
+These wrappers use the Desktop Skin also known as Mpistoplayer2 or Mpisto War Player, using a Vector-based layout in Flexbox and has all the archived Amanda Amantoula libraries loaded
 
 [Main](https://awikia.github.io/Mpisto/Ryneeeel%20Grooze%20Player.html)
 
