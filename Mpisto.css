@@ -44,6 +44,27 @@ Raleway = Rest
 @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:300,400,700,800|PT+Sans:400,700|PT+Serif:400,700|Roboto+Slab:100,300,400,700|Roboto:100,300,400,500,700,900|Varela&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
 @import url('https://fonts.googleapis.com/css?family=Aleo:300,400,700&subset=latin-ext');
 
+
+/* Mono Fonts */
+@import url('https://fonts.googleapis.com/css?family=Cutive+Mono|Fira+Mono:400,500,700&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext');
+
+@font-face {
+    font-family:  Mpisto;
+    src:url('Mpisto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family:  Mpisto;
+    src:url('Mpisto-Light.ttf') format('truetype');
+	font-weight:300;
+}
+
+@font-face {
+    font-family:  Mpisto;
+    src:url('Mpisto-Bold.ttf') format('truetype');
+	font-weight:700;
+}
+
 @font-face {
     font-family: LCD;
     src: url('https://images.wikia.nocookie.net/__cb20161004075228/24wikia/images/d/db/LCD_ITC-Normal.otf') format('opentype'),url('https://images.wikia.nocookie.net/__cb20161004075229/24wikia/images/a/a5/LCD_ITC-Normal.woff') format('woff'),url('https://images.wikia.nocookie.net/__cb20161004075228/24wikia/images/1/1e/LCD_ITC-N0ormal.ttf') format('truetype')
@@ -410,6 +431,16 @@ font-family:Roboto, "Arial", sans-serif!important; /* Uses a font stack suitable
 
 .serif.main .mob8-font {
 font-family:Roboto Slab, "Times New Roman", serif!important; /* Uses a font stack suitable for High Contrast Mode */
+}
+
+/* Player */
+
+.main .mob9-font {
+font-family:Mpisto, Flockk, "Arial", sans-serif!important; /* Uses a font stack suitable for High Contrast Mode */
+}
+
+.serif.main .mob9-font {
+font-family:Noto Serif, "Times New Roman", serif!important; /* Uses a font stack suitable for High Contrast Mode */
 }
 
 
@@ -2354,9 +2385,9 @@ border-left-color:rgba(var(--community-header-text),0.8);
 	
 
 	.mpisto-header-container .link {
-		-webkit-transition:color 400ms ease, background-color 300ms linear 200ms, border-color 300ms linear 200ms, background-image 300ms linear 200ms;
-		-o-transition:color 400ms ease, background-color 300ms linear 200ms, border-color 300ms linear 200ms, background-image 300ms linear 200ms;
-		transition:color 400ms ease, background-color 300ms linear 200ms, border-color 300ms linear 200ms, background-image 300ms linear 200ms;
+		-webkit-transition:color 200ms ease, background-color 150ms linear 100ms, border-color 150ms linear 100ms, background-image 150ms linear 100ms;
+		-o-transition:color 200ms ease, background-color 150ms linear 100ms, border-color 150ms linear 100ms, background-image 150ms linear 100ms;
+		transition:color 200ms ease, background-color 150ms linear 100ms, border-color 150ms linear 100ms, background-image 150ms linear 100ms;
 		padding: 0 9px;
 		height:inherit;
 		color:inherit;
@@ -3977,6 +4008,14 @@ color:var(--content-color);
 border:1px solid #ccc;
 border:1px solid var(--content-border);
 padding:2px;
+font-family:Fira Mono, monospace;
+border-radius:4px;
+-webkit-box-decoration-break:clone;
+box-decoration-break:clone;
+}
+
+.serif pre, .serif code {
+	font-family:Cutive Mono, serif-monospace, monospace;
 }
 
 shadow {
@@ -4954,16 +4993,20 @@ column-count:1;
 .mpisto-options-content {
 padding:0;
 width:1066px;
-border:1px solid #ccc;
+/*border:1px solid #ccc;
 border:1px solid var(--content-border);
+*/
+border:1px solid transparent;
+background-color:#92DFE4;
+background-color:var(--emphasis-bg);
 border-top:0;
 height:calc(100% - 89px);
 height:calc(100vh - 74px);
 z-index:3;
 margin:-20px auto 0;
 position:relative;
-box-shadow:0 0 7px 1.9px #ccc, 0 4px 8px 0 rgba(0,0,0,.4), 0 4px 8px 0 rgba(255,255,255,0.4);
-box-shadow:0px 0 7px 1.9px var(--content-border), 0 4px 8px 0 rgba(0,0,0,.4), 0 4px 8px 0 rgba(255,255,255,0.4);
+box-shadow:/*0 0 7px 1.9px #ccc,*/ 0 4px 8px 0 rgba(0,0,0,.4), 0 4px 8px 0 rgba(255,255,255,0.4);
+/*box-shadow:0px 0 7px 1.9px var(--content-border), 0 4px 8px 0 rgba(0,0,0,.4), 0 4px 8px 0 rgba(255,255,255,0.4);*/
 }
 
 
@@ -4974,14 +5017,12 @@ display:inline-flex;
 flex-direction:column;
 min-width:280px;
 overflow-y:auto;
-background-color:white;
-background-color:var(--dropdown-bg);
 z-index:10;
-border:1px solid #ccc;
+/*border:1px solid #ccc;
 border:1px solid var(--content-border);
 border-width:0 2px 1px 1px;
-background-color:#92DFE4;
-background-color:var(--emphasis-bg);
+*/
+background-color:inherit;
 }
 
 .mpisto-option-pane div {
@@ -5033,7 +5074,7 @@ background-color:var(--emphasis-bg);
 .mpisto-option-pane h1 {
 margin:0 0 9px;
 font-size:32px;
-font-weight:800;
+font-weight:bolder;
 text-align:center;
 }
 
@@ -5069,9 +5110,10 @@ display:flex;
     flex-direction:column;
     position:relative;
     background-color:white;
-    background-color:var(--content-bg);
+    background-color:var(--dropdown-bg);
     font-size:15px;
     flex:1;
+    font-weight:300;
 }
 
 
@@ -5103,19 +5145,28 @@ height:calc(100vh - 139px);
 
 .mpisto-option-way h1 {
   font-size:34px;
-  font-weight:800;
+  font-weight:bolder;
   display:block;
   display:flex;
   align-items:center;
   padding:10px 0 6px 10px;
   margin:0;
-  border-bottom:1px solid #ccc;
+/*  border-bottom:1px solid #ccc;
   border-bottom:1px solid var(--content-border);
+*/
+  border-bottom:1px solid transparent;
+  border-left:1px solid transparent;
   background-color:#ffffff;
-  background-color:var(--dropdown-bg);
+  background-color:var(--content-bg);
   position:relative;
   z-index:1;
   height:63px;
+  background-clip:padding-box;
+  font-family:Mpisto, Flockk, Noto Sans, sans-serif;
+}
+
+.serif .mpisto-option-way h1 {
+  font-family:Noto Serif, sans-serif;
 }
 
 .mpisto-option-way h1::before {
@@ -5156,24 +5207,24 @@ height:calc(100vh - 139px);
   border-radius:6px;
   padding:5px 0;
   margin:10px;
-  background-color:#ffffff;
-  background-color:var(--dropdown-bg);
-  border:1px solid #ccc;
-  border:1px solid var(--content-border);
+  background-color:#fff;
+  background-color:var(--content-bg);
+  border:1px solid #fff;
+  border:1px solid var(--content-bg);
+  box-shadow: 0 0 10px 0 rgba(26, 26, 26, 0.4), 0 0 10px 0 rgba(240, 240, 240, 0.4);
   background-image:linear-gradient(to bottom, rgba(24,24,24,0.0), rgba(247,247,247,0.01), rgba(24,24,24,0));
 }
 
 .mpisto-option-way > div .fieldset fieldset {
 color:inherit;
 border:0;
-padding-top:0;
-padding-bottom:0;
+padding-top:0 18px;
 line-height:inherit;
 }
 
 .mpisto-option-way > div .fieldset fieldset legend {
   font-size:20px;
-  font-weight:900;
+  font-weight:bolder;
   display:block;
   margin:0 0 4px;
 }
@@ -5184,6 +5235,7 @@ line-height:inherit;
   background-image:linear-gradient(to bottom, rgba(24,24,24,0.0), rgba(247,247,247,0.01), rgba(24,24,24,0));
   background-color:#92DFE4;
   background-color:var(--emphasis-bg);
+  box-shadow:none;
 }
 
 .option-link {
