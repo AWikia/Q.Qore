@@ -3332,7 +3332,6 @@ input[type="number"] {
 	font-size:14px;
 	padding:7px 12px;
 	min-height:18px;
-	height:auto;
 	line-height:16px;
 	border:1px solid;
 	box-sizing:content-box;
@@ -3414,6 +3413,7 @@ background-image:linear-gradient(to bottom,rgba(50,50,50,0.15), rgba(50,50,50,0.
 background-clip:padding-box;
 box-sizing:content-box;
 min-height:18px;
+height:auto;
 line-height:16px;
 }
 
