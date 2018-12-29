@@ -3415,6 +3415,8 @@ box-sizing:content-box;
 min-height:18px;
 height:auto;
 vertical-align:middle;
+display:inline-flex;
+align-items:center;
 }
 
 .mpisto-input:hover {
