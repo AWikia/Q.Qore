@@ -3414,7 +3414,7 @@ background-clip:padding-box;
 box-sizing:content-box;
 min-height:18px;
 height:auto;
-line-height:16px;
+vertical-align:middle;
 }
 
 .mpisto-input:hover {
@@ -3442,6 +3442,7 @@ font-size:0!important;
 padding:7px 12px;
 font-size:14px;
 width:200px;
+line-height:16px;
 border-bottom-right-radius:0;
 border-top-right-radius:0;
 background-clip:border-box!important;
@@ -3451,6 +3452,7 @@ background-clip:border-box!important;
 padding:7px 12px;
 z-index:6;
 border-radius:0 1000px 1000px 0;
+vertical-align:middle;
 }
 
 /* Footer */
