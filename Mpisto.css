@@ -3332,6 +3332,7 @@ input[type="number"] {
 	font-size:14px;
 	padding:7px 12px;
 	min-height:18px;
+	height:auto;
 	line-height:16px;
 	border:1px solid;
 	box-sizing:content-box;
