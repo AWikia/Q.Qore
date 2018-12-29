@@ -433,24 +433,34 @@ header.mpisto-footer-container > div {
   width:1146px;
 }
 
+.mpisto-content .mpisto-title {
+	font-size:54px;
+}
 
 
 .mpisto-article h1 {
-font-size:34px;
+font-size:36px;
 }
 
 .mpisto-article h2 {
-font-size:28px;
+font-size:26px;
 }
 
 .mpisto-article h3 {
-font-size:22px;
+font-size:21px;
 }
 
 .mpisto-article h4 {
 font-size:18px;
 }
 
+.mpisto-article h5 {
+font-size:16px;
+}
+
+.mpisto-article h6 {
+font-size:12px;
+}
 
 footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container th.mpisto-footer-bar h3 {
 font-size:20px;
@@ -483,17 +493,20 @@ header.mpisto-footer-container > div {
   width:1346px;
 }
 
+.mpisto-content .mpisto-title {
+	font-size:67px;
+}
 
 .mpisto-article h1 {
-font-size:38px;
+font-size:44px;
 }
 
 .mpisto-article h2 {
-font-size:34px;
+font-size:32px;
 }
 
 .mpisto-article h3 {
-font-size:28px;
+font-size:27px;
 }
 
 .mpisto-article h4 {
@@ -503,6 +516,11 @@ font-size:22px;
 .mpisto-article h5 {
 font-size:18px;
 }
+
+.mpisto-article h6 {
+font-size:16px;
+}
+
 
 .mpisto-article {
 	font-size:17px;

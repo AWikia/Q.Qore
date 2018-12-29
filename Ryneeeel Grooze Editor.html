@@ -1328,6 +1328,9 @@ Can be found on Chancelog page
     <label>Name:</label> <input class="mpisto-input" value="" placeholder="Name of the pic"></input> <div class="wds-button-group"><label class="uploadbutton" for="FUpload1"><a class="wds-button"><span>Upload</span></a></label><a class="wds-button"><span>Find Pic from wiki</span></a></div>
     <br>
     <br>
+    <label>Image Size (Write full, 0 or leave empty for unchanged size):</label> <input type="number" style="width:60px;" id="InputImage1" placeholder="size"></input>
+	<br>
+	<br>
     <label>Title:</label> <input class="mpisto-input" placeholder="Description"></input>
     <br>
     <br>
@@ -1371,7 +1374,7 @@ Can be found on Chancelog page
    <section>
    Horay, you're adding a Video from Youtube
     <br>
-    <label>URL:</label> <input class="mpisto-input" value="" style="width:400px;" placeholder="Youtube Video URL"></input>
+    <label>URL:</label> <input type="url" class="mpisto-input" value="" style="width:400px;" placeholder="Youtube Video URL"></input>
     <br>
     <br>
     <label>Title:</label> <input class="mpisto-input" placeholder="Description"></input>
@@ -1394,7 +1397,7 @@ Can be found on Chancelog page
    <section>
    Horay, you're adding a Video from Vimeo
     <br>
-    <label>URL:</label> <input class="mpisto-input" value="" style="width:400px;" placeholder="Vimeo Video URL"></input>
+    <label>URL:</label> <input type="url" class="mpisto-input" value="" style="width:400px;" placeholder="Vimeo Video URL"></input>
     <br>
     <br>
     <label>Title:</label> <input class="mpisto-input" placeholder="Description"></input>
@@ -1418,7 +1421,7 @@ Can be found on Chancelog page
    <section>
    Horay, you're adding a link
     <br>
-    <label>URL:</label> <input class="mpisto-input" value="" style="width:400px;" placeholder="Article Name"></input>
+    <label>URL:</label> <input type="url" class="mpisto-input" value="" style="width:400px;" placeholder="Article Name"></input>
     <br>
     <br>
     <label>Title:</label> <input class="mpisto-input" placeholder="Description"></input>
@@ -1441,10 +1444,10 @@ Can be found on Chancelog page
    <section>
    Horay, you're adding a table
     <br>
-    <label>Rows:</label> <input class="mpisto-input" value="3" style="width:40px;" placeholder="Rows"></input> <label>Columns:</label> <input class="mpisto-input" value="3" style="width:40px;" placeholder="Columns"></input>
+    <label>Rows:</label> <input type="number" value="3" style="width:40px;" placeholder="Rows"></input> <label>Columns:</label> <input type="number"  value="3" style="width:40px;" placeholder="Columns"></input>
      <br>
     <br>
-    <label>Width:</label> <input class="mpisto-input" style="width:70px;" placeholder="Width" value="100%"></input>
+    <label>Width:</label> <input type="number" style="width:70px;" placeholder="Width" value="100%"></input>
     <br>
     <br>
     <label>Headers:</label> <input type="radio" name="51" id="51" checked></input><label for="51">First Row</label> <input type="radio" name="51" id="52"></input><label for="52">First Column</label> <input type="radio" name="51" id="53"></input><label for="53">First Row & Column</label> <input type="radio" name="51" id="54"></input><label for="54">Nothing</label>
@@ -1464,10 +1467,10 @@ Can be found on Chancelog page
    <section>
    Horay, you're adding an Inline Frame
     <br>
-    <label>URL:</label> <input class="mpisto-input" value="" style="width:400px;" placeholder="InlineFrame URL"></input>
+    <label>URL:</label> <input type="url" class="mpisto-input" value="" style="width:400px;" placeholder="InlineFrame URL"></input>
     <br>
     <br>
-    <label>Width:</label> <input class="mpisto-input" style="width:70px;" placeholder="Width" value="480"></input> <label>Height:</label> <input class="mpisto-input" style="width:70px;" placeholder="height" value="340"></input>
+    <label>Width:</label> <input type="number" style="width:70px;" placeholder="Width" value="480"></input> <label>Height:</label> <input type="number" style="width:70px;" placeholder="height" value="340"></input>
     <br>
     <br>
     <label>Position:</label> <input type="radio" name="61" id="61"></input><label for="61">Left</label> <input type="radio" name="61" id="62" checked></input><label for="62">Center</label> <input type="radio" name="61" id="63"></input><label for="63">Right</label>
@@ -1603,6 +1606,19 @@ Can be found on Chancelog page
 
 
 <script>
+function SetInputValue() {
+    var y = document.getElementById("InputImage1");
+    var x = document.getElementById("InputImage2");
+	y.setAttribute('value', x.getAttributeNode('value'));
+}
+
+function SetRangeValue() {
+    var x = document.getElementById("InputImage1");
+    var y = document.getElementById("InputImage2");
+	y.setAttribute('value', x.getAttributeNode('value'));
+}
+
+
 // Restore High Contrast
 function HCclear() {
     var x = document.getElementById("Handler");

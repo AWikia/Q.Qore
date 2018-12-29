@@ -1850,7 +1850,8 @@ align-items:stretch;
 display:-ms-inline-flexbox;
 display:inline-flex;
 -ms-flex-pack:start;
-justify-content:flex-start
+justify-content:flex-start;
+vertical-align:top;
 }
 
 .wds-button-group>.wds-button{
@@ -3212,6 +3213,18 @@ font-size:20px;
 font-size:17px;
 }
 
+.mpisto-article h4 {
+font-size:14px;
+}
+
+.mpisto-article h5 {
+font-size:12px;
+}
+
+.mpisto-article h6 {
+font-size:10px;
+font-variant:small-caps;
+}
 
 .mpisto-article h2 {
 border-bottom:1px solid #ccc;
@@ -3309,15 +3322,17 @@ font-weight:bold;
 
 
 input[type="number"] {
-	border-radius:10px;
-	color:#040404;
-	background-color:#fdfdfd;
-	box-shadow:inset 0 3px 1px #d4d5d5;
-	border-color:#1a1a1a;
+	border-radius:16px;
+	color:#040506;
+	background-color:#fdfeff;
+	box-shadow:inset 0 3px 1.5px -0.2px #d5d6d7;
+	border-color:#1a1b1c;
 	border-style:solid;
 	font-family:"LCD", Clockopia, monospace;
-	font-size:12px;
-	padding:8px 10px;
+	font-size:14px;
+	padding:7px 12px;
+	min-height:18px;
+	line-height:16px;
 	border:1px solid;
 	box-sizing:content-box;
 	-webkit-appearance:none;
@@ -3325,6 +3340,7 @@ input[type="number"] {
 
 input[type="number"]:focus {
 	box-shadow:none;
+	border-color:#000102;
 }
 
 input[type="number"]::-ms-input-placeholder {
@@ -3346,6 +3362,27 @@ input[type="number"]::-placeholder {
 input[type="number"]:placeholder-shown {
 	font-family:Liberation Sans, Arial, sans-seirf;
 }
+
+.serif input[type="number"]::-ms-input-placeholder {
+	font-family:Liberation Serif, Times New Roman, Serif-seirf;
+}
+
+
+
+.serif input[type="number"]:-ms-input-placeholder {
+	font-family:Liberation Serif, Times New Roman, Serif-seirf;
+}
+
+
+.serif input[type="number"]::-placeholder {
+	font-family:Liberation Serif, Times New Roman, Serif-seirf;
+}
+
+
+.serif input[type="number"]:placeholder-shown {
+	font-family:Liberation Serif, Times New Roman, Serif-seirf;
+}
+
 
 /* Hide Spin buttons from number input type */
 input::-webkit-inner-spin-button {
@@ -3369,12 +3406,14 @@ border:1px solid var(--content-color);
 border:solid transparent 1px;
 transition:border 170ms, box-shadow 170ms;
 cursor:url("Windows/text.cur"), text;
-border-radius:1000px;
+border-radius:50px;
 -webkit-appearance:none;
 opacity:0.9;
 background-image:linear-gradient(to bottom,rgba(50,50,50,0.15), rgba(50,50,50,0.15)), linear-gradient(to bottom, rgba(206,206,206,0.15), rgba(206,206,206,0.15));
 background-clip:padding-box;
 box-sizing:content-box;
+min-height:18px;
+line-height:16px;
 }
 
 .mpisto-input:hover {
@@ -3404,8 +3443,6 @@ font-size:14px;
 width:200px;
 border-bottom-right-radius:0;
 border-top-right-radius:0;
-height:18px;
-line-height:16px;
 background-clip:border-box!important;
 }
 
@@ -4005,13 +4042,14 @@ background-color:#fff;
 background-color:var(--dropdown-bg);
 color:#000;
 color:var(--content-color);
-border:1px solid #ccc;
-border:1px solid var(--content-border);
-padding:2px;
+border:1px dashed #18bbc5;
+border-color:rgb(var(--link-color));
+padding:2.5px;
 font-family:Fira Mono, monospace;
 border-radius:4px;
 -webkit-box-decoration-break:clone;
 box-decoration-break:clone;
+font-size:95%;
 }
 
 .serif pre, .serif code {
