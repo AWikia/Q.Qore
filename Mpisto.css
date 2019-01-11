@@ -473,7 +473,9 @@ overflow-x:hidden!important;
 	background-image:var(--background-image);
 	background-color:#e995ca;
 	background-color:var(--background-color);
-
+  image-rendering:initial;                  /* CSS4 Proposed  */
+  -ms-interpolation-mode:bicubic;           /* IE8+           */
+  -qq-image-blurring:tick;                  /* 4x4 Web 1-2    */
 }
 
 .mpisto-2018:not(.explorer):not(.edge) {
@@ -4521,7 +4523,7 @@ header.mpisto-footer-container {
   bottom:0;
   left:0;
   z-index:51;
-  min-height:22px;
+  min-height:27px;
   width:100%;
   border:2px solid #18bbc5;
   border-color:rgb(var(--link-color));
@@ -4530,17 +4532,13 @@ header.mpisto-footer-container {
   border-bottom-width:0px;
   box-shadow:0 0 9px #ccc, 0 0 2.5px #000, 0 0 1.5px #fff;
   box-shadow:0 0 9px var(--content-border), 0 0 2.5px #000, 0 0 1.5px #fff;
-  opacity:0;
   transition:opacity 100ms;
 }
 
-header.mpisto-footer-container:hover, .mpisto-servers header.mpisto-footer-container {
-  opacity:1;
-}
 
 header.mpisto-footer-container > div {
   width:1066px;
-  height:22px;
+  height:27px;
   position:relative;
   display:flex;
   flex-direction:row-reverse;
@@ -4653,8 +4651,8 @@ padding-bottom:34px;
   margin:-20px auto 0;
   position:relative;
   z-index:2;
-  height:calc(100vh - 107px);
-  max-height:calc(100vh - 107px);
+  height:calc(100vh - 110px);
+  max-height:calc(100vh - 110px);
   overflow-y:auto;
   overflow-x:hidden; /* Fixes bottom scrollbar bug in IE/Edge */
 }
@@ -4882,8 +4880,8 @@ width:100%;
   overflow-y:auto;
   border:1px solid #ccc;
   border:1px solid var(--content-border);
-  max-height:calc(100% - 300px);
-  max-height:calc(100vh - 390px);
+  max-height:calc(100% - 303px);
+  max-height:calc(100vh - 393px);
   height:auto;
   margin-bottom:10px;
   width:100%;
@@ -5045,8 +5043,8 @@ border:1px solid transparent;
 background-color:#92DFE4;
 background-color:var(--emphasis-bg);
 border-top:0;
-height:calc(100% - 89px);
-height:calc(100vh - 74px);
+height:calc(100% - 92px);
+height:calc(100vh - 77px);
 z-index:3;
 margin:-20px auto 0;
 position:relative;
@@ -5171,19 +5169,19 @@ display:flex;
 .mpisto-option-way > div {
     overflow-y:auto;
     width:100%;
-    height:calc(100vh - 138px);
+    height:calc(100vh - 141px);
     border:1px #ccc;
     border:1px var(--content-border);
     border-style:hidden;
-    height:calc(100% - 80px);
-    height:calc(100vh - 138px);
+    height:calc(100% - 83px);
+    height:calc(100vh - 141px);
     margin:auto;    
 }
 
 @supports (-moz-appearance:none) {
 .mpisto-option-way > div {
-height:calc(100vh - 139px);
-height:calc(100vh - 139px);
+height:calc(100vh - 142px);
+height:calc(100vh - 142px);
 }
 }
 
