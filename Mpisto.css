@@ -50,18 +50,25 @@ Raleway = Rest
 
 @font-face {
     font-family:  Mpisto;
-    src:url('Mpisto-Regular.ttf') format('truetype');
+    src:url('Mpisto2019-Regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family:  Mpisto;
-    src:url('Mpisto-Light.ttf') format('truetype');
+    src:url('Mpisto2019-Light.ttf') format('truetype');
 	font-weight:300;
 }
 
 @font-face {
     font-family:  Mpisto;
-    src:url('Mpisto-Bold.ttf') format('truetype');
+    src:url('Mpisto2019-Medium.ttf') format('truetype');
+	font-weight:500;
+}
+
+
+@font-face {
+    font-family:  Mpisto;
+    src:url('Mpisto2019-Bold.ttf') format('truetype');
 	font-weight:700;
 }
 
