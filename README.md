@@ -2,8 +2,7 @@
 OpenSource Mpirthi Project with great modern browser support.
 
 # Wrappers
-## Desktop
-### Desktop/Main aka Mpistoskin2
+## Main aka Mpistoskin2
 These wrappers use the Desktop Skin also known as Mpistoskin2 or Mpisto War 2018:
 
 [Changelog](https://awikia.github.io/Mpisto/Ryneeeel%20Grooze%20Chancelog.html)
@@ -29,30 +28,33 @@ These wrappers use the Desktop Skin also known as Mpistoskin2 or Mpisto War 2018
 [Anon Interface](https://awikia.github.io/Mpisto/Ryneeeel%20Grooze%20(Anons).html)
 
 [Main Page (With Spotlight footer)](https://awikia.github.io/Mpisto/Ryneeeel%20Grooze%20(Spotlight).html)
-### Desktop/Chat aka Mpistochat2
+## Chat aka Mpistochat2
 These wrappers use the Desktop Skin also known as Mpistochat2 or Mpisto War 2018 Chatroom, powered by Mprilyiaano Services for Chatting:
 
 [Main](https://awikia.github.io/Mpisto/Ryneeeel%20Grooze%20Chat.html)
-### Desktop/Player aka Mpistoplayer2
+## Player aka Mpistoplayer2
 These wrappers use the Desktop Skin also known as Mpistoplayer2 or Mpisto War Player, using a Vector-based layout in Flexbox and has all the archived Amanda Amantoula libraries loaded
 
 [Main](https://awikia.github.io/Mpisto/Ryneeeel%20Grooze%20Player.html)
 
-## Mobile
-### Mobile/Main aka Mpistomobile2, fork of Mercury
-These wrappers use the Mobile Skin also known as Mpistomobile2 which is a fork of Mercury Skin, with credits to FANDOM for the wrapper of Mercury skin:
+## MobileOriginated aka Mpistosimple2, fork of Mercury formermly known as Mpistomobile2 during fork
+These wrappers use the Hybrid Desktop/Mobile Skin also known as Mpistomobile2 or Mpistosimple2 right now which is a fork of Mercury Skin, with credits to Fandom for the wrapper of Mercury skin:
 
 [Store](https://awikia.github.io/Mpisto/Ryneeeel%20Grooze%20(Store).html)
 
 [Mobile Main Page](https://awikia.github.io/Mpisto/Ryneeeel%20Grooze%20(Mobile).html)
 
-# Browser Requirements
-Internet Explorer 11 (Not Recommended however most features that depend on CSS variables won't work.)
+# Browser Requirements (Bold ones are discouraged in use browsers, Italic ones are fictional aka orbitron-only browsers)
+**Internet Explorer 11 (Not Recommended however)**
 
-Edge 15 (Not Recommended due to bugs in CSS variables), Edge 16+ (Recommended)
+Edge 17+ (Future versions will be Blink-based)
 
-Chrome 49 - 58 (Not Recommended), Chrome 59+ (Most Recommended Browser)
+Chrome 62+/Opera 49+ (Most Recommended Browser)
 
-Firefox 31 - 53 (Not Recommended), Firefox 54+ (May Sometimes not recommended but still useful)
+Firefox 55+
 
-Safari 9.1 (Not Recommended), Safari 10+ (Recommended)
+Safari 10.1+
+
+*Qorta Browser 8+*
+
+*mInevra bRowser 10+ (V14+ on Android, V14.5 on MpistoOS and V15.2 elsewhere are Gecko-based)*

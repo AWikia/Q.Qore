@@ -33,6 +33,47 @@ function toggleMenu() {
     }
 }
 
+function HCa() {
+    var x = document.getElementById("Handler");
+    if (x.className.indexOf("theme-A") == -1) {
+        x.className += " theme-A";
+    }
+        x.className = x.className.replace(" theme-B", "");
+        x.className = x.className.replace(" theme-C", "");
+        x.className = x.className.replace(" theme-D", "");
+}
+
+function HCb() {
+    var x = document.getElementById("Handler");
+    if (x.className.indexOf("theme-B") == -1) {
+        x.className += " theme-B";
+    }
+        x.className = x.className.replace(" theme-A", "");
+        x.className = x.className.replace(" theme-C", "");
+        x.className = x.className.replace(" theme-D", "");
+}
+
+function HCc() {
+    var x = document.getElementById("Handler");
+    if (x.className.indexOf("theme-C") == -1) {
+        x.className += " theme-C";
+    }
+        x.className = x.className.replace(" theme-A", "");
+        x.className = x.className.replace(" theme-B", "");
+        x.className = x.className.replace(" theme-D", "");
+}
+
+function HCd() {
+    var x = document.getElementById("Handler");
+    if (x.className.indexOf("theme-D") == -1) {
+        x.className += " theme-D";
+    }
+        x.className = x.className.replace(" theme-A", "");
+        x.className = x.className.replace(" theme-B", "");
+        x.className = x.className.replace(" theme-C", "");
+}
+
+
   </script>
 <div style="visibility:hidden">
 <header class="mpisto-navbar">
@@ -74,6 +115,34 @@ function toggleMenu() {
 					  </ul>
 					</div>
 				  </div>
+				<div class="wds-dropdown wds-has-dark-shadow">
+					<div class="link cell wds-dropdown__toggle"><svg class="wds-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 0H0v24h24z" fill="none"/><path d="M17.66 7.93L12 2.27 6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58c2.05 0 4.1-.78 5.66-2.34 3.12-3.12 3.12-8.19 0-11.31zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/></svg></div>
+                  <div class="wds-dropdown__content">
+					<ul class="wds-list wds-is-linked">
+						<li>
+							<a onclick="HCa()">
+								Theme A
+							</a>
+						</li>
+						<li>
+							<a onclick="HCb()">
+								Theme B
+							</a>
+						</li>
+						<li>
+							<a onclick="HCc()">
+								Theme C
+							</a>
+						</li>
+						<li>
+							<a onclick="HCd()" >
+								Theme D
+							</a>
+						</li>
+					</ul>
+                  </div>
+					</div>
+
 				<a class="link cell" onclick="GNavSearch()">
 					<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon  search-on">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass" /> 
@@ -864,6 +933,7 @@ function toggleMenu() {
 <link rel="stylesheet" type="text/css" href="Mpisto.css"> <!-- Main CSS -->
 <link rel="stylesheet" type="text/css" href="Breakpoints.css"> <!-- Breakpoint CSS -->
 <link rel="stylesheet" type="text/css" href="Mobile.css"> <!-- Mobile CSS -->
+<link rel="stylesheet" type="text/css" href="MpistoAgent.css"> <!-- Custom CSS -->
 <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900" rel="stylesheet"> </head>
 
 <script src="UserAgents.js" ></script>
@@ -883,7 +953,7 @@ function HCclear() {
         x.className = x.className.replace(" hc4", "");
 }
 
-// High Contast Themes
+/*// High Contast Themes
 function HCa() {
     var x = document.getElementById("Handler");
         x.className += " contrast";
@@ -908,7 +978,7 @@ function HCd() {
         x.className += " hc4";
 }
 
-function HCcustom() {
+*/function HCcustom() {
     var x = document.getElementById("Handler");
         x.className += " contrast";
 }
