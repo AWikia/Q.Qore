@@ -45,7 +45,7 @@ These wrappers use the Hybrid Desktop/Mobile Skin also known as Mpistomobile2 or
 [Mobile Main Page](https://awikia.github.io/Mpisto/Ryneeeel%20Grooze%20(Mobile).html)
 
 # Browser Requirements (Bold ones are discouraged in use browsers, Italic ones are fictional aka orbitron-only browsers)
-**Internet Explorer 11 (Not Recommended however)**
+**Internet Explorer 11 (Not Recommended Browser)**
 
 Edge 17+ (Future versions will be Blink-based)
 
