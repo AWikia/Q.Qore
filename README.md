@@ -55,6 +55,6 @@ Firefox 55+
 
 Safari 10.1+
 
-*Qorta Browser 8+*
+*Qorta Browser 9+*
 
 *mInevra bRowser 10+ (V14+ on Android, V14.5 on MpistoOS and V15.2 elsewhere are Gecko-based)*
