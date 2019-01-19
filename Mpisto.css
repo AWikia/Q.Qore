@@ -307,7 +307,7 @@ body {
 margin:0 auto;
 /*font-family:Source Sans Pro, "Trebuchet MS", "Prompt",  "M PLUS 1p", "Gothic A1", sans-serif;
 */
-font-family:Mpisto, Flockk, "Arial", sans-serif; /* Uses a font stack suitable for High Contrast Mode */
+font-family:Mpisto, Flockk, "Arial",  "Prompt",  "M PLUS 1p", "Gothic A1", "Cairo", "Catamaran", "Ramabhadra", sans-serif; /* Uses a font stack suitable for High Contrast Mode */
 color:#000;
 color:var(--content-color);
 background-repeat:no-repeat;
@@ -333,7 +333,7 @@ touch-action:manipulation;
 }
 
 .serif body { /* Noto Sans */
-font-family:Noto Serif, "Times New Roman", serif; /* Uses a font stack suitable for High Contrast Mode */
+font-family:Noto Serif, "Times New Roman", "Song Myung",  "Noto Serif JP", "David Libre", "Pridi", "Amiri", "Catamaran", "Ramaraja", serif; /* Uses a font stack suitable for High Contrast Mode */
 }
 
 
@@ -448,11 +448,11 @@ font-family:Roboto Slab, "Times New Roman", serif!important; /* Uses a font stac
 /* ParaType Classic */
 
 .main .mob9-font {
-font-family:"PT Sans", "Play", "Verdana", "Prompt",  "M PLUS 1p", "Gothic A1", "Cairo", "Catamaran", "Ramabhadra", sans-serif!important; /* Noto Sans */
+font-family:"PT Sans", "Play", "Verdana", sans-serif!important; /* Noto Sans */
 }
 
 .serif.main .mob9-font {
-font-family:"PT Serif", "Liberation Serif", "Song Myung",  "Noto Serif JP", "David Libre", "Pridi", "Amiri", "Catamaran", "Ramaraja", serif!important;
+font-family:"PT Serif", "Liberation Serif", serif!important;
 }
 
 
