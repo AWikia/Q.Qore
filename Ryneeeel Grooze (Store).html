@@ -1312,87 +1312,9 @@ function toggleMenu() {
 <script src="Headroom.js" /></script>
 
 
+<script src="Themes.js"></script>
+
 <script>
-// Restore High Contrast
-function HCclear() {
-    var x = document.getElementById("Handler");
-        x.className = x.className.replace(" contrast", "");
-        x.className = x.className.replace(" hc1", "");
-        x.className = x.className.replace(" hc2", "");
-        x.className = x.className.replace(" hc3", "");
-        x.className = x.className.replace(" hc4", "");
-}
-
-// High Contast Themes
-/*function HCa() {
-    var x = document.getElementById("Handler");
-        x.className += " contrast";
-        x.className += " hc1";
-}
-
-function HCb() {
-    var x = document.getElementById("Handler");
-        x.className += " contrast";
-        x.className += " hc2";
-}
-
-function HCc() {
-    var x = document.getElementById("Handler");
-        x.className += " contrast";
-        x.className += " hc3";
-}
-
-function HCd() {
-    var x = document.getElementById("Handler");
-        x.className += " contrast";
-        x.className += " hc4";
-}
-*/
-
-function HCa() {
-    var x = document.getElementById("Handler");
-    if (x.className.indexOf("theme-A") == -1) {
-        x.className += " theme-A";
-    }
-        x.className = x.className.replace(" theme-B", "");
-        x.className = x.className.replace(" theme-C", "");
-        x.className = x.className.replace(" theme-D", "");
-}
-
-function HCb() {
-    var x = document.getElementById("Handler");
-    if (x.className.indexOf("theme-B") == -1) {
-        x.className += " theme-B";
-    }
-        x.className = x.className.replace(" theme-A", "");
-        x.className = x.className.replace(" theme-C", "");
-        x.className = x.className.replace(" theme-D", "");
-}
-
-function HCc() {
-    var x = document.getElementById("Handler");
-    if (x.className.indexOf("theme-C") == -1) {
-        x.className += " theme-C";
-    }
-        x.className = x.className.replace(" theme-A", "");
-        x.className = x.className.replace(" theme-B", "");
-        x.className = x.className.replace(" theme-D", "");
-}
-
-function HCd() {
-    var x = document.getElementById("Handler");
-    if (x.className.indexOf("theme-D") == -1) {
-        x.className += " theme-D";
-    }
-        x.className = x.className.replace(" theme-A", "");
-        x.className = x.className.replace(" theme-B", "");
-        x.className = x.className.replace(" theme-C", "");
-}
-
-function HCcustom() {
-    var x = document.getElementById("Handler");
-        x.className += " contrast";
-}
 
 function BarSwitch() {
     var x = document.getElementById("Handler");

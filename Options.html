@@ -3,7 +3,7 @@
 </defs>
 
 <html class="main">
-  <body class="mpisto-2018 options theme-A" style="overflow:hidden;" id="Handler" onclick="">
+  <body class="mpisto-2018 options" style="overflow:hidden;" id="Handler" onclick="">
   <script>
 
 function GNavSearch() {
@@ -248,7 +248,7 @@ document.getElementById("Handler").className += " mpisto-servers"
 			<div class="fieldset store-theme-card">
 			<fieldset>
 			<legend>Noto Sans</legend>
-			<div style="font-family:PT Sans, Play, 'Trebuchet MS', 'Prompt',  'M PLUS 1p', 'Gothic A1', 'Cairo', 'Catamaran', 'Ramabhadra', sans-serif;">
+			<div style="font-family: Mpisto, Flockk, 'Arial', sans-serif;">
 				<span style="font-size:200%;">
 					AaBbYyZz
 					<br>
@@ -643,8 +643,8 @@ document.getElementById("Handler").className += " mpisto-servers"
 
 			<div class="fieldset store-theme-card">
 			<fieldset>
-			<legend>Player</legend>
-			<div style="font-family: Mpisto, Flockk, 'Arial', sans-serif;">
+			<legend>ParaType Classic</legend>
+			<div style="font-family:PT Sans, Play, 'Trebuchet MS', 'Prompt',  'M PLUS 1p', 'Gothic A1', 'Cairo', 'Catamaran', 'Ramabhadra', sans-serif;">
 				<span style="font-size:200%;">
 					AaBbYyZz
 					<br>
@@ -668,7 +668,7 @@ document.getElementById("Handler").className += " mpisto-servers"
 				</span>
 			</div>
 			<div class="wds-floating-button-group">
-				<a class="wds-floating-button" onclick="fontk()" title="Apply Player to all Wikis">
+				<a class="wds-floating-button" onclick="fontk()" title="Apply ParaType Classic to all Wikis">
                   <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark" />
                   </svg>
@@ -1747,8 +1747,7 @@ Summary:
 
 <script src="UserAgents.js" ></script>
 <script src="MpistoAgent.js"></script>
-
-
+<script src="Themes.js"></script>
 
 <script>
 // Pollyfils for Options.html
@@ -2060,14 +2059,6 @@ function fontk() {
 }
 
 // Restore High Contrast
-function HCclear() {
-    var x = document.getElementById("Handler");
-        x.className = x.className.replace(" contrast", "");
-        x.className = x.className.replace(" basic", "");
-       
-       
-        x.className = x.className.replace(" win10", "");
-}
 
 
 function CustomVEOn() {
@@ -2208,92 +2199,6 @@ function DateTimeOn() {
 
 
 // High Contast Themes
-function HCa() {
-    var x = document.getElementById("Handler");
-    if (x.className.indexOf("theme-A") == -1) {
-        x.className += " theme-A";
-		document.getElementById("302").checked = true;
-    }
-        x.className = x.className.replace(" theme-B", "");
-        x.className = x.className.replace(" theme-C", "");
-        x.className = x.className.replace(" theme-D", "");
-		document.getElementById("303").checked = false;
-		document.getElementById("304").checked = false;
-		document.getElementById("305").checked = false;
-}
-
-function HCb() {
-    var x = document.getElementById("Handler");
-    if (x.className.indexOf("theme-B") == -1) {
-        x.className += " theme-B";
-		document.getElementById("303").checked = true;
-    }
-        x.className = x.className.replace(" theme-A", "");
-        x.className = x.className.replace(" theme-C", "");
-        x.className = x.className.replace(" theme-D", "");
-		document.getElementById("302").checked = false;
-		document.getElementById("304").checked = false;
-		document.getElementById("305").checked = false;
-}
-
-function HCc() {
-    var x = document.getElementById("Handler");
-    if (x.className.indexOf("theme-C") == -1) {
-        x.className += " theme-C";
-		document.getElementById("304").checked = true;
-    }
-        x.className = x.className.replace(" theme-A", "");
-        x.className = x.className.replace(" theme-B", "");
-        x.className = x.className.replace(" theme-D", "");
-		document.getElementById("302").checked = false;
-		document.getElementById("303").checked = false;
-		document.getElementById("305").checked = false;
-}
-
-function HCd() {
-    var x = document.getElementById("Handler");
-    if (x.className.indexOf("theme-D") == -1) {
-        x.className += " theme-D";
-		document.getElementById("305").checked = true;
-    }
-        x.className = x.className.replace(" theme-A", "");
-        x.className = x.className.replace(" theme-B", "");
-        x.className = x.className.replace(" theme-C", "");
-		document.getElementById("302").checked = false;
-		document.getElementById("303").checked = false;
-		document.getElementById("304").checked = false;
-}
-
-
-function HCcustom0() {
-    var x = document.getElementById("Handler");
-    if (x.className.indexOf("contrast") == -1) {
-        x.className += " contrast";
-    }
-    if (x.className.indexOf("win10") == -1) {
-        x.className += " win10";
-    }
-        x.className = x.className.replace(" basic", "");
-}
-
-function HCcustom() {
-    var x = document.getElementById("Handler");
-    if (x.className.indexOf("contrast") == -1) {
-        x.className += " contrast";
-    }
-        x.className = x.className.replace(" win10", "");
-        x.className = x.className.replace(" basic", "");
-}
-
-function HCcustom2() {
-    var x = document.getElementById("Handler");
-    if (x.className.indexOf("basic") == -1) {
-        x.className += " basic";
-    }
-        x.className = x.className.replace(" contrast", "");
-        x.className = x.className.replace(" win10", "");
-
-}
 function BarSwitch() {
     var x = document.getElementById("Handler");
     if (x.className.indexOf("bar-hidden") == -1) {

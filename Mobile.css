@@ -810,7 +810,12 @@ padding:5px 0 0;
 }
 
 @media only screen and (max-width:959px) {
-
+:root {
+	scrollbar-width:thin;
+	scrollbar-color:#0000ff transparent;
+	scrollbar-color:rgb(var(--community-header-bg)) transparent;
+	min-width:360px;
+}
 
 .mpisto-gnav.headroom--top {
 	box-shadow:none;

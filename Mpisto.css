@@ -277,6 +277,8 @@ Raleway = Rest
 
 :root {
 font-family:Trebuchet MS;
+scrollbar-color:#18bbc5 #e995ca;
+scrollbar-color:var(--button-color) var(--background-color);
 }
 
 
@@ -305,7 +307,7 @@ body {
 margin:0 auto;
 /*font-family:Source Sans Pro, "Trebuchet MS", "Prompt",  "M PLUS 1p", "Gothic A1", sans-serif;
 */
-font-family:"PT Sans", "Play", "Verdana", "Prompt",  "M PLUS 1p", "Gothic A1", "Cairo", "Catamaran", "Ramabhadra", sans-serif; /* Noto Sans */
+font-family:Mpisto, Flockk, "Arial", sans-serif; /* Uses a font stack suitable for High Contrast Mode */
 color:#000;
 color:var(--content-color);
 background-repeat:no-repeat;
@@ -325,10 +327,13 @@ touch-action:manipulation;
 	background-color:#e995ca;
 	background-color:var(--background-color);
 (M)touch-action:auto; /* mInerva 11.5- can make unscrollable page with mouse and keyboard */
+	overflow-y:auto;
+	height:100vh;
+	z-index:-1;	
 }
 
 .serif body { /* Noto Sans */
-font-family:"PT Serif", "Liberation Serif", "Song Myung",  "Noto Serif JP", "David Libre", "Pridi", "Amiri", "Catamaran", "Ramaraja", serif;
+font-family:Noto Serif, "Times New Roman", serif; /* Uses a font stack suitable for High Contrast Mode */
 }
 
 
@@ -440,14 +445,14 @@ font-family:Roboto, "Arial", sans-serif!important; /* Uses a font stack suitable
 font-family:Roboto Slab, "Times New Roman", serif!important; /* Uses a font stack suitable for High Contrast Mode */
 }
 
-/* Player */
+/* ParaType Classic */
 
 .main .mob9-font {
-font-family:Mpisto, Flockk, "Arial", sans-serif!important; /* Uses a font stack suitable for High Contrast Mode */
+font-family:"PT Sans", "Play", "Verdana", "Prompt",  "M PLUS 1p", "Gothic A1", "Cairo", "Catamaran", "Ramabhadra", sans-serif!important; /* Noto Sans */
 }
 
 .serif.main .mob9-font {
-font-family:Noto Serif, "Times New Roman", serif!important; /* Uses a font stack suitable for High Contrast Mode */
+font-family:"PT Serif", "Liberation Serif", "Song Myung",  "Noto Serif JP", "David Libre", "Pridi", "Amiri", "Catamaran", "Ramaraja", serif!important;
 }
 
 
@@ -458,6 +463,9 @@ body {
 
 .mpisto-2018 {
 overflow-x:hidden!important;
+height:-webkit-min-content;
+height:-moz-min-content;
+height:min-content;
 }
 
 .secondary {
@@ -599,6 +607,9 @@ cursor:url("Windows/banned.cur"),not-allowed!important;
 
 textarea, [contenteditable] {
   cursor:url("Windows/text.cur"), text;
+  scrollbar-width:thin;
+  scrollbar-color:#000 transparent;
+  scrollbar-color:var(--content-color) transparent;
 }
 
 input[type="datetime-local"], input[type="date"], input[type="time"], input[type="week"], input[type="month"], input[type="year"] { /* Year is non-standard Qorta/mInerva input type */
@@ -671,13 +682,14 @@ resize:none;
   -qq-image-blurring:cross;                  /* 4x4 Web 1-2    */
 border-radius:0; /* Remove initial border-radius set by some agents such as FF for Android in input fields */
 -qq-invert-style:classic; /* Prevent extra 180deg hue-rotation on inverts on mInerva */
+  scrollbar-color:inherit; /* Qorta Qorte does not seem to inherit scrollbar-color. This line forces that browser to inherit */
 }
 
 .pixelatedoff *, .pixelatedoff {
   image-rendering:initial;                  /* CSS4 Proposed  */
   -ms-interpolation-mode:bicubic;           /* IE8+           */
   -qq-image-blurring:tick;                  /* 4x4 Web 1-2    */
-}
+  }
 
 /* Global Nav
 ** Commented styles are the ones used in the old version
@@ -2111,7 +2123,14 @@ background-color:#ffffff;
 background-color:var(--dropdown-bg);
 border-color:#ccc;
 border-color:var(--content-border);
-box-shadow:0 2px 6px 0 rgba(0,0,0,.2), 0 2px 6px 0 rgba(255,255,255,0.2);}
+box-shadow:0 2px 6px 0 rgba(0,0,0,.2), 0 2px 6px 0 rgba(255,255,255,0.2);
+}
+
+.main .wds-dropdown__content .wds-list {
+  scrollbar-width:thin;
+  scrollbar-color:#ccc transparent;
+  scrollbar-color:var(--content-border) transparent;
+}
 
 .main .wds-dropdown__content .wds-list.wds-is-linked>li>a{color:#000; color:var(--content-color);}
 .main .wds-dropdown__content .wds-list.wds-is-linked>li.wds-is-selected>a:not(.wds-button), .main .wds-dropdown__content .wds-list.wds-is-linked>li:hover>a:not(.wds-button){
@@ -2742,6 +2761,9 @@ left:0;
 .mpisto-spotlight-footer nav item .scroll {
 	height:400px;
 	overflow-y:auto;
+`   scrollbar-width:thin;
+    scrollbar-color:#18bbc5 transparent;
+    scrollbar-color:rgb(var(--link-color)) transparent;
 }
 
 .mpisto-spotlight-footer nav item .scroll li {
@@ -2905,8 +2927,8 @@ text-align:right;
 
 .mpisto-userpages-header .mpisto-profile-masthead {
 	border-radius:5px;
-	box-shadow:0 0 9px 0.1px #ccc, 0 0 2.5px #000, 0 0 1.5px #fff;
-	box-shadow:0 0 9px 0.1px var(--content-border), 0 0 2.5px #000, 0 0 1.5px #fff;
+	box-shadow:0 0 8px 0.2px #ccc, 0 0 3px #000, 0 0 2px #fff;
+	box-shadow:0 0 8px 0.2px var(--content-border), 0 0 3px #000, 0 0 2px #fff;
 	flex-grow:1;
 	min-height:50px;
 	background-color:#fff;
@@ -3491,7 +3513,7 @@ color:var(--dropdown-bg);
 font-family:"Source Sans Pro", "Prompt",  "M PLUS 1p", "Gothic A1", "Cairo", "Catamaran", "Ramabhadra", cursive;
 position:relative;
 z-index:49;
-padding:0 0 22px;
+padding:0 0 27px;
 /*box-shadow:0 0 9px #ccc, 0 0 2.5px #000, 0 0 1.5px #fff;
 box-shadow:0 0 9px var(--content-border), 0 0 2.5px #000, 0 0 1.5px #fff;*/
 box-shadow: 0 0 3px #000, 0 0 3px #ffffff;
@@ -4066,6 +4088,7 @@ border-radius:4px;
 -webkit-box-decoration-break:clone;
 box-decoration-break:clone;
 font-size:95%;
+scrollbar-width:thin;
 }
 
 .serif pre, .serif code {
@@ -4662,6 +4685,8 @@ padding-bottom:34px;
   max-height:calc(100vh - 110px);
   overflow-y:auto;
   overflow-x:hidden; /* Fixes bottom scrollbar bug in IE/Edge */
+scrollbar-color:#ccc #fff;
+scrollbar-color:var(--content-border) var(--content-bg);
 }
 
 .mpisto-editors-content .mpisto-wrapper {
@@ -5057,6 +5082,8 @@ margin:-20px auto 0;
 position:relative;
 box-shadow:/*0 0 7px 1.9px #ccc,*/ 0 4px 8px 0 rgba(0,0,0,.4), 0 4px 8px 0 rgba(255,255,255,0.4);
 /*box-shadow:0px 0 7px 1.9px var(--content-border), 0 4px 8px 0 rgba(0,0,0,.4), 0 4px 8px 0 rgba(255,255,255,0.4);*/
+scrollbar-color:#ccc #ffffff;
+scrollbar-color:var(--content-border) var(--dropdown-bg);
 }
 
 
@@ -6080,7 +6107,7 @@ margin-right:0;
   }
       
   .theme-portal .link:hover, .theme-A .theme-portal .link.themea, .theme-B .theme-portal .link.themeb, .theme-C .theme-portal .link.themec, .theme-D .theme-portal .link.themed, 
-body:not(.basic):not(.contrast) .theme-portal .link.theme0, .contrast.win10 .theme-portal .link.theme1, .contrast:not(.win10) .theme-portal .link.theme2, .basic .theme-portal .link.theme3,
+html:not(.basic):not(.contrast) .theme-portal .link.theme0, .contrast.win10 .theme-portal .link.theme1, .contrast:not(.win10) .theme-portal .link.theme2, .basic .theme-portal .link.theme3,
 body:not(.filterA):not(.filterB):not(.filterC):not(.filterD):not(.filterE):not(.filterF) .theme-portal .link.theme10, .filterA .theme-portal .link.theme11, .filterB .theme-portal .link.theme12, .filterC .theme-portal .link.theme13, .filterD .theme-portal .link.theme14, .filterE .theme-portal .link.theme15, .filterF .theme-portal .link.theme16 {
 /*		background-color:#03a1ab;
 		background-color:var(--button-color-dark);
@@ -6113,7 +6140,7 @@ body:not(.filterA):not(.filterB):not(.filterC):not(.filterD):not(.filterE):not(.
   min-width:11px;
 }
 
-.theme-A .theme-portal .link.themea .wds-icon, .theme-B .theme-portal .link.themeb .wds-icon, .theme-C .theme-portal .link.themec .wds-icon, .theme-D .theme-portal .link.themed .wds-icon, body:not(.basic):not(.contrast) .theme-portal .link.theme0 .wds-icon, .contrast.win10 .theme-portal .link.theme1 .wds-icon, .contrast:not(.win10) .theme-portal .link.theme2 .wds-icon, .basic .theme-portal .link.theme3 .wds-icon, body:not(.filterA):not(.filterB):not(.filterC):not(.filterD):not(.filterE):not(.filterF) .theme-portal .link.theme10 .wds-icon, .filterA .theme-portal .link.theme11 .wds-icon, .filterB .theme-portal .link.theme12 .wds-icon, .filterC .theme-portal .link.theme13 .wds-icon, .filterD .theme-portal .link.theme14 .wds-icon, .filterE .theme-portal .link.theme15 .wds-icon, .filterF .theme-portal .link.theme16 .wds-icon {
+.theme-A .theme-portal .link.themea .wds-icon, .theme-B .theme-portal .link.themeb .wds-icon, .theme-C .theme-portal .link.themec .wds-icon, .theme-D .theme-portal .link.themed .wds-icon, html:not(.basic):not(.contrast) .theme-portal .link.theme0 .wds-icon, .contrast.win10 .theme-portal .link.theme1 .wds-icon, .contrast:not(.win10) .theme-portal .link.theme2 .wds-icon, .basic .theme-portal .link.theme3 .wds-icon, body:not(.filterA):not(.filterB):not(.filterC):not(.filterD):not(.filterE):not(.filterF) .theme-portal .link.theme10 .wds-icon, .filterA .theme-portal .link.theme11 .wds-icon, .filterB .theme-portal .link.theme12 .wds-icon, .filterC .theme-portal .link.theme13 .wds-icon, .filterD .theme-portal .link.theme14 .wds-icon, .filterE .theme-portal .link.theme15 .wds-icon, .filterF .theme-portal .link.theme16 .wds-icon {
   display:block;
 }
 
@@ -6647,6 +6674,10 @@ cursor:pointer;
 /* Show the Mobile site link */
 .phone .mobile-data {
   display:block;
+}
+
+.phone * {
+	scrollbar-width:none!important;
 }
 
 .phone {

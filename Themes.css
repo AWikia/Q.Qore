@@ -1,5 +1,5 @@
 /* Standard (V1) */
-:root {
+.theme-A {
 --background-image:url("headbg.jpg");
 --background-color:#e995ca;
 --link-color:24,187,197;
@@ -16,7 +16,7 @@
 }
 
 /* Standard (V2) */
-:root {
+.theme-A {
 --background-image:url("headbg2.jpg");
 --background-color:#e995ca;
 --link-color:25,77,204;
@@ -33,7 +33,7 @@
 }
 
 /* Standard (V3) */
-:root {
+.theme-A {
 --background-image:url("headbg7.jpg");
 --background-color:#672752;
 --link-color:232,30,40;
@@ -50,7 +50,7 @@
 }
 
 /* Standard (V4) */
-:root {
+.theme-A {
 --background-image:url("headbg7.jpg");
 --background-color:#672752;
 --link-color:232,30,40;
@@ -67,7 +67,7 @@
 }
 
 /* Standard (V5) */
-:root {
+.theme-A {
 --background-image:url("headbg8.jpg");
 --background-color:#67f0ff;
 --link-color:163,71,208;
@@ -84,7 +84,7 @@
 }
 
 /* Standard (V6) */
-:root {
+.theme-A {
 --background-image:url("headbg9.jpg");
 --background-color:#ffa257;
 --link-color:255,0,0;
@@ -101,7 +101,7 @@
 }
 
 /* Standard (V7) */
-:root {
+.theme-A {
 --background-image:url("headbg9.jpg");
 --background-color:#ffa257;
 --link-color:255,0,0;
@@ -118,7 +118,7 @@
 }
 
 /* Standard (V8) */
-:root {
+.theme-A {
 --background-image:url("headbg2.jpg");
 --background-color:#599ace;
 --link-color:114,137,218;
@@ -135,7 +135,7 @@
 }
 
 /* Standard (V9) */
-:root {
+.theme-A {
 --background-image:url("headbg7.jpg");
 --background-color:#ff0000;
 --link-color:78,93,148;
@@ -152,7 +152,7 @@
 }
 
 /* Standard (V10) */
-:root {
+.theme-A {
 --background-image:url("headbg7.jpg");
 --background-color:#ff0000;
 --link-color:78,93,148;
@@ -169,7 +169,7 @@
 }
 
 /* Standard (V11) */
-:root {
+.theme-A {
 --background-image:url("headbg8.jpg");
 --background-color:#9df6fe;
 --link-color:128,0,128;
@@ -186,7 +186,7 @@
 }
 
 /* Standard (V12) */
-:root {
+.theme-A {
 --background-image:url("headbg9.jpg");
 --background-color:#ffddbb;
 --link-color:224,57,135;
@@ -203,7 +203,7 @@
 }
 
 /* Standard (V13) */
-:root {
+.theme-A {
 --background-image:url("headbg9.jpg");
 --background-color:#ffddbb;
 --link-color:224,57,135;
@@ -220,7 +220,7 @@
 }
 
 /* Standard */
-:root {
+.theme-A {
 --background-image:url("A Wikia Cover.png");
 --background-color:#01d7e5;
 --link-color:26,74,74;
@@ -238,7 +238,7 @@
 
 
 /* Standard Gloved Version ~~ */
-:root {
+.theme-A {
 --background-image:url("headbg.jpg");
 --background-color:#54d9f8;
 --link-color:134,4,152;
@@ -255,7 +255,7 @@
 }
 
 /* Standard Dark Version ~ */
-:root {
+.theme-A {
 --background-image:url("headbg3.jpg");
 --background-color:#610038;
 --link-color:0,0,255;
@@ -272,7 +272,7 @@
 }
 
 /* Standard Nightly Version */
-:root {
+.theme-A {
 --background-image:url("https://d1u5p3l4wpay3k.cloudfront.net/maia_gamepedia/9/98/Bg.jpg?version=b5f279562cd466d98662305ef384edb0");
 --background-color:#000;
 --link-color:0,255,255;
@@ -289,7 +289,7 @@
 }
 
 /* Standard Canary Version (V1) */
-:root {
+.theme-A {
 --background-image:url("canary.jpg");
 --background-color:#fcc101;
 --link-color:231,105,1;
@@ -306,7 +306,7 @@
 }
 
 /* Standard Canary Version */
-:root {
+.theme-A {
 --background-image:url("canary.jpg");
 --background-color:#f8e9ae;
 --link-color:175,66,0;
@@ -323,7 +323,7 @@
 }
 
 /* Standard Beta Version */
-:root {
+.theme-A {
 --background-image:url("headbg6-1.jpg");
 --background-color:#ac599e;
 --link-color:92,187,129;
@@ -341,7 +341,7 @@
 
 
 /* Standard Developer Edition Version */
-:root {
+.theme-A {
 --background-image:url("dev.jpg");
 --background-color:#0000aa;
 --link-color:0,170,255;
@@ -358,7 +358,7 @@
 }
 
 /* Standard Developer Version */
-:root {
+.theme-A {
 --background-image:url("headbg6-2.jpg");
 --background-color:#d9d9d9;
 --link-color:187,187,187;
@@ -375,7 +375,7 @@
 }
 
 /* Agent */
-:root {
+.theme-A {
 --background-image:url("headbg.jpg");
 --background-color:#aa00aa;
 --link-color:221,154,255;
@@ -392,7 +392,7 @@
 }
 
 /* Sagent */
-:root {
+.theme-A {
 --background-image:url("headbg4.jpg");
 --background-color:#e95500;
 --link-color:148,24,197;
@@ -409,7 +409,7 @@
 }
 
 /* Flipin */
-:root {
+.theme-A {
 --background-image:url("headbg.jpg");
 --background-color:#9e55ac;
 --link-color:129,187,92;
@@ -428,7 +428,7 @@
 
 
 /* Gleun */
-:root {
+.theme-A {
 --background-image:url("headbg6.jpg");
 --background-color:#ac599e;
 --link-color:92,187,129;
@@ -445,7 +445,7 @@
 }
 
 /* GleunFlippin */
-:root {
+.theme-A {
 --background-image:url("headbg6.jpg");
 --background-color:#ca95e9;
 --link-color:197,187,24;
@@ -462,7 +462,7 @@
 }
 
 /* Classic ~ */
-:root {
+.theme-A {
 --background-image:url("headbg.jpg");
 --background-color:#3975a9;
 --link-color:0,0,159;
@@ -479,7 +479,7 @@
 }
 
 /* Greeny ~ */
-:root {
+.theme-A {
 --background-image:url("headbg.jpg");
 --background-color:#aaffaa;
 --link-color:24,255,187;
@@ -496,7 +496,7 @@
 }
 
 /* Brightness A */
-:root {
+.theme-A {
 --background-image:url("");
 --background-color:#000000;
 --link-color:128,128,255;
@@ -513,7 +513,7 @@
 }
 
 /* Brightness B */
-:root {
+.theme-A {
 --background-image:url("");
 --background-color:#000000;
 --link-color:128,128,255;
@@ -530,7 +530,7 @@
 }
 
 /* Brightness C */
-:root {
+.theme-A {
 --background-image:url("");
 --background-color:#000000;
 --link-color:255,255,0;
@@ -547,7 +547,7 @@
 }
 
 /* Brightness D */
-:root {
+.theme-A {
 --background-image:url("");
 --background-color:#ffffff;
 --link-color:0,0,159;
@@ -564,7 +564,7 @@
 }
 
 /* Gaming Wiki (V1) */
-:root {
+.theme-A {
 --background-image:url("headbg5.jpg");
 --background-color:#76f6ff;
 --link-color:128,0,128;
@@ -581,7 +581,7 @@
 }
 
 /* Gaming Wiki (V2) */
-:root {
+.theme-A {
 --background-image:url("headbg5.jpg");
 --background-color:#76f6ff;
 --link-color:145,19,206;
@@ -598,7 +598,7 @@
 }
 
 /* Gaming Wiki (V3) */
-:root {
+.theme-A {
 --background-image:url("grwbg.jpg");
 --background-color:#28d96d;
 --link-color:79,14,141;
@@ -615,7 +615,7 @@
 }
 
 /* Gaming Wiki */
-:root {
+.theme-A {
 --background-image:url("grwbg.jpg");
 --background-color:#ff00ff;
 --link-color:40,217,109;
@@ -632,7 +632,7 @@
 }
 
 /* Grays ~ */
-:root {
+.theme-A {
 --background-image:url("");
 --background-color:#eee;
 --link-color:187,187,187;
@@ -649,7 +649,7 @@
 }
 
 /* MameDev (V1) */
-:root {
+.theme-A {
 --background-image:url("");
 --background-color:#f8f8f8;
 --link-color:76,139,202;
@@ -666,7 +666,7 @@
 }
 
 /* MameDev */
-:root {
+.theme-A {
 --background-image:url("");
 --background-color:#f8f7f6;
 --link-color:70,198,138;
@@ -684,7 +684,7 @@
 
 
 /* WDS (V1) */
-:root {
+.theme-A {
 --background-image:url("");
 --background-color:#f6f6f6;
 --link-color:0,183,224;
@@ -701,7 +701,7 @@
 }
 
 /* WDS ~ */
-:root {
+.theme-A {
 --background-image:url("");
 --background-color:#f6f6f6;
 --link-color:0,214,214;
@@ -719,7 +719,7 @@
 
 
 /* Zekzphire Faces ~ */
-:root {
+.theme-A {
 --background-image:url("");
 --background-color:#a2ddfe;
 --link-color:225,74,34;
@@ -736,7 +736,7 @@
 }
 
 /* Horoscope Referata */
-:root {
+.theme-A {
 --background-image:url("https://upload.wikimedia.org/wikipedia/commons/8/89/Meister_von_San_Vitale_in_Ravenna.jpg");
 --background-color:#4b0082;
 --link-color:75,255,130;
@@ -753,7 +753,7 @@
 }
 
 /* A Help Wiki */
-:root {
+.theme-A {
 --background-image:url("http://a-help.referata.com/w/images/Besto-BACK.jpg");
 --background-color:#012e55;
 --link-color:169,206,58;
@@ -770,7 +770,7 @@
 }
 
 /* Mpisto Scenes (V1) */
-:root {
+.theme-A {
 --background-image:url("headbg.jpg");
 --background-color:#a99b3a;
 --link-color:24,170,213;
@@ -787,7 +787,7 @@
 }
 
 /* Mpisto Scenes ~ */
-:root {
+.theme-A {
 --background-image:url("headbg8.jpg");
 --background-color:#52c0fb;
 --link-color:122,178,71;
@@ -804,7 +804,7 @@
 }
 
 /* Besto Besigns */
-:root {
+.theme-A {
 --background-image:url("");
 --background-color:#000000;
 --link-color:255,127,80;
@@ -822,7 +822,7 @@
 }
 
 /* Best Beta */
-:root {
+.theme-A {
 --background-image:url("headbg.jpg");
 --background-color:#e995ca;
 --link-color:24,187,197;
@@ -838,7 +838,7 @@
 }
 
 /* Latex ~ */
-:root {
+.theme-A {
 --background-image:url("headbg7.jpg");
 --background-color:#ff3333;
 --link-color:23,23,230;
@@ -855,7 +855,7 @@
 }
 
 /* Sharp X1 ~ */
-:root {
+.theme-A {
 --background-image:url("");
 --background-color:#ff00ff;
 --link-color:255,255,0;
@@ -872,7 +872,7 @@
 }
 
 /* Medicore ~ */
-:root {
+.theme-A {
 --background-image:url("headbg2.jpg");
 --background-color:#18bbc5;
 --link-color:103,214,225;
@@ -889,7 +889,7 @@
 }
 
 /* Maxthon ~ */
-:root {
+.theme-A {
 --background-image:url("headbg4.jpg");
 --background-color:#c9e2f8;
 --link-color:255,50,194;
@@ -906,7 +906,7 @@
 }
 
 /* Prism ~ */
-:root {
+.theme-A {
 --background-image:url("prism.png");
 --background-color:#f20c0c;
 --link-color:187,34,34;
@@ -923,7 +923,7 @@
 }
 
 /* PokeViews A */
-:root {
+.theme-A {
 --background-image:url("views.png");
 --background-color:#32cd80;
 --link-color:255,127,80;
@@ -940,7 +940,7 @@
 }
 
 /* PokeViews B */
-:root {
+.theme-A {
 --background-image:url("headbg9.jpg");
 --background-color:#ffc0cb;
 --link-color:50,205,50;
@@ -957,7 +957,7 @@
 }
 
 /* FANDOM 2.0 */
-:root {
+.theme-A {
 --background-image:url("");
 --background-color:#f6f6f6;
 --link-color:255,106,100;
@@ -974,7 +974,7 @@
 }
 
 /* CSS Colors ~ */
-:root {
+.theme-A {
 --background-image:url("");
 --background-color:#ff6347;
 --link-color:205,133,63;
