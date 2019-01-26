@@ -9,6 +9,9 @@
     letter-spacing:0.1px;
 }
 
+.wide .mpisto-2018 {
+	height:100%!important;
+}
 
 .wide .mpisto-content, .wide footer.mpisto-footer .mpisto-wrapper, .wide .mpisto-editors-content, .wide .lightbox, .wide .mpisto-options-content, .wide header.mpisto-global-navigation .mpisto-global-navigation-wrapper, .wide header.mpisto-footer-container > div, .wide header.mpisto-navbar .mpisto-navbar-wrapper {
 	width:calc(1066px / 0.8)!important;

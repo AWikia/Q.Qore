@@ -477,7 +477,7 @@ height:min-content;
 	top:0;
 	left:0;
 	width:100%;
-	height:100vh;
+	height:100%;
 	position:fixed;
 	display:block;
 	content:"";
@@ -817,6 +817,11 @@ font-family:"Source Serif Pro", "Song Myung",  "Noto Serif JP", "David Libre", "
 		}
 	}
 
+	.mpisto-global-navigation .link .wds-icon {
+		width:26px;
+		height:26px;
+	}
+
 	.mpisto-global-navigation .link .mpisto-input {
 		width:90%!important;
 		color:inherit;
@@ -855,11 +860,11 @@ font-family:"Source Serif Pro", "Song Myung",  "Noto Serif JP", "David Libre", "
 	}
 
 	.mpisto-global-navigation .link .mpisto-avatar {
-		width:24px;
-		height:24px;
-		min-width:24px;
-		min-height:24px;
-		border-width:1px;
+		width:26px;
+		height:26px;
+		min-width:26px;
+		min-height:26px;
+		border-width:1.5px;
 		opacity:1;
 		display:inline;
 	}
@@ -1615,12 +1620,12 @@ margin-top:20px;
 width:28px;
 min-width:28px;
 height:28px;
-border:1.25px solid currentcolor;
+border:1.75px solid currentcolor;
 background-blend-mode:soft-light;
 -webkit-box-decoration-break:clone;
 box-decoration-break:clone;
--webkit-border-radius:15%;
-border-radius:15%;
+-webkit-border-radius:20%;
+border-radius:20%;
 opacity:0.99;
 -qq-imaage-flip:noflip; /* Avoid flipping images by some custom CSSes */
   image-rendering:initial;                  /* CSS4 Proposed  */
@@ -5072,8 +5077,6 @@ width:1066px;
 border:1px solid var(--content-border);
 */
 border:1px solid transparent;
-background-color:#92DFE4;
-background-color:var(--emphasis-bg);
 border-top:0;
 height:calc(100% - 92px);
 height:calc(100vh - 77px);
@@ -5099,7 +5102,8 @@ z-index:10;
 border:1px solid var(--content-border);
 border-width:0 2px 1px 1px;
 */
-background-color:inherit;
+background-color:#92DFE4;
+background-color:var(--emphasis-bg);
 }
 
 .mpisto-option-pane div {
