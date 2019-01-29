@@ -177,10 +177,9 @@ width:100%;
 	flex:none!important;
 }
 
-.mpisto-option-pane {
+.basicp .mpisto-option-pane {
 width:100%;
-overflow-x:auto;
-overflow-y:visible;
+height:auto;
 visibility:hidden;
 opacity:0;
 position:absolute;
@@ -192,22 +191,22 @@ display:inline-block; /* Required or else IE but not Edge will not show properly
 }
 
 
-.transition-on .mpisto-option-pane {
+.basicp.transition-on .mpisto-option-pane {
 transition:opacity 0.99s ease-in-out 3ms, top 0.99s ease-in-out 3ms, filter 0.99s ease-in-out 3ms, visibility 0.99s ease-in-out 3ms;
 }
 
-.pane-on .mpisto-option-pane {
+.basicp.pane-on .mpisto-option-pane {
 visibility:visible;
 opacity:1;
 top:0;
 filter:brightness(1);
 }
 
-.pane-on .mpisto-article-wrapper{
+.basicp.pane-on .mpisto-article-wrapper{
 	z-index:61
 }
 
-.pane-on .mpisto-article-wrapper:after {
+.basicp.pane-on .mpisto-article-wrapper:after {
     content: "";
     display: block;
     height: 100%;
@@ -224,31 +223,31 @@ filter:brightness(1);
 	border-radius:inherit;
 }
 
-.mpisto-option-pane div {
+.basicp .mpisto-option-pane div {
   flex-direction:row;
   justify-content:flex-start;
+  overflow-x:auto;
+  overflow-y:visible;
 }
 
-.mpisto-option-way h1 .toggle {
+.basicp .mpisto-option-way h1 .toggle {
   display:inline;
 }
 
-.mpisto-option-way {
+.basicp .mpisto-option-way {
 width:100%;
 }
 
-.option-link {
+.basicp .option-link {
 flex-direction:column;
 flex:1;
 padding:4px;
 align-items:stretch;
+justify-content:center;
+display:inline-flex;
 }
 
-.option-link span {
-	margin-left:0;
-}
-
-.mpisto-option-pane .option-link .wds-icon {
+.basicp .mpisto-option-pane .option-link .wds-icon {
   width:42px;
   height:42px;
   min-width:42px;
@@ -256,16 +255,28 @@ align-items:stretch;
 
 
 
-.mpisto-option-pane .option-link .wds-icon.wds-icon-small {
+.basicp .mpisto-option-pane .option-link .wds-icon.wds-icon-small {
   width:32px;
   height:32px;
   min-width:32px;
 }
 
-.mpisto-option-pane .option-link .wds-icon.wds-icon-tiny {
+.basicp .mpisto-option-pane .option-link .wds-icon.wds-icon-tiny {
   width:22px;
   height:22px;
   min-width:22px;
+}
+
+.modernp .mpisto-option-pane .option-link span {
+	display:none;
+}
+
+.modernp .mpisto-option-pane {
+	min-width:20px;
+}
+
+.modernp .mpisto-option-pane h1 {
+	font-size:10px;
 }
 }
 

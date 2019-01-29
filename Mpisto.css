@@ -329,7 +329,9 @@ touch-action:manipulation;
 (M)touch-action:auto; /* mInerva 11.5- can make unscrollable page with mouse and keyboard */
 	overflow-y:auto;
 	height:100vh;
-	z-index:-1;	
+	z-index:-1;
+	font-weight:500;
+text-shadow:0 0 1px rgba(255,0,0,0.2), 0 0 1px rgba(0,255,0,0.2), 0 0 1px rgba(0,0,255,0.2), 0 0 1px rgba(255,255,0,0.2), 0 0 1px rgba(255,0,255,0.2), 0 0 1px rgba(0,255,255,0.2), 0 0 1px rgba(0,0,0,0.2), 0 0 1px rgba(255,255,255,0.2); /* Partially Embolding */
 }
 
 .serif body { /* Noto Sans */
@@ -747,7 +749,7 @@ z-index:100;
 display:flex;
 flex-direction:column;
 background-clip:border-box;
-
+text-shadow:none; /* Disable Embolding caused by the update */
 }
 
 .serif .mpisto-gnav {
@@ -1767,6 +1769,7 @@ vertical-align:top;
 border-radius:4px;
 border-radius:var(--button-radius);
 background-image:none; /* Supress Gradient set by buttons */
+text-shadow:none; /* Disable Embolding caused by the update */
 }
 
 .wds-button.wds-is-active,.wds-button:active,.wds-button:focus:not(:disabled),.wds-button:hover:not(:disabled){
@@ -2567,6 +2570,7 @@ backdrop-filter:blur(5px) contrast(110%) saturate(110%);
 
 .mpisto-wrapper {
   position:relative;
+  font-weight:400;
 }
 .mpisto-content .mpisto-wrapper {
   border:1px solid #ccc;
@@ -3453,6 +3457,7 @@ min-height:18px;
 vertical-align:middle;
 display:inline-flex;
 align-items:center;
+text-shadow:none; /* Disable Embolding caused by the update */
 }
 
 .mpisto-input:hover {
@@ -5073,10 +5078,9 @@ column-count:1;
 .mpisto-options-content {
 padding:0;
 width:1066px;
-/*border:1px solid #ccc;
-border:1px solid var(--content-border);
-*/
-border:1px solid transparent;
+border:1px solid #fff;
+border:1px solid var(--content-bg);
+
 border-top:0;
 height:calc(100% - 92px);
 height:calc(100vh - 77px);
@@ -5087,6 +5091,8 @@ box-shadow:/*0 0 7px 1.9px #ccc,*/ 0 4px 8px 0 rgba(0,0,0,.4), 0 4px 8px 0 rgba(
 /*box-shadow:0px 0 7px 1.9px var(--content-border), 0 4px 8px 0 rgba(0,0,0,.4), 0 4px 8px 0 rgba(255,255,255,0.4);*/
 scrollbar-color:#ccc #ffffff;
 scrollbar-color:var(--content-border) var(--dropdown-bg);
+    background-color:white;
+    background-color:var(--dropdown-bg);
 }
 
 
@@ -5096,7 +5102,7 @@ padding:9px;
 display:inline-flex;
 flex-direction:column;
 min-width:280px;
-overflow-y:auto;
+height:calc(100vh - 78px);
 z-index:10;
 /*border:1px solid #ccc;
 border:1px solid var(--content-border);
@@ -5104,6 +5110,8 @@ border-width:0 2px 1px 1px;
 */
 background-color:#92DFE4;
 background-color:var(--emphasis-bg);
+font-weight:300;
+text-shadow:none; /* Disable Embolding caused by the update */
 }
 
 .mpisto-option-pane div {
@@ -5111,6 +5119,10 @@ background-color:var(--emphasis-bg);
   flex-direction:column;
   flex:1;
   justify-content:space-between;
+  scrollbar-width:thin;
+  scrollbar-color:#000 transparent;
+  scrollbar-color:var(--content-color) transparent ;
+  overflow-y:auto;
 }
 
 /* QortaWeb 9- fix so as to force max-height to work on child elements */
@@ -5190,11 +5202,9 @@ display:flex;
     display:none;
     flex-direction:column;
     position:relative;
-    background-color:white;
-    background-color:var(--dropdown-bg);
     font-size:15px;
     flex:1;
-    font-weight:300;
+    font-weight:400;
 }
 
 
@@ -5213,7 +5223,7 @@ display:flex;
     border-style:hidden;
     height:calc(100% - 83px);
     height:calc(100vh - 141px);
-    margin:auto;    
+    margin:0 auto;    
 }
 
 @supports (-moz-appearance:none) {
@@ -5243,12 +5253,8 @@ height:calc(100vh - 142px);
   z-index:1;
   height:63px;
   background-clip:padding-box;
-  font-family:Mpisto, Flockk, Noto Sans, sans-serif;
 }
 
-.serif .mpisto-option-way h1 {
-  font-family:Noto Serif, sans-serif;
-}
 
 .mpisto-option-way h1::before {
   position:absolute;
@@ -5277,10 +5283,56 @@ height:calc(100vh - 142px);
   z-index:-1;
 }
 
+.basicp .mpisto-option-way h1 .toggle {
+  display:none;
+}
+
 .mpisto-option-way h1 .toggle {
   color:inherit;
-  display:none;
-  margin-right:6px;
+  position:relative;
+}
+
+.modernp .mpisto-option-way h1 span {
+  margin-left:6px;
+}
+
+.basicp .mpisto-option-way h1 .toggle .close {
+	display:none;
+}
+
+.modernp .mpisto-option-way h1 .toggle .wds-icon {
+	transition:opacity 250ms ease-in-out;
+}
+
+.modernp .mpisto-option-way h1 .toggle .wds-icon:last-child {
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+.modernp:not(.pane-on) .mpisto-option-way h1 .toggle .close, .modernp.pane-on .mpisto-option-way h1 .toggle .open {
+	opacity:0;
+}
+
+.modernp:not(.pane-on) .mpisto-option-pane {
+	visibility:hidden;
+	min-width:0;
+	width:0;
+	padding-left:0;
+	padding-right:0;
+	opacity:0;
+}
+
+.modernp.transition-on .mpisto-option-pane {
+	transition:min-width 125ms ease-in-out, visibility 125ms ease-in-out, width 125ms ease-in-out, padding 125ms ease-in-out, opacity 250ms ease-in-out;
+}
+
+.modernp.pane-on .mpisto-option-way h1 span, .modernp.pane-on .mpisto-option-way > div {
+	pointer-events:none;
+	-webkit-user-select:none;
+	-ms-user-select:none;
+	-moz-user-select:none;
+	user-select:none;
 }
 
 
@@ -5292,8 +5344,8 @@ height:calc(100vh - 142px);
   background-color:var(--content-bg);
   border:1px solid #fff;
   border:1px solid var(--content-bg);
-  box-shadow: 0 0 10px 0 rgba(26, 26, 26, 0.4), 0 0 10px 0 rgba(240, 240, 240, 0.4);
-  background-image:linear-gradient(to bottom, rgba(24,24,24,0.0), rgba(247,247,247,0.01), rgba(24,24,24,0));
+  box-shadow: 0 0 7px 0.1px rgba(26, 26, 26, 0.4), 0 0 7px 0.1px rgba(240, 240, 240, 0.4);
+  background-image:linear-gradient(to bottom, rgba(24,24,24,0.0), rgba(247,247,247,0.02), rgba(24,24,24,0)), linear-gradient(to bottom, rgba(247,247,247,0.0), rgba(24,24,24,0.02), rgba(247,247,247,0));
 }
 
 .mpisto-option-way > div .fieldset fieldset {
@@ -5328,10 +5380,8 @@ text-decoration:none!important;
 display:inline-block;
 color:#000;
 color:var(--content-color);
-display:inline-flex;
-align-items:center;
-justify-content:center;
-padding:16px 4px;
+vertical-align:middle;
+padding:14px 5px;
 background-clip:padding-box;
 border:4px solid transparent;
 }
@@ -5343,7 +5393,7 @@ color:var(--content-color);
 
 .option-link span {
 display:inline-block;
-margin-left:4px;
+vertical-align:middle;
 }
 
 
@@ -5364,6 +5414,7 @@ margin-left:4px;
 
 .mpisto-option-pane .option-link .wds-icon {
   align-self:center;
+vertical-align:middle;
 }
 
 
