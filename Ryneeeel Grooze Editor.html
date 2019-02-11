@@ -577,738 +577,739 @@ function HCg1() {
  End Header -->
 
 <section class="mpisto-editors-content" id="EditorContent" onclick="">
-	<header class="editor-header">
-	<img src="Wordmark.png" class="wordmark" />
-	<h1>Editing:</h1>
-	<h2><a class="mainpage">Main Page</a></h2>
-	<a class="wds-button wds-is-squished" href="#modal10">Save Page</a>
-	<a class="wds-button wds-is-squished wds-is-secondary">Discard Changes</a>
-</header>
+		<header class="editor-header">
+		<img src="Wordmark.png" class="wordmark" />
+		<h1>Editing:</h1>
+		<h2><a class="mainpage">Main Page</a></h2>
+		<a class="wds-button wds-is-squished" href="#modal10">Save Page</a>
+		<a class="wds-button wds-is-squished wds-is-secondary">Discard Changes</a>
+	</header>
+	<div>
+	  <div class="mpisto-wrapper">
+		  <nav class="editor-area">
+			 <aside class="editor-controls">
+				<div class="wds-dropdown">
+				  <div class="wds-button wds-is-squished" title="Styling">
+							  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+				  <path d="M12.56 8.316a3.483 3.483 0 0 0 1.418-3.207C13.782 3.305 12.143 2 10.33 2H3v1l1.447.724A1 1 0 0 1 5 4.618v8.764a1 1 0 0 1-.553.894L3 15v1h7.823c2.104 0 3.98-1.547 4.162-3.643a4.001 4.001 0 0 0-2.424-4.04zM8 4h1a2 2 0 1 1 0 4H8V4zm2 10H8v-4h2a2 2 0 1 1 0 4z" fill-rule="evenodd"/>
+				</svg> 
+				  </div>
+				  <div class="wds-dropdown__content wds-is-not-scrollable">
+					<ul class="wds-list wds-is-linked">
+					  <li><a><span style="font-weight:bold">Bold</span></a></li>
+					  <li><a><span style="font-style:italic">Italics</span></a></li>
+					  <li><a><span style="text-decoration:underline">Underline</span></a></li>
+					  <li><a><span style="text-decoration:line-through">Striked out</span></a></li>
+					  <li class="wds-dropdown-level-2">
+						<a class="wds-dropdown-level-2__toggle"><span>Shadow</span>                   
+					  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown-chevron" viewBox="0 0 12 12">
+						<path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
+					  </svg>
+					  </a>
+					  <div class="wds-dropdown-level-2__content">
+						<ul class="wds-list wds-is-linked">
+						  <li><a><shadow class="small">Small</shadow></a></li>
+						  <li><a><shadow class="small blur">Small/Blurred</shadow></a></li>
+						  <li><a><shadow>Standard</shadow></a></li>
+						  <li><a><shadow class="blur">Standard/Blurred</shadow></a></li>
+						  <li><a><shadow class="large">High</shadow></a></li>
+						  <li><a><shadow class="large blur">High/Blurred</shadow></a></li>
+						  <li><a><shadow class="extreme">Enormous</shadow></a></li>
+						  <li><a><shadow class="extreme blur">Enormous/Blurred</shadow></a></li>
+						</ul>
+					  </div>  
+					  </li>
+					  <li class="wds-dropdown-level-2">
+						<a class="wds-dropdown-level-2__toggle"><span>Stroke</span>                   
+					  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown-chevron" viewBox="0 0 12 12">
+						<path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
+					  </svg>
+					  </a>
+					  <div class="wds-dropdown-level-2__content">
+						<ul class="wds-list wds-is-linked">
+						  <li><a><stroke class="small">Small</stroke></a></li>
+						  <li><a><stroke class="small blur">Small/Blurred</stroke></a></li>
+						  <li><a><stroke>Standard</stroke></a></li>
+						  <li><a><stroke class="blur">Standard/Blurred</stroke></a></li>
+						  <li><a><stroke class="large">High</stroke></a></li>
+						  <li><a><stroke class="large blur">High/Blurred</stroke></a></li>
+						  <li><a><stroke class="extreme">Enormous</stroke></a></li>
+						  <li><a><stroke class="extreme blur">Enormous/Blurred</stroke></a></li>
+						</ul>
+					  </div>  
+					  </li>
+					</ul>
+				  </div>
+				</div>
+				  <a class="wds-button wds-is-squished" title="Unordered List">
+							  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small" viewBox="0 0 18 18">
+				  <g transform="translate(1 1)" fill-rule="evenodd"><circle cx="2" cy="2" r="2"/><path d="M6 1h10v2H6z"/><circle cx="2" cy="8" r="2"/><path d="M6 7h10v2H6z"/><circle cx="2" cy="14" r="2"/><path d="M6 13h10v2H6z"/></g>
+				</svg>
+				  </a>
+				  <a class="wds-button wds-is-squished" title="Ordered List">
+							  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small" viewBox="0 0 18 18">
+				  <path d="M6 2h11v2H6zm0 6h11v2H6zm0 6h11v2H6zM1.368 5v-.549l.598-.048c.097-.007.11-.035.11-.139V1.84c0-.083-.02-.125-.09-.145l-.604-.126L1.46 1h1.666v3.264c0 .111.007.132.111.139l.57.048V5H1.368zm-.321 6v-.63l.907-.886c.684-.663.975-.934.975-1.32 0-.25-.122-.433-.48-.433-.373 0-.529.122-.529.603L1 8.252C1.007 7.176 1.826 7 2.536 7c1.05 0 1.422.447 1.422 1.083 0 .636-.44 1.056-.934 1.53l-.765.73h.995c.067 0 .095-.013.108-.08l.095-.535h.717V11H1.047zm2.297 3.682c.567.087.88.427.88 1.026 0 .88-.66 1.292-1.612 1.292-.673 0-1.272-.24-1.612-.613l.533-.586c.253.247.533.44.999.44.373 0 .693-.133.693-.6 0-.406-.253-.573-.666-.573a2.73 2.73 0 0 0-.493.047v-.666l.326-.04c.48-.06.74-.293.74-.72 0-.252-.114-.459-.487-.459-.36 0-.532.12-.532.593l-.913-.08c0-1.052.793-1.232 1.492-1.232 1.026 0 1.419.393 1.419 1.106 0 .56-.347.912-.767 1.039v.026z" fill-rule="evenodd"/>
+				</svg>
+				  </a>
+				  <a class="wds-button wds-is-squished" title="Signature (Only use them in talk pages)">
+							  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small" viewBox="0 0 18 18">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-reply" />
+				</svg> <span>Signature</span>
+				  </a>
+				<div class="wds-dropdown">
+				  <div class="wds-button wds-is-squished" title="Styling">
+							  <span>Visual Styles</span>            <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" viewBox="0 0 12 12">
+	  <path d="M6 9l4-5H2" fill-rule="evenodd"/>
+	  </svg>
 
-  <div class="mpisto-wrapper">
-      <nav class="editor-area">
-         <aside class="editor-controls">
-            <div class="wds-dropdown">
-              <div class="wds-button wds-is-squished" title="Styling">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
-              <path d="M12.56 8.316a3.483 3.483 0 0 0 1.418-3.207C13.782 3.305 12.143 2 10.33 2H3v1l1.447.724A1 1 0 0 1 5 4.618v8.764a1 1 0 0 1-.553.894L3 15v1h7.823c2.104 0 3.98-1.547 4.162-3.643a4.001 4.001 0 0 0-2.424-4.04zM8 4h1a2 2 0 1 1 0 4H8V4zm2 10H8v-4h2a2 2 0 1 1 0 4z" fill-rule="evenodd"/>
-            </svg> 
-              </div>
-              <div class="wds-dropdown__content wds-is-not-scrollable">
-                <ul class="wds-list wds-is-linked">
-                  <li><a><span style="font-weight:bold">Bold</span></a></li>
-                  <li><a><span style="font-style:italic">Italics</span></a></li>
-                  <li><a><span style="text-decoration:underline">Underline</span></a></li>
-                  <li><a><span style="text-decoration:line-through">Striked out</span></a></li>
-                  <li class="wds-dropdown-level-2">
-                    <a class="wds-dropdown-level-2__toggle"><span>Shadow</span>                   
-                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown-chevron" viewBox="0 0 12 12">
-                    <path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
-                  </svg>
-                  </a>
-                  <div class="wds-dropdown-level-2__content">
-                    <ul class="wds-list wds-is-linked">
-                      <li><a><shadow class="small">Small</shadow></a></li>
-                      <li><a><shadow class="small blur">Small/Blurred</shadow></a></li>
-                      <li><a><shadow>Standard</shadow></a></li>
-                      <li><a><shadow class="blur">Standard/Blurred</shadow></a></li>
-                      <li><a><shadow class="large">High</shadow></a></li>
-                      <li><a><shadow class="large blur">High/Blurred</shadow></a></li>
-                      <li><a><shadow class="extreme">Enormous</shadow></a></li>
-                      <li><a><shadow class="extreme blur">Enormous/Blurred</shadow></a></li>
-                    </ul>
-                  </div>  
-                  </li>
-                  <li class="wds-dropdown-level-2">
-                    <a class="wds-dropdown-level-2__toggle"><span>Stroke</span>                   
-                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown-chevron" viewBox="0 0 12 12">
-                    <path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
-                  </svg>
-                  </a>
-                  <div class="wds-dropdown-level-2__content">
-                    <ul class="wds-list wds-is-linked">
-                      <li><a><stroke class="small">Small</stroke></a></li>
-                      <li><a><stroke class="small blur">Small/Blurred</stroke></a></li>
-                      <li><a><stroke>Standard</stroke></a></li>
-                      <li><a><stroke class="blur">Standard/Blurred</stroke></a></li>
-                      <li><a><stroke class="large">High</stroke></a></li>
-                      <li><a><stroke class="large blur">High/Blurred</stroke></a></li>
-                      <li><a><stroke class="extreme">Enormous</stroke></a></li>
-                      <li><a><stroke class="extreme blur">Enormous/Blurred</stroke></a></li>
-                    </ul>
-                  </div>  
-                  </li>
-                </ul>
-              </div>
-            </div>
-              <a class="wds-button wds-is-squished" title="Unordered List">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small" viewBox="0 0 18 18">
-              <g transform="translate(1 1)" fill-rule="evenodd"><circle cx="2" cy="2" r="2"/><path d="M6 1h10v2H6z"/><circle cx="2" cy="8" r="2"/><path d="M6 7h10v2H6z"/><circle cx="2" cy="14" r="2"/><path d="M6 13h10v2H6z"/></g>
-            </svg>
-              </a>
-              <a class="wds-button wds-is-squished" title="Ordered List">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small" viewBox="0 0 18 18">
-              <path d="M6 2h11v2H6zm0 6h11v2H6zm0 6h11v2H6zM1.368 5v-.549l.598-.048c.097-.007.11-.035.11-.139V1.84c0-.083-.02-.125-.09-.145l-.604-.126L1.46 1h1.666v3.264c0 .111.007.132.111.139l.57.048V5H1.368zm-.321 6v-.63l.907-.886c.684-.663.975-.934.975-1.32 0-.25-.122-.433-.48-.433-.373 0-.529.122-.529.603L1 8.252C1.007 7.176 1.826 7 2.536 7c1.05 0 1.422.447 1.422 1.083 0 .636-.44 1.056-.934 1.53l-.765.73h.995c.067 0 .095-.013.108-.08l.095-.535h.717V11H1.047zm2.297 3.682c.567.087.88.427.88 1.026 0 .88-.66 1.292-1.612 1.292-.673 0-1.272-.24-1.612-.613l.533-.586c.253.247.533.44.999.44.373 0 .693-.133.693-.6 0-.406-.253-.573-.666-.573a2.73 2.73 0 0 0-.493.047v-.666l.326-.04c.48-.06.74-.293.74-.72 0-.252-.114-.459-.487-.459-.36 0-.532.12-.532.593l-.913-.08c0-1.052.793-1.232 1.492-1.232 1.026 0 1.419.393 1.419 1.106 0 .56-.347.912-.767 1.039v.026z" fill-rule="evenodd"/>
-            </svg>
-              </a>
-              <a class="wds-button wds-is-squished" title="Signature (Only use them in talk pages)">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small" viewBox="0 0 18 18">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-reply" />
-            </svg> <span>Signature</span>
-              </a>
-            <div class="wds-dropdown">
-              <div class="wds-button wds-is-squished" title="Styling">
-                          <span>Visual Styles</span>            <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" viewBox="0 0 12 12">
-  <path d="M6 9l4-5H2" fill-rule="evenodd"/>
-  </svg>
+				  </div>
+				  <div class="wds-dropdown__content wds-is-not-scrollable">
+					<ul class="wds-list wds-is-linked">
+					  <li class="wds-dropdown-level-2">
+						<a class="wds-dropdown-level-2__toggle"><span>Block elements</span>                   
+					  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown-chevron" viewBox="0 0 12 12">
+						<path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
+					  </svg>
+					  </a>
+					  <div class="wds-dropdown-level-2__content">
+						<ul class="wds-list wds-is-linked">
+						  <li><a><span>Div</span></a></li>
+						  <li><a><span>Section</span></a></li>
+						  <li><a><span>Article</span></a></li>
+						  <li><a><span>Header</span></a></li>
+						  <li><a><span>Nav</span></a></li>
+						</ul>
+					  </div>  
+					  </li>
+					  <li class="wds-dropdown-level-2">
+						<a class="wds-dropdown-level-2__toggle"><span>Inline elements</span>                   
+					  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown-chevron" viewBox="0 0 12 12">
+						<path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
+					  </svg>
+					  </a>
+					  <div class="wds-dropdown-level-2__content">
+						<ul class="wds-list wds-is-linked">
+						  <li><a><span>Paragraph</span></a></li>
+						  <li><a><span>Span</span></a></li>
+						  <li><a><span>Shadow</span></a></li>
+						  <li><a><span>Stroke</span></a></li>
+						  <li><a><span>Mark</span></a></li>
+						</ul>
+					  </div>  
+					  </li>
+					  <li class="wds-dropdown-level-2">
+						<a class="wds-dropdown-level-2__toggle"><span>Headings</span>                   
+					  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown-chevron" viewBox="0 0 12 12">
+						<path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
+					  </svg>
+					  </a>
+					  <div class="wds-dropdown-level-2__content">
+						<ul class="wds-list wds-is-linked">
+						  <li><a><span>Heading 1</span></a></li>
+						  <li><a><span>Heading 2</span></a></li>
+						  <li><a><span>Heading 3</span></a></li>
+						  <li><a><span>Heading 4</span></a></li>
+						  <li><a><span>Heading 5</span></a></li>
+						  <li><a><span>Heading 6</span></a></li>
+						</ul>
+					  </div>  
+					  </li>
+					  <li class="wds-dropdown-level-2">
+						<a class="wds-dropdown-level-2__toggle"><span>Table Maplupation</span>                   
+					  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown-chevron" viewBox="0 0 12 12">
+						<path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
+					  </svg>
+					  </a>
+					  <div class="wds-dropdown-level-2__content">
+						<ul class="wds-list wds-is-linked">
+						  <li><a><span>Table</span></a></li>
+						  <li><a><span>Table body</span></a></li>
+						  <li><a><span>Table head</span></a></li>
+						  <li><a><span>Table Row</span></a></li>
+						  <li><a><span>Table Header</span></a></li>
+						  <li><a><span>Table Data</span></a></li>
+						  <li><a><span>Table Footer</span></a></li>
+						</ul>
+					  </div>  
+					  </li>
+					  <li class="wds-dropdown-level-2 wds-is-sticked-to-parent">
+						<a class="wds-dropdown-level-2__toggle"><span>Coding</span>                   
+					  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown-chevron" viewBox="0 0 12 12">
+						<path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
+					  </svg>
+					  </a>
+					  <div class="wds-dropdown-level-2__content">
+						<ul class="wds-list wds-is-linked">
+						  <li><a><span>Preformated</span></a></li>
+						  <li><a><span>Code</span></a></li>
+						</ul>
+					  </div>  
+					  </li>
+					</ul>
+				  </div>
+				</div>
+				  <div class="wds-dropdown">
+				  <div class="wds-button wds-is-squished" title="Spelling">
+							  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small" viewBox="0 0 24 24">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-document" />
+	 </svg> <span>Spellcheck</span> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" viewBox="0 0 12 12">
+	  <path d="M6 9l4-5H2" fill-rule="evenodd"/>
+	  </svg>
+				  </div>
+				  <div class="wds-dropdown__content">
+					  <ul class="wds-list wds-is-linked" style="line-height:1.2">
+					  <li>
+						<a>
+						<input type="radio" name="spell" id="spell1" checked></input><label for="spell1">Autoselect</label>
+						</a>
+					  </li>
+					  <li>
+						<a title="English (US)">
+						<input type="radio" name="spell" id="spell2"></input><label for="spell2">English (US)</label>
+						</a>
+					  </li>
+					  <li>
+						<a title="English (UK)">
+						<input type="radio" name="spell" id="spell3"></input><label for="spell3">English (UK)</label>
+						</a>
+					  </li>
+					  <li>
+						<a title="French">
+						<input type="radio" name="spell" id="spell4"></input><label for="spell4">Français</label>
+						</a>
+					  </li>
+					  <li>
+						<a title="German">
+						<input type="radio" name="spell" id="spell5"></input><label for="spell5">Deutsch</label>
+						</a>
+					  </li>
+					  <li>
+						<a title="Spanish">
+						<input type="radio" name="spell" id="spell6"></input><label for="spell6">Español</label>
+						</a>
+					  </li>
+					  <li>
+						<a title="Greek">
+						<input type="radio" name="spell" id="spell7"></input><label for="spell7">Ελληνικόν</label>
+						</a>
+					  </li>
+					  <li>
+						<a title="Italian">
+						<input type="radio" name="spell" id="spell8"></input><label for="spell8">Italiano</label>
+						</a>
+					  </li>
+					  <li>
+						<a title="Swedish">
+						<input type="radio" name="spell" id="spell9"></input><label for="spell9">Svenska</label>
+						</a>
+					  </li>
+					  </ul>
+					</div>
+				  </div>
+				  <a class="wds-button wds-is-squished" title="Undo last action">
+							  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small" viewBox="0 0 24 24">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-undo" />
+				</svg>
+				  </a>
+				  <a class="wds-button wds-is-squished" title="Redo last action">
+							  <svg xmlns="http://www.w3.org/2000/svg"  class="wds-icon wds-icon-small" viewBox="0 0 24 24">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-redo" />
+				</svg>
+				  </a>
+				  <a class="wds-button wds-is-squished visualonly" title="Switch to source editing" onclick="SourceSwitchA()">
+							  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small" viewBox="0 0 24 24">
+				  <path d="M6.792 8.793L3.535 12.05l3.257 3.258a1.05 1.05 0 0 1-1.484 1.485l-4-4a1.05 1.05 0 0 1 0-1.485l4-4a1.049 1.049 0 1 1 1.484 1.485zm10.516 6.515l3.257-3.258-3.257-3.257a1.05 1.05 0 0 1 1.484-1.485l4 4c.41.41.41 1.075 0 1.485l-4 4a1.049 1.049 0 1 1-1.484-1.485zm-6.24 4.997a1.05 1.05 0 1 1-2.037-.512l4-16a1.05 1.05 0 1 1 2.041.51l-4 16z"/>
+				</svg> <span>Source</span>
+				  </a>
+				  <a class="wds-button wds-is-squished sourceonly" title="Switch to visual editing" onclick="SourceSwitchA()">
+							  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small" viewBox="0 0 18 18">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-pencil" />
+				</svg> <span>Visual</span>
+				  </a>
 
-              </div>
-              <div class="wds-dropdown__content wds-is-not-scrollable">
-                <ul class="wds-list wds-is-linked">
-                  <li class="wds-dropdown-level-2">
-                    <a class="wds-dropdown-level-2__toggle"><span>Block elements</span>                   
-                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown-chevron" viewBox="0 0 12 12">
-                    <path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
-                  </svg>
-                  </a>
-                  <div class="wds-dropdown-level-2__content">
-                    <ul class="wds-list wds-is-linked">
-                      <li><a><span>Div</span></a></li>
-                      <li><a><span>Section</span></a></li>
-                      <li><a><span>Article</span></a></li>
-                      <li><a><span>Header</span></a></li>
-                      <li><a><span>Nav</span></a></li>
-                    </ul>
-                  </div>  
-                  </li>
-                  <li class="wds-dropdown-level-2">
-                    <a class="wds-dropdown-level-2__toggle"><span>Inline elements</span>                   
-                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown-chevron" viewBox="0 0 12 12">
-                    <path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
-                  </svg>
-                  </a>
-                  <div class="wds-dropdown-level-2__content">
-                    <ul class="wds-list wds-is-linked">
-                      <li><a><span>Paragraph</span></a></li>
-                      <li><a><span>Span</span></a></li>
-                      <li><a><span>Shadow</span></a></li>
-                      <li><a><span>Stroke</span></a></li>
-                      <li><a><span>Mark</span></a></li>
-                    </ul>
-                  </div>  
-                  </li>
-                  <li class="wds-dropdown-level-2">
-                    <a class="wds-dropdown-level-2__toggle"><span>Headings</span>                   
-                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown-chevron" viewBox="0 0 12 12">
-                    <path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
-                  </svg>
-                  </a>
-                  <div class="wds-dropdown-level-2__content">
-                    <ul class="wds-list wds-is-linked">
-                      <li><a><span>Heading 1</span></a></li>
-                      <li><a><span>Heading 2</span></a></li>
-                      <li><a><span>Heading 3</span></a></li>
-                      <li><a><span>Heading 4</span></a></li>
-                      <li><a><span>Heading 5</span></a></li>
-                      <li><a><span>Heading 6</span></a></li>
-                    </ul>
-                  </div>  
-                  </li>
-                  <li class="wds-dropdown-level-2">
-                    <a class="wds-dropdown-level-2__toggle"><span>Table Maplupation</span>                   
-                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown-chevron" viewBox="0 0 12 12">
-                    <path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
-                  </svg>
-                  </a>
-                  <div class="wds-dropdown-level-2__content">
-                    <ul class="wds-list wds-is-linked">
-                      <li><a><span>Table</span></a></li>
-                      <li><a><span>Table body</span></a></li>
-                      <li><a><span>Table head</span></a></li>
-                      <li><a><span>Table Row</span></a></li>
-                      <li><a><span>Table Header</span></a></li>
-                      <li><a><span>Table Data</span></a></li>
-                      <li><a><span>Table Footer</span></a></li>
-                    </ul>
-                  </div>  
-                  </li>
-                  <li class="wds-dropdown-level-2 wds-is-sticked-to-parent">
-                    <a class="wds-dropdown-level-2__toggle"><span>Coding</span>                   
-                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown-chevron" viewBox="0 0 12 12">
-                    <path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
-                  </svg>
-                  </a>
-                  <div class="wds-dropdown-level-2__content">
-                    <ul class="wds-list wds-is-linked">
-                      <li><a><span>Preformated</span></a></li>
-                      <li><a><span>Code</span></a></li>
-                    </ul>
-                  </div>  
-                  </li>
-                </ul>
-              </div>
-            </div>
-              <div class="wds-dropdown">
-              <div class="wds-button wds-is-squished" title="Spelling">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small" viewBox="0 0 24 24">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-document" />
- </svg> <span>Spellcheck</span> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" viewBox="0 0 12 12">
-  <path d="M6 9l4-5H2" fill-rule="evenodd"/>
-  </svg>
-              </div>
-              <div class="wds-dropdown__content">
-                  <ul class="wds-list wds-is-linked" style="line-height:1.2">
-                  <li>
-                    <a>
-                    <input type="radio" name="spell" id="spell1" checked></input><label for="spell1">Autoselect</label>
-                    </a>
-                  </li>
-                  <li>
-                    <a title="English (US)">
-                    <input type="radio" name="spell" id="spell2"></input><label for="spell2">English (US)</label>
-                    </a>
-                  </li>
-                  <li>
-                    <a title="English (UK)">
-                    <input type="radio" name="spell" id="spell3"></input><label for="spell3">English (UK)</label>
-                    </a>
-                  </li>
-                  <li>
-                    <a title="French">
-                    <input type="radio" name="spell" id="spell4"></input><label for="spell4">Français</label>
-                    </a>
-                  </li>
-                  <li>
-                    <a title="German">
-                    <input type="radio" name="spell" id="spell5"></input><label for="spell5">Deutsch</label>
-                    </a>
-                  </li>
-                  <li>
-                    <a title="Spanish">
-                    <input type="radio" name="spell" id="spell6"></input><label for="spell6">Español</label>
-                    </a>
-                  </li>
-                  <li>
-                    <a title="Greek">
-                    <input type="radio" name="spell" id="spell7"></input><label for="spell7">Ελληνικόν</label>
-                    </a>
-                  </li>
-                  <li>
-                    <a title="Italian">
-                    <input type="radio" name="spell" id="spell8"></input><label for="spell8">Italiano</label>
-                    </a>
-                  </li>
-                  <li>
-                    <a title="Swedish">
-                    <input type="radio" name="spell" id="spell9"></input><label for="spell9">Svenska</label>
-                    </a>
-                  </li>
-                  </ul>
-                </div>
-              </div>
-              <a class="wds-button wds-is-squished" title="Undo last action">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small" viewBox="0 0 24 24">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-undo" />
-            </svg>
-              </a>
-              <a class="wds-button wds-is-squished" title="Redo last action">
-                          <svg xmlns="http://www.w3.org/2000/svg"  class="wds-icon wds-icon-small" viewBox="0 0 24 24">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-redo" />
-            </svg>
-              </a>
-              <a class="wds-button wds-is-squished visualonly" title="Switch to source editing" onclick="SourceSwitchA()">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small" viewBox="0 0 24 24">
-              <path d="M6.792 8.793L3.535 12.05l3.257 3.258a1.05 1.05 0 0 1-1.484 1.485l-4-4a1.05 1.05 0 0 1 0-1.485l4-4a1.049 1.049 0 1 1 1.484 1.485zm10.516 6.515l3.257-3.258-3.257-3.257a1.05 1.05 0 0 1 1.484-1.485l4 4c.41.41.41 1.075 0 1.485l-4 4a1.049 1.049 0 1 1-1.484-1.485zm-6.24 4.997a1.05 1.05 0 1 1-2.037-.512l4-16a1.05 1.05 0 1 1 2.041.51l-4 16z"/>
-            </svg> <span>Source</span>
-              </a>
-              <a class="wds-button wds-is-squished sourceonly" title="Switch to visual editing" onclick="SourceSwitchA()">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small" viewBox="0 0 18 18">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-pencil" />
-            </svg> <span>Visual</span>
-              </a>
-
-         </aside>
-         Contributions to Mpisto War 2018 are coming with the CreativeCommons license unless stated elsewhere. Always remember to read wiki's policies before contributing.
-         <nav class="buttons">
-         <button class="wds-button wds-is-squished">Help with Editing</button>
-         <button class="wds-button wds-is-squished">Compare Changes</button>
-         <button class="wds-button wds-is-squished wds-is-secondary sourcebutton visualonly" onclick="SourceSwitch()">Toggle source</button>
-         <button class="wds-button wds-is-squished wds-is-secondary">Questions?</button>
-         <button class="wds-button wds-is-squished">Send Feedback</button>
-         </nav>
-      </nav>
-    <nav class="mpisto-article-wrapper">
-      <nav class="article-area" id="ArticleArea">
-      <article contenteditable class="mpisto-article visualonly">
-      <!--Start Article-->
-      <h1>Welcome</h1>
-      This is Mpisto War 2018
-      <h2>About</h2>
-      2018 has been made to replace the successfull Mpisto War Zentral.
-      <h2> B8+ Markup </h2>
-      Inline markus that can make you cool:
-      <h3>Shadows</h3>
-      <shadow>A text with Shadow</shadow>
-      <br>
-      <shadow class="blur">A text with Shadow</shadow>
-      <br>
-      <shadow class="small">A text with Shadow</shadow>
-      <br>
-      <shadow class="small blur">A text with Shadow</shadow>
-      <br>
-      <shadow class="large">A text with Shadow</shadow>
-      <br>
-      <shadow class="large blur">A text with Shadow</shadow>
-      <hr>
-      <shadow class="extreme">A text with Shadow</shadow>
-      <br>
-      <shadow class="extreme blur">A text with Shadow</shadow>
-      <h3>Strokes</h3>
-      <stroke>A text with Stroke</stroke>
-      <br>
-      <stroke class="blur">A text with Stroke</stroke>
-      <br>
-      <stroke class="small">A text with Stroke</stroke>
-      <br>
-      <stroke class="small blur">A text with Stroke</stroke>
-      <br>
-      <stroke class="large">A text with Stroke</stroke>
-      <br>
-      <stroke class="large blur">A text with Stroke</stroke>
-      <hr>
-      <stroke class="extreme">A text with Stroke</stroke>
-      <br>
-      <stroke class="extreme blur">A text with Stroke</stroke>
-      <h2> Avatar Stacks </h2>
-      <h3> Mpisto War </h3>
-        Mpisto Draws the last avatar as the highest one seen. Can accept multiple avatars
-        <div class="mpisto-avatar-group">
-          <img class="mpisto-avatar" src="HM100.png"></img>
-          <img class="mpisto-avatar" src="3primetime3.jpg"></img>
-          <img class="mpisto-avatar" src="S2.png"></img>
-          <img class="mpisto-avatar" src="TK-999.png"></img>
-          <img class="mpisto-avatar" src="Rappy.png"></img>
-          <img class="mpisto-avatar" src="Sannse.png"></img>
-          <img class="mpisto-avatar" src="Wildones.png"></img>
-        </div>
-       <h3> Fandom Design System </h3>
-       On the other hand, Fandom System does it differently and up to 5 avatars, including an overflow can be used.
-        <div class="wds-avatar-stack">	
-          <div class="wds-avatar-stack__avatar">		
-            <img class="wds-avatar" alt="user name" src="HM100.png">	
-          </div>
-          <div class="wds-avatar-stack__avatar">		
-            <img class="wds-avatar" alt="user name" src="3primetime3.jpg">	
-          </div>
-          <div class="wds-avatar-stack__avatar">		
-            <img class="wds-avatar" alt="user name" src="S2.png">	
-          </div>
-          <div class="wds-avatar-stack__avatar">		
-            <img class="wds-avatar" alt="user name" src="TK-999.png">	
-          </div>	
-          <div class="wds-avatar-stack__avatar">		
-            <img class="wds-avatar" alt="user name" src="Rappy.png">	
-          </div>	
-            <div class="wds-avatar-stack__overflow">+2</div>
-        </div>
-        <h2>Banners</h2>
-        Banners
-<div class="wds-banner-notification__container">
-	<div class="wds-banner-notification wds-message">
-		<div class="wds-banner-notification__icon">	
-			<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-flag-small" />
-			</svg>
+			 </aside>
+			 Contributions to Mpisto War 2018 are coming with the CreativeCommons license unless stated elsewhere. Always remember to read wiki's policies before contributing.
+			 <nav class="buttons">
+			 <button class="wds-button wds-is-squished">Help with Editing</button>
+			 <button class="wds-button wds-is-squished">Compare Changes</button>
+			 <button class="wds-button wds-is-squished wds-is-secondary sourcebutton visualonly" onclick="SourceSwitch()">Toggle source</button>
+			 <button class="wds-button wds-is-squished wds-is-secondary">Questions?</button>
+			 <button class="wds-button wds-is-squished">Send Feedback</button>
+			 </nav>
+		  </nav>
+		<nav class="mpisto-article-wrapper">
+		  <nav class="article-area" id="ArticleArea">
+		  <article contenteditable class="mpisto-article visualonly">
+		  <!--Start Article-->
+		  <h1>Welcome</h1>
+		  This is Mpisto War 2018
+		  <h2>About</h2>
+		  2018 has been made to replace the successfull Mpisto War Zentral.
+		  <h2> B8+ Markup </h2>
+		  Inline markus that can make you cool:
+		  <h3>Shadows</h3>
+		  <shadow>A text with Shadow</shadow>
+		  <br>
+		  <shadow class="blur">A text with Shadow</shadow>
+		  <br>
+		  <shadow class="small">A text with Shadow</shadow>
+		  <br>
+		  <shadow class="small blur">A text with Shadow</shadow>
+		  <br>
+		  <shadow class="large">A text with Shadow</shadow>
+		  <br>
+		  <shadow class="large blur">A text with Shadow</shadow>
+		  <hr>
+		  <shadow class="extreme">A text with Shadow</shadow>
+		  <br>
+		  <shadow class="extreme blur">A text with Shadow</shadow>
+		  <h3>Strokes</h3>
+		  <stroke>A text with Stroke</stroke>
+		  <br>
+		  <stroke class="blur">A text with Stroke</stroke>
+		  <br>
+		  <stroke class="small">A text with Stroke</stroke>
+		  <br>
+		  <stroke class="small blur">A text with Stroke</stroke>
+		  <br>
+		  <stroke class="large">A text with Stroke</stroke>
+		  <br>
+		  <stroke class="large blur">A text with Stroke</stroke>
+		  <hr>
+		  <stroke class="extreme">A text with Stroke</stroke>
+		  <br>
+		  <stroke class="extreme blur">A text with Stroke</stroke>
+		  <h2> Avatar Stacks </h2>
+		  <h3> Mpisto War </h3>
+			Mpisto Draws the last avatar as the highest one seen. Can accept multiple avatars
+			<div class="mpisto-avatar-group">
+			  <img class="mpisto-avatar" src="HM100.png"></img>
+			  <img class="mpisto-avatar" src="3primetime3.jpg"></img>
+			  <img class="mpisto-avatar" src="S2.png"></img>
+			  <img class="mpisto-avatar" src="TK-999.png"></img>
+			  <img class="mpisto-avatar" src="Rappy.png"></img>
+			  <img class="mpisto-avatar" src="Sannse.png"></img>
+			  <img class="mpisto-avatar" src="Wildones.png"></img>
+			</div>
+		   <h3> Fandom Design System </h3>
+		   On the other hand, Fandom System does it differently and up to 5 avatars, including an overflow can be used.
+			<div class="wds-avatar-stack">	
+			  <div class="wds-avatar-stack__avatar">		
+				<img class="wds-avatar" alt="user name" src="HM100.png">	
+			  </div>
+			  <div class="wds-avatar-stack__avatar">		
+				<img class="wds-avatar" alt="user name" src="3primetime3.jpg">	
+			  </div>
+			  <div class="wds-avatar-stack__avatar">		
+				<img class="wds-avatar" alt="user name" src="S2.png">	
+			  </div>
+			  <div class="wds-avatar-stack__avatar">		
+				<img class="wds-avatar" alt="user name" src="TK-999.png">	
+			  </div>	
+			  <div class="wds-avatar-stack__avatar">		
+				<img class="wds-avatar" alt="user name" src="Rappy.png">	
+			  </div>	
+				<div class="wds-avatar-stack__overflow">+2</div>
+			</div>
+			<h2>Banners</h2>
+			Banners
+	<div class="wds-banner-notification__container">
+		<div class="wds-banner-notification wds-message">
+			<div class="wds-banner-notification__icon">	
+				<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-flag-small" />
+				</svg>
+			</div>
+			<span class="wds-banner-notification__text">					Stacked notification 1.</span>
+				<svg xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross-tiny" />
+				</svg>
 		</div>
-		<span class="wds-banner-notification__text">					Stacked notification 1.</span>
+		<div class="wds-banner-notification wds-success">
+			<div class="wds-banner-notification__icon">	
+				<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark-circle-small" />
+				</svg>
+			</div>
+			<span class="wds-banner-notification__text">					Stacked notification 2 with very long content. Lorem ipsum dolor sit amet,				consectetur adipiscing elit. Vestibulum scelerisque ullamcorper sodales. Interdum et				malesuada fames ac ante ipsum primis in faucibus.</span>
 			<svg xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">
 				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross-tiny" />
 			</svg>
-	</div>
-	<div class="wds-banner-notification wds-success">
-		<div class="wds-banner-notification__icon">	
-			<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark-circle-small" />
-			</svg>
 		</div>
-		<span class="wds-banner-notification__text">					Stacked notification 2 with very long content. Lorem ipsum dolor sit amet,				consectetur adipiscing elit. Vestibulum scelerisque ullamcorper sodales. Interdum et				malesuada fames ac ante ipsum primis in faucibus.</span>
-		<svg xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">
-			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross-tiny" />
-		</svg>
-	</div>
-	<div class="wds-banner-notification wds-warning">
-		<div class="wds-banner-notification__icon">	
-			<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-alert-small" />
-			</svg>
-		</div>
-		<span class="wds-banner-notification__text">					Stacked notification 3.</span>
-		<svg xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">
-			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross-tiny" />
-		</svg>
-	</div>
-	<div class="wds-banner-notification wds-alert">
-		<div class="wds-banner-notification__icon">	
-			<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-error-small" />
-			</svg>
-		</div>
-		<span class="wds-banner-notification__text">					Stacked notification 4 with very long content. Lorem ipsum dolor sit amet,				consectetur adipiscing elit. Vestibulum scelerisque ullamcorper sodales. Interdum et				malesuada fames ac ante ipsum primis in faucibus.</span>
-		<svg xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">
-			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross-tiny" />
-		</svg>
-	</div>
-</div>
-      <h1>Chancelog</h1>
-Can be found on Chancelog page
-      <!--Stop Article-->
-      </article>
-      <textarea readonly class="mpisto-article visualonly">
-      <h1>Welcome</h1>
-      This is Mpisto War 2018
-      <h2>About</h2>
-      2018 has been made to replace the successfull Mpisto War Zentral.
-      <h2> B8+ Markup </h2>
-      Inline markus that can make you cool:
-      <h3>Shadows</h3>
-      <shadow>A text with Shadow</shadow>
-      <br>
-      <shadow class="blur">A text with Shadow</shadow>
-      <br>
-      <shadow class="small">A text with Shadow</shadow>
-      <br>
-      <shadow class="small blur">A text with Shadow</shadow>
-      <br>
-      <shadow class="large">A text with Shadow</shadow>
-      <br>
-      <shadow class="large blur">A text with Shadow</shadow>
-      <hr>
-      <shadow class="extreme">A text with Shadow</shadow>
-      <br>
-      <shadow class="extreme blur">A text with Shadow</shadow>
-      <h3>Strokes</h3>
-      <stroke>A text with Stroke</stroke>
-      <br>
-      <stroke class="blur">A text with Stroke</stroke>
-      <br>
-      <stroke class="small">A text with Stroke</stroke>
-      <br>
-      <stroke class="small blur">A text with Stroke</stroke>
-      <br>
-      <stroke class="large">A text with Stroke</stroke>
-      <br>
-      <stroke class="large blur">A text with Stroke</stroke>
-      <hr>
-      <stroke class="extreme">A text with Stroke</stroke>
-      <br>
-      <stroke class="extreme blur">A text with Stroke</stroke>
-      <h2> Avatar Stacks </h2>
-      <h3> Mpisto War </h3>
-        Mpisto Draws the last avatar as the highest one seen. Can accept multiple avatars
-        <div class="mpisto-avatar-group">
-          <img class="mpisto-avatar" src="HM100.png"></img>
-          <img class="mpisto-avatar" src="3primetime3.jpg"></img>
-          <img class="mpisto-avatar" src="S2.png"></img>
-          <img class="mpisto-avatar" src="TK-999.png"></img>
-          <img class="mpisto-avatar" src="Rappy.png"></img>
-          <img class="mpisto-avatar" src="Sannse.png"></img>
-          <img class="mpisto-avatar" src="Wildones.png"></img>
-        </div>
-       <h3> Fandom Design System </h3>
-       On the other hand, Fandom System does it differently and up to 5 avatars, including an overflow can be used.
-        <div class="wds-avatar-stack">	
-          <div class="wds-avatar-stack__avatar">		
-            <img class="wds-avatar" alt="user name" src="HM100.png">	
-          </div>
-          <div class="wds-avatar-stack__avatar">		
-            <img class="wds-avatar" alt="user name" src="3primetime3.jpg">	
-          </div>
-          <div class="wds-avatar-stack__avatar">		
-            <img class="wds-avatar" alt="user name" src="S2.png">	
-          </div>
-          <div class="wds-avatar-stack__avatar">		
-            <img class="wds-avatar" alt="user name" src="TK-999.png">	
-          </div>	
-          <div class="wds-avatar-stack__avatar">		
-            <img class="wds-avatar" alt="user name" src="Rappy.png">	
-          </div>	
-            <div class="wds-avatar-stack__overflow">+2</div>
-        </div>
-        <h2>Banners</h2>
-        Banners
-<div class="wds-banner-notification__container">
-	<div class="wds-banner-notification wds-message">
-		<div class="wds-banner-notification__icon">	
-			<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-flag-small" />
-			</svg>
-		</div>
-		<span class="wds-banner-notification__text">					Stacked notification 1.</span>
+		<div class="wds-banner-notification wds-warning">
+			<div class="wds-banner-notification__icon">	
+				<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-alert-small" />
+				</svg>
+			</div>
+			<span class="wds-banner-notification__text">					Stacked notification 3.</span>
 			<svg xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">
 				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross-tiny" />
 			</svg>
-	</div>
-	<div class="wds-banner-notification wds-success">
-		<div class="wds-banner-notification__icon">	
-			<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark-circle-small" />
-			</svg>
 		</div>
-		<span class="wds-banner-notification__text">					Stacked notification 2 with very long content. Lorem ipsum dolor sit amet,				consectetur adipiscing elit. Vestibulum scelerisque ullamcorper sodales. Interdum et				malesuada fames ac ante ipsum primis in faucibus.</span>
-		<svg xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">
-			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross-tiny" />
-		</svg>
-	</div>
-	<div class="wds-banner-notification wds-warning">
-		<div class="wds-banner-notification__icon">	
-			<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-alert-small" />
-			</svg>
-		</div>
-		<span class="wds-banner-notification__text">					Stacked notification 3.</span>
-		<svg xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">
-			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross-tiny" />
-		</svg>
-	</div>
-	<div class="wds-banner-notification wds-alert">
-		<div class="wds-banner-notification__icon">	
-			<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-error-small" />
-			</svg>
-		</div>
-		<span class="wds-banner-notification__text">					Stacked notification 4 with very long content. Lorem ipsum dolor sit amet,				consectetur adipiscing elit. Vestibulum scelerisque ullamcorper sodales. Interdum et				malesuada fames ac ante ipsum primis in faucibus.</span>
-		<svg xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">
-			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross-tiny" />
-		</svg>
-	</div>
-</div>
-      <h1>Chancelog</h1>
-Can be found on Chancelog page
-      </textarea>
-      <textarea class="mpisto-article sourceonly">
-      <h1>Welcome</h1>
-      This is Mpisto War 2018
-      <h2>About</h2>
-      2018 has been made to replace the successfull Mpisto War Zentral.
-      <h2> B8+ Markup </h2>
-      Inline markus that can make you cool:
-      <h3>Shadows</h3>
-      <shadow>A text with Shadow</shadow>
-      <br>
-      <shadow class="blur">A text with Shadow</shadow>
-      <br>
-      <shadow class="small">A text with Shadow</shadow>
-      <br>
-      <shadow class="small blur">A text with Shadow</shadow>
-      <br>
-      <shadow class="large">A text with Shadow</shadow>
-      <br>
-      <shadow class="large blur">A text with Shadow</shadow>
-      <hr>
-      <shadow class="extreme">A text with Shadow</shadow>
-      <br>
-      <shadow class="extreme blur">A text with Shadow</shadow>
-      <h3>Strokes</h3>
-      <stroke>A text with Stroke</stroke>
-      <br>
-      <stroke class="blur">A text with Stroke</stroke>
-      <br>
-      <stroke class="small">A text with Stroke</stroke>
-      <br>
-      <stroke class="small blur">A text with Stroke</stroke>
-      <br>
-      <stroke class="large">A text with Stroke</stroke>
-      <br>
-      <stroke class="large blur">A text with Stroke</stroke>
-      <hr>
-      <stroke class="extreme">A text with Stroke</stroke>
-      <br>
-      <stroke class="extreme blur">A text with Stroke</stroke>
-      <h2> Avatar Stacks </h2>
-      <h3> Mpisto War </h3>
-        Mpisto Draws the last avatar as the highest one seen. Can accept multiple avatars
-        <div class="mpisto-avatar-group">
-          <img class="mpisto-avatar" src="HM100.png"></img>
-          <img class="mpisto-avatar" src="3primetime3.jpg"></img>
-          <img class="mpisto-avatar" src="S2.png"></img>
-          <img class="mpisto-avatar" src="TK-999.png"></img>
-          <img class="mpisto-avatar" src="Rappy.png"></img>
-          <img class="mpisto-avatar" src="Sannse.png"></img>
-          <img class="mpisto-avatar" src="Wildones.png"></img>
-        </div>
-       <h3> Fandom Design System </h3>
-       On the other hand, Fandom System does it differently and up to 5 avatars, including an overflow can be used.
-        <div class="wds-avatar-stack">	
-          <div class="wds-avatar-stack__avatar">		
-            <img class="wds-avatar" alt="user name" src="HM100.png">	
-          </div>
-          <div class="wds-avatar-stack__avatar">		
-            <img class="wds-avatar" alt="user name" src="3primetime3.jpg">	
-          </div>
-          <div class="wds-avatar-stack__avatar">		
-            <img class="wds-avatar" alt="user name" src="S2.png">	
-          </div>
-          <div class="wds-avatar-stack__avatar">		
-            <img class="wds-avatar" alt="user name" src="TK-999.png">	
-          </div>	
-          <div class="wds-avatar-stack__avatar">		
-            <img class="wds-avatar" alt="user name" src="Rappy.png">	
-          </div>	
-            <div class="wds-avatar-stack__overflow">+2</div>
-        </div>
-        <h2>Banners</h2>
-        Banners
-<div class="wds-banner-notification__container">
-	<div class="wds-banner-notification wds-message">
-		<div class="wds-banner-notification__icon">	
-			<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-flag-small" />
-			</svg>
-		</div>
-		<span class="wds-banner-notification__text">					Stacked notification 1.</span>
+		<div class="wds-banner-notification wds-alert">
+			<div class="wds-banner-notification__icon">	
+				<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-error-small" />
+				</svg>
+			</div>
+			<span class="wds-banner-notification__text">					Stacked notification 4 with very long content. Lorem ipsum dolor sit amet,				consectetur adipiscing elit. Vestibulum scelerisque ullamcorper sodales. Interdum et				malesuada fames ac ante ipsum primis in faucibus.</span>
 			<svg xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">
 				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross-tiny" />
 			</svg>
+		</div>
 	</div>
-	<div class="wds-banner-notification wds-success">
-		<div class="wds-banner-notification__icon">	
-			<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark-circle-small" />
+		  <h1>Chancelog</h1>
+	Can be found on Chancelog page
+		  <!--Stop Article-->
+		  </article>
+		  <textarea readonly class="mpisto-article visualonly">
+		  <h1>Welcome</h1>
+		  This is Mpisto War 2018
+		  <h2>About</h2>
+		  2018 has been made to replace the successfull Mpisto War Zentral.
+		  <h2> B8+ Markup </h2>
+		  Inline markus that can make you cool:
+		  <h3>Shadows</h3>
+		  <shadow>A text with Shadow</shadow>
+		  <br>
+		  <shadow class="blur">A text with Shadow</shadow>
+		  <br>
+		  <shadow class="small">A text with Shadow</shadow>
+		  <br>
+		  <shadow class="small blur">A text with Shadow</shadow>
+		  <br>
+		  <shadow class="large">A text with Shadow</shadow>
+		  <br>
+		  <shadow class="large blur">A text with Shadow</shadow>
+		  <hr>
+		  <shadow class="extreme">A text with Shadow</shadow>
+		  <br>
+		  <shadow class="extreme blur">A text with Shadow</shadow>
+		  <h3>Strokes</h3>
+		  <stroke>A text with Stroke</stroke>
+		  <br>
+		  <stroke class="blur">A text with Stroke</stroke>
+		  <br>
+		  <stroke class="small">A text with Stroke</stroke>
+		  <br>
+		  <stroke class="small blur">A text with Stroke</stroke>
+		  <br>
+		  <stroke class="large">A text with Stroke</stroke>
+		  <br>
+		  <stroke class="large blur">A text with Stroke</stroke>
+		  <hr>
+		  <stroke class="extreme">A text with Stroke</stroke>
+		  <br>
+		  <stroke class="extreme blur">A text with Stroke</stroke>
+		  <h2> Avatar Stacks </h2>
+		  <h3> Mpisto War </h3>
+			Mpisto Draws the last avatar as the highest one seen. Can accept multiple avatars
+			<div class="mpisto-avatar-group">
+			  <img class="mpisto-avatar" src="HM100.png"></img>
+			  <img class="mpisto-avatar" src="3primetime3.jpg"></img>
+			  <img class="mpisto-avatar" src="S2.png"></img>
+			  <img class="mpisto-avatar" src="TK-999.png"></img>
+			  <img class="mpisto-avatar" src="Rappy.png"></img>
+			  <img class="mpisto-avatar" src="Sannse.png"></img>
+			  <img class="mpisto-avatar" src="Wildones.png"></img>
+			</div>
+		   <h3> Fandom Design System </h3>
+		   On the other hand, Fandom System does it differently and up to 5 avatars, including an overflow can be used.
+			<div class="wds-avatar-stack">	
+			  <div class="wds-avatar-stack__avatar">		
+				<img class="wds-avatar" alt="user name" src="HM100.png">	
+			  </div>
+			  <div class="wds-avatar-stack__avatar">		
+				<img class="wds-avatar" alt="user name" src="3primetime3.jpg">	
+			  </div>
+			  <div class="wds-avatar-stack__avatar">		
+				<img class="wds-avatar" alt="user name" src="S2.png">	
+			  </div>
+			  <div class="wds-avatar-stack__avatar">		
+				<img class="wds-avatar" alt="user name" src="TK-999.png">	
+			  </div>	
+			  <div class="wds-avatar-stack__avatar">		
+				<img class="wds-avatar" alt="user name" src="Rappy.png">	
+			  </div>	
+				<div class="wds-avatar-stack__overflow">+2</div>
+			</div>
+			<h2>Banners</h2>
+			Banners
+	<div class="wds-banner-notification__container">
+		<div class="wds-banner-notification wds-message">
+			<div class="wds-banner-notification__icon">	
+				<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-flag-small" />
+				</svg>
+			</div>
+			<span class="wds-banner-notification__text">					Stacked notification 1.</span>
+				<svg xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross-tiny" />
+				</svg>
+		</div>
+		<div class="wds-banner-notification wds-success">
+			<div class="wds-banner-notification__icon">	
+				<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark-circle-small" />
+				</svg>
+			</div>
+			<span class="wds-banner-notification__text">					Stacked notification 2 with very long content. Lorem ipsum dolor sit amet,				consectetur adipiscing elit. Vestibulum scelerisque ullamcorper sodales. Interdum et				malesuada fames ac ante ipsum primis in faucibus.</span>
+			<svg xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross-tiny" />
 			</svg>
 		</div>
-		<span class="wds-banner-notification__text">					Stacked notification 2 with very long content. Lorem ipsum dolor sit amet,				consectetur adipiscing elit. Vestibulum scelerisque ullamcorper sodales. Interdum et				malesuada fames ac ante ipsum primis in faucibus.</span>
-		<svg xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">
-			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross-tiny" />
-		</svg>
-	</div>
-	<div class="wds-banner-notification wds-warning">
-		<div class="wds-banner-notification__icon">	
-			<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-alert-small" />
+		<div class="wds-banner-notification wds-warning">
+			<div class="wds-banner-notification__icon">	
+				<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-alert-small" />
+				</svg>
+			</div>
+			<span class="wds-banner-notification__text">					Stacked notification 3.</span>
+			<svg xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross-tiny" />
 			</svg>
 		</div>
-		<span class="wds-banner-notification__text">					Stacked notification 3.</span>
-		<svg xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">
-			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross-tiny" />
-		</svg>
-	</div>
-	<div class="wds-banner-notification wds-alert">
-		<div class="wds-banner-notification__icon">	
-			<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-error-small" />
+		<div class="wds-banner-notification wds-alert">
+			<div class="wds-banner-notification__icon">	
+				<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-error-small" />
+				</svg>
+			</div>
+			<span class="wds-banner-notification__text">					Stacked notification 4 with very long content. Lorem ipsum dolor sit amet,				consectetur adipiscing elit. Vestibulum scelerisque ullamcorper sodales. Interdum et				malesuada fames ac ante ipsum primis in faucibus.</span>
+			<svg xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross-tiny" />
 			</svg>
 		</div>
-		<span class="wds-banner-notification__text">					Stacked notification 4 with very long content. Lorem ipsum dolor sit amet,				consectetur adipiscing elit. Vestibulum scelerisque ullamcorper sodales. Interdum et				malesuada fames ac ante ipsum primis in faucibus.</span>
-		<svg xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">
-			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross-tiny" />
-		</svg>
 	</div>
-</div>
-      <h1>Chancelog</h1>
-Can be found on Chancelog page
-      </textarea>
+		  <h1>Chancelog</h1>
+	Can be found on Chancelog page
+		  </textarea>
+		  <textarea class="mpisto-article sourceonly">
+		  <h1>Welcome</h1>
+		  This is Mpisto War 2018
+		  <h2>About</h2>
+		  2018 has been made to replace the successfull Mpisto War Zentral.
+		  <h2> B8+ Markup </h2>
+		  Inline markus that can make you cool:
+		  <h3>Shadows</h3>
+		  <shadow>A text with Shadow</shadow>
+		  <br>
+		  <shadow class="blur">A text with Shadow</shadow>
+		  <br>
+		  <shadow class="small">A text with Shadow</shadow>
+		  <br>
+		  <shadow class="small blur">A text with Shadow</shadow>
+		  <br>
+		  <shadow class="large">A text with Shadow</shadow>
+		  <br>
+		  <shadow class="large blur">A text with Shadow</shadow>
+		  <hr>
+		  <shadow class="extreme">A text with Shadow</shadow>
+		  <br>
+		  <shadow class="extreme blur">A text with Shadow</shadow>
+		  <h3>Strokes</h3>
+		  <stroke>A text with Stroke</stroke>
+		  <br>
+		  <stroke class="blur">A text with Stroke</stroke>
+		  <br>
+		  <stroke class="small">A text with Stroke</stroke>
+		  <br>
+		  <stroke class="small blur">A text with Stroke</stroke>
+		  <br>
+		  <stroke class="large">A text with Stroke</stroke>
+		  <br>
+		  <stroke class="large blur">A text with Stroke</stroke>
+		  <hr>
+		  <stroke class="extreme">A text with Stroke</stroke>
+		  <br>
+		  <stroke class="extreme blur">A text with Stroke</stroke>
+		  <h2> Avatar Stacks </h2>
+		  <h3> Mpisto War </h3>
+			Mpisto Draws the last avatar as the highest one seen. Can accept multiple avatars
+			<div class="mpisto-avatar-group">
+			  <img class="mpisto-avatar" src="HM100.png"></img>
+			  <img class="mpisto-avatar" src="3primetime3.jpg"></img>
+			  <img class="mpisto-avatar" src="S2.png"></img>
+			  <img class="mpisto-avatar" src="TK-999.png"></img>
+			  <img class="mpisto-avatar" src="Rappy.png"></img>
+			  <img class="mpisto-avatar" src="Sannse.png"></img>
+			  <img class="mpisto-avatar" src="Wildones.png"></img>
+			</div>
+		   <h3> Fandom Design System </h3>
+		   On the other hand, Fandom System does it differently and up to 5 avatars, including an overflow can be used.
+			<div class="wds-avatar-stack">	
+			  <div class="wds-avatar-stack__avatar">		
+				<img class="wds-avatar" alt="user name" src="HM100.png">	
+			  </div>
+			  <div class="wds-avatar-stack__avatar">		
+				<img class="wds-avatar" alt="user name" src="3primetime3.jpg">	
+			  </div>
+			  <div class="wds-avatar-stack__avatar">		
+				<img class="wds-avatar" alt="user name" src="S2.png">	
+			  </div>
+			  <div class="wds-avatar-stack__avatar">		
+				<img class="wds-avatar" alt="user name" src="TK-999.png">	
+			  </div>	
+			  <div class="wds-avatar-stack__avatar">		
+				<img class="wds-avatar" alt="user name" src="Rappy.png">	
+			  </div>	
+				<div class="wds-avatar-stack__overflow">+2</div>
+			</div>
+			<h2>Banners</h2>
+			Banners
+	<div class="wds-banner-notification__container">
+		<div class="wds-banner-notification wds-message">
+			<div class="wds-banner-notification__icon">	
+				<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-flag-small" />
+				</svg>
+			</div>
+			<span class="wds-banner-notification__text">					Stacked notification 1.</span>
+				<svg xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross-tiny" />
+				</svg>
+		</div>
+		<div class="wds-banner-notification wds-success">
+			<div class="wds-banner-notification__icon">	
+				<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark-circle-small" />
+				</svg>
+			</div>
+			<span class="wds-banner-notification__text">					Stacked notification 2 with very long content. Lorem ipsum dolor sit amet,				consectetur adipiscing elit. Vestibulum scelerisque ullamcorper sodales. Interdum et				malesuada fames ac ante ipsum primis in faucibus.</span>
+			<svg xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross-tiny" />
+			</svg>
+		</div>
+		<div class="wds-banner-notification wds-warning">
+			<div class="wds-banner-notification__icon">	
+				<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-alert-small" />
+				</svg>
+			</div>
+			<span class="wds-banner-notification__text">					Stacked notification 3.</span>
+			<svg xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross-tiny" />
+			</svg>
+		</div>
+		<div class="wds-banner-notification wds-alert">
+			<div class="wds-banner-notification__icon">	
+				<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-error-small" />
+				</svg>
+			</div>
+			<span class="wds-banner-notification__text">					Stacked notification 4 with very long content. Lorem ipsum dolor sit amet,				consectetur adipiscing elit. Vestibulum scelerisque ullamcorper sodales. Interdum et				malesuada fames ac ante ipsum primis in faucibus.</span>
+			<svg xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross-tiny" />
+			</svg>
+		</div>
+	</div>
+		  <h1>Chancelog</h1>
+	Can be found on Chancelog page
+		  </textarea>
 
-      </nav>
-    <nav class="mpisto-right-pane">
-      <div style="width:100%;">
-          <section class="mpisto-module editor-tools-module" id="module1">
-            <h2><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">	
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-plus" />
-</svg> <span>Add features and media</span> <a class="module-toggle" onclick="ToggleModule1()">                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny" viewBox="0 0 12 12">
-                    <path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
-                  </svg> </a> </h2>
-              <ul>
-                <li>
-                  <a href="#modal1" class="wds-button"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">	
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-image" />
-</svg><span>Image</span></a>
-                  <div class="wds-dropdown">
-                    <div class="wds-button"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">	
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-video-camera" /> <div><span>Video</span> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" viewBox="0 0 12 12">
-  <path d="M6 9l4-5H2" fill-rule="evenodd"/>
-  </svg> </div> </div>
-                  <div class="wds-dropdown__content">
-                    <ol class="wds-list wds-is-linked">
-                      <li><a href="#modal2"><span>Local</span></a></li>
-                      <li><a href="#modal3"><span>Youtube</span></a></li>
-                      <li><a href="#modal4"><span>Vimeo</span></a></li>
-                    </ol>
-                  </div>  
-                  </div>
-                  <a href="#modal5" class="wds-button"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">	
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-link" /> <span>Link</span></a>
-                  <a href="#modal6" class="wds-button"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">	
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-grid" /> <span>Table</span></a>
-                  <a href="#modal7" class="wds-button"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">	
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-embed" /> <span>iFrame</span></a>
-                <a href="#modal8" class="wds-button"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">	
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-bookmark" /> <span>Infobox</span></a>
-                  <div class="wds-dropdown">
-                    <div class="wds-button"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">	
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-document" /> <div><span>Template</span> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" viewBox="0 0 12 12">
-  <path d="M6 9l4-5H2" fill-rule="evenodd"/>
-  </svg> </div> </div>
-                  <div class="wds-dropdown__content">
-                    <ol class="wds-list wds-is-linked">
-                      <li><a href="#modal9"><span>Standard</span></a></li>
-                      <li><a><span>Lua-based</span></a></li>
-                    </ol>
-                  </div>  
-                  </div>
+		  </nav>
+		<nav class="mpisto-right-pane">
+		  <div style="width:100%;">
+			  <section class="mpisto-module editor-tools-module" id="module1">
+				<h2><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">	
+	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-plus" />
+	</svg> <span>Add features and media</span> <a class="module-toggle" onclick="ToggleModule1()">                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny" viewBox="0 0 12 12">
+						<path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
+					  </svg> </a> </h2>
+				  <ul>
+					<li>
+					  <a href="#modal1" class="wds-button"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">	
+	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-image" />
+	</svg><span>Image</span></a>
+					  <div class="wds-dropdown">
+						<div class="wds-button"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">	
+	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-video-camera" /> <div><span>Video</span> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" viewBox="0 0 12 12">
+	  <path d="M6 9l4-5H2" fill-rule="evenodd"/>
+	  </svg> </div> </div>
+					  <div class="wds-dropdown__content">
+						<ol class="wds-list wds-is-linked">
+						  <li><a href="#modal2"><span>Local</span></a></li>
+						  <li><a href="#modal3"><span>Youtube</span></a></li>
+						  <li><a href="#modal4"><span>Vimeo</span></a></li>
+						</ol>
+					  </div>  
+					  </div>
+					  <a href="#modal5" class="wds-button"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">	
+	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-link" /> <span>Link</span></a>
+					  <a href="#modal6" class="wds-button"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">	
+	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-grid" /> <span>Table</span></a>
+					  <a href="#modal7" class="wds-button"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">	
+	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-embed" /> <span>iFrame</span></a>
+					<a href="#modal8" class="wds-button"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">	
+	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-bookmark" /> <span>Infobox</span></a>
+					  <div class="wds-dropdown">
+						<div class="wds-button"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">	
+	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-document" /> <div><span>Template</span> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" viewBox="0 0 12 12">
+	  <path d="M6 9l4-5H2" fill-rule="evenodd"/>
+	  </svg> </div> </div>
+					  <div class="wds-dropdown__content">
+						<ol class="wds-list wds-is-linked">
+						  <li><a href="#modal9"><span>Standard</span></a></li>
+						  <li><a><span>Lua-based</span></a></li>
+						</ol>
+					  </div>  
+					  </div>
 
-                </li>
-               </ul>
-              <footer class="buttons">
-              <a class="wds-button wds-is-squished wds-is-secondary">Help me decide</a>
-              </footer>
-          </section>
-          
-          <section class="mpisto-module editor-findreplace-module" id="module2">
-            <h2><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">	
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass" />
-</svg> <span>Find and Replace</span> <a class="module-toggle" onclick="ToggleModule2()">                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny" viewBox="0 0 12 12">
-                    <path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
-                  </svg> </a> </h2>
-              <ul>
-                <li>
-                <input class="mpisto-input" id="FindText" placeholder="Find text"></input>
-                <input class="mpisto-input" id="ReplaceText" placeholder="Replace text"></input>
-                <div class="wds-button-group">
-                  <button class="wds-button" title="Finds the next result">Find Next</button>
-                  <button class="wds-button" title="Finds the past result">Find Previous</button>
-                  <button class="wds-button" title="Replaces the next result with the given string">Replace</button>
-                  <button class="wds-button" title="Replaces all instances of the result with the given string">Replace All</button>
-                </div>
-                <br>
-                <div>
-                <input type="checkbox" id="FR_Checkbox" name="1001" id="a1001"></input><label id="FR_Label" for="a1001">Match case</label>
-                <br>
-                <input type="checkbox" id="FR_Checkbox" name="1001" id="a1002"></input><label id="FR_Label" for="a1002">Match entire word</label>
-                <br>
-                <input type="checkbox" id="FR_Checkbox" name="1001" id="a1003"></input><label id="FR_Label" for="a1003">Don't wrap around</label>
-                <br>
-                <label>Regular Expressions:</label>
-                <br>
-                <input type="radio" id="FR_Radio" name="1002" id="a1011" checked></input><label id="FR_Label" for="a1011">None</label>
-                <br>
-                <input type="radio" id="FR_Radio" name="1002" id="a1012"></input><label id="FR_Label" for="a1012">Both</label>
-                <br>
-                <input type="radio" id="FR_Radio" name="1002" id="a1013"></input><label id="FR_Label" for="a1013">Find input only</label>
-                <br>
-                <input type="radio" id="FR_Radio" name="1002" id="a1014"></input><label id="FR_Label" for="a1014">Replace input only</label>
-                </div>
-                </li>
-               </ul>
-              <footer class="buttons">
-              <a class="wds-button wds-is-squished wds-is-secondary">How to use?</a>
-              <a class="wds-button wds-is-squished wds-is-secondary">Clear History</a>
-              </footer>
-          </section>
+					</li>
+				   </ul>
+				  <footer class="buttons">
+				  <a class="wds-button wds-is-squished wds-is-secondary">Help me decide</a>
+				  </footer>
+			  </section>
+			  
+			  <section class="mpisto-module editor-findreplace-module" id="module2">
+				<h2><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">	
+	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass" />
+	</svg> <span>Find and Replace</span> <a class="module-toggle" onclick="ToggleModule2()">                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny" viewBox="0 0 12 12">
+						<path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
+					  </svg> </a> </h2>
+				  <ul>
+					<li>
+					<input class="mpisto-input" id="FindText" placeholder="Find text"></input>
+					<input class="mpisto-input" id="ReplaceText" placeholder="Replace text"></input>
+					<div class="wds-button-group">
+					  <button class="wds-button" title="Finds the next result">Find Next</button>
+					  <button class="wds-button" title="Finds the past result">Find Previous</button>
+					  <button class="wds-button" title="Replaces the next result with the given string">Replace</button>
+					  <button class="wds-button" title="Replaces all instances of the result with the given string">Replace All</button>
+					</div>
+					<br>
+					<div>
+					<input type="checkbox" name="1001" id="a1001"></input><label id="FR_Label" for="a1001">Match case</label>
+					<br>
+					<input type="checkbox" name="1001" id="a1002"></input><label id="FR_Label" for="a1002">Match entire word</label>
+					<br>
+					<input type="checkbox"  name="1001" id="a1003"></input><label id="FR_Label" for="a1003">Don't wrap around</label>
+					<br>
+					<label>Regular Expressions:</label>
+					<br>
+					<input type="radio" name="1002" id="a1011" checked></input><label id="FR_Label" for="a1011">None</label>
+					<br>
+					<input type="radio" name="1002" id="a1012"></input><label id="FR_Label" for="a1012">Both</label>
+					<br>
+					<input type="radio" name="1002" id="a1013"></input><label id="FR_Label" for="a1013">Find input only</label>
+					<br>
+					<input type="radio" name="1002" id="a1014"></input><label id="FR_Label" for="a1014">Replace input only</label>
+					</div>
+					</li>
+				   </ul>
+				  <footer class="buttons">
+				  <a class="wds-button wds-is-squished wds-is-secondary">How to use?</a>
+				  <a class="wds-button wds-is-squished wds-is-secondary">Clear History</a>
+				  </footer>
+			  </section>
 
-      </div>
-    </nav>
-     </nav>
-    </div>
+		  </div>
+		</nav>
+		 </nav>
+		</div>
+	</div>
 </section>
 
 <!-- End Article -->

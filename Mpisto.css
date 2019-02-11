@@ -4765,6 +4765,8 @@ padding-bottom:34px;
   height:calc(100vh - 110px);
 scrollbar-color:#ccc #fff;
 scrollbar-color:var(--content-border) var(--content-bg);
+display:flex;
+flex-direction:column;
 }
 
 .mpisto-editors-content > div {
@@ -4923,6 +4925,7 @@ list-style:none!important;
   */
   padding:0.9px 9px;
   display:flex;
+  width:100%;
   align-items:center;
   justify-items:center;
   height:calc(65px * 0.7);
