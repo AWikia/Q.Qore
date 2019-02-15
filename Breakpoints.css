@@ -13,10 +13,10 @@
 	height:100%!important;
 }
 
-.wide .mpisto-content, .wide footer.mpisto-footer .mpisto-wrapper, .wide .lightbox, .wide header.mpisto-footer-container > div, .wide header.mpisto-navbar .mpisto-navbar-wrapper {
+/*.wide .mpisto-content, .wide footer.mpisto-footer .mpisto-wrapper, .wide .lightbox, .wide header.mpisto-footer-container > div, .wide header.mpisto-navbar .mpisto-navbar-wrapper {
 	width:calc(1066px / 0.8)!important;
 }
-
+*/
 
 @media only screen and (max-width:717px) {
 	.main .mpisto-2018 {
@@ -38,10 +38,10 @@ display:inline!important;
 	min-width:718px;
 }
 
-.wide .mpisto-content, .wide footer.mpisto-footer .mpisto-wrapper, .wide .lightbox, .wide header.mpisto-footer-container > div, .wide header.mpisto-navbar .mpisto-navbar-wrapper {
+/*.wide .mpisto-content, .wide footer.mpisto-footer .mpisto-wrapper, .wide .lightbox, .wide header.mpisto-footer-container > div, .wide header.mpisto-navbar .mpisto-navbar-wrapper {
 	width:calc(100% - (34px / 0.8))!important;
 }
-
+*/
 
 .mpisto-option-way h1 {
 	white-space:nowrap;
@@ -374,7 +374,7 @@ padding-right:10px;
 }
 */
 
-.mpisto-content, header.mpisto-navbar .mpisto-navbar-wrapper, footer.mpisto-footer .mpisto-wrapper, .lightbox {
+/*.mpisto-content, header.mpisto-navbar .mpisto-navbar-wrapper, footer.mpisto-footer .mpisto-wrapper, .lightbox {
 width:926px;
 }
 
@@ -386,7 +386,7 @@ width:926px;
 header.mpisto-footer-container > div {
   width:926px;
 }
-
+*/
 
 .mpisto-userpages-header .mpisto-profile-masthead .left-pane {
 	width:50%;
@@ -430,7 +430,7 @@ padding-right:30px;
 }
 */
 
-.mpisto-content, header.mpisto-navbar .mpisto-navbar-wrapper, footer.mpisto-footer .mpisto-wrapper, .lightbox {
+/*.mpisto-content, header.mpisto-navbar .mpisto-navbar-wrapper, footer.mpisto-footer .mpisto-wrapper, .lightbox {
 width:1146px;
 }
 
@@ -443,6 +443,7 @@ header.mpisto-footer-container > div {
   width:1146px;
 }
 
+*/
 .mpisto-content .mpisto-title {
 	font-size:54px;
 }
@@ -490,7 +491,7 @@ padding-right:30px;
 }
 */
 
-.mpisto-content, header.mpisto-navbar .mpisto-navbar-wrapper, footer.mpisto-footer .mpisto-wrapper, .lightbox {
+/*.mpisto-content, header.mpisto-navbar .mpisto-navbar-wrapper, footer.mpisto-footer .mpisto-wrapper, .lightbox {
 width:1346px;
 }
 
@@ -502,6 +503,7 @@ width:1346px;
 header.mpisto-footer-container > div {
   width:1346px;
 }
+*/
 
 .mpisto-content .mpisto-title {
 	font-size:67px;

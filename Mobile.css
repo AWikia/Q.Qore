@@ -6,7 +6,6 @@ display:block;
 }
 
 
-
 :root, .wds-button {
 	/* Override some variables used in Body and some wds-components */
 /*
@@ -834,6 +833,9 @@ border:0;
 }
 
 
+footer.mpisto-footer {
+padding-bottom:0;
+}
 
 .top-gap {
 margin:0!important;
@@ -893,15 +895,21 @@ height:30px;
 
 @media only screen and (min-width:960px) {
 
+.mpisto-header-container {
+background-image:linear-gradient(to bottom, rgba(248,248,248,0.4) 35%, rgba(23,23,23,0.2) 70%);
+background-blend-mode:overlay;
+}
+
 /*.page-wrapper .store-content .store-footer {
 margin:0 -1px -1px;
 border-top:1px solid #cccddd;
 }
 */
 
-footer.mpisto-footer, #GlobalNavigation {
-display:inherit;
+#GlobalNavigation {
+display:table;
 }
+
 
 .main body {
 margin-top:0!important;
@@ -911,6 +919,7 @@ background:linear-gradient(#18bbc5, #03A2AD);
 background:linear-gradient(var(--button-color-dark), var(--background-color));
 background-size:100% 100vh;
 background-repeat:no-repeat;
+overflow-x:hidden!important;
 }
 
 .wiki-page-header__wrapper {
@@ -928,8 +937,8 @@ margin-top:20px;
 }
 
 .page-wrapper {
-margin:0 auto;
-width:926px;
+margin:0 18px;
+width:auto;
 box-shadow:0 2px 6px 0 rgba(0,0,0,.2), 0 2px 6px 0 rgba(255,255,255,0.2);
 border-top:1px solid transparent;
 background-clip:padding-box;
@@ -955,10 +964,6 @@ header.mpisto-navbar:after, footer.mpisto-footer:after {
 }
 
 @media only screen and (min-width:1100px) {
-.page-wrapper {
-width:1066px;
-}
-
 
 
 .page-wrapper .store-content .store-items .wds-button .wds-button {
@@ -977,10 +982,6 @@ height:60px;
 
 
 @media only screen and (min-width:1400px) {
-.page-wrapper {
-width:1146px;
-}
-
 .page-wrapper .store-content .store-header .counters {
 	font-size:18px;
 }
@@ -1015,10 +1016,6 @@ height:75px;
 }
 
 @media only screen and (min-width:1600px) {
-.page-wrapper {
-width:1346px;
-}
-
 .page-wrapper .store-content .store-header .counters {
 	font-size:20px;
 }

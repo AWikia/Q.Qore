@@ -569,7 +569,7 @@ color:inherit;
 	border-color:currentColor;
 }
 
-.contrast .mpisto-option-way h1, .contrast .editor-header {
+.contrast .mpisto-option-way h1, .contrast .editor-header, .contrast .mpisto-content .mpisto-page-header-title {
 	background-image:none;
 }
 
