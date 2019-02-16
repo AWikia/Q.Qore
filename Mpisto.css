@@ -3731,11 +3731,10 @@ border-top-style:hidden;
 border-bottom-style:hidden;
 */
 margin:0 18px;
-width:100%;
+width:auto;
 border-spacing:0;
 color:inherit;
 border-collapse:separate; /* Mac mInerva and QortaQorte uses border-collapse:collapse by default, leading to unexpected layout */
-display:table;
 table-layout:fixed;
 }
 
