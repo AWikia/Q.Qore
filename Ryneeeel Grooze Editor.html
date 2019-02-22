@@ -1212,7 +1212,7 @@ function HCg1() {
 		  </nav>
 		<nav class="mpisto-right-pane">
 		  <div style="width:100%;">
-			  <section class="mpisto-module editor-tools-module" id="module1">
+			  <section class="mpisto-module editor-module editor-tools-module" id="module1">
 				<h2><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">	
 	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-plus" />
 	</svg> <span>Add features and media</span> <a class="module-toggle" onclick="ToggleModule1()">                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny" viewBox="0 0 12 12">
@@ -1244,19 +1244,6 @@ function HCg1() {
 	  <path d="M6.792 8.793L3.535 12.05l3.257 3.258a1.05 1.05 0 0 1-1.484 1.485l-4-4a1.05 1.05 0 0 1 0-1.485l4-4a1.049 1.049 0 1 1 1.484 1.485zm10.516 6.515l3.257-3.258-3.257-3.257a1.05 1.05 0 0 1 1.484-1.485l4 4c.41.41.41 1.075 0 1.485l-4 4a1.049 1.049 0 1 1-1.484-1.485zm-6.24 4.997a1.05 1.05 0 1 1-2.037-.512l4-16a1.05 1.05 0 1 1 2.041.51l-4 16z"/></svg><span>iFrame</span></a>
 					<a href="#modal8" class="wds-button"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">	
 	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-article" /> <span>Infobox</span></a>
-					  <div class="wds-dropdown">
-						<div class="wds-button"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">	
-	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-document" /> <div><span>Template</span> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" viewBox="0 0 12 12">
-	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" /> 
-	  </svg> </div> </div>
-					  <div class="wds-dropdown__content">
-						<ol class="wds-list wds-is-linked">
-						  <li><a href="#modal9"><span>Standard</span></a></li>
-						  <li><a><span>Lua-based</span></a></li>
-						</ol>
-					  </div>  
-					  </div>
-
 					</li>
 				   </ul>
 				  <footer class="buttons">
@@ -1264,7 +1251,7 @@ function HCg1() {
 				  </footer>
 			  </section>
 			  
-			  <section class="mpisto-module editor-findreplace-module" id="module2">
+			  <section class="mpisto-module editor-module editor-findreplace-module" id="module2">
 				<h2><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">	
 	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass" />
 	</svg> <span>Find and Replace</span> <a class="module-toggle" onclick="ToggleModule2()">                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny" viewBox="0 0 12 12">
@@ -1305,6 +1292,54 @@ function HCg1() {
 				  <a class="wds-button wds-is-squished wds-is-secondary">Clear History</a>
 				  </footer>
 			  </section>
+
+			  <section class="mpisto-module editor-module category-module" id="module3">
+				<h2><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">	
+	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-grid" />
+	</svg> <span>Categories</span> <a class="module-toggle" onclick="ToggleModule3()">                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny" viewBox="0 0 12 12">
+						<path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
+					  </svg> </a> </h2>
+				  <ul>
+					<li>
+						<div class="item">
+							<span>Main Page</span><a title="Edit name"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-pencil" /</svg></a><a title="Remove category"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" /</svg></a>
+						</div>
+						<div class="item">
+							<span>Explore</span><a title="Edit name"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-pencil" /</svg></a><a title="Remove category"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" /</svg></a>
+						</div>
+						<div class="item">
+							<span>Community Pages</span><a title="Edit name"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-pencil" /</svg></a><a title="Remove category"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" /</svg></a>
+						</div>
+						<div class="category-add">
+							<input class="mpisto-input" placeholder="Add new category..."></input> <button class="wds-button wds-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-plus" /</svg> <span>Add</span></button>
+						</div>
+					</li>
+				   </ul>
+				  <footer class="buttons">
+				  <a class="wds-button wds-is-squished wds-is-secondary">How to use?</a>
+				  </footer>
+			  </section>
+
+			  <section class="mpisto-module editor-module template-module" id="module4">
+				<h2><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">	
+	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-document" />
+	</svg> <span>Templates</span> <a class="module-toggle" onclick="ToggleModule4()">                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny" viewBox="0 0 12 12">
+						<path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
+					  </svg> </a> </h2>
+				  <ul>
+					<li>
+					Horray, you're adding a template. Which kind of template do you want to use?
+						<div class="template-buttons wds-button-group">
+							<a class="wds-button" href="#modal9"><span>Standard</span></a>
+							<a class="wds-button"><span>Lua-Based</span></a>
+						</div>
+					</li>
+				   </ul>
+				  <footer class="buttons">
+				  <a class="wds-button wds-is-squished wds-is-secondary" href="#modal11">Used Templates</a>
+				  </footer>
+			  </section>
+
 
 		  </div>
 		</nav>
@@ -1706,6 +1741,26 @@ function HCg1() {
 </div>
 
 
+<div class="lightbox-container" id="modal11">
+    <div class="lightbox">
+      <h1><span>List of used templates on "Main Page"</span> <a class="wds-button wds-is-square wds-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" />
+                  </svg></a></h1>
+   <section>
+	List of Templates currently used on this page:
+		<ul>
+			<li>
+				<a><b>GTA</b> Main Page</a> (Admin Protected, <a>Edit</a>)
+			</li>
+		</ul>
+   </section>
+   <footer>
+   <button class="wds-button wds-is-squished">Help me</button>
+   </footer>
+    </div>
+</div>
+
+
 </body>
 </html>
 <head>
@@ -1725,93 +1780,8 @@ function HCg1() {
 
 
 <script src="Themes.js"></script>
+<script src="Editor.js"></script>
 
-<script>
-
-function BarSwitch() {
-    var x = document.getElementById("Handler");
-    if (x.className.indexOf("bar-hidden") == -1) {
-        x.className += " bar-hidden";
-    } else {
-        x.className = x.className.replace(" bar-hidden", "");
-    }
-}
-
-function SourceSwitch() {
-    var x = document.getElementById("EditorContent");
-    if (x.className.indexOf("sourceon") == -1) {
-        x.className += " sourceon";
-    } else {
-        x.className = x.className.replace(" sourceon", "");
-    }
-}
-
-function SourceSwitchA() {
-    var x = document.getElementById("EditorContent");
-    if (x.className.indexOf("insource") == -1) {
-        x.className += " insource";
-    } else {
-        x.className = x.className.replace(" insource", "");
-    }
-}
-
-function ToggleModule1() {
-    var x = document.getElementById("module1");
-    if (x.className.indexOf("hidden-module") == -1) {
-        x.className += " hidden-module";
-    } else {
-        x.className = x.className.replace(" hidden-module", "");
-    }
-}
-
-function ToggleModule2() {
-    var x = document.getElementById("module2");
-    if (x.className.indexOf("hidden-module") == -1) {
-        x.className += " hidden-module";
-    } else {
-        x.className = x.className.replace(" hidden-module", "");
-    }
-}
-
-
-/* Make SmartTVs recognize cursors */
-if (navigator.userAgent.match("SmartTV")) {
-document.getElementById("Handler").className += " smart"
-}
-
-if (navigator.userAgent.match("Macintosh")) {
-document.getElementById("Handler").className += " osx"
-}
-
-if (navigator.userAgent.match("Linux")) {
-document.getElementById("Handler").className += " xubuntu"
-}
-
-if (navigator.userAgent.match("Trident")) {
-document.getElementById("Handler").className += " explorer"
-}
-
-if (navigator.userAgent.match("Edge")) {
-document.getElementById("Handler").className += " edge"
-}
-
-/* Mobile Only CSS */
-if (navigator.userAgent.match("Mobile")) {
-document.getElementById("Handler").className += " phone"
-}
-
-
-/* Dropdown
-function dropFunction() {
-    var x = document.getElementById("myDIV");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
-*/
-</script>
 
 
 <!--

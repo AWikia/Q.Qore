@@ -49,8 +49,15 @@ Raleway = Rest
 @import url('https://fonts.googleapis.com/css?family=Cutive+Mono|Fira+Mono:400,500,700&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext');
 
 
-
+/* Mpisto font */
 @font-face {
+    font-family:  Mpisto;
+    src:url('MpistoU2019-MediumCondensed.ttf') format('truetype');
+	font-weight:500;
+	font-stretch: condensed
+}
+
+/*@font-face {
     font-family:  Mpisto;
     src:url('Mpisto2019-SemiCondensedMedium.ttf') format('truetype');
 	font-weight:500;
@@ -106,34 +113,31 @@ Raleway = Rest
 	font-stretch: ultra-expanded
 }
 
+
+*/
+	   
 @font-face {
     font-family:  Mpisto;
-    src:url('Mpisto2019-Regular.ttf') format('truetype');
-    font-stretch:normal;
-    font-weight:400;
+    src:url('MpistoU2019-Regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family:  Mpisto;
-    src:url('Mpisto2019-Light.ttf') format('truetype');
+    src:url('MpistoU2019-Light.ttf') format('truetype');
 	font-weight:300;
-	font-stretch:normal;
 }
 
 @font-face {
     font-family:  Mpisto;
-    src:url('Mpisto2019-Medium.ttf') format('truetype');
+    src:url('MpistoU2019-Medium.ttf') format('truetype');
 	font-weight:500;
-	font-stretch:normal;
 }
 
 @font-face {
     font-family:  Mpisto;
-    src:url('Mpisto2019-Bold.ttf') format('truetype');
+    src:url('MpistoU2019-Bold.ttf') format('truetype');
 	font-weight:700;
-	font-stretch:normal;
 }
-
 
 @font-face {
     font-family: LCD;
@@ -392,7 +396,6 @@ touch-action:manipulation;
 (M)touch-action:auto; /* mInerva 11.5- can make unscrollable page with mouse and keyboard */
 	overflow-y:auto;
 	height:100vh;
-	z-index:-1;
 	font-weight:500;
 text-shadow:0 0 1px rgba(255,0,0,0.2), 0 0 1px rgba(0,255,0,0.2), 0 0 1px rgba(0,0,255,0.2), 0 0 1px rgba(255,255,0,0.2), 0 0 1px rgba(255,0,255,0.2), 0 0 1px rgba(0,255,255,0.2), 0 0 1px rgba(0,0,0,0.2), 0 0 1px rgba(255,255,255,0.2); /* Partially Embolding */
 }
@@ -2976,10 +2979,6 @@ text-align:right;
 }
 
 .mpisto-userpages-header .mpisto-userpages-main {
-	background-color:#ffffff;
-	background-color:var(--dropdown-bg);
-	background-image:linear-gradient(to bottom, #ffffff 0%, #fff 100%);
-	background-image:linear-gradient(to bottom, var(--dropdown-bg) 0%, var(--content-bg) 100%);
 	padding:10px;
 	display:flex;
 	justify-content:space-between;
@@ -4189,6 +4188,92 @@ border-bottom-right-radius:inherit;
 
 
 
+.mpisto-module.editor-module {
+	margin-top:0;
+	margin-bottom:0;
+	border-radius:0;
+	box-shadow:none;
+	border:0;
+}
+
+.mpisto-module.editor-module.hidden-module + .mpisto-module.editor-module {
+	margin-top:2px;
+}
+
+.mpisto-module.editor-module .buttons::after, .mpisto-module.editor-module h2::after, .mpisto-module.editor-module h2::before {
+	background-color:transparent;
+}
+
+.mpisto-module.editor-module h2 {
+	background-color:#0000ff;
+	background-color:rgb(var(--community-header-bg));
+	color:rgb(23,23,23);
+	color:rgb(var(--community-header-text));
+	border-bottom:0;
+	padding:10px;
+}
+
+.mpisto-module.editor-module .buttons {
+	background-color:transparent;
+	border-top:0;
+}
+
+.mpisto-module.category-module .item {
+	display:flex;
+	border-bottom:1px solid #ccc;
+	border-bottom-color:var(--content-border);
+	font-size:15px;
+	padding:5px 0;
+	align-items:center;
+}
+
+
+.mpisto-module.category-module .item span {
+	flex:1;
+}
+
+.mpisto-module.category-module .item a {
+	margin:0 2.5px;
+}
+
+.mpisto-module.category-module .item a .wds-icon {
+	width:14px;
+	min-width:14px;
+	height:14px;
+	min-height:14px;
+	vertical-align:middle;
+}
+
+
+.mpisto-module.category-module .category-add  {
+	display:flex;
+	align-items:center;
+	padding:5px 0 0;
+	overflow-x:hidden;
+}
+
+.mpisto-module.category-module .category-add .mpisto-input  {
+	flex:1;
+	margin-right:2.5px;
+	padding:7px 12px;
+	font-size:14px;
+}
+
+.mpisto-module.category-module .category-add .wds-button  {
+	padding:7px 12px;
+}
+
+.mpisto-module.template-module .template-buttons  {
+	display:flex;
+	align-items:center;
+	margin:5px 0 0;
+}
+
+.mpisto-module.template-module .template-buttons .wds-button {
+	flex:1;
+}
+
+
 /* Extras */
 pre, code {
 background-color:#fff;
@@ -4848,8 +4933,8 @@ flex-wrap:nowrap!important; /* !important needed to avoid custom CSS break layou
 
 .editor-tools-module ul .wds-button {
   flex-direction:column;
-  border-radius:1000px;
-  padding:8px 14px;
+  border-radius:10px;
+  padding:7px 14px;
   flex-grow:1;
   margin:3px;
 }
@@ -5100,8 +5185,8 @@ height:auto;
 
 .editor-controls .wds-button {
   margin:3px;
-  border-radius:1000px;
-  padding:8px 13px;
+  border-radius:10px;
+  padding:7px 14px;
 }
 
 
@@ -5127,7 +5212,7 @@ height:auto;
   padding:7px 12px;
   width:calc(98% + 4px);
   margin:10px auto;
-  border-radius:1000px;
+  border-radius:10px;
   border:1px solid #ccc;
   border:1px solid var(--content-border);
   background-image:linear-gradient(to bottom,rgba(50,50,50,0.15), rgba(50,50,50,0.15)), linear-gradient(to bottom, rgba(206,206,206,0.15), rgba(206,206,206,0.15));
