@@ -445,7 +445,7 @@ header.mpisto-footer-container > div {
 
 */
 .mpisto-content .mpisto-title {
-	font-size:54px;
+	font-size:50px;
 }
 
 
@@ -472,6 +472,15 @@ font-size:16px;
 .mpisto-article h6 {
 font-size:12px;
 }
+
+.mpisto-article {
+	font-size:16px;
+}
+
+.mpisto-content .mpisto-sub {
+	font-size:14px;
+}
+
 
 footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container th.mpisto-footer-bar h3 {
 font-size:20px;
@@ -506,7 +515,7 @@ header.mpisto-footer-container > div {
 */
 
 .mpisto-content .mpisto-title {
-	font-size:67px;
+	font-size:62px;
 }
 
 .mpisto-article h1 {
@@ -535,7 +544,11 @@ font-size:16px;
 
 
 .mpisto-article {
-	font-size:17px;
+	font-size:18px;
+}
+
+.mpisto-content .mpisto-sub {
+	font-size:16px;
 }
 
 

@@ -44,6 +44,7 @@ Raleway = Rest
 @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:300,400,700,800|PT+Sans:400,700|PT+Serif:400,700|Roboto+Slab:100,300,400,700|Roboto:100,300,400,500,700,900|Varela&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
 @import url('https://fonts.googleapis.com/css?family=Aleo:300,400,700&subset=latin-ext');
 
+@import url('https://fonts.googleapis.com/css?family=Cutive|Gentium+Basic:400,700&subset=latin-ext');
 
 /* Mono Fonts */
 @import url('https://fonts.googleapis.com/css?family=Cutive+Mono|Fira+Mono:400,500,700&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext');
@@ -138,6 +139,32 @@ Raleway = Rest
     src:url('MpistoU2019-Bold.ttf') format('truetype');
 	font-weight:700;
 }
+
+@font-face {
+    font-family:  Mpisto Serif;
+    src:url('MpistoSerif-Light.ttf') format('truetype');
+    font-weight:300;
+}
+
+
+@font-face {
+    font-family:  Mpisto Serif;
+    src:url('MpistoSerif-Regular.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family:  Mpisto Serif;
+    src:url('MpistoSerif-Bold.ttf') format('truetype');
+	font-weight:700;
+}
+
+@font-face {
+    font-family:  Mpisto Serif;
+    src:url('MpistoSerif-Extrabold.ttf') format('truetype');
+	font-weight:800;
+}
+
 
 @font-face {
     font-family: LCD;
@@ -397,11 +424,11 @@ touch-action:manipulation;
 	overflow-y:auto;
 	height:100vh;
 	font-weight:500;
-text-shadow:0 0 1px rgba(255,0,0,0.2), 0 0 1px rgba(0,255,0,0.2), 0 0 1px rgba(0,0,255,0.2), 0 0 1px rgba(255,255,0,0.2), 0 0 1px rgba(255,0,255,0.2), 0 0 1px rgba(0,255,255,0.2), 0 0 1px rgba(0,0,0,0.2), 0 0 1px rgba(255,255,255,0.2); /* Partially Embolding */
+text-shadow:0 0 1px rgba(255,0,0,0.1), 0 0 1px rgba(0,255,0,0.1), 0 0 1px rgba(0,0,255,0.1), 0 0 1px rgba(255,255,0,0.1), 0 0 1px rgba(255,0,255,0.1), 0 0 1px rgba(0,255,255,0.1), 0 0 1px rgba(0,0,0,0.1), 0 0 1px rgba(255,255,255,0.1); /* Partially Embolding */
 }
 
 .serif body { /* Noto Sans */
-font-family:Noto Serif, "Times New Roman", "Song Myung",  "Noto Serif JP", "David Libre", "Pridi", "Amiri", "Catamaran", "Ramaraja", serif; /* Uses a font stack suitable for High Contrast Mode */
+font-family:Mpisto Serif, "Times New Roman", "Song Myung",  "Noto Serif JP", "David Libre", "Pridi", "Amiri", "Catamaran", "Ramaraja", serif; /* Uses a font stack suitable for High Contrast Mode */
 }
 
 
@@ -440,7 +467,7 @@ font-family:Fira Sans, "Verdana", sans-serif!important; /* Use the preloaded fir
 }
 
 .serif.main .mob2-font {
-font-family:Arvo, "Liberation Serif", serif!important; /* Use the preloaded fira sans font instead of the Source Sans Pro font */
+font-family:Cutive, "Liberation Serif", serif!important; /* Use the preloaded fira sans font instead of the Source Sans Pro font */
 }
 
 /* Roboto */
@@ -486,21 +513,11 @@ font-family:Source Serif Pro, "Liberation Serif", serif!important; /* Uses a fon
 /* A Secure */
 
 .main .mob7-font {
-font-family:Varela, "Verdana", sans-serif!important; /* Uses a font stack suitable for High Contrast Mode */
-}
-
-.serif.main .mob7-font {
-font-family:Lora, "Liberation Serif", serif!important; /* Uses a font stack suitable for High Contrast Mode */
-}
-
-/* A Secure */
-
-.main .mob7-font {
 font-family:Varela, "Arial", sans-serif!important; /* Uses a font stack suitable for High Contrast Mode */
 }
 
 .serif.main .mob7-font {
-font-family:Lora, "Times New Roman", serif!important; /* Uses a font stack suitable for High Contrast Mode */
+font-family:Gentinum Basic, "Times New Roman", serif!important; /* Uses a font stack suitable for High Contrast Mode */
 }
 
 /* Roboto Classic */
@@ -2408,7 +2425,7 @@ border-left-color:rgba(var(--community-header-text),0.8);
 		color:rgb(var(--community-header-text));
 		background-color:blue;
 		background-color:rgb(var(--community-header-bg));
-		z-index:10;
+		z-index:20;
 		position:relative;
 		background-image:url("Graphic.png");
 		background-size:contain;
@@ -2426,8 +2443,8 @@ border-left-color:rgba(var(--community-header-text),0.8);
     top:0;
     left:0;
     border-radius:inherit;
-	background-image:linear-gradient(to left,rgba(0,0,255, 0.1) 170px,rgba(255,255,255,0.4) 365px),linear-gradient(to left,rgba(0,0,255, 0) 170px,rgb(0,0,255) 365px);
-	background-image:linear-gradient(to left,rgba(var(--community-header-text), 0.1) 170px,rgba(var(--community-header-text),0.4) 365px),linear-gradient(to left,rgba(255,255,255, 0) 170px,rgb(var(--community-header-bg)) 365px);
+	background-image:linear-gradient(to left,rgba(0,0,255, 0.005) 170px,rgba(255,255,255,0.2) 365px),linear-gradient(to left,rgba(0,0,255, 0) 170px,rgb(0,0,255) 365px);
+	background-image:linear-gradient(to left,rgba(var(--community-header-text), 0.1) 170px,rgba(var(--community-header-text),0.2) 365px),linear-gradient(to left,rgba(255,255,255, 0) 170px,rgb(var(--community-header-bg)) 365px);
 }
 
 	.mpisto-header-container::after {
@@ -2661,11 +2678,11 @@ backdrop-filter:blur(5px) contrast(110%) saturate(110%);
   padding:18px;
   width:100%;
   min-height:18px;
-  font-family:Varela, "Arial", sans-serif!important; /* Uses a font stack suitable for High Contrast Mode */
+  font-family:Varela, "Arial", sans-serif; /* Uses a font stack suitable for High Contrast Mode */
 }
 
 .serif .mpisto-spotlight-footer {
-  font-family:Lora, "Times New Roman", sans-serif!important; /* Uses a font stack suitable for High Contrast Mode */
+  font-family:Gentinum Basic, "Times New Roman", sans-serif; /* Uses a font stack suitable for High Contrast Mode */
 }
 
 .mpisto-spotlight-footer::after {
@@ -3039,6 +3056,8 @@ text-align:right;
 	display:inline-block;
 	-webkit-text-stroke-width:1.3px;
 	vertical-align:middle;
+	font-family:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR", cursive;
+	font-family:var(--secondary-font), cursive;
 }
 
 .mpisto-userpages-header .mpisto-profile-masthead hgroup span {
@@ -3051,6 +3070,8 @@ text-align:right;
 	display:inline-block;
 	-webkit-text-stroke-width:0.45px;
 	vertical-align:middle;
+	font-family:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR", cursive;
+	font-family:var(--secondary-font), cursive;
 }
 
 
@@ -3103,6 +3124,8 @@ text-align:right;
 	display:inline-block;
 	-webkit-text-stroke-width:0.6px;
 	vertical-align:middle;
+	font-family:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR", cursive;
+	font-family:var(--secondary-font), cursive;
 }
 
 .mpisto-userpages-header .mpisto-profile-masthead hgroup a {
@@ -3132,7 +3155,7 @@ text-align:right;
 .mpisto-userpages-header .mpisto-profile-masthead section {
 	padding:0 9px 9px;
 	font-size:13px;
-	line-height:1.15;
+	line-height:1.2;
 }
 
 .mpisto-userpages-header .mpisto-profile-masthead header {
@@ -3235,7 +3258,7 @@ min-width:0;
 
 .mpisto-content .mpisto-title {
 align-items: flex-end;
-font-size:43px;
+font-size:40px;
 font-weight:600;
 max-width:100%;
 word-wrap: break-word;
@@ -3293,7 +3316,7 @@ background-blend-mode:overlay;
 
 
 .mpisto-content .mpisto-sub {
-font-size:13px;
+font-size:12px;
 line-height:1.05;
 font-weight:200;
 max-width:100%;
@@ -3333,6 +3356,7 @@ padding:0 10px;
 overflow:hidden;
 position:relative;
 word-wrap: break-word;
+font-size:14px;
 }
 
 .mpisto-article-wrapper .mpisto-article {
