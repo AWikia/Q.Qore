@@ -49,6 +49,8 @@ Raleway = Rest
 /* Mono Fonts */
 @import url('https://fonts.googleapis.com/css?family=Cutive+Mono|Fira+Mono:400,500,700&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext');
 
+/* Arimo */
+@import url('https://fonts.googleapis.com/css?family=Arimo:400,700&subset=cyrillic,cyrillic-ext,greek,greek-ext,hebrew,latin-ext,vietnamese');
 
 /* Mpisto font */
 @font-face {
@@ -517,7 +519,7 @@ font-family:Varela, "Arial", sans-serif!important; /* Uses a font stack suitable
 }
 
 .serif.main .mob7-font {
-font-family:Gentinum Basic, "Times New Roman", serif!important; /* Uses a font stack suitable for High Contrast Mode */
+font-family:Gentium Basic, "Times New Roman", serif!important; /* Uses a font stack suitable for High Contrast Mode */
 }
 
 /* Roboto Classic */
@@ -542,7 +544,7 @@ font-family:"PT Serif", "Liberation Serif", serif!important;
 
 
 body {
---secondary-font:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR";
+--secondary-font:"Arimo", "Liberation Sans", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR";
 --button-radius:4px;
 }
 
@@ -554,7 +556,7 @@ height:min-content;
 }
 
 .secondary {
-  font-family:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR", cursive;
+  font-family:"Arimo", "Liberation Sans", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR", cursive;
   font-family:var(--secondary-font), cursive;
 }
 
@@ -658,7 +660,7 @@ h3.mobile-data a {
   transition-delay:0.05s;
   color:#18bbc5;
   color:rgba(var(--link-color), 1);
-  font-family:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR", cursive;
+  font-family:"Arimo", "Liberation Sans", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR", cursive;
   font-family:var(--secondary-font), cursive;
 }
 
@@ -878,6 +880,11 @@ font-family:"Source Serif Pro", "Song Myung",  "Noto Serif JP", "David Libre", "
 		font-size:18px;
 		white-space:nowrap;
 	}
+	
+	.mpisto-global-navigation .link * {
+		vertical-align:middle;
+	}
+	
 	.mpisto-global-navigation .link big {
 		font-size:120%;
 		font-weight:lighter;
@@ -895,17 +902,38 @@ font-family:"Source Serif Pro", "Song Myung",  "Noto Serif JP", "David Libre", "
 		display:inline-block;
 		margin-left:1px;
 	}
+	
+	.mpisto-global-navigation .wds-dropdown__toggle-chevron:not(:only-child) {
+		margin:0;
+	}
 
 	@media only screen and (max-width:754px) {
-		.mpisto-global-navigation .link small.name {
+		.mpisto-global-navigation .link .name {
 			display:none!important;
 		}
+
+	.mpisto-global-navigation .wds-dropdown__toggle-chevron {
+		display:none;
+	}
 	}
 
 	.mpisto-global-navigation .link .wds-icon {
 		width:26px;
 		height:26px;
+		
 	}
+
+	.mpisto-global-navigation .link .wds-icon.wds-icon-small {
+		width:20px;
+		height:20px;
+	}
+
+
+	.mpisto-global-navigation .link .wds-icon.wds-icon-tiny {
+		width:14px;
+		height:14px;
+	}
+
 
 	.mpisto-global-navigation .link .mpisto-input {
 		width:90%!important;
@@ -937,10 +965,6 @@ font-family:"Source Serif Pro", "Song Myung",  "Noto Serif JP", "David Libre", "
 		vertical-align:top;
 	}
 	.mpisto-global-navigation .wds-dropdown .link {
-		vertical-align:middle;
-	}
-	.mpisto-global-navigation .wds-dropdown .link * {
-		display:table-cell;
 		vertical-align:middle;
 	}
 
@@ -1386,21 +1410,23 @@ cursor:url("Windows/default.cur"), default;
 
 }
 
-.user .link .wds-dropdown__toggle-chevron {
+/*.user .link .wds-dropdown__toggle-chevron {
 margin-left:5px;
 margin-right:-5px;
 }
+*/
 
-
-.link .wds-dropdown__toggle-chevron {
+/*.link .wds-dropdown__toggle-chevron {
 margin-left:5px;
 margin-right:-1px;
 }
+*/
 
-.link .wds-icon + span {
+
+/*.link .wds-icon + span {
 margin-left:5px;
 }
-
+*/
 .wds-button.icon-createwiki, .wds-button.createwiki {
   margin-top:2.5px;
 }
@@ -1502,7 +1528,7 @@ display:table;
   color:var(--content-color);
   text-decoration:none;
   margin:0;
-  font-family:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR", cursive;
+  font-family:"Arimo", "Liberation Sans", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR", cursive;
   font-family:var(--secondary-font), cursive;
 }
 
@@ -1627,7 +1653,7 @@ display:table;
   color:var(--content-color);
   text-decoration:none;
   margin:0;
-  font-family:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR", cursive;
+  font-family:"Arimo", "Liberation Sans", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR", cursive;
   font-family:var(--secondary-font), cursive;
 }
 
@@ -2515,7 +2541,7 @@ border-left-color:rgba(var(--community-header-text),0.8);
 		font-size:18px;
 		border:1px solid transparent;
 		box-sizing:border-box;
-		background-blend-mode:overlay;
+		background-blend-mode:soft-light;
 	}
 
 	.color-header .link {
@@ -2531,6 +2557,11 @@ border-left-color:rgba(var(--community-header-text),0.8);
 	.color-nav .wds-dropdown {
 		height:30px;
 	}
+	
+	.color-nav .wds-dropdown__toggle-chevron:not(:only-child) {
+		margin:0;
+	}
+
 
 	.color-nav .link {
 		width:100%;
@@ -2557,7 +2588,7 @@ border-left-color:rgba(var(--community-header-text),0.8);
 		font-weight:800;
 		height:60px;
 		padding:0 16px;
-		font-family:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR", cursive;
+		font-family:"Arimo", "Liberation Sans", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR", cursive;
 		font-family:var(--secondary-font), cursive;
 		white-space:pre-wrap;
 		overflow:hidden;
@@ -2594,6 +2625,10 @@ border-left-color:rgba(var(--community-header-text),0.8);
 	.color-header .link {
 		padding:0 9px;
 		height:55px;
+	}
+
+	.mpisto-header-container .link {
+		font-size:16px;
 	}
 
 	.color-header .counters {
@@ -2667,11 +2702,15 @@ backdrop-filter:blur(5px) contrast(110%) saturate(110%);
 
 
 .mpisto-spotlight-footer {
-  border:1px solid #ccc;
+/*  border:1px solid #ccc;
   border:1px solid var(--content-border);
+*/
   border-top:0;
-  background-color:#ffffff;
-  background-color:var(--dropdown-bg);
+  background-color:#000;
+  background-color:var(--content-color);
+  color:#fff;
+  color:var(--content-bg);
+  text-shadow:none; /* Drop Embolding */
   position:relative;
   z-index:6;
   margin:-1px 0 0;
@@ -2682,10 +2721,10 @@ backdrop-filter:blur(5px) contrast(110%) saturate(110%);
 }
 
 .serif .mpisto-spotlight-footer {
-  font-family:Gentinum Basic, "Times New Roman", sans-serif; /* Uses a font stack suitable for High Contrast Mode */
+  font-family:Gentium Basic, "Times New Roman", sans-serif; /* Uses a font stack suitable for High Contrast Mode */
 }
 
-.mpisto-spotlight-footer::after {
+/*.mpisto-spotlight-footer::after {
 	top:0;
 	left:0;
 	width:100%;
@@ -2698,7 +2737,7 @@ backdrop-filter:blur(5px) contrast(110%) saturate(110%);
 	opacity:0.4;
 	z-index:-1;
 }
-
+*/
 
 .mpisto-spotlight-footer h1 {
 	display:flex;
@@ -2710,19 +2749,31 @@ backdrop-filter:blur(5px) contrast(110%) saturate(110%);
 
 .mpisto-spotlight-footer h1 > span {
 	flex:1;
-	-webkit-text-stroke:0.5px #000;
-	-webkit-text-stroke:0.5px var(--content-color);
-	-webkit-text-fill-color:#fff;
-	-webkit-text-fill-color:var(--content-bg);
+	-webkit-text-stroke:1.25px #fff;
+	-webkit-text-stroke:1.25px var(--content-bg);
+	-webkit-text-fill-color:#000;
+	-webkit-text-fill-color:var(--content-color);
 
+  font-family:"Arimo", "Liberation Sans", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR", cursive;
+  font-family:var(--secondary-font), cursive;
 }
 
-.mpisto-spotlight-footer h1 .wds-button {
+.mpisto-spotlight-footer h1 .wds-button.wds-is-secondary {
 	padding-left:14px;
 	padding-right:14px;
 	border-radius:20px;
 	font-size:11px;
 	line-height:14px;
+	color:#18bbc5;
+	color:rgb(var(--link-color));
+	border-color:currentColor;
+	background-color:transparent;
+}
+
+.mpisto-spotlight-footer h1 .wds-button.wds-is-secondary:hover {
+	color:#fff;
+	color:var(--content-bg);
+	border-color:currentColor;
 }
 
 .mpisto-spotlight-footer .wrapper {
@@ -2747,21 +2798,43 @@ border:1px solid var(--content-border);
 width:100%;
 min-height:30px;
 display:block;
+background-color:#92DFE4;
+background-color:var(--emphasis-bg);
+box-shadow: 0 0 4px rgba(255,255,255,0.5), 0 0 2px rgba(5,5,5,0.5);
+z-index:1;
+position:relative;
+}
+
+.mpisto-spotlight-footer nav item:not(.plum):after {
+position:absolute;
+top:0;
+left:0;
+z-index:-1;
 background-color:#fff;
 background-color:var(--content-bg);
-box-shadow: 0 0 4px rgba(255,255,255,0.5), 0 0 2px rgba(5,5,5,0.5)
+width:100%;
+height:100%;
+opacity:0.25;
+content:"";
+border-radius:inherit;
+/*-webkit-backdrop-filter:blur(5px) contrast(110%) saturate(110%);
+backdrop-filter:blur(5px) contrast(110%) saturate(110%);
+*/border-radius:inherit;
+filter:invert(1);
 }
+
 
 .mpisto-spotlight-footer nav item.plum {
 	color:#fff;
 	color:var(--content-bg);
-	-webkit-text-stroke:0.55px #fff;
+/*	-webkit-text-stroke:0.55px #fff;
 	-webkit-text-stroke:0.55px var(--content-bg);
 	-webkit-text-fill-color:#000;
 	-webkit-text-fill-color:var(--content-color);
-	background-color:#000;
-	background-color:var(--content-color);
-	height:225px;
+*/
+	background-color:#ffffff;
+	background-color:var(--dropdown-bg);
+	height:230px;
 	background-position:center;
 	background-size:cover;
 	background-repeat:no-repeat;
@@ -2836,12 +2909,20 @@ left:0;
 	flex:1;
 }
 
-.mpisto-spotlight-footer nav item .general .wds-is-text {
+.mpisto-spotlight-footer nav item .general .wds-button.wds-is-text {
 	font-weight:500;
 	font-size:11px;
 	padding:6px 5px;
 	line-height:13px;
+	color:#18bbc5;
+	color:rgb(var(--link-color));
 }
+
+.mpisto-spotlight-footer nav item .general .wds-button.wds-is-text:hover {
+	color:#fff;
+	color:var(--content-bg);
+}
+
 .mpisto-spotlight-footer nav item ul {
 	list-style-type:none!important; /* Will be used by before pseudo element */
 	line-height:1.5;
@@ -2853,7 +2934,7 @@ left:0;
 .mpisto-spotlight-footer nav item .scroll {
 	height:400px;
 	overflow-y:auto;
-`   scrollbar-width:thin;
+    scrollbar-width:thin;
     scrollbar-color:#18bbc5 transparent;
     scrollbar-color:rgb(var(--link-color)) transparent;
 }
@@ -2863,6 +2944,7 @@ left:0;
 	border-bottom:1px solid var(--content-border);
 	min-height:20px;
 	margin:8px 0;
+`   scrollbar-width:thin;
 }
 
 .mpisto-spotlight-footer nav item .scroll li:last-child {
@@ -2885,7 +2967,7 @@ left:0;
 .mpisto-spotlight-footer nav item .scroll li .user span {
 	font-weight:900;
 	font-size:14px;
-	max-width:55px;
+	max-width:66px;
 	overflow:hidden;
 	white-space:nowrap;
 	text-overflow:ellipsis;
@@ -2926,8 +3008,8 @@ left:0;
 
 .mpisto-spotlight-footer nav item ul a li {
 	text-decoration:none;
-	color:#000;
-	color:var(--content-color);
+	color:#fff;
+	color:var(--content-bg);
 	border-bottom:1px solid #ccc;
 	border-bottom:1px solid var(--content-border);
 	padding:8px 0;
@@ -2941,8 +3023,8 @@ left:0;
 	font-family:Merriweather Sans, sans-serif;
 	color:#fff;
 	color:var(--content-bg);
-	background-color:#ccc;
-	background-color:var(--content-border);
+	background-color:#000;
+	background-color:var(--content-color);
 	border-radius:50%;
 	display:inline-flex;
 	font-size:26px;
@@ -2954,8 +3036,8 @@ left:0;
 	font-weight:bold;
 	vertical-align:middle;
 	margin:0 5px 0 0;
-	-webkit-text-stroke:1px #000;
-	-webkit-text-stroke-color:var(--content-color);
+	-webkit-text-stroke:1px #92DFE4;
+	-webkit-text-stroke-color:var(--emphasis-bg);
 }
 
 .serif .mpisto-spotlight-footer nav item ul num {
@@ -2966,10 +3048,26 @@ left:0;
 	text-decoration:none;
 }
 
-.mpisto-spotlight-footer nav item div .wds-is-full-width {
+.mpisto-spotlight-footer nav item div .wds-button.wds-is-full-width {
 	flex:1;
 	margin:0 8px 8px;
+	color:#92DFE4;
+	color:var(--emphasis-bg);
+	border-color:#18bbc5;
+	border-color:rgb(var(--link-color));
+	background-color:#18bbc5;
+	background-color:rgb(var(--link-color));
 }
+
+.mpisto-spotlight-footer nav item div .wds-button.wds-is-full-width:hover, .mpisto-spotlight-footer nav item div .wds-button.wds-is-full-width:focus {
+/*	color:#92DFE4;
+	color:var(--emphasis-bg);
+*/	border-color:#fff;
+	border-color:var(--content-bg);
+	background-color:#fff;
+	background-color:var(--content-bg);
+}
+
 
 .mpisto-userpages-header {
 	padding:0 0 10px;
@@ -3034,7 +3132,7 @@ text-align:right;
 	border-top-right-radius:inherit;
 	background-color:#18bbc5;
 	background-color:var(--button-color);
-	background-image:linear-gradient(to bottom, rgba(248,248,248,0.4) 35%, rgba(23,23,23,0.2) 70%);
+	background-image:linear-gradient(to bottom, rgba(248,248,248,0.6) 35%, rgba(23,23,23,0.3) 70%);
 	color:black;
 	color:var(--button-color-text);
 	padding:9px;
@@ -3043,7 +3141,7 @@ text-align:right;
 	-webkit-text-fill-color:var(--button-color);
 	-webkit-text-stroke-color:#000;
 	-webkit-text-stroke-color:var(--button-color-text);
-	background-blend-mode:overlay;
+	background-blend-mode:soft-light;
 }
 
 
@@ -3056,7 +3154,7 @@ text-align:right;
 	display:inline-block;
 	-webkit-text-stroke-width:1.3px;
 	vertical-align:middle;
-	font-family:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR", cursive;
+	font-family:"Arimo", "Liberation Sans", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR", cursive;
 	font-family:var(--secondary-font), cursive;
 }
 
@@ -3070,7 +3168,7 @@ text-align:right;
 	display:inline-block;
 	-webkit-text-stroke-width:0.45px;
 	vertical-align:middle;
-	font-family:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR", cursive;
+	font-family:"Arimo", "Liberation Sans", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR", cursive;
 	font-family:var(--secondary-font), cursive;
 }
 
@@ -3124,7 +3222,7 @@ text-align:right;
 	display:inline-block;
 	-webkit-text-stroke-width:0.6px;
 	vertical-align:middle;
-	font-family:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR", cursive;
+	font-family:"Arimo", "Liberation Sans", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR", cursive;
 	font-family:var(--secondary-font), cursive;
 }
 
@@ -3262,7 +3360,7 @@ font-size:40px;
 font-weight:600;
 max-width:100%;
 word-wrap: break-word;
-font-family:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR", cursive;
+font-family:"Arimo", "Liberation Sans", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR", cursive;
 font-family:var(--secondary-font), cursive;
 flex:1;
 margin:0;
@@ -3280,10 +3378,10 @@ padding:8px 19px;
 align-items:center;
 	background-color:#18bbc5;
 	background-color:var(--button-color);
-	background-image:linear-gradient(to bottom, rgba(248,248,248,0.4) 35%, rgba(23,23,23,0.2) 70%);
+	background-image:linear-gradient(to bottom, rgba(248,248,248,0.6) 35%, rgba(23,23,23,0.3) 70%);
 	color:black;
 	color:var(--button-color-text);
-background-blend-mode:overlay;
+background-blend-mode:soft-light;
 }
 
 .mpisto-page-header-title .wds-button:not(.wds-is-secondary):not(.wds-is-text) {
@@ -3420,7 +3518,7 @@ font-weight:bold;
 }
 
 .stats-table th {
-	font-family:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR", cursive;
+	font-family:"Arimo", "Liberation Sans", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR", cursive;
 	font-family:var(--secondary-font), cursive;
 	font-weight:900;
 	text-align:center;
@@ -3814,7 +3912,7 @@ footer.mpisto-footer .mpisto-wrapper  h2 {
 	font-size:24px;
 	font-weight:bolder;
 	text-align:left;
-  font-family:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR", cursive;
+  font-family:"Arimo", "Liberation Sans", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR", cursive;
   font-family:var(--secondary-font), cursive;
 }
 
@@ -3872,7 +3970,7 @@ border:1px solid var(--content-border);
 footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container th h1 {
 font-weight:900;
 
-  font-family:"Raleway", "Jura", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR", cursive;
+  font-family:"Arimo", "Liberation Sans", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR", cursive;
   font-family:var(--secondary-font), cursive;
 font-weight:700;
 font-size:33px;
@@ -5079,8 +5177,8 @@ list-style:none!important;
   border-bottom:1px solid var(--content-border);
   background-color:#18bbc5; /*92DFE4*/
   background-color:var(--button-color);
-  background-image:linear-gradient(to bottom, rgba(248,248,248,0.3) 35%, rgba(23,23,23,0.15) 70%);
-  background-blend-mode:overlay;
+  background-image:linear-gradient(to bottom, rgba(248,248,248,0.4) 35%, rgba(23,23,23,0.2) 70%);
+  background-blend-mode:soft-light;
   color:#000;
   color:var(--button-color-text);
 }
@@ -5524,8 +5622,8 @@ height:calc(100vh - 142px);
   z-index:1;
   height:63px;
   background-clip:padding-box;
-  background-image:linear-gradient(to bottom, rgba(248,248,248,0.3) 35%, rgba(23,23,23,0.15) 70%);
-  background-blend-mode:overlay;
+  background-image:linear-gradient(to bottom, rgba(248,248,248,0.4) 35%, rgba(23,23,23,0.2) 70%);
+  background-blend-mode:soft-light;
 }
 
 
@@ -6112,12 +6210,12 @@ border:1px solid currentColor;
 
 	box-shadow:0 2px 2px #ccc, 0 0 6px -1px #000, 0 0 10px -0.5px #fff;
 	box-shadow:0 2px 2px var(--content-border), 0 0 6px -1px #000, 0 0 10px -0.5px #fff;
-	border:1px solid #ccc;
-	border:1px solid var(--content-border);
 	background-color:#fff;
 	background-color:var(--content-bg);
 
 */
+	border:1px solid #03a1ab;
+	border:1px solid var(--button-color-dark);
 	min-height:200px;
 	margin:0 18px;
 	width:auto;

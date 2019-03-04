@@ -896,8 +896,8 @@ height:30px;
 @media only screen and (min-width:960px) {
 
 .mpisto-header-container {
-background-image:linear-gradient(to bottom, rgba(248,248,248,0.4) 35%, rgba(23,23,23,0.2) 70%);
-background-blend-mode:overlay;
+background-image:linear-gradient(to bottom, rgba(248,248,248,0.6) 35%, rgba(23,23,23,0.3) 70%);
+background-blend-mode:soft-light;
 }
 
 /*.page-wrapper .store-content .store-footer {
