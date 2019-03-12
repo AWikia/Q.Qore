@@ -869,10 +869,9 @@ font-family:"Source Serif Pro", "Song Myung",  "Noto Serif JP", "David Libre", "
 	}
 	.mpisto-global-navigation-wrapper {
 		margin:0 auto;
-		padding:0 18px;
 	}
 	.mpisto-global-navigation .link {
-		transition:all 400ms ease;
+		transition:background-color 400ms ease, color 400ms ease, border-color 400ms ease, text-shadow 400ms ease;
 		padding: 0 10px;
 		height:49px;
 		color:inherit;
@@ -880,6 +879,23 @@ font-family:"Source Serif Pro", "Song Myung",  "Noto Serif JP", "David Libre", "
 		font-size:18px;
 		white-space:nowrap;
 	}
+	
+	.mpisto-global-navigation .link span, .mpisto-global-navigation .link .wds-icon {
+		height:inherit!important;
+}
+	
+
+	.mpisto-global-navigation .search-link {
+		padding: 0 10px;
+		height:49px;
+		color:inherit;
+		cursor:inherit;
+		text-decoration:none!important;
+		font-size:18px;
+		white-space:nowrap;
+		width:100%;
+	}
+
 	
 	.mpisto-global-navigation .link * {
 		vertical-align:middle;
@@ -907,15 +923,6 @@ font-family:"Source Serif Pro", "Song Myung",  "Noto Serif JP", "David Libre", "
 		margin:0;
 	}
 
-	@media only screen and (max-width:754px) {
-		.mpisto-global-navigation .link .name {
-			display:none!important;
-		}
-
-	.mpisto-global-navigation .wds-dropdown__toggle-chevron {
-		display:none;
-	}
-	}
 
 	.mpisto-global-navigation .link .wds-icon {
 		width:26px;
@@ -935,27 +942,27 @@ font-family:"Source Serif Pro", "Song Myung",  "Noto Serif JP", "David Libre", "
 	}
 
 
-	.mpisto-global-navigation .link .mpisto-input {
+	.mpisto-global-navigation .search-link .mpisto-input {
 		width:90%!important;
 		color:inherit;
 	}
-.mpisto-global-navigation .link input:-ms-input-placeholder { /* Internet Explorer */
+.mpisto-global-navigation .search-link input:-ms-input-placeholder { /* Internet Explorer */
   color:inherit;
   opacity:1;
 }
 
-.mpisto-global-navigation .link input:placeholder-shown {
+.mpisto-global-navigation .search-link input:placeholder-shown {
   color:inherit;
   opacity:1;
 }
 
 
-.mpisto-global-navigation .link input::-ms-input-placeholder { /* Microsoft Edge */
+.mpisto-global-navigation .search-link input::-ms-input-placeholder { /* Microsoft Edge */
   color:inherit;
 	opacity:1;
 }
 
-.mpisto-global-navigation .link input::placeholder { /* Standard */
+.mpisto-global-navigation .search-link input::placeholder { /* Standard */
   color:inherit;
   opacity:1;
 }
@@ -986,67 +993,28 @@ font-family:"Source Serif Pro", "Song Myung",  "Noto Serif JP", "David Libre", "
 		color:rgba(248,248,248,0.8);
 		color:rgba(var(--community-header-text), 0.8);
 */
-	background-color:rgba(24,187,197, 0.2);
-	background-color:rgba(var(--link-color), 0.2);
-	color:#18bbc5;
-	color:rgb(var(--link-color));
+	background-color:rgba(24,187,197, 0.35);
+	background-color:rgba(var(--link-color), 0.35);
+	color:#ccc;
+	color:var(--content-border);
 	}
 	.mpisto-global-navigation .link.company {
 		width:100%;
 	}
+	
 
-	#GlobalNavigation:not(.active-search) .search-off {
-		display:none!important;
-	}
-	#GlobalNavigation.active-search .search-on {
-		display:none!important;
-	}
-	#GlobalNavigation.active-search .link.company {
-		background-color:transparent!important;
-		cursor:inherit!important;
-		color:inherit!important;
-	}
 
-header.mpisto-navbar *, header.mpisto-global-navigation * {
+header.mpisto-global-navigation * {
 box-sizing:content-box;
 }
 
 
 
-
-header.mpisto-navbar {
-/*font-family:Arial Nova, sans-serif;
-background-color:#fff;
-background-color:var(--dropdown-bg);
-border-bottom:1px solid;
-border-top:6px solid #ccc;
-border-top:6px solid var(--content-border);*/
-font-size:17px;
-width:100%;
-height:49px;
-clear:both;
-display:flex;
-position:relative;
-}
-
-header.mpisto-navbar .mpisto-navbar-wrapper {
-margin:0 18px;
-width:auto;
-display:flex;
-padding:5px 0;
-}
-
-header.mpisto-navbar .wds-dropdown__content, header.mpisto-navbar .wds-dropdown-level-2__content {
-box-shadow:0 4px 8px 0 rgba(0,0,0,.4), 0 4px 8px 0 rgba(255,255,255,0.4);
-border-color:transparent;
-}
-
-
-header.mpisto-navbar .wds-dropdown::before, header.mpisto-global-navigation .wds-dropdown::before {
+header.mpisto-global-navigation .wds-dropdown::before {
 	border-bottom-color:transparent;
 }
 
-header.mpisto-navbar .wds-list.wds-is-linked > li > .wds-button.wds-is-secondary,header.mpisto-global-navigation .wds-list.wds-is-linked > li > .wds-button.wds-is-secondary {
+header.mpisto-global-navigation .wds-list.wds-is-linked > li > .wds-button.wds-is-secondary {
 color:#18bbc5;
 color:rgb(var(--link-color));
 border-color:#18bbc5;
@@ -1057,7 +1025,7 @@ display:flex;
 border-radius:100px;
 }
 
-header.mpisto-navbar .wds-list.wds-is-linked > li > .wds-button.wds-is-secondary:hover, header.mpisto-navbar .wds-list.wds-is-linked > li > .wds-button.wds-is-secondary:active, header.mpisto-navbar .wds-list.wds-is-linked > li:hover > .wds-button.wds-is-secondary,
+
 header.mpisto-global-navigation .wds-list.wds-is-linked > li > .wds-button.wds-is-secondary:hover, header.mpisto-global-navigation .wds-list.wds-is-linked > li > .wds-button.wds-is-secondary:active, header.mpisto-global-navigation .wds-list.wds-is-linked > li:hover > .wds-button.wds-is-secondary {
 color:rgba(24,187,197,0.9);
 color:rgba(var(--link-color), 0.9);
@@ -1067,19 +1035,66 @@ background-color:rgba(24,187,197,0.1);
 background-color:rgba(var(--link-color), 0.1);
 }
 
-header.mpisto-navbar .wiki .wds-button.wds-is-secondary {
-  color:#ccc;
-  color:var(--content-border);
-  border-color:#ccc;
-  border-color:var(--content-border);
+
+/** Responsive Global Nav **/
+	@media only screen and (max-width:754px) {
+		.mpisto-global-navigation .link .name {
+			display:none!important;
+		}
+
+	.mpisto-global-navigation .wds-dropdown__toggle-chevron {
+		display:none;
+	}
+	}
+
+	@media only screen and (min-width:960px) {
+		.mpisto-global-navigation .small-only {
+			display:none!important;
+		}
+	}
+
+	@media only screen and (max-width:959px) {
+		.mpisto-global-navigation .med-up {
+			display:none!important;
+		}
+	}
+
+	@media only screen and (min-width:1100px) {
+		.mpisto-global-navigation .med-down {
+			display:none!important;
+		}
+		
+	}
+
+
+	@media only screen and (max-width:1099px) {
+		.mpisto-global-navigation .large-up {
+			display:none!important;
+		}
+		
+	}
+	
+	@media only screen and (max-width:1399px) {
+		#GlobalNavigation:not(.active-search) .search-off {
+			display:none!important;
+		}
+		#GlobalNavigation.active-search .search-on {
+			display:none!important;
+		}
 }
 
-header.mpisto-navbar .wiki .wds-button.wds-is-secondary:hover {
-  color:#ffffff;
-  color:var(--dropdown-bg);
-  border-color:#ffffff;
-  border-color:var(--dropdown-bg);
-}
+
+	@media only screen and (min-width:1400px) {
+		.mpisto-global-navigation .large-down {
+			display:none!important;
+		}
+
+	.mpisto-global-navigation .search-link, .mpisto-global-navigation .link.company {
+		width:50%;
+	}
+		
+	}
+
 
 
 body:not(.mpisto-servers) .servers-only {
@@ -1168,239 +1183,6 @@ background-color:rgba(var(--link-color), 0.65);
 }
 
 
-header.mpisto-navbar .link {
-/*color:var(--content-color);
-padding:15px 15px 14px;
-margin-top:-11px;
-border-top:6px solid;
-transition:all 300ms;
-transition:color 275ms cubic-bezier(0.3, 0.55, 0.4, 1.7) 8ms, background-color 275ms cubic-bezier(0.3, 0.55, 0.4, 1.7) 8ms, border 275ms cubic-bezier(0.3, 0.55, 0.4, 1.7) 8ms, visibility 275ms cubic-bezier(0.3, 0.55, 0.4, 1.7) 8ms, text-shadow 75ms linear 8ms, font-size 75ms linear 8ms, padding 75ms linear 8ms, width 75s linear 8ms;
-*/
-display:inline-flex;
-align-items:center;
-justify-content:center;
-color:#ccc;
-color:var(--content-border);
-padding:15px 0px 14px;
-margin:-5px 9px 0;
-text-decoration:none;
-height:20px;
-white-space:nowrap;
-transition:all 150ms ease 12ms;
-font-weight:800;
-text-transform:uppercase;
-text-align:justify;
-vertical-align:middle;
-}
-
-
-/*header.mpisto-navbar .link .wds-icon {
-  width:21px;
-  height:21px;
-  min-width:21px;
-}
-
-
-
-header.mpisto-navbar .link [class*="avatar"] {
-  width:25px;
-  min-width:25px;
-  height:25px;
-}
-
-header.mpisto-navbar .link .wds-icon.wds-icon-small {
-  width:16px;
-  height:16px;
-  min-width:16px;
-}
-
-
-header.mpisto-navbar .link .wds-icon.wds-icon-tiny {
-  width:11.5px;
-  height:11.5px;
-  min-width:11.5px;
-}
-*/
-
-header.mpisto-navbar .link .wds-icon.wds-dropdown__toggle-chevron {
-color:#18bbc5;
-color:rgb(var(--link-color));
-}
-
-header.mpisto-navbar .link .wds-dropdown__content{
-top:calc(100% + 1px)
-}
-
-
-header.mpisto-navbar .link:hover, header.mpisto-navbar .wds-dropdown:hover .link {
-/*background-color:rgba(var(--link-color), 0.2);*/
-color:#ffffff;
-color:var(--dropdown-bg);
-}
-
-
-header.mpisto-navbar .search {
-display:flex;
-align-items:center;
-justify-content:center;
-flex:1;
-padding:5px 0 5px 5px;
-transition:flex 150ms;
-}
-
-/** Active Search **/
-header.mpisto-navbar .search .wds-button {
-  transition-property:color, background-color, border-color, padding, visibility, width, transform;
-  transition-duration:0.2s, 0.2s, 0.2s, 0.150s, 0.150s, 0.150s, 0.150s;
-  visibility:visible;
-  border-radius:3px;
-  overflow:hidden;
-  width:40px;
-  padding-left:0!important;
-  padding-right:0!important;
-  border-style:none!important;
-  transform:scale(1)!important;
-}
-
-
-
-header.mpisto-navbar .search .wds-button:not(.wds-is-secondary):not(.wds-is-text) {
-  color:#000;
-  color:var(--content-color);
-  border-color:#ccc;
-  border-color:var(--content-border);
-  background-color:#ccc;
-  background-color:var(--content-border);
-}
-
-header.mpisto-navbar .search .wds-button:not(.wds-is-secondary):not(.wds-is-text):hover, header.mpisto-navbar .search .wds-button:not(.wds-is-secondary):not(.wds-is-text):active, header.mpisto-navbar .search .wds-button:not(.wds-is-secondary):not(.wds-is-text):focus {
-  border-color:#ffffff;
-  border-color:var(--dropdown-bg);
-  background-color:#ffffff;
-  background-color:var(--dropdown-bg);
-}
-
-header.mpisto-navbar .search .wds-button.wds-is-text:not(.wds-is-secondary) {
-  color:#ccc;
-  color:var(--content-border);
-  border:0;
-}
-
-header.mpisto-navbar .search .wds-button.wds-is-text:hover, header.mpisto-navbar .search .wds-button.wds-is-text:active, header.mpisto-navbar .search .wds-button.wds-is-text:focus {
-  color:#ffffff;
-  color:var(--dropdown-bg);
-}
-
-
-/* All of them must be with !important to avoid custom CSS override these */
-header.mpisto-navbar:not(.active-search) .search .wds-button {
-  visibility:hidden!important;
-  width:0px!important;
-  transform:scale(0)!important;
-}
-
-header.mpisto-navbar .link.company {
-max-width:200px;
-overflow:hidden;
-}
-
-header.mpisto-navbar.active-search .link.company {
-  padding-left:0!important;
-  padding-right:0!important;
-  margin-left:0!important;
-  margin-right:0!important;
-  visibility:hidden!important;
-  max-width:0!important;
-  transform:scale(0)!important;
-}
-/* End */
-
-/** End Active Search **/
-
-header.mpisto-navbar .user {
-padding:0 5px;
-display:flex;
-align-items:center;
-justify-content:center;
-}
-
-header.mpisto-navbar .wiki {
-display:flex;
-align-items:flex-start;
-justify-content:center;
-padding-left:5px;
-}
-
-
-header.mpisto-navbar .search .search-input {
-/*
-border:1px solid #000;
-border:1px solid var(--content-color);
-color:#000;
-color:var(--content-color);
-*/
-flex:1;
-padding:8px;
-margin:0 5px 0 0;
-    color:transparent;
-    border:1px solid;
-    border-color:#fff;
-    border-color:var(--content-bg);
-background-color:transparent;
-transition:border-color 270ms;
-cursor:url("Windows/text.cur"), text;
-border-radius:3px;
-background-image:none;
--webkit-appearance:none;
-}
-
-header.mpisto-navbar.active-search .search .search-input {
-    color:#fff;
-    color:var(--content-bg);
-}
-
-header.mpisto-navbar .search .search-input:hover {
-border:1px solid #18bbc5;
-border:1px solid rgb(var(--link-color));
-}
-
-header.mpisto-navbar .search .search-input:-ms-input-placeholder { /* Internet Explorer */
-  color:transparent;
-}
-
-header.mpisto-navbar .search .search-input:placeholder-shown {
-  color:transparent;
-}
-
-
-header.mpisto-navbar .search .search-input::-ms-input-placeholder { /* Microsoft Edge */
-  color:transparent;
-}
-
-header.mpisto-navbar .search .search-input::placeholder { /* Standard */
-  color:transparent;
-}
-
-
-header.mpisto-navbar.active-search .search .search-input:-ms-input-placeholder { /* Internet Explorer */
-  color:#fff;
-}
-
-
-header.mpisto-navbar.active-search .search .search-input:placeholder-shown {
-  color:#fff;
-}
-
-header.mpisto-navbar.active-search .search .search-input::-ms-input-placeholder { /* Microsoft Edge */
-  color:#fff;
-  color:var(--content-bg);
-}
-
-header.mpisto-navbar.active-search .search .search-input::placeholder { /* Standard */
-  color:#fff;
-  color:var(--content-bg);
-}
-
 .wds-button.search-button {
 min-height:14px;
 }
@@ -1410,30 +1192,6 @@ cursor:url("Windows/default.cur"), default;
 
 }
 
-/*.user .link .wds-dropdown__toggle-chevron {
-margin-left:5px;
-margin-right:-5px;
-}
-*/
-
-/*.link .wds-dropdown__toggle-chevron {
-margin-left:5px;
-margin-right:-1px;
-}
-*/
-
-
-/*.link .wds-icon + span {
-margin-left:5px;
-}
-*/
-.wds-button.icon-createwiki, .wds-button.createwiki {
-  margin-top:2.5px;
-}
-
-header.mpisto-navbar .wds-list.wds-is-linked > li.create-wiki-small {
-display:none!important;
-}
 
 .notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:first-child, 
 .notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:first-child > a {
@@ -3364,6 +3122,12 @@ font-family:"Arimo", "Liberation Sans", "Mitr", "M PLUS Rounded 1c", "Namum Goth
 font-family:var(--secondary-font), cursive;
 flex:1;
 margin:0;
+-webkit-text-stroke:1.75px black;
+-webkit-text-stroke-color:var(--button-color-text);
+-webkit-text-fill-color:#18bbc5;
+-webkit-text-fill-color:var(--button-color);
+text-shadow:0 0 2px black;
+text-shadow:0 0 2px var(--button-color-text);
 }
 
 
@@ -5894,7 +5658,6 @@ vertical-align:middle;
 }
 
 
-
 /* Commented Styles = Old Design */
 input[type="checkbox"], input[type="radio"] {
 box-shadow:0 0 1px 1px #000;
@@ -6501,10 +6264,10 @@ body:not(.filterA):not(.filterB):not(.filterC):not(.filterD):not(.filterE):not(.
 /*		background-color:#03a1ab;
 		background-color:var(--button-color-dark);
 */
-	background-color:rgba(24,187,197, 0.2);
-	background-color:rgba(var(--link-color), 0.2);
-	color:#18bbc5;
-	color:rgb(var(--link-color));
+	background-color:rgba(24,187,197, 0.35);
+	background-color:rgba(var(--link-color), 0.35);
+	color:#ccc;
+	color:var(--content-border);
 
 }
 

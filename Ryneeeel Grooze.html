@@ -157,18 +157,25 @@ document.getElementById("Handler").className += " mpisto-servers"
 
 <div class="mpisto-gnav">
 	<header class="table mpisto-global-navigation" id="GlobalNavigation">
-		<div class="mpisto-global-navigation-wrapper">
-			<div class="tr">
+			<a class="cell link large-up">
+				<span>Company</span>
+			</a>
+			<a class="cell link large-up">
+				<span>Hiring</span>
+			</a>
 			<div class="wds-dropdown wds-has-dark-shadow">
 				<div class="link wds-dropdown__toggle cell">
-					<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon ">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-menu" /> 
+					<span class="med-up">Explore</span> 					<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny med-up wds-dropdown__toggle-chevron">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" /></svg> 
+
+					<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon small-only">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-menu" /></svg> 
 				</div>
 				  <div class="wds-dropdown__content wds-is-left-aligned">
 					<ul class="wds-list wds-is-linked">
 					  <li class="servers-only"><a href="http://github.com/Awikia/Mpisto">Github</a></li>
-					  <li><a>Company</a></li>
-					  <li><a>Hiring</a></li>
+					  <li class="med-down"><a>Company</a></li>
+					  <li class="med-down"><a>Hiring</a></li>
 					  <li><a>A Wiki - Techno Wiki</a></li>
 					  <li><a>A Wiki - Dev Wiki</a></li>
 					  <li><a>A Wiki Foundation</a></li>
@@ -176,9 +183,11 @@ document.getElementById("Handler").className += " mpisto-servers"
 					</ul>
 				  </div>
 			</div>
-				<a class="company cell link">
-					<span class="search-on">Mpisto War</span>
-					<input type="search" class="mpisto-input search-off" placeholder="Search on Mpisto..."></input>
+				<a class="company cell link search-on">
+					<span>Mpisto War</span>
+				</a>
+				<a class="cell search-link search-off">
+					<input type="search" class="mpisto-input" placeholder="Search on Mpisto..."></input>
 				</a>
 				  <div class="wds-dropdown wds-has-dark-shadow">
 					<div class="link cell wds-dropdown__toggle"><img class="mpisto-avatar" src="HM100.png"></img> <small class="name">HM100</small> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
@@ -247,7 +256,7 @@ document.getElementById("Handler").className += " mpisto-servers"
           </ul>
         </div>
       </div>            
-				<a class="link cell" onclick="GNavSearch()">
+				<a class="link cell large-down" onclick="GNavSearch()">
 					<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon  search-on">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass" /> 
 					</svg>
@@ -257,7 +266,7 @@ document.getElementById("Handler").className += " mpisto-servers"
 				</a>
 				<div class="wds-dropdown wds-has-dark-shadow create-wiki">
 					<div class="link wds-dropdown__toggle cell">
-						Wikis <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
+						<span>Wikis</span> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
                   </svg>
 					</div>
