@@ -19,7 +19,7 @@ These wrappers use the Desktop Skin also known as Mpistoskin2 or Mpisto War 2018
 
 [Editor](https://awikia.github.io/Mpisto/Ryneeeel%20Grooze%20Editor.html)
  
-[New Editor](https://awikia.github.io/Mpisto/Ryneeeel%20Grooze%20Article%20Contstructor.html)
+[New Editor](https://awikia.github.io/Mpisto/Ryneeeel%20Grooze%20Article%20Constructor.html)
 
 [EraIcons testcase](https://awikia.github.io/Mpisto/Ryneeeel%20Grooze%20Icons.html)
 
