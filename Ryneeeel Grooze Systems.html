@@ -191,9 +191,73 @@ document.getElementById("Handler").className += " mpisto-servers"
 				<a class="cell search-link search-off">
 					<input type="search" class="mpisto-input" placeholder="Search on Mpisto..."></input>
 				</a>
-        <a class="link cell" href="#modal1"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user" /></svg> <span class="name">My Account</span>
-    </a>
+				  <div class="wds-dropdown wds-has-dark-shadow">
+					<div class="link cell wds-dropdown__toggle"><img class="mpisto-avatar" src="HM100.png"></img> <small class="name">HM100</small> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
+                  </svg>
+				</div>
+					<div class="wds-dropdown__content wds-is-right-aligned">
+					  <ul class="wds-list wds-is-linked">
+					   <li><a>View Profile</a></li>
+					   <li><a>Log Out</a></li>
+					  </ul>
+					</div>
+				  </div>
+       <div class="wds-dropdown wds-has-dark-shadow">
+        <div class="link cell wds-dropdown__toggle"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon ">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-bell" /> 
+</svg> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
+                  </svg>
+    </div>
+        <div class="wds-dropdown__content wds-is-right-aligned wds-is-not-scrollable notification">
+          <ul class="wds-list wds-has-lines-between wds-has-ellipsis">
+           <li class="notification">
+           <a>
+           <div class="wrapper">
+           <img class="mpisto-avatar" src="Frouda.jpg"></img><div><h3>Make your wiki even more better</h3> <br><h6>By Frouda<time>01 Mar 2018</time></h6></div>
+           </div>
+           </a>
+           </li>
+           <li class="notification">
+           <a>
+           <div class="wrapper">
+           <img class="mpisto-avatar" src="Zekzphire.png"></img><div><h3>Building a successfull site</h3> <br><h6>By Zekzphire<time>26 Feb 2018</time></h6></div>
+           </div>
+           </a>
+           </li>
+           <li class="empty">
+           No notifications
+           </li>
+           <li>
+           <div>
+           <a href="#" class="markasread">Mark as read</a>
+           </div>
+           </li>
+          </ul>
+        </div>
+      </div>
+       <div class="wds-dropdown wds-has-dark-shadow">
+        <div class="link cell wds-dropdown__toggle"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon ">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-flag" /> 
+</svg> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
+                  </svg>
+    </div>
+        <div class="wds-dropdown__content wds-is-right-aligned wds-is-not-scrollable flags-dropdown">
+          <ul class="wds-list wds-has-lines-between wds-has-ellipsis">
+           <li>
+           <button class="wds-button wds-is-squished wds-is-full-width">Manage Flags</button>
+           </li>
+           <li>
+           <button class="wds-button wds-is-squished wds-is-full-width">Enforce Flags</button>
+           </li>
+           <li>
+           <button class="wds-button wds-is-squished wds-is-full-width">Clear all Flags</button>
+           </li>
+          </ul>
+        </div>
+      </div>            
 				<a class="link cell large-down" onclick="GNavSearch()">
 					<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon  search-on">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass" /> 
@@ -363,7 +427,6 @@ function HCg1() {
   
 <!-- End Gap -->
 
-
 <section class="mpisto-content" id="Content" onclick="">
 		<div class="mpisto-header-container">
 			<header class="color-header">
@@ -381,7 +444,7 @@ function HCg1() {
 							<a class="link cell" title="Activity"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-activity" /> 
 					</svg></a>
-				  <a disabled title="Mpisto Store" class="link cell">				
+				  <a title="Mpisto Store" class="link cell">				
 					<svg version="1.1" class="wds-icon" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
 					<path fill="currentcolor" d="M52.053 0c-1.28 3.968-2.56 7.893-2.56 13.141v991.104c0 9.259 2.603 14.507 7.851 19.755l487.040-515.968-492.331-508.032zM577.237 542.208l125.909 129.92-179.755 102.4s-228.48 129.877-354.475 202.197l408.32-434.517zM611.413 506.752l135.083 140.459c21.163-11.776 186.496-106.325 210.091-119.467 24.917-14.421 22.4-34.133 1.237-44.629-19.584-10.88-184.917-105.6-209.92-120.96l-136.491 144.597zM577.152 472.619l127.317-135.211-181.717-103.723s-296.235-169.472-394.795-226.048l449.195 464.981z"></path>
 					</svg>
@@ -492,7 +555,7 @@ function HCg1() {
 				</div>
 			</nav>
 		</div>
-
+		</div>
 
 <header class="wds-community-header" id="CommunityHeader">	
   <div class="wds-community-header__wordmark">		
@@ -505,11 +568,11 @@ function HCg1() {
       <a>Mpisto War 2018</a>	
     </div>	
     <div class="wds-community-header__counter wds-is-image">		
-      <span class="wds-community-header__counter-value">57</span>		
+      <span class="wds-community-header__counter-value">19</span>		
       <span class="wds-community-header__counter-label">Images</span>	
     </div>	
     <div class="wds-community-header__counter wds-is-article">		
-      <span class="wds-community-header__counter-value">33</span>		
+      <span class="wds-community-header__counter-value">17</span>		
       <span class="wds-community-header__counter-label">Articles</span>	
     </div>	
     <div class="wds-community-header__wiki-buttons wds-button-group">			
@@ -524,7 +587,7 @@ function HCg1() {
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-activity-small" />
         </svg>			
       </a>
-      <a disabled title="Mpisto Store" class="wds-button wds-is-squished wds-is-secondary">				
+      <a title="Mpisto Store" class="wds-button wds-is-squished wds-is-secondary">				
         <svg version="1.1" class="wds-icon-small wds-icon" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
         <path fill="currentcolor" d="M52.053 0c-1.28 3.968-2.56 7.893-2.56 13.141v991.104c0 9.259 2.603 14.507 7.851 19.755l487.040-515.968-492.331-508.032zM577.237 542.208l125.909 129.92-179.755 102.4s-228.48 129.877-354.475 202.197l408.32-434.517zM611.413 506.752l135.083 140.459c21.163-11.776 186.496-106.325 210.091-119.467 24.917-14.421 22.4-34.133 1.237-44.629-19.584-10.88-184.917-105.6-209.92-120.96l-136.491 144.597zM577.152 472.619l127.317-135.211-181.717-103.723s-296.235-169.472-394.795-226.048l449.195 464.981z"></path>
         </svg>
@@ -679,7 +742,7 @@ function HCg1() {
     <header class="mpisto-page-header" id ="PageHeader">
       <div class="mpisto-page-header-main">
 		<div class="mpisto-page-header-title">
-			<h1 class="mpisto-title">Main Page</h1>
+			<h1 class="mpisto-title">Mpisto War Design System</h1>
 			<nav class="pageheader-search">
 			  <input class="mpisto-input" placeholder="Search Mpisto War 2018;"></input>
 			  <button class="wds-button wds-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
@@ -692,11 +755,11 @@ function HCg1() {
         <div class="mpisto-page-header-contribution">
           <div class="mpisto-page-header-contribution-buttons">
             <div class="wds-button-group">
-              <a class="wds-is-squished wds-button" href="#modal2">				
+              <a class="wds-is-squished wds-button">				
                 <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-lock-small" />
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-pencil-small" />
               	</svg>				
-                <span>View Source</span>
+                <span>Edit</span>
             	</a>
               <div class="wds-dropdown">				
                 <div class="wds-button wds-is-squished wds-dropdown__toggle">	
@@ -783,47 +846,951 @@ function HCg1() {
     <div class="mpisto-article-wrapper">
       <article class="mpisto-article">
       <!--Start Article-->
-      <h1>Welcome</h1>
-      This is Mpisto War 2018
-      <h2>About</h2>
-      2018 has been made to replace the successfull Mpisto War Zentral.
-      <h2> B8+ Markup </h2>
-      Inline markus that can make you cool:
-      <h3>Shadows</h3>
-      <shadow>A text with Shadow</shadow>
-      <br>
-      <shadow class="blur">A text with Shadow</shadow>
-      <br>
-      <shadow class="small">A text with Shadow</shadow>
-      <br>
-      <shadow class="small blur">A text with Shadow</shadow>
-      <br>
-      <shadow class="large">A text with Shadow</shadow>
-      <br>
-      <shadow class="large blur">A text with Shadow</shadow>
-      <hr>
-      <shadow class="extreme">A text with Shadow</shadow>
-      <br>
-      <shadow class="extreme blur">A text with Shadow</shadow>
-      <h3>Strokes</h3>
-      <stroke>A text with Stroke</stroke>
-      <br>
-      <stroke class="blur">A text with Stroke</stroke>
-      <br>
-      <stroke class="small">A text with Stroke</stroke>
-      <br>
-      <stroke class="small blur">A text with Stroke</stroke>
-      <br>
-      <stroke class="large">A text with Stroke</stroke>
-      <br>
-      <stroke class="large blur">A text with Stroke</stroke>
-      <hr>
-      <stroke class="extreme">A text with Stroke</stroke>
-      <br>
-      <stroke class="extreme blur">A text with Stroke</stroke>
-      <h2> Avatar Stacks </h2>
-      <h3> Mpisto War </h3>
-        Mpisto Draws the last avatar as the highest one seen. Can accept multiple avatars
+      This page describes all components available in Mpisto War for use
+      <h2>Buttons</h2>
+      In Mpisto, all buttons are made out of round corners and should not contain any gradient at all. We use 3 types. Primary, Secondary and Text
+      <h3>Primary Buttons</h3>
+      To Inject a primary button, use an element and put the <code>wds-button</code> class in it:
+      <div style="margin:10px 0 0;">
+		  <button class="wds-button"><span>Primary Button</span></button>
+		  <button class="wds-button">
+		  <svg version="1.1" width="55" height="55" class="wds-icon wds-icon-small" viewBox="-1 -1 55 55" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	  <path id="ID0.06426620716229081" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M 230.850 189.850 L 229.150 181.350 L 229.950 175.850 L 234.400 171.800 L 237.250 168.500 L 241.750 163.150 L 248 169.250 L 250.200 171.700 L 253.950 176 L 254.500 180.450 L 253.500 189.500 " transform="matrix(1.82266104221344, 0, 0, 1.82266104221344, -414.25, -294.45)"/>
+	  <path id="ID0.0372769720852375" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M 230.600 181.900 L 232.100 180.200 L 241.800 180.250 L 251.700 180.250 L 253.750 182.150 " transform="matrix(1.7334266901016235, 0, 0, -3.7820217609405518, -392.45, 715.9)"/>
+	</svg>
+		  <span>Primary Button</span></button>
+		  <a href="https://github.com/AWikia" class="wds-button">
+		  <span>Primary Button</span></a>
+	  </div>
+      <h3>Secondary Buttons</h3>
+      To Inject a secondary button, use an element and put the <code>wds-button</code> and <code>wds-is-secondary</code> class in it:
+      <div style="margin:10px 0 0;">
+		  <button class="wds-button wds-is-secondary"><span>Secondary Button</span></button>
+		  <button class="wds-button wds-is-secondary">
+		  <svg version="1.1" width="55" height="55" class="wds-icon wds-icon-small" viewBox="-1 -1 55 55" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	  <path id="ID0.06426620716229081" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M 230.850 189.850 L 229.150 181.350 L 229.950 175.850 L 234.400 171.800 L 237.250 168.500 L 241.750 163.150 L 248 169.250 L 250.200 171.700 L 253.950 176 L 254.500 180.450 L 253.500 189.500 " transform="matrix(1.82266104221344, 0, 0, 1.82266104221344, -414.25, -294.45)"/>
+	  <path id="ID0.0372769720852375" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M 230.600 181.900 L 232.100 180.200 L 241.800 180.250 L 251.700 180.250 L 253.750 182.150 " transform="matrix(1.7334266901016235, 0, 0, -3.7820217609405518, -392.45, 715.9)"/>
+	</svg>
+		  <span>Secondary Button</span></button>
+		  <a href="https://github.com/AWikia" class="wds-button wds-is-secondary">
+		  <span>Secondary Button</span></a>
+	  </div>
+      <h3>Textural Buttons</h3>
+      To Inject a Textural button, use an element and put the <code>wds-button</code> and <code>wds-is-text</code> class in it:
+      <div style="margin:10px 0 0;">
+		  <button class="wds-button wds-is-text"><span>Textural Button</span></button>
+		  <button class="wds-button wds-is-text">
+		  <svg version="1.1" width="55" height="55" class="wds-icon wds-icon-small" viewBox="-1 -1 55 55" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	  <path id="ID0.06426620716229081" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M 230.850 189.850 L 229.150 181.350 L 229.950 175.850 L 234.400 171.800 L 237.250 168.500 L 241.750 163.150 L 248 169.250 L 250.200 171.700 L 253.950 176 L 254.500 180.450 L 253.500 189.500 " transform="matrix(1.82266104221344, 0, 0, 1.82266104221344, -414.25, -294.45)"/>
+	  <path id="ID0.0372769720852375" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M 230.600 181.900 L 232.100 180.200 L 241.800 180.250 L 251.700 180.250 L 253.750 182.150 " transform="matrix(1.7334266901016235, 0, 0, -3.7820217609405518, -392.45, 715.9)"/>
+	</svg>
+		  <span>Textural Button</span></button>
+		  <a href="https://github.com/AWikia" class="wds-button wds-is-text">
+		  <span>Textural Button</span></a>
+	  </div>
+	  <h3>Alternate Color</h3>
+      To Inject a button that uses link color as main color instead of button color, use an element and put the <code>wds-button</code> and <code>wds-is-alternate</code> classes in it. Opitionally, the <code>wds-is-secondary</code> or <code>wds-is-text</code> classes may be added as well. If Button color and link color are the same colors, no difference will be seen.
+      <div style="margin:10px 0 0;">
+		  <button class="wds-button wds-is-alternate"><span>Primary Button</span></button>
+		  <button class="wds-button wds-is-alternate">
+		  <svg version="1.1" width="55" height="55" class="wds-icon wds-icon-small" viewBox="-1 -1 55 55" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	  <path id="ID0.06426620716229081" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M 230.850 189.850 L 229.150 181.350 L 229.950 175.850 L 234.400 171.800 L 237.250 168.500 L 241.750 163.150 L 248 169.250 L 250.200 171.700 L 253.950 176 L 254.500 180.450 L 253.500 189.500 " transform="matrix(1.82266104221344, 0, 0, 1.82266104221344, -414.25, -294.45)"/>
+	  <path id="ID0.0372769720852375" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M 230.600 181.900 L 232.100 180.200 L 241.800 180.250 L 251.700 180.250 L 253.750 182.150 " transform="matrix(1.7334266901016235, 0, 0, -3.7820217609405518, -392.45, 715.9)"/>
+	</svg>
+		  <span>Primary Button</span></button>
+		  <a href="https://github.com/AWikia" class="wds-button wds-is-alternate">
+		  <span>Primary Button</span></a>
+	  </div>
+      <div style="margin:10px 0 0;">
+		  <button class="wds-button wds-is-secondary wds-is-alternate"><span>Secondary Button</span></button>
+		  <button class="wds-button wds-is-secondary wds-is-alternate">
+		  <svg version="1.1" width="55" height="55" class="wds-icon wds-icon-small" viewBox="-1 -1 55 55" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	  <path id="ID0.06426620716229081" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M 230.850 189.850 L 229.150 181.350 L 229.950 175.850 L 234.400 171.800 L 237.250 168.500 L 241.750 163.150 L 248 169.250 L 250.200 171.700 L 253.950 176 L 254.500 180.450 L 253.500 189.500 " transform="matrix(1.82266104221344, 0, 0, 1.82266104221344, -414.25, -294.45)"/>
+	  <path id="ID0.0372769720852375" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M 230.600 181.900 L 232.100 180.200 L 241.800 180.250 L 251.700 180.250 L 253.750 182.150 " transform="matrix(1.7334266901016235, 0, 0, -3.7820217609405518, -392.45, 715.9)"/>
+	</svg>
+		  <span>Secondary Button</span></button>
+		  <a href="https://github.com/AWikia" class="wds-button wds-is-secondary wds-is-alternate">
+		  <span>Secondary Button</span></a>
+	  </div>
+      <div style="margin:10px 0 0;">
+		  <button class="wds-button wds-is-text wds-is-alternate"><span>Textural Button</span></button>
+		  <button class="wds-button wds-is-text wds-is-alternate">
+		  <svg version="1.1" width="55" height="55" class="wds-icon wds-icon-small" viewBox="-1 -1 55 55" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	  <path id="ID0.06426620716229081" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M 230.850 189.850 L 229.150 181.350 L 229.950 175.850 L 234.400 171.800 L 237.250 168.500 L 241.750 163.150 L 248 169.250 L 250.200 171.700 L 253.950 176 L 254.500 180.450 L 253.500 189.500 " transform="matrix(1.82266104221344, 0, 0, 1.82266104221344, -414.25, -294.45)"/>
+	  <path id="ID0.0372769720852375" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M 230.600 181.900 L 232.100 180.200 L 241.800 180.250 L 251.700 180.250 L 253.750 182.150 " transform="matrix(1.7334266901016235, 0, 0, -3.7820217609405518, -392.45, 715.9)"/>
+	</svg>
+		  <span>Textural Button</span></button>
+		  <a href="https://github.com/AWikia" class="wds-button wds-is-text wds-is-alternate">
+		  <span>Textural Button</span></a>
+	  </div>
+    <h3>Legacy Form (Not recommended)</h3>
+		To Inject Legacy buttons, you use <code>mpisto-buttons2</code> for primary and <code>mpisto-buttons2-2nd</code> for secondary.
+      <div style="margin:10px 0 0;">
+		  <button class="mpisto-buttons2"><span>Primary Button</span></button>
+		  <button class="mpisto-buttons2">
+		  <svg version="1.1" width="55" height="55" class="wds-icon wds-icon-small" viewBox="-1 -1 55 55" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	  <path id="ID0.06426620716229081" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M 230.850 189.850 L 229.150 181.350 L 229.950 175.850 L 234.400 171.800 L 237.250 168.500 L 241.750 163.150 L 248 169.250 L 250.200 171.700 L 253.950 176 L 254.500 180.450 L 253.500 189.500 " transform="matrix(1.82266104221344, 0, 0, 1.82266104221344, -414.25, -294.45)"/>
+	  <path id="ID0.0372769720852375" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M 230.600 181.900 L 232.100 180.200 L 241.800 180.250 L 251.700 180.250 L 253.750 182.150 " transform="matrix(1.7334266901016235, 0, 0, -3.7820217609405518, -392.45, 715.9)"/>
+	</svg>
+		  <span>Primary Button</span></button>
+		  <a href="https://github.com/AWikia" class="mpisto-buttons2">
+		  <span>Primary Button</span></a>
+	  </div>
+      <div style="margin:10px 0 0;">
+		  <button class="mpisto-buttons2-2nd"><span>Secondary Button</span></button>
+		  <button class="mpisto-buttons2-2nd">
+		  <svg version="1.1" width="55" height="55" class="wds-icon wds-icon-small" viewBox="-1 -1 55 55" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	  <path id="ID0.06426620716229081" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M 230.850 189.850 L 229.150 181.350 L 229.950 175.850 L 234.400 171.800 L 237.250 168.500 L 241.750 163.150 L 248 169.250 L 250.200 171.700 L 253.950 176 L 254.500 180.450 L 253.500 189.500 " transform="matrix(1.82266104221344, 0, 0, 1.82266104221344, -414.25, -294.45)"/>
+	  <path id="ID0.0372769720852375" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M 230.600 181.900 L 232.100 180.200 L 241.800 180.250 L 251.700 180.250 L 253.750 182.150 " transform="matrix(1.7334266901016235, 0, 0, -3.7820217609405518, -392.45, 715.9)"/>
+	</svg>
+		  <span>Secondary Button</span></button>
+		  <a href="https://github.com/AWikia" class="mpisto-buttons2-2nd">
+		  <span>Secondary Button</span></a>
+	  </div>
+	<h2>Dropdowns</h2>
+	In Mpisto, all dropdowns are hoverable and may contain shadows (Always with Shadow on Global Navigation)
+	<h3>Regular</h3>
+	You use a div with <code>wds-dropdown</code> any container you want, preferably <code>wds-button</code> with a dropdown chevron but other containers should work as well. Then use <code>wds-dropdown__content</code> class on the div inside the dropdown container. You use a ul with the class <code>wds-list</code>, preferably with the <code>wds-is-linked</code> as well. Then you add li and an anchor tag
+	<div style="margin:10px 0 0;">
+		<div class="wds-dropdown">
+			<div class="wds-button"><span>Dropdown</span> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
+                  </svg></div>
+			<div class="wds-dropdown__content">
+				<ul class="wds-list wds-is-linked">
+					<li>
+						<a>Item A</a>
+					</li>
+					<li>
+						<a>Item B</a>
+					</li>
+					<li>
+						<a>Item C</a>
+					</li>
+					<li>
+						<a>Item D</a>
+					</li>
+					<li>
+						<a>Item E</a>
+					</li>
+					<li>
+						<a>Item F</a>
+					</li>
+					<li>
+						<a>Item G</a>
+					</li>
+					<li>
+						<a>Item H</a>
+					</li>
+					<li>
+						<a>Item I</a>
+					</li>
+					<li>
+						<a>Item J</a>
+					</li>
+					<li>
+						<a>Item K</a>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+	<h3>No Scrolling</h3>
+		To force dropdown to appear all links at once, you may add inside the <code>wds-dropdown__content</code> class the <code>wds-is-not-scrollable</code> class.
+	<div style="margin:10px 0 0;">
+		<div class="wds-dropdown">
+			<div class="wds-button"><span>Non-Scrolling Dropdown</span> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
+                  </svg></div>
+			<div class="wds-dropdown__content wds-is-not-scrollable">
+				<ul class="wds-list wds-is-linked">
+					<li>
+						<a>Item A</a>
+					</li>
+					<li>
+						<a>Item B</a>
+					</li>
+					<li>
+						<a>Item C</a>
+					</li>
+					<li>
+						<a>Item D</a>
+					</li>
+					<li>
+						<a>Item E</a>
+					</li>
+					<li>
+						<a>Item F</a>
+					</li>
+					<li>
+						<a>Item G</a>
+					</li>
+					<li>
+						<a>Item H</a>
+					</li>
+					<li>
+						<a>Item I</a>
+					</li>
+					<li>
+						<a>Item J</a>
+					</li>
+					<li>
+						<a>Item K</a>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+	<h3>Left and Right Aligments</h3>
+	To force dropdown to align to the left, add the <code>wds-is-left-aligned</code> to the dropdown content class. The opposite can happen by using <code>wds-is-right-aligned</code> class
+	<div style="margin:10px 0 0;">
+		<div class="wds-dropdown">
+			<div class="wds-button"><span>Left Aligned Dropdown</span> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
+                  </svg></div>
+			<div class="wds-dropdown__content wds-is-left-aligned">
+				<ul class="wds-list wds-is-linked">
+					<li>
+						<a>Item A</a>
+					</li>
+					<li>
+						<a>Item B</a>
+					</li>
+					<li>
+						<a>Item C</a>
+					</li>
+					<li>
+						<a>Item D</a>
+					</li>
+					<li>
+						<a>Item E</a>
+					</li>
+					<li>
+						<a>Item F</a>
+					</li>
+					<li>
+						<a>Item G</a>
+					</li>
+					<li>
+						<a>Item H</a>
+					</li>
+					<li>
+						<a>Item I</a>
+					</li>
+					<li>
+						<a>Item J</a>
+					</li>
+					<li>
+						<a>Item K</a>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+		<div class="wds-dropdown">
+			<div class="wds-button wds-is-alternate"><span>Right Aligned Dropdown</span> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
+                  </svg></div>
+			<div class="wds-dropdown__content wds-is-right-aligned">
+				<ul class="wds-list wds-is-linked">
+					<li>
+						<a>Item A</a>
+					</li>
+					<li>
+						<a>Item B</a>
+					</li>
+					<li>
+						<a>Item C</a>
+					</li>
+					<li>
+						<a>Item D</a>
+					</li>
+					<li>
+						<a>Item E</a>
+					</li>
+					<li>
+						<a>Item F</a>
+					</li>
+					<li>
+						<a>Item G</a>
+					</li>
+					<li>
+						<a>Item H</a>
+					</li>
+					<li>
+						<a>Item I</a>
+					</li>
+					<li>
+						<a>Item J</a>
+					</li>
+					<li>
+						<a>Item K</a>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+
+	</div>
+	<h3>No Chevron Dropdown</h3>
+	You can add the <code>wds-no-chevron</code> class to <code>wds-dropdown</code> to make dropdown chevrons invisible
+	<div style="margin:10px 0 0;">
+		<div class="wds-dropdown wds-no-chevron">
+			<div class="wds-button"><span>Non-Chevron present Dropdown</span> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
+                  </svg></div>
+			<div class="wds-dropdown__content">
+				<ul class="wds-list wds-is-linked">
+					<li>
+						<a>Item A</a>
+					</li>
+					<li>
+						<a>Item B</a>
+					</li>
+					<li>
+						<a>Item C</a>
+					</li>
+					<li>
+						<a>Item D</a>
+					</li>
+					<li>
+						<a>Item E</a>
+					</li>
+					<li>
+						<a>Item F</a>
+					</li>
+					<li>
+						<a>Item G</a>
+					</li>
+					<li>
+						<a>Item H</a>
+					</li>
+					<li>
+						<a>Item I</a>
+					</li>
+					<li>
+						<a>Item J</a>
+					</li>
+					<li>
+						<a>Item K</a>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+	<h3>Shadows</h3>
+	You can place extra shadow without any border by adding either <code>wds-has-shadow</code> or <code>wds-has-dark-shadow</code> class to <code>wds-dropdown</code> class
+
+	<div style="margin:10px 0 0;">
+		<div class="wds-dropdown wds-has-shadow">
+			<div class="wds-button"><span>Dropdown with Shadow</span> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
+                  </svg></div>
+			<div class="wds-dropdown__content">
+				<ul class="wds-list wds-is-linked">
+					<li>
+						<a>Item A</a>
+					</li>
+					<li>
+						<a>Item B</a>
+					</li>
+					<li>
+						<a>Item C</a>
+					</li>
+					<li>
+						<a>Item D</a>
+					</li>
+					<li>
+						<a>Item E</a>
+					</li>
+					<li>
+						<a>Item F</a>
+					</li>
+					<li>
+						<a>Item G</a>
+					</li>
+					<li>
+						<a>Item H</a>
+					</li>
+					<li>
+						<a>Item I</a>
+					</li>
+					<li>
+						<a>Item J</a>
+					</li>
+					<li>
+						<a>Item K</a>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+		<div class="wds-dropdown wds-has-dark-shadow">
+			<div class="wds-button wds-is-alternate"><span>Dropdown with Thick Shadow</span> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
+                  </svg></div>
+			<div class="wds-dropdown__content">
+				<ul class="wds-list wds-is-linked">
+					<li>
+						<a>Item A</a>
+					</li>
+					<li>
+						<a>Item B</a>
+					</li>
+					<li>
+						<a>Item C</a>
+					</li>
+					<li>
+						<a>Item D</a>
+					</li>
+					<li>
+						<a>Item E</a>
+					</li>
+					<li>
+						<a>Item F</a>
+					</li>
+					<li>
+						<a>Item G</a>
+					</li>
+					<li>
+						<a>Item H</a>
+					</li>
+					<li>
+						<a>Item I</a>
+					</li>
+					<li>
+						<a>Item J</a>
+					</li>
+					<li>
+						<a>Item K</a>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+	<h3>2 levels</h3>
+	Dropdowns may have 2-levels. Inside a dropdown-link, you must use the <code>wds-dropdown-level-2</code>. And another div with the class <code>wds-dropdown-level-2__content</code>, then following the same procedures as the level 1 version minus this one. Note that the 2nd level menu is aligned to the top of 1st level dropdown by default, but it doesn"t work for shorter list so we need to add class <code>wds-is-sticked-to-parent</code> to elements that contains shorter level 2 menu. Note that scrolling version and thick shadows are not recommended.
+	<div style="margin:10px 0 0;">
+		<div class="wds-dropdown">
+			<div class="wds-button"><span>Advanced Dropdown</span> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
+                  </svg></div>
+			<div class="wds-dropdown__content wds-is-not-scrollable">
+				<ul class="wds-list wds-is-linked">
+					<li class="wds-dropdown-level-2">
+						<a><span>Item A</span> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown-chevron">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-menu-control-tiny" />
+							</svg> </a>
+						<div class="wds-dropdown-level-2__content">
+							<ul class="wds-list wds-is-linked">
+								<li>
+									<a>Item B</a>
+								</li>
+								<li>
+									<a>Item C</a>
+								</li>
+								<li>
+									<a>Item D</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a>Item E</a>
+					</li>
+					<li>
+						<a>Item F</a>
+					</li>
+					<li>
+						<a>Item G</a>
+					</li>
+					<li class="wds-dropdown-level-2 wds-is-sticked-to-parent">
+						<a><span>Item H</span>
+							<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown-chevron">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-menu-control-tiny" />
+							</svg></a>
+						<div class="wds-dropdown-level-2__content">
+							<ul class="wds-list wds-is-linked">
+								<li>
+									<a>Item I</a>
+								</li>
+								<li>
+									<a>Item J</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a>Item K</a>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+	<h3>Legacy Form (Not Recommended)</h3>
+	You may use the <code>mpisto-dropdown</code> class within a legacy button. Use the <code>mpisto-dropdown-content</code> class. Scrolling can be achieved with the additional <code>scroll</code> class. Can contain up to 3 levels with the use of <code>2nd</code> and <code>3rd</code> as additional additions (<code>mpisto-dropdown-2nd</code> and <code>mpisto-dropdown-3rd</code>
+      <div style="margin:10px 0 0;">
+		<div class="mpisto-dropdown">
+			<button class="mpisto-buttons2"><span>Dropdown</span></button>
+			<div class="mpisto-dropdown-content">
+				<a>Item 1</a>
+				<a>Item 2</a>
+				<a>Item 3</a>
+				<a>Item 4</a>
+				<a>Item 5</a>
+				<a>Item 6</a>
+				<a>Item 7</a>
+			</div>
+		</div>
+		<div class="mpisto-dropdown">
+			<button class="mpisto-buttons2"><span>Scrolling Dropdown</span></button>
+			<div class="mpisto-dropdown-content scroll">
+				<a>Item 1</a>
+				<a>Item 2</a>
+				<a>Item 3</a>
+				<a>Item 4</a>
+				<a>Item 5</a>
+				<a>Item 6</a>
+				<a>Item 7</a>
+				<a>Item 8</a>
+				<a>Item 9</a>
+				<a>Item 10</a>
+			</div>
+		</div>
+
+		<div class="mpisto-dropdown">
+			<button class="mpisto-buttons2"><span>Advanced Dropdown</span></button>
+			<div class="mpisto-dropdown-content">
+				<a>Item 1</a>
+				<div class="mpisto-dropdown-2nd">
+					<a>Item 2</a>
+					<div class="mpisto-dropdown-2nd-content">
+						<a>Item 3</a>
+						<a>Item 4</a>
+					</div>
+				</div>
+				<a>Item 5</a>
+				<a>Item 6</a>
+				<div class="mpisto-dropdown-2nd stacked">
+					<a>Item 7</a>
+					<div class="mpisto-dropdown-2nd-content">
+						<div class="mpisto-dropdown-3rd">
+							<a>Item 8</a>
+							<div class="mpisto-dropdown-3rd-content">
+								<a>Item 9</a>
+								<a>Item 10</a>
+							</div>
+						</div>
+						<a>Item 11</a>
+						<a>Item 12</a>
+					</div>						
+				</div>
+				<a>Item 13</a>
+				<a>Item 14</a>
+			</div>
+		</div>
+	  </div>
+<h2>Button Group</h2>
+You can make a group of buttons as well. You can mix colors like having altenate and regular button color but not types (Having text and primary button is prohibited althought button preview in theme designer does it)
+	<h3>Regular</h3>
+	You add <code>wds-button-group</code> and series of <code>wds-button</code>
+		<div style="margin:10px 0 0">
+			<div class="wds-button-group">
+				<button class="wds-button">
+					1
+				</button>
+				<button class="wds-button">
+					2
+				</button>
+				<button class="wds-button">
+					3
+				</button>
+				<button class="wds-button">
+					4
+				</button>
+				<button class="wds-button">
+					5
+				</button>
+			</div>
+			<div class="wds-button-group">
+				<button class="wds-button wds-is-secondary">
+					6
+				</button>
+				<button class="wds-button wds-is-secondary">
+					7
+				</button>
+				<button class="wds-button wds-is-secondary">
+					8
+				</button>
+				<button class="wds-button wds-is-secondary">
+					9
+				</button>
+				<button class="wds-button wds-is-secondary">
+					10
+				</button>
+			</div>
+			<div class="wds-button-group">
+				<button class="wds-button wds-is-alternate">
+					11
+				</button>
+				<button class="wds-button wds-is-alternate">
+					12
+				</button>
+				<button class="wds-button wds-is-alternate">
+					13
+				</button>
+				<button class="wds-button wds-is-alternate">
+					14
+				</button>
+				<button class="wds-button wds-is-alternate">
+					15
+				</button>
+			</div>
+			<div class="wds-button-group">
+				<button class="wds-button wds-is-secondary wds-is-alternate">
+					16
+				</button>
+				<button class="wds-button wds-is-secondary wds-is-alternate">
+					17
+				</button>
+				<button class="wds-button wds-is-secondary wds-is-alternate">
+					18
+				</button>
+				<button class="wds-button wds-is-secondary wds-is-alternate">
+					19
+				</button>
+				<button class="wds-button wds-is-secondary wds-is-alternate">
+					20
+				</button>
+			</div>
+		</div>
+	<h3>Button Group with Dropdown</h3>
+		It is also possible to do button group with a dropdown
+		<div style="margin:10px 0 0">
+            <div class="wds-button-group">
+              <a class="wds-is-squished wds-button">				
+                <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-pencil-small" />
+              	</svg>				
+                <span>Edit</span>
+            	</a>
+              <div class="wds-dropdown">				
+                <div class="wds-button wds-is-squished wds-dropdown__toggle">	
+                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
+                  </svg>
+                </div>
+                <div class="wds-dropdown__content wds-is-right-aligned wds-is-not-scrollable">					
+                  <ul class="wds-list wds-is-linked">						
+                    <li><a>Action</a></li>
+                    <li><a>Another Action</a></li>
+                  </ul>
+                </div>
+              </div>		
+            </div>
+            <div class="wds-button-group">
+              <a class="wds-is-squished wds-is-alternate wds-button">				
+                <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-pencil-small" />
+              	</svg>				
+                <span>Edit</span>
+            	</a>
+              <div class="wds-dropdown">				
+                <div class="wds-button wds-is-alternate wds-is-squished wds-dropdown__toggle">	
+                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
+                  </svg>
+                </div>
+                <div class="wds-dropdown__content wds-is-right-aligned wds-is-not-scrollable">					
+                  <ul class="wds-list wds-is-linked">						
+                    <li><a>Action</a></li>
+                    <li><a>Another Action</a></li>
+                  </ul>
+                </div>
+              </div>		
+            </div>
+            <div class="wds-button-group">
+              <a class="wds-is-squished wds-is-secondary wds-button">				
+                <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-pencil-small" />
+              	</svg>				
+                <span>Edit</span>
+            	</a>
+              <div class="wds-dropdown">				
+                <div class="wds-button wds-is-secondary wds-is-squished wds-dropdown__toggle">	
+                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
+                  </svg>
+                </div>
+                <div class="wds-dropdown__content wds-is-right-aligned wds-is-not-scrollable">					
+                  <ul class="wds-list wds-is-linked">						
+                    <li><a>Action</a></li>
+                    <li><a>Another Action</a></li>
+                  </ul>
+                </div>
+              </div>		
+            </div>
+            <div class="wds-button-group">
+              <a class="wds-is-squished wds-is-secondary wds-is-alternate wds-button">				
+                <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-pencil-small" />
+              	</svg>				
+                <span>Edit</span>
+            	</a>
+              <div class="wds-dropdown">				
+                <div class="wds-button wds-is-secondary wds-is-alternate wds-is-squished wds-dropdown__toggle">	
+                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
+                  </svg>
+                </div>
+                <div class="wds-dropdown__content wds-is-right-aligned wds-is-not-scrollable">					
+                  <ul class="wds-list wds-is-linked">						
+                    <li><a>Action</a></li>
+                    <li><a>Another Action</a></li>
+                  </ul>
+                </div>
+              </div>		
+            </div>
+		</div>
+	<h3>Legacy Form (Not Recommended)</h3>
+		Exactly like the wds version but with <code>mpisto-button-group</code>
+		<div style="margin:10px 0 0">
+			<div class="mpisto-button-group">
+				<button class="mpisto-buttons2">
+					1
+				</button>
+				<button class="mpisto-buttons2">
+					2
+				</button>
+				<button class="mpisto-buttons2">
+					3
+				</button>
+				<button class="mpisto-buttons2">
+					4
+				</button>
+				<button class="mpisto-buttons2">
+					5
+				</button>
+			</div>
+			<div class="mpisto-button-group">
+				<button class="mpisto-buttons2-2nd">
+					6
+				</button>
+				<button class="mpisto-buttons2-2nd">
+					7
+				</button>
+				<button class="mpisto-buttons2-2nd">
+					8
+				</button>
+				<button class="mpisto-buttons2-2nd">
+					9
+				</button>
+				<button class="mpisto-buttons2-2nd">
+					10
+				</button>
+			</div>
+
+            <div class="mpisto-button-group">
+              <a class="mpisto-buttons2">				
+                <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-pencil-small" />
+              	</svg>				
+                <span>Edit</span>
+            	</a>
+              <div class="mpisto-dropdown">				
+                <div class="mpisto-buttons2 wds-dropdown__toggle">	
+                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small wds-dropdown__toggle-chevron">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
+                  </svg>
+                </div>
+                <div class="mpisto-dropdown-content">					
+                    <a>Action</a>
+                    <a>Another Action</a>
+                </div>
+              </div>		
+            </div>
+            <div class="mpisto-button-group">
+              <a class="mpisto-buttons2-2nd">				
+                <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-pencil-small" />
+              	</svg>				
+                <span>Edit</span>
+            	</a>
+              <div class="mpisto-dropdown">				
+                <div class="mpisto-buttons2-2nd wds-dropdown__toggle">	
+                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small wds-dropdown__toggle-chevron">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
+                  </svg>
+                </div>
+                <div class="mpisto-dropdown-content">					
+                    <a>Action</a>
+                    <a>Another Action</a>
+                </div>
+              </div>		
+            </div>
+		</div>
+		<h2>Tabs</h2>
+		Tabs can be made by using a ul element of <code>wds-tabs</code>. Use a li with a class of <code>wds-tabs__tab</code> which a <code>wds-is-alternate</code> can be used as well for alternation of color. Then inside it, use an anchor or a div with the class <code>wds-tabs__tab-label</code>
+		<h3>Regular</h3>
+		Following the above procedure will produce these two tabs
+		<div style="margin:10px 0 0">
+			<ul class="wds-tabs">
+				<li class="wds-tabs__tab">
+					<div class="wds-tabs__tab-label">
+						<span>Simple Tab</span>
+					</div>
+				</li>
+				<li class="wds-tabs__tab wds-is-alternate">
+					<div class="wds-tabs__tab-label">
+						<span>Simple Tab</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+	<h3>Dropdown Tabs</h3>
+	Tabs can also consist of dropdowns. Follows the same procedure as buttons with dropdowns
+		<div style="margin:10px 0 0">
+			<ul class="wds-tabs">
+				<li class="wds-tabs__tab">
+					<div class="wds-dropdown">
+						<div class="wds-tabs__tab-label">
+							<span>Dropdown Tab</span>
+						</div>
+						<div class="wds-dropdown__content wds-is-left-aligned">
+							<ul class="wds-list wds-is-linked">
+								<li>
+									<a>Item A</a>
+								</li>
+								<li>
+									<a>Item B</a>
+								</li>
+								<li>
+									<a>Item C</a>
+								</li>
+								<li>
+									<a>Item D</a>
+								</li>
+								<li>
+									<a>Item E</a>
+								</li>
+								<li>
+									<a>Item F</a>
+								</li>
+								<li>
+									<a>Item G</a>
+								</li>
+								<li>
+									<a>Item H</a>
+								</li>
+								<li>
+									<a>Item I</a>
+								</li>
+								<li>
+									<a>Item J</a>
+								</li>
+								<li>
+									<a>Item K</a>
+								</li>
+
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li class="wds-tabs__tab wds-is-alternate">
+					<div class="wds-dropdown">
+						<div class="wds-tabs__tab-label">
+							<span>Dropdown Tab</span>
+						</div>
+						<div class="wds-dropdown__content wds-is-right-aligned">
+							<ul class="wds-list wds-is-linked">
+								<li>
+									<a>Item A</a>
+								</li>
+								<li>
+									<a>Item B</a>
+								</li>
+								<li>
+									<a>Item C</a>
+								</li>
+								<li>
+									<a>Item D</a>
+								</li>
+								<li>
+									<a>Item E</a>
+								</li>
+								<li>
+									<a>Item F</a>
+								</li>
+								<li>
+									<a>Item G</a>
+								</li>
+								<li>
+									<a>Item H</a>
+								</li>
+								<li>
+									<a>Item I</a>
+								</li>
+								<li>
+									<a>Item J</a>
+								</li>
+								<li>
+									<a>Item K</a>
+								</li>
+
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<h3>Selected Tab</h3>
+		In order to have the tab selected, you must add <code>wds-is-current</code> in <code>wds-tabs__tab</code> class as seen in the example
+		<div style="margin:10px 0 0">
+			<ul class="wds-tabs">
+				<li class="wds-tabs__tab wds-is-current">
+					<div class="wds-tabs__tab-label">
+						<span>Current Tab</span>
+					</div>
+				</li>
+				<li class="wds-tabs__tab wds-is-alternate wds-is-current">
+					<div class="wds-tabs__tab-label">
+						<span>Current Tab</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<h3>Linked Tab</h3>
+		Tabs may link to a website as well. Instead of wrapping a span into the <code>wds-tabs__tab-label</code>, you wrap an anchor tag
+		<div style="margin:10px 0 0">
+			<ul class="wds-tabs">
+				<li class="wds-tabs__tab">
+					<div class="wds-tabs__tab-label">
+						<a href="https://github.com/Awikia">Linked Tab</a>
+					</div>
+				</li>
+				<li class="wds-tabs__tab wds-is-alternate">
+					<div class="wds-tabs__tab-label">
+						<a href="https://github.com/Awikia">Linked Tab</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+      <h2>Avatar Stacks and Avatars</h2>
+      <h3>General</h3>
+      Use <code>mpisto-avatar</code> for Mpistofied avatars and <code>wds-avatar</code> for Wdsfied avatars
+	`<div style="margin:10px 0 0">
+      <img src="Zekzphire.png" class="mpisto-avatar"></img>
+      <img src="Zekzphire.png" class="wds-avatar"></img>
+	</div>
+      <h3>Avatar Stacks</h3>
+      <h4> Mpisto War </h4>
+        Mpisto Draws the last avatar as the highest one seen. Can accept multiple avatars with <code>mpisto-avatar-group</code> class
         <div class="mpisto-avatar-group">
           <img class="mpisto-avatar" src="HM100.png"></img>
           <img class="mpisto-avatar" src="3primetime3.jpg"></img>
@@ -833,7 +1800,7 @@ function HCg1() {
           <img class="mpisto-avatar" src="Sannse.png"></img>
           <img class="mpisto-avatar" src="Wildones.png"></img>
         </div>
-       <h3> Fandom Design System </h3>
+       <h4>Fandom Design System</h4>
        On the other hand, Fandom System does it differently and up to 5 avatars, including an overflow can be used.
         <div class="wds-avatar-stack">	
           <div class="wds-avatar-stack__avatar">		
@@ -853,8 +1820,60 @@ function HCg1() {
           </div>	
             <div class="wds-avatar-stack__overflow">+2</div>
         </div>
-        <h2>Banners</h2>
-        Banners
+	<h2>Floating buttons</h2>
+	You can make floating buttons with the use of <code>wds-floating-button</code>. Only one icon is allowed
+	<div style="margin:10px 0 0">
+		<button class="wds-floating-button">
+		<svg version="1.1" width="55" height="55" class="wds-icon wds-icon-small" viewBox="-1 -1 55 55" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	  <path id="ID0.06426620716229081" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M 230.850 189.850 L 229.150 181.350 L 229.950 175.850 L 234.400 171.800 L 237.250 168.500 L 241.750 163.150 L 248 169.250 L 250.200 171.700 L 253.950 176 L 254.500 180.450 L 253.500 189.500 " transform="matrix(1.82266104221344, 0, 0, 1.82266104221344, -414.25, -294.45)"/>
+	  <path id="ID0.0372769720852375" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M 230.600 181.900 L 232.100 180.200 L 241.800 180.250 L 251.700 180.250 L 253.750 182.150 " transform="matrix(1.7334266901016235, 0, 0, -3.7820217609405518, -392.45, 715.9)"/>
+	</svg>
+	</button>
+</div>
+	<h3>Button Group</h3>
+	Use <code>wds-floating-button-group</code> class and wrap floating buttons to make a list of floating buttons. Use <code>wds-is-vertical</code> for column group of floating buttons
+
+			<div style="margin:10px 0 0">
+				<div class="wds-floating-button-group">
+					<button class="wds-floating-button">
+					<svg version="1.1" width="55" height="55" class="wds-icon wds-icon-small" viewBox="-1 -1 55 55" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+				  <path id="ID0.06426620716229081" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M 230.850 189.850 L 229.150 181.350 L 229.950 175.850 L 234.400 171.800 L 237.250 168.500 L 241.750 163.150 L 248 169.250 L 250.200 171.700 L 253.950 176 L 254.500 180.450 L 253.500 189.500 " transform="matrix(1.82266104221344, 0, 0, 1.82266104221344, -414.25, -294.45)"/>
+				  <path id="ID0.0372769720852375" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M 230.600 181.900 L 232.100 180.200 L 241.800 180.250 L 251.700 180.250 L 253.750 182.150 " transform="matrix(1.7334266901016235, 0, 0, -3.7820217609405518, -392.45, 715.9)"/>
+				</svg>
+				</button>
+				<button class="wds-floating-button accent">
+					<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-pencil-small" />
+              	</svg>	
+				</button>
+				<button class="wds-floating-button critical">
+					<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-article-small" />
+              	</svg>	
+				</button>
+			</div>
+				<div class="wds-floating-button-group wds-is-vertical">
+					<button class="wds-floating-button">
+					<svg version="1.1" width="55" height="55" class="wds-icon wds-icon-small" viewBox="-1 -1 55 55" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+				  <path id="ID0.06426620716229081" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M 230.850 189.850 L 229.150 181.350 L 229.950 175.850 L 234.400 171.800 L 237.250 168.500 L 241.750 163.150 L 248 169.250 L 250.200 171.700 L 253.950 176 L 254.500 180.450 L 253.500 189.500 " transform="matrix(1.82266104221344, 0, 0, 1.82266104221344, -414.25, -294.45)"/>
+				  <path id="ID0.0372769720852375" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M 230.600 181.900 L 232.100 180.200 L 241.800 180.250 L 251.700 180.250 L 253.750 182.150 " transform="matrix(1.7334266901016235, 0, 0, -3.7820217609405518, -392.45, 715.9)"/>
+				</svg>
+				</button>
+				<button class="wds-floating-button accent">
+					<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-pencil-small" />
+              	</svg>	
+				</button>
+				<button class="wds-floating-button critical">
+					<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-article-small" />
+              	</svg>	
+				</button>
+			</div>
+
+		</div>
+        <h2>Banner Notifications</h2>
+        Banners can be made by the use of <code>wds-banner-notification</code> class. For more detailed information, look on the same component page on <a href="https://fandomdesignsystem.com/components/banner-notifications">Fandom Design System</a> documentation
 <div class="wds-banner-notification__container">
 	<div class="wds-banner-notification wds-message">
 		<div class="wds-banner-notification__icon">	
@@ -901,12 +1920,22 @@ function HCg1() {
 		</svg>
 	</div>
 </div>
-      <h1>Chancelog</h1>
-Can be found on Chancelog page
-      <!--Stop Article-->
+
+	      <!--Stop Article-->
       </article>
       <nav class="mpisto-right-pane">
         <div style="width:100%;">
+          <section class="mpisto-module discord-module">
+            <h2><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small" viewBox="0 0 240 245" width="20" height="20"><path d="M 104.4 103.9 c -5.7 0 -10.2 5 -10.2 11.1 s 4.6 11.1 10.2 11.1 c 5.7 0 10.2 -5 10.2 -11.1 c 0.1 -6.1 -4.5 -11.1 -10.2 -11.1 Z M 140.9 103.9 c -5.7 0 -10.2 5 -10.2 11.1 s 4.6 11.1 10.2 11.1 c 5.7 0 10.2 -5 10.2 -11.1 s -4.5 -11.1 -10.2 -11.1 Z" /><path d="M 189.5 20 h -134 C 44.2 20 35 29.2 35 40.6 v 135.2 c 0 11.4 9.2 20.6 20.5 20.6 h 113.4 l -5.3 -18.5 l 12.8 11.9 l 12.1 11.2 l 21.5 19 V 40.6 c 0 -11.4 -9.2 -20.6 -20.5 -20.6 Z m -38.6 130.6 s -3.6 -4.3 -6.6 -8.1 c 13.1 -3.7 18.1 -11.9 18.1 -11.9 c -4.1 2.7 -8 4.6 -11.5 5.9 c -5 2.1 -9.8 3.5 -14.5 4.3 c -9.6 1.8 -18.4 1.3 -25.9 -0.1 c -5.7 -1.1 -10.6 -2.7 -14.7 -4.3 c -2.3 -0.9 -4.8 -2 -7.3 -3.4 c -0.3 -0.2 -0.6 -0.3 -0.9 -0.5 c -0.2 -0.1 -0.3 -0.2 -0.4 -0.3 c -1.8 -1 -2.8 -1.7 -2.8 -1.7 s 4.8 8 17.5 11.8 c -3 3.8 -6.7 8.3 -6.7 8.3 c -22.1 -0.7 -30.5 -15.2 -30.5 -15.2 c 0 -32.2 14.4 -58.3 14.4 -58.3 c 14.4 -10.8 28.1 -10.5 28.1 -10.5 l 1 1.2 c -18 5.2 -26.3 13.1 -26.3 13.1 s 2.2 -1.2 5.9 -2.9 c 10.7 -4.7 19.2 -6 22.7 -6.3 c 0.6 -0.1 1.1 -0.2 1.7 -0.2 c 6.1 -0.8 13 -1 20.2 -0.2 c 9.5 1.1 19.7 3.9 30.1 9.6 c 0 0 -7.9 -7.5 -24.9 -12.7 l 1.4 -1.6 s 13.7 -0.3 28.1 10.5 c 0 0 14.4 26.1 14.4 58.3 c 0 0 -8.5 14.5 -30.6 15.2 Z" /></svg> Discord Server </h2>
+          <ul>
+          <li>
+          <iframe src="https://discordapp.com/widget?id=443493384540258304&theme=dark" width="248" height="440" allowtransparency="true" frameborder="0"></iframe>
+          </li>
+          </ul>
+              <footer class="buttons">
+              <a class="wds-button wds-is-squished wds-is-secondary" href="https://discordapp.com/invite/signup">Don't have an account?</a>
+              </footer>
+          </section>
           <section class="mpisto-module activity-module">
             <h2><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">	
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-activity-small" />
@@ -949,6 +1978,17 @@ Can be found on Chancelog page
               </ul>
               <footer class="buttons">
               <a class="wds-button wds-is-squished wds-is-secondary">More Logs</a>
+              </footer>
+          </section>
+          <section class="mpisto-module chat-module">
+            <h2><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">	
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-reply-small" />
+</svg> Communication </h2>
+              <span class="communication-rules">Welcome to Mpisto War 2018!!! Please read the <a>rules</a> before joining</span>
+              <span class="stats">7 Members Online <i>(<a title="Click to see which memebrs chat now">Which?</a>)</i></span>
+              </ul>
+              <footer class="buttons">
+              <a class="wds-button wds-is-squished wds-is-secondary">Join Chat</a>
               </footer>
           </section>
         </div>
@@ -1079,225 +2119,21 @@ Can be found on Chancelog page
 
 <!-- End Toolbar -->
 
-<div class="lightbox-container" id="modal1">
-    <div class="lightbox">
-      <h1><span>Welcome to Mpisto War 2018</span> <a class="wds-button wds-is-square wds-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" />
-                  </svg></a></h1>
-   <section>
-   Hello. Log in or create a new account to gain access to more features
-           <h2>Already have an account?</h2>
-           Chose a social network you want and a popup for logging into an existing account based on site's default UI for that action:
-           <br>
-           <div class="wds-button-group">
-            <a class="wds-button wds-is-fandom-color"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-fandom-heart" /><span>FANDOM</span></a>
-            <a class="wds-button wds-is-facebook-color"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-facebook" /> <span>Facebook</span></a>
-            <a class="wds-button wds-is-discord-color"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon" viewBox="0 0 240 245" width="20" height="20"><path d="M 104.4 103.9 c -5.7 0 -10.2 5 -10.2 11.1 s 4.6 11.1 10.2 11.1 c 5.7 0 10.2 -5 10.2 -11.1 c 0.1 -6.1 -4.5 -11.1 -10.2 -11.1 Z M 140.9 103.9 c -5.7 0 -10.2 5 -10.2 11.1 s 4.6 11.1 10.2 11.1 c 5.7 0 10.2 -5 10.2 -11.1 s -4.5 -11.1 -10.2 -11.1 Z" /><path d="M 189.5 20 h -134 C 44.2 20 35 29.2 35 40.6 v 135.2 c 0 11.4 9.2 20.6 20.5 20.6 h 113.4 l -5.3 -18.5 l 12.8 11.9 l 12.1 11.2 l 21.5 19 V 40.6 c 0 -11.4 -9.2 -20.6 -20.5 -20.6 Z m -38.6 130.6 s -3.6 -4.3 -6.6 -8.1 c 13.1 -3.7 18.1 -11.9 18.1 -11.9 c -4.1 2.7 -8 4.6 -11.5 5.9 c -5 2.1 -9.8 3.5 -14.5 4.3 c -9.6 1.8 -18.4 1.3 -25.9 -0.1 c -5.7 -1.1 -10.6 -2.7 -14.7 -4.3 c -2.3 -0.9 -4.8 -2 -7.3 -3.4 c -0.3 -0.2 -0.6 -0.3 -0.9 -0.5 c -0.2 -0.1 -0.3 -0.2 -0.4 -0.3 c -1.8 -1 -2.8 -1.7 -2.8 -1.7 s 4.8 8 17.5 11.8 c -3 3.8 -6.7 8.3 -6.7 8.3 c -22.1 -0.7 -30.5 -15.2 -30.5 -15.2 c 0 -32.2 14.4 -58.3 14.4 -58.3 c 14.4 -10.8 28.1 -10.5 28.1 -10.5 l 1 1.2 c -18 5.2 -26.3 13.1 -26.3 13.1 s 2.2 -1.2 5.9 -2.9 c 10.7 -4.7 19.2 -6 22.7 -6.3 c 0.6 -0.1 1.1 -0.2 1.7 -0.2 c 6.1 -0.8 13 -1 20.2 -0.2 c 9.5 1.1 19.7 3.9 30.1 9.6 c 0 0 -7.9 -7.5 -24.9 -12.7 l 1.4 -1.6 s 13.7 -0.3 28.1 10.5 c 0 0 14.4 26.1 14.4 58.3 c 0 0 -8.5 14.5 -30.6 15.2 Z" /></svg> <span>Discord</span></a>
-            <a class="wds-button wds-is-googleplus-color"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-googleplus" /> <span>Google</span></a>
-            <a class="wds-button wds-is-twitter-color"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-twitter" /> <span>Twitter</span></a>
-            <a class="wds-button wds-is-asecure-color">      <svg version="1.1" width="55" height="55" class="wds-icon" viewBox="-1 -1 55 55" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <path id="ID0.06426620716229081" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M 230.850 189.850 L 229.150 181.350 L 229.950 175.850 L 234.400 171.800 L 237.250 168.500 L 241.750 163.150 L 248 169.250 L 250.200 171.700 L 253.950 176 L 254.500 180.450 L 253.500 189.500 " transform="matrix(1.82266104221344, 0, 0, 1.82266104221344, -414.25, -294.45)"/>
-  <path id="ID0.0372769720852375" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M 230.600 181.900 L 232.100 180.200 L 241.800 180.250 L 251.700 180.250 L 253.750 182.150 " transform="matrix(1.7334266901016235, 0, 0, -3.7820217609405518, -392.45, 715.9)"/>
-</svg>
- <span>A Secure</span></a>
-            </div>
-           <h2>Don't have an account?</h2>
-           Chose a social network you want and a popup for creating an account based on site's default UI for that action:
-           <br>
-           <div class="wds-button-group">
-            <a class="wds-button wds-is-secondary wds-is-fandom-color"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-fandom-heart" /><span>FANDOM</span></a>
-            <a class="wds-button wds-is-secondary wds-is-facebook-color"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-facebook" /> <span>Facebook</span></a>
- <a class="wds-button wds-is-secondary wds-is-discord-color"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon" viewBox="0 0 240 245" width="20" height="20"><path d="M 104.4 103.9 c -5.7 0 -10.2 5 -10.2 11.1 s 4.6 11.1 10.2 11.1 c 5.7 0 10.2 -5 10.2 -11.1 c 0.1 -6.1 -4.5 -11.1 -10.2 -11.1 Z M 140.9 103.9 c -5.7 0 -10.2 5 -10.2 11.1 s 4.6 11.1 10.2 11.1 c 5.7 0 10.2 -5 10.2 -11.1 s -4.5 -11.1 -10.2 -11.1 Z" /><path d="M 189.5 20 h -134 C 44.2 20 35 29.2 35 40.6 v 135.2 c 0 11.4 9.2 20.6 20.5 20.6 h 113.4 l -5.3 -18.5 l 12.8 11.9 l 12.1 11.2 l 21.5 19 V 40.6 c 0 -11.4 -9.2 -20.6 -20.5 -20.6 Z m -38.6 130.6 s -3.6 -4.3 -6.6 -8.1 c 13.1 -3.7 18.1 -11.9 18.1 -11.9 c -4.1 2.7 -8 4.6 -11.5 5.9 c -5 2.1 -9.8 3.5 -14.5 4.3 c -9.6 1.8 -18.4 1.3 -25.9 -0.1 c -5.7 -1.1 -10.6 -2.7 -14.7 -4.3 c -2.3 -0.9 -4.8 -2 -7.3 -3.4 c -0.3 -0.2 -0.6 -0.3 -0.9 -0.5 c -0.2 -0.1 -0.3 -0.2 -0.4 -0.3 c -1.8 -1 -2.8 -1.7 -2.8 -1.7 s 4.8 8 17.5 11.8 c -3 3.8 -6.7 8.3 -6.7 8.3 c -22.1 -0.7 -30.5 -15.2 -30.5 -15.2 c 0 -32.2 14.4 -58.3 14.4 -58.3 c 14.4 -10.8 28.1 -10.5 28.1 -10.5 l 1 1.2 c -18 5.2 -26.3 13.1 -26.3 13.1 s 2.2 -1.2 5.9 -2.9 c 10.7 -4.7 19.2 -6 22.7 -6.3 c 0.6 -0.1 1.1 -0.2 1.7 -0.2 c 6.1 -0.8 13 -1 20.2 -0.2 c 9.5 1.1 19.7 3.9 30.1 9.6 c 0 0 -7.9 -7.5 -24.9 -12.7 l 1.4 -1.6 s 13.7 -0.3 28.1 10.5 c 0 0 14.4 26.1 14.4 58.3 c 0 0 -8.5 14.5 -30.6 15.2 Z" /></svg> <span>Discord</span></a>
-            <a class="wds-button wds-is-secondary wds-is-googleplus-color"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-googleplus" /> <span>Google</span></a>
-            <a class="wds-button wds-is-secondary wds-is-twitter-color"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-twitter" /> <span>Twitter</span></a>
-            <a class="wds-button wds-is-secondary wds-is-asecure-color">      <svg version="1.1" width="55" height="55" class="wds-icon" viewBox="-1 -1 55 55" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <path id="ID0.06426620716229081" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M 230.850 189.850 L 229.150 181.350 L 229.950 175.850 L 234.400 171.800 L 237.250 168.500 L 241.750 163.150 L 248 169.250 L 250.200 171.700 L 253.950 176 L 254.500 180.450 L 253.500 189.500 " transform="matrix(1.82266104221344, 0, 0, 1.82266104221344, -414.25, -294.45)"/>
-  <path id="ID0.0372769720852375" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M 230.600 181.900 L 232.100 180.200 L 241.800 180.250 L 251.700 180.250 L 253.750 182.150 " transform="matrix(1.7334266901016235, 0, 0, -3.7820217609405518, -392.45, 715.9)"/>
-</svg>
- <span>A Secure</span></a>
-            </div>
-
-   </section>
-   <footer>
-   <button class="wds-button wds-is-secondary wds-is-alternate wds-is-squished">Can't log in?</button>
-   </footer>
-    </div>
-</div>
-
-<div class="lightbox-container" id="modal2">
-    <div class="lightbox">
-      <h1><span>View Source of Main Page</span> <a class="wds-button wds-is-square wds-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" />
-                  </svg></a></h1>
-   <section>
-   <h2>Permission Error</h2>
-   You do not have permission to edit this article for the following reason(s):
-    <ul>
-      <li>
-      This page has been locked to prevent spamming
-      </li>
-      <li>
-      Editing Templates and Wiki's mainpage requires logged-in user. Log in with any supported Social Media to proceed
-      </li>
-    </ul>
-    <h2>Source Code</h2>
-      You can view and copy the source code of the article below:
-      <textarea readonly class="mpisto-article source" style="overflow:auto;">
-      <h1>Welcome</h1>
-      This is Mpisto War 2018
-      <h2>About</h2>
-      2018 has been made to replace the successfull Mpisto War Zentral.
-      <h2> B8+ Markup </h2>
-      Inline markus that can make you cool:
-      <h3>Shadows</h3>
-      <shadow>A text with Shadow</shadow>
-      <br>
-      <shadow class="blur">A text with Shadow</shadow>
-      <br>
-      <shadow class="small">A text with Shadow</shadow>
-      <br>
-      <shadow class="small blur">A text with Shadow</shadow>
-      <br>
-      <shadow class="large">A text with Shadow</shadow>
-      <br>
-      <shadow class="large blur">A text with Shadow</shadow>
-      <hr>
-      <shadow class="extreme">A text with Shadow</shadow>
-      <br>
-      <shadow class="extreme blur">A text with Shadow</shadow>
-      <h3>Strokes</h3>
-      <stroke>A text with Stroke</stroke>
-      <br>
-      <stroke class="blur">A text with Stroke</stroke>
-      <br>
-      <stroke class="small">A text with Stroke</stroke>
-      <br>
-      <stroke class="small blur">A text with Stroke</stroke>
-      <br>
-      <stroke class="large">A text with Stroke</stroke>
-      <br>
-      <stroke class="large blur">A text with Stroke</stroke>
-      <hr>
-      <stroke class="extreme">A text with Stroke</stroke>
-      <br>
-      <stroke class="extreme blur">A text with Stroke</stroke>
-      <h2> Avatar Stacks </h2>
-      <h3> Mpisto War </h3>
-        Mpisto Draws the last avatar as the highest one seen. Can accept multiple avatars
-        <div class="mpisto-avatar-group">
-          <img class="mpisto-avatar" src="HM100.png"></img>
-          <img class="mpisto-avatar" src="3primetime3.jpg"></img>
-          <img class="mpisto-avatar" src="S2.png"></img>
-          <img class="mpisto-avatar" src="TK-999.png"></img>
-          <img class="mpisto-avatar" src="Rappy.png"></img>
-          <img class="mpisto-avatar" src="Sannse.png"></img>
-          <img class="mpisto-avatar" src="Wildones.png"></img>
-        </div>
-       <h3> Fandom Design System </h3>
-       On the other hand, Fandom System does it differently and up to 5 avatars, including an overflow can be used.
-        <div class="wds-avatar-stack">	
-          <div class="wds-avatar-stack__avatar">		
-            <img class="wds-avatar" alt="user name" src="HM100.png">	
-          </div>
-          <div class="wds-avatar-stack__avatar">		
-            <img class="wds-avatar" alt="user name" src="3primetime3.jpg">	
-          </div>
-          <div class="wds-avatar-stack__avatar">		
-            <img class="wds-avatar" alt="user name" src="S2.png">	
-          </div>
-          <div class="wds-avatar-stack__avatar">		
-            <img class="wds-avatar" alt="user name" src="TK-999.png">	
-          </div>	
-          <div class="wds-avatar-stack__avatar">		
-            <img class="wds-avatar" alt="user name" src="Rappy.png">	
-          </div>	
-            <div class="wds-avatar-stack__overflow">+2</div>
-        </div>
-        <h2>Banners</h2>
-        Banners
-<div class="wds-banner-notification__container">
-	<div class="wds-banner-notification wds-message">
-		<div class="wds-banner-notification__icon">	
-			<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-flag-small" />
-			</svg>
-		</div>
-		<span class="wds-banner-notification__text">					Stacked notification 1.</span>
-			<svg xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross-tiny" />
-			</svg>
-	</div>
-	<div class="wds-banner-notification wds-success">
-		<div class="wds-banner-notification__icon">	
-			<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark-small" />
-			</svg>
-		</div>
-		<span class="wds-banner-notification__text">					Stacked notification 2 with very long content. Lorem ipsum dolor sit amet,				consectetur adipiscing elit. Vestibulum scelerisque ullamcorper sodales. Interdum et				malesuada fames ac ante ipsum primis in faucibus.</span>
-		<svg xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">
-			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross-tiny" />
-		</svg>
-	</div>
-	<div class="wds-banner-notification wds-warning">
-		<div class="wds-banner-notification__icon">	
-			<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-alert-small" />
-			</svg>
-		</div>
-		<span class="wds-banner-notification__text">					Stacked notification 3.</span>
-		<svg xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">
-			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross-tiny" />
-		</svg>
-	</div>
-	<div class="wds-banner-notification wds-alert">
-		<div class="wds-banner-notification__icon">	
-			<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-error-small" />
-			</svg>
-		</div>
-		<span class="wds-banner-notification__text">					Stacked notification 4 with very long content. Lorem ipsum dolor sit amet,				consectetur adipiscing elit. Vestibulum scelerisque ullamcorper sodales. Interdum et				malesuada fames ac ante ipsum primis in faucibus.</span>
-		<svg xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">
-			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross-tiny" />
-		</svg>
-	</div>
-</div>
-      <h1>Chancelog</h1>
-Can be found on Chancelog page
-      </textarea>
-   </section>
-   <footer>
-   <button class="wds-button wds-is-squished wds-is-alternate">Help with Editing</button>
-   <button class="wds-button wds-is-secondary wds-is-squished wds-is-alternate">Request edit access</button>
-   <button class="wds-button wds-is-squished wds-is-alternate">Send Feedback</button>
-   </footer>
-    </div>
-</div>
-
-
 </body>
 </html>
 <head>
 <title>Mpisto War 2018</title>
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#4800ff">
 <link rel="stylesheet" type="text/css" href="Mpisto.css"> <!-- Main CSS -->
+<link rel="stylesheet" type="text/css" href="Headroom.css"> <!-- Main CSS -->
 <link rel="stylesheet" type="text/css" href="Breakpoints.css"> <!-- Non wds-breakpoint CSS --> 
 <link rel="stylesheet" type="text/css" href="MpistoAgent.css"> <!-- Custom CSS -->
 <link rel="stylesheet" type="text/css" href="High Contrast.css"> <!-- High Contrast CSS -->
 
 </head>
-
 <script src="UserAgents.js" ></script>
 <script src="MpistoAgent.js"></script>
-
+<script src="Headroom.js" /></script>
 
 
 <script src="Themes.js"></script>
@@ -1332,7 +2168,6 @@ document.getElementById("Handler").className += " explorer"
 if (navigator.userAgent.match("Edge")) {
 document.getElementById("Handler").className += " edge"
 }
-
 
 /* Mobile Only CSS */
 if (navigator.userAgent.match("Mobile")) {

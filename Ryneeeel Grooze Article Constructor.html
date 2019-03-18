@@ -191,9 +191,73 @@ document.getElementById("Handler").className += " mpisto-servers"
 				<a class="cell search-link search-off">
 					<input type="search" class="mpisto-input" placeholder="Search on Mpisto..."></input>
 				</a>
-        <a class="link cell" href="#modal1"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user" /></svg> <span class="name">My Account</span>
-    </a>
+				  <div class="wds-dropdown wds-has-dark-shadow">
+					<div class="link cell wds-dropdown__toggle"><img class="mpisto-avatar" src="HM100.png"></img> <small class="name">HM100</small> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
+                  </svg>
+				</div>
+					<div class="wds-dropdown__content wds-is-right-aligned">
+					  <ul class="wds-list wds-is-linked">
+					   <li><a>View Profile</a></li>
+					   <li><a>Log Out</a></li>
+					  </ul>
+					</div>
+				  </div>
+       <div class="wds-dropdown wds-has-dark-shadow">
+        <div class="link cell wds-dropdown__toggle"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon ">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-bell" /> 
+</svg> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
+                  </svg>
+    </div>
+        <div class="wds-dropdown__content wds-is-right-aligned wds-is-not-scrollable notification">
+          <ul class="wds-list wds-has-lines-between wds-has-ellipsis">
+           <li class="notification">
+           <a>
+           <div class="wrapper">
+           <img class="mpisto-avatar" src="Frouda.jpg"></img><div><h3>Make your wiki even more better</h3> <br><h6>By Frouda<time>01 Mar 2018</time></h6></div>
+           </div>
+           </a>
+           </li>
+           <li class="notification">
+           <a>
+           <div class="wrapper">
+           <img class="mpisto-avatar" src="Zekzphire.png"></img><div><h3>Building a successfull site</h3> <br><h6>By Zekzphire<time>26 Feb 2018</time></h6></div>
+           </div>
+           </a>
+           </li>
+           <li class="empty">
+           No notifications
+           </li>
+           <li>
+           <div>
+           <a href="#" class="markasread">Mark as read</a>
+           </div>
+           </li>
+          </ul>
+        </div>
+      </div>
+       <div class="wds-dropdown wds-has-dark-shadow">
+        <div class="link cell wds-dropdown__toggle"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon ">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-flag" /> 
+</svg> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
+                  </svg>
+    </div>
+        <div class="wds-dropdown__content wds-is-right-aligned wds-is-not-scrollable flags-dropdown">
+          <ul class="wds-list wds-has-lines-between wds-has-ellipsis">
+           <li>
+           <button class="wds-button wds-is-squished wds-is-full-width">Manage Flags</button>
+           </li>
+           <li>
+           <button class="wds-button wds-is-squished wds-is-full-width">Enforce Flags</button>
+           </li>
+           <li>
+           <button class="wds-button wds-is-squished wds-is-full-width">Clear all Flags</button>
+           </li>
+          </ul>
+        </div>
+      </div>            
 				<a class="link cell large-down" onclick="GNavSearch()">
 					<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon  search-on">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass" /> 
@@ -363,7 +427,6 @@ function HCg1() {
   
 <!-- End Gap -->
 
-
 <section class="mpisto-content" id="Content" onclick="">
 		<div class="mpisto-header-container">
 			<header class="color-header">
@@ -381,7 +444,7 @@ function HCg1() {
 							<a class="link cell" title="Activity"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-activity" /> 
 					</svg></a>
-				  <a disabled title="Mpisto Store" class="link cell">				
+				  <a title="Mpisto Store" class="link cell">				
 					<svg version="1.1" class="wds-icon" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
 					<path fill="currentcolor" d="M52.053 0c-1.28 3.968-2.56 7.893-2.56 13.141v991.104c0 9.259 2.603 14.507 7.851 19.755l487.040-515.968-492.331-508.032zM577.237 542.208l125.909 129.92-179.755 102.4s-228.48 129.877-354.475 202.197l408.32-434.517zM611.413 506.752l135.083 140.459c21.163-11.776 186.496-106.325 210.091-119.467 24.917-14.421 22.4-34.133 1.237-44.629-19.584-10.88-184.917-105.6-209.92-120.96l-136.491 144.597zM577.152 472.619l127.317-135.211-181.717-103.723s-296.235-169.472-394.795-226.048l449.195 464.981z"></path>
 					</svg>
@@ -492,7 +555,7 @@ function HCg1() {
 				</div>
 			</nav>
 		</div>
-
+		</div>
 
 <header class="wds-community-header" id="CommunityHeader">	
   <div class="wds-community-header__wordmark">		
@@ -505,11 +568,11 @@ function HCg1() {
       <a>Mpisto War 2018</a>	
     </div>	
     <div class="wds-community-header__counter wds-is-image">		
-      <span class="wds-community-header__counter-value">57</span>		
+      <span class="wds-community-header__counter-value">19</span>		
       <span class="wds-community-header__counter-label">Images</span>	
     </div>	
     <div class="wds-community-header__counter wds-is-article">		
-      <span class="wds-community-header__counter-value">33</span>		
+      <span class="wds-community-header__counter-value">17</span>		
       <span class="wds-community-header__counter-label">Articles</span>	
     </div>	
     <div class="wds-community-header__wiki-buttons wds-button-group">			
@@ -524,7 +587,7 @@ function HCg1() {
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-activity-small" />
         </svg>			
       </a>
-      <a disabled title="Mpisto Store" class="wds-button wds-is-squished wds-is-secondary">				
+      <a title="Mpisto Store" class="wds-button wds-is-squished wds-is-secondary">				
         <svg version="1.1" class="wds-icon-small wds-icon" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
         <path fill="currentcolor" d="M52.053 0c-1.28 3.968-2.56 7.893-2.56 13.141v991.104c0 9.259 2.603 14.507 7.851 19.755l487.040-515.968-492.331-508.032zM577.237 542.208l125.909 129.92-179.755 102.4s-228.48 129.877-354.475 202.197l408.32-434.517zM611.413 506.752l135.083 140.459c21.163-11.776 186.496-106.325 210.091-119.467 24.917-14.421 22.4-34.133 1.237-44.629-19.584-10.88-184.917-105.6-209.92-120.96l-136.491 144.597zM577.152 472.619l127.317-135.211-181.717-103.723s-296.235-169.472-394.795-226.048l449.195 464.981z"></path>
         </svg>
@@ -675,30 +738,55 @@ function HCg1() {
 
 <!-- End Header -->
 
-  <div class="mpisto-wrapper">
+  <div class="mpisto-wrapper freepseudo">
     <header class="mpisto-page-header" id ="PageHeader">
       <div class="mpisto-page-header-main">
 		<div class="mpisto-page-header-title">
-			<h1 class="mpisto-title">Main Page</h1>
-			<nav class="pageheader-search">
+			<h1 class="mpisto-title editor-edit">
+			<!--
+			<select style="-webkit-appearance:none; -moz-appearance:none; border:0; font:inherit; text-shadow:inherit; -webkit-text-stroke:inherit; -webkit-text-fill-color:inherit; background-color:transparent; margin:0; padding:0; width:auto;">
+				<option value="-1"></option>
+				<option>GMK</option>
+				<option>GUA</option>
+				<option>GFA</option>
+				<option>GTA</option>
+				<option>GHA</option>
+				<option>GPA</option>
+			</select>
+			-->
+			Main Page</h1>
+			<nav class="pageheader-search construct-off">
 			  <input class="mpisto-input" placeholder="Search Mpisto War 2018;"></input>
 			  <button class="wds-button wds-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
 	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass" />
 	</svg>
-			  </button>
+			  </button
 			</nav>
 		</div>
         <h4 class="mpisto-sub">From Mpisto War 2018</h4>
         <div class="mpisto-page-header-contribution">
           <div class="mpisto-page-header-contribution-buttons">
-            <div class="wds-button-group">
-              <a class="wds-is-squished wds-button" href="#modal2">				
+              <a class="wds-is-squished wds-button construct-only" href="#modal10">				
                 <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-lock-small" />
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-article-small" />
               	</svg>				
-                <span>View Source</span>
+                <span>Save Changes</span>
             	</a>
-              <div class="wds-dropdown">				
+              <a class="wds-is-squished wds-button wds-is-secondary construct-only" onclick="EditSwitch()">				
+                <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross-small" />
+              	</svg>				
+                <span>Discard Changes</span>
+            	</a>
+
+            <div class="wds-button-group construct-off">
+              <a class="wds-is-squished wds-button" onclick="EditSwitch()">				
+                <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-pencil-small" />
+              	</svg>				
+                <span>Edit</span>
+            	</a>
+              <div class="wds-dropdown construct-off">				
                 <div class="wds-button wds-is-squished wds-dropdown__toggle">	
                   <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
@@ -709,9 +797,6 @@ function HCg1() {
                     <li><a><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-clock-tiny" />
               	</svg> View History</a></li>
-                    <li><a><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-house" />
-              	</svg> Move</a></li>
                     <li><a><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-lock" />
               	</svg> Protect</a></li>
@@ -731,7 +816,7 @@ function HCg1() {
                 </div>
               </div>		
             </div>
-            <div class="wds-button-group">
+            <div class="wds-button-group construct-off">
               <a class="wds-button wds-is-squished wds-is-secondary">
               <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-reply-small" />
@@ -743,7 +828,7 @@ function HCg1() {
               </svg>
               <span>Talk</span></a>
             </div>
-          <div class="wds-dropdown">				
+          <div class="wds-dropdown construct-off">				
             <div class="wds-button wds-is-squished wds-is-secondary wds-dropdown__toggle">
             <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-share-small" />
@@ -782,7 +867,258 @@ function HCg1() {
     </header>
     <div class="mpisto-article-wrapper">
       <article class="mpisto-article">
+<div class="wds-banner-notification__container constructor-controls construct-only">
+	<div class="wds-banner-notification wds-message">
+		<div class="wds-banner-notification__icon">	
+			<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-flag-small" />
+			</svg>
+		</div>
+		<span class="wds-banner-notification__text">					Experiencing Issues on the Article Builder? Send us Feedback!!!!</span>
+			<svg xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross-tiny" />
+			</svg>
+	</div>
+	<div class="wds-banner-notification  constructor-controls">
+		<span class="wds-banner-notification__text">
+				<div class="wds-dropdown">
+				  <div class="wds-button wds-is-alternate wds-is-squished" title="Styling">
+							  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-bold-small" /> 
+				</svg> 
+				  </div>
+				  <div class="wds-dropdown__content wds-is-not-scrollable">
+					<ul class="wds-list wds-is-linked">
+					  <li><a><span style="font-weight:bold">Bold</span></a></li>
+					  <li><a><span style="font-style:italic">Italics</span></a></li>
+					  <li><a><span style="text-decoration:underline">Underline</span></a></li>
+					  <li><a><span style="text-decoration:line-through">Striked out</span></a></li>
+					  <li class="wds-dropdown-level-2">
+						<a class="wds-dropdown-level-2__toggle"><span>Shadow</span>                   
+					  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown-chevron" viewBox="0 0 12 12">
+						<path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
+					  </svg>
+					  </a>
+					  <div class="wds-dropdown-level-2__content">
+						<ul class="wds-list wds-is-linked">
+						  <li><a><shadow class="small">Small</shadow></a></li>
+						  <li><a><shadow class="small blur">Small/Blurred</shadow></a></li>
+						  <li><a><shadow>Standard</shadow></a></li>
+						  <li><a><shadow class="blur">Standard/Blurred</shadow></a></li>
+						  <li><a><shadow class="large">High</shadow></a></li>
+						  <li><a><shadow class="large blur">High/Blurred</shadow></a></li>
+						  <li><a><shadow class="extreme">Enormous</shadow></a></li>
+						  <li><a><shadow class="extreme blur">Enormous/Blurred</shadow></a></li>
+						</ul>
+					  </div>  
+					  </li>
+					  <li class="wds-dropdown-level-2">
+						<a class="wds-dropdown-level-2__toggle"><span>Stroke</span>                   
+					  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown-chevron" viewBox="0 0 12 12">
+						<path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
+					  </svg>
+					  </a>
+					  <div class="wds-dropdown-level-2__content">
+						<ul class="wds-list wds-is-linked">
+						  <li><a><stroke class="small">Small</stroke></a></li>
+						  <li><a><stroke class="small blur">Small/Blurred</stroke></a></li>
+						  <li><a><stroke>Standard</stroke></a></li>
+						  <li><a><stroke class="blur">Standard/Blurred</stroke></a></li>
+						  <li><a><stroke class="large">High</stroke></a></li>
+						  <li><a><stroke class="large blur">High/Blurred</stroke></a></li>
+						  <li><a><stroke class="extreme">Enormous</stroke></a></li>
+						  <li><a><stroke class="extreme blur">Enormous/Blurred</stroke></a></li>
+						</ul>
+					  </div>  
+					  </li>
+					</ul>
+				  </div>
+				</div>
+				  <a class="wds-button wds-is-alternate wds-is-squished" title="Unordered List">
+							  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small" viewBox="0 0 18 18">
+	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-numbered-list" /> 
+				</svg>
+				  </a>
+				  <a class="wds-button wds-is-alternate wds-is-squished" title="Ordered List">
+							  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small" viewBox="0 0 18 18">
+	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-bullet-list-small" /> 
+				</svg>
+				  </a>
+				  <a class="wds-button wds-is-alternate wds-is-squished" title="Signature (Only use them in talk pages)">
+							  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small" viewBox="0 0 18 18">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-reply" />
+				</svg> <span>Signature</span>
+				  </a>
+				<div class="wds-dropdown">
+				  <div class="wds-button wds-is-alternate wds-is-squished" title="Styling">
+							  <span>Visual Styles</span>            <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" viewBox="0 0 12 12">
+	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" /> 
+	  </svg>
+
+				  </div>
+				  <div class="wds-dropdown__content wds-is-not-scrollable">
+					<ul class="wds-list wds-is-linked">
+					  <li class="wds-dropdown-level-2">
+						<a class="wds-dropdown-level-2__toggle"><span>Block elements</span>                   
+					  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown-chevron" viewBox="0 0 12 12">
+						<path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
+					  </svg>
+					  </a>
+					  <div class="wds-dropdown-level-2__content">
+						<ul class="wds-list wds-is-linked">
+						  <li><a><span>Div</span></a></li>
+						  <li><a><span>Section</span></a></li>
+						  <li><a><span>Article</span></a></li>
+						  <li><a><span>Header</span></a></li>
+						  <li><a><span>Nav</span></a></li>
+						</ul>
+					  </div>  
+					  </li>
+					  <li class="wds-dropdown-level-2">
+						<a class="wds-dropdown-level-2__toggle"><span>Inline elements</span>                   
+					  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown-chevron" viewBox="0 0 12 12">
+						<path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
+					  </svg>
+					  </a>
+					  <div class="wds-dropdown-level-2__content">
+						<ul class="wds-list wds-is-linked">
+						  <li><a><span>Paragraph</span></a></li>
+						  <li><a><span>Span</span></a></li>
+						  <li><a><span>Shadow</span></a></li>
+						  <li><a><span>Stroke</span></a></li>
+						  <li><a><span>Mark</span></a></li>
+						</ul>
+					  </div>  
+					  </li>
+					  <li class="wds-dropdown-level-2">
+						<a class="wds-dropdown-level-2__toggle"><span>Headings</span>                   
+					  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown-chevron" viewBox="0 0 12 12">
+						<path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
+					  </svg>
+					  </a>
+					  <div class="wds-dropdown-level-2__content">
+						<ul class="wds-list wds-is-linked">
+						  <li><a><span>Heading 1</span></a></li>
+						  <li><a><span>Heading 2</span></a></li>
+						  <li><a><span>Heading 3</span></a></li>
+						  <li><a><span>Heading 4</span></a></li>
+						  <li><a><span>Heading 5</span></a></li>
+						  <li><a><span>Heading 6</span></a></li>
+						</ul>
+					  </div>  
+					  </li>
+					  <li class="wds-dropdown-level-2">
+						<a class="wds-dropdown-level-2__toggle"><span>Table Maplupation</span>                   
+					  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown-chevron" viewBox="0 0 12 12">
+						<path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
+					  </svg>
+					  </a>
+					  <div class="wds-dropdown-level-2__content">
+						<ul class="wds-list wds-is-linked">
+						  <li><a><span>Table</span></a></li>
+						  <li><a><span>Table body</span></a></li>
+						  <li><a><span>Table head</span></a></li>
+						  <li><a><span>Table Row</span></a></li>
+						  <li><a><span>Table Header</span></a></li>
+						  <li><a><span>Table Data</span></a></li>
+						  <li><a><span>Table Footer</span></a></li>
+						</ul>
+					  </div>  
+					  </li>
+					  <li class="wds-dropdown-level-2 wds-is-sticked-to-parent">
+						<a class="wds-dropdown-level-2__toggle"><span>Coding</span>                   
+					  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown-chevron" viewBox="0 0 12 12">
+						<path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
+					  </svg>
+					  </a>
+					  <div class="wds-dropdown-level-2__content">
+						<ul class="wds-list wds-is-linked">
+						  <li><a><span>Preformated</span></a></li>
+						  <li><a><span>Code</span></a></li>
+						</ul>
+					  </div>  
+					  </li>
+					</ul>
+				  </div>
+				</div>
+				  <div class="wds-dropdown">
+				  <div class="wds-button wds-is-alternate wds-is-squished" title="Spelling">
+							  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small" viewBox="0 0 24 24">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-document" />
+	 </svg> <span>Spellcheck</span> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" viewBox="0 0 12 12">
+	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" /> 
+	  </svg>
+				  </div>
+				  <div class="wds-dropdown__content">
+					  <ul class="wds-list wds-is-linked" style="line-height:1.2">
+					  <li>
+						<a>
+						<input type="radio" name="spell" id="spell1" checked></input><label for="spell1">Autoselect</label>
+						</a>
+					  </li>
+					  <li>
+						<a title="English (US)">
+						<input type="radio" name="spell" id="spell2"></input><label for="spell2">English (US)</label>
+						</a>
+					  </li>
+					  <li>
+						<a title="English (UK)">
+						<input type="radio" name="spell" id="spell3"></input><label for="spell3">English (UK)</label>
+						</a>
+					  </li>
+					  <li>
+						<a title="French">
+						<input type="radio" name="spell" id="spell4"></input><label for="spell4">Francais</label>
+						</a>
+					  </li>
+					  <li>
+						<a title="German">
+						<input type="radio" name="spell" id="spell5"></input><label for="spell5">Deutsch</label>
+						</a>
+					  </li>
+					  <li>
+						<a title="Spanish">
+						<input type="radio" name="spell" id="spell6"></input><label for="spell6">Espanol</label>
+						</a>
+					  </li>
+					  <li>
+						<a title="Greek">
+						<input type="radio" name="spell" id="spell7"></input><label for="spell7">Ελληνικόν</label>
+						</a>
+					  </li>
+					  <li>
+						<a title="Italian">
+						<input type="radio" name="spell" id="spell8"></input><label for="spell8">Italiano</label>
+						</a>
+					  </li>
+					  <li>
+						<a title="Swedish">
+						<input type="radio" name="spell" id="spell9"></input><label for="spell9">Svenska</label>
+						</a>
+					  </li>
+					  </ul>
+					</div>
+				  </div>
+				  <a class="wds-button wds-is-alternate wds-is-squished" title="Undo last action">
+							  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small" viewBox="0 0 24 24">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-undo" />
+				</svg>
+				  </a>
+				  <a class="wds-button wds-is-alternate wds-is-squished" title="Redo last action">
+							  <svg xmlns="http://www.w3.org/2000/svg"  class="wds-icon wds-icon-small" viewBox="0 0 24 24">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-redo" />
+				</svg>
+				  </a>
+				  <a class="wds-button wds-is-alternate wds-is-squished visualonly" title="Switch to source editing" href="#modal12">
+							  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small" viewBox="0 0 24 24">
+				  <path d="M6.792 8.793L3.535 12.05l3.257 3.258a1.05 1.05 0 0 1-1.484 1.485l-4-4a1.05 1.05 0 0 1 0-1.485l4-4a1.049 1.049 0 1 1 1.484 1.485zm10.516 6.515l3.257-3.258-3.257-3.257a1.05 1.05 0 0 1 1.484-1.485l4 4c.41.41.41 1.075 0 1.485l-4 4a1.049 1.049 0 1 1-1.484-1.485zm-6.24 4.997a1.05 1.05 0 1 1-2.037-.512l4-16a1.05 1.05 0 1 1 2.041.51l-4 16z"/>
+				</svg> <span>Source</span>
+				  </a>
+		</span>
+	</div>
+</div>
       <!--Start Article-->
+	<section class="editor-edit">
       <h1>Welcome</h1>
       This is Mpisto War 2018
       <h2>About</h2>
@@ -903,11 +1239,153 @@ function HCg1() {
 </div>
       <h1>Chancelog</h1>
 Can be found on Chancelog page
+      </section>
       <!--Stop Article-->
       </article>
       <nav class="mpisto-right-pane">
         <div style="width:100%;">
-          <section class="mpisto-module activity-module">
+
+			  <section class="mpisto-module editor-module editor-tools-module construct-only" id="module1">
+				<h2><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">	
+	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-plus" />
+	</svg> <span>Add features and media</span> <a class="module-toggle" onclick="ToggleModule1()">                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny" viewBox="0 0 12 12">
+						<path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
+					  </svg> </a> </h2>
+				  <ul>
+					<li>
+					  <a href="#modal1" class="wds-button"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">	
+	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-image" />
+	</svg><span>Image</span></a>
+					  <div class="wds-dropdown">
+						<div class="wds-button"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">	
+	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-video-camera" /> <div><span>Video</span> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" viewBox="0 0 12 12">
+	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" /> 
+	  </svg> </div> </div>
+					  <div class="wds-dropdown__content">
+						<ol class="wds-list wds-is-linked">
+						  <li><a href="#modal2"><span>Local</span></a></li>
+						  <li><a href="#modal3"><span>Youtube</span></a></li>
+						  <li><a href="#modal4"><span>Vimeo</span></a></li>
+						</ol>
+					  </div>  
+					  </div>
+					  <a href="#modal5" class="wds-button"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">	
+	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-link" /> <span>Link</span></a>
+					  <a href="#modal6" class="wds-button"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">	
+	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-grid" /> <span>Table</span></a>
+					  <a href="#modal7" class="wds-button"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon" viewBox="0 0 24 24">	
+	  <path d="M6.792 8.793L3.535 12.05l3.257 3.258a1.05 1.05 0 0 1-1.484 1.485l-4-4a1.05 1.05 0 0 1 0-1.485l4-4a1.049 1.049 0 1 1 1.484 1.485zm10.516 6.515l3.257-3.258-3.257-3.257a1.05 1.05 0 0 1 1.484-1.485l4 4c.41.41.41 1.075 0 1.485l-4 4a1.049 1.049 0 1 1-1.484-1.485zm-6.24 4.997a1.05 1.05 0 1 1-2.037-.512l4-16a1.05 1.05 0 1 1 2.041.51l-4 16z"/></svg><span>iFrame</span></a>
+					<a href="#modal8" class="wds-button"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">	
+	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-article" /> <span>Infobox</span></a>
+					</li>
+				   </ul>
+				  <footer class="buttons">
+				  <a class="wds-button wds-is-squished wds-is-secondary">Help me decide</a>
+				  </footer>
+			  </section>
+			  
+			  <section class="mpisto-module editor-module editor-findreplace-module construct-only" id="module2">
+				<h2><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">	
+	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass" />
+	</svg> <span>Find and Replace</span> <a class="module-toggle" onclick="ToggleModule2()">                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny" viewBox="0 0 12 12">
+						<path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
+					  </svg> </a> </h2>
+				  <ul>
+					<li>
+					<input class="mpisto-input" id="FindText" placeholder="Find text"></input>
+					<input class="mpisto-input" id="ReplaceText" placeholder="Replace text"></input>
+					<div class="wds-button-group">
+					  <button class="wds-button" title="Finds the next result">Find Next</button>
+					  <button class="wds-button" title="Finds the past result">Find Previous</button>
+					  <button class="wds-button" title="Replaces the next result with the given string">Replace</button>
+					  <button class="wds-button" title="Replaces all instances of the result with the given string">Replace All</button>
+					</div>
+					<br>
+					<div>
+					<input type="checkbox" name="1001" id="a1001"></input><label id="FR_Label" for="a1001">Match case</label>
+					<br>
+					<input type="checkbox" name="1001" id="a1002"></input><label id="FR_Label" for="a1002">Match entire word</label>
+					<br>
+					<input type="checkbox"  name="1001" id="a1003"></input><label id="FR_Label" for="a1003">Don't wrap around</label>
+					<br>
+					<label>Regular Expressions:</label>
+					<br>
+					<input type="radio" name="1002" id="a1011" checked></input><label id="FR_Label" for="a1011">None</label>
+					<br>
+					<input type="radio" name="1002" id="a1012"></input><label id="FR_Label" for="a1012">Both</label>
+					<br>
+					<input type="radio" name="1002" id="a1013"></input><label id="FR_Label" for="a1013">Find input only</label>
+					<br>
+					<input type="radio" name="1002" id="a1014"></input><label id="FR_Label" for="a1014">Replace input only</label>
+					</div>
+					</li>
+				   </ul>
+				  <footer class="buttons">
+				  <a class="wds-button wds-is-squished wds-is-secondary">How to use?</a>
+				  <a class="wds-button wds-is-squished wds-is-secondary">Clear History</a>
+				  </footer>
+			  </section>
+
+			  <section class="mpisto-module editor-module category-module construct-only" id="module3">
+				<h2><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">	
+	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-grid" />
+	</svg> <span>Categories</span> <a class="module-toggle" onclick="ToggleModule3()">                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny" viewBox="0 0 12 12">
+						<path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
+					  </svg> </a> </h2>
+				  <ul>
+					<li>
+						<div class="item">
+							<span>Main Page</span><a title="Edit name"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-pencil" /</svg></a><a title="Remove category"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" /</svg></a>
+						</div>
+						<div class="item">
+							<span>Explore</span><a title="Edit name"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-pencil" /</svg></a><a title="Remove category"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" /</svg></a>
+						</div>
+						<div class="item">
+							<span>Community Pages</span><a title="Edit name"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-pencil" /</svg></a><a title="Remove category"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" /</svg></a>
+						</div>
+						<div class="category-add">
+							<input class="mpisto-input" placeholder="Add new category..."></input> <button class="wds-button wds-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-plus" /</svg> <span>Add</span></button>
+						</div>
+					</li>
+				   </ul>
+				  <footer class="buttons">
+				  <a class="wds-button wds-is-squished wds-is-secondary">How to use?</a>
+				  </footer>
+			  </section>
+
+			  <section class="mpisto-module editor-module template-module construct-only" id="module4">
+				<h2><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">	
+	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-document" />
+	</svg> <span>Templates</span> <a class="module-toggle" onclick="ToggleModule4()">                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny" viewBox="0 0 12 12">
+						<path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
+					  </svg> </a> </h2>
+				  <ul>
+					<li>
+					Horray, you're adding a template. Which kind of template do you want to use?
+						<div class="template-buttons wds-button-group">
+							<a class="wds-button" href="#modal9"><span>Standard</span></a>
+							<a class="wds-button"><span>Lua-Based</span></a>
+						</div>
+					</li>
+				   </ul>
+				  <footer class="buttons">
+				  <a class="wds-button wds-is-squished wds-is-secondary" href="#modal11">Used Templates</a>
+				  </footer>
+			  </section>
+
+
+          <section class="mpisto-module discord-module construct-off">
+            <h2><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small" viewBox="0 0 240 245" width="20" height="20"><path d="M 104.4 103.9 c -5.7 0 -10.2 5 -10.2 11.1 s 4.6 11.1 10.2 11.1 c 5.7 0 10.2 -5 10.2 -11.1 c 0.1 -6.1 -4.5 -11.1 -10.2 -11.1 Z M 140.9 103.9 c -5.7 0 -10.2 5 -10.2 11.1 s 4.6 11.1 10.2 11.1 c 5.7 0 10.2 -5 10.2 -11.1 s -4.5 -11.1 -10.2 -11.1 Z" /><path d="M 189.5 20 h -134 C 44.2 20 35 29.2 35 40.6 v 135.2 c 0 11.4 9.2 20.6 20.5 20.6 h 113.4 l -5.3 -18.5 l 12.8 11.9 l 12.1 11.2 l 21.5 19 V 40.6 c 0 -11.4 -9.2 -20.6 -20.5 -20.6 Z m -38.6 130.6 s -3.6 -4.3 -6.6 -8.1 c 13.1 -3.7 18.1 -11.9 18.1 -11.9 c -4.1 2.7 -8 4.6 -11.5 5.9 c -5 2.1 -9.8 3.5 -14.5 4.3 c -9.6 1.8 -18.4 1.3 -25.9 -0.1 c -5.7 -1.1 -10.6 -2.7 -14.7 -4.3 c -2.3 -0.9 -4.8 -2 -7.3 -3.4 c -0.3 -0.2 -0.6 -0.3 -0.9 -0.5 c -0.2 -0.1 -0.3 -0.2 -0.4 -0.3 c -1.8 -1 -2.8 -1.7 -2.8 -1.7 s 4.8 8 17.5 11.8 c -3 3.8 -6.7 8.3 -6.7 8.3 c -22.1 -0.7 -30.5 -15.2 -30.5 -15.2 c 0 -32.2 14.4 -58.3 14.4 -58.3 c 14.4 -10.8 28.1 -10.5 28.1 -10.5 l 1 1.2 c -18 5.2 -26.3 13.1 -26.3 13.1 s 2.2 -1.2 5.9 -2.9 c 10.7 -4.7 19.2 -6 22.7 -6.3 c 0.6 -0.1 1.1 -0.2 1.7 -0.2 c 6.1 -0.8 13 -1 20.2 -0.2 c 9.5 1.1 19.7 3.9 30.1 9.6 c 0 0 -7.9 -7.5 -24.9 -12.7 l 1.4 -1.6 s 13.7 -0.3 28.1 10.5 c 0 0 14.4 26.1 14.4 58.3 c 0 0 -8.5 14.5 -30.6 15.2 Z" /></svg> Discord Server </h2>
+          <ul>
+          <li>
+          <iframe src="https://discordapp.com/widget?id=443493384540258304&theme=dark" width="248" height="440" allowtransparency="true" frameborder="0"></iframe>
+          </li>
+          </ul>
+              <footer class="buttons">
+              <a class="wds-button wds-is-squished wds-is-secondary" href="https://discordapp.com/invite/signup">Don't have an account?</a>
+              </footer>
+          </section>
+          <section class="mpisto-module activity-module construct-off">
             <h2><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">	
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-activity-small" />
 </svg> Recent Activity </h2>
@@ -929,7 +1407,7 @@ Can be found on Chancelog page
               <a class="wds-button wds-is-squished wds-is-secondary">More Activity</a>
               </footer>
           </section>
-          <section class="mpisto-module logs-module">
+          <section class="mpisto-module logs-module construct-off">
             <h2><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">	
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-eye-small" />
 </svg> Recent Logs </h2>
@@ -949,6 +1427,17 @@ Can be found on Chancelog page
               </ul>
               <footer class="buttons">
               <a class="wds-button wds-is-squished wds-is-secondary">More Logs</a>
+              </footer>
+          </section>
+          <section class="mpisto-module chat-module construct-off">
+            <h2><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">	
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-reply-small" />
+</svg> Communication </h2>
+              <span class="communication-rules">Welcome to Mpisto War 2018!!! Please read the <a>rules</a> before joining</span>
+              <span class="stats">7 Members Online <i>(<a title="Click to see which memebrs chat now">Which?</a>)</i></span>
+              </ul>
+              <footer class="buttons">
+              <a class="wds-button wds-is-squished wds-is-secondary">Join Chat</a>
               </footer>
           </section>
         </div>
@@ -1079,78 +1568,305 @@ Can be found on Chancelog page
 
 <!-- End Toolbar -->
 
+
 <div class="lightbox-container" id="modal1">
     <div class="lightbox">
-      <h1><span>Welcome to Mpisto War 2018</span> <a class="wds-button wds-is-square wds-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
+      <h1><span>Add Image</span> <a class="wds-button wds-is-square wds-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" />
                   </svg></a></h1>
    <section>
-   Hello. Log in or create a new account to gain access to more features
-           <h2>Already have an account?</h2>
-           Chose a social network you want and a popup for logging into an existing account based on site's default UI for that action:
-           <br>
-           <div class="wds-button-group">
-            <a class="wds-button wds-is-fandom-color"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-fandom-heart" /><span>FANDOM</span></a>
-            <a class="wds-button wds-is-facebook-color"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-facebook" /> <span>Facebook</span></a>
-            <a class="wds-button wds-is-discord-color"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon" viewBox="0 0 240 245" width="20" height="20"><path d="M 104.4 103.9 c -5.7 0 -10.2 5 -10.2 11.1 s 4.6 11.1 10.2 11.1 c 5.7 0 10.2 -5 10.2 -11.1 c 0.1 -6.1 -4.5 -11.1 -10.2 -11.1 Z M 140.9 103.9 c -5.7 0 -10.2 5 -10.2 11.1 s 4.6 11.1 10.2 11.1 c 5.7 0 10.2 -5 10.2 -11.1 s -4.5 -11.1 -10.2 -11.1 Z" /><path d="M 189.5 20 h -134 C 44.2 20 35 29.2 35 40.6 v 135.2 c 0 11.4 9.2 20.6 20.5 20.6 h 113.4 l -5.3 -18.5 l 12.8 11.9 l 12.1 11.2 l 21.5 19 V 40.6 c 0 -11.4 -9.2 -20.6 -20.5 -20.6 Z m -38.6 130.6 s -3.6 -4.3 -6.6 -8.1 c 13.1 -3.7 18.1 -11.9 18.1 -11.9 c -4.1 2.7 -8 4.6 -11.5 5.9 c -5 2.1 -9.8 3.5 -14.5 4.3 c -9.6 1.8 -18.4 1.3 -25.9 -0.1 c -5.7 -1.1 -10.6 -2.7 -14.7 -4.3 c -2.3 -0.9 -4.8 -2 -7.3 -3.4 c -0.3 -0.2 -0.6 -0.3 -0.9 -0.5 c -0.2 -0.1 -0.3 -0.2 -0.4 -0.3 c -1.8 -1 -2.8 -1.7 -2.8 -1.7 s 4.8 8 17.5 11.8 c -3 3.8 -6.7 8.3 -6.7 8.3 c -22.1 -0.7 -30.5 -15.2 -30.5 -15.2 c 0 -32.2 14.4 -58.3 14.4 -58.3 c 14.4 -10.8 28.1 -10.5 28.1 -10.5 l 1 1.2 c -18 5.2 -26.3 13.1 -26.3 13.1 s 2.2 -1.2 5.9 -2.9 c 10.7 -4.7 19.2 -6 22.7 -6.3 c 0.6 -0.1 1.1 -0.2 1.7 -0.2 c 6.1 -0.8 13 -1 20.2 -0.2 c 9.5 1.1 19.7 3.9 30.1 9.6 c 0 0 -7.9 -7.5 -24.9 -12.7 l 1.4 -1.6 s 13.7 -0.3 28.1 10.5 c 0 0 14.4 26.1 14.4 58.3 c 0 0 -8.5 14.5 -30.6 15.2 Z" /></svg> <span>Discord</span></a>
-            <a class="wds-button wds-is-googleplus-color"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-googleplus" /> <span>Google</span></a>
-            <a class="wds-button wds-is-twitter-color"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-twitter" /> <span>Twitter</span></a>
-            <a class="wds-button wds-is-asecure-color">      <svg version="1.1" width="55" height="55" class="wds-icon" viewBox="-1 -1 55 55" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <path id="ID0.06426620716229081" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M 230.850 189.850 L 229.150 181.350 L 229.950 175.850 L 234.400 171.800 L 237.250 168.500 L 241.750 163.150 L 248 169.250 L 250.200 171.700 L 253.950 176 L 254.500 180.450 L 253.500 189.500 " transform="matrix(1.82266104221344, 0, 0, 1.82266104221344, -414.25, -294.45)"/>
-  <path id="ID0.0372769720852375" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M 230.600 181.900 L 232.100 180.200 L 241.800 180.250 L 251.700 180.250 L 253.750 182.150 " transform="matrix(1.7334266901016235, 0, 0, -3.7820217609405518, -392.45, 715.9)"/>
-</svg>
- <span>A Secure</span></a>
-            </div>
-           <h2>Don't have an account?</h2>
-           Chose a social network you want and a popup for creating an account based on site's default UI for that action:
-           <br>
-           <div class="wds-button-group">
-            <a class="wds-button wds-is-secondary wds-is-fandom-color"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-fandom-heart" /><span>FANDOM</span></a>
-            <a class="wds-button wds-is-secondary wds-is-facebook-color"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-facebook" /> <span>Facebook</span></a>
- <a class="wds-button wds-is-secondary wds-is-discord-color"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon" viewBox="0 0 240 245" width="20" height="20"><path d="M 104.4 103.9 c -5.7 0 -10.2 5 -10.2 11.1 s 4.6 11.1 10.2 11.1 c 5.7 0 10.2 -5 10.2 -11.1 c 0.1 -6.1 -4.5 -11.1 -10.2 -11.1 Z M 140.9 103.9 c -5.7 0 -10.2 5 -10.2 11.1 s 4.6 11.1 10.2 11.1 c 5.7 0 10.2 -5 10.2 -11.1 s -4.5 -11.1 -10.2 -11.1 Z" /><path d="M 189.5 20 h -134 C 44.2 20 35 29.2 35 40.6 v 135.2 c 0 11.4 9.2 20.6 20.5 20.6 h 113.4 l -5.3 -18.5 l 12.8 11.9 l 12.1 11.2 l 21.5 19 V 40.6 c 0 -11.4 -9.2 -20.6 -20.5 -20.6 Z m -38.6 130.6 s -3.6 -4.3 -6.6 -8.1 c 13.1 -3.7 18.1 -11.9 18.1 -11.9 c -4.1 2.7 -8 4.6 -11.5 5.9 c -5 2.1 -9.8 3.5 -14.5 4.3 c -9.6 1.8 -18.4 1.3 -25.9 -0.1 c -5.7 -1.1 -10.6 -2.7 -14.7 -4.3 c -2.3 -0.9 -4.8 -2 -7.3 -3.4 c -0.3 -0.2 -0.6 -0.3 -0.9 -0.5 c -0.2 -0.1 -0.3 -0.2 -0.4 -0.3 c -1.8 -1 -2.8 -1.7 -2.8 -1.7 s 4.8 8 17.5 11.8 c -3 3.8 -6.7 8.3 -6.7 8.3 c -22.1 -0.7 -30.5 -15.2 -30.5 -15.2 c 0 -32.2 14.4 -58.3 14.4 -58.3 c 14.4 -10.8 28.1 -10.5 28.1 -10.5 l 1 1.2 c -18 5.2 -26.3 13.1 -26.3 13.1 s 2.2 -1.2 5.9 -2.9 c 10.7 -4.7 19.2 -6 22.7 -6.3 c 0.6 -0.1 1.1 -0.2 1.7 -0.2 c 6.1 -0.8 13 -1 20.2 -0.2 c 9.5 1.1 19.7 3.9 30.1 9.6 c 0 0 -7.9 -7.5 -24.9 -12.7 l 1.4 -1.6 s 13.7 -0.3 28.1 10.5 c 0 0 14.4 26.1 14.4 58.3 c 0 0 -8.5 14.5 -30.6 15.2 Z" /></svg> <span>Discord</span></a>
-            <a class="wds-button wds-is-secondary wds-is-googleplus-color"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-googleplus" /> <span>Google</span></a>
-            <a class="wds-button wds-is-secondary wds-is-twitter-color"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-twitter" /> <span>Twitter</span></a>
-            <a class="wds-button wds-is-secondary wds-is-asecure-color">      <svg version="1.1" width="55" height="55" class="wds-icon" viewBox="-1 -1 55 55" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <path id="ID0.06426620716229081" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M 230.850 189.850 L 229.150 181.350 L 229.950 175.850 L 234.400 171.800 L 237.250 168.500 L 241.750 163.150 L 248 169.250 L 250.200 171.700 L 253.950 176 L 254.500 180.450 L 253.500 189.500 " transform="matrix(1.82266104221344, 0, 0, 1.82266104221344, -414.25, -294.45)"/>
-  <path id="ID0.0372769720852375" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M 230.600 181.900 L 232.100 180.200 L 241.800 180.250 L 251.700 180.250 L 253.750 182.150 " transform="matrix(1.7334266901016235, 0, 0, -3.7820217609405518, -392.45, 715.9)"/>
-</svg>
- <span>A Secure</span></a>
-            </div>
-
+   Horay, you're adding a picture<input type="file" class="wds-is-hidden" id="FUpload1" accept="image/*"></input>
+    <br>
+    <label>Name:</label> <input class="mpisto-input" value="" placeholder="Name of the pic"></input> <div class="wds-button-group"><label class="uploadbutton" for="FUpload1"><a class="wds-button"><span>Upload</span></a></label><a class="wds-button"><span>Find Pic from wiki</span></a></div>
+    <br>
+    <br>
+    <label>Image Size (Write full, 0 or leave empty for unchanged size):</label> <input type="number" style="width:60px;" id="InputImage1" placeholder="size"></input>
+	<br>
+	<br>
+    <label>Title:</label> <input class="mpisto-input" placeholder="Description"></input>
+    <br>
+    <br>
+    <label>Position:</label> <input type="radio" name="01" id="01" checked></input><label for="01">Left</label> <input type="radio" name="01" id="02"></input><label for="02">Center</label> <input type="radio" name="01" id="03"></input><label for="03">Right</label>
    </section>
    <footer>
-   <button class="wds-button wds-is-secondary wds-is-alternate wds-is-squished">Can't log in?</button>
+   <button class="wds-button wds-is-secondary wds-is-alternate wds-is-squished">Proceed</button>
+   <button class="wds-button wds-is-secondary wds-is-alternate wds-is-squished">Reset form</button>
    </footer>
     </div>
 </div>
 
 <div class="lightbox-container" id="modal2">
     <div class="lightbox">
-      <h1><span>View Source of Main Page</span> <a class="wds-button wds-is-square wds-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
+      <h1><span>Add Video</span> <a class="wds-button wds-is-square wds-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" />
                   </svg></a></h1>
    <section>
-   <h2>Permission Error</h2>
-   You do not have permission to edit this article for the following reason(s):
-    <ul>
-      <li>
-      This page has been locked to prevent spamming
-      </li>
-      <li>
-      Editing Templates and Wiki's mainpage requires logged-in user. Log in with any supported Social Media to proceed
-      </li>
-    </ul>
-    <h2>Source Code</h2>
-      You can view and copy the source code of the article below:
-      <textarea readonly class="mpisto-article source" style="overflow:auto;">
+   Horay, you're adding a Video<input type="file" class="wds-is-hidden" id="FUpload2" accept="video/*"></input>
+    <br>
+    <label>Name:</label> <input class="mpisto-input" value="" placeholder="Name of the video"></input> <div class="wds-button-group"><label class="uploadbutton" for="FUpload2"><a class="wds-button"><span>Upload</span></a></label><a class="wds-button"><span>Find Video from wiki</span></a></div>
+    <br>
+    <br>
+    <label>Title:</label> <input class="mpisto-input" placeholder="Description"></input>
+    <br>
+    <br>
+    <label>Position:</label> <input type="radio" name="11" id="11" checked></input><label for="11">Left</label> <input type="radio" name="11" id="12"></input><label for="12">Center</label> <input type="radio" name="11" id="13"></input><label for="13">Right</label>
+   </section>
+   <footer>
+   <button class="wds-button wds-is-secondary wds-is-alternate wds-is-squished">Proceed</button>
+   <button class="wds-button wds-is-secondary wds-is-alternate wds-is-squished">Reset form</button>
+   </footer>
+    </div>
+</div>
+
+<div class="lightbox-container" id="modal3">
+    <div class="lightbox">
+      <h1><span>Add Youtube Video</span> <a class="wds-button wds-is-square wds-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" />
+                  </svg></a></h1>
+   <section>
+   Horay, you're adding a Video from Youtube
+    <br>
+    <label>URL:</label> <input type="url" class="mpisto-input" value="" style="width:400px;" placeholder="Youtube Video URL"></input>
+    <br>
+    <br>
+    <label>Title:</label> <input class="mpisto-input" placeholder="Description"></input>
+    <br>
+    <br>
+    <label>Position:</label> <input type="radio" name="21" id="21" checked></input><label for="21">Left</label> <input type="radio" name="21" id="22"></input><label for="22">Center</label> <input type="radio" name="21" id="23"></input><label for="23">Right</label>
+   </section>
+   <footer>
+   <button class="wds-button wds-is-secondary wds-is-alternate wds-is-squished">Proceed</button>
+   <button class="wds-button wds-is-secondary wds-is-alternate wds-is-squished">Reset form</button>
+   </footer>
+    </div>
+</div>
+
+<div class="lightbox-container" id="modal4">
+    <div class="lightbox">
+      <h1><span>Add Vimeo Video</span> <a class="wds-button wds-is-square wds-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" />
+                  </svg></a></h1>
+   <section>
+   Horay, you're adding a Video from Vimeo
+    <br>
+    <label>URL:</label> <input type="url" class="mpisto-input" value="" style="width:400px;" placeholder="Vimeo Video URL"></input>
+    <br>
+    <br>
+    <label>Title:</label> <input class="mpisto-input" placeholder="Description"></input>
+    <br>
+    <br>
+    <label>Position:</label> <input type="radio" name="31" id="31" checked></input><label for="31">Left</label> <input type="radio" name="31" id="32"></input><label for="32">Center</label> <input type="radio" name="31" id="33"></input><label for="33">Right</label>
+   </section>
+   <footer>
+   <button class="wds-button wds-is-secondary wds-is-alternate wds-is-squished">Proceed</button>
+   <button class="wds-button wds-is-secondary wds-is-alternate wds-is-squished">Reset form</button>
+   </footer>
+    </div>
+</div>
+
+
+<div class="lightbox-container" id="modal5">
+    <div class="lightbox">
+      <h1><span>Add Link</span> <a class="wds-button wds-is-square wds-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" />
+                  </svg></a></h1>
+   <section>
+   Horay, you're adding a link
+    <br>
+    <label>URL:</label> <input type="url" class="mpisto-input" value="" style="width:400px;" placeholder="Article Name"></input>
+    <br>
+    <br>
+    <label>Title:</label> <input class="mpisto-input" placeholder="Description"></input>
+    <br>
+    <br>
+    <label>Kind:</label> <input type="radio" name="41" id="41" checked></input><label for="41">Mpisto War Wikis</label> <input type="radio" name="41" id="42"></input><label for="42">External Site</label>
+   </section>
+   <footer>
+   <button class="wds-button wds-is-secondary wds-is-alternate wds-is-squished">Proceed</button>
+   <button class="wds-button wds-is-secondary wds-is-alternate wds-is-squished">Reset form</button>
+   </footer>
+    </div>
+</div>
+
+<div class="lightbox-container" id="modal6">
+    <div class="lightbox">
+      <h1><span>Add Table</span> <a class="wds-button wds-is-square wds-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" />
+                  </svg></a></h1>
+   <section>
+   Horay, you're adding a table
+    <br>
+    <label>Rows:</label> <input type="number" value="3" style="width:40px;" placeholder="Rows"></input> <label>Columns:</label> <input type="number"  value="3" style="width:40px;" placeholder="Columns"></input>
+     <br>
+    <br>
+    <label>Width:</label> <input type="number" style="width:70px;" placeholder="Width" value="100%"></input>
+    <br>
+    <br>
+    <label>Headers:</label> <input type="radio" name="51" id="51" checked></input><label for="51">First Row</label> <input type="radio" name="51" id="52"></input><label for="52">First Column</label> <input type="radio" name="51" id="53"></input><label for="53">First Row & Column</label> <input type="radio" name="51" id="54"></input><label for="54">Nothing</label>
+   </section>
+   <footer>
+   <button class="wds-button wds-is-secondary wds-is-alternate wds-is-squished">Proceed</button>
+   <button class="wds-button wds-is-secondary wds-is-alternate wds-is-squished">Reset form</button>
+   </footer>
+    </div>
+</div>
+
+<div class="lightbox-container" id="modal7">
+    <div class="lightbox">
+      <h1><span>Add IFrame</span> <a class="wds-button wds-is-square wds-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" />
+                  </svg></a></h1>
+   <section>
+   Horay, you're adding an Inline Frame
+    <br>
+    <label>URL:</label> <input type="url" class="mpisto-input" value="" style="width:400px;" placeholder="InlineFrame URL"></input>
+    <br>
+    <br>
+    <label>Width:</label> <input type="number" style="width:70px;" placeholder="Width" value="480"></input> <label>Height:</label> <input type="number" style="width:70px;" placeholder="height" value="340"></input>
+    <br>
+    <br>
+    <label>Position:</label> <input type="radio" name="61" id="61"></input><label for="61">Left</label> <input type="radio" name="61" id="62" checked></input><label for="62">Center</label> <input type="radio" name="61" id="63"></input><label for="63">Right</label>
+    <br>
+    <br>
+    <input type="checkbox" name="62" id="64"></input> <label for="64">Allow Transparency</label>
+	<h2>Sandbox Attribute</h2>
+	Select the ones that apply:
+	<br>
+    <input type="checkbox" name="63" id="1021"></input> <label for="1021">Allow Forms</label>
+    <input type="checkbox" name="63" id="1022"></input> <label for="1022">Allow Modals</label>
+    <input type="checkbox" name="63" id="1023"></input> <label for="1023">Allow Orientation Lock</label>
+    <input type="checkbox" name="63" id="1024"></input> <label for="1024">Allow Pointer Lock</label>
+    <input type="checkbox" name="63" id="1025"></input> <label for="1025">Allow Popups</label>
+    <input type="checkbox" name="63" id="1026"></input> <label for="1026">Allow Popups to Escape Sandbox</label>
+    <input type="checkbox" name="63" id="a1023"></input> <label for="a1023">Allow Presentation</label>
+    <input type="checkbox" name="63" id="1027"></input> <label for="1027">Allow SameOrigin</label>
+    <input type="checkbox" name="63" id="1028"></input> <label for="1028">Allow Scripts</label>
+    <input type="checkbox" name="63" id="1029"></input> <label for="1029">Allow Storage Access by User Activation</label>
+    <input type="checkbox" name="63" id="a1021"></input> <label for="a1021">Allow Top Navigation</label>
+    <input type="checkbox" name="63" id="a1022"></input> <label for="a1022">Allow Top Navigation by User Activation</label>
+   </section>
+   <footer>
+   <button class="wds-button wds-is-secondary wds-is-alternate wds-is-squished">Proceed</button>
+   <button class="wds-button wds-is-secondary wds-is-alternate wds-is-squished">Reset form</button>
+   </footer>
+    </div>
+</div>
+
+<div class="lightbox-container" id="modal8">
+    <div class="lightbox">
+      <h1><span>Add Infobox</span> <a class="wds-button wds-is-square wds-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" />
+                  </svg></a></h1>
+   <section>
+   Horay, you're adding an Infobox
+    <br>
+    <h2><span>Don't have it?</span></h2>
+    <div style="width:720px; margin:auto;">
+    <iframe width="720" height="480" src="Ryneeeel Grooze (Store).html" style="border:1px solid #ccc; border:1px solid var(--content-border);">
+    Loading store...
+    </iframe>
+    </div>
+    <h2><span>Already have it?</span></h2>
+    <label>Title:</label> <input class="mpisto-input" value="" style="width:300px;" placeholder="Infobox Title"></input> <a class="wds-button"><span>Configure data</span></a>
+   </section>
+   <footer>
+   <button class="wds-button wds-is-secondary wds-is-alternate wds-is-squished">Proceed</button>
+   <button class="wds-button wds-is-secondary wds-is-alternate wds-is-squished">Reset form</button>
+   </footer>
+    </div>
+</div>
+
+<div class="lightbox-container" id="modal9">
+    <div class="lightbox">
+      <h1><span>Add Template</span> <a class="wds-button wds-is-square wds-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" />
+                  </svg></a></h1>
+   <section>
+   Horay, you're adding a Template
+    <br>
+    <br>
+    <select>
+    <option value="1">Select...</option>
+    <optgroup label="Your templates">
+      <option value="1">Font Style</option>
+      <option value="1">Font Color</option>
+    </optgroup>
+    <optgroup label="Magic Words">
+      <option value="1" title="Wiki's name">SITENAME</option>
+      <option value="1" title="Wiki's URL">SITEURL</option>
+      <option value="1" title="Pagename without any nanespace">PAGENAME</option>
+      <option value="1" title="Full Pagename">FULLPAGENAME</option>
+      <option value="1" title="Logged in user or Anon if logged out">USERNAME</option>
+      <option value="1" title="Date and time in full">DATETIME</option>
+      <option value="1" title="Date and time in short">SHORTDATETIME</option>
+      <option value="1" title="Only show time">TIME</option>
+    </optgroup>
+    </select> <div class="wds-button-group"><a class="wds-button"><span>Configure selected template</span></a><a class="wds-button"><span>Find more templates from Zekzphire Store</span></a></div>
+   </section>
+   <footer>
+   <button class="wds-button wds-is-secondary wds-is-alternate wds-is-squished">Proceed</button>
+   <button class="wds-button wds-is-secondary wds-is-alternate wds-is-squished">Reset form</button>
+   </footer>
+    </div>
+</div>
+
+<div class="lightbox-container" id="modal10">
+    <div class="lightbox">
+      <h1><span>Save Page</span> <a class="wds-button wds-is-square wds-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" />
+                  </svg></a></h1>
+   <section>
+   Horay, you're saving your page
+   <br>
+   Now Let's add a summary to save it.
+   </h2>Sumarry</h2>
+   Say to us what you changed (Not mandatory)
+   <br>
+   <aside class="editor-field">
+    <input class="mpisto-input summary" placeholder="Add your summary..."></input>
+   </aside>
+   <h2>Options</h2>
+   Additional options for saving the page:
+   <br>
+    <input type="checkbox" name="71" id="71"></input> <label for="71">Mark edit as minor</label>
+    <input type="checkbox" name="71" id="72" checked></input> <label for="72">Follow this page</label>
+    <input type="checkbox" name="71" id="73"></input> <label for="73">Leave a redirect behind if page name was changed</label>
+   </section>
+   <footer>
+   <button class="wds-button wds-is-secondary wds-is-alternate wds-is-squished">Proceed</button>
+   <button class="wds-button wds-is-secondary wds-is-alternate wds-is-squished">Reset form</button>
+   </footer>
+    </div>
+</div>
+
+
+<div class="lightbox-container" id="modal11">
+    <div class="lightbox">
+      <h1><span>List of used templates on "Main Page"</span> <a class="wds-button wds-is-square wds-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" />
+                  </svg></a></h1>
+   <section>
+	List of Templates currently used on this page:
+		<ul>
+			<li>
+				<a><b>GTA</b> Main Page</a> (Admin Protected, <a>Edit</a>)
+			</li>
+		</ul>
+   </section>
+   <footer>
+   <button class="wds-button wds-is-alternate wds-is-squished">Help me</button>
+   </footer>
+    </div>
+</div>
+
+<div class="lightbox-container" id="modal12">
+    <div class="lightbox">
+      <h1><span>Source Editor</span> <a class="wds-button wds-is-square wds-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" />
+                  </svg></a></h1>
+   <section>
+	Edit this page using Source Editor. Click on Save Changes button to apply those changes to Visual Mode as well
+	<textarea class="mpisto-article source" style="overflow:auto;">
       <h1>Welcome</h1>
       This is Mpisto War 2018
       <h2>About</h2>
@@ -1272,14 +1988,13 @@ Can be found on Chancelog page
       <h1>Chancelog</h1>
 Can be found on Chancelog page
       </textarea>
-   </section>
+	</section>
    <footer>
-   <button class="wds-button wds-is-squished wds-is-alternate">Help with Editing</button>
-   <button class="wds-button wds-is-secondary wds-is-squished wds-is-alternate">Request edit access</button>
-   <button class="wds-button wds-is-squished wds-is-alternate">Send Feedback</button>
+   <button class="wds-button wds-is-alternate wds-is-squished">Save Changes</button>
    </footer>
     </div>
 </div>
+
 
 
 </body>
@@ -1287,19 +2002,19 @@ Can be found on Chancelog page
 <head>
 <title>Mpisto War 2018</title>
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#4800ff">
 <link rel="stylesheet" type="text/css" href="Mpisto.css"> <!-- Main CSS -->
+<link rel="stylesheet" type="text/css" href="Headroom.css"> <!-- Main CSS -->
 <link rel="stylesheet" type="text/css" href="Breakpoints.css"> <!-- Non wds-breakpoint CSS --> 
 <link rel="stylesheet" type="text/css" href="MpistoAgent.css"> <!-- Custom CSS -->
 <link rel="stylesheet" type="text/css" href="High Contrast.css"> <!-- High Contrast CSS -->
 
 </head>
-
 <script src="UserAgents.js" ></script>
 <script src="MpistoAgent.js"></script>
+<script src="Headroom.js" /></script>
 
 
-
+<script src="Editor.js"></script>
 <script src="Themes.js"></script>
 
 <script>
@@ -1332,7 +2047,6 @@ document.getElementById("Handler").className += " explorer"
 if (navigator.userAgent.match("Edge")) {
 document.getElementById("Handler").className += " edge"
 }
-
 
 /* Mobile Only CSS */
 if (navigator.userAgent.match("Mobile")) {

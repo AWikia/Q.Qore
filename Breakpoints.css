@@ -138,7 +138,7 @@ column-count:2;
 width:100%;
 }
 
-.mpisto-right-pane, .mpisto-editors-content  .mpisto-right-pane, .mpisto-editors-content .mpisto-wrapper .mpisto-article-wrapper .mpisto-right-pane {
+.mpisto-right-pane, .constructor .mpisto-wrapper .mpisto-right-pane, .mpisto-editors-content  .mpisto-right-pane, .mpisto-editors-content .mpisto-wrapper .mpisto-article-wrapper .mpisto-right-pane {
 width:100%;
 }
 
