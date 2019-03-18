@@ -1,4 +1,4 @@
-# Mpisto
+#Mpisto
 OpenSource Mpirthi Project with great modern browser support.
 
 # Wrappers
@@ -6,6 +6,8 @@ OpenSource Mpirthi Project with great modern browser support.
 These wrappers use the Desktop Skin also known as Mpistoskin2 or Mpisto War 2018:
 
 [Changelog](https://awikia.github.io/Mpisto/Ryneeeel%20Grooze%20Chancelog.html)
+
+[Design System](https://awikia.github.io/Mpisto/Ryneeeel%20Grooze%20Systems.html)
 
 [Settings](https://awikia.github.io/Mpisto/Options.html)
 
@@ -17,6 +19,8 @@ These wrappers use the Desktop Skin also known as Mpistoskin2 or Mpisto War 2018
 
 [Editor](https://awikia.github.io/Mpisto/Ryneeeel%20Grooze%20Editor.html)
  
+[New Editor](https://awikia.github.io/Mpisto/Ryneeeel%20Grooze%20Article%20Contstructor.html)
+
 [EraIcons testcase](https://awikia.github.io/Mpisto/Ryneeeel%20Grooze%20Icons.html)
 
 [Floaring Banners testcase](https://awikia.github.io/Mpisto/Ryneeeel%20Grooze%20Banner.html)
