@@ -560,6 +560,25 @@ font-size:22px;
 footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container td {
 font-size:19px;
 }
+
+/* Don't allocate whole screen */
+html:not(.chat) {
+	box-shadow:0 0 40px 0px;
+	max-width:1600px;
+	margin:0 auto;
+}
+
+html:not(.chat) body, html:not(.chat) body::after, html:not(.chat) .mpisto-gnav, html:not(.chat) header.mpisto-footer-container, html:not(.chat) .lightbox-container {
+	max-width:inherit;
+	margin:inherit;
+	left:auto!important;
+	right:auto!important;
+}
+
+html:not(.chat) body {
+	display:block;
+}
+
 }
 
 
