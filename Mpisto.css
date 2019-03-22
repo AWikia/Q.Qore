@@ -436,7 +436,6 @@ touch-action:manipulation;
 	background-color:var(--background-color);
 (M)touch-action:auto; /* mInerva 11.5- can make unscrollable page with mouse and keyboard */
 	overflow-y:auto;
-	height:100vh;
 	font-weight:500;
 text-shadow:0 0 1px rgba(255,0,0,0.1), 0 0 1px rgba(0,255,0,0.1), 0 0 1px rgba(0,0,255,0.1), 0 0 1px rgba(255,255,0,0.1), 0 0 1px rgba(255,0,255,0.1), 0 0 1px rgba(0,255,255,0.1), 0 0 1px rgba(0,0,0,0.1), 0 0 1px rgba(255,255,255,0.1); /* Partially Embolding */
 }
