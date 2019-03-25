@@ -1114,11 +1114,22 @@ function HCg1() {
 				  <path d="M6.792 8.793L3.535 12.05l3.257 3.258a1.05 1.05 0 0 1-1.484 1.485l-4-4a1.05 1.05 0 0 1 0-1.485l4-4a1.049 1.049 0 1 1 1.484 1.485zm10.516 6.515l3.257-3.258-3.257-3.257a1.05 1.05 0 0 1 1.484-1.485l4 4c.41.41.41 1.075 0 1.485l-4 4a1.049 1.049 0 1 1-1.484-1.485zm-6.24 4.997a1.05 1.05 0 1 1-2.037-.512l4-16a1.05 1.05 0 1 1 2.041.51l-4 16z"/>
 				</svg> <span>Source</span>
 				  </a>
+				  <a class="wds-button wds-is-alternate wds-is-squished visualonly" title="Convert Plain Text to HTML" onclick="HTMLize()">
+							  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small" viewBox="0 0 24 24">
+				  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-document" />
+				</svg> <span>HTMLize</span>
+				  </a>
+				  <a class="wds-button wds-is-alternate wds-is-squished visualonly" title="Convert HTML to Plain Text" onclick="unHTMLize()">
+							  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small" viewBox="0 0 24 24">
+				  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-text" />
+				</svg> <span>Plain text</span>
+				  </a>
+
 		</span>
 	</div>
 </div>
       <!--Start Article-->
-	<section class="editor-edit">
+	<section class="editor-edit" oninput="UpdateSource()">
       <h1>Welcome</h1>
       This is Mpisto War 2018
       <h2>About</h2>
@@ -1815,7 +1826,7 @@ Can be found on Chancelog page
       <h1><span>Save Page</span> <a class="wds-button wds-is-square wds-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" />
                   </svg></a></h1>
-   <section>
+   <section class="save-page-wrapper">
    Horay, you're saving your page
    <br>
    Now Let's add a summary to save it.
@@ -1833,7 +1844,7 @@ Can be found on Chancelog page
     <input type="checkbox" name="71" id="73"></input> <label for="73">Leave a redirect behind if page name was changed</label>
    </section>
    <footer>
-   <button class="wds-button wds-is-secondary wds-is-alternate wds-is-squished">Proceed</button>
+   <button class="wds-button wds-is-secondary wds-is-alternate wds-is-squished" onclick="SaveChanges()">Proceed</button>
    <button class="wds-button wds-is-secondary wds-is-alternate wds-is-squished">Reset form</button>
    </footer>
     </div>
@@ -1866,7 +1877,7 @@ Can be found on Chancelog page
                   </svg></a></h1>
    <section>
 	Edit this page using Source Editor. Click on Save Changes button to apply those changes to Visual Mode as well
-	<textarea class="mpisto-article source" style="overflow:auto;">
+	<textarea autocomplete="off" class="mpisto-article source" style="overflow:auto;">
       <h1>Welcome</h1>
       This is Mpisto War 2018
       <h2>About</h2>
@@ -1990,7 +2001,7 @@ Can be found on Chancelog page
       </textarea>
 	</section>
    <footer>
-   <button class="wds-button wds-is-alternate wds-is-squished">Save Changes</button>
+   <button class="wds-button wds-is-alternate wds-is-squished" onclick="UpdateVisual()">Save Changes</button>
    </footer>
     </div>
 </div>
@@ -2009,12 +2020,14 @@ Can be found on Chancelog page
 <link rel="stylesheet" type="text/css" href="High Contrast.css"> <!-- High Contrast CSS -->
 
 </head>
+
+<script src="jQuery.js"></script>
 <script src="UserAgents.js" ></script>
 <script src="MpistoAgent.js"></script>
 <script src="Headroom.js" /></script>
 
 
-<script src="Editor.js"></script>
+<script src="Constructor.js"></script>
 <script src="Themes.js"></script>
 
 <script>

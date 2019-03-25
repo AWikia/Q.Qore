@@ -5307,7 +5307,7 @@ height:auto;
   box-shadow:none!important;
 }
 
-.sourceon .article-area textarea.mpisto-article[readonly], .article-area textarea.mpisto-article.source[readonly] {
+.sourceon .article-area textarea.mpisto-article[readonly], .sourceon .article-area textarea.mpisto-article.source[readonly] {
   display:block;
 }
 

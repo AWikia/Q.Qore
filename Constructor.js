@@ -1,4 +1,5 @@
-﻿window.MW18oldcontent = document.querySelector(".mpisto-editors-content .mpisto-article.visualonly").innerHTML;
+﻿window.MW18oldtitle = document.querySelector(".mpisto-content .mpisto-title").innerHTML;
+window.MW18oldcontent = document.querySelector(".mpisto-content .mpisto-article section").innerHTML;
 
 function SourceSwitch() {
     var x = document.getElementById("EditorContent");
@@ -57,38 +58,78 @@ function ToggleModule4() {
 }
 
 
-function DiscardChanges() {
-	document.querySelector(".mpisto-editors-content .mpisto-article.visualonly").innerHTML = window.MW18oldcontent;
+function EditSwitch() {
+    var x = document.getElementById("Handler");
+    if (x.className.indexOf("constructor") == -1) { // Opened Editor
+        x.className += " constructor";
+        x.className += " editor";
+	var matches = document.getElementsByClassName('editor-edit');
+	while (matches.length > 0) {
+	  matches.item(0).setAttribute('contenteditable', 'true');
+	  matches.item(0).classList.add('editor-editable');
+	  matches[0].classList.remove('editor-edit');
+	}
+window.MW18oldtitle = document.querySelector(".mpisto-content .mpisto-title").innerHTML;
+window.MW18oldcontent = document.querySelector(".mpisto-content .mpisto-article section").innerHTML;
+    } else { // Used Discard Changes Button
+        x.className = x.className.replace(" constructor", "");
+        x.className = x.className.replace(" editor", "");
+	var matches = document.getElementsByClassName('editor-editable');
+	while (matches.length > 0) {
+	  matches.item(0).removeAttribute('contenteditable');
+	  matches.item(0).classList.add('editor-edit');
+	  matches[0].classList.remove('editor-editable');
+	}
+	document.querySelector(".mpisto-content .mpisto-title").innerHTML = window.MW18oldtitle;
+	document.querySelector(".mpisto-content .mpisto-article section").innerHTML = window.MW18oldcontent;
 	  UpdateSource();
+    }
 }
 
 function HTMLize() {
-var x = $('.mpisto-editors-content .mpisto-article.visualonly:not([readonly])').text();
-$('.mpisto-editors-content .mpisto-article.visualonly').html( x );
+var x = $('.mpisto-content .mpisto-article section').text();
+$('.mpisto-content .mpisto-article section').html( x );
 UpdateSource();
 }
 
 function unHTMLize() {
-var x = $('.mpisto-editors-content .mpisto-article.visualonly').html();
-$('.mpisto-editors-content .mpisto-article.visualonly').text( x );
+var x = $('.mpisto-content .mpisto-article section').html();
+$('.mpisto-content .mpisto-article section').text( x );
 UpdateSource();
 }
 
 
 function UpdateVisual() {
-var x = $('.mpisto-editors-content .mpisto-article.source.sourceonly').val();
-$('.mpisto-editors-content .mpisto-article.visualonly').html( x );
-$('.mpisto-editors-content .mpisto-article.source.visualonly').val( x );
+var x = $('.mpisto-article.source').val();
+$('.mpisto-content .mpisto-article section').html( x );
+$('#modal12 .lightbox section').prepend ( 
+      '<div class="wds-banner-notification__container" id="floatingbanner" style="top:auto; position:relative;">' +
+        '<div class="wds-banner-notification wds-success wds-is-transparent" style="transform:none;" id="BannerSave">' +
+          '<div class="wds-banner-notification__icon">' +
+            '<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">' +
+              '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark-small" />' +
+            '</svg>' +
+          '</div>' +
+          '<span class="wds-banner-notification__text">	Changes Successfully Updated!</span>' +
+          '<svg onclick="RemoveBannerSave()" xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">' +
+            '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross-tiny" />' +
+          '</svg>' +
+        '</div>' +
+      '</div>'
+
+);
+
+setTimeout(RemoveBannerSave2, 10)
+setTimeout(RemoveBannerSave, 2500);
 }
 
 function UpdateSource() {
-var x = $('.mpisto-editors-content .mpisto-article.visualonly').html();
-$('.mpisto-editors-content .mpisto-article.source.visualonly').val( x );
-$('.mpisto-editors-content .mpisto-article.source.sourceonly').val( x );
+var x = $('.mpisto-content .mpisto-article section').html();
+$('.mpisto-article.source').val( x );
 }
 
 function SaveChanges() {
-window.MW18oldcontent = document.querySelector(".mpisto-editors-content .mpisto-article.visualonly").innerHTML;
+window.MW18oldcontent = document.querySelector(".mpisto-content .mpisto-article section").innerHTML;
 $('#modal10 .lightbox .save-page-wrapper').prepend ( 
       '<div class="wds-banner-notification__container" id="floatingbanner" style="top:auto; position:relative;">' +
         '<div class="wds-banner-notification wds-success wds-is-transparent" style="transform:none;" id="BannerSave">' +
@@ -127,4 +168,5 @@ function RemoveBannerSave1() {
     var x = document.getElementById("BannerSave");
 	document.getElementById("floatingbanner").removeChild(x);
 	document.querySelector("#modal10 .lightbox .save-page-wrapper").removeChild(document.getElementById("floatingbanner"));
+	document.querySelector("#modal12 .lightbox section").removeChild(document.getElementById("floatingbanner"));
 }

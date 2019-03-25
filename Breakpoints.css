@@ -1,5 +1,5 @@
 /** Breakpoints for mpisto Zekzphire **/
-/* Widescreen Mode */
+/* Widescreen Mode 
 .wide {
     transform: scalex(0.8);
     background-color: black;
@@ -13,10 +13,17 @@
 	height:100%!important;
 }
 
-/*.wide .mpisto-content, .wide footer.mpisto-footer .mpisto-wrapper, .wide .lightbox, .wide header.mpisto-footer-container > div, .wide header.mpisto-navbar .mpisto-navbar-wrapper {
+.wide .mpisto-content, .wide footer.mpisto-footer .mpisto-wrapper, .wide .lightbox, .wide header.mpisto-footer-container > div, .wide header.mpisto-navbar .mpisto-navbar-wrapper {
 	width:calc(1066px / 0.8)!important;
 }
 */
+
+.mpisto-content, .mpisto-options-content, .mpisto-editors-content, footer.mpisto-footer .mpisto-wrapper, .main .page-wrapper {
+	width:1066px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
 
 @media only screen and (max-width:717px) {
 	.main .mpisto-2018 {
@@ -29,9 +36,13 @@
 /*.mpisto-grooze {
 display:inline!important;
 }*/
-.mpisto-content, footer.mpisto-footer .mpisto-wrapper, .lightbox {
+.mpisto-content, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .mpisto-options-content, .lightbox {
   width:100%!important;
   width:calc(100% - 34px)!important;
+}
+
+.main .page-wrapper {
+	width:100%!important;
 }
 
 .mpisto-2018 .mpisto-content, .mpisto-2018 footer.mpisto-footer, .mpisto-2018 .mpisto-editors-content, .mpisto-2018 .lightbox, .mpisto-2018 .mpisto-options-content, .mpisto-2018 header.mpisto-navbar .mpisto-navbar-wrapper, .mpisto-2018 header.mpisto-global-navigation .mpisto-global-navigation-wrapper, .mpisto-2018 header.mpisto-footer-container > div {
@@ -374,10 +385,12 @@ padding-right:10px;
 }
 */
 
-/*.mpisto-content, header.mpisto-navbar .mpisto-navbar-wrapper, footer.mpisto-footer .mpisto-wrapper, .lightbox {
+.mpisto-content, header.mpisto-navbar .mpisto-navbar-wrapper, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .mpisto-options-content, .main .page-wrapper /*.lightbox */ {
 width:926px;
 }
 
+
+/*
 .wide .mpisto-content, .wide footer.mpisto-footer .mpisto-wrapper, .wide .lightbox, .wide header.mpisto-footer-container > div, .wide header.mpisto-navbar .mpisto-navbar-wrapper {
 	width:calc(926px / 0.8)!important;
 }
@@ -395,6 +408,8 @@ header.mpisto-footer-container > div {
 .mpisto-userpages-header .mpisto-profile-masthead .right-pane {
 	width:50%;
 }
+
+
 
 }
 
@@ -430,10 +445,11 @@ padding-right:30px;
 }
 */
 
-/*.mpisto-content, header.mpisto-navbar .mpisto-navbar-wrapper, footer.mpisto-footer .mpisto-wrapper, .lightbox {
+.mpisto-content, header.mpisto-navbar .mpisto-navbar-wrapper, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .mpisto-options-content, .main .page-wrapper /*.lightbox*/ {
 width:1146px;
 }
 
+/*
 .wide .mpisto-content, .wide footer.mpisto-footer .mpisto-wrapper, .wide .lightbox, .wide header.mpisto-footer-container > div, .wide header.mpisto-navbar .mpisto-navbar-wrapper {
 	width:calc(1146px / 0.8)!important;
 }
@@ -500,10 +516,11 @@ padding-right:30px;
 }
 */
 
-/*.mpisto-content, header.mpisto-navbar .mpisto-navbar-wrapper, footer.mpisto-footer .mpisto-wrapper, .lightbox {
+.mpisto-content, header.mpisto-navbar .mpisto-navbar-wrapper, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .mpisto-options-content, .main .page-wrapper /*.lightbox */ {
 width:1346px;
 }
 
+/*
 .wide .mpisto-content, .wide footer.mpisto-footer .mpisto-wrapper, .wide .lightbox, .wide header.mpisto-footer-container > div, .wide header.mpisto-navbar .mpisto-navbar-wrapper {
 	width:calc(1346px / 0.8)!important;
 }

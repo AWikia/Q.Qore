@@ -896,7 +896,8 @@ height:30px;
 @media only screen and (min-width:960px) {
 
 .mpisto-header-container {
-background-image:linear-gradient(to bottom, rgba(248,248,248,0.6) 35%, rgba(23,23,23,0.3) 70%);
+background-image:linear-gradient(to bottom, #18bbc5 35%, rgba(23,23,23,0.3) 70%);
+background-image:linear-gradient(to bottom, var(--button-color) 35%, rgba(23,23,23,0.3) 70%);
 background-blend-mode:soft-light;
 }
 
