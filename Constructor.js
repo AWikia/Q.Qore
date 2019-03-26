@@ -130,6 +130,7 @@ $('.mpisto-article.source').val( x );
 
 function SaveChanges() {
 window.MW18oldcontent = document.querySelector(".mpisto-content .mpisto-article section").innerHTML;
+window.MW18oldtitle = document.querySelector(".mpisto-content .mpisto-title").innerHTML;
 $('#modal10 .lightbox .save-page-wrapper').prepend ( 
       '<div class="wds-banner-notification__container" id="floatingbanner" style="top:auto; position:relative;">' +
         '<div class="wds-banner-notification wds-success wds-is-transparent" style="transform:none;" id="BannerSave">' +
