@@ -52,6 +52,21 @@ Raleway = Rest
 /* Arimo */
 @import url('https://fonts.googleapis.com/css?family=Arimo:400,700&subset=cyrillic,cyrillic-ext,greek,greek-ext,hebrew,latin-ext,vietnamese');
 
+
+/* GTK Font (By GTK Team) */
+@font-face {
+    font-family:  GTK;
+    src:url('GTK-Regular.ttf') format('truetype');
+	font-weight:400;
+}
+
+@font-face {
+    font-family:  GTK;
+    src:url('GTK-Bold.ttf') format('truetype');
+	font-weight:700;
+}
+
+
 /* Mpisto font */
 @font-face {
     font-family:  Mpisto;
@@ -486,7 +501,7 @@ font-family:Cutive, "Liberation Serif", serif!important; /* Use the preloaded fi
 /* Roboto */
 
 .main .mob3-font {
-font-family:Merriweather Sans, "Arial", sans-serif!important; /* Uses Rubik Font */
+font-family:GTK, Merriweather Sans, "Arial", sans-serif!important; /* Uses Rubik Font */
 }
 
 .serif.main .mob3-font {
@@ -596,8 +611,48 @@ background-color:transparent!important;
 background-image:none!Important;
 }
 
+/* Monaco Skin Compatibility CSS */
+.color1 {
+	background-color:#18bbc5;
+	background-color: var(--button-color);
+	color: black;
+	color:var(--button-color-text)
+}
+
+.color1 a {
+	color:inherit;
+}
+
+.color2 {
+	background-color: #ccc;
+	background-color:var(--content-border);
+}
+
+.dark_text_1, .dark_text_2 {
+	color: #18bbc5;
+	color:rgb(var(--link-color));
+}
 
 
+.accent	{
+
+	background-color: #92DFE4;
+	background-color:var(--emphasis-bg);
+	border-color: #18bbc5;
+	border-color:rgb(var(--link-color));
+	color: #000;
+	color: var(--content-color);
+}
+
+.neutral {
+
+	background-color: #ccc;
+	background-color: var(--content-border);
+	border-color: #18bbc5;
+	border-color:rgb(var(--link-color));
+	color: #000;
+	color: var(--content-color);
+}
 
 
 body:not(.editor) .mpisto-article floatingbanner .wds-banner-notification__container {
@@ -611,6 +666,8 @@ body:not(.editor) .mpisto-article floatingbanner .wds-banner-notification__conta
 #OptionsContent.old .new {
 	display:none!important;
 }
+
+/* Monaco-Compatibility */
 
 
 floatingbanner {
@@ -1678,6 +1735,50 @@ border:0
 background-color:transparent;
 color:#47ddff}
 
+/*.wds-button {
+	font-weight:500;
+	font-size:14px;
+	border-radius:8px;
+	border-radius:calc(var(--button-radius) * 2);
+	text-transform:none;
+	transition-property:color, background-color, border-color, opacity;
+	transition-duration:150ms, 200ms, 250ms, 300ms;
+	letter-spacing:normal;
+	padding:7px 16px;
+}
+
+.wds-button .wds-dropdown__toggle-chevron {
+	width:13px;
+	height:13px;
+}
+
+
+.wds-button.wds-is-active,.wds-button:active,.wds-button:focus:not(:disabled),.wds-button:hover:not(:disabled){
+background-color:#00647a;
+border-color:#00647a;
+text-decoration:none;
+}
+
+.wds-button.wds-is-secondary{
+background-color:transparent;
+border-color:#00b7e0;
+color:#00b7e0
+}
+.wds-button.wds-is-secondary.wds-is-active,.wds-button.wds-is-secondary:active,.wds-button.wds-is-secondary:focus:not(:disabled),.wds-button.wds-is-secondary:hover:not(:disabled){
+background-color:transparent;
+border-color:#00647a;
+color:#00647a;
+}
+.wds-button.wds-is-text{
+background-color:transparent;
+color:#00b7e0;
+border:0
+}
+.wds-button.wds-is-text.wds-is-active,.wds-button.wds-is-text:active,.wds-button.wds-is-text:focus:not(:disabled),.wds-button.wds-is-text:hover:not(:disabled){
+background-color:transparent;
+color:#00647a}
+*/
+
 a.wds-button,button.wds-button{
 cursor:url("Windows/hand.cur"),pointer
 }
@@ -1752,6 +1853,7 @@ text-align:left
 .wds-button .wds-dropdown__content{
 top:calc(100% + 1px)
 }
+
 
 .wds-button-group{
 -ms-flex-align:stretch;
@@ -4255,6 +4357,28 @@ border-bottom-right-radius:inherit;
 
 .mpisto-module.template-module .template-buttons .wds-button {
 	flex:1;
+}
+
+/* Tables */
+table.wikitable {
+	border-collapse:collapse;
+	border:1px solid #ccc;
+	border-color:var(--content-border);
+	background-color:#ffffff;
+	background-color:var(--dropdown-bg);
+	width:100%;
+	margin:1px 0;
+}
+
+table.wikitable th, table.wikitable td {
+	border:1px solid #b3b3b3;
+	border-color:var(--content-border-dark);
+	padding:2px;
+}
+
+table.wikitable th {
+	background-color:#ccc;
+	background-color:var(--content-border);
 }
 
 
