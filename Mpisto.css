@@ -2315,6 +2315,7 @@ border-left-color:rgba(var(--community-header-text),0.8);
 		width:100%;
 		display:table;
 		z-index:20;
+		position:relative;
 	}
 
 
