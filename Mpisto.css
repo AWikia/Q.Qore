@@ -2314,7 +2314,7 @@ border-left-color:rgba(var(--community-header-text),0.8);
 	.mpisto-header-container-wrapper {
 		width:100%;
 		display:table;
-		z-index:inherit;
+		z-index:20;
 	}
 
 
@@ -2330,7 +2330,7 @@ border-left-color:rgba(var(--community-header-text),0.8);
 	.color-header {
 		min-height:60px;
 		position:relative;
-		z-index:inherit;
+		z-index:20;
 	}
 	
 
