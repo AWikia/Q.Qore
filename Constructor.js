@@ -1,5 +1,19 @@
 ﻿window.MW18oldtitle = document.querySelector(".mpisto-content .mpisto-title").innerHTML;
 window.MW18oldcontent = document.querySelector(".mpisto-content .mpisto-article section").innerHTML;
+window.MW18unsaved = false
+
+function UnsaveWarn () {
+	window.MW18unsaved = true;
+    var title = document.querySelector(".mpisto-content .mpisto-title");
+    if (title.className.indexOf("unsaved") == -1) {
+        title.className += " unsaved";
+    }
+    /* Remove Unsaved Changes Warning if user reverts changes made in the article manualy */
+    if ((window.MW18oldcontent === document.querySelector(".mpisto-content .mpisto-article section").innerHTML) & (window.MW18oldtitle === document.querySelector(".mpisto-content .mpisto-title").innerHTML)) {
+		window.MW18unsaved = false
+		title.className = title.className.replace (" unsaved", "");
+   }
+}
 
 function SourceSwitch() {
     var x = document.getElementById("EditorContent");
@@ -72,17 +86,33 @@ function EditSwitch() {
 window.MW18oldtitle = document.querySelector(".mpisto-content .mpisto-title").innerHTML;
 window.MW18oldcontent = document.querySelector(".mpisto-content .mpisto-article section").innerHTML;
     } else { // Used Discard Changes Button
-        x.className = x.className.replace(" constructor", "");
-        x.className = x.className.replace(" editor", "");
-	var matches = document.getElementsByClassName('editor-editable');
-	while (matches.length > 0) {
-	  matches.item(0).removeAttribute('contenteditable');
-	  matches.item(0).classList.add('editor-edit');
-	  matches[0].classList.remove('editor-editable');
-	}
-	document.querySelector(".mpisto-content .mpisto-title").innerHTML = window.MW18oldtitle;
-	document.querySelector(".mpisto-content .mpisto-article section").innerHTML = window.MW18oldcontent;
-	  UpdateSource();
+		if (window.MW18unsaved === true) {
+			if (confirm("Discard changes to " + $('.mpisto-content .mpisto-title').text() +"?. If you do, any unsaved changes will be lost" ) === true) {
+				x.className = x.className.replace(" constructor", "");
+				x.className = x.className.replace(" editor", "");
+			var matches = document.getElementsByClassName('editor-editable');
+			while (matches.length > 0) {
+			  matches.item(0).removeAttribute('contenteditable');
+			  matches.item(0).classList.add('editor-edit');
+			  matches[0].classList.remove('editor-editable');
+			}
+			document.querySelector(".mpisto-content .mpisto-title").innerHTML = window.MW18oldtitle;
+			document.querySelector(".mpisto-content .mpisto-article section").innerHTML = window.MW18oldcontent;
+			  UpdateSource();
+			window.MW18unsaved = false;
+			var title = document.querySelector(".mpisto-content .mpisto-title");
+			title.className = title.className.replace (" unsaved", "");
+			}		
+		} else {
+				x.className = x.className.replace(" constructor", "");
+				x.className = x.className.replace(" editor", "");
+			var matches = document.getElementsByClassName('editor-editable');
+			while (matches.length > 0) {
+			  matches.item(0).removeAttribute('contenteditable');
+			  matches.item(0).classList.add('editor-edit');
+			  matches[0].classList.remove('editor-editable');
+			}
+		}
     }
 }
 
@@ -100,6 +130,7 @@ UpdateSource();
 
 
 function UpdateVisual() {
+UnsaveWarn();
 var x = $('.mpisto-article.source').val();
 $('.mpisto-content .mpisto-article section').html( x );
 $('#modal12 .lightbox section').prepend ( 
@@ -126,11 +157,15 @@ setTimeout(RemoveBannerSave, 2500);
 function UpdateSource() {
 var x = $('.mpisto-content .mpisto-article section').html();
 $('.mpisto-article.source').val( x );
+UnsaveWarn();
 }
 
 function SaveChanges() {
 window.MW18oldcontent = document.querySelector(".mpisto-content .mpisto-article section").innerHTML;
 window.MW18oldtitle = document.querySelector(".mpisto-content .mpisto-title").innerHTML;
+window.MW18unsaved = false;
+var title = document.querySelector(".mpisto-content .mpisto-title");
+title.className = title.className.replace (" unsaved", "");
 $('#modal10 .lightbox .save-page-wrapper').prepend ( 
       '<div class="wds-banner-notification__container" id="floatingbanner" style="top:auto; position:relative;">' +
         '<div class="wds-banner-notification wds-success wds-is-transparent" style="transform:none;" id="BannerSave">' +

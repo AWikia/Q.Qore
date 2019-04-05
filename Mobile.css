@@ -7,24 +7,29 @@ display:block;
 
 
 :root, .wds-button {
-	/* Override some variables used in Body and some wds-components */
-/*
---background-image:url("");
---background-color:#f6f6f6;
---link-color:0,214,214;
---button-color:#18bbc6;
---button-color-dark:#18F0F0;
---button-color-text:white;
---content-bg:#ffffff;
---dropdown-bg:#FFFFFF;
---content-border:#cccddd;
---content-color:#0d0d0d;
---community-header-bg:24,187,198;
---community-header-text:248,248,248;
-*/
 font-family:"Mpisto 2019", "Mpisto", "Flockk", "Source Pro Sans", "Noto Sans", "Noto Sans KR", "Noto Sans JP", "Noto Sans SC", "Noto Sans TC", sans-serif;
 display:block;
 }
+
+.store {
+--background-image:url("");
+--background-color:#f6f6f6;
+--link-color:0,214,214;
+--link-color-dark:0,189,189;
+--link-color-text:black;
+--content-bg:#ffffff;
+--dropdown-bg:#FFFFFF;
+--emphasis-bg:#86ECEC;
+--content-border:#cccccc;
+--content-border-dark:#B3B3B3;
+--content-color:#002a32;
+--button-color:#00D6D6;
+--button-color-dark:#00BDBD;
+--button-color-text:black;
+--community-header-bg:19,40,44;
+--community-header-text:248,248,248;
+}
+
 
 *:not(.store-header), :not(.store-header):before, :not(.store-header):after {
 backdrop-filter:none!important;
@@ -914,13 +919,10 @@ display:table;
 
 .main body {
 margin-top:0!important;
-background-color:#e995ca!important;
-background-color:var(--background-color)!important;
-background:linear-gradient(#18bbc5, #03A2AD);
-background:linear-gradient(var(--button-color-dark), var(--background-color));
-background-size:100% 100vh;
-background-repeat:no-repeat;
 overflow-x:hidden!important;
+background-size:cover;
+background-repeat:no-repeat;
+background-position:center;
 }
 
 .wiki-page-header__wrapper {

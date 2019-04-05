@@ -65,10 +65,10 @@ margin-top:8px!important;
 }
 */
 
-.mpisto-2018, .mpisto-2018:after {
+/*.mpisto-2018, .mpisto-2018:after {
   background-image:none!important
 }
-
+*/
 /* Fixes for Blink, Webkit, Gecko and Qorta
 ** Blink and Webkit do not render fixed elements.
 ** Gecko and Qorta do but items do not seem to be clickable
@@ -578,7 +578,7 @@ footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container td {
 font-size:19px;
 }
 
-/* Don't allocate whole screen */
+/* Don't allocate whole screen 
 html:not(.chat) {
 	box-shadow:0 0 40px 0px;
 	max-width:1600px;
@@ -595,7 +595,7 @@ html:not(.chat) body, html:not(.chat) body::after, html:not(.chat) .mpisto-gnav,
 html:not(.chat) body {
 	display:block;
 }
-
+*/
 }
 
 

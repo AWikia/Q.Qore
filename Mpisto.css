@@ -436,7 +436,8 @@ color:var(--content-color);
 background-repeat:no-repeat;
 background-attachment:local;
 background-attachment:fixed;
-background-position:top center;
+background-position:center;
+background-size:cover;
 cursor:url("Windows/default.cur"), default;
 border-radius:1px; /* mInerva and some other browsers do not render local attachment without this */
 overscroll-behavior:none;
@@ -586,7 +587,7 @@ height:min-content;
   font-family:var(--secondary-font), cursive;
 }
 
-.mpisto-2018:not(.explorer):not(.edge):after {
+.mpisto-2018:before, .mpisto-2018-mobile:before {
 	top:0;
 	left:0;
 	width:100%;
@@ -597,8 +598,8 @@ height:min-content;
 	background:inherit;
 	background-attachment:inherit;
 	z-index:-1;
-	background-image:url("headbg.jpg");
-	background-image:var(--background-image);
+	background-image:linear-gradient(to bottom, rgba(0,0,0,0), #e995ca), url("headbg.jpg");
+	background-image:linear-gradient(to bottom, rgba(0,0,0,0), var(--background-color)), var(--background-image);
 	background-color:#e995ca;
 	background-color:var(--background-color);
   image-rendering:initial;                  /* CSS4 Proposed  */
@@ -606,7 +607,27 @@ height:min-content;
   -qq-image-blurring:tick;                  /* 4x4 Web 1-2    */
 }
 
-.mpisto-2018:not(.explorer):not(.edge) {
+
+
+.mpisto-2018:after, .mpisto-2018-mobile:after {
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	position:fixed;
+	display:block;
+	content:"";
+	background:inherit;
+	background-attachment:inherit;
+	z-index:-1;
+	opacity:0.5;
+	background-color:#e995ca;
+	background-color:var(--background-color);
+	pointer-events:none;
+}
+
+
+.mpisto-2018, .mpisto-2018-mobile {
 background-color:transparent!important;
 background-image:none!Important;
 }
@@ -1262,13 +1283,27 @@ cursor:url("Windows/default.cur"), default;
 
 }
 
+/* Notifications */
+.notification.wds-dropdown__content .wds-list { 
+	display:flex;
+	flex-direction:column;
+}
 
-.notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:first-child, 
-.notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:first-child > a {
+.notification.wds-dropdown__content .wds-list > li{ 
+	width:100%;
+	width:calc(100% - 18px);
+	width:-webkit-fill-available;
+	width:-moz-available;
+	width:-moz-stretch;
+	width:stretch;
+}
+
+.notification.wds-dropdown__content .wds-list > li:first-child, 
+.notification.wds-dropdown__content .wds-list > li:first-child > a {
   border-radius:3px 3px 0 0;
 }
 
-.notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child):not(.empty) > a {
+.notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty) > a {
   display:table-cell;
   width:100%;
   padding:0 9px;
@@ -1277,32 +1312,27 @@ cursor:url("Windows/default.cur"), default;
 
 
 
-.notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child):not(.empty) {
+.notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty) {
   display:table;
   position:relative;
   z-index:2;
   cursor:url("Windows/hand.cur"), pointer;
   text-decoration:none;
-  width:calc(100% - 19px);
 }
 
-.notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:first-child):not(:last-child):not(.empty) {
-  width:calc(100% - 18px);
-}
-
-.notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child) > a * {
+.notification.wds-dropdown__content .wds-list > li:not(:last-child) > a * {
   cursor:inherit;
 }
 
-.notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li.empty {
+.notification.wds-dropdown__content .wds-list > li.empty {
   padding:18px 18px 11px;
 }
 
-.notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li {
+.notification.wds-dropdown__content .wds-list > li {
 margin:0;
 }
 
-.notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child):not(.empty) a:after {
+.notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty) a:after {
   position:absolute;
   opacity:0.1;
   top:0;
@@ -1315,11 +1345,11 @@ margin:0;
   z-index:-1;
   border-radius:inherit;
 }
-.notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child) a:hover {
+.notification.wds-dropdown__content .wds-list > li:not(:last-child) a:hover {
 text-decoration:none;
 }
 
-.notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child):not(.empty) a:hover:after {
+.notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty) a:hover:after {
   background-color:#000;
   background-color:var(--content-color);
 }
@@ -1329,11 +1359,11 @@ text-decoration:none;
 padding:0;
 }
 
-.notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child) a > .wrapper {
+.notification.wds-dropdown__content .wds-list > li:not(:last-child) a > .wrapper {
 display:table;
 }
 
-.notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child) a img {
+.notification.wds-dropdown__content .wds-list > li:not(:last-child) a img {
   box-sizing:border-box;
   border:0;
   border-radius:50%;
@@ -1343,13 +1373,13 @@ display:table;
   opacity:1;
 }
 
-.notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child) a > .wrapper div {
+.notification.wds-dropdown__content .wds-list > li:not(:last-child) a > .wrapper div {
     display:table-cell;
     vertical-align:middle;
     padding-left:5px;
 }
 
-.notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child) a div h3 {
+.notification.wds-dropdown__content .wds-list > li:not(:last-child) a div h3 {
   font-size:16px;
   font-weight:bolder;
   color:#1a1a1a;
@@ -1360,16 +1390,16 @@ display:table;
   font-family:var(--secondary-font), cursive;
 }
 
-.notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li.new a div h3 {
+.notification.wds-dropdown__content .wds-list > li.new a div h3 {
   color:limegreen;
 }
 
-.notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li.reply a div h3 {
+.notification.wds-dropdown__content .wds-list > li.reply a div h3 {
   color:orange;
 }
 
 
-.notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li.new.highlighted > a:before {
+.notification.wds-dropdown__content .wds-list > li.new.highlighted > a:before {
   position:absolute;
   top:0;
   left:0;
@@ -1384,7 +1414,7 @@ display:table;
   outline-offset:-1px;
 }
 
-.notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child) div h6 {
+.notification.wds-dropdown__content .wds-list > li:not(:last-child) div h6 {
   font-size:11px;
   font-weight:lighter;
   display:block;
@@ -1394,152 +1424,16 @@ display:table;
   line-height:0;
 }
 
-.notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li a div h6 time::before {
+.notification.wds-dropdown__content .wds-list > li a div h6 time::before {
   content:" ~ "
 }
 
-.notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li + .empty {
+.notification.wds-dropdown__content .wds-list > li + .empty {
 display:none;
 }
 
-.notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:last-child {
+.notification.wds-dropdown__content .wds-list > li:last-child {
   text-align:center;
-}
-
-/* Canary Hack */
-
-.notification.wds-dropdown-level-2__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child):not(.empty) {
-  display:table;
-  position:relative;
-  z-index:2;
-  cursor:url("Windows/hand.cur"), pointer;
-  text-decoration:none;
-  width:calc(100% - 19px);
-}
-
-.notification.wds-dropdown-level-2__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child) > a * {
-  cursor:inherit;
-}
-
-.notification.wds-dropdown-level-2__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li.empty {
-  padding:18px 18px 11px;
-}
-
-.notification.wds-dropdown-level-2__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li {
-margin:0;
-}
-
-.notification.wds-dropdown-level-2__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child):not(.empty) a:after {
-  position:absolute;
-  opacity:0.1;
-  top:0;
-  left:0;
-  content:"";
-  display:block;
-  width:calc(100% + 0.5px);
-  height:100%;
-  transition:background-color .2s ease 0.01s;
-  z-index:-1;
-  border-radius:inherit;
-}
-.notification.wds-dropdown-level-2__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child) a:hover {
-text-decoration:none;
-}
-
-.notification.wds-dropdown-level-2__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child):not(.empty) a:hover:after {
-  background-color:#000;
-  background-color:var(--content-color);
-}
-
-
-.wds-dropdown__content .wds-list.wds-is-linked .wds-dropdown-level-2 .wds-dropdown-level-2__content.notification {
-padding:0;
-left:auto;
-right:100%;
-}
-
-.notification.wds-dropdown-level-2__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child) a > .wrapper {
-display:table;
-}
-
-.notification.wds-dropdown-level-2__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child) a img {
-  box-sizing:border-box;
-  border:0;
-  border-radius:50%;
-}
-
-.notification.wds-dropdown-level-2__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child) a > .wrapper div {
-    display:table-cell;
-    vertical-align:middle;
-    padding-left:5px;
-}
-
-.notification.wds-dropdown-level-2__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child) a div h3 {
-  font-size:16px;
-  font-weight:bolder;
-  color:#1a1a1a;
-  color:var(--content-color);
-  text-decoration:none;
-  margin:0;
-  font-family:"Arimo", "Liberation Sans", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR", cursive;
-  font-family:var(--secondary-font), cursive;
-}
-
-.notification.wds-dropdown-level-2__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li.new a div h3 {
-  color:limegreen;
-}
-
-.notification.wds-dropdown-level-2__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li.reply a div h3 {
-  color:orange;
-}
-
-
-.notification.wds-dropdown-level-2__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li.new.highlighted > a:before {
-  position:absolute;
-  top:0;
-  left:0;
-  content:"";
-  display:block;
-  width:calc(100% + 0.5px);
-  height:calc(100% - 1px);
-  transition:background-color .2s ease 0.01s;
-  z-index:1;
-  border-radius:inherit;
-  outline:1px solid limegreen;
-  outline-offset:-1px;
-}
-
-.notification.wds-dropdown-level-2__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child) div h6 {
-  font-size:11px;
-  font-weight:lighter;
-  display:block;
-  margin:0;
-  color:#1a1a1a;
-  color:var(--content-color);
-  line-height:0;
-}
-
-.notification.wds-dropdown-level-2__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li a div h6 time::before {
-  content:" ~ "
-}
-
-.notification.wds-dropdown-level-2__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li + .empty {
-display:none;
-}
-
-.notification.wds-dropdown-level-2__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:last-child {
-  text-align:center;
-}
-
-.notifications-global.wds-dropdown__content .wds-list.wds-is-linked .wds-dropdown-level-2 {
-margin-right:9px;
-margin-left:0;
-}
-
-.notifications-global.wds-dropdown__content .wds-list.wds-is-linked .wds-dropdown-level-2 .wds-dropdown-chevron{
--ms-transform:rotate(90deg);
-transform:rotate(90deg);
-margin-left:9px;
 }
 
 
@@ -2385,7 +2279,7 @@ border-left-color:rgba(var(--community-header-text),0.8);
 		background-image:url("Graphic.png");
 		background-size:contain;
 		background-position:right;
-		background-repeat:no-repeat;		
+		background-repeat:no-repeat;
 	}
 
 	.mpisto-header-container::before {
@@ -2417,6 +2311,12 @@ border-left-color:rgba(var(--community-header-text),0.8);
     border-radius:inherit;
 }
 
+	.mpisto-header-container-wrapper {
+		width:100%;
+		display:table;
+		z-index:inherit;
+	}
+
 
 	.mpisto-header-container .wds-dropdown {
 		display:table-cell;
@@ -2433,10 +2333,21 @@ border-left-color:rgba(var(--community-header-text),0.8);
 		z-index:inherit;
 	}
 	
-	.color-header .wordmark img {
-		height:54px;
-		margin:0 10px;
+
+	.mpisto-header-container .wordmark {
 		vertical-align:middle;
+		height:65px;
+		float:left;
+		margin:12px 0 0 12px;
+		z-index:25;
+		position:relative;
+	}
+
+
+	.mpisto-header-container .wordmark img {
+		height:inherit;
+		vertical-align:middle;
+		display:table-cell;
 	}
 
 
@@ -2516,7 +2427,7 @@ border-left-color:rgba(var(--community-header-text),0.8);
 		font-size:30px;
 		font-weight:800;
 		height:60px;
-		padding:0 16px;
+		padding:0 16px 0 11px;
 		font-family:"Arimo", "Liberation Sans", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR", cursive;
 		font-family:var(--secondary-font), cursive;
 		white-space:pre-wrap;
@@ -2543,21 +2454,33 @@ border-left-color:rgba(var(--community-header-text),0.8);
 		z-index:2;
 	}
 
+@media only screen and (max-width:1099px) {
+	.mpisto-header-container .wordmark {
+		height:54px;
+		margin:0 10px;
+	}
+
+	.color-nav {
+		clear:both;
+	}
+
+	.mpisto-header-container .wordmark {
+		margin-top:5px;
+	}
+
+}
+
 
 @media only screen and (max-width:959px) {
 	.color-header .title {
 		font-size:22px;
-		padding:0 14px;
+		padding:0 14px 0 9px;
 		height:55px;
 	}
 
 	.color-header .link {
 		padding:0 9px;
 		height:55px;
-	}
-
-	.mpisto-header-container .link {
-		font-size:16px;
 	}
 
 	.color-header .counters {
@@ -2570,10 +2493,13 @@ border-left-color:rgba(var(--community-header-text),0.8);
 		min-height:55px;
 	}
 	
-	.color-header .wordmark img {
+	.mpisto-header-container .wordmark {
 		height:50px;
 	}
-
+	
+	.mpisto-header-container .link {
+		font-size:16px;
+	}
 
 
 }
@@ -3302,6 +3228,10 @@ text-shadow:0 0 2px black;
 text-shadow:0 0 2px var(--button-color-text);
 }
 
+/* Display an Asterisk before the article title for unsaved changes */
+.mpisto-content .mpisto-title.unsaved::before {
+	content:"*";
+}
 
 .mpisto-content .mpisto-page-header-title {
 border-bottom:1px solid #ccc;
@@ -7059,7 +6989,7 @@ cursor:not-allowed!important;
   cursor:default
 }
 
-.smart a:hover, .smart .notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child):not(.empty), .smart .notification.wds-dropdown-level-2__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child):not(.empty), .smart a.wds-button, .smart button.wds-button, .smart .editor-header .wordmark, .smart .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, .smart .wds-banner-notification__close, .smart a label, .smart a input[type="checkbox"], .smart a input[type="radio"], .smart .wds-floating-button:not([disabled]), .smart .wds-floating-button:not(.wds-is-disabled) {
+.smart a:hover, .smart .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), .smart .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), .smart a.wds-button, .smart button.wds-button, .smart .editor-header .wordmark, .smart .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, .smart .wds-banner-notification__close, .smart a label, .smart a input[type="checkbox"], .smart a input[type="radio"], .smart .wds-floating-button:not([disabled]), .smart .wds-floating-button:not(.wds-is-disabled) {
 cursor:pointer;
 }
 
@@ -7084,7 +7014,7 @@ cursor:url("OSX/banned.cur"), not-allowed!important;
   cursor:url("OSX/default.cur"), default;
 }
 
-.osx a, .osx a:hover, .osx .notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child):not(.empty), .osx .notification.wds-dropdown-level-2__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child):not(.empty), .osx a.wds-button, .osx button.wds-button, .osx .editor-header .wordmark, .osx .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, .osx .wds-banner-notification__close, .osx a label, .osx a input[type="checkbox"], .osx a input[type="radio"], .osx .wds-floating-button:not([disabled]), .osx .wds-floating-button:not(.wds-is-disabled) {
+.osx a, .osx a:hover, .osx .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), .osx .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), .osx a.wds-button, .osx button.wds-button, .osx .editor-header .wordmark, .osx .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, .osx .wds-banner-notification__close, .osx a label, .osx a input[type="checkbox"], .osx a input[type="radio"], .osx .wds-floating-button:not([disabled]), .osx .wds-floating-button:not(.wds-is-disabled) {
 cursor:url("OSX/hand.cur"), pointer;
 }
 
@@ -7109,7 +7039,7 @@ cursor:url("Lenux/banned.cur"), not-allowed!important;
   cursor:url("Lenux/default.cur"), default;
 }
 
-.xubuntu a,.xubuntu a:hover, .xubuntu .notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child):not(.empty), .xubuntu .notification.wds-dropdown-level-2__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child):not(.empty), .xubuntu a.wds-button, .xubuntu button.wds-button, .xubuntu .editor-header .wordmark, .xubuntu .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, .xubuntu .wds-banner-notification__close, .xubuntu a label, .xubuntu a input[type="checkbox"], .xubuntu a input[type="radio"], .xubuntu .wds-floating-button:not([disabled]), .xubuntu .wds-floating-button:not(.wds-is-disabled) {
+.xubuntu a,.xubuntu a:hover, .xubuntu .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), .xubuntu .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), .xubuntu a.wds-button, .xubuntu button.wds-button, .xubuntu .editor-header .wordmark, .xubuntu .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, .xubuntu .wds-banner-notification__close, .xubuntu a label, .xubuntu a input[type="checkbox"], .xubuntu a input[type="radio"], .xubuntu .wds-floating-button:not([disabled]), .xubuntu .wds-floating-button:not(.wds-is-disabled) {
 cursor:url("Lenux/hand.cur"), pointer;
 }
 
@@ -7134,7 +7064,7 @@ cursor:not-allowed!important;
   cursor:default;
 }
 
-.edge a:hover, .edge .notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child):not(.empty), .edge .notification.wds-dropdown-level-2__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child):not(.empty), .edge a.wds-button, .edge button.wds-button, .edge .editor-header .wordmark, .edge .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, .edge .wds-banner-notification__close, .edge a label, .edge a input[type="checkbox"], .edge a input[type="radio"], .edge .wds-floating-button:not([disabled]), .edge .wds-floating-button:not(.wds-is-disabled) {
+.edge a:hover, .edge .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), .edge .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), .edge a.wds-button, .edge button.wds-button, .edge .editor-header .wordmark, .edge .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, .edge .wds-banner-notification__close, .edge a label, .edge a input[type="checkbox"], .edge a input[type="radio"], .edge .wds-floating-button:not([disabled]), .edge .wds-floating-button:not(.wds-is-disabled) {
 cursor:pointer;
 }
 
@@ -7169,7 +7099,7 @@ cursor:not-allowed!important;
   cursor:pointer
 }
 
-.phone a:hover, .phone .notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child):not(.empty), .phone .notification.wds-dropdown-level-2__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child):not(.empty), .phone a.wds-button, .phone button.wds-button, .phone .editor-header .wordmark, .phone .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, .phone .wds-banner-notification__close, .phone a label, .phone a input[type="checkbox"], .phone a input[type="radio"], .phone .wds-floating-button:not([disabled]), .phone .wds-floating-button:not(.wds-is-disabled) {
+.phone a:hover, .phone .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), .phone .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), .phone a.wds-button, .phone button.wds-button, .phone .editor-header .wordmark, .phone .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, .phone .wds-banner-notification__close, .phone a label, .phone a input[type="checkbox"], .phone a input[type="radio"], .phone .wds-floating-button:not([disabled]), .phone .wds-floating-button:not(.wds-is-disabled) {
 cursor:pointer;
 }
 

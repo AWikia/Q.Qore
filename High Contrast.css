@@ -234,7 +234,7 @@ html:not(.contrast):not(.basic) .highcontrastbutton.wds-dropdown {
 	mix-blend-mode:normal!important;
 }
 
-.basic *,.basic :before,.basic :after {
+.basic *:not(body),.basic :before,.basic :after {
   -webkit-filter:none!important;
   filter:none!important;
   backdrop-filter:none!important;
@@ -322,7 +322,7 @@ box-shadow:0 4px 0 6px rgba(0,0,0,.4), 0 4px 0 6px rgba(255,255,255,0.4)!importa
 	color:inherit;
 }
 
-.contrast :not(.freepseudo):not(.wds-dropdown):not(.wds-community-header):not(time):not(.wds-list):not(input):not(.mpisto-content):before,.contrast :not(.freepseudo):not(.wds-dropdown):not(.wds-community-header):not(.wds-list):not(.mpisto-article-wrapper):not(.mpisto-header-container):not(.mpisto-gnav):not(input):not(body):not(em):after, .basic header.mpisto-navbar:after, .basic footer.mpisto-footer:after, .basic header.mpisto-footer-container:after, .basic .mpisto-option-pane:after, .basic .mpisto-content:after, .basic .mpisto-option-way:after, .basic .theme-portal:after,.basic header.mpisto-navbar:before, .basic footer.mpisto-footer:before, .basic header.mpisto-footer-container:before, .basic .mpisto-option-pane:before, .basic .mpisto-option-way:before, .basic .theme-portal:before  {
+.contrast :not(.freepseudo):not(.wds-dropdown):not(.wds-community-header):not(time):not(.wds-list):not(input):not(.mpisto-content):not(body):before,.contrast :not(.freepseudo):not(.wds-dropdown):not(.wds-community-header):not(.wds-list):not(.mpisto-article-wrapper):not(.mpisto-header-container):not(.mpisto-gnav):not(input):not(body):not(em):after, .basic header.mpisto-navbar:after, .basic footer.mpisto-footer:after, .basic header.mpisto-footer-container:after, .basic .mpisto-option-pane:after, .basic .mpisto-content:after, .basic .mpisto-option-way:after, .basic .theme-portal:after,.basic header.mpisto-navbar:before, .basic footer.mpisto-footer:before, .basic header.mpisto-footer-container:before, .basic .mpisto-option-pane:before, .basic .mpisto-option-way:before, .basic .theme-portal:before  {
 display:none!important;
 }
 
@@ -332,6 +332,11 @@ html:not(.basic):not(.contrast).contrast .theme-portal .link.theme0, .contrast.w
 .contrast body:not(.filterA):not(.filterB):not(.filterC):not(.filterD):not(.filterE):not(.filterF) .theme-portal .link.theme10, .contrast .filterA .theme-portal .link.theme11, .contrast .filterB .theme-portal .link.theme12, .contrast .filterC .theme-portal .link.theme13, .contrast .filterD .theme-portal .link.theme14, .contrast .filterE .theme-portal .link.theme15, .contrast .filterF .theme-portal .link.theme16 {
 	background-color:var(--button-color);
 	color:var(--button-color-text);
+}
+
+.contrast .mpisto-2018:before, .contrast .mpisto-2018-mobile:before {
+	background-image:var(--background-image);
+
 }
 
 .contrast .mpisto-content, .contrast .pane-on .mpisto-article-wrapper:after, .basic .mpisto-content {
