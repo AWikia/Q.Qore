@@ -48,6 +48,12 @@ These wrappers use the Hybrid Desktop/Mobile Skin also known as Mpistomobile2 or
 
 [Mobile Main Page](https://awikia.github.io/Mpisto/Ryneeeel%20Grooze%20(Mobile).html)
 
+
+## Discussions aka Mpistodiscuss2
+These wrappers use the Hybrid Desktop/Mobile Skin also known as Mpistodiscuss2, using a layout similar to Community Feeds feature from Fandom and it is a replacement of the archaic Forum feature:
+
+[Main](https://awikia.github.io/Mpisto/Ryneeeel%20Grooze%20Discussions.html)
+
 # Browser Requirements (Bold ones are discouraged in use browsers, Italic ones are fictional aka orbitron-only browsers)
 
 Edge 17+ (Future versions will be Blink-based, Old versions are not recommended)
