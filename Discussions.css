@@ -474,7 +474,7 @@ footer.footer .wrapper .footer-container td a:hover {
 .mpisto-discussions-wrapper .card.first {
 	order:1;
 	position:static!important;
-	max-height:none!important;
+	max-height:100000px!important;
 }
 
 .mpisto-discussions-wrapper .card.last {
