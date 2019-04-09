@@ -135,8 +135,8 @@ font-family:-apple-system, BlinkMacSystemFont, 'Inter', "Noto Sans", "Noto Sans 
 	scrollbar-width:thin;
 	scrollbar-color:#ccc transparent;
 	scrollbar-color:var(--content-border) transparent;
-	height:100%;
 	overscroll-behavior:contain;
+	align-self:flex-start
 }
 
 .mpisto-discussions-wrapper .card.main {
