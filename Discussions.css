@@ -140,7 +140,7 @@ font-family:-apple-system, BlinkMacSystemFont, 'Inter', "Noto Sans", "Noto Sans 
 }
 
 .mpisto-discussions-wrapper .card.main {
-	flex:1;
+	flex:1 1 auto;
 	margin:0 5px;
 	padding-top:0;
 }
@@ -474,7 +474,7 @@ footer.footer .wrapper .footer-container td a:hover {
 .mpisto-discussions-wrapper .card.first {
 	order:1;
 	position:static!important;
-	max-height:100000px!important;
+	max-height:none!important;
 }
 
 .mpisto-discussions-wrapper .card.last {
