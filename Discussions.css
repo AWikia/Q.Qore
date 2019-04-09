@@ -474,13 +474,13 @@ footer.footer .wrapper .footer-container td a:hover {
 .mpisto-discussions-wrapper .card.first {
 	order:1;
 	position:static!important;
-	max-height:none!important;
+	max-height:auto!important;
 }
 
 .mpisto-discussions-wrapper .card.last {
 	order:2;
 	position:static!important;
-	max-height:none!important;
+	max-height:auto!important;
 }
 
 
@@ -488,7 +488,6 @@ footer.footer .wrapper .footer-container td a:hover {
 .mpisto-discussions-wrapper .card {
 	margin:0;
 	width:100%;
-	height:100%;
 }
 
 .mpisto-discussions-wrapper {
