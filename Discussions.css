@@ -1,0 +1,512 @@
+/* Inter UI font family */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,500,700,900|Noto+Sans+KR:100,300,400,500,700,900|Noto+Sans:400,700&subset=cyrillic,cyrillic-ext,devanagari,greek,greek-ext,japanese,korean,latin-ext,vietnamese');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900|Noto+Sans+TC:100,300,400,500,700,900&subset=chinese-simplified,chinese-traditional,cyrillic,japanese,vietnamese');
+@import url('https://rsms.me/inter/inter.css');
+
+/* Discussions CSS */
+:root, .wds-button {
+font-family:-apple-system, BlinkMacSystemFont, 'Inter', "Noto Sans", "Noto Sans KR", "Noto Sans JP", "Noto Sans SC", "Noto Sans TC", sans-serif;
+}
+
+.mpisto-discuss-2018 {
+	font-family:inherit;
+	font-weight:400;
+}
+
+/* Fix for Global Nav and footer */
+.mpisto-gnav {
+	font-weight:500;
+}
+
+.mpisto-content {
+	box-shadow:none;
+}
+
+.mpisto-content::after {
+	display:none;
+}
+
+
+
+
+	.mobile-header {
+		display:flex;
+		justify-content:center;
+		min-height:60px;
+		flex-direction:column;
+	}
+
+	.mobile-header section {
+		width:100%;
+		display:flex;
+		padding:5px 18px;
+		justify-content:space-around;
+		align-items:stretech;
+	}
+
+	.mobile-header .title {
+		justify-content:center;
+		line-height:1.4;
+		font-size:24px;
+		font-weight:800;
+	font-family:"Arimo", "Liberation Sans", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR", cursive;
+	font-family:var(--secondary-font), cursive;
+	}
+
+	.mobile-header .title a {
+		text-decoration:none;
+		color:inherit;
+		transition:opacity 400ms ease, color 400ms ease;
+		overflow:hidden;
+		text-overflow:ellipsis;
+	}
+
+	.mobile-header .title a:hover {
+		opacity:0.8;
+	}
+
+
+	.mobile-header .counters {
+		font-size:16px;
+		flex-wrap:wrap;
+	}
+
+	.mobile-header .counter {
+		white-space:nowrap;
+	}
+
+	.mobile-header .counter big {
+		font-weight:bolder;
+		font-size:120%;
+	}
+
+
+	.mobile-header .buttons {
+		padding:0;
+		display:block!important;
+	}
+
+	.mobile-header .buttons nav {
+		flex:1;
+		width:100%;
+		display:flex;
+	}
+
+.mobile-header .buttons .link, .mobile-header .buttons .wds-dropdown .link {
+		flex:1;
+		display:inline-flex;
+		align-items:center;
+		justify-content:center;
+		padding: 0 9px;
+		height:55px;
+	}
+
+.mobile-header .wds-dropdown {
+	flex:1;
+	display:inline-flex;
+}
+
+
+.mpisto-discussions-wrapper {
+	display:flex;
+	justify-content:space-between;
+	margin:10px 0 0;
+	}
+
+.mpisto-discussions-wrapper .card {
+	display:flex;
+	background-color:#fff;
+	background-color:var(--content-bg);
+	border-radius:8px;
+	padding:8px;
+	width:200px;
+	font-size:14px;
+	text-shadow:none;
+	align-items:center;
+	flex-direction:column;	
+}
+
+.mpisto-discussions-wrapper .card.first, .mpisto-discussions-wrapper .card.last {
+	max-height:calc(100vh - 69px); /*179*/
+	top:59px;
+	position:-webkit-sticky;
+	position:sticky;
+	overflow-y:auto;
+	scrollbar-width:thin;
+	scrollbar-color:#ccc transparent;
+	scrollbar-color:var(--content-border) transparent;
+	height:100%;
+	overscroll-behavior:contain;
+}
+
+.mpisto-discussions-wrapper .card.main {
+	flex:1;
+	margin:0 5px;
+	padding-top:0;
+}
+
+
+.mpisto-discussions-wrapper .card h2 {
+	font-weight:600;
+	font-size:24px;
+	margin:0;
+	text-align:center;
+	display:inline;
+}
+
+.mpisto-discussions-wrapper .card h3 {
+	font-weight:700;
+	font-size:16px;
+	margin:0;
+	text-align:center;
+}
+
+
+.mpisto-discussions-wrapper .card.main .post-send {
+	min-height:10px;
+	position:static;
+	position:-webkit-sticky;
+	position:sticky;
+	top:49px;
+	border:1px solid #ccc;
+	border-color:var(--content-border);
+	border-top:0;
+	z-index:9;
+	background-color:#ffffff;
+	background-color:var(--dropdown-bg);
+	padding:8px;
+	width:100%;
+	box-shadow:0 2px 6px 0 rgba(0,0,0,.2), 0 2px 6px 0 rgba(255,255,255,0.2);
+}
+
+.mpisto-discussions-wrapper .card.main .post-send .post-area {
+	border-radius:8px;
+	box-shadow:0 0 10px rgba(0,0,0,0.25), 0 0 10px rgba(255,255,255,0.25);
+	border:0;
+	width:100%;
+	padding:5px;
+	height:80px;
+	font-size:16px;
+	background-color:#fff;
+	background-color:var(--content-bg);
+	color:inherit;
+	font-family:inherit;
+}
+
+.mpisto-discussions-wrapper .card.main .post-send h1 {
+	font-weight:300;
+	font-size:25px;
+	margin:0;
+}
+
+.mpisto-discussions-wrapper .card.main .post {
+	margin:5px 0;
+	width:100%;
+	min-height:10px;
+}
+
+.mpisto-discussions-wrapper .card.main .post .post-container {
+	font-size:16px;
+	display:flex;
+	align-items:center;
+}
+
+.mpisto-discussions-wrapper .card.main .post .post-container .mpisto-avatar {
+		width:26px;
+		height:26px;
+		min-width:26px;
+		min-height:26px;
+		border-width:1.5px;
+		opacity:1;
+		display:inline;
+}
+
+.mpisto-discussions-wrapper .card.main .post .post-container .wds-button.wds-is-square {
+	width:26px;
+	height:26px;
+	min-width:26px;
+	min-height:26px;
+}
+
+.mpisto-discussions-wrapper .card.main .post .post-container .name {
+		font-size:80%;
+		font-weight:bolder;
+		text-overflow:ellipsis;
+		overflow:hidden;
+		display:inline-block;
+		margin-left:2px;
+		flex:1;
+	}
+
+.mpisto-discussions-wrapper .card.main .post h1 {
+	font-size:26px;
+	font-weight:700;
+	margin:0;
+}
+
+.mpisto-discussions-wrapper .card.main .post h1 a {
+	color:inherit;
+	text-decoration:none;
+}
+
+.mpisto-discussions-wrapper .card.main .post .message {
+	line-height:1.35;
+	font-weight:300;
+	border-bottom:1px solid #ccc;
+	border-bottom-color:var(--content-border);
+}
+
+
+.mpisto-discussions-wrapper .card.main .post .post {
+	padding-left:50px;
+	border-bottom:1px solid #ccc;
+	border-bottom-color:var(--content-border);
+}
+
+
+.mpisto-discussions-wrapper .card.main .post .post .message {
+	border-bottom:0;
+}
+
+
+footer.mpisto-footer {
+	z-index:1;
+	padding-bottom:0.1px;
+}
+
+
+/* Mobile Footer */
+footer.footer {
+width:100%;
+min-height:50px;
+/*border-top:2px solid #b0a1ee;
+*/
+background-color:#000;
+background-color:var(--content-color);
+color:#ffffff;
+color:var(--dropdown-bg);
+position:relative;
+z-index:1;
+padding:0 18px;
+box-sizing:border-box;
+font-family:"Source Sans Pro", "Prompt",  "M PLUS 1p", "Gothic A1", "Cairo", "Catamaran", "Ramabhadra", cursive;
+}
+
+footer.footer .wrapper {
+/*border:1px solid #b0a1ee;
+border-top-style:hidden;
+border-bottom-style:hidden;
+*/
+width:100%;
+max-width:926px;
+border-spacing:0;
+margin:0 auto;
+color:inherit;
+border-collapse:separate; /* Mac mInerva and QortaQorte uses border-collapse:collapse by default, leading to unexpected layout */
+font-weight:400;
+}
+
+footer.footer .wrapper .footer-container {
+min-height:30px;
+}
+
+footer.footer .wrapper .footer-container > * > th,
+footer.footer .wrapper .footer-container > * > td {
+/*border:1px solid #b0a1ee;
+*/
+box-sizing:border-box;
+}
+
+footer.footer .wrapper .footer-container th {
+width:100%;
+}
+
+footer.footer .wrapper .footer-container th h1 {
+font-weight:600;
+font-size:36px;
+display:inline;
+vertical-align:middle;
+margin-left:8px;
+}
+
+footer.footer .wrapper .footer-container th * {
+vertical-align:middle;
+}
+
+footer.footer .wrapper .footer-container th.footer-bar h3 {
+font-size:20px;
+}
+
+footer.footer .wrapper .footer-container th {
+position:relative;
+font-weight:inherit;
+z-index:1;
+}
+
+footer.footer .wrapper .footer-container th:not(.footer-bar) {
+  border-top:0;
+  height:65px;
+}
+
+/*footer.footer .wrapper .footer-container th::after {
+position:absolute;
+top:0;
+left:0;
+height: 100%;
+width: 100%;
+z-index:-1;
+content:"";
+display:block;
+background-color:#002200;
+opacity:0.11;
+}
+*/
+
+footer.footer .wrapper .footer-container td {
+/*font-size:17px;
+padding:4px 8px 8px;
+*/
+position:relative;
+z-index:1;
+font-weight:500;
+text-align:left;
+}
+
+
+/*footer.footer .wrapper .footer-container td::after {
+position:absolute;
+top:0;
+left:0;
+height: 100%;
+width: 100%;
+z-index:-1;
+content:"";
+display:block;
+background-color:#002200;
+opacity:0.035;
+}
+*/
+
+footer.footer .wrapper .footer-container td h2 {
+	font-size:24px;
+	font-weight:bolder;
+	text-align:left;
+	font-family:"Arimo", "Liberation Sans", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR", cursive;
+	font-family:var(--secondary-font), cursive;
+}
+
+footer.footer .wrapper .footer-container td a {
+/*
+padding:6px 2px;
+*/
+display:block;
+-o-transition:all 150ms ease 12ms;
+transition:all 150ms ease 12ms;
+text-decoration:none;
+line-height:1.5;
+-o-transition:all 500ms;
+transition:all 500ms;
+font-size:16px;
+clear:both;
+color:#18bbc6;
+color:rgb(var(--link-color));
+}
+
+footer.footer .wrapper .footer-container td a:hover {
+    color:#ffffff;
+    color:var(--dropdown-bg);
+}
+
+
+
+/* Responsive Design */
+@media only screen and (max-width:754px) {
+	.color-header, .color-nav {
+		display:none;
+	}
+	
+	.mpisto-header-container {
+		background-image:none!important;
+	}
+	
+	.mpisto-header-container:before {
+		display:none!important;
+	}
+	
+	footer.mpisto-footer {
+		display:none;
+	}
+}
+
+@media only screen and (min-width:755px) {
+	.mobile-header {
+		display:none;
+	}
+	footer.footer {
+		display:none;
+	}
+}
+
+@media only screen and (max-width:959px) {
+:root {
+	scrollbar-width:thin;
+	scrollbar-color:#0000ff transparent;
+	scrollbar-color:rgb(var(--community-header-bg)) transparent;
+	min-width:360px;
+}
+
+.mpisto-content {
+	background-color:#fff;
+	background-color:var(--content-bg);
+	width:100%!important;
+}
+
+.mpisto-header-container {
+	margin:0;
+}
+
+
+.mpisto-discussions-wrapper .card.main {
+	order:0;
+	margin:0;
+}
+
+.mpisto-discussions-wrapper .card.first {
+	order:1;
+	position:static!important;
+	max-height:none!important;
+}
+
+.mpisto-discussions-wrapper .card.last {
+	order:2;
+	position:static!important;
+	max-height:none!important;
+}
+
+
+
+.mpisto-discussions-wrapper .card {
+	margin:0;
+	width:100%;
+	height:100%;
+}
+
+.mpisto-discussions-wrapper {
+	justify-content:center;
+	flex-direction:column;
+	margin:0;
+}
+
+.mpisto-header-container .wordmark, .top-gap {
+	display:none;
+}
+
+footer.mpisto-footer {
+	margin:0;
+}
+
+.mpisto-2018, .mpisto-discuss-2018:before, .mpisto-discuss-2018:after {
+	background:white;
+	background:var(--content-bg);
+}
+}

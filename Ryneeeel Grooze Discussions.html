@@ -126,7 +126,7 @@
 </defs>
 
 <html class="main">
-  <body class="mpisto-2018" id="Handler" onclick="">
+  <body class="mpisto-discuss-2018 mpisto-2018-mobile" id="Handler" onclick="">
   <script>
 
 function GNavSearch() {
@@ -150,8 +150,6 @@ document.getElementById("Handler").className += " mpisto-servers"
   </script>
 <div style="visibility:hidden">
 <header class="mpisto-global-navigation">
-</header>
-<header class="theme-portal">
 </header>
 </div>
 
@@ -198,11 +196,41 @@ document.getElementById("Handler").className += " mpisto-servers"
 				</div>
 					<div class="wds-dropdown__content wds-is-right-aligned">
 					  <ul class="wds-list wds-is-linked">
+					   <li><a>Discussions Statistics</a></li>
 					   <li><a>View Profile</a></li>
 					   <li><a>Log Out</a></li>
 					  </ul>
 					</div>
 				  </div>
+				<div class="wds-dropdown wds-has-dark-shadow">
+					<div class="link cell wds-dropdown__toggle"><svg class="wds-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 0H0v24h24z" fill="none"/><path d="M17.66 7.93L12 2.27 6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58c2.05 0 4.1-.78 5.66-2.34 3.12-3.12 3.12-8.19 0-11.31zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/></svg> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
+                  </svg></div>
+                  <div class="wds-dropdown__content">
+					<ul class="wds-list wds-is-linked">
+						<li>
+							<a onclick="HCa()">
+								Theme A
+							</a>
+						</li>
+						<li>
+							<a onclick="HCb()">
+								Theme B
+							</a>
+						</li>
+						<li>
+							<a onclick="HCc()">
+								Theme C
+							</a>
+						</li>
+						<li>
+							<a onclick="HCd()" >
+								Theme D
+							</a>
+						</li>
+					</ul>
+                  </div>
+					</div>
        <div class="wds-dropdown wds-has-dark-shadow">
         <div class="link cell wds-dropdown__toggle"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon ">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-bell" /> 
@@ -237,34 +265,12 @@ document.getElementById("Handler").className += " mpisto-servers"
           </ul>
         </div>
       </div>
-       <div class="wds-dropdown wds-has-dark-shadow">
-        <div class="link cell wds-dropdown__toggle"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon ">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-flag" />
-                  </svg> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
-                  </svg>
-</svg>
-    </div>
-        <div class="wds-dropdown__content wds-is-right-aligned wds-is-not-scrollable flags-dropdown">
-          <ul class="wds-list wds-has-lines-between wds-has-ellipsis">
-           <li>
-           <button class="wds-button wds-is-squished wds-is-full-width">Manage Flags</button>
-           </li>
-           <li>
-           <button class="wds-button wds-is-squished wds-is-full-width">Enforce Flags</button>
-           </li>
-           <li>
-           <button class="wds-button wds-is-squished wds-is-full-width">Clear all Flags</button>
-           </li>
-          </ul>
-        </div>
-      </div>            
 				<a class="link cell large-down" onclick="GNavSearch()">
 					<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon  search-on">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass" /> 
 					</svg>
 					<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon  search-off">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" /> 
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" />
 					</svg>
 				</a>
 				<div class="wds-dropdown wds-has-dark-shadow create-wiki">
@@ -284,58 +290,8 @@ document.getElementById("Handler").className += " mpisto-servers"
 			</div>
 		</div>
 	</header>
-
-
-    <nav class="theme-portal">
-      <a class="link themea" onclick="HCa()"><svg version="1.1" width="28" height="38" class="wds-icon" viewBox="-1 -1 28 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark" />
-</svg> <span>Theme A</span></a>
-      <a class="link themeb" onclick="HCb()"><svg version="1.1" width="28" height="38" class="wds-icon" viewBox="-1 -1 28 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark" />
-</svg> <span>Theme B</span></a>
-      <a class="link themec" onclick="HCc()"><svg version="1.1" width="28" height="38" class="wds-icon" viewBox="-1 -1 28 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark" />
-</svg> <span>Theme C</span></a>
-      <a class="link themed" onclick="HCd()"><svg version="1.1" width="28" height="38" class="wds-icon" viewBox="-1 -1 28 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark" />
-</svg> <span>Theme D</span></a>
-       <div class="separator"></div>
-      <a class="link theme0" onclick="HCclear()"><svg version="1.1" width="28" height="38" class="wds-icon" viewBox="-1 -1 28 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark" />
-</svg> <span>Normal</span></a>
-      <a class="link theme1" onclick="HCcustom0()"><svg version="1.1" width="28" height="38" class="wds-icon" viewBox="-1 -1 28 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark" />
-</svg> <span>Win10 Contrast</span></a>
-      <a class="link theme2" onclick="HCcustom()"><svg version="1.1" width="28" height="38" class="wds-icon" viewBox="-1 -1 28 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark" />
-</svg> <span>Wiki Contrast</span></a>
-      <a class="link theme3" onclick="HCcustom2()"><svg version="1.1" width="28" height="38" class="wds-icon" viewBox="-1 -1 28 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark" />
-</svg> <span>Performance</span></a>
-       <div class="separator"></div>
-      <a class="link theme10" onclick="HCa1()"><svg version="1.1" width="28" height="38" class="wds-icon" viewBox="-1 -1 28 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark" />
-</svg> <span>off</span></a>
-      <a class="link theme11" onclick="HCb1()"><svg version="1.1" width="28" height="38" class="wds-icon" viewBox="-1 -1 28 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark" />
-</svg> <span>Gray</span></a>
-      <a class="link theme12" onclick="HCc1()"><svg version="1.1" width="28" height="38" class="wds-icon" viewBox="-1 -1 28 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark" />
-</svg> <span>Inv-Gray</span></a>
-      <a class="link theme13" onclick="HCd1()"><svg version="1.1" width="28" height="38" class="wds-icon" viewBox="-1 -1 28 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark" />
-</svg> <span>Invert</span></a>
-      <a class="link theme14" onclick="HCe1()"><svg version="1.1" width="28" height="38" class="wds-icon" viewBox="-1 -1 28 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark" />
-</svg> <span>Night</span></a>
-      <a class="link theme15" onclick="HCf1()"><svg version="1.1" width="28" height="38" class="wds-icon" viewBox="-1 -1 28 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark" />
-</svg> <span>SSC</span></a>
-      <a class="link theme16" onclick="HCg1()"><svg version="1.1" width="28" height="38" class="wds-icon" viewBox="-1 -1 28 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark" />
-</svg> <span>Day</span></a>
-    </nav>
 </div>
+<!-- End Global Nav -->
 <script>
 // Filters
 function HCa1() {
@@ -430,14 +386,166 @@ function HCg1() {
 		<div class="mpisto-header-container">
 			<section class="mpisto-header-container-wrapper">
 				<a class="wordmark cell"><img src="Wordmark.png"></img></a>
+			<header class="mobile-header">
+				<section class="title">
+					<a>Mpisto War 2018</a>
+				</section>
+				<section class="counters">
+									<div class="counter"><big>120</big> <span>Threads</span></div>
+									<div class="counter"><big>480</big> <span>Replies</span></div>
+									<div class="counter"><big>193</big> <span>Images</span></div>
+									<div class="counter"><big>24</big> <span>Polls</span></div>
+				</section>
+				<section class="buttons">
+					<nav>
+						<a class="link cell" title="Add new page"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-article" /> 
+					</svg></a>
+						<a class="link cell" title="Activity"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-activity" /> 
+					</svg></a>
+					  <a title="Mpisto Store" class="link cell">				
+						<svg version="1.1" class="wds-icon" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+						<path fill="currentcolor" d="M52.053 0c-1.28 3.968-2.56 7.893-2.56 13.141v991.104c0 9.259 2.603 14.507 7.851 19.755l487.040-515.968-492.331-508.032zM577.237 542.208l125.909 129.92-179.755 102.4s-228.48 129.877-354.475 202.197l408.32-434.517zM611.413 506.752l135.083 140.459c21.163-11.776 186.496-106.325 210.091-119.467 24.917-14.421 22.4-34.133 1.237-44.629-19.584-10.88-184.917-105.6-209.92-120.96l-136.491 144.597zM577.152 472.619l127.317-135.211-181.717-103.723s-296.235-169.472-394.795-226.048l449.195 464.981z"></path>
+						</svg>
+					  </a>
+			<div class="wds-dropdown">
+			  <div class="link cell wds-dropdown__toggle">				
+				<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-dropdown__toggle-chevron">
+				  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown" />
+				</svg>			
+			  </div>
+			  <div class="wds-dropdown__content wds-is-right-aligned">		
+				<ul class="wds-list wds-is-linked">					
+				  <li>						
+					<a><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-activity-small" />
+					</svg> Activity</a>					
+				  </li>					
+				  <li>						
+					<a><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-video-camera" />
+					</svg> Videos</a>					
+				  </li>					
+				  <li>						
+					<a><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-image" />
+					</svg> Images</a>					
+				  </li>		
+				  <li>						
+					<a><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-gift" />
+					</svg> Theme Creator</a>					
+				  </li>		
+				  <li>						
+					<a><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-gear" />
+					</svg> Special Pages</a>					
+				  </li>		
+				</ul>
+			  </div>
+			</div>
+					</nav>
+					<nav>
+
+			<div class="wds-dropdown">
+			  <div class="link cell wds-dropdown__toggle">				
+				<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-user" />
+					  </svg>	
+			  </div>
+			  <div class="wds-dropdown__content wds-is-left-aligned">		
+					  <ul class="wds-list wds-is-linked">
+						<li>
+						<a>View Profile</a>
+						</li>
+						<li>
+						<a>Talk Page</a>
+						</li>
+						<li>
+						<a>Preferences</a>
+						</li>
+						<li>
+						<a>Help</a>
+						</li>
+						<li>
+						<a>Log Out</a>
+						</li>
+					  </ul>
+			  </div>
+			</div>
+			
+			<div class="wds-dropdown">
+			  <div class="link cell wds-dropdown__toggle">				
+				<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-community" />
+					  </svg>	
+			  </div>
+			  <div class="wds-dropdown__content">		
+					  <ul class="wds-list wds-is-linked">
+						<li>
+						<a>GMK Pages</a>
+						</li>
+						<li>
+						<a>Special Pages</a>
+						</li>
+						<li>
+						<a>Bash</a>
+						</li>
+						<li>
+						<a>Command Line Prompt</a>
+						</li>
+						<li>
+						<a>Printable Version</a>
+						</li>
+						<li>
+						<a>Export as PDF</a>
+						</li>
+						<li>
+						<a>Export article HTML source</a>
+						</li>
+					  </ul>
+			  </div>
+			</div>
+
+						<a class="link cell active" title="Forum"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-reply" /> 
+					</svg></a>
+			<div class="wds-dropdown">
+			  <div class="link cell wds-dropdown__toggle">				
+				<svg version="1.1" width="55" height="55" class="wds-icon" viewBox="-1 -1 55 55" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path id="ID0.06426620716229081" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M 230.850 189.850 L 229.150 181.350 L 229.950 175.850 L 234.400 171.800 L 237.250 168.500 L 241.750 163.150 L 248 169.250 L 250.200 171.700 L 253.950 176 L 254.500 180.450 L 253.500 189.500 " transform="matrix(1.82266104221344, 0, 0, 1.82266104221344, -414.25, -294.45)"/>
+  <path id="ID0.0372769720852375" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M 230.600 181.900 L 232.100 180.200 L 241.800 180.250 L 251.700 180.250 L 253.750 182.150 " transform="matrix(1.7334266901016235, 0, 0, -3.7820217609405518, -392.45, 715.9)"/>
+</svg>	
+			  </div>
+			  <div class="wds-dropdown__content wds-is-right-aligned">		
+					  <ul class="wds-list wds-is-linked">
+						<li>
+						<a>Contact Mpisto</a>
+						</li>
+						<li>
+						<a href="https://alpha-technologies.fandom.com/el/wiki/Project:Contact">Contact A Technologies</a>
+						</li>
+					  </ul>
+			  </div>
+			</div>
+
+					</nav>
+				</section>
+			</header>
 				<header class="color-header">
 						<div class="table">
 							<div class="tr">
 								<h1 class="title cell" style="text-align:left"><a>Mpisto War 2018</a></h1>
 								<div class="counters cell">
-									<div class="counter"><big>77</big> <span>Articles</span></div>
-									<div class="counter"><big>145</big> <span>Photos</span></div>
+									<div class="counter"><big>120</big> <span>Threads</span></div>
+									<div class="counter"><big>480</big> <span>Replies</span></div>
 								</div>
+								<div class="counters cell">
+									<div class="counter"><big>193</big> <span>Images</span></div>
+									<div class="counter"><big>24</big> <span>Polls</span></div>
+								</div>
+
 								<a class="link cell" title="Add new page"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
 	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-article" /> 
 						</svg></a>
@@ -549,7 +657,7 @@ function HCg1() {
 					  </ul>
 			  </div>
 			</div>
-								<a class="link cell"><span>Forum</span></a>
+								<a class="link cell active"><span>Forum</span></a>
 								<a class="link cell" href="https://alpha-technologies.fandom.com/el/wiki/Project:Contact"><span>Contact A Technologies</span></a>
 								<a class="link cell"><span>Contact Mpisto</span></a>			
 						</div>
@@ -557,2272 +665,645 @@ function HCg1() {
 				</nav>
 			</section>
 		</div>
+		<div class="mpisto-discussions-wrapper">
+			<div class="card first">
+				<div style="text-align:center; width:100%;"><h2 class="wds-midlight-aqua">About this Wiki</h2></div>
+				<div>
+				Mpisto War 2018 is a collaboration service of wikis developed by Mpisto Scenes Community and distributed by Mpisto and Anna in Orbitron and by A Techno Services via Github elsewhere. It competes with GTK+ currently which is also a competitor of us.
+				</div>
+				<h3>Active Users:</h3>
+				<div class="mpisto-avatar-group">
+					<img class="mpisto-avatar" src="HM100.png" title="HM100"></img>
+					<img class="mpisto-avatar" src="Zekzphire.png" title="Zekzphire"></img>
+					<img class="mpisto-avatar" src="Zekzphire (Old Old).png" title="Mpisto Proundou"></img>
+					<img class="mpisto-avatar" src="Frouda.jpg" title="Frouda"></img>
+					<img class="mpisto-avatar" src="Frouda.jpg" title="GTK the great"></img>
+				</div> 
+				<button class="wds-button wds-is-alternate" title="You'll be redirected to GMK Description to change it">Edit Description</button>
+			</div>
+			<div class="card main">
+				<nav class="post-send">
+					<h1>What's the post about?</h1>
+					<textarea placeholder="Type something about!!! Remember to read the rules before posting" class="post-area"></textarea>
+					<div style="text-align:right; width:100%; margin:8px 0 0;">
+						<button class="wds-button wds-is-alternate">Post</button>
+						<button class="wds-button wds-is-alternate">Post as Poll</button>
+					</div>
+				</nav>
+				<article class="post">
+					<div class="post-container">
+						<img class="mpisto-avatar" src="Zekzphire.png"></img>
+						<small class="name">Zezkphire</small>
+						<div class="wds-dropdown wds-has-shadow">
+							<div class="wds-button wds-is-text wds-dropdown__toggle wds-is-alternate wds-is-square">
+<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small wds-dropdown__toggle-chevron">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-small" />
+					  </svg>
+							</div>
+							<div class="wds-dropdown__content wds-is-right-aligned wds-is-not-scrollable">
+								<ul class="wds-list wds-is-linked">
+									<li>
+									<a>
+<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-clock" />
+					  </svg> <span>View History</span>
+									</a>
+									</li>
+									<li>
+									<a>
+<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-pencil" />
+					  </svg> <span>Edit</span>
+									</a>
+									</li>
+									<li>
+									<a>
+<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-lock" />
+					  </svg> <span>Protect</span>
+									</a>
+									</li>
+									<li>
+									<a>
+<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-trash" />
+					  </svg> <span>Delete</span>
+									</a>
+									</li>
+									<li>
+									<a>
+<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-alert" />
+					  </svg> <span>Report</span>
+									</a>
+									</li>
+									<li>
+									<a>
+<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-reply-arrow" />
+					  </svg> <span>Follow</span>
+									</a>
+									</li>
+									<li>
+									<a>
+<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-quote" />
+					  </svg> <span>Quote</span>
+									</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<h1><a>Welcome to the new Discussions!!!</a></h1>
+					<div class="message">
+						We're pleased that out old forum system has been converted into the new Discussions. Unlike before, mobile devices have optimized layout in addition to tablets and PCs. Depending on what device you're, the layout you will see will be different. If using PC, you can try zooming browser's page to see differences in the layout. Hope you have fun with this redesign!!!. <br>--Anna
+					</div>
 
-<header class="wds-community-header" id="CommunityHeader">	
-  <div class="wds-community-header__wordmark">		
-    <a accesskey="z">			
-      <img alt="Mpisto War 2018" src="Wordmark.png">		
-    </a>	
-  </div>
-  <div class="wds-community-header__top-container">	
-    <div class="wds-community-header__sitename">		
-      <a>Mpisto War 2018</a>	
-    </div>	
-    <div class="wds-community-header__counter wds-is-image">		
-      <span class="wds-community-header__counter-value">19</span>		
-      <span class="wds-community-header__counter-label">Images</span>	
-    </div>	
-    <div class="wds-community-header__counter wds-is-article">		
-      <span class="wds-community-header__counter-value">17</span>		
-      <span class="wds-community-header__counter-label">Articles</span>	
-    </div>	
-    <div class="wds-community-header__wiki-buttons wds-button-group">			
-      <a title="Add new page" class="wds-button wds-is-squished wds-is-secondary">				
-        <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon-small wds-icon">
-          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-article" />
-        </svg>					
-        <span>Add</span>			
-      </a>			
-      <a title="Wiki Activity" class="wds-button wds-is-squished wds-is-secondary">				
-        <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon-small wds-icon">
-          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-activity-small" />
-        </svg>			
-      </a>
-      <a title="Mpisto Store" class="wds-button wds-is-squished wds-is-secondary">				
-        <svg version="1.1" class="wds-icon-small wds-icon" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
-        <path fill="currentcolor" d="M52.053 0c-1.28 3.968-2.56 7.893-2.56 13.141v991.104c0 9.259 2.603 14.507 7.851 19.755l487.040-515.968-492.331-508.032zM577.237 542.208l125.909 129.92-179.755 102.4s-228.48 129.877-354.475 202.197l408.32-434.517zM611.413 506.752l135.083 140.459c21.163-11.776 186.496-106.325 210.091-119.467 24.917-14.421 22.4-34.133 1.237-44.629-19.584-10.88-184.917-105.6-209.92-120.96l-136.491 144.597zM577.152 472.619l127.317-135.211-181.717-103.723s-296.235-169.472-394.795-226.048l449.195 464.981z"></path>
-        </svg>
-      </a>
-        <div class="wds-dropdown">
-          <div class="wds-button wds-is-secondary wds-is-squished wds-dropdown__toggle">				
-            <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon-small wds-icon">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-more" />
-            </svg>			
-          </div>
-          <div class="wds-dropdown__content wds-is-right-aligned">		
-            <ul class="wds-list wds-is-linked">					
-              <li>						
-                <a><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-activity-small" />
-              	</svg> Activity</a>					
-              </li>					
-              <li>						
-                <a><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-video-camera" />
-              	</svg> Videos</a>					
-              </li>					
-              <li>						
-                <a><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-image" />
-              	</svg> Images</a>					
-              </li>		
-              <li>						
-                <a><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-gift" />
-              	</svg> Theme Creator</a>					
-              </li>		
-              <li>						
-                <a><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-gear" />
-              	</svg> Special Pages</a>					
-              </li>		
-            </ul>
-          </div>
-        </div>
-    </div>
-  </div>
-  <nav class="wds-community-header__local-navigation">
-    <ul class="wds-tabs">
-    
-      <li class="wds-tabs__tab">				
-        <div class="wds-dropdown">
-          <div class="wds-tabs__tab-label wds-dropdown__toggle">				
-            <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon-tiny wds-icon">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-explore-tiny" />
-            </svg>			
-            <span>Actions</span>	
-            <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
-            </svg>
-          </div>
-          <div class="wds-is-not-scrollable wds-dropdown__content">		
-            <ul class="wds-list wds-is-linked wds-has-bolded-items">					
-              <li class="wds-dropdown-level-2">						
-                <a class="wds-dropdown-level-2__toggle">
-                  <span>User Actions</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown-chevron">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-menu-control-tiny" />
-                  </svg>
-                </a>
-                <div class="wds-dropdown-level-2__content">
-                  <ul class="wds-list wds-is-linked">
-                    <li>
-                    <a>View Profile</a>
-                    </li>
-                    <li>
-                    <a>Talk Page</a>
-                    </li>
-                    <li>
-                    <a>Preferences</a>
-                    </li>
-                    <li>
-                    <a>Help</a>
-                    </li>
-                    <li>
-                    <a>Log Out</a>
-                    </li>
-                  </ul>
-              </div>		
-              </li>					
-              <li class="wds-dropdown-level-2">						
-                <a class="wds-dropdown-level-2__toggle">
-                  <span>Wiki Actions</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown-chevron">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-menu-control-tiny" />
-                  </svg>
-                </a>
-                <div class="wds-dropdown-level-2__content">
-                  <ul class="wds-list wds-is-linked">
-                    <li>
-                    <a>GMK Pages</a>
-                    </li>
-                    <li>
-                    <a>Special Pages</a>
-                    </li>
-                    <li>
-                    <a>Bash</a>
-                    </li>
-                    <li>
-                    <a>Command Line Prompt</a>
-                    </li>
-                    <li>
-                    <a>Printable Version</a>
-                    </li>
-                    <li>
-                    <a>Export as PDF</a>
-                    </li>
-                    <li>
-                    <a>Export article HTML source</a>
-                    </li>
-                  </ul>
-              </div>		
-              </li>					
-            </ul>
-          </div>
-        </div>
-      </li>
-          
-      <li class="wds-tabs__tab">				
-        <div class="wds-tabs__tab-label">					
-          <a href="#">							
-            <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon-tiny wds-icon">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-reply-small" />
-            </svg>						
-            <span>Forum</span>					
-          </a>				
-        </div>
-      </li>
+					<article class="post">
+						<div class="post-container">
+						<img class="mpisto-avatar" src="HM100.png"></img>
+							<small class="name">HM100</small>
+							<div class="wds-dropdown wds-has-shadow">
+								<div class="wds-button wds-is-text wds-dropdown__toggle wds-is-alternate wds-is-square">
+	<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small wds-dropdown__toggle-chevron">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-small" />
+						  </svg>
+								</div>
+								<div class="wds-dropdown__content wds-is-right-aligned wds-is-not-scrollable">
+									<ul class="wds-list wds-is-linked">
+										<li>
+										<a>
+	<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-clock" />
+						  </svg> <span>View History</span>
+										</a>
+										</li>
+										<li>
+										<a>
+	<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-pencil" />
+						  </svg> <span>Edit</span>
+										</a>
+										</li>
+										<li>
+										</li>
+										<li>
+										<a>
+	<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-trash" />
+						  </svg> <span>Delete</span>
+										</a>
+										</li>
+										<li>
+										<a>
+	<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-alert" />
+						  </svg> <span>Report</span>
+										</a>
+										</li>
+										<li>
+										</li>
+										<li>
+										<a>
+	<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-quote" />
+						  </svg> <span>Quote</span>
+										</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="message">
+							Great Change. It reminds me of Community feeds from Fandom. Is it true? Anyways, very great layout.
+						</div>
+					</article>
 
-      <li class="wds-tabs__tab">				
-        <div class="wds-tabs__tab-label">					
-          <a href="#">							
-            <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon-tiny wds-icon">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-reply-small" />
-            </svg>						
-            <span>Questions?</span>					
-          </a>				
-        </div>
-      </li>
-    </ul>
-  </nav>
-</header>
+					<article class="post">
+						<div class="post-container">
+						<img class="mpisto-avatar" src="Zekzphire.png"></img>
+							<small class="name">Zekzphire</small>
+							<div class="wds-dropdown wds-has-shadow">
+								<div class="wds-button wds-is-text wds-dropdown__toggle wds-is-alternate wds-is-square">
+	<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small wds-dropdown__toggle-chevron">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-small" />
+						  </svg>
+								</div>
+								<div class="wds-dropdown__content wds-is-right-aligned wds-is-not-scrollable">
+									<ul class="wds-list wds-is-linked">
+										<li>
+										<a>
+	<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-clock" />
+						  </svg> <span>View History</span>
+										</a>
+										</li>
+										<li>
+										<a>
+	<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-pencil" />
+						  </svg> <span>Edit</span>
+										</a>
+										</li>
+										<li>
+										</li>
+										<li>
+										<a>
+	<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-trash" />
+						  </svg> <span>Delete</span>
+										</a>
+										</li>
+										<li>
+										<a>
+	<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-alert" />
+						  </svg> <span>Report</span>
+										</a>
+										</li>
+										<li>
+										</li>
+										<li>
+										<a>
+	<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-quote" />
+						  </svg> <span>Quote</span>
+										</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="message">
+							@HM100 Yup. Indeed. We did this layout to compete with Fandom in this case
+						</div>
+					</article>
 
-<!-- End Header -->
+				</article>
 
-  <div class="mpisto-wrapper">
-    <header class="mpisto-page-header" id ="PageHeader">
-      <div class="mpisto-page-header-main">
-		<div class="mpisto-page-header-title">
-			<h1 class="mpisto-title">Zekzphire 2018 Changelog</h1>
-			<nav class="pageheader-search">
-			  <input class="mpisto-input" placeholder="Search Mpisto War 2018;"></input>
-			  <button class="wds-button wds-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
-	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass" />
-	</svg>
-			  </button>
-			</nav>
+				<article class="post">
+					<div class="post-container">
+						<img class="mpisto-avatar" src="Zekzphire (Old Old).png"></img>
+						<small class="name">Mpisto Proundou</small>
+						<div class="wds-dropdown wds-has-shadow">
+							<div class="wds-button wds-is-text wds-dropdown__toggle wds-is-alternate wds-is-square">
+<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small wds-dropdown__toggle-chevron">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-small" />
+					  </svg>
+							</div>
+							<div class="wds-dropdown__content wds-is-right-aligned wds-is-not-scrollable">
+								<ul class="wds-list wds-is-linked">
+									<li>
+									<a>
+<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-clock" />
+					  </svg> <span>View History</span>
+									</a>
+									</li>
+									<li>
+									<a>
+<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-pencil" />
+					  </svg> <span>Edit</span>
+									</a>
+									</li>
+									<li>
+									<a>
+<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-lock" />
+					  </svg> <span>Protect</span>
+									</a>
+									</li>
+									<li>
+									<a>
+<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-trash" />
+					  </svg> <span>Delete</span>
+									</a>
+									</li>
+									<li>
+									<a>
+<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-alert" />
+					  </svg> <span>Report</span>
+									</a>
+									</li>
+									<li>
+									<a>
+<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-reply-arrow" />
+					  </svg> <span>Follow</span>
+									</a>
+									</li>
+									<li>
+									<a>
+<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-quote" />
+					  </svg> <span>Quote</span>
+									</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<h1><a>A Success in our Identity</a></h1>
+					<div class="message">
+					So excited that we did very good work. We covered things from the Mpisto War Era when it was started as Ryneeeel Zekzphire Grooze. MpistoExtend and then MpistoPrive were born. What's more, another project, named as Mpisto War Workspaces 2019 did also created to replace the discontinued Slack3. Hope you will celebrate with us the 2000th developing Desktop build here.
+					<br>
+					Best Wishes, Mpisto!!!!!
+					</div>
+					
+					<article class="post">
+						<div class="post-container">
+						<img class="mpisto-avatar" src="Frouda.jpg"></img>
+							<small class="name">Frouda</small>
+							<div class="wds-dropdown wds-has-shadow">
+								<div class="wds-button wds-is-text wds-dropdown__toggle wds-is-alternate wds-is-square">
+	<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small wds-dropdown__toggle-chevron">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-small" />
+						  </svg>
+								</div>
+								<div class="wds-dropdown__content wds-is-right-aligned wds-is-not-scrollable">
+									<ul class="wds-list wds-is-linked">
+										<li>
+										<a>
+	<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-clock" />
+						  </svg> <span>View History</span>
+										</a>
+										</li>
+										<li>
+										<a>
+	<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-pencil" />
+						  </svg> <span>Edit</span>
+										</a>
+										</li>
+										<li>
+										</li>
+										<li>
+										<a>
+	<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-trash" />
+						  </svg> <span>Delete</span>
+										</a>
+										</li>
+										<li>
+										<a>
+	<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-alert" />
+						  </svg> <span>Report</span>
+										</a>
+										</li>
+										<li>
+										</li>
+										<li>
+										<a>
+	<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-quote" />
+						  </svg> <span>Quote</span>
+										</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="message">
+							Very Fanscinating Post!!!!!
+						</div>
+					</article>
+
+					<article class="post">
+						<div class="post-container">
+						<img class="mpisto-avatar" src="Zekzphire (Old Old).png"></img>
+							<small class="name">Mpisto Proundou</small>
+							<div class="wds-dropdown wds-has-shadow">
+								<div class="wds-button wds-is-text wds-dropdown__toggle wds-is-alternate wds-is-square">
+	<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small wds-dropdown__toggle-chevron">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-small" />
+						  </svg>
+								</div>
+								<div class="wds-dropdown__content wds-is-right-aligned wds-is-not-scrollable">
+									<ul class="wds-list wds-is-linked">
+										<li>
+										<a>
+	<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-clock" />
+						  </svg> <span>View History</span>
+										</a>
+										</li>
+										<li>
+										<a>
+	<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-pencil" />
+						  </svg> <span>Edit</span>
+										</a>
+										</li>
+										<li>
+										</li>
+										<li>
+										<a>
+	<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-trash" />
+						  </svg> <span>Delete</span>
+										</a>
+										</li>
+										<li>
+										<a>
+	<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-alert" />
+						  </svg> <span>Report</span>
+										</a>
+										</li>
+										<li>
+										</li>
+										<li>
+										<a>
+	<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-quote" />
+						  </svg> <span>Quote</span>
+										</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="message">
+							Thank you!!! I hope Mpisto Scenes Community do more work on replacing this Forum layout. Very archaic IMO
+						</div>
+					</article>
+
+				</article>
+
+				<article class="post">
+					<div class="post-container">
+						<img class="mpisto-avatar" src="HM100.png"></img>
+						<small class="name">HM100</small>
+						<div class="wds-dropdown wds-has-shadow">
+							<div class="wds-button wds-is-text wds-dropdown__toggle wds-is-alternate wds-is-square">
+<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small wds-dropdown__toggle-chevron">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-small" />
+					  </svg>
+							</div>
+							<div class="wds-dropdown__content wds-is-right-aligned wds-is-not-scrollable">
+								<ul class="wds-list wds-is-linked">
+									<li>
+									<a>
+<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-clock" />
+					  </svg> <span>View History</span>
+									</a>
+									</li>
+									<li>
+									<a>
+<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-pencil" />
+					  </svg> <span>Edit</span>
+									</a>
+									</li>
+									<li>
+									<a>
+<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-lock" />
+					  </svg> <span>Protect</span>
+									</a>
+									</li>
+									<li>
+									<a>
+<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-trash" />
+					  </svg> <span>Delete</span>
+									</a>
+									</li>
+									<li>
+									<a>
+<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-alert" />
+					  </svg> <span>Report</span>
+									</a>
+									</li>
+									<li>
+									<a>
+<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-reply-arrow" />
+					  </svg> <span>Follow</span>
+									</a>
+									</li>
+									<li>
+									<a>
+<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-quote" />
+					  </svg> <span>Quote</span>
+									</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<h1><a>Tips on making a great community</a></h1>
+					<div class="message">
+					Its me again!!! Now we say about making the community better
+					<span style="font-size:120%; font-weight:bold; display:block;">Make more pages</span>
+					Amount of pages is what it matters. Uploading some photos is also a great deal of doing the job well
+					<span style="font-size:120%; font-weight:bold; display:block;">Customize Wiki's themes</span>
+					You have 4 slots of themes. Modify them all to encourage users to pick the best theme it suits. If they can't and they want a classic contrast mode, its their choice. Its recommended to have at least one dark theme for the visitors to choose, like how the third theme in vanilla theme designer config has. 
+					<span style="font-size:120%; font-weight:bold; display:block;">Protect against vandalism</span>
+					Don't let vandalism come into your wiki. Warn the users first and if they refuse to listen, block them temporary. If they continue it too much, a permanent block is needed. Blocking unnecessarily harms the community. If you spot an abusive admin, contact Mpisto so as to take actions.
+					<span style="font-size:120%; font-weight:bold; display:block;">And lots more</span>
+					Contact me or another expert if your question isn't covered here.
+					</div>
+					
+					<article class="post">
+						<div class="post-container">
+						<img class="mpisto-avatar" src="Zekzphire.png"></img>
+							<small class="name">Zekzphire</small>
+							<div class="wds-dropdown wds-has-shadow">
+								<div class="wds-button wds-is-text wds-dropdown__toggle wds-is-alternate wds-is-square">
+	<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small wds-dropdown__toggle-chevron">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-small" />
+						  </svg>
+								</div>
+								<div class="wds-dropdown__content wds-is-right-aligned wds-is-not-scrollable">
+									<ul class="wds-list wds-is-linked">
+										<li>
+										<a>
+	<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-clock" />
+						  </svg> <span>View History</span>
+										</a>
+										</li>
+										<li>
+										<a>
+	<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-pencil" />
+						  </svg> <span>Edit</span>
+										</a>
+										</li>
+										<li>
+										</li>
+										<li>
+										<a>
+	<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-trash" />
+						  </svg> <span>Delete</span>
+										</a>
+										</li>
+										<li>
+										<a>
+	<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-alert" />
+						  </svg> <span>Report</span>
+										</a>
+										</li>
+										<li>
+										</li>
+										<li>
+										<a>
+	<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-quote" />
+						  </svg> <span>Quote</span>
+										</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="message">
+							Very Good!!!! Mpisto Scenes Community got thrilled by seeing this!!!!
+						</div>
+					</article>
+
+					<article class="post">
+						<div class="post-container">
+						<img class="mpisto-avatar" src="Zekzphire (Old Old).png"></img>
+							<small class="name">Mpisto Proundou</small>
+							<div class="wds-dropdown wds-has-shadow">
+								<div class="wds-button wds-is-text wds-dropdown__toggle wds-is-alternate wds-is-square">
+	<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small wds-dropdown__toggle-chevron">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-small" />
+						  </svg>
+								</div>
+								<div class="wds-dropdown__content wds-is-right-aligned wds-is-not-scrollable">
+									<ul class="wds-list wds-is-linked">
+										<li>
+										<a>
+	<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-clock" />
+						  </svg> <span>View History</span>
+										</a>
+										</li>
+										<li>
+										<a>
+	<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-pencil" />
+						  </svg> <span>Edit</span>
+										</a>
+										</li>
+										<li>
+										</li>
+										<li>
+										<a>
+	<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-trash" />
+						  </svg> <span>Delete</span>
+										</a>
+										</li>
+										<li>
+										<a>
+	<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-alert" />
+						  </svg> <span>Report</span>
+										</a>
+										</li>
+										<li>
+										</li>
+										<li>
+										<a>
+	<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-quote" />
+						  </svg> <span>Quote</span>
+										</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="message">
+							Excellent!!! Now this should at least be followed by anyone who visits the Forum of this community. And yes, we demote an admin if a user contacted us suspecting that the admin abuses his/her powers. Well Done!!! We're looking foward to hear more from you!!!
+						</div>
+					</article>
+
+				</article>
+			</div>
+			<div class="card last">
+			<div style="text-align:center; width:100%;"><h2 class="wds-midlight-aqua">Community Guidelines</h2></div>
+			<ol>
+				<li>
+				Be always civil
+				</li>
+				<li>
+				No vandalism, spam or hate posts and polls
+				</li>
+				<li>
+				Always be on topic. Never off-topic
+				</li>
+				<li>
+				Don't send links to malicious sites or to sites that you don't trust
+				</li>
+				<li>
+				Assistance for scripting is allowed, advertising communities however not
+				</li>
+				<li>
+				Bug reports may be better be asked via Mpisto Contact. Concerns about how A Techno works must be asked via A Techno Contact, not Mpisto
+				</li>
+				<li>
+				Enjoy!!!
+				</li>
+			</ol>
+				<button class="wds-button wds-is-alternate" title="You'll be redirected to GMK Guidelines to change it">Edit Rules</button>
+			</div>
 		</div>
-        <h4 class="mpisto-sub">From Mpisto War 2018</h4>
-        <div class="mpisto-page-header-contribution">
-          <div class="mpisto-page-header-contribution-buttons">
-            <div class="wds-button-group">
-              <a class="wds-is-squished wds-button">				
-                <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-pencil-small" />
-              	</svg>				
-                <span>Edit</span>
-            	</a>
-              <div class="wds-dropdown">				
-                <div class="wds-button wds-is-squished wds-dropdown__toggle">	
-                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
-                  </svg>
-                </div>
-                <div class="wds-dropdown__content wds-is-right-aligned wds-is-not-scrollable">					
-                  <ul class="wds-list wds-is-linked">						
-                    <li><a><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-clock-tiny" />
-              	</svg> View History</a></li>
-                    <li><a><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-house" />
-              	</svg> Move</a></li>
-                    <li><a><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-lock" />
-              	</svg> Protect</a></li>
-                    <li><a><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-trash" />
-              	</svg> Delete</a></li>
-                    <li><a><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny" style="color:#ccc; color:var(--content-border);">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-trash" />
-              	</svg> PowerDelete</a></li>
-                    <li><a><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-pages" />
-              	</svg> Bash Page</a></li>
-                    <li><a><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-eye" />
-              	</svg> Add to followlist</a></li>
-                  </ul>
-                </div>
-              </div>		
-            </div>
-            <div class="wds-button-group">
-              <a class="wds-button wds-is-squished wds-is-secondary">
-              <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-reply-small" />
-              </svg>
-              <span>Comments</span></a>
-              <a class="wds-button wds-is-squished wds-is-secondary">
-              <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-note" />
-              </svg>
-              <span>Talk</span></a>
-            </div>
-          <div class="wds-dropdown">				
-            <div class="wds-button wds-is-squished wds-is-secondary wds-dropdown__toggle">
-            <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-share-small" />
-            </svg>
-            <span>Share</span>                   <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
-                  </svg></div>
-                <div class="wds-dropdown__content wds-is-right-aligned wds-is-not-scrollable">					
-                  <ul class="wds-list wds-is-linked">						
-                    <li><a><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-googleplus" />
-              	</svg> Google+</a></li>
-                    <li><a><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-youtube" />
-              	</svg> Youtube</a></li>
-                    <li><a><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-facebook" />
-              	</svg> Facebook</a></li>
-                    <li><a><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-twitter" />
-              	</svg> Twitter</a></li>
-                    <li><a><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny" >
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-instagram" />
-              	</svg> Instagram</a></li>
-                    <li><a><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-reddit" />
-              	</svg> Reddit</a></li>
-                    <li><a><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny" viewBox="0 0 240 245" width="20" height="20"><path d="M 104.4 103.9 c -5.7 0 -10.2 5 -10.2 11.1 s 4.6 11.1 10.2 11.1 c 5.7 0 10.2 -5 10.2 -11.1 c 0.1 -6.1 -4.5 -11.1 -10.2 -11.1 Z M 140.9 103.9 c -5.7 0 -10.2 5 -10.2 11.1 s 4.6 11.1 10.2 11.1 c 5.7 0 10.2 -5 10.2 -11.1 s -4.5 -11.1 -10.2 -11.1 Z" /><path d="M 189.5 20 h -134 C 44.2 20 35 29.2 35 40.6 v 135.2 c 0 11.4 9.2 20.6 20.5 20.6 h 113.4 l -5.3 -18.5 l 12.8 11.9 l 12.1 11.2 l 21.5 19 V 40.6 c 0 -11.4 -9.2 -20.6 -20.5 -20.6 Z m -38.6 130.6 s -3.6 -4.3 -6.6 -8.1 c 13.1 -3.7 18.1 -11.9 18.1 -11.9 c -4.1 2.7 -8 4.6 -11.5 5.9 c -5 2.1ri -9.8 3.5 -14.5 4.3 c -9.6 1.8 -18.4 1.3 -25.9 -0.1 c -5.7 -1.1 -10.6 -2.7 -14.7 -4.3 c -2.3 -0.9 -4.8 -2 -7.3 -3.4 c -0.3 -0.2 -0.6 -0.3 -0.9 -0.5 c -0.2 -0.1 -0.3 -0.2 -0.4 -0.3 c -1.8 -1 -2.8 -1.7 -2.8 -1.7 s 4.8 8 17.5 11.8 c -3 3.8 -6.7 8.3 -6.7 8.3 c -22.1 -0.7 -30.5 -15.2 -30.5 -15.2 c 0 -32.2 14.4 -58.3 14.4 -58.3 c 14.4 -10.8 28.1 -10.5 28.1 -10.5 l 1 1.2 c -18 5.2 -26.3 13.1 -26.3 13.1 s 2.2 -1.2 5.9 -2.9 c 10.7 -4.7 19.2 -6 22.7 -6.3 c 0.6 -0.1 1.1 -0.2 1.7 -0.2 c 6.1 -0.8 13 -1 20.2 -0.2 c 9.5 1.1 19.7 3.9 30.1 9.6 c 0 0 -7.9 -7.5 -24.9 -12.7 l 1.4 -1.6 s 13.7 -0.3 28.1 10.5 c 0 0 14.4 26.1 14.4 58.3 c 0 0 -8.5 14.5 -30.6 15.2 Z" /></svg> Discord</a></li>
-                  </ul>
-                </div>
-            </div>
-            
-          </div>
-        </div>
-      </div>
-    </header>
-    <div class="mpisto-article-wrapper">
-      <article class="mpisto-article">
-      <!--Start Article-->
-      <!--59-->
-      <h2>IB59</h2>
-        <ul>
-        <li>
-        Fifty-ninth revision, Based on Desktop Build 1720 and includes the following changes:
-        <ul>
-		<li>
-		Mobile Header from Mpisto War Workspaces 2019 has been finalized for Mpisto War 2018 and brought it to Simple Skin as well
-		</li>
-		<li>
-		Various Improvements to Discussions and made mobile footer look like the ones from Mpisto War Workspaces 2019
-		</li>
-		<li>
-		Replaced the Archaic Forum layout with a newer, flexible layout. It has been renamed into Community Discussions as well. Its layout is also based on the ones found on Community Feeds feature from Fandom with lesser bugs
-		</li>
-		<li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--58-->
-      <h2>IB58</h2>
-        <ul>
-        <li>
-        Fifty-eighth revision, Based on Desktop Build 1700 and includes the following changes:
-        <ul>
-		<li>
-		Remodeled the way background-image happens by default
-		</li>
-		<li>
-		Fixed the theme in Mpisto War Store by dropped theme selection and switching to WDS theme
-		</li>
-		<li>
-		Unsaved Changes on the Article Constructor will give the article title an Asterisk. In addition, clicking on discard changes button will also give a warning to ensure accident clicks will be reduced
-		</li>
-		<li>
-		Patched Wiki Notifications container
-		</li>
-		<li>
-		Reconstructed the Community header again. Remember to update your CSS slightly to ensure it will work as expected
-		</li>
-		<li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--57-->
-      <h2>IB57</h2>
-        <ul>
-        <li>
-        Fifty-sixth revision, Based on Desktop Build 1680 and includes the following changes:
-        <ul>
-		<li>
-		Introduced support of Monaco-only skin classes
-		</li>
-		<li>
-		Button component is now based from GTK+ instead of Design System
-		</li>
-		<li>
-		Implemented GTK font family on Roboto font slot
-		</li>
-		<li>
-		Implemented Wikitable table styling, in order to give compatibility with MediaWiki articles
-		</li>
-		<li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--56-->
-      <h2>IB56</h2>
-        <ul>
-        <li>
-        Fifty-sixth revision, Based on Desktop Build 1660 and includes the following changes:
-        <ul>
-		<li>
-		Enchanced Banner Notices more on High Contrast Mode
-		</li>
-		<li>
-		Saving Source Code from Article Constructor will now show a banner notification
-		</li>
-		<li>
-		Due to jQuery Addition, some changes to some JS such as in the editor have been made, making the first time in Static Wrappers to have dynamical Editor
-		</li>
-		<li>
-		Added jQuery Support in Mpisto without an import. See <a href="https://jquery.com/">this site</a> for more info
-		</li>
-		<li>
-		Temprarly wutgdrawn support of FullView Responsive design for non-fixed positioned elements
-		</li>
-		<li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--55-->
-      <h2>IB55</h2>
-        <ul>
-        <li>
-        Fifty-fifth revision, Based on Desktop Build 1640 and includes the following changes:
-        <ul>
-		<li>
-		Banned the ability to have more than 1600px on screen size. Now it will cause centering with thick shadow but scrollbar still allocates to the right (Except Qorta Qorte)
-		</li>
-		<li>
-		Remodeled Gradients again
-		</li>
-		<li>
-		Major theming changes for Page Header
-		</li>
-		<li>
-		Fixed renaiming issues on Legacy Buttons and Dropdowns
-		</li>
-		<li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--54-->
-      <h2>IB54</h2>
-        <ul>
-        <li>
-        Fifty-fourth revision, Based on Desktop Build 1620 and includes the following changes:
-        <ul>
-		<li>
-		Article Constructor has been finalized!!!!!
-		</li>
-		<li>
-		Added support for <code>.wds-is-alternate</code> class in Tabs
-		</li>
-		<li>
-		Replaced Archaic A Secure SVGs with their new counterparts
-		</li>
-		<li>
-		Improved some theming that involves link color
-		</li>
-		<li>
-		Made link color behave like button color with dark and text variant. You can apply it to buttons with the <code>wds-is-alternate</code> class. Supports Secondary and Text WDS buttons but does not WDS tabs or Legacy Buttons. Support for WDS tabs will come in a later build
-		</li>
-		<li>
-		As an Alpha Project, we have added a new Article Constructor which makes edit without opening a new wrapper. Source Editing renaims but you can no longer chnage theme/rendering mode/color filter. Several other enchancements are being done as well. In addition, page moving has been merged with editing so we removed the move function from the edit dropdown, requiring page editing to change article title (And namespace as well, may be only that action as well). Like before, you still deciede if you want to leave a redirect behind if you choose to rename page.
-		</li>
-		<li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--53-->
-      <h2>IB53</h2>
-        <ul>
-        <li>
-        Fifty-third revision, Based on Desktop Build 1600 and includes the following changes:
-        <ul>
-		<li>
-		Page title improvements
-		</li>
-		<li>
-		Remodeled Global Nav for large screens (See <a href="https://github.com/AWikia/MpistoWorkspaces/releases/tag/24x">here</a> to see what's changed)
-		</li>
-		<li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--52-->
-      <h2>IB52</h2>
-        <ul>
-        <li>
-        Fifty-second revision, Based on Desktop Build 1580 and includes the following changes:
-        <ul>
-		<li>
-		Dropdown menus in Color Nav and Global Nav (Except Explore Menu) have dropdown chevrons
-		</li>
-		<li>
-		Made some improvements to Chat
-		</li>
-		<li>
-		Recolored the Spotlight footer to Dark theme
-		</li>
-		<li>
-		CSS fixes
-		</li>
-		<li>
-		Replaced Raleway with Liberation Sans as 2nd default font
-		</li>
-		<li>
-		Improved Blended Gradient rendering
-		</li>
-		<li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--51-->
-      <h2>IB51</h2>
-        <ul>
-        <li>
-        Fifty-first revision, Based on Desktop Build 1560 and includes the following changes:
-        <ul>
-		<li>
-		Made some tweaks to site layout
-		</li>
-		<li>
-		You have the ability to customize the font family on the Spotlight footer
-		</li>
-        <li>
-        Serif version of Mpisto font now has Light and Extra Bold Weights
-        </li>
-        <li>
-        Added a serif version of Mpisto font
-        </li>
-		<li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--50-->
-      <h2>IB50</h2>
-        <ul>
-        <li>
-        Fiftieth revision, Based on Desktop Build 1540 and includes the following changes:
-        <ul>
-        <li>
-        Removed Background-color from userpages header
-        </li>
-        <li>
-        Updated Mpisto font used on Wordmark to be latest
-        </li>
-        <li>
-        Updated Editor Design
-        </li>
-        <li>
-        Updated Mpisto font with the following editions:
-			<ul>
-			<li>
-			Some Glyphs have been changed in general such as <b>2</b>, <b>A</b> and <b>æ</b>
-			</li>
-			<li>
-			Issues with some glyphs such as extended greek and full-width characters being displayed as empty spaces have been fixed
-			</li>
-			<li>
-			Improved support of Extended Latin and Cyrillic
-			</li>
-			<li>
-			Support for Armenian language has been added
-			</li>
-			</ul>
-        </li>
-		<li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--49-->
-      <h2>IB49</h2>
-        <ul>
-        <li>
-        Fourty-ninth revision, Based on Desktop Build 1520 and includes the following changes:
-        <ul>
-        <li>
-        Made responsive design exclusively work on Full-Width layout, something Fandom hasn't done
-        </li>
-        <li>
-        Dropped Support of IE
-        </li>
-        <li>
-        Some modifications to Simple Skin
-        </li>
-        <li>
-        Redrawn the gift icon
-        </li>
-        <li>
-        Updated the icon set of Fandom Icons. Icons not programmed anymore from that change will stay as font awesome icons. New Icons have been added but existing ones have not been renamed to preserve compatibility and updated Page header title area
-        </li>
-		<li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--48-->
-      <h2>IB48</h2>
-        <ul>
-        <li>
-        Fourty-eighth revision, Based on Desktop Build 1500 and includes the following changes:
-        <ul>
-        <li>
-        Fixed Rendering of Mpisto font and centered search container within the title container
-        </li>
-        <li>
-        Turned Editor and Options to full-width and adjusted some stylings
-        </li>
-        <li>
-        Major redesign of Lightbox modals, with minor redesign on preferences
-        </li>
-        <li>
-        Unresponsived Global Nav
-        </li>
-        <li>
-        Enchanced Mpisto Font with stretches added
-        </li>
-        <li>
-        Added some code for FullView Responsive Layout (Not available on Mpisto currently)
-        </li>
-        <li>
-        Made Classic Preferences Layout restricted to Crawlers only
-        </li>
-		<li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--47-->
-      <h2>IB47</h2>
-        <ul>
-        <li>
-        Fourty-seventh revision, Based on Desktop Build 1480 and includes the following changes:
-        <ul>
-        <li>
-        Added embolding algorythm
-        </li>
-        <li>
-        Minor Corrections to preferences page
-        </li>
-        <li>
-        Finalization of Preferences 6
-        </li>
-        <li>
-        Partially remodeled the preferences layout. Classic layout is still available as an option for a while
-        </li>
-        <li>
-        Initial foundation work at Prefences 6
-        </li>
-		<li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--46-->
-      <h2>IB46</h2>
-        <ul>
-        <li>
-        Fourty-sixth revision, Based on Desktop Build 1460 and includes the following changes:
-        <ul>
-        <li>
-        Fixed Widescreen mode issues on Firefox
-        </li>
-        <li>
-        CSS fixes
-        </li>
-        <li>
-        Switched 18 WDS Icons to FontAwesome ones. However, the old WDS icons are kept for many reasons.
-        </li>
-		<li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--45-->
-      <h2>IB45</h2>
-        <ul>
-        <li>
-        Fourty-fifth revision, Based on Desktop Build 1440 and includes the following changes:
-        <ul>
-        <li>
-        Finalized Scrollbar Styling on Mpisto
-        </li>
-        <li>
-        Chnaged Scrollbar color for the following areas: Options, Editor
-        </li>
-        <li>
-        Switched default font family to Mpisto San. Made PT fonts an accessible font stack
-        </li>
-        <li>
-        Implemented Scrollbar styling colors
-        </li>
-		<li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--44-->
-      <h2>IB44</h2>
-        <ul>
-        <li>
-        Fourty-fourth revision, Based on Desktop Build 1420 and includes the following changes:
-        <ul>
-        <li>
-        Switched Store Content to use a modal when clicking on a component in accordance to the new theming in the Simple Layout
-        </li>
-        <li>
-        Finalized Theming on MpistoSimple2
-        </li>
-        <li>
-        Enchanced Limited Theming on Mobile Site (Community Header BG goes to button BG, Body BG is gradient) and enabled Flags feature to reach mobile skin
-        </li>
-        <li>
-        Improved support of new Mpisto font adding Greek and Cyrillic support
-        </li>
-        <li>
-        Started Mpisto4 Core, with Mpisto3 ones being EOL
-        </li>
-        <li>
-        Finalized the Mpisto3 Core
-        </li>
-        <li>
-        Upgraded Mpisto font family to 2019 version
-        </li>        
-		<li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--43-->
-      <h2>IB43</h2>
-        <ul>
-        <li>
-        Fourty-third revision, Based on Desktop Build 1400 and includes the following changes:
-        <ul>
-        <li>
-        Improvements to wordmark area in Color Header
-        </li>
-        <li>
-        Dropped AntiAliasing of body background image
-        </li>
-		<li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--42-->
-      <h2>IB42</h2>
-        <ul>
-        <li>
-        Fourty-second revision, Based on Desktop Build 1380 and includes the following changes:
-        <ul>
-        <li>
-        Adjusted some styling
-        </li>
-        <li>
-        Made Editor inputs that use numbers to be number inputs
-        </li>
-        <li>
-        Editor Improvements
-        </li>
-        <li>
-        Improvements to HD Breakpoints
-        </li>
-		<li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--41-->
-      <h2>IB41</h2>
-        <ul>
-        <li>
-        Fourty-first revision, Based on Desktop Build 1360 and includes the following changes:
-        <ul>
-        <li>
-        Made Color Header and Nav links on Desktop (On Normal and Performance modes) faster
-        </li>
-        <li>
-        Made new preferences page design
-        </li>
-        <li>
-		Added Player font stack to font chooser
-        </li>
-        <li>
-        Made Mono fonts change according to if Serf font stack is enabled and changed fonts
-        </li>
-		<li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--40-->
-      <h2>IB40</h2>
-        <ul>
-        <li>
-        Fourtieth revision, Based on Desktop Build 1340 and includes the following changes:
-        <ul>
-        <li>
-        Simplified Color filters again and made an update on them
-        </li>
-        <li>
-        Changed Serif font for Slack Classic to a slab-serif ones and re-implemented System font stack (Without any Linux System Font Family because all of the mentioned ones (Cantarell, Droid Sans, Fira Sans, Oxygen, Roboto, Ubuntu) are also on Google fonts which can break things if these fonts are imported (Exception is Droid Sans but two iterators (Open and Noto Sans) exist)
-        </li>
-        <li>
-        Made three-state checkboxes to use a minus sign when trying to enable unchecked checkbox to indeterminate
-        </li>
-        <li>
-        Logged in users can control which namespace will use Visual Editor, which will SourceEditor and which will enforce strictly SourceEditor
-        </li>
-		<li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--39-->
-      <h2>IB39</h2>
-        <ul>
-        <li>
-        Thirty-ninth revision, Based on Desktop Build 1320 and includes the following changes:
-        <ul>
-        <li>
-        CSS fixes
-        </li>
-        <li>
-        Moved Create a Wiki button into a new menu
-        </li>
-		<li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--38-->
-      <h2>IB38</h2>
-        <ul>
-        <li>
-        Thirty-eigth revision, Based on Desktop Build 1300 and includes the following changes:
-        <ul>
-        <li>
-        Made new bold weight of Source Pro fonts (Larger glyphs) and added Thin, Extra Light, Medium, Extra Bold and Black weights on them to make weights metrically compative with Source Sans and Source Serif fonts
-        </li>
-        <li>
-        Slowed down Community Header transitions on links on Contrast Mode
-        </li>
-        <li>
-        Updated look and feel of Source Pro fonts
-        </li>
-        <li>
-        Improved performance on VisualEditor while editing large articles
-        </li>
-        <li>
-        Remodeled the Local navigation container theming
-        </li>
-        <li>
-        Upgraded a bit the global footer
-        </li>
-		<li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--37-->
-      <h2>IB37</h2>
-        <ul>
-        <li>
-        Thirty-seventh revision, Based on Desktop Build 1280 and includes the following changes:
-        <ul>
-        <li>
-        Added Support for Hi-Density Wordmakrs and switched some theming on Preferences
-        </li>
-        <li>
-        Implemented GlobalContributions for central wiki. Link redirects to central wiki when used on non-central wikis
-        </li>
-        <li>
-        Introduced new Noto Sans font replacement that replaced Ubuntu, added some new font stacks, rearranged its order in Preferences and droppoed classic font chsooser. Noto Sans font stack can be altered by wikis. Until 31 December 2018, for crawlers only, a System font stack will live but new commands cannot be sent for invoking anymore
-        </li>
-		<li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--36-->
-      <h2>IB36</h2>
-        <ul>
-        <li>
-        Thirty-sixth revision, Based on Desktop Build 1260 and includes the following changes:
-        <ul>
-        <li>
-        CSS fixes
-        </li>
-        <li>
-        Dynamic upload buttons on Editor Lightboxes changed to static
-        </li>
-        <li>
-        Improvements to Profile Masthead
-        </li>
-		<li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--35-->
-      <h2>IB35</h2>
-        <ul>
-        <li>
-        Thirty-fifth revision, Based on Desktop Build 1240 and includes the following changes:
-        <ul>
-        <li>
-        Updated Headroom.js behavior for Mobile Skin
-        </li>
-        <li>
-        CSS fixes
-        </li>
-        <li>
-        Brightness function used for button and header theming arrived to dropdown theming as well. A second emphasis color is also added and aliases to dropdown bg color in High Contrast Mode
-        </li>
-        <li>
-        Switched some parts of dropdown-bg theming to emphasis-bg theming
-        </li>
-		<li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--34-->
-      <h2>IB34</h2>
-        <ul>
-        <li>
-        Thirty-fourth revision, Based on Desktop Build 1220 and includes the following changes:
-        <ul>
-        <li>
-        Added CSS Mask for the fourth Preference Pic preview
-		</li>
-        <li>
-        Changed serif font for Fira Sans and added Traditional and Simplified Chinese fallback fonts on Mobile Skin
-        </li>
-        <li>
-        Fixed Mobile Site link theming in New Footer
-        </li>
-        <li>
-        Global Footer now appears correctly on all supported browsers
-        </li>
-        <li>
-        Redesigned the Global Footer container to mimic the A Secure Footer
-        </li>
-        <li>
-		Updated Source Pro Serif font to V3.5 which completes cyrillic support, and slightly improved Extended Latin support
-        </li>
-		<li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--33-->
-      <h2>IB33</h2>
-        <ul>
-        <li>
-        Thirty-third revision, Based on Desktop Build 1200 and includes the following changes:
-        <ul>
-        <li>
-		Added MpistoAgent.js and moved headroom into its own file
-        </li>
-        <li>
-		Added Headroom.js to mobile skin and made system fonts internal-only, the latter is scheduled for removal on 31th December 2018
-        </li>
-        <li>
-		Updated Source Pro Serif font to V3.0 which adds partial Cyrillic support, and slightly improved Extended Latin support
-        </li>
-        <li>
-		Completed theming on Wiki Stats page progress bars
-        </li>
-        <li>
-		Redesigned Wiki Stats page
-        </li>
-        <li>
-        Global Navigations gets darker theme when page is not at top and disappears when at bottom (Applies to Desktop Skin, excluding Anons, Editing and Options screen, powered by <a href="http://wicky.nillia.ms/headroom.js/">headroom.js</a>). Need custom setup, use MpistoAgent.css to do it so (You may look at Headroom.js if you want the exising rules to be modified)
-        </li>
-		<li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--32-->
-      <h2>IB32</h2>
-        <ul>
-        <li>
-        Thirty-second revision, Based on Desktop Build 1180 and includes the following changes:
-        <ul>
-        <li>
-        CSS fixes
-        </li>
-        <li>
-        Finalized the Mpisto2 Core
-        </lI>
-        <li>
-        Added missing fonts to Mpisto
-        </li>
-        <li>
-        Source Sans Pro can be chosen again
-        </lI>
-        <li>
-        Added an option to use Serif fonts in Mpisto. Global Nav and footer will gain Source Serif Pro font and secondary fonts are not affected
-        </li>
-        <li>
-        Updated Global Nav's Design on Desktop
-        </li>
-		<li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--31-->
-      <h2>IB31</h2>
-        <ul>
-        <li>
-        Thirty-first revision, Based on Desktop Build 1160 and includes the following changes:
-        <ul>
-        <li>
-        For logged in users, on high breakpoints, some changes will occur on Global Navigation
-        </li>
-        <li>
-        CSS improvements
-        </li>
-        <li>
-        Various editions to Fonf families. Made Ubuntu default body font, retained Source Sans Pro as Gnav and Gfooter font, implemented fonts for some more scripts
-        </li>
-        <li>
-        Added the ability to edit the Sandbox attribute from iFram addition modal
-        </li>
-		<li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--30-->
-      <h2>IB30</h2>
-        <ul>
-        <li>
-        Thirtieth revision, Based on Desktop Build 1140 and includes the following changes:
-        <ul>
-        <li>
-        CSS improvements
-        </li>
-        <li>
-        Switched color theresold calculation for button and header theming from Luminance to Brightness where each color channel can increase the final brightness value until 120, making all channels giving identical results
-        </li>
-		<li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--29-->
-      <h2>IB29</h2>
-        <ul>
-        <li>
-        Twenty-ninth revision, Based on Desktop Build 1120 and includes the following changes:
-        <ul>
-        <li>
-        Some visual Redefinements
-        </li>
-        <li>
-        Partially overhauled Mpisto War Store's layout 
-        </li>
-		<li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--28-->
-      <h2>IB28</h2>
-        <ul>
-        <li>
-        Twenty-eight revision, Based on Desktop Build 1100 and includes the following changes:
-        <ul>
-        <li>
-        Replaced Yellow/Black filter with Day colors
-        </li>
-        <li>
-		CSS fixes
-        </li>
-        <li>
-        Fixed Store headers on Internet Explorer
-        </li>
-        <li>
-        Added the New Color header to MpistoMobile2 and overhauled font and color scheme used
-        </li>
-        <li>
-        Made Mpisto store accessible from every wiki (But will behave as if it was in Central Wiki) and edited sitename to (mpisto-war-store) and its wordmark as well
-        </li>
-        <li>
-        Experimental Graphic support to Community header has been added
-        </li>
-		<li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--27-->
-      <h2>IB27</h2>
-        <ul>
-        <li>
-        Twenty-seventh revision, Based on Desktop Build 1080 and includes the following changes:
-        <ul>
-        <li>
-		CSS fixes
-        </li>
-        <li>
-		Redesigned the whole Community header container on Desktop, featuring the Design found in non-mpisto war wikis
-        </li>
-        <li>
-        Minor alterations to Medium Breakpoint
-        </li>
-        <li>
-        Global footer now uses light theme again and updated translucent effects
-        </li>
-		<li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--26-->
-      <h2>IB26</h2>
-        <ul>
-        <li>
-        Twenty-sixth revision, Based on Desktop Build 1060 and includes the following changes:
-        <ul>
-        <li>
-        Some CSS fixes
-        </li>
-        <li>
-        Turned the some norma values into variables, for browsers supporting them
-        </li>
-        <li>
-        Improved Editor's Loading Speed
-        </li>
-        <li>
-        Improvements to Banner Notification collapsing animation handled by <code>.wds-is-transparent</code> class
-        </li>
-        <li>
-        Improvements to Widescreen mode
-        </li>
-        <li>
-        Some CSS updates
-        </li>
-		<li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--25-->
-      <h2>IB25</h2>
-        <ul>
-        <li>
-        Twenty-fifth revision, Based on Desktop Build 1040 and includes the following changes:
-        <ul>
-		<li>
-		Various Changes to CSS
-		</li>
-		<li>
-		Finalized Color Support on Community header
-		</li>
-		<li>
-		Given experimental color support to community header
-		</li>
-        <li>
-        Fixed Widescreen Mode problems from some browsers
-        </li>
-        <li>
-        Community header has been edited again. Except on Mobile and Contrast modes for now, the only color that can be is white for now
-        </li>
-        <li>
-        Content appear too stetched? Added a widescreen option to solve this
-        </li>
-        <li>
-        Introduced Reduced transparency mode on Mpisto
-        </li>
-		<li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--24-->
-      <h2>IB24</h2>
-        <ul>
-        <li>
-        Twenty-fourth revision, Based on Desktop Build 1020 and includes the following changes:
-        <ul>
-        <li>
-        Fixed the overlay on Global Nav search
-        </li>
-		<li>
-        Redesigned the Editor interface using more hardened gradients as overlays and fixed some numerous bugs
-        </li>
-        <li>
-        Some appearance redefinements
-        </li>
-        <li>
-        Secondary Account customization has been landed, found in Discontinued, now obsolete Arniki Forniki
-        </li>        
-        <li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--23-->
-      <h2>IB23</h2>
-        <ul>
-        <li>
-        Twenty-third revision, Based on Desktop Build 1000 and includes the following changes:
-        <ul>
-        <li>
-        Theme Update
-        </li>
-		<li>
-        CSS fixes
-        </li>
-        <li>
-        Implemented the Aero Based modals to Mpisto
-        </li>
-        <li>
-        Implemented Touch Action property on body
-        </li>        
-        <li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--22-->
-      <h2>IB22</h2>
-        <ul>
-        <li>
-        Twenty-second revision, Based on Desktop Build 950 and includes the following changes:
-        <ul>
-        <li>
-        Reduced some things from new GNav
-        </li>
-		<li>
-        Rebranded the Logo
-        </li>
-        <li>
-        Two times better Global Nav translucation
-        </li>
-        <li>
-        Updated the Satura filters once again
-        </li>
-        <li>
-        Incoporated the LCD font on more areas such as Number input types and stylized them as pure white inputs
-		</li>
-		<li>
-		Made labels noticable when selecting a checkbox or radio box
-		</li>
-        <li>
-        Breaker Points are now equal sizes for content and footer again
-        </li>
-        <li>
-        Made date input types be with LCD font and added <abbr title="Font used on Slack3">Lato</abbr> font
-        </li>        
-        <li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--21-->
-      <h2>IB21</h2>
-        <ul>
-        <li>
-        Twenty-first revision, Based on Desktop Build 925 and includes the following changes:
-        <ul>
-        <li>
-        Improved text-rendering
-        </li>
-        <li>
-        Added previews to styles menu
-        </li>
-        <li>
-        Some older browsers (Such as mInerva 8.50 and those without flex-wrap support) will see the older radio-box group variant of font picker with some improvements from the newer version such as font typeface preview as well as the typeface order changes
-        </li>
-        <li>
-        Redesigned the font chooser preference UI to use similar design to theme picker in Store Content Preferences
-        </li>
-        <li>
-        Launched Free trials for paid flags. After an elapsed period of time has been passed, the flag can not be used unless another user or you decided to purchase it
-        </li>
-        <li>
-        Major redesign to checkboxes, radios and labels!!!
-        </li>
-        <li>
-        Added 2 new typefaces to Mpisto (Arniki and Contrast Default)
-        </li>
-        <li>
-        Floating buttons will now have noticable shadow on Dark themes
-        </li>
-        <li>
-        Notifications container notices will no longer be cut out for one pixel for the 2nd notification and beyond
-        </li>
-        <li>
-        Color filters that use the <code>invert()</code> function will now render properly on mInerva bRowser
-        </li>
-        <li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--20-->
-      <h2>IB20</h2>
-        <ul>
-        <li>
-        Twentinth revision, Based on Desktop Build 900 and includes the following changes:
-        <ul>
-        <li>
-        Slight Theme update
-        </li>
-        <li>
-        Changing theme from Store Content Preferences should now update the selected radio box on Theme Designer Preferences theme chooser
-        </li>
-        <li>
-        Added a new preferences page that manages store content installed (Preview your themes) and lots of more
-        </li>
-        <li>
-        Global Nav theming on Desktop (Not Mobile) is now based on community header theming and made some changes as well
-        </li>
-        <li>
-        Made color filters work in all browsers at least supporting filters
-        </li>
-        <li>
-        Donwloading Theme Designer Theme to your device no longer switches out the green and blue values of a color
-        </li>
-        <li>
-        Fixed Search Input type on Global Nav on Mobile Skin on some browsers such as in iOS. Update also appears online
-        </li>
-        <li>
-        Two-pane preferences page require at least now 800px+ screens for now to display
-        </li>
-        <li>
-        Introduced an XXL Breakpoint for 1720+ screens, using 1500 pixels as main density size, a breakpoint previously removed from Mpisto
-        </li>
-        <li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--19-->
-      <h2>IB19</h2>
-        <ul>
-        <li>
-        Nineteenth Revision, Based on Desktop Build 875 and includes the following changes:
-        <ul>
-        <li>
-        For members who are opted-in in Mpisto Gallery, a spotlight gallery footer will appear on central wiki (And only on mainspace for now).
-        </li>
-        <li>
-        Polished the appearance of Modals and Modules again
-        </li>
-        <li>
-		Updated the RZZ Font stack to latest A Secure additions and renamed all font stack names
-        </li>
-        <li>
-        Thanks for trying the new way of Preferences Page. We took the 6xx px screens for maintenance and returned them to single pane ones
-        </li>
-        <li>
-        Fixed minor bug in option pane during Reduced Motion
-        </li>
-        <li>
-        Reduced Motion mode allows Opacity Transitions
-        </li>
-        <li>
-        Made 768+ screens look like the 768- screens as well
-        </li>
-        <li>
-        Two pane preferences now also exposed on 640px+ screens. Screens lower than 960 pixels will use smaller pane with smaller graphics
-        </li>
-        <li>
-        Theme Designer's Body Bg Preview now should keep image's aspect ratio
-        </li>
-        <li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--18-->
-      <h2>IB18</h2>
-        <ul>
-        <li>
-        Eighteenth Revision, Based on Desktop Build 850 and includes the following changes:
-        <ul>
-        <li>
-        Some decompressions to the Performance mode, compressed background-blend-mode to Contrast and Performance Modes, Compressed 
-        </li>
-        <li>
-        Added prefers-reduced-motion styling on Mpisto
-        </li>
-        <li>
-        Rebranded Typeface and some more scripts now use their fonts as well
-        </li>
-		<li>
-		Redesigned the design of mpistofied avatars into a more better design than before. WDS version has not been edited
-		</li>
-        <li>
-        Added the Ability to use System Fonts instead of current Open Sans font for the wikis (Available throught preferences only but Desktop users can add system-fonts class to the body element by inspecting for testing, for Mobile ones, only preferences can be. Cannot be used onto Chat). Does not affect GNav main container and the footer. Also added past fonts into the scene. <code>.mob-font</code> also added for using older fonts
-        </li>
-        <li>
-        Added new Mobile Navigation to both Online and Orbitron Versions
-        </li>
-        <li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--17-->
-      <h2>IB17</h2>
-        <ul>
-        <li>
-        Seventeenth Revision, Based on Desktop Build 825 and includes the following changes:
-        <ul>
-        <li>
-        Some patches to Global Nav
-        </li>
-        <li>
-        Hugely redesigned the Global Navigation for the Desktop site, matching MpistoLite but does not have full parity with the style
-        </li>
-        <li>
-        Two Pane preferences page has been added to Tablet Landscape breakpoint as well
-        </li>
-        <li>
-        Made Article Wrapper to lay into two columns again
-        </li>
-        <li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--16-->
-      <h2>IB16</h2>
-        <ul>
-        <li>
-        Sixteenth Revision, Based on Desktop Build 800 and includes the following changes:
-        <ul>
-        <li>
-        Theme Update
-        </li>
-        <li>
-        Modified appearance of Fieldsets
-        </li>
-        <li>
-        Options pane will show properly again on Internet Explorer 11 on small breakpoints
-        </li>
-        <li>
-        Preferences page now uses 2 panes like in the 2nd revision for 1152+ screens
-        </li>
-        <li>
-        Action upload buttons now use no-chevron variant of menus
-        </li>
-        <li>
-        Updated the way uploading happens in Options page. Now you can use local community files or your webcam as well as from your computer
-        </li>
-        <li>
-        Dropped translucent background from option content and updated theming
-        </li>
-        <li>
-        Initial foundation work at Preferences 5.
-        </li>
-        <li>
-        Added <code>.wds-floating-button</code> class to Mpisto.
-        </li>
-        <li>
-        Updated <code>.wds-dropdown</code> class to match revisions up to <a href="https://github.com/Wikia/design-system/blob/f9f6c6adc6acb23ecc096acace4a623c6dbf2a74/dist/scss/wds-components/_dropdowns.scss">f9f6c6a</a> of Design System
-        </li>
-        <li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--15-->
-      <h2>IB15</h2>
-        <ul>
-        <li>
-        Fifteenth Revision, Based on Desktop Build 775 and includes the following changes:
-        <ul>
-        <li>
-        Dropped blend modes. All browsers should see similar masthead gradient.
-        </li>
-        <li>
-        Switched masthead gradient theming to use blending edges. Browsers not supporting it will see a legal fallback that should work
-        </li>
-        <li>
-        Switched masthead gradient theming to use translucent gray instead of hover button color as color stop so as to always dark and not light in some situations
-        </li>
-        <li>
-        Global Staff members now have the ability to Global Block users. Function only exists on Central Wiki for staff only
-        </li>
-        <li>
-        Major button and header theming theresholds editions using brightness function 
-        </li>
-        <li>
-        Added limited Reaction Support
-        </li>
-        <li>
-        Switched chat parser to Mprilyiaano from Slack due to recent hackers redirecting the servers
-        </li>
-        <li>
-        Removed rounded corners from main content area
-        </li>
-        <li>
-        Minor Tweaks to Content Space
-        </li>
-        <li>
-        Updated the Satura Filter lumination to <code>brightness(0.9) saturate(1.4) contrast(1.15) hue-rotate(+1deg)</code> from <code>brightness(1.1) saturate(1.5) contrast(0.9)</code>
-        </li>
-        <li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--14-->
-      <h2>IB14</h2>
-        <ul>
-        <li>
-        Fourteenth Revision, Based on Desktop Build 750 and includes the following changes:
-        <ul>
-        <li>
-		CSS fixes
-        </li>
-        <li>
-		Tweaks to mobile layout
-        </li>
-        <li>
-        Fixed minor bug in Shortcuts menu button in Mobile Commuunity Header in Internet Exploer
-        </li>
-        <li>
-        Created a Mobile version of Community Header
-        </li>
-        <li>
-        Minor Adjustments to Desktop Side of Mobile layout and given the Local Navigation as well
-        </li>
-        <li>
-        More Mobile Skin Evolution
-        </li>
-        <li>
-        Global Navigation Fixes
-        </li>
-        <li>
-        Changes to some colors in Mobile skin
-        </li>
-        <li>
-        Refreshed Mobile Navigation
-        </li>
-        <li>
-        Forked Mercury. 1024 breakpoint added in this update
-        </li>        
-        <li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--13-->
-      <h2>IB13</h2>
-        <ul>
-        <li>
-        Thirteenth Revision, Based on Desktop Build 725 and includes the following changes:
-        <ul>
-        <li>
-        Updates to GN
-        </li>
-        <li>
-        Replaced the usage of <code>(M)</code> control operator to the end of the URL to simply treat the URL as sitename without the word Wiki by a checkmark
-        </li>
-        <li>
-        Switched Community Header to use Luminated Acryllic Effect
-        </li>
-        <li>
-        Updates to existing Filters and added 3 new ones
-        </li>
-        <li>
-        Secondary theming color of Header gradient is now based on Header's text color rather than black
-        </li>
-        <li>
-        Redesigned almost the entire site with new and better styling
-        </li>
-        <li>
-        Added drop-shadows to dropdowns
-        </li>
-        <li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--12-->
-      <h2>IB12</h2>
-        <ul>
-        <li>
-        Twelfth Revision, Based on Desktop Build 700 and includes the following changes:
-        <ul>
-        <li>
-        Theme update
-        </li>
-        <li>
-        CSS fixes
-        </li>
-        <li>
-        Adjustments to Profile Masthead and some other places
-        </li>
-        <li>
-        Fixed some cursor values
-        </li>
-        <li>
-        Many Adjustments to Profile Masthead CSS
-        </li>
-        <li>
-        Following Pages button in the right masthead pane now gets into single line text when needed
-        </li>
-        <li>
-        Fixes to Masthead Header
-        </li>
-        <li>
-        Released a newer User Profile Masthead container which replaces the regular page header from all User Pages. For Discord and A Secure accounts, you can hover on the user name to get a tooltip showing your ID tag (Only on Desktop)
-        </li>
-        <li>
-        Log in with your A Secure account, a new way of matching local log ins has been landed to Mpisto. Avatar editions of those accounts must be done here due to lack of avatar editor in A Secure Services
-        </li>
-        <li>
-        Avatar images are now always bicubic edges instead of crisp (If enabled). Applies to both mpisto and wds version
-        </li>
-        <li>
-        Partial Changes to color filters
-        </li>
-        <li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--11-->
-      <h2>IB11</h2>
-        <ul>
-        <li>
-        Eleventh Revision, Based on Desktop Build 650 and includes the following changes:
-        <ul>
-        <li>
-        Introduced Store Notifications
-        </li>
-        <li>
-        Major Global Nav and theme portal redesign
-        </li>
-        <li>
-        Dropped Panther slot from Central Wiki and Global Notifications from Beta Wiki (Changed back to Local Notifications again) and Developer Wiki now has notifications controller and container
-        </li>
-        <li>
-        Tweaks to GN
-        </li>
-        <li>
-        Mobile Site fixes
-        </li>
-        <li>
-        Minor Tweaks to global nav search design
-        </li>
-        <li>
-        Global Nav Search Buttons have been modified
-        </li>
-        <li>
-        Added with-panther class to <code>mpisto-navbar-wrapper</code> on Central Wiki outside of Mercury and Anons to make styling even more easier and panther slot way has been modified a bit
-        </li>
-        <li>
-        Added support for making CSS styling using LESS. More info about it can be found <a href="http://lesscss.org/">here</a>. See also the related <a href="https://en.wikipedia.org/wiki/Less_(stylesheet_language)">Wikipedia Article</a>
-        </li>
-        <li>
-        Added support for indeterminate checkboxes. IE and Edge shows a square while the rest engines uses a minus sign
-        </li>
-        <li>
-        Rail Module h2's z-index downgraded to 0, the way dropdowns will no longer be overlapped
-        </li>
-        <li>
-        Rebased the main content area container. Note: Custom CSS needs to be updated to account for the new syntax if you have one
-        </li>
-        <li>
-        Fixed some High Contrast Bugs
-        </li>
-        <li>
-        Redesigned Modals
-        </li>
-        <li>
-        Fixed some display errors
-        </li>
-        <li>
-        Updates to Global Navigation CSS
-        </li>
-        <li>
-        Explore Menu can no longer be opened while search is active once again
-        </li>
-        <li>
-        CSS fixes
-        </li>
-        <li>
-        Created an Updated version of Global Nav and Theme Portal
-        </li>
-        <li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--10-->
-      <h2>IB10</h2>
-        <ul>
-        <li>
-        Tenth Revision, Based on Desktop Build 600 and includes the following changes:
-        <ul>
-        <li>
-        Slight Theme Update
-        </li>
-        <li>
-        Updates to Global Nav CSS
-        </li>
-        <li>
-        More Theming Updates
-        </li>
-        <li>
-        Small Breakpoint has now fixed width of Global Nav, even on 768+ width screens
-        </li>
-        <li>
-        Added Find and Replace feature to Editor 3. It appears as a module that can be collapsed
-        </li>
-        <li>
-        Modules can now be collapsed. If used, h2's text is wrapped onto a span and a chavron is added to the right to collapse everything but h2 the module has
-        </li>
-        <li>
-        Updates to Editor
-        </li>
-        <li>
-        Redesigned Editor Interface with a more modern design than before
-        </li>
-        <li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--9-->
-      <h2>IB9</h2>
-        <ul>
-        <li>
-        Ninth Revision, Based on Desktop Build 550 and includes the following changes:
-        <ul>
-        <li>
-        Implemented <code>theme-color</code> meta tag for the Central Wiki
-        </li>
-        <li>
-        Made Panther slot hidden from Mpisto Servers
-        </li>
-        <li>
-        CSS fixes
-        </li>
-        <li>
-        Added Panther Slot to GN (Only on Desktop skin on Central Wiki and only while logged in)
-        </li>
-        <li>
-        Some fixes to GN
-        </li>
-        <li>
-        Global Navigation now allows full Acryllic again
-        </li>
-        <li>
-        Dropped 1500px Breakpoint (Now 1500px+ screens redirect to 1280px breakpoint)
-        </li>
-        <li>
-        Single Colon for checkbox stylings changed to double ones (The Way Firefox also working)
-        </li>
-        <li>
-        Increased transparency of Editor header, allowing more color to show and reduced everything except buttons and height of the element to 90% of normal to allow more text to be shown
-        </li>
-        <li>
-        Added a cube in Filter Modes to check if colors are correct
-        </li>
-        <li>
-        Global Navigation now has JS Gestures and made it better
-        </li>
-        <li>
-        Global Navigation now has unprefixed ID selector to match Amanda and Nile5
-        </li>
-        <li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--8-->
-      <h2>IB8</h2>
-        <ul>
-        <li>
-         Eighth Revision, Based on Desktop Build 500 and includes the following changes:
-        <ul>
-        <li>
-        Theme Update
-        </li>
-        <li>
-        CSS fixes
-        </li>
-        <li>
-        Implemented updates for Preferences 4
-        </li>
-        <li>
-        Implemented bottom toolbar for Preferences 4
-        </li>
-        <li>
-        Fixed Preferences 4 timeout (Now includes a newer sleep function in where pane closes after an amount of secs)
-        </li>
-        <li>
-        Polyfilled the sleep function in JS and implemented it for preferences 4
-        </li>
-        <li>
-        More refreshments to Preferences 4
-        </li>
-        <li>
-        Warized Checkboxes have been revised in styling amd made initial width and height to 12px instead of 14px
-        </li>
-        <li>
-        Minor fixes to preferences
-        </li>
-        <li>
-        Major Update to preferences
-        </li>
-        <li>
-        Some spelling fixes, tweaks to avatar Layout and added option to disable pixelated pics
-        </li>
-        <li>
-        Implemented Image preview to every kind, not just user avatar and minor tweaks to some CSS
-        </li>
-        <li>
-        Fixes to some layout issuses such as removing unwanted round corners from some browsers such as Firefox for Android on text input fields. Note that these changes will also apply online with the exception of the button stylings
-        </li>
-        <li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--7-->
-      <h2>IB7</h2>
-        <ul>
-        <li>
-         Seventh Revision, Based on Desktop Build 450 and includes the following changes:
-        <ul>
-        <li>
-        Changed Community header dropdown icon to <code>wds-icons-more</code>
-        </li>
-        <li>
-        New transitions for option pane
-        </li>
-        <li>
-        Color filters now apply to all containers in MS Edge 16+
-        </li>
-        <li>
-        Filter Supported browsers with @supports queries support will now able to test 3 new color filters named, Grayscale, Inverted Colors and Inverted Grayscale. This does not do filter on body's background
-        </li>
-        <li>
-        Explore link in Global Nav is now <code>div</code> container instead of <code>a</code> element
-        </li>
-        <li>
-        Added shadow to Global Footer and increased gap by 6px
-        </li>
-        <li>
-        Implemented Icons before text on Community Header nav links 2 menu
-        </li>
-        <li>
-        Items button in Community Header buttons in Store now uses the updated store icon rather than the gift ones
-        </li>
-        <li>
-        Unified Design of Theme Portal and Global Navigation
-        </li>
-        <li>
-        Updated the Store Icon to match Google's Play Store Icon
-        </li>
-        <li>
-        Downgraded the Article Wrapper for the Medium Breakpoint to use dual row and not dual column
-        </li>
-        <li>
-        Brought back the new buttons after being disappeared for spec lags
-        </li>
-        <li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul>
-      <!--6-->
-      <h2>IB6</h2>
-        <ul>
-        <li>
-         Sixth Revision, Based on Desktop Build 400 and includes the following changes:
-        <ul>
-        <li>
-        Theme Update
-        </li>
-        <li>
-        Floating banners that are placed before the page header are supported with <code>floatingbanner</code> element
-        </li>
-        <li>
-        Social Button colors are now available everywhere. Log in Buttons now use these colors instead of wiki colors
-        </li>
-        <li>
-        Fixed Serious color lag when hovering on buttons using the Dark theme
-        </li>
-        <li>
-        Dropped legacy Sharing Options
-        </li>
-        <li>
-        Enchancements to Preferences
-        </li>
-        <li>
-        Unified the Company links to appear in <b>Explore</b> menu at all breakpoints
-        </li>
-        <li>
-        New layout for picking preferences pane
-        </li>
-        <li>
-        CSS Fixes
-        </li>
-        <li>
-        Some CSS corrections, the way Firefox also handle it properly. Options, Editor and lightboxes now handle height in ViewPort units instead of height to handle layouts properly
-        </li>
-        <li>
-        Gave Rail Modules rounded corners and 2 times better shadow
-        </li>
-        <li>
-        Modules on High contrast now use sharp shadows instead of borders
-        </li>
-        Bug fixes
-        </li>
-        <li>
-        Banner Notification icon that appears before the text is unthemable to match Zekzphire Zentral
-        </li>
-        <li>
-        High Contrast Notification fixes
-        </li>
-        <li>
-        Added banner notifications to the system. To use them, you must use wds prefix in it
-        </li>
-        <li>
-        Added note to Sharing options since those were ignored
-        </li>
-        <li>
-        Bug fixes
-        </li>
-        </ul>
-        </li>
-        </ul
-      <!--5-->
-      <h2>IB5</h2>
-        <ul>
-        <li>
-         Fifth Revision, Based on Desktop Build 350 and includes the following changes:
-        <ul>
-        <li>
-        CSS fixes
-        </li>
-        <li>
-        Module fixes
-        </li>
-        <li>
-        Module buttons have better theming and applied to Contrast Mode
-        </li>
-        <li>
-        Module buttons have better theming
-        </li>
-        <li>
-        Rail Modules have been redesigned a bit with a new borderless design and drop shadows
-        </li>
-        <li>
-        Mobile-data now appear excliptly on Mobile Devices
-        </li>
-        <li>
-        Fixed Cursors on Smart TVs. A smart class is added into the body class. You can style things to be only on SmartTV too. This is done to make LG Smart TVs to make cursors able to be recognized. More UA detection will be done if more errors found
-        </li>
-        <li>
-        Added Icons to Page header dropdowns
-        <li>
-        Sharing controls are now like it was Ryneeeel Zentral and sharing preferences are ignored and scheduled to remove
-        </li>
-        <li>
-        Updates to Modules
-        </li>
-        <li>
-        Theme portal Checkmark changed to DS icon
-        </li>
-        <li>
-        Updates to preferences
-        </li>
-        <li>
-        Bug fixes
-        </li>
-        </ul>
-        </ul>
-      <!--4-->
-      <h2>IB4</h2>
-        <ul>
-        <li>
-         Fourth Revision, Based on Desktop Build 300 and includes the following changes:
-        <ul>
-        <li>
-        Slight Theme Update
-        </li>
-        <li>
-        Improvements to Preferences 3
-        </li>
-        <li>
-        Tons of High Contrast updates
-        </li>
-        <li>
-        Improvements to Preferences and Theme Portal
-        </li>
-        <li>
-        Unified the preferences page content to behave like content space on all breakpoints
-        </li>
-        <li>
-        Selected Theme Portal links now have a check before name
-        </li>
-        <li>
-        <code>Language</code> element no longer disappears when saving page. Existing articles that have been affected have been restored to normal
-        </li>
-        <li>
-        CSS fixes
-        </li>
-        <li>
-        Improvements to Theme Portal
-        </li>
-        <li>
-        Added themes to all wikis. This update makes changes to High Contrast and also to preferences
-        </li>
-        <li>
-        Contact Page landed for all wikis
-        </li>
-        <li>
-        Bug fixes
-        </li>
-       </ul>
-       </li>
-       </ul>
-       <!--3-->
-       <h2>IB3</h2>
-         <ul>
-         <li>
-         Third Revision, Based on Desktop Build 250 and includes the following changes:
-            <ul>
-            <li>
-            Modified acryllic effects for Content Space, Option Panes and bottom toolbar
-            </li>
-            <li>
-            High Contrast and Performance modes no longer have backdrop-filter onto Community Header
-            </li>
-            <li>
-            Logged-in FANDOM accounts in Mpisto that were chosen to be <abbr title="Right to be Forgotten Accounts">RFA</abbr> will get logged out immediately rather than being logged in without avatar and broken contributions
-            </li>
-            <li>
-            Acryllic Effect with lower saturation and enchanced brightness has been arrived on Community header and applies to <code>:before</code> pseudo element and made gradient visible on Performance. Note that lower saturation and enchanced brightness behind the graphic will be currently in High Contrast and Performance modes but not indeed in the future builds
-            </li>
-            <li>
-            You can block anon editing on all pages on a wiki. However, it doesn't block commenting.
-            </li>
-            <li>
-            Recent theme designer issues from B219 such as the inability to calculate variable that modifies a previous color and the decodation of a hex color into red,green,blue unless it sets it without any hex color decodation have been resolved. Existing themes will get back to normal
-            </li>
-            <li>
-            View Source modal has updated text that will reflect to these:
-              <ul>
-                <li>
-                Viewing Source for {{PAGENAME}} => View Source of {{PAGENAME}}
-                </li>
-                <li>
-                Permission Errors => Permission Error
-                </li>
-                <li>
-               You do not have permission to edit this page for the following reason(s) => You do not have permission to edit this article for the following reason(s)
-                </li>
-                <li>
-                This page has been locked to avoid vandalbots and spambots => This page has been locked to prevent spamming
-                </li>
-                <li>
-                Editing Templates and Wiki's mainpage require logged-in user. Log in with any supported Social Media to proceed => Editing Templates and Wiki's mainpage requires logged-in user. Log in with any supported Social Media to proceed
-                </li>
-                <li>
-                Article Source => Source Code
-                </li>
-                <li>
-                You can still view the source of the article below => You can view and copy the source code of the article below
-                </li>
-              </ul>
-            <li>
-            ViewSource function now opens a modal instead of the editor
-            </li>
-            <li>
-           Warized Checkboxes and input files now use hover button color on hover when checked and made them apply everywhere, not just lightboxes and preferences (Except sizing)
-            </li>
-            <li>
-            Browsers not supporting CSS variables will see a notice about not supporting CSS variables rather than displaying the High Contrast and Performance Radios. Similar notice has also been added to Theme Designed
-            </li>
-            <li>
-            Minor tweaks to Page Header and changed back to Flexbox layout
-            </li>
-            <li>
-            CSS Fixes
-            </li>
-            <li>
-            Buttons on lightbox parts where community header theming is used when High Contrast mode is active now use Community Header text stylings (All 3 modes of buttons including Primary, Secondary and Text). Performance and Normal modes are unaffected by this change
-            </li>
-            <li>
-           Bug fixes
-            </li>
-           </ul>
-          </li>
-          </ul>
-       <!--2-->
-       <h2>IB2</h2>
-         <ul>
-         <li>
-         Second Revision, Based on Desktop Build 200 and includes the following changes:
-          <ul>
-          <li>
-          Theme Update
-          </li>
-          <li>
-          When VisualEditing protection is applied so only some groups can edit it, visual button will be hidden instead of disabled and changed text
-          </li>
-          <li>
-          Fixed fonts and removed the Advent Pro font from CSS (Still available as imported fornt)
-          </li>
-          <li>
-          Replaced the used 3 fonts in the wiki with 3 new ones
-          </li>
-          <li>
-         Made images on Internet Explorer, Chrome, Firefox, Safari, mInerva and Qorta crisp
-          </li>
-          <li>
-          CSS Corrections
-          </li>
-          <li>
-          Undo and Redo buttons now also appear in source mode and made Mpisto's undo tracker to properly track source editor revisions
-          </li>
-          <li>
-          Greately reduced lag when hovering on buttons (But no longer accepts lighter hover color with black text and darker hover color with white text)
-          </li>
-          <li>
-          Fixed minor bug in Button and Community Header text color vibrancies
-          </li>
-          <li>
-          Warized checkboxes now use Sharp shadows on High Contrast themes
-          </li>
-          <li>
-          Importing old Mpisto and Mpisto Micro themes as well as themes from MpistoWar, LineeelWar/Zimmer, Lineeel 1+1, Ryneeeeel Zekzphire Zentral and Older Mpisto Wars named as Ryneeeel Zekzphire Grooze should now convert the theme into the proper format rather than keeping unchanged, forcing a theme designer edit to a color value without editing color
-          </li>
-          <li>
-          Enchancements to bottom toolbar styling
-          </li>
-          <li>
-          More mInerva bRowser fixes
-          </li>
-          <li>
-          More editor fixes
-          </li>
-          <li>
-          Editor header is now in the correct position when page is not to the top
-          </li>
-          <li>
-          Bug fixes
-          </li>
-          </ul>
-         </li>
-         </ul>
-       <!--1-->
-       <h2>IB1</h2>
-         <ul>
-         <li>
-         Initial Revision, Based on Desktop Build 157 
-         </li>
-         </ul>
-       <!--Stop Article-->
-      </article>
-      <nav class="mpisto-right-pane">
-        <div style="width:100%;">
-          <section class="mpisto-module discord-module">
-            <h2><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small" viewBox="0 0 240 245" width="20" height="20"><path d="M 104.4 103.9 c -5.7 0 -10.2 5 -10.2 11.1 s 4.6 11.1 10.2 11.1 c 5.7 0 10.2 -5 10.2 -11.1 c 0.1 -6.1 -4.5 -11.1 -10.2 -11.1 Z M 140.9 103.9 c -5.7 0 -10.2 5 -10.2 11.1 s 4.6 11.1 10.2 11.1 c 5.7 0 10.2 -5 10.2 -11.1 s -4.5 -11.1 -10.2 -11.1 Z" /><path d="M 189.5 20 h -134 C 44.2 20 35 29.2 35 40.6 v 135.2 c 0 11.4 9.2 20.6 20.5 20.6 h 113.4 l -5.3 -18.5 l 12.8 11.9 l 12.1 11.2 l 21.5 19 V 40.6 c 0 -11.4 -9.2 -20.6 -20.5 -20.6 Z m -38.6 130.6 s -3.6 -4.3 -6.6 -8.1 c 13.1 -3.7 18.1 -11.9 18.1 -11.9 c -4.1 2.7 -8 4.6 -11.5 5.9 c -5 2.1 -9.8 3.5 -14.5 4.3 c -9.6 1.8 -18.4 1.3 -25.9 -0.1 c -5.7 -1.1 -10.6 -2.7 -14.7 -4.3 c -2.3 -0.9 -4.8 -2 -7.3 -3.4 c -0.3 -0.2 -0.6 -0.3 -0.9 -0.5 c -0.2 -0.1 -0.3 -0.2 -0.4 -0.3 c -1.8 -1 -2.8 -1.7 -2.8 -1.7 s 4.8 8 17.5 11.8 c -3 3.8 -6.7 8.3 -6.7 8.3 c -22.1 -0.7 -30.5 -15.2 -30.5 -15.2 c 0 -32.2 14.4 -58.3 14.4 -58.3 c 14.4 -10.8 28.1 -10.5 28.1 -10.5 l 1 1.2 c -18 5.2 -26.3 13.1 -26.3 13.1 s 2.2 -1.2 5.9 -2.9 c 10.7 -4.7 19.2 -6 22.7 -6.3 c 0.6 -0.1 1.1 -0.2 1.7 -0.2 c 6.1 -0.8 13 -1 20.2 -0.2 c 9.5 1.1 19.7 3.9 30.1 9.6 c 0 0 -7.9 -7.5 -24.9 -12.7 l 1.4 -1.6 s 13.7 -0.3 28.1 10.5 c 0 0 14.4 26.1 14.4 58.3 c 0 0 -8.5 14.5 -30.6 15.2 Z" /></svg> Discord Server </h2>
-          <ul>
-          <li>
-          <iframe src="https://discordapp.com/widget?id=443493384540258304&theme=dark" width="248" height="440" allowtransparency="true" frameborder="0"></iframe>
-          </li>
-          </ul>
-              <footer class="buttons">
-              <a class="wds-button wds-is-squished wds-is-secondary" href="https://discordapp.com/invite/signup">Don't have an account?</a>
-              </footer>
-          </section>
-          <section class="mpisto-module activity-module">
-            <h2><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">	
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-activity-small" />
-</svg> Recent Activity </h2>
-              <ul>
-                <li>
-                  <a>Zekzphire 2018 Changelog</a>
-                  <span>Edited by <a>HM100</a><time>02 Mar 2018</time></span>
-                </li>
-                <li>
-                  <a>Main Page</a>
-                  <span>Edited by <a>HM100</a><time>02 Mar 2018</time></span>
-                </li>
-                <li>
-                  <a>Test Page</a>
-                  <span>Edited by <a>Nick mick</a><time>22 Feb 2018</time></span>
-                </li>
-              </ul>
-              <footer class="buttons">
-              <a class="wds-button wds-is-squished wds-is-secondary">More Activity</a>
-              </footer>
-          </section>
-          <section class="mpisto-module logs-module">
-            <h2><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">	
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-eye-small" />
-</svg> Recent Logs </h2>
-              <ul>
-                <li>
-                  <a>GMK Theme</a>
-                  <span>Customized by <a>Zekzphire</a><time>27 Feb 2018</time></span>
-                </li>
-                <li>
-                  <a>Looting</a>
-                  <span>Deleted by <a>HM200</a><time>19 Feb 2018</time> (Reason:Spam)</span>
-                </li>
-                <!--<li>
-                  <a>Page</a>
-                  <span>lOg by by <a>Zekzphire</a><time>19 Feb 2018</time></span>
-                </li>-->
-              </ul>
-              <footer class="buttons">
-              <a class="wds-button wds-is-squished wds-is-secondary">More Logs</a>
-              </footer>
-          </section>
-          <section class="mpisto-module chat-module">
-            <h2><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">	
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-reply-small" />
-</svg> Communication </h2>
-              <span class="communication-rules">Welcome to Mpisto War 2018!!! Please read the <a>rules</a> before joining</span>
-              <span class="stats">7 Members Online <i>(<a title="Click to see which memebrs chat now">Which?</a>)</i></span>
-              </ul>
-              <footer class="buttons">
-              <a class="wds-button wds-is-squished wds-is-secondary">Join Chat</a>
-              </footer>
-          </section>
-        </div>
-      </nav>
-    </div>
 </section>
 
 <!-- End Article -->
@@ -2898,108 +1379,77 @@ function HCg1() {
     </div>
     <header class="mpisto-footer-bar">
           <h3>Mpisto War is a Wiki-powered hosting to provide advanced layout standards. Powered by Mpirthi Bjordos</h3>
-          <hr class="mobile-data" />
-          <h3 class="mobile-data"><a>View Mobile Version</a></h3>
     </header>
   </div>
 </footer>
-
-<!--
+<footer class="footer" id="Footer">
+  <table class="wrapper">
+    <thead class="footer-container">
       <tr>
-        <th colspan="3">
-          <img src="Wordmark.png" class="wordmark"></img>
+        <th colspan="2">
           <h1>Mpisto War 2018</h1>
         </th>
-      </tr>
-      <tr>
-        <td>
+	  <tr>
+        <td colspan="2">
+		  <div style="margin:auto;">
           <h2>Overview</h2>
-          <a> What's new to Mpisto War </a>
-          <a> Company </a>
-          <a> Hiring </a>
-          <a> Mpisto in a glance </a>
-          <a> Merlin the Gooze </a>
+          <a class="link"> What's new to Mpisto War </a>
+          <a class="link"> Mpisto War vs Amanda Amantoula </a>
+          <a class="link"> Company </a>
+          <a class="link"> Hiring </a>
+          <a class="link"> Mpisto in a glance </a>
+          <a class="link" href="https://github.com/AWikia"> GitHub </a>
+		  </div>
         </td>
+	  </tr>
+      </tr>
         <td>
           <h2>Community</h2>
-          <a> Support </a>
-          <a> Create a Wiki </a>
-          <a> Import a Wiki </a>
-          <a> Report a Wiki </a>
-          <a> Help </a>
+          <a class="link"> Support </a>
+          <a class="link"> Create a Wiki </a>
+          <a class="link"> Import a Wiki </a>
+          <a class="link"> Report a Wiki </a>
+          <a class="link"> Mpisto War Store </a>
+          <a class="link"> Help </a>
         </td>
+        <td>
+          <h2>A Secure</h2>
+          <a class="link"> Join A Secure </a>
+          <a class="link"> A Secure Portal </a>
+          <a class="link"> Migrate FANDOM Account to A Secure </a>
+          <a class="link" href="https://discord.gg/9JEWA8S">Discord Server </a>
+          <a class="link" href="http://el.alpha-technologies.wikia.com/wiki/Project:Contact">Contact A Wikia </a>
+        </td>
+      </tr>
+      <tr>
         <td>
           <h2>Wikis</h2>
-          <a> A Wiki - Techno Wiki </a>
-          <a> A Wiki - Dev Wiki </a>
-          <a> A Wiki Foundation </a>
-          <a> More Wikis </a>
-          <a> Find an A Wiki Wikia </a>
-        </td>
-      </tr>
-        <td>
-          <a> Terms of Use </a>
-          <a> Mpirthi Central </a>
-          <a> Ryneeeel Zekzphire </a>
-          <a> Mpisto Scenes </a>
-          <a> Privacy Policy </a>
-          <a> Local Sitemap </a>
-          <a> Global Sitemap </a>
+          <a class="link"> A Wiki - Techno Wiki </a>
+          <a class="link"> A Wiki - Dev Wiki </a>
+          <a class="link"> A Wiki Foundation </a>
+          <a class="link"> More A Wiki Wikis </a>
+          <a class="link"> More Mpisto War Wikis </a>
         </td>
         <td>
-          Can't find your community?<br>Create Your Wiki and start something epic
-          <br>
-          <a class="wds-button wds-is-secondary"> Create a Wiki </a>
+		  <h2>Privacy</h2>
+          <a class="link"> Terms of Use </a>
+          <a class="link"> Ryneeeel Zekzphire </a>
+          <a class="link"> Mpisto Scenes </a>
+          <a class="link"> Privacy Policy </a>
+          <a class="link"> Local Sitemap</a>
+          <a class="link"> Global Sitemap </a>
         </td>
-        <td>
-          Do you want more about A?<br>Download our app to learn us more.
-          <br>
-          <a class="wds-button wds-is-secondary"> Download app </a>
-        </td>
+       </tr>
       <tr>
-        <th class="mpisto-footer-bar" colspan="3">
-          <h3>Mpisto War 2018 is a community built from Mpisto. Contributions go within the CreativeCommons license</h3>
-          <hr class="mobile-data" />
-          <h3 class="mobile-data"><a>View Mobile Version</a></h3>
+        <th class="footer-bar" colspan="2">
+          <h3>Mpisto War is a Wiki-powered hosting to provide advanced layout standards. Powered by Mpirthi Bjordos</h3>
         </th>
       </tr>
-
--->
-
+    </thead>
+  </table>
+</footer>
 <!-- End Footer -->
 
-<header class="mpisto-footer-container">
-  <div>
-  <a class="item">
-  <span>Follow Article</span>
-  </a>
-    <div class="wds-dropdown">
-      <a class="item"><span>My tools</span>
-                   <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
-                  </svg>
-      </a>
-      <div class="wds-dropdown__content wds-is-not-scrollable">
-        <ul class="wds-list wds-is-linked">
-          <li><a>History</a></li>
-          <li><a>What links here</a></li>
-          <li><a>Theme Designer</a></li>
-          <li><a>Public Logs</a></li>
-          <li><a>Recent Bashes</a></li>
-        </ul>
-      </div>
-    </div>
-  <a class="item">
-  <span>Admin Dashboard</span>
-  </a>
-  <a class="item">
-<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-gear-small" />
-                  </svg>
-  <span>Customize</span>
-  </a>
-  </div>
-</header>
 <!--
   <nav>
 <a onclick="BarSwitch()">                 <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wrapper-chevron">
@@ -3011,15 +1461,15 @@ function HCg1() {
 
 <!-- End Toolbar -->
 
-
 </body>
 </html>
 <head>
-<title>Mpisto War 2018</title>
+<title>Mpisto War 2018 Community Discussions</title>
 <meta name="viewport" content="width=device-width">
 <link rel="stylesheet" type="text/css" href="Mpisto.css"> <!-- Main CSS -->
 <link rel="stylesheet" type="text/css" href="Headroom.css"> <!-- Main CSS -->
 <link rel="stylesheet" type="text/css" href="Breakpoints.css"> <!-- Non wds-breakpoint CSS --> 
+<link rel="stylesheet" type="text/css" href="Discussions.css"> <!-- Main CSS -->
 <link rel="stylesheet" type="text/css" href="MpistoAgent.css"> <!-- Custom CSS -->
 <link rel="stylesheet" type="text/css" href="High Contrast.css"> <!-- High Contrast CSS -->
 
@@ -3027,6 +1477,7 @@ function HCg1() {
 
 <script src="jQuery.js"></script>
 <script src="UserAgents.js" ></script>
+<script src="Discussions.js" ></script>
 <script src="MpistoAgent.js"></script>
 <script src="Headroom.js" /></script>
 
@@ -3043,8 +1494,31 @@ function BarSwitch() {
     }
 }
 
+/* Make SmartTVs recognize cursors */
+if (navigator.userAgent.match("SmartTV")) {
+document.getElementById("Handler").className += " smart"
+}
 
+if (navigator.userAgent.match("Macintosh")) {
+document.getElementById("Handler").className += " osx"
+}
 
+if (navigator.userAgent.match("Linux")) {
+document.getElementById("Handler").className += " xubuntu"
+}
+
+if (navigator.userAgent.match("Trident")) {
+document.getElementById("Handler").className += " explorer"
+}
+
+if (navigator.userAgent.match("Edge")) {
+document.getElementById("Handler").className += " edge"
+}
+
+/* Mobile Only CSS */
+if (navigator.userAgent.match("Mobile")) {
+document.getElementById("Handler").className += " phone"
+}
 
 /* Dropdown
 function dropFunction() {
