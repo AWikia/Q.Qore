@@ -51,7 +51,7 @@ if (!CSS.supports('(flex-wrap:wrap)')) {
 
 function RemovePane() {
 var UnmodernPref = document.getElementById("OptionsContent").className.indexOf("modernp") == -1; // Needed for check if modern version is on
-	if (UnmodernPref) {
+	if (UnmodernPref || window.innerWidth < 755) {
 		var x = document.getElementById("OptionsContent");
 		x.className = x.className.replace(" pane-on", "");
 	    setTimeout(RemoveTransition, 990) 

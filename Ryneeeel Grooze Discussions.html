@@ -668,7 +668,7 @@ function HCg1() {
 		<div class="mpisto-discussions-wrapper">
 			<div class="card first">
 				<div style="text-align:center; width:100%;"><h2 class="wds-midlight-aqua">About this Wiki</h2></div>
-				<div>
+				<div class="description" style="text-align:left;">
 				Mpisto War 2018 is a collaboration service of wikis developed by Mpisto Scenes Community and distributed by Mpisto and Anna in Orbitron and by A Techno Services via Github elsewhere. It competes with GTK+ currently which is also a competitor of us.
 				</div>
 				<h3>Active Users:</h3>
@@ -679,7 +679,8 @@ function HCg1() {
 					<img class="mpisto-avatar" src="Frouda.jpg" title="Frouda"></img>
 					<img class="mpisto-avatar" src="Frouda.jpg" title="GTK the great"></img>
 				</div> 
-				<button class="wds-button wds-is-alternate" title="You'll be redirected to GMK Description to change it">Edit Description</button>
+				<button class="wds-button wds-is-alternate editor1off" onclick="SwitchEditorA()">Edit Description</button>
+				<button class="wds-button wds-is-alternate editor1on" onclick="SwitchEditorA()">Save Description</button>
 			</div>
 			<div class="card main">
 				<nav class="post-send">
@@ -1275,33 +1276,54 @@ function HCg1() {
 					</article>
 
 				</article>
+				<div style="width:100%; text-align:center;">
+					<button class="wds-button wds-is-alternate">Load More</button>
+				</div>
 			</div>
 			<div class="card last">
 			<div style="text-align:center; width:100%;"><h2 class="wds-midlight-aqua">Community Guidelines</h2></div>
-			<ol>
+			<ol class="guidelines">
 				<li>
-				Be always civil
+				<span>Be always civil</span> <a class="editor2on delete"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-trash" />
+						  </svg></a>
 				</li>
 				<li>
-				No vandalism, spam or hate posts and polls
+				<span>No vandalism, spam or hate posts and polls</span> <a class="editor2on delete"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-trash" />
+						  </svg></a>
 				</li>
 				<li>
-				Always be on topic. Never off-topic
+				<span>Always be on topic. Never off-topic</span> <a class="editor2on delete"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-trash" />
+						  </svg></a>
 				</li>
 				<li>
-				Don't send links to malicious sites or to sites that you don't trust
+				<span>Don't send links to malicious sites or to sites that you don't trust</span> <a class="editor2on delete"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-trash" />
+						  </svg></a>
 				</li>
 				<li>
-				Assistance for scripting is allowed, advertising communities however not
+				<span>Assistance for scripting is allowed, advertising communities however not</span> <a class="editor2on delete"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-trash" />
+						  </svg></a>
 				</li>
 				<li>
-				Bug reports may be better be asked via Mpisto Contact. Concerns about how A Techno works must be asked via A Techno Contact, not Mpisto
+				<span>Bug reports may be better be asked via Mpisto Contact. Concerns about how A Techno works must be asked via A Techno Contact, not Mpisto</span> <a class="editor2on delete"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-trash" />
+						  </svg></a>
 				</li>
 				<li>
-				Enjoy!!!
+				<span>Enjoy!!!</span> <a class="editor2on delete"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-trash" />
+						  </svg></a>
 				</li>
 			</ol>
-				<button class="wds-button wds-is-alternate" title="You'll be redirected to GMK Guidelines to change it">Edit Rules</button>
+			<div style="text-align:center;">
+				<button class="wds-button wds-is-alternate editor2on" onclick="NewRule()">New Rule</button>
+				<button class="wds-button wds-is-alternate editor2off" onclick="SwitchEditorB()">Edit Rules</button>
+				<button class="wds-button wds-is-alternate editor2on" onclick="SwitchEditorB()">Save Rules</button>
+			</div>
 			</div>
 		</div>
 </section>
