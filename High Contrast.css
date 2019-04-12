@@ -453,7 +453,7 @@ body:after {
 }
 */
 
-.main.contrast .wds-dropdown__content .wds-list.wds-is-linked>li.wds-is-selected>a, .main.contrast .wds-dropdown__content .wds-list.wds-is-linked>li:hover>a{
+.main.contrast .wds-dropdown__content .wds-list.wds-is-linked>li.wds-is-selected>a:not(.wds-button), .main.contrast .wds-dropdown__content .wds-list.wds-is-linked>li:hover>a:not(.wds-button){
   background-color:var(--button-color);
   color:var(--button-color-text);
   outline:1px solid var(--button-color-text);

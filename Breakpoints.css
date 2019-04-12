@@ -281,6 +281,52 @@ display:inline-flex;
 	width:100%;
 }
 
+.mpisto-userpages-header .mpisto-userpages-main {
+		display:block;
+}
+
+.mpisto-userpages-header .mpisto-userpages-main .mpisto-avatar {
+	margin:0 auto;
+	display:block;
+}
+
+.mpisto-userpages-header .mpisto-profile-masthead {
+	margin-left:0;
+	margin-top:9px;
+}
+
+.mpisto-userpages-header .mpisto-profile-masthead hgroup h1 {
+	font-size:26px;
+}
+
+.mpisto-userpages-header .mpisto-profile-masthead hgroup h2 {
+	font-size:20px;
+}
+
+.mpisto-userpages-header .mpisto-profile-masthead hgroup span {
+	font-size:14px;
+}
+
+.mpisto-userpages-header .mpisto-profile-masthead section .wds-button span {
+	display:none;
+}
+
+
+.mpisto-userpages-header .mpisto-profile-masthead section .wds-button .wds-icon.single-icon {
+	margin:auto!Important;
+}
+
+.mpisto-userpages-actions .user-actions {
+	clear:both;
+}
+
+.mpisto-userpages-tabs .user-actions .wds-button span {
+	display:none;
+}
+
+.mpisto-userpages-tabs .user-actions .wds-button svg {
+	margin:0!important;
+}
 
 }
 
@@ -446,6 +492,7 @@ width:100%;
 	width:100%!important;
 	flex:none!important;
 }
+
 
 }
 

@@ -202,84 +202,6 @@ border-left-color:var(--button-color);
 }
 */
 
-	.mobile-header {
-		display:flex;
-		justify-content:center;
-		min-height:60px;
-		flex-direction:column;
-	}
-
-	.mobile-header section {
-		width:100%;
-		display:flex;
-		padding:5px 18px;
-		justify-content:space-around;
-		align-items:stretech;
-	}
-
-	.mobile-header .title {
-		justify-content:center;
-		line-height:1.4;
-		font-size:24px;
-		font-weight:800;
-	font-family:"Arimo", "Liberation Sans", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR", cursive;
-	font-family:var(--secondary-font), cursive;
-	}
-
-	.mobile-header .title a {
-		text-decoration:none;
-		color:inherit;
-		transition:opacity 400ms ease, color 400ms ease;
-		overflow:hidden;
-		text-overflow:ellipsis;
-	}
-
-	.mobile-header .title a:hover {
-		opacity:0.8;
-	}
-
-
-	.mobile-header .counters {
-		font-size:16px;
-		flex-wrap:wrap;
-	}
-
-	.mobile-header .counter {
-		white-space:nowrap;
-	}
-
-	.mobile-header .counter big {
-		font-weight:bolder;
-		font-size:120%;
-	}
-
-
-	.mobile-header .buttons {
-		padding:0;
-		display:block!important;
-	}
-
-	.mobile-header .buttons nav {
-		flex:1;
-		width:100%;
-		display:flex;
-	}
-
-.mobile-header .buttons .link, .mobile-header .buttons .wds-dropdown .link {
-		flex:1;
-		display:inline-flex;
-		align-items:center;
-		justify-content:center;
-		padding: 0 9px;
-		height:55px;
-	}
-
-.mobile-header .wds-dropdown {
-	flex:1;
-	display:inline-flex;
-}
-
-
 .mpisto-gnav, .mpisto-header-container {
 	background-color:#18bbc6;
 	background-color:var(--button-color);
@@ -306,6 +228,12 @@ border-left-color:var(--button-color);
 	.mpisto-global-navigation .link .mpisto-input {
 	background-color:rgba(248,248,248,0.2);
 }
+
+
+	.mpisto-header-container .link:hover *:not([filter]), .mpisto-header-container .wds-dropdown:hover .link *:not([filter]), .mpisto-header-container .link.active *:not([filter]) {
+		filter:none;
+	}
+
 
 .mpisto-gnav.headroom {
 	transition:transform 400ms ease;
