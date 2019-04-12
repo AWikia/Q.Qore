@@ -3712,6 +3712,10 @@ padding-bottom:4px;
 font-weight:bold;
 }
 
+.mpisto-article.special {
+	overflow-x:auto;
+}
+
 .stats-table {
 	line-height:1.5;
 	width:90%;
@@ -3723,6 +3727,7 @@ font-weight:bold;
 	border-bottom-color:var(--content-color);
 	border-collapse:collapse;
 }
+
 
 .stats-table th {
 	font-family:"Arimo", "Liberation Sans", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR", cursive;
