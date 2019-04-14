@@ -249,6 +249,10 @@ body.editor1 .editor1off, body.editor2 .editor2off, body:not(.editor1) .editor1o
 	width:100%!important;
 }
 
+footer.mpisto-footer .mpisto-wrapper {
+	width:calc(100% - 36px)!important;
+}
+
 .mpisto-header-container {
 	margin:0;
 }
