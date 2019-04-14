@@ -41,25 +41,29 @@
 }
 
 
+
+.mpisto-2018:before {
+  background-color:#fff;
+  background-color:var(--content-bg)!important;
+}
+
+
+
 .mpisto-right-pane {
 -moz-column-count:1!important;
 -webkit-column-count:1!important;
 column-count:1!important;
 }
 
-.mpisto-content, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .mpisto-options-content, .lightbox {
+.mpisto-content, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .mpisto-options-content, .lightbox, .footer {
   width:100%!important;
   border-color:transparent!Important;
   margin-top:0!important;
+  min-width:360px;
 }
 
 .mpisto-content .mpisto-wrapper {
 	border-color:transparent!important;
-}
-
-.mpisto-content .mpisto-title {
-	font-size:36px;
-	-webkit-text-stroke-width:1.25px;
 }
 
 .mpisto-content .mpisto-page-header-title {
@@ -161,9 +165,6 @@ header.mpisto-footer-container > div .item {
 	min-height:18px;
 }
 
-.options pre {
-	white-space:pre-wrap;
-}
 
 .mpisto-option-way > div .fieldset fieldset legend {
 	font-size:16px;
@@ -295,17 +296,6 @@ display:inline-flex;
 	margin-top:9px;
 }
 
-.mpisto-userpages-header .mpisto-profile-masthead hgroup h1 {
-	font-size:26px;
-}
-
-.mpisto-userpages-header .mpisto-profile-masthead hgroup h2 {
-	font-size:20px;
-}
-
-.mpisto-userpages-header .mpisto-profile-masthead hgroup span {
-	font-size:14px;
-}
 
 .mpisto-userpages-header .mpisto-profile-masthead section .wds-button span {
 	display:none;
@@ -328,6 +318,7 @@ display:inline-flex;
 	margin:0!important;
 }
 
+
 }
 
 /* XS + S */
@@ -335,11 +326,6 @@ display:inline-flex;
 /*.mpisto-grooze {
 display:inline!important;
 }*/
-.mpisto-content, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .mpisto-options-content, .lightbox {
-  width:100%;
-  width:calc(100% - 34px);
-}
-
 .main .page-wrapper {
 	width:100%!important;
 }
@@ -366,6 +352,11 @@ display:inline!important;
 
 .editor-header h2 {
 	font-size:18px;
+}
+
+
+.options pre {
+	white-space:pre-wrap;
 }
 
 
@@ -397,6 +388,18 @@ position:sticky!important;
 }
 */
 
+
+.mpisto-userpages-header .mpisto-profile-masthead hgroup h1 {
+	font-size:26px;
+}
+
+.mpisto-userpages-header .mpisto-profile-masthead hgroup h2 {
+	font-size:20px;
+}
+
+.mpisto-userpages-header .mpisto-profile-masthead hgroup span {
+	font-size:14px;
+}
 
 .mpisto-grooze .desktop-wiki {
 overflow-x:hidden;
@@ -494,11 +497,28 @@ width:100%;
 }
 
 
+.log-in-form .wds-button span {
+	display:none!important;
+}
+
+.log-in-form .wds-button svg {
+	margin:0!important;
+}
+
 }
 
 
 /* S */
 @media only screen and (min-width:755px) and (max-width:959px) {
+.mpisto-content, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .mpisto-options-content, .lightbox {
+  width:722px;
+}
+
+.mpisto-content .mpisto-title {
+	font-size:36px;
+	-webkit-text-stroke-width:1.25px;
+}
+
 .basicp .mpisto-option-pane {
 width:100%;
 height:auto;

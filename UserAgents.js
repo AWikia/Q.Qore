@@ -28,3 +28,15 @@ if ((navigator.userAgent.match("Trident")) || (navigator.userAgent.match("Presto
 window.location.replace("https://hm100.github.io/UnsupportedBanners/Mpisto.html");window.location.href = "https://hm100.github.io/UnsupportedBanners/Mpisto.html";
 }
 
+window.MW18newnavblock=false;
+(function () {
+	if (window.MW18newnavblock === true) {
+		return
+	}
+	if ($("body.mpisto-2018").length || $("body.mpisto-discuss-2018").length) {
+//		document.querySelector('.mpisto-gnav[style]').className += " newnav"; // We begin with the first theme selected
+//		document.querySelector('.mpisto-gnav:not([style])').className += " newnav"; // We begin with the first theme selected
+	}
+})();
+
+

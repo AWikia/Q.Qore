@@ -467,7 +467,7 @@
 }));
 
 // grab an element
-var myElement = document.querySelector("div.mpisto-gnav");
+var myElement = document.querySelector("div.mpisto-gnav:not([style])");
 // construct an instance of Headroom, passing the element
 var headroom  = new Headroom(myElement);
 // initialise
