@@ -392,8 +392,8 @@ document.getElementById("Handler").className += " mpisto-servers"
 
 			<div class="fieldset store-theme-card">
 			<fieldset>
-			<legend>Noto Sans</legend>
-			<div style="font-family: Mpisto, Flockk, 'Arial', sans-serif;">
+			<legend>System/Inter UI</legend>
+			<div style="font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Arial', sans-serif;">
 				<span style="font-size:200%;">
 					AaBbYyZz
 					<br>
@@ -872,7 +872,7 @@ document.getElementById("Handler").className += " mpisto-servers"
 
 		</div>
 		
-    <input type="checkbox" name="06" id="59-1" onclick="Widescreen2()"></input> <label for="59-1">Apply Serif fonts where applyable</label>		
+    <!--<input type="checkbox" name="06" id="59-1" onclick="Widescreen2()"></input> <label for="59-1">Apply Serif fonts where applyable</label>-->	
     </fieldset>
     </div>
 
@@ -1238,6 +1238,9 @@ Checked = VisualEditor as default mode
                   </svg>
 				</a>
 			</div>
+			<style class="designer-style">
+			/* This CSS left intentionally blank */
+			</style>
 
     <div class="fieldset">
     <fieldset>
@@ -1261,7 +1264,7 @@ Checked = VisualEditor as default mode
     <div class="fieldset">
     <fieldset>    
     <legend>Body</legend>
-    <label>Background-color:</label> <input type="color" value="#e995ca" class="wds-button wds-is-square"></input>
+    <label>Background-color:</label> <input type="color" onchange="UpdateValue()" name="bg" value="#e995ca" class="wds-button wds-is-square"></input>
     <br><br>
     <label>Background-image: (.png/.jpg/.gif needed, up to 1000KB possible)</label>
     <br>
@@ -1298,7 +1301,7 @@ Checked = VisualEditor as default mode
     <div class="fieldset">
     <fieldset>
     <legend>Header</legend>
-    <label>Header-color:</label> <input type="color" value="#0000ff" class="wds-button wds-is-square"></input>
+    <label>Header-color:</label> <input type="color" onchange="UpdateValue()" name="header" value="#0000ff" class="wds-button wds-is-square"></input>
     <br><br>
     <label>Header-image: (.png/.jpg/.gif needed, up to 1000KB possible)</label>
     <br>
@@ -1370,15 +1373,15 @@ Checked = VisualEditor as default mode
     <div class="fieldset">
     <fieldset>
     <legend>Page</legend>
-    <label>Background-color:</label> <input type="color" value="#ffffff" class="wds-button wds-is-square"></input>
+    <label>Background-color:</label> <input type="color" onchange="UpdateValue()" name="contentbg" value="#ffffff" class="wds-button wds-is-square"></input>
     <br><br>
-    <label>Color:</label> <input type="color" value="#000" class="wds-button wds-is-square"></input>
+    <label>Color:</label> <input type="color" onchange="UpdateValue()" name="contentcolor" value="#000" class="wds-button wds-is-square"></input>
     <br><br>
-    <label>Border-color:</label> <input type="color" value="#cccccc" class="wds-button wds-is-square"></input>
+    <label>Border-color:</label> <input type="color" onchange="UpdateValue()" name="border" value="#cccccc" class="wds-button wds-is-square"></input>
     <br><br>
-    <label>Link-color:</label> <input type="color" value="#18bbc5" class="wds-button wds-is-square"></input>
+    <label>Link-color:</label> <input type="color" onchange="UpdateValue()" name="linkcolor" value="#18bbc5" class="wds-button wds-is-square"></input>
     <br><br>
-    <label>Button-color:</label> <input type="color" value="#18bbc5" class="wds-button wds-is-square"></input>
+    <label>Button-color:</label> <input type="color" onchange="UpdateValue()" name="buttoncolor" value="#18bbc5" class="wds-button wds-is-square"></input>
     </fieldset>
     </div>
     </fieldset>
@@ -1950,6 +1953,7 @@ Checked = VisualEditor as default mode
 </head>
 
 <script src="jQuery.js"></script>
+<script src="Chroma.js"></script>
 <script src="UserAgents.js" ></script>
 <script src="MpistoAgent.js"></script>
 <script src="Options.js"></script>
