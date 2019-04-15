@@ -4,6 +4,140 @@ document.querySelector('html').className += " theme-A"; // We begin with the fir
 ColorUpdate();
 })();
 
+function UploadPicture1(files) {
+window.URL = window.URL || window.webkitURL;
+const img = document.createElement("img");
+img.src = window.URL.createObjectURL(files[0]);
+
+if (files[0].size > 1000000) {
+	alert("Image is too big. Please pick another one.");
+	return
+}
+
+	if ($("html.theme-A").length) {
+		$("style.designer-style").append(
+		'html.theme-A:not(.win10) {' +
+		'--background-image:url("' + img.src + '")!important;' +
+		'}'
+		);	
+	}
+
+	if ($("html.theme-B").length) {
+		$("style.designer-style").append(
+		'html.theme-B:not(.win10) {' +
+		'--background-image:url("' + img.src + '")!important;' +
+		'}'
+		);	
+	}
+
+	if ($("html.theme-C").length) {
+		$("style.designer-style").append(
+		'html.theme-B:not(.win10) {' +
+		'--background-image:url("' + img.src + '")!important;' +
+		'}'
+		);	
+	}
+
+	if ($("html.theme-D").length) {
+		$("style.designer-style").append(
+		'html.theme-D:not(.win10) {' +
+		'--background-image:url("' + img.src + '")!important;' +
+		'}'
+		);	
+	}
+
+}
+
+
+
+function UploadPicture2(files) {
+window.URL = window.URL || window.webkitURL;
+const img = document.createElement("img");
+img.src = window.URL.createObjectURL(files[0]);
+
+
+if (files[0].size > 1000000) {
+	alert("Image is too big. Please pick another one.");
+	return
+}
+
+$("img[alt='HM100']").attr("src", img.src);
+
+}
+
+
+function UploadPicture3(files) {
+window.URL = window.URL || window.webkitURL;
+const img = document.createElement("img");
+img.src = window.URL.createObjectURL(files[0]);
+img.width = 471;
+img.height = 115;
+
+
+if (files[0].size > 1000000) {
+	alert("Image is too big. Please pick another one.");
+	return
+}
+
+	if ($("html.theme-A").length) {
+		$("style.designer-style").append(
+		'html.theme-A:not(.win10) {' +
+		'--graphic:url("' + img.src + '")!important;' +
+		'}'
+		);	
+	}
+
+	if ($("html.theme-B").length) {
+		$("style.designer-style").append(
+		'html.theme-B:not(.win10) {' +
+		'--graphic:url("' + img.src + '")!important;' +
+		'}'
+		);	
+	}
+
+	if ($("html.theme-C").length) {
+		$("style.designer-style").append(
+		'html.theme-B:not(.win10) {' +
+		'--graphic:url("' + img.src + '")!important;' +
+		'}'
+		);	
+	}
+
+	if ($("html.theme-D").length) {
+		$("style.designer-style").append(
+		'html.theme-D:not(.win10) {' +
+		'--graphic:url("' + img.src + '")!important;' +
+		'}'
+		);	
+	}
+
+}
+
+
+function UploadPicture4(files) {
+window.URL = window.URL || window.webkitURL;
+const img = document.createElement("img");
+img.src = window.URL.createObjectURL(files[0]);
+img.width = 471;
+img.height = 115;
+
+
+if (files[0].size > 1000000) {
+	alert("Image is too big. Please pick another one.");
+	return
+}
+
+		$("style.designer-style").append(
+		'html {' +
+		'--wordmark:url("' + img.src + '")!important;' +
+		'}'
+		);
+		$(".mpisto-header-container .wordmark img").attr("src", img.src);
+
+}
+
+
+
 function UpdateValue() {
 var linkcolor1final = chroma($('input[type="color"][name="linkcolor"]').val()).get('rgb.r') + ',' + chroma($('input[type="color"][name="linkcolor"]').val()).get('rgb.g') + ',' + chroma($('input[type="color"][name="linkcolor"]').val()).get('rgb.b'); 
 var headercolorfinal = chroma($('input[type="color"][name="header"]').val()).get('rgb.r') + ',' + chroma($('input[type="color"][name="header"]').val()).get('rgb.g') + ',' + chroma($('input[type="color"][name="header"]').val()).get('rgb.b'); 

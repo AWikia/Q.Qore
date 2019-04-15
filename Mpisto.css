@@ -1402,7 +1402,7 @@ display:table;
 .notification.wds-dropdown__content .wds-list > li:not(:last-child) a img {
   box-sizing:border-box;
   border:0;
-  border-radius:50%;
+  border-radius:20%;
   background-blend-mode:normal;
   width:28px;
   height:28px;
@@ -1894,19 +1894,22 @@ margin-bottom:-1px;
 }
 
 
-.wds-button-groups > .wds-button-group:last-child:not(:first-child):not(:only-child) > .wds-button:not(:hover) {
+.wds-button-groups > .wds-button-group:last-child:not(:first-child):not(:only-child) > .wds-button:not(:hover):not(.wds-is-secondary),
+.wds-button-groups > .wds-button-group:last-child:not(:first-child):not(:only-child) > .wds-dropdown .wds-button:not(:hover):not(.wds-is-secondary) {
 	border-top-color:var(--content-bg);
 	border-top-width:1px;
 	border-top-style:solid;
 }
 
-.wds-button-groups > .wds-button-group:not(:last-child):first-child:not(:only-child) > .wds-button:not(:hover) {
+.wds-button-groups > .wds-button-group:not(:last-child):first-child:not(:only-child) > .wds-button:not(:hover):not(.wds-is-secondary),
+.wds-button-groups > .wds-button-group:not(:last-child):first-child:not(:only-child) > .wds-dropdown .wds-button:not(:hover):not(.wds-is-secondary) {
 	border-bottom-color:var(--content-bg);
 	border-bottom-width:1px;
 	border-bottom-style:solid;
 }
 
-.wds-button-groups > .wds-button-group:not(:last-child):not(:first-child):not(:only-child) > .wds-button:not(:hover) {
+.wds-button-groups > .wds-button-group:not(:last-child):not(:first-child):not(:only-child) > .wds-button:not(:hover):not(.wds-is-secondary),
+.wds-button-groups > .wds-button-group:not(:last-child):not(:first-child):not(:only-child) > .wds-dropdown .wds-button:not(:hover):not(.wds-is-secondary) {
 	border-top-color:var(--content-bg);
 	border-top-width:1px;
 	border-top-style:solid;
@@ -1916,20 +1919,19 @@ margin-bottom:-1px;
 }
 
 
-.wds-button-groups > .wds-button-group:last-child:not(:first-child):not(:only-child) > .wds-button {
-	border-top-left-radius:0;
+.wds-button-groups > .wds-button-group:last-child:not(:first-child):not(:only-child) > .wds-button:not(:hover):not(.wds-is-secondary),
+.wds-button-groups > .wds-button-group:last-child:not(:first-child):not(:only-child) > .wds-dropdown .wds-button:not(:hover):not(.wds-is-secondary) {	border-top-left-radius:0;
 	border-top-right-radius:0;
-	border-bottom-color:var(--content-bg);
-	border-bottom-width:1px;
-	border-bottom-style:solid;
 }
 
-.wds-button-groups > .wds-button-group:not(:last-child):first-child:not(:only-child) > .wds-button {
+.wds-button-groups > .wds-button-group:not(:last-child):first-child:not(:only-child) > .wds-button:not(:hover):not(.wds-is-secondary),
+.wds-button-groups > .wds-button-group:not(:last-child):first-child:not(:only-child) > .wds-dropdown .wds-button:not(:hover):not(.wds-is-secondary) {
 	border-bottom-left-radius:0;
 	border-bottom-right-radius:0;
 }
 
-.wds-button-groups > .wds-button-group:not(:last-child):not(:first-child):not(:only-child) > .wds-button {
+.wds-button-groups > .wds-button-group:not(:last-child):not(:first-child):not(:only-child) > .wds-button:not(:hover):not(.wds-is-secondary),
+.wds-button-groups > .wds-button-group:not(:last-child):not(:first-child):not(:only-child) > .wds-dropdown .wds-button:not(:hover):not(.wds-is-secondary) {
 	border-radius:0;
 }
 
@@ -2479,6 +2481,7 @@ border-left-color:rgba(var(--community-header-text),0.8);
 		z-index:20;
 		position:relative;
 		background-image:url("Graphic.png");
+		background-image:var(--graphic,url("Graphic.png"));
 		background-size:contain;
 		background-position:right;
 		background-repeat:no-repeat;
