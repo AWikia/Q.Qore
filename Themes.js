@@ -4,6 +4,23 @@ document.querySelector('html').className += " theme-A"; // We begin with the fir
 ColorUpdate();
 })();
 
+
+function UpdateSitename() {
+    var x = document.getElementById("311");
+    var y = $(".mpisto-input.sitename").val();
+    if (y === '') {
+		var y = 'Untitled';
+		console.log('No Sitename is used. Untitled will be used as a fallback')
+    }
+    if (x.checked) {
+	$(".color-header .title a").text(y + ' Wiki');
+	$(".mobile-header .title a").text(y + ' Wiki');
+	} else {
+	$(".color-header .title a").text(y);
+	$(".mobile-header .title a").text(y);
+	}
+}
+
 function UploadPicture1(files) {
 window.URL = window.URL || window.webkitURL;
 const img = document.createElement("img");

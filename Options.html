@@ -392,7 +392,7 @@ document.getElementById("Handler").className += " mpisto-servers"
 
 			<div class="fieldset store-theme-card">
 			<fieldset>
-			<legend>System/Inter UI</legend>
+			<legend>System/Inter</legend>
 			<div style="font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Arial', sans-serif;">
 				<span style="font-size:200%;">
 					AaBbYyZz
@@ -1363,9 +1363,11 @@ Checked = VisualEditor as default mode
          </div>
     </div>
     <br><br>
-    <label>Wiki-URL:</label><input class="mpisto-input" value="mpisto-war-2018" placeholder="Wiki URL" ></input>
+    <label>Wiki-URL:</label><input class="mpisto-input" autocomplete="off" value="mpisto-war-2018" placeholder="Wiki URL" ></input>
     <br>
-    <input type="checkbox" name="32" id="311"></input> <label for="311">Don't add the<b> Wiki</b> suffix to the compiled sitename</label>
+    <label>Wiki Name:</label><input class="mpisto-input sitename" autocomplete="off" maxlength="30" oninput="UpdateSitename()" value="Mpisto War 2018" placeholder="Wiki Name" ></input>
+    <br>
+    <input type="checkbox" onclick="UpdateSitename()" name="32" autocomplete="off" id="311"></input> <label for="311">Add the<b> Wiki</b> suffix to the compiled sitename</label>
 
     </fieldset>
     </div>
