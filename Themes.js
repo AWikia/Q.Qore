@@ -226,10 +226,13 @@ var button_color = getComputedStyle(document.querySelector('html')).getPropertyV
 if ((chroma(button_color).luminance()) > 0.3) {
 var buttoncolor1 = chroma(button_color).brighten(-0.6);
 var buttoncolor2 = 'black';
+document.querySelector('body').style.setProperty("--button-color-blend-light", button_color);
+document.querySelector('body').style.setProperty("--button-color-blend", buttoncolor1);
 } else {
 var buttoncolor1 = chroma(button_color).brighten(0.6);
 var buttoncolor2 = 'white';
-
+document.querySelector('body').style.setProperty("--button-color-blend-light", buttoncolor1);
+document.querySelector('body').style.setProperty("--button-color-blend", button_color);
 }
 
 /* Set Values */
@@ -243,14 +246,22 @@ $('input[type="color"][name="buttoncolor"]').val(chroma(button_color));
 var header_color =	'rgb(' + getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg") + ');';
 
 if ((chroma(header_color).luminance()) > 0.3) {
-var headercolor1 = '23,23,23';
+var headercolor1 = chroma(header_color).brighten(-0.6);
+var headercolor2 = '0,0,0';
+var headercolor1final = chroma(headercolor1).get('rgb.r') + ',' + chroma(headercolor1).get('rgb.g') + ',' + chroma(headercolor1).get('rgb.b'); 
+document.querySelector('body').style.setProperty("--community-header-bg-blend-light", header_color);
+document.querySelector('body').style.setProperty("--community-header-bg-blend", headercolor1final);
 } else {
-var headercolor1 = '248,248,248';
-
+var headercolor1 = chroma(header_color).brighten(0.6);
+var headercolor2 = '255,255,255';
+var headercolor1final = chroma(headercolor1).get('rgb.r') + ',' + chroma(headercolor1).get('rgb.g') + ',' + chroma(headercolor1).get('rgb.b'); 
+document.querySelector('body').style.setProperty("--community-header-bg-blend-light", headercolor1final);
+document.querySelector('body').style.setProperty("--community-header-bg-blend", header_color);
 }
 
 /* Set Values */
-document.querySelector('body').style.setProperty("--community-header-text", headercolor1);
+document.querySelector('body').style.setProperty("--community-header-dark", headercolor1final);
+document.querySelector('body').style.setProperty("--community-header-text", headercolor2);
 $('input[type="color"][name="header"]').val(chroma(header_color));
 
 /** Link Color **/
@@ -260,13 +271,17 @@ var link_color = 'rgb(' + getComputedStyle(document.querySelector('html')).getPr
 if ((chroma(link_color).luminance()) > 0.3) {
 var linkcolor1 = chroma(link_color).brighten(-0.6);
 var linkcolor2 = 'black';
+var linkcolor1final = chroma(linkcolor1).get('rgb.r') + ',' + chroma(linkcolor1).get('rgb.g') + ',' + chroma(linkcolor1).get('rgb.b'); 
+document.querySelector('body').style.setProperty("--link-color-blend-light", link_color);
+document.querySelector('body').style.setProperty("--link-color-blend", linkcolor1final);
 } else {
 var linkcolor1 = chroma(link_color).brighten(0.6);
 var linkcolor2 = 'white';
-
+var linkcolor1final = chroma(linkcolor1).get('rgb.r') + ',' + chroma(linkcolor1).get('rgb.g') + ',' + chroma(linkcolor1).get('rgb.b'); 
+document.querySelector('body').style.setProperty("--link-color-blend-light", linkcolor1final);
+document.querySelector('body').style.setProperty("--link-color-blend", link_color);
 }
 
-var linkcolor1final = chroma(linkcolor1).get('rgb.r') + ',' + chroma(linkcolor1).get('rgb.g') + ',' + chroma(linkcolor1).get('rgb.b'); 
 
 /* Set Values */
 document.querySelector('body').style.setProperty("--link-color-dark", linkcolor1final);
@@ -279,12 +294,19 @@ var border_color =	getComputedStyle(document.querySelector('html')).getPropertyV
 
 if ((chroma(border_color).luminance()) > 0.3) {
 var bordercolor1 = chroma(border_color).brighten(-0.6);
+var bordercolor2 = 'black';
+document.querySelector('body').style.setProperty("--content-border-blend-light", border_color);
+document.querySelector('body').style.setProperty("--content-border-blend", bordercolor1);
 } else {
 var bordercolor1 = chroma(border_color).brighten(0.6);
+var bordercolor2 = 'white';
+document.querySelector('body').style.setProperty("--content-border-blend-light", bordercolor1);
+document.querySelector('body').style.setProperty("--content-border-blend", border_color);
 }
 
 /* Set Values */
 document.querySelector('body').style.setProperty("--content-border-dark", bordercolor1);
+document.querySelector('body').style.setProperty("--content-border-text", bordercolor2);
 $('input[type="color"][name="border"]').val(chroma(border_color));
 
 /** Dropdown BG **/
