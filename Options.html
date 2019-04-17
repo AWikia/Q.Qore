@@ -1222,7 +1222,12 @@ Checked = VisualEditor as default mode
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-upload" />
                   </svg>
 				</a>
-				<a class="wds-floating-button accent" title="Reset to Standard theme">
+				<a class="wds-floating-button accent" onclick="ResetTheme()" title="Reset this theme to Standard theme">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-undo" />
+                  </svg>
+				</a>
+				<a class="wds-floating-button critical" onclick="ResetThemes()" title="Reset evry theme to Standard theme">
                   <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-undo" />
                   </svg>
@@ -1238,10 +1243,21 @@ Checked = VisualEditor as default mode
                   </svg>
 				</a>
 			</div>
-			<style class="designer-style">
+			<style class="designer-style theme-A">
 			/* This CSS left intentionally blank */
 			</style>
-
+			<style class="designer-style theme-B">
+			/* This CSS left intentionally blank */
+			</style>
+			<style class="designer-style theme-C">
+			/* This CSS left intentionally blank */
+			</style>
+			<style class="designer-style theme-D">
+			/* This CSS left intentionally blank */
+			</style>
+			<style class="designer-style theme-Global">
+			/* This CSS left intentionally blank */
+			</style>
     <div class="fieldset">
     <fieldset>
     <legend>Theme</legend>

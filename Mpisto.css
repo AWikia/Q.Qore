@@ -3462,7 +3462,7 @@ padding:10px 0 0;
 	vertical-align:middle;
 	padding:4px;
 	background-color:#03a2ac;
-	background-color:var(--button-color-dark);
+	background-color:var(--button-color-blend);
 	margin:0 2px;
 	-webkit-text-fill-color:currentColor;
 	box-shadow:0 0 1px currentColor;
@@ -3478,7 +3478,7 @@ padding:10px 0 0;
 	background-color:black;
 	background-color:var(--button-color-text);
 	color:#03a2ac;
-	color:var(--button-color-dark);
+	color:var(--button-color-blend);
 }
 
 
@@ -6784,6 +6784,7 @@ opacity:0.06;
 /*  box-shadow:0px 0px 5px #ffffff, 0px 0px 1px #fff, inset 0px 1px 2px #ccc;
     box-shadow:0px 0px 5px var(--dropdown-bg), 0px 0px 1px #fff, inset 0px 1px 2px var(--content-border);
 */	padding:7px 10px;
+	overscroll-behavior:contain;
 }
 
 .lightbox section p {
