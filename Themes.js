@@ -1,5 +1,4 @@
-﻿var isOptions = document.getElementById("Handler").className.indexOf("options") !== -1;
-(function () {
+﻿(function () {
 document.querySelector('html').className += " theme-A"; // We begin with the first theme selected
 ColorUpdate();
 })();
