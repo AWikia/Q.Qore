@@ -46,7 +46,8 @@ backdrop-filter:none!important;
 /*background-color:rgb(24,187,198);
 */
 margin:-1px;
-background-image:none;
+background-image:linear-gradient(to bottom, #18bbc5 35%, rgba(23,23,23,0.3) 70%);
+background-image:linear-gradient(to bottom, var(--button-color-blend-light) 35%, var(--button-color-blend) 70%)!important;
 }
 
 	.color-header .title a {
@@ -203,8 +204,8 @@ border-left-color:var(--button-color);
 */
 
 .mpisto-gnav, .mpisto-header-container {
-	background-color:#18bbc6;
-	background-color:var(--button-color);
+	background-color:#00d7e6;
+	background-color:var(--button-color-blend-light);
 	color:black; /* Actually compiles to black by themedesigner but we need white for mobile skin to emulate fandom 2.0 default button styling */
 	color:var(--button-color-text);
 }
@@ -218,13 +219,21 @@ border-left-color:var(--button-color);
 .mpisto-global-navigation .link:hover, .mpisto-global-navigation .wds-dropdown:hover .link,
 .mpisto-header-container .link:hover, .mpisto-header-container .wds-dropdown:hover .link {
 	background-color:#00d7e6;
-	background-color:var(--button-color-dark);
+	background-color:var(--button-color-blend-light);
 	-webkit-animation:none;
 	animation:none;
 	transition:color 400ms ease, background-color 400ms ease;
 	border-color:transparent;
 	color:inherit;
 }
+
+
+.color-header .link:hover, .color-header .wds-dropdown:hover .link,
+.mpisto-global-navigation .link:hover, .mpisto-global-navigation .wds-dropdown:hover .link {
+	background-color:#18bbc6;
+	background-color:var(--button-color-blend);
+}
+
 	.mpisto-global-navigation .link .mpisto-input {
 	background-color:rgba(248,248,248,0.2);
 }
@@ -1055,10 +1064,6 @@ footer.mpisto-footer {
 padding-bottom:0.1px;
 }
 
-.mpisto-header-container {
-background-image:linear-gradient(to bottom, #18bbc5 35%, rgba(23,23,23,0.3) 70%);
-background-image:linear-gradient(to bottom, var(--button-color-blend-light) 35%, var(--button-color-blend) 70%);
-}
 
 /*.page-wrapper .store-content .store-footer {
 margin:0 -1px -1px;

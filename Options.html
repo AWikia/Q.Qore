@@ -201,7 +201,36 @@ document.getElementById("Handler").className += " mpisto-servers"
 					  </ul>
 					</div>
 				  </div>
-       <div class="wds-dropdown wds-has-dark-shadow">
+				<div class="wds-dropdown wds-has-dark-shadow">
+					<div class="link cell wds-dropdown__toggle"><svg class="wds-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 0H0v24h24z" fill="none"/><path d="M17.66 7.93L12 2.27 6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58c2.05 0 4.1-.78 5.66-2.34 3.12-3.12 3.12-8.19 0-11.31zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/></svg> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
+                  </svg></div>
+                  <div class="wds-dropdown__content">
+					<ul class="wds-list wds-is-linked">
+						<li>
+							<a onclick="HCa()">
+								Theme A
+							</a>
+						</li>
+						<li>
+							<a onclick="HCb()">
+								Theme B
+							</a>
+						</li>
+						<li>
+							<a onclick="HCc()">
+								Theme C
+							</a>
+						</li>
+						<li>
+							<a onclick="HCd()" >
+								Theme D
+							</a>
+						</li>
+					</ul>
+                  </div>
+					</div>
+       <div class="wds-dropdown wds-has-dark-shadow notifications-dropdown">
         <div class="link cell wds-dropdown__toggle"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-bell" /> 
 </svg> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
@@ -1258,20 +1287,6 @@ Checked = VisualEditor as default mode
 			<style class="designer-style theme-Global">
 			/* This CSS left intentionally blank */
 			</style>
-    <div class="fieldset">
-    <fieldset>
-    <legend>Theme</legend>
-    Default theme<br>This will be used as target theme to modify as an Admin:
-    </br>
-    <input type="radio" name="31" id="302" onclick="HCa()" checked></input> <label for="302">Theme A</label>
-    <input type="radio" name="31" id="303" onclick="HCb()"></input> <label for="303">Theme B</label>
-    <input type="radio" name="31" id="304" onclick="HCc()"></input> <label for="304">Theme C</label>
-    <input type="radio" name="31" id="305" onclick="HCd()"></input> <label for="305">Theme D</label>
-    <div class="contrastnotice">
-    Your browser does not support CSS variables which are required for Theme Designer to work. You can use Theme Designer through but contents will only be visible to browsers that support CSS variables.
-    </div>
-    </fieldset>
-    </div>
 
     <div class="fieldset">
     <fieldset>
@@ -1414,6 +1429,10 @@ Checked = VisualEditor as default mode
 			<header class="mobile-header">
 				<section class="title">
 					<a>Mpisto War 2018</a>
+				</section>
+				<section class="counters">
+									<div class="counter"><big>77</big> <span>Articles</span></div>
+									<div class="counter"><big>145</big> <span>Photos</span></div>
 				</section>
 				<section class="buttons">
 					<nav>
@@ -2025,15 +2044,24 @@ Checked = VisualEditor as default mode
 		<div class="store-cards">
 			<div class="fieldset store-theme-card">
 			<fieldset>
+			<div class="theme-A">
 			<legend>Theme A</legend>
 			<div style="color:rgb(23,23,23); color:rgb(var(--community-header-text)); background-color:blue; background-color:rgb(var(--community-header-bg)); padding:5px margin-bottom:10px;">Header Test</div>
 			<br>
 			<div style="color:black; color:var(--content-color); background-color:white; background-color:var(--dropdown-bg); border:1px solid #ccc; border:1px solid var(--content-border); padding:5px margin-bottom:10px;">Dropdown Test</div>
 			<br>
+			<div class="wds-button-groups">
 		   <div class="wds-button-group">
 			<button class="wds-button">Button Test</button>
 			<button class="wds-button wds-is-secondary">Button Test</button>
 			<button class="wds-button wds-is-text">Button Test</button>
+		   </div>
+		   <div class="wds-button-group">
+			<button class="wds-button wds-is-alternate">Button Test</button>
+			<button class="wds-button wds-is-secondary wds-is-alternate">Button Test</button>
+			<button class="wds-button wds-is-text wds-is-alternate">Button Test</button>
+		   </div>
+			</div>
 		   </div>
 			<div class="wds-floating-button-group">
 				<a class="wds-floating-button" onclick="HCa()" title="Apply themeA to all Wikis">
@@ -2041,7 +2069,7 @@ Checked = VisualEditor as default mode
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark" />
                   </svg>
 				</a>
-				<a class="wds-floating-button critical" title="Reset to Starterdata Wiki Default themeA">
+				<a class="wds-floating-button critical" onclick="ResetThemeA()" title="Reset to Starterdata Wiki Default themeA">
                   <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-undo" />
                   </svg>
@@ -2052,15 +2080,24 @@ Checked = VisualEditor as default mode
 		   
 			<div class="fieldset store-theme-card">
 			<fieldset>
+			<div class="theme-B">
 			<legend>Theme B</legend>
 			<div style="color:rgb(23,23,23); color:rgb(var(--community-header-text)); background-color:blue; background-color:rgb(var(--community-header-bg)); padding:5px margin-bottom:10px;">Header Test</div>
 			<br>
 			<div style="color:black; color:var(--content-color); background-color:white; background-color:var(--dropdown-bg); border:1px solid #ccc; border:1px solid var(--content-border); padding:5px margin-bottom:10px;">Dropdown Test</div>
 			<br>
+			<div class="wds-button-groups">
 		   <div class="wds-button-group">
 			<button class="wds-button">Button Test</button>
 			<button class="wds-button wds-is-secondary">Button Test</button>
 			<button class="wds-button wds-is-text">Button Test</button>
+		   </div>
+		   <div class="wds-button-group">
+			<button class="wds-button wds-is-alternate">Button Test</button>
+			<button class="wds-button wds-is-secondary wds-is-alternate">Button Test</button>
+			<button class="wds-button wds-is-text wds-is-alternate">Button Test</button>
+		   </div>
+			</div>
 		   </div>
 			<div class="wds-floating-button-group">
 				<a class="wds-floating-button" onclick="HCb()" title="Apply themeB to all Wikis">
@@ -2068,7 +2105,7 @@ Checked = VisualEditor as default mode
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark" />
                   </svg>
 				</a>
-				<a class="wds-floating-button critical" title="Reset to Starterdata Wiki Default themeB">
+				<a class="wds-floating-button critical" onclick="ResetThemeB()" title="Reset to Starterdata Wiki Default themeB">
                   <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-undo" />
                   </svg>
@@ -2079,15 +2116,24 @@ Checked = VisualEditor as default mode
 
 			<div class="fieldset store-theme-card">
 			<fieldset>
+			<div class="theme-C">
 			<legend>Theme C</legend>
 			<div style="color:rgb(23,23,23); color:rgb(var(--community-header-text)); background-color:blue; background-color:rgb(var(--community-header-bg)); padding:5px margin-bottom:10px;">Header Test</div>
 			<br>
 			<div style="color:black; color:var(--content-color); background-color:white; background-color:var(--dropdown-bg); border:1px solid #ccc; border:1px solid var(--content-border); padding:5px margin-bottom:10px;">Dropdown Test</div>
 			<br>
+			<div class="wds-button-groups">
 		   <div class="wds-button-group">
 			<button class="wds-button">Button Test</button>
 			<button class="wds-button wds-is-secondary">Button Test</button>
 			<button class="wds-button wds-is-text">Button Test</button>
+		   </div>
+		   <div class="wds-button-group">
+			<button class="wds-button wds-is-alternate">Button Test</button>
+			<button class="wds-button wds-is-secondary wds-is-alternate">Button Test</button>
+			<button class="wds-button wds-is-text wds-is-alternate">Button Test</button>
+		   </div>
+			</div>
 		   </div>
 			<div class="wds-floating-button-group">
 				<a class="wds-floating-button" onclick="HCc()" title="Apply themeC to all Wikis">
@@ -2095,7 +2141,7 @@ Checked = VisualEditor as default mode
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark" />
                   </svg>
 				</a>
-				<a class="wds-floating-button critical" title="Reset to Starterdata Wiki Default themeC">
+				<a class="wds-floating-button critical" onclick="ResetThemeC()" title="Reset to Starterdata Wiki Default themeC">
                   <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-undo" />
                   </svg>
@@ -2106,15 +2152,24 @@ Checked = VisualEditor as default mode
 
 			<div class="fieldset store-theme-card">
 			<fieldset>
+			<div class="theme-D">
 			<legend>Theme D</legend>
 			<div style="color:rgb(23,23,23); color:rgb(var(--community-header-text)); background-color:blue; background-color:rgb(var(--community-header-bg)); padding:5px margin-bottom:10px;">Header Test</div>
 			<br>
 			<div style="color:black; color:var(--content-color); background-color:white; background-color:var(--dropdown-bg); border:1px solid #ccc; border:1px solid var(--content-border); padding:5px margin-bottom:10px;">Dropdown Test</div>
 			<br>
+			<div class="wds-button-groups">
 		   <div class="wds-button-group">
 			<button class="wds-button">Button Test</button>
 			<button class="wds-button wds-is-secondary">Button Test</button>
 			<button class="wds-button wds-is-text">Button Test</button>
+		   </div>
+		   <div class="wds-button-group">
+			<button class="wds-button wds-is-alternate">Button Test</button>
+			<button class="wds-button wds-is-secondary wds-is-alternate">Button Test</button>
+			<button class="wds-button wds-is-text wds-is-alternate">Button Test</button>
+		   </div>
+			</div>
 		   </div>
 			<div class="wds-floating-button-group">
 				<a class="wds-floating-button" onclick="HCd()" title="Apply themeD to all Wikis">
@@ -2122,7 +2177,7 @@ Checked = VisualEditor as default mode
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark" />
                   </svg>
 				</a>
-				<a class="wds-floating-button critical" title="Reset to Starterdata Wiki Default themeD">
+				<a class="wds-floating-button critical" onclick="ResetThemeD()" title="Reset to Starterdata Wiki Default themeD">
                   <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-undo" />
                   </svg>

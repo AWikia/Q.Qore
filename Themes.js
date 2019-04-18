@@ -33,7 +33,7 @@ if (files[0].size > 1000000) {
 
 	if ($("html.theme-A").length) {
 		$("style.designer-style.theme-A").append(
-		'html.theme-A:not(.win10) {' +
+		'.theme-A:not(.win10) {' +
 		'--background-image:url("' + img.src + '")!important;' +
 		'}'
 		);	
@@ -41,7 +41,7 @@ if (files[0].size > 1000000) {
 
 	if ($("html.theme-B").length) {
 		$("style.designer-style.theme-B").append(
-		'html.theme-B:not(.win10) {' +
+		'.theme-B:not(.win10) {' +
 		'--background-image:url("' + img.src + '")!important;' +
 		'}'
 		);	
@@ -49,7 +49,7 @@ if (files[0].size > 1000000) {
 
 	if ($("html.theme-C").length) {
 		$("style.designer-style.theme-C").append(
-		'html.theme-B:not(.win10) {' +
+		'.theme-B:not(.win10) {' +
 		'--background-image:url("' + img.src + '")!important;' +
 		'}'
 		);	
@@ -57,7 +57,7 @@ if (files[0].size > 1000000) {
 
 	if ($("html.theme-D").length) {
 		$("style.designer-style.theme-D").append(
-		'html.theme-D:not(.win10) {' +
+		'.theme-D:not(.win10) {' +
 		'--background-image:url("' + img.src + '")!important;' +
 		'}'
 		);	
@@ -136,7 +136,7 @@ var headercolorfinal = chroma($('input[type="color"][name="header"]').val()).get
 
 	if ($("html.theme-A").length) {
 		$("style.designer-style.theme-A").append(
-		'html.theme-A:not(.win10) {' +
+		'.theme-A:not(.win10) {' +
 		'--background-color:' + $('input[type="color"][name="bg"]').val() + '!important;' +
 		'--link-color:' + linkcolor1final + '!important;' +
 		'--content-bg:' + $('input[type="color"][name="contentbg"]').val() + '!important;' +
@@ -150,7 +150,7 @@ var headercolorfinal = chroma($('input[type="color"][name="header"]').val()).get
 
 	if ($("html.theme-B").length) {
 		$("style.designer-style.theme-B").append(
-		'html.theme-B:not(.win10) {' +
+		'.theme-B:not(.win10) {' +
 		'--background-color:' + $('input[type="color"][name="bg"]').val() + '!important;' +
 		'--link-color:' + linkcolor1final + '!important;' +
 		'--content-bg:' + $('input[type="color"][name="contentbg"]').val() + '!important;' +
@@ -164,7 +164,7 @@ var headercolorfinal = chroma($('input[type="color"][name="header"]').val()).get
 
 	if ($("html.theme-C").length) {
 		$("style.designer-style.theme-C").append(
-		'html.theme-C:not(.win10) {' +
+		'.theme-C:not(.win10) {' +
 		'--background-color:' + $('input[type="color"][name="bg"]').val() + '!important;' +
 		'--link-color:' + linkcolor1final + '!important;' +
 		'--content-bg:' + $('input[type="color"][name="contentbg"]').val() + '!important;' +
@@ -178,7 +178,7 @@ var headercolorfinal = chroma($('input[type="color"][name="header"]').val()).get
 
 	if ($("html.theme-D").length) {
 		$("style.designer-style.theme-D").append(
-		'html.theme-D:not(.win10) {' +
+		'.theme-D:not(.win10) {' +
 		'--background-color:' + $('input[type="color"][name="bg"]').val() + '!important;' +
 		'--link-color:' + linkcolor1final + '!important;' +
 		'--content-bg:' + $('input[type="color"][name="contentbg"]').val() + '!important;' +
@@ -214,6 +214,37 @@ if (confirm('Are you sure you want to reset this theme to the pre-set ones? This
 	ColorUpdate();
 }
 }
+
+
+function ResetThemeA() {
+if (confirm('Are you sure you want to reset this theme to the pre-set ones? This action cannot be undone') === true) {
+		$("style.designer-style.theme-A").text('/* This CSS left intentionally blank */');	
+	ColorUpdate();
+}
+}
+
+
+function ResetThemeB() {
+if (confirm('Are you sure you want to reset this theme to the pre-set ones? This action cannot be undone') === true) {
+		$("style.designer-style.theme-B").text('/* This CSS left intentionally blank */');	
+	ColorUpdate();
+}
+}
+
+function ResetThemeC() {
+if (confirm('Are you sure you want to reset this theme to the pre-set ones? This action cannot be undone') === true) {
+		$("style.designer-style.theme-C").text('/* This CSS left intentionally blank */');	
+	ColorUpdate();
+}
+}
+
+function ResetThemeD() {
+if (confirm('Are you sure you want to reset this theme to the pre-set ones? This action cannot be undone') === true) {
+		$("style.designer-style.theme-D").text('/* This CSS left intentionally blank */');	
+	ColorUpdate();
+}
+}
+
 
 
 function ResetThemes() {
@@ -350,18 +381,10 @@ function HCa() {
     var x = document.querySelector('html');
     if (x.className.indexOf("theme-A") == -1) {
         x.className += " theme-A";
-        if (isOptions) {
-		document.getElementById("302").checked = true;
-		}
     }
         x.className = x.className.replace(" theme-B", "");
         x.className = x.className.replace(" theme-C", "");
         x.className = x.className.replace(" theme-D", "");
-        if (isOptions) {
-		document.getElementById("303").checked = false;
-		document.getElementById("304").checked = false;
-		document.getElementById("305").checked = false;
-		}
 		ColorUpdate();
 }
 
@@ -369,18 +392,10 @@ function HCb() {
     var x = document.querySelector('html');
     if (x.className.indexOf("theme-B") == -1) {
         x.className += " theme-B";
-        if (isOptions) {
-		document.getElementById("303").checked = true;
 		}
-    }
         x.className = x.className.replace(" theme-A", "");
         x.className = x.className.replace(" theme-C", "");
         x.className = x.className.replace(" theme-D", "");
-        if (isOptions) {
-		document.getElementById("302").checked = false;
-		document.getElementById("304").checked = false;
-		document.getElementById("305").checked = false;
-		}
 		ColorUpdate();
 }
 
@@ -388,18 +403,10 @@ function HCc() {
     var x = document.querySelector('html');
     if (x.className.indexOf("theme-C") == -1) {
         x.className += " theme-C";
-        if (isOptions) {
-		document.getElementById("304").checked = true;
-		}
     }
         x.className = x.className.replace(" theme-A", "");
         x.className = x.className.replace(" theme-B", "");
         x.className = x.className.replace(" theme-D", "");
-        if (isOptions) {
-		document.getElementById("302").checked = false;
-		document.getElementById("303").checked = false;
-		document.getElementById("305").checked = false;
-	}
 		ColorUpdate();
 }
 
@@ -407,18 +414,10 @@ function HCd() {
     var x = document.querySelector('html');
     if (x.className.indexOf("theme-D") == -1) {
         x.className += " theme-D";
-        if (isOptions) {
-		document.getElementById("305").checked = true;
-		}
     }
         x.className = x.className.replace(" theme-A", "");
         x.className = x.className.replace(" theme-B", "");
         x.className = x.className.replace(" theme-C", "");
-        if (isOptions) {
-		document.getElementById("302").checked = false;
-		document.getElementById("303").checked = false;
-		document.getElementById("304").checked = false;
-		}
 		ColorUpdate();
 }
 

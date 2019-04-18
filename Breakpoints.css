@@ -86,7 +86,7 @@ column-count:1!important;
 	margin:0;
 }
 
-.mpisto-gnav .active-search .wds-dropdown:not(:nth-child(1)) {
+.mpisto-gnav .active-search .wds-dropdown:not(:nth-child(1)), .mpisto-gnav .notifications-dropdown {
 	display:none!important;
 }
 
