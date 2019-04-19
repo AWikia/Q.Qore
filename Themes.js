@@ -128,6 +128,51 @@ if (files[0].size > 1000000) {
 }
 
 
+function RandomColor1() {
+$('input[type="color"][name="bg"]').val(chroma.random());
+UpdateValue()
+}
+
+function RandomColor2() {
+$('input[type="color"][name="header"]').val(chroma.random());
+UpdateValue()
+}
+
+function RandomColor3() {
+$('input[type="color"][name="contentbg"]').val(chroma.random());
+UpdateValue()
+}
+
+function RandomColor4() {
+$('input[type="color"][name="contentcolor"]').val(chroma.random());
+UpdateValue()
+}
+
+function RandomColor5() {
+$('input[type="color"][name="border"]').val(chroma.random());
+UpdateValue()
+}
+
+function RandomColor6() {
+$('input[type="color"][name="linkcolor"]').val(chroma.random());
+UpdateValue()
+}
+
+function RandomColor7() {
+$('input[type="color"][name="buttoncolor"]').val(chroma.random());
+UpdateValue()
+}
+
+function RandomColor() {
+	RandomColor1();
+	RandomColor2();
+	RandomColor3();
+	RandomColor4();
+	RandomColor5();
+	RandomColor6();
+	RandomColor7();
+}
+
 
 function UpdateValue() {
 var linkcolor1final = chroma($('input[type="color"][name="linkcolor"]').val()).get('rgb.r') + ',' + chroma($('input[type="color"][name="linkcolor"]').val()).get('rgb.g') + ',' + chroma($('input[type="color"][name="linkcolor"]').val()).get('rgb.b'); 

@@ -2098,6 +2098,11 @@ background:none;
 	color:var(--content-border);
 }
 
+.wds-floating-button.no-flex {
+	display:inline-flex;
+	vertical-align:middle;
+}
+
 /* Dropdowns */
 .wds-dropdown{
 display:inline-flex;
@@ -6227,8 +6232,8 @@ vertical-align:middle;
 .mpisto-option-way .store-cards {
 	display:flex;
 	flex-wrap:wrap;
-	align-content:space-between;
-	justify-content:space-between;
+	align-content:space-around;
+	justify-content:space-around;
 }
 
 .mpisto-option-way .store-cards .store-theme-card {
@@ -6258,10 +6263,6 @@ vertical-align:middle;
 	vertical-align:middle;
 	text-transform:uppercase;
 	position:relative;
-}
-
-.mpisto-option-way .store-cards .store-card:last-child {
-	flex:1;
 }
 
 
