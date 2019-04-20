@@ -174,6 +174,42 @@ function RandomColor() {
 }
 
 
+function PickColor1() {
+$('input[type="color"][name="bg"]').val( chroma(prompt("Body Background Color", $('input[type="color"][name="bg"]').val())) );
+UpdateValue()
+}
+
+function PickColor2() {
+$('input[type="color"][name="header"]').val( chroma(prompt("Header Background Color", $('input[type="color"][name="header"]').val())) );
+UpdateValue()
+}
+
+function PickColor3() {
+$('input[type="color"][name="contentbg"]').val( chroma(prompt("Page Background Color", $('input[type="color"][name="contentbg"]').val())) );
+UpdateValue()
+}
+
+function PickColor4() {
+$('input[type="color"][name="contentcolor"]').val( chroma(prompt("Page Text Color", $('input[type="color"][name="contentcolor"]').val())) );
+UpdateValue()
+}
+
+function PickColor5() {
+$('input[type="color"][name="border"]').val( chroma(prompt("Page Border Color", $('input[type="color"][name="border"]').val())) );
+UpdateValue()
+}
+
+function PickColor6() {
+$('input[type="color"][name="linkcolor"]').val( chroma(prompt("Page Link Color", $('input[type="color"][name="linkcolor"]').val())) );
+UpdateValue()
+}
+
+function PickColor7() {
+$('input[type="color"][name="buttoncolor"]').val( chroma(prompt("Page Button Color", $('input[type="color"][name="buttoncolor"]').val())) );
+UpdateValue()
+}
+
+
 function UpdateValue() {
 var linkcolor1final = chroma($('input[type="color"][name="linkcolor"]').val()).get('rgb.r') + ',' + chroma($('input[type="color"][name="linkcolor"]').val()).get('rgb.g') + ',' + chroma($('input[type="color"][name="linkcolor"]').val()).get('rgb.b'); 
 var headercolorfinal = chroma($('input[type="color"][name="header"]').val()).get('rgb.r') + ',' + chroma($('input[type="color"][name="header"]').val()).get('rgb.g') + ',' + chroma($('input[type="color"][name="header"]').val()).get('rgb.b'); 

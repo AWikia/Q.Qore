@@ -636,10 +636,10 @@ function HCg1() {
 				  </div>
 				  <div class="wds-dropdown__content wds-is-not-scrollable">
 					<ul class="wds-list wds-is-linked">
-					  <li><a><span style="font-weight:bold">Bold</span></a></li>
-					  <li><a><span style="font-style:italic">Italics</span></a></li>
-					  <li><a><span style="text-decoration:underline">Underline</span></a></li>
-					  <li><a><span style="text-decoration:line-through">Striked out</span></a></li>
+					  <li><a onclick="BoldText()"><span style="font-weight:bold">Bold</span></a></li>
+					  <li><a><span onclick="ItalText()" style="font-style:italic">Italics</span></a></li>
+					  <li><a><span onclick="UnderlText()" style="text-decoration:underline">Underline</span></a></li>
+					  <li><a><span onclick="LinedText()" style="text-decoration:line-through">Striked out</span></a></li>
 					  <li class="wds-dropdown-level-2">
 						<a class="wds-dropdown-level-2__toggle"><span>Shadow</span>                   
 					  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown-chevron" viewBox="0 0 12 12">
@@ -648,14 +648,14 @@ function HCg1() {
 					  </a>
 					  <div class="wds-dropdown-level-2__content">
 						<ul class="wds-list wds-is-linked">
-						  <li><a><shadow class="small">Small</shadow></a></li>
-						  <li><a><shadow class="small blur">Small/Blurred</shadow></a></li>
-						  <li><a><shadow>Standard</shadow></a></li>
-						  <li><a><shadow class="blur">Standard/Blurred</shadow></a></li>
-						  <li><a><shadow class="large">High</shadow></a></li>
-						  <li><a><shadow class="large blur">High/Blurred</shadow></a></li>
-						  <li><a><shadow class="extreme">Enormous</shadow></a></li>
-						  <li><a><shadow class="extreme blur">Enormous/Blurred</shadow></a></li>
+						  <li><a onclick="ShadowOI()"><shadow class="small">Small</shadow></a></li>
+						  <li><a onclick="ShadowBOI()"><shadow class="small blur">Small/Blurred</shadow></a></li>
+						  <li><a onclick="Shadow()"><shadow>Standard</shadow></a></li>
+						  <li><a onclick="ShadowB()"><shadow class="blur">Standard/Blurred</shadow></a></li>
+						  <li><a onclick="ShadowI()"><shadow class="large">High</shadow></a></li>
+						  <li><a onclick="ShadowBI()"><shadow class="large blur">High/Blurred</shadow></a></li>
+						  <li><a onclick="ShadowII()"><shadow class="extreme">Enormous</shadow></a></li>
+						  <li><a onclick="ShadowBII()"><shadow class="extreme blur">Enormous/Blurred</shadow></a></li>
 						</ul>
 					  </div>  
 					  </li>
@@ -667,14 +667,14 @@ function HCg1() {
 					  </a>
 					  <div class="wds-dropdown-level-2__content">
 						<ul class="wds-list wds-is-linked">
-						  <li><a><stroke class="small">Small</stroke></a></li>
-						  <li><a><stroke class="small blur">Small/Blurred</stroke></a></li>
-						  <li><a><stroke>Standard</stroke></a></li>
-						  <li><a><stroke class="blur">Standard/Blurred</stroke></a></li>
-						  <li><a><stroke class="large">High</stroke></a></li>
-						  <li><a><stroke class="large blur">High/Blurred</stroke></a></li>
-						  <li><a><stroke class="extreme">Enormous</stroke></a></li>
-						  <li><a><stroke class="extreme blur">Enormous/Blurred</stroke></a></li>
+						  <li><a onclick="StrokeOI()"><stroke class="small">Small</stroke></a></li>
+						  <li><a onclick="StrokeBOI()"><stroke class="small blur">Small/Blurred</stroke></a></li>
+						  <li><a onclick="Stroke()"><stroke>Standard</stroke></a></li>
+						  <li><a onclick="StrokeB()"><stroke class="blur">Standard/Blurred</stroke></a></li>
+						  <li><a onclick="StrokeI()"><stroke class="large">High</stroke></a></li>
+						  <li><a onclick="StrokeBI()"><stroke class="large blur">High/Blurred</stroke></a></li>
+						  <li><a onclick="StrokeII()"><stroke class="extreme">Enormous</stroke></a></li>
+						  <li><a onclick="StrokeBII()"><stroke class="extreme blur">Enormous/Blurred</stroke></a></li>
 						</ul>
 					  </div>  
 					  </li>
@@ -713,11 +713,11 @@ function HCg1() {
 					  </a>
 					  <div class="wds-dropdown-level-2__content">
 						<ul class="wds-list wds-is-linked">
-						  <li><a><span>Div</span></a></li>
-						  <li><a><span>Section</span></a></li>
-						  <li><a><span>Article</span></a></li>
-						  <li><a><span>Header</span></a></li>
-						  <li><a><span>Nav</span></a></li>
+						  <li><a onclick="DivAdd()"><span>Div</span></a></li>
+						  <li><a onclick="DivAdd1()"><span>Section</span></a></li>
+						  <li><a onclick="DivAdd2()"><span>Article</span></a></li>
+						  <li><a onclick="DivAdd3()"><span>Header</span></a></li>
+						  <li><a onclick="DivAdd4()"><span>Nav</span></a></li>
 						</ul>
 					  </div>  
 					  </li>
@@ -729,11 +729,11 @@ function HCg1() {
 					  </a>
 					  <div class="wds-dropdown-level-2__content">
 						<ul class="wds-list wds-is-linked">
-						  <li><a><span>Paragraph</span></a></li>
-						  <li><a><span>Span</span></a></li>
-						  <li><a><span>Shadow</span></a></li>
-						  <li><a><span>Stroke</span></a></li>
-						  <li><a><span>Mark</span></a></li>
+						  <li><a onclick="InlineAdd()"><span>Paragraph</span></a></li>
+						  <li><a onclick="InlineAdd1()"><span>Span</span></a></li>
+						  <li><a onclick="Shadow()"><span>Shadow</span></a></li>
+						  <li><a onclick="Stroke()"><span>Stroke</span></a></li>
+						  <li><a onclick="InlineAdd2()"><span>Mark</span></a></li>
 						</ul>
 					  </div>  
 					  </li>
@@ -745,12 +745,12 @@ function HCg1() {
 					  </a>
 					  <div class="wds-dropdown-level-2__content">
 						<ul class="wds-list wds-is-linked">
-						  <li><a><span>Heading 1</span></a></li>
-						  <li><a><span>Heading 2</span></a></li>
-						  <li><a><span>Heading 3</span></a></li>
-						  <li><a><span>Heading 4</span></a></li>
-						  <li><a><span>Heading 5</span></a></li>
-						  <li><a><span>Heading 6</span></a></li>
+						  <li><a onclick="Heading1()"><span>Heading 1</span></a></li>
+						  <li><a onclick="Heading2()"><span>Heading 2</span></a></li>
+						  <li><a onclick="Heading3()"><span>Heading 3</span></a></li>
+						  <li><a onclick="Heading4()"><span>Heading 4</span></a></li>
+						  <li><a onclick="Heading5()"><span>Heading 5</span></a></li>
+						  <li><a onclick="Heading6()"><span>Heading 6</span></a></li>
 						</ul>
 					  </div>  
 					  </li>
@@ -780,8 +780,8 @@ function HCg1() {
 					  </a>
 					  <div class="wds-dropdown-level-2__content">
 						<ul class="wds-list wds-is-linked">
-						  <li><a><span>Preformated</span></a></li>
-						  <li><a><span>Code</span></a></li>
+						  <li><a onclick="PreCode()"><span>Preformated</span></a></li>
+						  <li><a onclick="CodeAdd()"><span>Code</span></a></li>
 						</ul>
 					  </div>  
 					  </li>
