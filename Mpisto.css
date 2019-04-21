@@ -7499,7 +7499,7 @@ cursor:not-allowed!important;
   cursor:default;
 }
 
-.edge a:hover, .edge .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), .edge .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), .edge a.wds-button, .edge button.wds-button, .edge .editor-header .wordmark, .edge .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, .edge .wds-banner-notification__close, .edge a label, .edge a input[type="checkbox"], .edge a input[type="radio"], .edge .wds-floating-button:not([disabled]), .edge .wds-floating-button:not(.wds-is-disabled), .edge .wds-dropdown .wds-dropdown__toggle, {
+.edge a:hover, .edge .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), .edge .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), .edge a.wds-button, .edge button.wds-button, .edge .editor-header .wordmark, .edge .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, .edge .wds-banner-notification__close, .edge a label, .edge a input[type="checkbox"], .edge a input[type="radio"], .edge .wds-floating-button:not([disabled]), .edge .wds-floating-button:not(.wds-is-disabled), .edge .wds-dropdown .wds-dropdown__toggle {
 cursor:pointer;
 }
 
