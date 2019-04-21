@@ -697,7 +697,7 @@ function HCg1() {
 				</svg> <span>Signature</span>
 				  </a>
 				<div class="wds-dropdown">
-				  <div class="wds-button wds-is-squished" title="Styling">
+				  <div class="wds-button wds-is-squished wds-dropdown__toggle" title="Styling">
 							  <span>Visual Styles</span>            <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" viewBox="0 0 12 12">
 	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" /> 
 	  </svg>
@@ -789,7 +789,7 @@ function HCg1() {
 				  </div>
 				</div>
 				  <div class="wds-dropdown">
-				  <div class="wds-button wds-is-squished" title="Spelling">
+				  <div class="wds-button wds-is-squished wds-dropdown__toggle" title="Spelling">
 							  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small" viewBox="0 0 24 24">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-document" />
 	 </svg> <span>Spellcheck</span> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" viewBox="0 0 12 12">
@@ -1273,7 +1273,7 @@ function HCg1() {
 	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-image" />
 	</svg><span>Image</span></a>
 					  <div class="wds-dropdown">
-						<div class="wds-button"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">	
+						<div class="wds-button wds-dropdown__toggle"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">	
 	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-video-camera" /> <div><span>Video</span> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron" viewBox="0 0 12 12">
 	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" /> 
 	  </svg> </div> </div>
@@ -1350,17 +1350,19 @@ function HCg1() {
 					  </svg> </a> </h2>
 				  <ul>
 					<li>
+					<div class="items">
 						<div class="item">
-							<span>Main Page</span><a title="Edit name"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-pencil" /</svg></a><a title="Remove category"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" /</svg></a>
+							<span contenteditable>Main Page</span> <a onclick="CategoryRemove()" title="Remove category"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" /</svg></a>
 						</div>
 						<div class="item">
-							<span>Explore</span><a title="Edit name"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-pencil" /</svg></a><a title="Remove category"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" /</svg></a>
+							<span contenteditable>Explore</span> <a onclick="CategoryRemove()" title="Remove category"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" /</svg></a>
 						</div>
 						<div class="item">
-							<span>Community Pages</span><a title="Edit name"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-pencil" /</svg></a><a title="Remove category"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" /</svg></a>
+							<span contenteditable>Community Pages</span> <a onclick="CategoryRemove()" title="Remove category"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" /</svg></a>
+						</div>
 						</div>
 						<div class="category-add">
-							<input class="mpisto-input" placeholder="Add new category..."></input> <button class="wds-button wds-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-plus" /</svg> <span>Add</span></button>
+							<input class="mpisto-input" placeholder="Add new category..."></input> <button onclick="CategoryAdd()" class="wds-button wds-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-plus" /</svg> <span>Add</span></button>
 						</div>
 					</li>
 				   </ul>

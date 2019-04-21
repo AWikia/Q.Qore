@@ -352,3 +352,35 @@ var x = $('.mpisto-editors-content .mpisto-article.source.sourceonly').val();
 $('.mpisto-editors-content .mpisto-article.source.sourceonly').val( x + '<code>Code</code>' );
 UpdateVisual();
 }
+
+
+function CategoryAdd() {
+	$('.category-module.editor-module ul li .items').append(
+		'<div class="item">' +
+		'<span contenteditable>' + $('.category-module.editor-module .category-add input').val() + '</span>' + 
+		'<a onclick="CategoryRemove()" title="Remove category">' +
+		'<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">' +
+		'<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" /></svg>' +
+		'</a>'
+	);
+}
+
+function CategoryRemove() {
+		$(' .category-module.editor-module ul li .items .item')
+				.click(function() {
+						var $this = $(this);
+						if (($this.hasClass('open')) === false) {
+							console.log('Click on the delete button again to remove the category')
+						}
+						$this.addClass('open');
+			});
+						CategoryPermRemove();
+}
+
+function CategoryPermRemove() {
+			$(' .category-module.editor-module ul li .items .item.open')
+				.click(function() {
+						var $this = $(this);
+						$this.remove();
+					});
+			}

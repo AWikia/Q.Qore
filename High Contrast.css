@@ -606,7 +606,7 @@ color:inherit;
 	background-image:none;
 }
 
-.contrast .mpisto-options-content, .contrast .mpisto-editors-content {
+.contrast .mpisto-options-content {
 	border:1px solid;
 	border-top:0;
 }

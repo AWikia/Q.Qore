@@ -11,7 +11,7 @@ if (navigator.userAgent.match("Linux")) {
 document.getElementById("Handler").className += " xubuntu"
 }
 
-/*if (navigator.userAgent.match("Trident")) {
+/* (navigator.userAgent.match("Trident")) {
 document.getElementById("Handler").className += " explorer"
 }
 */
@@ -27,6 +27,40 @@ document.getElementById("Handler").className += " phone"
 if ((navigator.userAgent.match("Trident")) || (navigator.userAgent.match("Presto")) || (navigator.userAgent.match("Tessera")) || (navigator.userAgent.match("MINERVOULA")) || (navigator.userAgent.match("Silk")) || (navigator.userAgent.match("PLAYSTATION 3")) || (navigator.userAgent.match("Nintendo DSi")) || (navigator.userAgent.match("Nintendo 3DS")) || (navigator.userAgent.match("PLAYSTATION PORTABLE")) ) {
 window.location.replace("https://hm100.github.io/UnsupportedBanners/Mpisto.html");window.location.href = "https://hm100.github.io/UnsupportedBanners/Mpisto.html";
 }
+
+
+//$(' .wds-dropdown__toggle').attr('onclick', 'DropdownSwitch()')
+
+function DropdownSwitch() {
+		$(' .wds-dropdown.wds-is-active')
+				.click(function() {
+					var $this = $(this);
+					if ($this.hasClass('wds-is-active')) {
+						$this.removeClass('wds-is-active');
+							$(' .wds-dropdown.wds-is-active').click();
+						return;
+					}
+				});
+}
+
+(function () {
+
+
+
+$(' .wds-dropdown')
+        .click(function(e) {
+            var $this = $(this);
+			if ($this.hasClass('wds-is-active')) {
+				return;
+			}
+			e.preventDefault();
+			$this.addClass('wds-is-active');
+        }).mouseleave(function() {
+            $(this).removeClass('wds-is-active');
+        });
+
+})();
+
 
 window.MW18newnavblock=false;
 (function () {
