@@ -19,7 +19,7 @@ Source Sans Pro/Ubuntu = Rest
 Jua (Formerly Nanum Gothic) = Korean
 M PLUS Rounded 1c = Japana and Evraika
 Mitr = Thailandish
-Mada = Arabic
+Mada = Arabich
 NTR = Telegu
 Pavanam = Tamil
 Jura = Greek and Kyrillic
@@ -2075,6 +2075,10 @@ background:none;
 }
 .wds-floating-button-group.wds-is-vertical > .wds-floating-button:not(:first-child), .wds-floating-button-group.wds-is-vertical > *:not(:first-child) .wds-floating-button {
   margin-top: 8px;
+}
+
+.wds-floating-button .wds-icon {
+	pointer-events:none;
 }
 
 .main .wds-floating-button {
