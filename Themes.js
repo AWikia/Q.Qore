@@ -345,7 +345,7 @@ function ColorUpdate() {
 /* Set Vars */
 var button_color = getComputedStyle(document.querySelector('html')).getPropertyValue("--button-color");
 
-if ((chroma(button_color).get('hsi.i')) > 0.49) {
+if ((chroma(button_color).get('lab.l')) > 49) {
 var buttoncolor1 = chroma(button_color).brighten(-0.6);
 var buttoncolor2 = 'black';
 document.querySelector('body').style.setProperty("--button-color-blend-light", button_color);
@@ -367,7 +367,7 @@ $('input[type="color"][name="buttoncolor"]').val(chroma(button_color));
 /* Set Vars */
 var header_color =	'rgb(' + getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg") + ');';
 
-if ((chroma(header_color).get('hsi.i')) > 0.49) {
+if ((chroma(header_color).get('lab.l')) > 49) {
 var headercolor1 = chroma(header_color).brighten(-0.6);
 var headercolor2 = '0,0,0';
 var headercolor1final = chroma(headercolor1).get('rgb.r') + ',' + chroma(headercolor1).get('rgb.g') + ',' + chroma(headercolor1).get('rgb.b'); 
@@ -390,7 +390,7 @@ $('input[type="color"][name="header"]').val(chroma(header_color));
 /* Set Vars */
 var link_color = 'rgb(' + getComputedStyle(document.querySelector('html')).getPropertyValue("--link-color") + ');';
 
-if ((chroma(link_color).get('hsi.i')) > 0.49) {
+if ((chroma(link_color).get('lab.l')) > 49) {
 var linkcolor1 = chroma(link_color).brighten(-0.6);
 var linkcolor2 = 'black';
 var linkcolor1final = chroma(linkcolor1).get('rgb.r') + ',' + chroma(linkcolor1).get('rgb.g') + ',' + chroma(linkcolor1).get('rgb.b'); 
@@ -414,7 +414,7 @@ $('input[type="color"][name="linkcolor"]').val(chroma(link_color));
 /* Set Vars */
 var border_color =	getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border");
 
-if ((chroma(border_color).get('hsi.i')) > 0.49) {
+if ((chroma(border_color).get('lab.l')) > 49) {
 var bordercolor1 = chroma(border_color).brighten(-0.6);
 var bordercolor2 = 'black';
 document.querySelector('body').style.setProperty("--content-border-blend-light", border_color);
@@ -437,9 +437,9 @@ var content_color =	getComputedStyle(document.querySelector('html')).getProperty
 var content_text =	getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color");
 var body_bg =	getComputedStyle(document.querySelector('html')).getPropertyValue("--background-color");
 
-if ((chroma(content_color).get('hsi.i')) > 0.89) {
+if ((chroma(content_color).get('lab.l')) > 89) {
 	var dropdowncolor = 'white';
-} else if ((chroma(content_color).get('hsi.i')) > 0.49) {
+} else if ((chroma(content_color).get('lab.l')) > 49) {
 var dropdowncolor = chroma.mix(content_color, 'black', 0.1);
 } else {
 var dropdowncolor = chroma.mix(content_color, 'white', 0.1);

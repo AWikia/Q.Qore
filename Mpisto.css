@@ -7445,11 +7445,11 @@ cursor:url("OSX/banned.cur"), not-allowed!important;
   cursor:url("OSX/text.cur"), text;
 }
 
-.osx .wds-dropdown .link, .osx .wds-button, .osx .wds-button:disabled, .osx .wds-dropdown__toggle, .osx .wds-is-disabled, .osx .wds-community-header__local-navigation a[href="#"], .osx .wds-tabs__tab, .osx label {
+.osx .wds-dropdown .link, .osx .wds-button, .osx .wds-button:disabled, .osx .wds-is-disabled, .osx .wds-community-header__local-navigation a[href="#"], .osx .wds-tabs__tab, .osx label {
   cursor:url("OSX/default.cur"), default;
 }
 
-.osx a, .osx a:hover, .osx .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), .osx .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), .osx a.wds-button, .osx button.wds-button, .osx .editor-header .wordmark, .osx .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, .osx .wds-banner-notification__close, .osx a label, .osx a input[type="checkbox"], .osx a input[type="radio"], .osx .wds-floating-button:not([disabled]), .osx .wds-floating-button:not(.wds-is-disabled) {
+.osx a, .osx a:hover, .osx .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), .osx .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), .osx a.wds-button, .osx button.wds-button, .osx .editor-header .wordmark, .osx .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, .osx .wds-banner-notification__close, .osx a label, .osx a input[type="checkbox"], .osx a input[type="radio"], .osx .wds-floating-button:not([disabled]), .osx .wds-floating-button:not(.wds-is-disabled), .osx .wds-dropdown .wds-dropdown__toggle {
 cursor:url("OSX/hand.cur"), pointer;
 }
 
@@ -7470,11 +7470,11 @@ cursor:url("Lenux/banned.cur"), not-allowed!important;
   cursor:url("Lenux/text.cur"), text;
 }
 
-.xubuntu .wds-dropdown .link, .xubuntu .wds-button, .xubuntu .wds-button:disabled, .xubuntu .wds-dropdown__toggle, .xubuntu .wds-is-disabled, .xubuntu .wds-community-header__local-navigation a[href="#"], .xubuntu .wds-tabs__tab, .xubuntu label {
+.xubuntu .wds-dropdown .link, .xubuntu .wds-button, .xubuntu .wds-button:disabled, .xubuntu .wds-is-disabled, .xubuntu .wds-community-header__local-navigation a[href="#"], .xubuntu .wds-tabs__tab, .xubuntu label {
   cursor:url("Lenux/default.cur"), default;
 }
 
-.xubuntu a,.xubuntu a:hover, .xubuntu .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), .xubuntu .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), .xubuntu a.wds-button, .xubuntu button.wds-button, .xubuntu .editor-header .wordmark, .xubuntu .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, .xubuntu .wds-banner-notification__close, .xubuntu a label, .xubuntu a input[type="checkbox"], .xubuntu a input[type="radio"], .xubuntu .wds-floating-button:not([disabled]), .xubuntu .wds-floating-button:not(.wds-is-disabled) {
+.xubuntu a,.xubuntu a:hover, .xubuntu .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), .xubuntu .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), .xubuntu a.wds-button, .xubuntu button.wds-button, .xubuntu .editor-header .wordmark, .xubuntu .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, .xubuntu .wds-banner-notification__close, .xubuntu a label, .xubuntu a input[type="checkbox"], .xubuntu a input[type="radio"], .xubuntu .wds-floating-button:not([disabled]), .xubuntu .wds-floating-button:not(.wds-is-disabled), .xubuntu .wds-dropdown .wds-dropdown__toggle {
 cursor:url("Lenux/hand.cur"), pointer;
 }
 
@@ -7495,11 +7495,11 @@ cursor:not-allowed!important;
   cursor:text;
 }
 
-.edge .wds-dropdown .link, .edge .wds-button, .edge .wds-button:disabled, .edge .wds-dropdown__toggle, .edge .wds-is-disabled, .edge .wds-community-header__local-navigation a[href="#"], .edge .wds-tabs__tab {
+.edge .wds-dropdown .link, .edge .wds-button, .edge .wds-button:disabled, .edge .wds-is-disabled, .edge .wds-community-header__local-navigation a[href="#"], .edge .wds-tabs__tab {
   cursor:default;
 }
 
-.edge a:hover, .edge .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), .edge .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), .edge a.wds-button, .edge button.wds-button, .edge .editor-header .wordmark, .edge .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, .edge .wds-banner-notification__close, .edge a label, .edge a input[type="checkbox"], .edge a input[type="radio"], .edge .wds-floating-button:not([disabled]), .edge .wds-floating-button:not(.wds-is-disabled) {
+.edge a:hover, .edge .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), .edge .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), .edge a.wds-button, .edge button.wds-button, .edge .editor-header .wordmark, .edge .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, .edge .wds-banner-notification__close, .edge a label, .edge a input[type="checkbox"], .edge a input[type="radio"], .edge .wds-floating-button:not([disabled]), .edge .wds-floating-button:not(.wds-is-disabled), .edge .wds-dropdown .wds-dropdown__toggle, {
 cursor:pointer;
 }
 
