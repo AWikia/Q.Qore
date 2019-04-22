@@ -1067,7 +1067,19 @@ font-family:"Source Serif Pro", "Song Myung",  "Noto Serif JP", "David Libre", "
 		opacity:1;
 		display:inline;
 	}
-	.mpisto-global-navigation .link:hover, .mpisto-global-navigation .wds-dropdown.wds-is-active .link {
+
+	.mpisto-global-navigation .link:hover {
+	color:#ccc;
+	color:var(--content-border);
+	background-color:transparent;
+	}
+
+	.mpisto-global-navigation .link:hover *:not([filter]){
+		filter:drop-shadow(0 0 2px #ccc);
+		filter:drop-shadow(0 0 2px var(--content-border));
+	}
+
+	.mpisto-global-navigation .link:active, .mpisto-global-navigation .link:focus, .mpisto-global-navigation .wds-dropdown.wds-is-active .link {
 /*		background-color:#03a1ab;
 		background-color:var(--button-color-dark);
 */
@@ -2635,7 +2647,7 @@ border-left-color:rgba(var(--community-header-text),0.8);
 		color:rgba(var(--community-header-text), 0.75);
 	}
 
-	.mpisto-header-container .link:hover *:not([filter]), .mpisto-header-container .wds-dropdown.wds-is-active .link *:not([filter]), .mpisto-header-container .link.active *:not([filter]) {
+	.mpisto-header-container .link:hover *:not([filter]), .mpisto-header-container .link.active *:not([filter]) {
 		filter:drop-shadow(0 0 2px rgb(25,25,255));
 		filter:drop-shadow(0 0 2px rgb(var(--community-header-dark)));
 	}

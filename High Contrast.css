@@ -269,7 +269,7 @@ background-image:linear-gradient(to left,rgba(255,255,255, 0) 200px,rgb(var(--co
 	transition-property:background-color, color, border-color;
 }
 
-.contrast .mpisto-header-container .link:hover, .contrast .mpisto-header-container .wds-dropdown:hover .link {
+.contrast .mpisto-header-container .link:hover, .contrast .mpisto-header-container .wds-dropdown.wds-is-active .link {
 	-webkit-animation:none;
 	animation:none;
 	color:var(--button-color-text);
@@ -326,7 +326,7 @@ box-shadow:0 4px 0 6px rgba(0,0,0,.4), 0 4px 0 6px rgba(255,255,255,0.4)!importa
 display:none!important;
 }
 
-	.contrast .mpisto-global-navigation .link:hover, .contrast .mpisto-global-navigation .wds-dropdown:hover .link,
+	.contrast .mpisto-global-navigation .link:active, .contrast .mpisto-global-navigation .link:focus, .contrast .mpisto-global-navigation .wds-dropdown.wds-is-active .link,
 	  .contrast .theme-portal .link:hover, .theme-A.contrast .theme-portal .link.themea, .theme-B.contrast .theme-portal .link.themeb, .theme-C.contrast .theme-portal .link.themec, .theme-D.contrast .theme-portal .link.themed, 
 html:not(.basic):not(.contrast).contrast .theme-portal .link.theme0, .contrast.win10 .theme-portal .link.theme1, .contrast:not(.win10) .theme-portal .link.theme2, .basic.contrast .theme-portal .link.theme3,
 .contrast body:not(.filterA):not(.filterB):not(.filterC):not(.filterD):not(.filterE):not(.filterF) .theme-portal .link.theme10, .contrast .filterA .theme-portal .link.theme11, .contrast .filterB .theme-portal .link.theme12, .contrast .filterC .theme-portal .link.theme13, .contrast .filterD .theme-portal .link.theme14, .contrast .filterE .theme-portal .link.theme15, .contrast .filterF .theme-portal .link.theme16 {
