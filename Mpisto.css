@@ -5927,12 +5927,11 @@ flex-direction:column;
 min-width:280px;
 height:calc(100vh - 78px);
 z-index:10;
-/*border:1px solid #ccc;
+border:1px solid #ccc;
 border:1px solid var(--content-border);
-border-width:0 2px 1px 1px;
-*/
-background-color:#92DFE4;
-background-color:var(--emphasis-bg);
+border-width:0 1px 0 0;
+background-color:#69c3d0;
+background-color:var(--accent-bg);
 font-weight:300;
 text-shadow:none; /* Disable Embolding caused by the update */
 }
@@ -6069,7 +6068,6 @@ height:calc(100vh - 142px);
   border-bottom:1px solid var(--content-border);
 */
   border-bottom:1px solid transparent;
-  border-left:1px solid transparent;
   background-color:#18bbc5;
   background-color:var(--button-color-blend-light);
   position:relative;
@@ -6151,6 +6149,7 @@ height:calc(100vh - 142px);
 	padding-left:0;
 	padding-right:0;
 	opacity:0;
+	border:0!important;
 }
 
 .modernp.transition-on .mpisto-option-pane {
@@ -6196,8 +6195,8 @@ line-height:inherit;
   border-color:#000;
   border-color:var(--content-color);
   background-image:linear-gradient(to bottom, rgba(24,24,24,0.0), rgba(247,247,247,0.01), rgba(24,24,24,0));
-  background-color:#92DFE4;
-  background-color:var(--emphasis-bg);
+  background-color:#69c3d0;
+  background-color:var(--accent-bg);
   box-shadow:none;
 }
 

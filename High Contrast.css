@@ -224,6 +224,7 @@ html:not(.contrast):not(.basic) .highcontrastbutton.wds-dropdown {
 /* CSS configuration for Brightness */
 .contrast *:not(body),.contrast :before,.contrast :after  {
 	--emphasis-bg:var(--dropdown-bg)!important;
+	--accent-bg:var(--dropdown-bg)!important;
   text-shadow:none!important;
   box-shadow:none!important;
   -webkit-filter:none!important;
@@ -344,7 +345,7 @@ html:not(.basic):not(.contrast).contrast .theme-portal .link.theme0, .contrast.w
 }
 
 .contrast header.mpisto-footer-container, .contrast .mpisto-option-pane, .basic .mpisto-option-pane {
-  background-color:var(--emphasis-bg);
+  background-color:var(--accent-bg);
 }
 
 .basic header.mpisto-footer-container {
