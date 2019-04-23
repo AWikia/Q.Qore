@@ -606,11 +606,6 @@ color:inherit;
 	background-image:none;
 }
 
-.contrast .mpisto-options-content {
-	border:1px solid;
-	border-top:0;
-}
-
 
 /* Masthead */
 .contrast .mpisto-userpages-header .mpisto-profile-masthead hgroup, .contrast .mpisto-userpages-header .mpisto-userpages-main{

@@ -797,15 +797,15 @@ border-color:red!important;
 }
 
 .alert {
-border-color:orange!important;
+border-color:orangered!important;
 }
 
 .success {
-border-color:limegreen!important;
+border-color:green!important;
 }
 
 .info {
-border-color:rebeccapurple!important;
+border-color:purple!important;
 }
 
 button {
@@ -1414,7 +1414,7 @@ display:table;
 .notification.wds-dropdown__content .wds-list > li:not(:last-child) a img {
   box-sizing:border-box;
   border:0;
-  border-radius:20%;
+  border-radius:50%;
   background-blend-mode:normal;
   width:28px;
   height:28px;
@@ -1439,11 +1439,11 @@ display:table;
 }
 
 .notification.wds-dropdown__content .wds-list > li.new a div h3 {
-  color:limegreen;
+  color:green;
 }
 
 .notification.wds-dropdown__content .wds-list > li.reply a div h3 {
-  color:orange;
+  color:orangered;
 }
 
 
@@ -1458,7 +1458,7 @@ display:table;
   transition:background-color .2s ease 0.01s;
   z-index:1;
   border-radius:inherit;
-  outline:1px solid limegreen;
+  outline:1px solid green;
   outline-offset:-1px;
 }
 
@@ -1505,8 +1505,8 @@ border:1.75px solid currentcolor;
 background-blend-mode:soft-light;
 -webkit-box-decoration-break:clone;
 box-decoration-break:clone;
--webkit-border-radius:20%;
-border-radius:20%;
+-webkit-border-radius:50%;
+border-radius:50%;
 opacity:0.99;
 -qq-imaage-flip:noflip; /* Avoid flipping images by some custom CSSes */
   image-rendering:initial;                  /* CSS4 Proposed  */
@@ -5886,8 +5886,8 @@ column-count:1;
 padding:0;
   width:auto;
   margin:-20px 18px 0;
-border:1px solid #fff;
-border:1px solid var(--dropdown-bg);
+border:1px solid #ccc;
+border:1px solid var(--content-border);
 
 border-top:0;
 height:calc(100% - 92px);
@@ -6589,6 +6589,7 @@ border:1px solid currentColor;
 .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square {
   display:inline-block;
   cursor:url("Windows/hand.cur"), pointer;
+  padding:2px;
 }
 
 .lightbox-container {
