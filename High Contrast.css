@@ -246,10 +246,6 @@ background-image:linear-gradient(to left,rgba(255,255,255, 0) 200px,rgb(var(--co
 }
 
 
-[class*="filter"] *, [class*="filter"] :before, [class*="filter"] :after  {
-  backdrop-filter:none!important;
-  -webkit-backdrop-filter:none!important;
-}
 
 
 .contrast .mpisto-header-container .link {
@@ -371,40 +367,9 @@ color:rgba(var(--community-header-text), 0.8);
   opacity:1;
 }
 
-.FilterA {
--webkit-filter:saturate(1.01) grayscale(100%);
-filter:saturate(1.01) grayscale(100%);
-}
-
-.FilterB {
--webkit-filter:saturate(1.01) invert(0.99) grayscale(100%);
-filter:saturate(1.01) invert(0.99) grayscale(100%);
-}
-
-.FilterC {
--webkit-filter:invert(0.99) saturate(1.01);
-filter:invert(0.99) saturate(1.01);
-}
-
-.FilterD {
--webkit-filter:invert(0.99) hue-rotate(180deg) saturate(1.01) ;
-filter:invert(0.99) hue-rotate(180deg)saturate(1.01);
-}
-
-.FilterE {
--webkit-filter:brightness(1.05) saturate(1.06) contrast(1.11) hue-rotate(2deg);
-filter:brightness(1.05) saturate(1.06) contrast(1.11) hue-rotate(2deg);
-}
-
-.FilterF {
--webkit-filter:hue-rotate(180deg) saturate(1.01);
-filter:hue-rotate(180deg) saturate(1.01);
-}
 
 /* Edge and Safari fix */
 @supports (position:-ms-page) or (position:-webkit-sticky) {
-
-
 body {
 	z-index:3;
 }
@@ -590,14 +555,10 @@ color:inherit;
 	background-color:var(--content-bg);
 }
 
-
-.contrast .mpisto-option-way > div .fieldset {
-  background-image:none;
-}
-
-.contrast .mpisto-option-way > div .fieldset {
+.contrast .mpisto-option-way > div .fieldset fieldset .fieldset {
 	border-color:currentColor;
 }
+
 
 .contrast .mpisto-option-way h1, .contrast .editor-header, .contrast .mpisto-content .mpisto-page-header-title {
 	background-image:none;
@@ -618,7 +579,7 @@ color:inherit;
 }
 
 /* Lightbox button stylings. Based on Community Header button theming on non-contrast modes */
-.contrast .mpisto-module:not(.editor-module) .buttons .wds-button, /*.contrast .lightbox h1 .wds-button, .contrast .lightbox h2 .wds-button, .contrast .lightbox footer .wds-button*/  {
+.contrast .mpisto-module:not(.editor-module) .buttons .wds-button /*,.contrast .lightbox h1 .wds-button, .contrast .lightbox h2 .wds-button, .contrast .lightbox footer .wds-button*/  {
 background-color:rgb(var(--community-header-text));
 color:rgb(var(--community-header-bg));
 border-color:rgb(var(--community-header-text));
@@ -659,30 +620,6 @@ border:0;
 }
 
 
-/* Fix in Filters */
-@supports (position:sticky) or (position:-webkit-sticky) {
-[class*="filter"] header.mpisto-footer-container {
-  position:-webkit-sticky;
-  position:sticky;
-}
-
-
-[class*="filter"] [style*="visibility:"] * {
-  display:none;
-}
-
-[class*="filter"] .mpisto-gnav {
-  position:-webkit-sticky;
-  position:sticky;
-}
-
-
-[class*="filter"] .top-gap {
-  margin-top:20px;
-}
-
-
-}
 
 
 /* Selection Styles per B19 */

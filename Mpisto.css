@@ -431,7 +431,7 @@ body {
 margin:0 auto;
 /*font-family:Source Sans Pro, "Trebuchet MS", "Prompt",  "M PLUS 1p", "Gothic A1", sans-serif;
 */
-font-family:-apple-system, BlinkMacSystemFont, "Inter", "Arial",  "Prompt",  "M PLUS 1p", "Gothic A1", "Cairo", "Catamaran", "Ramabhadra", sans-serif; /* Uses a font stack suitable for High Contrast Mode */
+font-family:"Inter", -apple-system, BlinkMacSystemFont,  "Arial",  "Prompt",  "M PLUS 1p", "Gothic A1", "Cairo", "Catamaran", "Ramabhadra", sans-serif; /* Uses a font stack suitable for High Contrast Mode */
 color:#000;
 color:var(--content-color);
 background-repeat:no-repeat;
@@ -455,6 +455,12 @@ touch-action:manipulation;
 	overflow-y:auto;
 	font-weight:500;
 text-shadow:0 0 1px rgba(255,0,0,0.1), 0 0 1px rgba(0,255,0,0.1), 0 0 1px rgba(0,0,255,0.1), 0 0 1px rgba(255,255,0,0.1), 0 0 1px rgba(255,0,255,0.1), 0 0 1px rgba(0,255,255,0.1), 0 0 1px rgba(0,0,0,0.1), 0 0 1px rgba(255,255,255,0.1); /* Partially Embolding */
+}
+
+::selection {
+	background-color:rgba(24,187,197, 0.5);
+background-color:rgba(var(--link-color-dark), 0.5);
+
 }
 
 .serif body { /* Noto Sans */
@@ -1307,8 +1313,8 @@ cursor:url("Windows/hand.cur"), pointer;
 mark {
 color:#000;
 color:var(--content-color);
-background-color:rgba(24,187,197, 0.6);
-background-color:rgba(var(--link-color), 0.6);
+background-color:rgba(24,187,197, 0.5);
+background-color:rgba(var(--link-color-dark), 0.5);
 }
 
 mark * {
@@ -6196,8 +6202,8 @@ line-height:inherit;
 }
 
 .mpisto-option-way > div .fieldset fieldset .fieldset {
-  border-color:#000;
-  border-color:var(--content-color);
+  border-color:#92DFE4;
+  border-color:var(--emphasis-bg);
   background-image:linear-gradient(to bottom, rgba(24,24,24,0.0), rgba(247,247,247,0.01), rgba(24,24,24,0));
   background-color:#69c3d0;
   background-color:var(--accent-bg);
@@ -6915,7 +6921,7 @@ margin-right:0;
 .wds-banner-notification__container {
   position:-webkit-sticky;
   position:sticky;
-  top:82px;
+  top:49px;
   z-index:19; /* Needed lower value to allow header dropdowns not to overlap */
 }
 
@@ -6928,13 +6934,6 @@ margin-right:0;
 
 }
 
-
-/* Firefox 26-30 have support of sticky position behind flag so we need to use the correct position of editor header */
-@supports ((position:sticky) or (position:-webkit-sticky)) and (not (--link-color:red)) {
-.wds-banner-notification__container {
-  top:49px;
-}
-}
 
 .mpisto-article .wds-banner-notification__container:not(.constructor-controls) {top:auto; position:relative; z-index:0;}
 
