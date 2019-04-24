@@ -365,20 +365,20 @@ $('input[type="color"][name="buttoncolor"]').val(chroma(button_color));
 
 /** Header Color **/
 /* Set Vars */
-var header_color =	'rgb(' + getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg") + ');';
+var header_color =	'rgb(' + getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg") + ')';
 
 if ((chroma(header_color).get('lab.l')) > 54) {
 var headercolor1 = chroma.mix(header_color, 'black', 0.15);
 var headercolor2 = '0,0,0';
 var headercolor1final = chroma(headercolor1).get('rgb.r') + ',' + chroma(headercolor1).get('rgb.g') + ',' + chroma(headercolor1).get('rgb.b'); 
-document.querySelector('body').style.setProperty("--community-header-bg-blend-light", header_color);
+document.querySelector('body').style.setProperty("--community-header-bg-blend-light", getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg"));
 document.querySelector('body').style.setProperty("--community-header-bg-blend", headercolor1final);
 } else {
 var headercolor1 = chroma.mix(header_color, 'white', 0.15);
 var headercolor2 = '255,255,255';
 var headercolor1final = chroma(headercolor1).get('rgb.r') + ',' + chroma(headercolor1).get('rgb.g') + ',' + chroma(headercolor1).get('rgb.b'); 
 document.querySelector('body').style.setProperty("--community-header-bg-blend-light", headercolor1final);
-document.querySelector('body').style.setProperty("--community-header-bg-blend", header_color);
+document.querySelector('body').style.setProperty("--community-header-bg-blend", getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg"));
 }
 
 /* Set Values */
@@ -388,20 +388,20 @@ $('input[type="color"][name="header"]').val(chroma(header_color));
 
 /** Link Color **/
 /* Set Vars */
-var link_color = 'rgb(' + getComputedStyle(document.querySelector('html')).getPropertyValue("--link-color") + ');';
+var link_color = 'rgb(' + getComputedStyle(document.querySelector('html')).getPropertyValue("--link-color") + ')';
 
 if ((chroma(link_color).get('lab.l')) > 54) {
 var linkcolor1 = chroma.mix(link_color, 'black', 0.15);
 var linkcolor2 = 'black';
 var linkcolor1final = chroma(linkcolor1).get('rgb.r') + ',' + chroma(linkcolor1).get('rgb.g') + ',' + chroma(linkcolor1).get('rgb.b'); 
-document.querySelector('body').style.setProperty("--link-color-blend-light", link_color);
+document.querySelector('body').style.setProperty("--link-color-blend-light", getComputedStyle(document.querySelector('html')).getPropertyValue("--link-color"));
 document.querySelector('body').style.setProperty("--link-color-blend", linkcolor1final);
 } else {
 var linkcolor1 = chroma.mix(link_color, 'white', 0.15);
 var linkcolor2 = 'white';
 var linkcolor1final = chroma(linkcolor1).get('rgb.r') + ',' + chroma(linkcolor1).get('rgb.g') + ',' + chroma(linkcolor1).get('rgb.b'); 
 document.querySelector('body').style.setProperty("--link-color-blend-light", linkcolor1final);
-document.querySelector('body').style.setProperty("--link-color-blend", link_color);
+document.querySelector('body').style.setProperty("--link-color-blend", getComputedStyle(document.querySelector('html')).getPropertyValue("--link-color"));
 }
 
 
