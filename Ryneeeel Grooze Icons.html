@@ -172,8 +172,6 @@ document.getElementById("Handler").className += " mpisto-servers"
 <div style="visibility:hidden" class="mpisto-gnav">
 <header class="mpisto-global-navigation">
 </header>
-<header class="theme-portal">
-</header>
 </div>
 
 <div class="mpisto-gnav">
@@ -206,7 +204,7 @@ document.getElementById("Handler").className += " mpisto-servers"
 					</ul>
 				  </div>
 			</div>
-				<a class="company cell link search-on">
+				<a class="company cell link search-on" href="https://alpha-technologies.fandom.com/el/Mpisto War">
 					<span>Mpisto War</span>
 				</a>
 				<a class="cell search-link search-off">
@@ -337,118 +335,8 @@ document.getElementById("Handler").className += " mpisto-servers"
 
 
 <!-- End Global Nav -->
-
-
-    <nav class="theme-portal">
-      <a class="link theme10" onclick="HCa1()"><svg version="1.1" width="28" height="38" class="wds-icon" viewBox="-1 -1 28 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark" />
-</svg> <span>off</span></a>
-      <a class="link theme11" onclick="HCb1()"><svg version="1.1" width="28" height="38" class="wds-icon" viewBox="-1 -1 28 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark" />
-</svg> <span>Gray</span></a>
-      <a class="link theme12" onclick="HCc1()"><svg version="1.1" width="28" height="38" class="wds-icon" viewBox="-1 -1 28 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark" />
-</svg> <span>Inv-Gray</span></a>
-      <a class="link theme13" onclick="HCd1()"><svg version="1.1" width="28" height="38" class="wds-icon" viewBox="-1 -1 28 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark" />
-</svg> <span>Invert</span></a>
-      <a class="link theme14" onclick="HCe1()"><svg version="1.1" width="28" height="38" class="wds-icon" viewBox="-1 -1 28 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark" />
-</svg> <span>Night</span></a>
-      <a class="link theme15" onclick="HCf1()"><svg version="1.1" width="28" height="38" class="wds-icon" viewBox="-1 -1 28 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark" />
-</svg> <span>SSC</span></a>
-      <a class="link theme16" onclick="HCg1()"><svg version="1.1" width="28" height="38" class="wds-icon" viewBox="-1 -1 28 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark" />
-</svg> <span>Day</span></a>
-    </nav>
 </div>
-<script>
-// Filters
-function HCa1() {
-    var x = document.getElementById("Handler");
-        x.className = x.className.replace(" filterA", "");
-        x.className = x.className.replace(" filterB", "");
-        x.className = x.className.replace(" filterC", "");
-        x.className = x.className.replace(" filterD", "");
-        x.className = x.className.replace(" filterE", "");
-        x.className = x.className.replace(" filterF", "");
-}
 
-function HCb1() {
-    var x = document.getElementById("Handler");
-    if (x.className.indexOf("filterA") == -1) {
-        x.className += " filterA";
-    }
-        x.className = x.className.replace(" filterB", "");
-        x.className = x.className.replace(" filterC", "");
-        x.className = x.className.replace(" filterD", "");
-        x.className = x.className.replace(" filterE", "");
-        x.className = x.className.replace(" filterF", "");
-}
-
-function HCc1() {
-    var x = document.getElementById("Handler");
-    if (x.className.indexOf("filterB") == -1) {
-        x.className += " filterB";
-    }
-        x.className = x.className.replace(" filterA", "");
-        x.className = x.className.replace(" filterC", "");
-        x.className = x.className.replace(" filterD", "");
-        x.className = x.className.replace(" filterE", "");
-        x.className = x.className.replace(" filterF", "");
-}
-
-function HCd1() {
-    var x = document.getElementById("Handler");
-    if (x.className.indexOf("filterC") == -1) {
-        x.className += " filterC";
-    }
-        x.className = x.className.replace(" filterA", "");
-        x.className = x.className.replace(" filterB", "");
-        x.className = x.className.replace(" filterD", "");
-        x.className = x.className.replace(" filterE", "");
-        x.className = x.className.replace(" filterF", "");
-}
-
-function HCe1() {
-    var x = document.getElementById("Handler");
-    if (x.className.indexOf("filterD") == -1) {
-        x.className += " filterD";
-    }
-        x.className = x.className.replace(" filterA", "");
-        x.className = x.className.replace(" filterB", "");
-        x.className = x.className.replace(" filterC", "");
-        x.className = x.className.replace(" filterE", "");
-        x.className = x.className.replace(" filterF", "");
-}
-
-function HCf1() {
-    var x = document.getElementById("Handler");
-    if (x.className.indexOf("filterE") == -1) {
-        x.className += " filterE";
-    }
-        x.className = x.className.replace(" filterA", "");
-        x.className = x.className.replace(" filterB", "");
-        x.className = x.className.replace(" filterC", "");
-        x.className = x.className.replace(" filterD", "");
-        x.className = x.className.replace(" filterF", "");
-}
-
-function HCg1() {
-    var x = document.getElementById("Handler");
-    if (x.className.indexOf("filterF") == -1) {
-        x.className += " filterF";
-    }
-        x.className = x.className.replace(" filterA", "");
-        x.className = x.className.replace(" filterB", "");
-        x.className = x.className.replace(" filterC", "");
-        x.className = x.className.replace(" filterD", "");
-        x.className = x.className.replace(" filterE", "");
-}
-
-
-</script>
   <div class="top-gap"></div>
   
 <!-- End Gap -->

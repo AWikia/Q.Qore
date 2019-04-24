@@ -151,8 +151,6 @@ document.getElementById("Handler").className += " mpisto-servers"
 <div style="visibility:hidden" class="mpisto-gnav">
 <header class="mpisto-global-navigation">
 </header>
-<header class="theme-portal">
-</header>
 </div>
 
 <div class="mpisto-gnav">
@@ -185,7 +183,7 @@ document.getElementById("Handler").className += " mpisto-servers"
 					</ul>
 				  </div>
 			</div>
-				<a class="company cell link search-on">
+				<a class="company cell link search-on" href="https://alpha-technologies.fandom.com/el/Mpisto War">
 					<span>Mpisto War</span>
 				</a>
 				<a class="cell search-link search-off">
@@ -314,118 +312,8 @@ document.getElementById("Handler").className += " mpisto-servers"
 	</header>
 
 <!-- End Global Nav -->
-
-
-    <nav class="theme-portal">
-      <a class="link theme10" onclick="HCa1()"><svg version="1.1" width="28" height="38" class="wds-icon" viewBox="-1 -1 28 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark" />
-</svg> <span>off</span></a>
-      <a class="link theme11" onclick="HCb1()"><svg version="1.1" width="28" height="38" class="wds-icon" viewBox="-1 -1 28 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark" />
-</svg> <span>Gray</span></a>
-      <a class="link theme12" onclick="HCc1()"><svg version="1.1" width="28" height="38" class="wds-icon" viewBox="-1 -1 28 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark" />
-</svg> <span>Inv-Gray</span></a>
-      <a class="link theme13" onclick="HCd1()"><svg version="1.1" width="28" height="38" class="wds-icon" viewBox="-1 -1 28 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark" />
-</svg> <span>Invert</span></a>
-      <a class="link theme14" onclick="HCe1()"><svg version="1.1" width="28" height="38" class="wds-icon" viewBox="-1 -1 28 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark" />
-</svg> <span>Night</span></a>
-      <a class="link theme15" onclick="HCf1()"><svg version="1.1" width="28" height="38" class="wds-icon" viewBox="-1 -1 28 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark" />
-</svg> <span>SSC</span></a>
-      <a class="link theme16" onclick="HCg1()"><svg version="1.1" width="28" height="38" class="wds-icon" viewBox="-1 -1 28 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark" />
-</svg> <span>Day</span></a>
-    </nav>
 </div>
-<script>
-// Filters
-function HCa1() {
-    var x = document.getElementById("Handler");
-        x.className = x.className.replace(" filterA", "");
-        x.className = x.className.replace(" filterB", "");
-        x.className = x.className.replace(" filterC", "");
-        x.className = x.className.replace(" filterD", "");
-        x.className = x.className.replace(" filterE", "");
-        x.className = x.className.replace(" filterF", "");
-}
 
-function HCb1() {
-    var x = document.getElementById("Handler");
-    if (x.className.indexOf("filterA") == -1) {
-        x.className += " filterA";
-    }
-        x.className = x.className.replace(" filterB", "");
-        x.className = x.className.replace(" filterC", "");
-        x.className = x.className.replace(" filterD", "");
-        x.className = x.className.replace(" filterE", "");
-        x.className = x.className.replace(" filterF", "");
-}
-
-function HCc1() {
-    var x = document.getElementById("Handler");
-    if (x.className.indexOf("filterB") == -1) {
-        x.className += " filterB";
-    }
-        x.className = x.className.replace(" filterA", "");
-        x.className = x.className.replace(" filterC", "");
-        x.className = x.className.replace(" filterD", "");
-        x.className = x.className.replace(" filterE", "");
-        x.className = x.className.replace(" filterF", "");
-}
-
-function HCd1() {
-    var x = document.getElementById("Handler");
-    if (x.className.indexOf("filterC") == -1) {
-        x.className += " filterC";
-    }
-        x.className = x.className.replace(" filterA", "");
-        x.className = x.className.replace(" filterB", "");
-        x.className = x.className.replace(" filterD", "");
-        x.className = x.className.replace(" filterE", "");
-        x.className = x.className.replace(" filterF", "");
-}
-
-function HCe1() {
-    var x = document.getElementById("Handler");
-    if (x.className.indexOf("filterD") == -1) {
-        x.className += " filterD";
-    }
-        x.className = x.className.replace(" filterA", "");
-        x.className = x.className.replace(" filterB", "");
-        x.className = x.className.replace(" filterC", "");
-        x.className = x.className.replace(" filterE", "");
-        x.className = x.className.replace(" filterF", "");
-}
-
-function HCf1() {
-    var x = document.getElementById("Handler");
-    if (x.className.indexOf("filterE") == -1) {
-        x.className += " filterE";
-    }
-        x.className = x.className.replace(" filterA", "");
-        x.className = x.className.replace(" filterB", "");
-        x.className = x.className.replace(" filterC", "");
-        x.className = x.className.replace(" filterD", "");
-        x.className = x.className.replace(" filterF", "");
-}
-
-function HCg1() {
-    var x = document.getElementById("Handler");
-    if (x.className.indexOf("filterF") == -1) {
-        x.className += " filterF";
-    }
-        x.className = x.className.replace(" filterA", "");
-        x.className = x.className.replace(" filterB", "");
-        x.className = x.className.replace(" filterC", "");
-        x.className = x.className.replace(" filterD", "");
-        x.className = x.className.replace(" filterE", "");
-}
-
-
-</script>
   <div class="top-gap"></div>
   
 <!-- End Gap -->
@@ -1010,6 +898,22 @@ function HCg1() {
                 </div>
             </div>
 
+          <div class="wds-dropdown construct-off">				
+            <div class="wds-button wds-is-squished wds-dropdown__toggle">
+            <svg class="wds-icon wds-icon-small" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 0H0v24h24z" fill="none"/><path d="M17.66 7.93L12 2.27 6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58c2.05 0 4.1-.78 5.66-2.34 3.12-3.12 3.12-8.19 0-11.31zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/></svg>
+            <span>Contrast Mode</span>                   <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
+                  </svg></div>
+                <div class="wds-dropdown__content wds-is-right-aligned wds-is-not-scrollable">					
+                  <ul class="wds-list wds-is-linked">						
+                    <li><a onclick="HCclear()">Disabled</a></li>
+                    <li><a onclick="HCcustom2()">Semi-Enabled</a></li>
+                    <li><a onclick="HCcustom()">Enabled</a></li>
+                    <li><a onclick="HCcustom0()">Enabled (Classic)</a></li>
+                  </ul>
+                </div>
+            </div>
+			<div class="wds-button-group construct-only">
           <div class="wds-dropdown">				
             <div class="wds-button wds-is-squished wds-dropdown__toggle">
             <svg class="wds-icon wds-icon-small" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 0H0v24h24z" fill="none"/><path d="M17.66 7.93L12 2.27 6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58c2.05 0 4.1-.78 5.66-2.34 3.12-3.12 3.12-8.19 0-11.31zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/></svg>
@@ -1025,6 +929,40 @@ function HCg1() {
                   </ul>
                 </div>
             </div>
+
+				<div class="wds-dropdown">
+					<div class="wds-button wds-dropdown__toggle"><svg class="wds-icon wds-icon-small" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 0H0v24h24z" fill="none"/><path d="M17.66 7.93L12 2.27 6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58c2.05 0 4.1-.78 5.66-2.34 3.12-3.12 3.12-8.19 0-11.31zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/></svg>
+					<span>Themes</span>
+					 <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
+                  </svg></div>
+                  <div class="wds-dropdown__content">
+					<ul class="wds-list wds-is-linked">
+						<li>
+							<a onclick="HCa()">
+								Theme A
+							</a>
+						</li>
+						<li>
+							<a onclick="HCb()">
+								Theme B
+							</a>
+						</li>
+						<li>
+							<a onclick="HCc()">
+								Theme C
+							</a>
+						</li>
+						<li>
+							<a onclick="HCd()" >
+								Theme D
+							</a>
+						</li>
+					</ul>
+                  </div>
+					</div>
+			</div>
+
 
           </div>
         </div>
