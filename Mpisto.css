@@ -2941,7 +2941,7 @@ footer.footer .wrapper .footer-container td a:hover {
   position:relative;
   z-index:2;
   border:1px transparent;
-  border-color:transparent!important;
+  border-color:transparent;
   box-shadow:0 2px 6px 0 rgba(0,0,0,.2), 0 2px 6px 0 rgba(255,255,255,0.2);
   }
 
@@ -3409,17 +3409,24 @@ padding:10px 0 0;
 .mpisto-userpages-header .mpisto-userpages-main .mpisto-avatar {
 	width:108px;
 	height:auto;
-	-o-object-fit:cover;
-	object-fit:cover;
 	border-width:5px;
 	opacity:1;
+	border-radius:20%;
 	background-blend-mode:normal;
+	transition:all 500ms ease;
+	transform:rotate(0deg); /* Fix for mInerva 8.5- */
+}
+
+.mpisto-userpages-header .mpisto-userpages-main .mpisto-avatar:hover {
+	border-radius:100%;
+	box-shadow: 0 0 7px #000, 0 0 7px #fff;
+	transform:rotate(360deg);
 }
 
 .mpisto-userpages-header .mpisto-profile-masthead {
 	border-radius:5px;
-	box-shadow:0 0 8px 0.2px #ccc, 0 0 3px #000, 0 0 2px #fff;
-	box-shadow:0 0 8px 0.2px var(--content-border), 0 0 3px #000, 0 0 2px #fff;
+	box-shadow:0 0 6px 0.5px #ccc, 0 0 1px 0.25px #000, 0 0 1px 0.25px #fff;
+	box-shadow:0 0 6px 0.5px var(--content-border), 0 0 1px 0.25px #000, 0 0 1px 0.25px #fff ;
 	flex-grow:1;
 	min-height:50px;
 	background-color:#fff;
@@ -3465,7 +3472,7 @@ padding:10px 0 0;
 }
 
 .mpisto-userpages-header .mpisto-profile-masthead hgroup span {
-	opacity:0.75;
+	opacity:0.7;
 	font-size:18px;
 	line-height:1;
 	margin:0;
@@ -3545,6 +3552,7 @@ padding:10px 0 0;
 	display:flex;
 	align-items:center;
 	opacity:0;
+	transition:opacity 60ms ease-in;
 }
 
 .mpisto-userpages-header .mpisto-profile-masthead hgroup:hover a.edit {
@@ -6668,8 +6676,8 @@ border:1px solid currentColor;
 	width:auto;
   	color:rgb(248,248,248);
 	color:rgb(var(--community-header-text));
-	box-shadow:0 2px 12px #000, 0 -2px 2px #ccc, 0 2px 2px #ccc;
-	box-shadow:0 2px 12px var(--content-color), 0 -2px 2px var(--content-border), 0 2px 2px var(--content-border);
+	box-shadow:0 2px 12px #000, 0 -1px 2px #ccc, 0 1px 2px #ccc;
+	box-shadow:0 2px 12px var(--content-color), 0 -1px 2px var(--content-border), 0 1px 2px var(--content-border);
 	transform:translateY(-100%);
 	transition:transform 100ms;
 	border-radius:10px;
