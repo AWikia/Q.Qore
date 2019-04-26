@@ -1383,14 +1383,36 @@ Checked = VisualEditor as default mode
 			/* This CSS left intentionally blank */
 			</style>
 
-    <div class="fieldset">
+    <div class="fieldset" style="position:relative; z-index:3;">
     <fieldset>
     <legend>Customize theme</legend>
 
     <div class="fieldset">
     <fieldset>    
     <legend>Body</legend>
-    <label>Background-color:</label> <input type="color" onchange="UpdateValue()" name="bg" value="#e995ca" class="wds-button wds-is-square"></input> <button class="wds-floating-button no-flex" onclick="RandomColor1()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+    <label>Background-color:</label> 
+    <div class="wds-dropdown">
+    <button type="color"  class="wds-button wds-is-square">
+			<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; background-color:var(--background-color);"></div>
+    </button>
+	<div class="wds-dropdown__content wds-is-not-scrollable">
+		<ul class="wds-list">
+			<li>
+			<label><small>Red:</small></label>
+				<input type="range" onchange="UpdateValue()" name="bg" class="red" min="0" max="255" value="0"></input>
+			</li>
+			<li>
+			<label><small>Green:</small></label>
+				<input type="range" onchange="UpdateValue()" name="bg" class="green" min="0" max="255" value="0"></input>
+			</li>
+			<li>
+			<label><small>Blue:</small></label>
+				<input type="range" onchange="UpdateValue()" name="bg" class="blue" min="0" max="255" value="0"></input>
+			</li>
+		</ul>
+	</div>
+    </div>
+     <button class="wds-floating-button no-flex" onclick="RandomColor1()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-information" />
          </svg></button> <button class="wds-floating-button no-flex" onclick="PickColor1()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-text" />
@@ -1431,7 +1453,32 @@ Checked = VisualEditor as default mode
     <div class="fieldset">
     <fieldset>
     <legend>Header</legend>
-    <label>Header-color:</label> <input type="color" onchange="UpdateValue()" name="header" value="#0000ff" class="wds-button wds-is-square"></input> <button class="wds-floating-button no-flex" onclick="RandomColor2()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+    <label>Header-color:</label> 
+    
+        <div class="wds-dropdown">
+    <button type="color"  class="wds-button wds-is-square">
+			<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; background-color:rgb(var(--community-header-bg));"></div>
+    </button>
+	<div class="wds-dropdown__content wds-is-not-scrollable">
+		<ul class="wds-list">
+			<li>
+			<label><small>Red:</small></label>
+				<input type="range" onchange="UpdateValue()" name="header" class="red" min="0" max="255" value="0"></input>
+			</li>
+			<li>
+			<label><small>Green:</small></label>
+				<input type="range" onchange="UpdateValue()" name="header" class="green" min="0" max="255" value="0"></input>
+			</li>
+			<li>
+			<label><small>Blue:</small></label>
+				<input type="range" onchange="UpdateValue()" name="header" class="blue" min="0" max="255" value="0"></input>
+			</li>
+		</ul>
+	</div>
+    </div>
+
+    
+     <button class="wds-floating-button no-flex" onclick="RandomColor2()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-information" />
          </svg></button> <button class="wds-floating-button no-flex" onclick="PickColor2()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-text" />
@@ -1509,31 +1556,153 @@ Checked = VisualEditor as default mode
     <div class="fieldset">
     <fieldset>
     <legend>Page</legend>
-    <label>Background-color:</label> <input type="color" onchange="UpdateValue()" name="contentbg" value="#ffffff" class="wds-button wds-is-square"></input> <button class="wds-floating-button no-flex" onclick="RandomColor3()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+    <label>Background-color:</label> 
+        <div class="wds-dropdown">
+    <button type="color"  class="wds-button wds-is-square">
+			<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; background-color:var(--content-bg);"></div>
+    </button>
+	<div class="wds-dropdown__content wds-is-not-scrollable">
+		<ul class="wds-list">
+			<li>
+			<label><small>Red:</small></label>
+				<input type="range" onchange="UpdateValue()" name="contentbg" class="red" min="0" max="255" value="0"></input>
+			</li>
+			<li>
+			<label><small>Green:</small></label>
+				<input type="range" onchange="UpdateValue()" name="contentbg" class="green" min="0" max="255" value="0"></input>
+			</li>
+			<li>
+			<label><small>Blue:</small></label>
+				<input type="range" onchange="UpdateValue()" name="contentbg" class="blue" min="0" max="255" value="0"></input>
+			</li>
+		</ul>
+	</div>
+    </div>
+    
+    <button class="wds-floating-button no-flex" onclick="RandomColor3()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-information" />
          </svg></button> <button class="wds-floating-button no-flex" onclick="PickColor3()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-text" />
          </svg></button>
     <br><br>
-    <label>Color:</label> <input type="color" onchange="UpdateValue()" name="contentcolor" value="#000" class="wds-button wds-is-square"></input> <button class="wds-floating-button no-flex" onclick="RandomColor4()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+    <label>Color:</label> 
+
+    <div class="wds-dropdown">
+    <button type="color"  class="wds-button wds-is-square">
+			<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; background-color:var(--content-color);"></div>
+    </button>
+	<div class="wds-dropdown__content wds-is-not-scrollable">
+		<ul class="wds-list">
+			<li>
+			<label><small>Red:</small></label>
+				<input type="range" onchange="UpdateValue()" name="contentcolor" class="red" min="0" max="255" value="0"></input>
+			</li>
+			<li>
+			<label><small>Green:</small></label>
+				<input type="range" onchange="UpdateValue()" name="contentcolor" class="green" min="0" max="255" value="0"></input>
+			</li>
+			<li>
+			<label><small>Blue:</small></label>
+				<input type="range" onchange="UpdateValue()" name="contentcolor" class="blue" min="0" max="255" value="0"></input>
+			</li>
+		</ul>
+	</div>
+    </div>
+
+    
+    <button class="wds-floating-button no-flex" onclick="RandomColor4()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-information" />
          </svg></button> <button class="wds-floating-button no-flex" onclick="PickColor4()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-text" />
          </svg></button>
     <br><br>
-    <label>Border-color:</label> <input type="color" onchange="UpdateValue()" name="border" value="#cccccc" class="wds-button wds-is-square"></input> <button class="wds-floating-button no-flex" onclick="RandomColor5()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+    <label>Border-color:</label> 
+    
+    <div class="wds-dropdown">
+    <button type="color"  class="wds-button wds-is-square">
+			<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; background-color:var(--content-border);"></div>
+    </button>
+	<div class="wds-dropdown__content wds-is-not-scrollable">
+		<ul class="wds-list">
+			<li>
+			<label><small>Red:</small></label>
+				<input type="range" onchange="UpdateValue()" name="border" class="red" min="0" max="255" value="0"></input>
+			</li>
+			<li>
+			<label><small>Green:</small></label>
+				<input type="range" onchange="UpdateValue()" name="border" class="green" min="0" max="255" value="0"></input>
+			</li>
+			<li>
+			<label><small>Blue:</small></label>
+				<input type="range" onchange="UpdateValue()" name="border" class="blue" min="0" max="255" value="0"></input>
+			</li>
+		</ul>
+	</div>
+    </div>
+
+    <button class="wds-floating-button no-flex" onclick="RandomColor5()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-information" />
          </svg></button> <button class="wds-floating-button no-flex" onclick="PickColor5()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-text" />
          </svg></button>
     <br><br>
-    <label>Link-color:</label> <input type="color" onchange="UpdateValue()" name="linkcolor" value="#18bbc5" class="wds-button wds-is-square"></input> <button class="wds-floating-button no-flex" onclick="RandomColor6()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+    <label>Link-color:</label> 
+
+    <div class="wds-dropdown">
+    <button type="color"  class="wds-button wds-is-square">
+			<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; background-color:rgb(var(--link-color));"></div>
+    </button>
+	<div class="wds-dropdown__content wds-is-not-scrollable">
+		<ul class="wds-list">
+			<li>
+			<label><small>Red:</small></label>
+				<input type="range" onchange="UpdateValue()" name="linkcolor" class="red" min="0" max="255" value="0"></input>
+			</li>
+			<li>
+			<label><small>Green:</small></label>
+				<input type="range" onchange="UpdateValue()" name="linkcolor" class="green" min="0" max="255" value="0"></input>
+			</li>
+			<li>
+			<label><small>Blue:</small></label>
+				<input type="range" onchange="UpdateValue()" name="linkcolor" class="blue" min="0" max="255" value="0"></input>
+			</li>
+		</ul>
+	</div>
+    </div>
+
+    
+    <button class="wds-floating-button no-flex" onclick="RandomColor6()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-information" />
          </svg></button> <button class="wds-floating-button no-flex" onclick="PickColor6()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-text" />
          </svg></button>
     <br><br>
-    <label>Button-color:</label> <input type="color" onchange="UpdateValue()" name="buttoncolor" value="#18bbc5" class="wds-button wds-is-square"></input> <button class="wds-floating-button no-flex" onclick="RandomColor7()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+    <label>Button-color:</label> 
+
+    <div class="wds-dropdown">
+    <button type="color"  class="wds-button wds-is-square">
+			<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; background-color:var(--button-color);"></div>
+    </button>
+	<div class="wds-dropdown__content wds-is-not-scrollable">
+		<ul class="wds-list">
+			<li>
+			<label><small>Red:</small></label>
+				<input type="range" onchange="UpdateValue()" name="buttoncolor" class="red" min="0" max="255" value="0"></input>
+			</li>
+			<li>
+			<label><small>Green:</small></label>
+				<input type="range" onchange="UpdateValue()" name="buttoncolor" class="green" min="0" max="255" value="0"></input>
+			</li>
+			<li>
+			<label><small>Blue:</small></label>
+				<input type="range" onchange="UpdateValue()" name="buttoncolor" class="blue" min="0" max="255" value="0"></input>
+			</li>
+		</ul>
+	</div>
+    </div>
+
+    
+    <button class="wds-floating-button no-flex" onclick="RandomColor7()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-information" />
          </svg></button> <button class="wds-floating-button no-flex" onclick="PickColor7()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-text" />
@@ -1546,7 +1715,7 @@ Checked = VisualEditor as default mode
     <div class="fieldset">
     <fieldset>
     <legend>Preview</legend>
-		<div class="mpisto-header-container" style="margin:0;">
+		<div class="mpisto-header-container" style="margin:0; z-index:1;">
 			<section class="mpisto-header-container-wrapper">
 				<a class="wordmark cell"><img src="Wordmark.png"></img></a>
 			<header class="mobile-header">
@@ -1802,7 +1971,7 @@ Checked = VisualEditor as default mode
 			</section>
 		</div>
     <br>
-	<div class="wds-button-groups">
+	<div class="wds-button-groups" style="position:relative; z-index:0;">
 	   <div class="wds-button-group">
 		<button class="wds-button">Button Test</button>
 		<button class="wds-button wds-is-secondary">Button Test</button>

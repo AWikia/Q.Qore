@@ -1,6 +1,9 @@
 ﻿(function () {
 document.querySelector('html').className += " theme-A"; // We begin with the first theme selected
 ColorUpdate();
+	if ($("body.options").length) {
+		UpdateSet()
+	}
 })();
 
 
@@ -129,37 +132,68 @@ if (files[0].size > 1000000) {
 
 
 function RandomColor1() {
-$('input[type="color"][name="bg"]').val(chroma.random());
+var x = chroma.random()
+$('input[type="range"][name="bg"].red').val(chroma(x).get('rgb.r'));
+$('input[type="range"][name="bg"].green').val( chroma(x).get('rgb.g'));
+$('input[type="range"][name="bg"].blue').val( chroma(x).get('rgb.b'));
+
+
 UpdateValue()
 }
 
 function RandomColor2() {
-$('input[type="color"][name="header"]').val(chroma.random());
+var x = chroma.random()
+$('input[type="range"][name="header"].red').val(chroma(x).get('rgb.r') );
+$('input[type="range"][name="header"].green').val( chroma(x).get('rgb.g') );
+$('input[type="range"][name="header"].blue').val( chroma(x).get('rgb.b') );
+
 UpdateValue()
 }
 
 function RandomColor3() {
-$('input[type="color"][name="contentbg"]').val(chroma.random());
+var x = chroma.random()
+$('input[type="range"][name="contentbg"].red').val(chroma(x).get('rgb.r') );
+$('input[type="range"][name="contentbg"].green').val( chroma(x).get('rgb.g') );
+$('input[type="range"][name="contentbg"].blue').val( chroma(x).get('rgb.b') );
+
 UpdateValue()
 }
 
 function RandomColor4() {
-$('input[type="color"][name="contentcolor"]').val(chroma.random());
+var x = chroma.random()
+$('input[type="range"][name="contentcolor"].red').val(chroma(x).get('rgb.r') );
+$('input[type="range"][name="contentcolor"].green').val(chroma(x).get('rgb.g') );
+$('input[type="range"][name="contentcolor"].blue').val(chroma(x).get('rgb.b') );
+
 UpdateValue()
 }
 
 function RandomColor5() {
-$('input[type="color"][name="border"]').val(chroma.random());
+var x = chroma.random()
+$('input[type="range"][name="border"].red').val(chroma(x).get('rgb.r') );
+$('input[type="range"][name="border"].green').val(chroma(x).get('rgb.g') );
+$('input[type="range"][name="border"].blue').val(chroma(x).get('rgb.b') );
+
 UpdateValue()
 }
 
 function RandomColor6() {
-$('input[type="color"][name="linkcolor"]').val(chroma.random());
+var x = chroma.random()
+$('input[type="range"][name="linkcolor"].red').val(chroma(x).get('rgb.r') );
+$('input[type="range"][name="linkcolor"].green').val(chroma(x).get('rgb.g') );
+$('input[type="range"][name="linkcolor"].blue').val(chroma(x).get('rgb.b') );
+
+
 UpdateValue()
 }
 
 function RandomColor7() {
-$('input[type="color"][name="buttoncolor"]').val(chroma.random());
+var x = chroma.random()
+$('input[type="range"][name="buttoncolor"].red').val(chroma(x).get('rgb.r') );
+$('input[type="range"][name="buttoncolor"].green').val(chroma(x).get('rgb.g') );
+$('input[type="range"][name="buttoncolor"].blue').val(chroma(x).get('rgb.b') );
+
+
 UpdateValue()
 }
 
@@ -175,54 +209,127 @@ function RandomColor() {
 
 
 function PickColor1() {
-$('input[type="color"][name="bg"]').val( chroma(prompt("Body Background Color", $('input[type="color"][name="bg"]').val())) );
+var x= prompt("Body Background Color", chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--background-color")));
+$('input[type="range"][name="bg"].red').val(chroma(x).get('rgb.r'));
+$('input[type="range"][name="bg"].green').val( chroma(x).get('rgb.g'));
+$('input[type="range"][name="bg"].blue').val( chroma(x).get('rgb.b'));
+
 UpdateValue()
 }
 
 function PickColor2() {
-$('input[type="color"][name="header"]').val( chroma(prompt("Header Background Color", $('input[type="color"][name="header"]').val())) );
+var x= prompt("Header Background Color", chroma('rgb(' + getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg") + ')'));
+$('input[type="range"][name="header"].red').val(chroma(x).get('rgb.r') );
+$('input[type="range"][name="header"].green').val( chroma(x).get('rgb.g') );
+$('input[type="range"][name="header"].blue').val( chroma(x).get('rgb.b') );
+
 UpdateValue()
 }
 
 function PickColor3() {
-$('input[type="color"][name="contentbg"]').val( chroma(prompt("Page Background Color", $('input[type="color"][name="contentbg"]').val())) );
+var x= prompt("Page Background Color", chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--content-bg")));
+$('input[type="range"][name="contentbg"].red').val(chroma(x).get('rgb.r') );
+$('input[type="range"][name="contentbg"].green').val( chroma(x).get('rgb.g') );
+$('input[type="range"][name="contentbg"].blue').val( chroma(x).get('rgb.b') );
+
 UpdateValue()
 }
 
 function PickColor4() {
-$('input[type="color"][name="contentcolor"]').val( chroma(prompt("Page Text Color", $('input[type="color"][name="contentcolor"]').val())) );
+var x= prompt("Page Text Color", chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color")));
+$('input[type="range"][name="contentcolor"].red').val(chroma(x).get('rgb.r') );
+$('input[type="range"][name="contentcolor"].green').val(chroma(x).get('rgb.g') );
+$('input[type="range"][name="contentcolor"].blue').val(chroma(x).get('rgb.b') );
+
 UpdateValue()
 }
 
 function PickColor5() {
-$('input[type="color"][name="border"]').val( chroma(prompt("Page Border Color", $('input[type="color"][name="border"]').val())) );
+var x= prompt("Page Border Color", chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border")));
+
+$('input[type="range"][name="border"].red').val(chroma(x).get('rgb.r') );
+$('input[type="range"][name="border"].green').val(chroma(x).get('rgb.g') );
+$('input[type="range"][name="border"].blue').val(chroma(x).get('rgb.b') );
+
 UpdateValue()
 }
 
 function PickColor6() {
-$('input[type="color"][name="linkcolor"]').val( chroma(prompt("Page Link Color", $('input[type="color"][name="linkcolor"]').val())) );
+var x= prompt("Page Link Color", chroma('rgb(' + getComputedStyle(document.querySelector('html')).getPropertyValue("--link-color") + ')'));
+
+$('input[type="range"][name="linkcolor"].red').val(chroma(x).get('rgb.r') );
+$('input[type="range"][name="linkcolor"].green').val(chroma(x).get('rgb.g') );
+$('input[type="range"][name="linkcolor"].blue').val(chroma(x).get('rgb.b') );
 UpdateValue()
 }
 
 function PickColor7() {
-$('input[type="color"][name="buttoncolor"]').val( chroma(prompt("Page Button Color", $('input[type="color"][name="buttoncolor"]').val())) );
+var x= prompt("Page Button Color", chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--button-color")));
+
+$('input[type="range"][name="buttoncolor"].red').val(chroma(x).get('rgb.r') );
+$('input[type="range"][name="buttoncolor"].green').val(chroma(x).get('rgb.g') );
+$('input[type="range"][name="buttoncolor"].blue').val(chroma(x).get('rgb.b') );
 UpdateValue()
+}
+
+function UpdateSet() {
+/* Background */
+$('input[type="range"][name="bg"].red').val(chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--background-color")).get('rgb.r') );
+$('input[type="range"][name="bg"].green').val( chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--background-color")).get('rgb.g') );
+$('input[type="range"][name="bg"].blue').val( chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--background-color")).get('rgb.b') );
+
+/* Header */
+var header_color =	'rgb(' + getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg") + ')';
+$('input[type="range"][name="header"].red').val(chroma(header_color).get('rgb.r') );
+$('input[type="range"][name="header"].green').val( chroma(header_color).get('rgb.g') );
+$('input[type="range"][name="header"].blue').val( chroma(header_color).get('rgb.b') );
+
+
+/* Page Background */
+$('input[type="range"][name="contentbg"].red').val(chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--content-bg")).get('rgb.r') );
+$('input[type="range"][name="contentbg"].green').val( chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--content-bg")).get('rgb.g') );
+$('input[type="range"][name="contentbg"].blue').val( chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--content-bg")).get('rgb.b') );
+
+/* Page Text */
+$('input[type="range"][name="contentcolor"].red').val(chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color")).get('rgb.r') );
+$('input[type="range"][name="contentcolor"].green').val( chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color")).get('rgb.g') );
+$('input[type="range"][name="contentcolor"].blue').val( chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color")).get('rgb.b') );
+
+/* Page Border */
+$('input[type="range"][name="border"].red').val(chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border")).get('rgb.r') );
+$('input[type="range"][name="border"].green').val( chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border")).get('rgb.g') );
+$('input[type="range"][name="border"].blue').val( chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border")).get('rgb.b') );
+
+/* Page Link */
+var link_color =	'rgb(' + getComputedStyle(document.querySelector('html')).getPropertyValue("--link-color") + ')';
+$('input[type="range"][name="linkcolor"].red').val(chroma(link_color).get('rgb.r') );
+$('input[type="range"][name="linkcolor"].green').val( chroma(link_color).get('rgb.g') );
+$('input[type="range"][name="linkcolor"].blue').val( chroma(link_color).get('rgb.b') );
+
+
+/* Page Button */
+$('input[type="range"][name="buttoncolor"].red').val(chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--button-color")).get('rgb.r') );
+$('input[type="range"][name="buttoncolor"].green').val( chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--button-color")).get('rgb.g') );
+$('input[type="range"][name="buttoncolor"].blue').val( chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--button-color")).get('rgb.b') );
+
 }
 
 
 function UpdateValue() {
-var linkcolor1final = chroma($('input[type="color"][name="linkcolor"]').val()).get('rgb.r') + ',' + chroma($('input[type="color"][name="linkcolor"]').val()).get('rgb.g') + ',' + chroma($('input[type="color"][name="linkcolor"]').val()).get('rgb.b'); 
-var headercolorfinal = chroma($('input[type="color"][name="header"]').val()).get('rgb.r') + ',' + chroma($('input[type="color"][name="header"]').val()).get('rgb.g') + ',' + chroma($('input[type="color"][name="header"]').val()).get('rgb.b'); 
+var linkcolor1final = $('input[type="range"][name="linkcolor"].red').val() + ',' + $('input[type="range"][name="linkcolor"].green').val() + ',' + $('input[type="range"][name="linkcolor"].blue').val(); ; 
+var headercolorfinal = $('input[type="range"][name="header"].red').val() + ',' + $('input[type="range"][name="header"].green').val() + ',' + $('input[type="range"][name="header"].blue').val(); 
 
+
+/* Processing */
 	if ($("html.theme-A").length) {
 		$("style.designer-style.theme-A").append(
 		'.theme-A:not(.win10) {' +
-		'--background-color:' + $('input[type="color"][name="bg"]').val() + '!important;' +
+		'--background-color:' + chroma('rgb(' + $('input[type="range"][name="bg"].red').val() + ',' + $('input[type="range"][name="bg"].green').val() + ',' + $('input[type="range"][name="bg"].blue').val() + ')') + '!important;' +
 		'--link-color:' + linkcolor1final + '!important;' +
-		'--content-bg:' + $('input[type="color"][name="contentbg"]').val() + '!important;' +
-		'--content-border:' + $('input[type="color"][name="border"]').val() + '!important;' +
-		'--content-color:' + $('input[type="color"][name="contentcolor"]').val() + '!important;' +
-		'--button-color:' + $('input[type="color"][name="buttoncolor"]').val() + '!important;' +
+		'--content-bg:' + chroma('rgb(' + $('input[type="range"][name="contentbg"].red').val() + ',' + $('input[type="range"][name="contentbg"].green').val() + ',' + $('input[type="range"][name="contentbg"].blue').val() + ')') + '!important;' +
+		'--content-border:' + chroma('rgb(' + $('input[type="range"][name="border"].red').val() + ',' + $('input[type="range"][name="border"].green').val() + ',' + $('input[type="range"][name="border"].blue').val() + ')') + '!important;' +
+		'--content-color:' + chroma('rgb(' + $('input[type="range"][name="contentcolor"].red').val() + ',' + $('input[type="range"][name="contentcolor"].green').val() + ',' + $('input[type="range"][name="contentcolor"].blue').val() + ')') + '!important;' +
+		'--button-color:' + chroma('rgb(' + $('input[type="range"][name="buttoncolor"].red').val() + ',' + $('input[type="range"][name="buttoncolor"].green').val() + ',' + $('input[type="range"][name="buttoncolor"].blue').val() + ')') + '!important;' +
 		'--community-header-bg:' + headercolorfinal + '!important;' +
 		'}'
 		);	
@@ -231,12 +338,12 @@ var headercolorfinal = chroma($('input[type="color"][name="header"]').val()).get
 	if ($("html.theme-B").length) {
 		$("style.designer-style.theme-B").append(
 		'.theme-B:not(.win10) {' +
-		'--background-color:' + $('input[type="color"][name="bg"]').val() + '!important;' +
+		'--background-color:' + chroma('rgb(' + $('input[type="range"][name="bg"].red').val() + ',' + $('input[type="range"][name="bg"].green').val() + ',' + $('input[type="range"][name="bg"].blue').val() + ')') + '!important;' +
 		'--link-color:' + linkcolor1final + '!important;' +
-		'--content-bg:' + $('input[type="color"][name="contentbg"]').val() + '!important;' +
-		'--content-border:' + $('input[type="color"][name="border"]').val() + '!important;' +
-		'--content-color:' + $('input[type="color"][name="contentcolor"]').val() + '!important;' +
-		'--button-color:' + $('input[type="color"][name="buttoncolor"]').val() + '!important;' +
+		'--content-bg:' + chroma('rgb(' + $('input[type="range"][name="contentbg"].red').val() + ',' + $('input[type="range"][name="contentbg"].green').val() + ',' + $('input[type="range"][name="contentbg"].blue').val() + ')') + '!important;' +
+		'--content-border:' + chroma('rgb(' + $('input[type="range"][name="border"].red').val() + ',' + $('input[type="range"][name="border"].green').val() + ',' + $('input[type="range"][name="border"].blue').val() + ')') + '!important;' +
+		'--content-color:' + chroma('rgb(' + $('input[type="range"][name="contentcolor"].red').val() + ',' + $('input[type="range"][name="contentcolor"].green').val() + ',' + $('input[type="range"][name="contentcolor"].blue').val() + ')') + '!important;' +
+		'--button-color:' + chroma('rgb(' + $('input[type="range"][name="buttoncolor"].red').val() + ',' + $('input[type="range"][name="buttoncolor"].green').val() + ',' + $('input[type="range"][name="buttoncolor"].blue').val() + ')') + '!important;' +
 		'--community-header-bg:' + headercolorfinal + '!important;' +
 		'}'
 		);	
@@ -245,12 +352,12 @@ var headercolorfinal = chroma($('input[type="color"][name="header"]').val()).get
 	if ($("html.theme-C").length) {
 		$("style.designer-style.theme-C").append(
 		'.theme-C:not(.win10) {' +
-		'--background-color:' + $('input[type="color"][name="bg"]').val() + '!important;' +
+		'--background-color:' + chroma('rgb(' + $('input[type="range"][name="bg"].red').val() + ',' + $('input[type="range"][name="bg"].green').val() + ',' + $('input[type="range"][name="bg"].blue').val() + ')') + '!important;' +
 		'--link-color:' + linkcolor1final + '!important;' +
-		'--content-bg:' + $('input[type="color"][name="contentbg"]').val() + '!important;' +
-		'--content-border:' + $('input[type="color"][name="border"]').val() + '!important;' +
-		'--content-color:' + $('input[type="color"][name="contentcolor"]').val() + '!important;' +
-		'--button-color:' + $('input[type="color"][name="buttoncolor"]').val() + '!important;' +
+		'--content-bg:' + chroma('rgb(' + $('input[type="range"][name="contentbg"].red').val() + ',' + $('input[type="range"][name="contentbg"].green').val() + ',' + $('input[type="range"][name="contentbg"].blue').val() + ')') + '!important;' +
+		'--content-border:' + chroma('rgb(' + $('input[type="range"][name="border"].red').val() + ',' + $('input[type="range"][name="border"].green').val() + ',' + $('input[type="range"][name="border"].blue').val() + ')') + '!important;' +
+		'--content-color:' + chroma('rgb(' + $('input[type="range"][name="contentcolor"].red').val() + ',' + $('input[type="range"][name="contentcolor"].green').val() + ',' + $('input[type="range"][name="contentcolor"].blue').val() + ')') + '!important;' +
+		'--button-color:' + chroma('rgb(' + $('input[type="range"][name="buttoncolor"].red').val() + ',' + $('input[type="range"][name="buttoncolor"].green').val() + ',' + $('input[type="range"][name="buttoncolor"].blue').val() + ')') + '!important;' +
 		'--community-header-bg:' + headercolorfinal + '!important;' +
 		'}'
 		);	
@@ -259,17 +366,21 @@ var headercolorfinal = chroma($('input[type="color"][name="header"]').val()).get
 	if ($("html.theme-D").length) {
 		$("style.designer-style.theme-D").append(
 		'.theme-D:not(.win10) {' +
-		'--background-color:' + $('input[type="color"][name="bg"]').val() + '!important;' +
+		'--background-color:' + chroma('rgb(' + $('input[type="range"][name="bg"].red').val() + ',' + $('input[type="range"][name="bg"].green').val() + ',' + $('input[type="range"][name="bg"].blue').val() + ')') + '!important;' +
 		'--link-color:' + linkcolor1final + '!important;' +
-		'--content-bg:' + $('input[type="color"][name="contentbg"]').val() + '!important;' +
-		'--content-border:' + $('input[type="color"][name="border"]').val() + '!important;' +
-		'--content-color:' + $('input[type="color"][name="contentcolor"]').val() + '!important;' +
-		'--button-color:' + $('input[type="color"][name="buttoncolor"]').val() + '!important;' +
+		'--content-bg:' + chroma('rgb(' + $('input[type="range"][name="contentbg"].red').val() + ',' + $('input[type="range"][name="contentbg"].green').val() + ',' + $('input[type="range"][name="contentbg"].blue').val() + ')') + '!important;' +
+		'--content-border:' + chroma('rgb(' + $('input[type="range"][name="border"].red').val() + ',' + $('input[type="range"][name="border"].green').val() + ',' + $('input[type="range"][name="border"].blue').val() + ')') + '!important;' +
+		'--content-color:' + chroma('rgb(' + $('input[type="range"][name="contentcolor"].red').val() + ',' + $('input[type="range"][name="contentcolor"].green').val() + ',' + $('input[type="range"][name="contentcolor"].blue').val() + ')') + '!important;' +
+		'--button-color:' + chroma('rgb(' + $('input[type="range"][name="buttoncolor"].red').val() + ',' + $('input[type="range"][name="buttoncolor"].green').val() + ',' + $('input[type="range"][name="buttoncolor"].blue').val() + ')') + '!important;' +
 		'--community-header-bg:' + headercolorfinal + '!important;' +
 		'}'
 		);	
 	}
+	/**/
 
+	
+	UpdateSet();
+	/* Color Update */
 	ColorUpdate();
 }
 
@@ -360,7 +471,6 @@ document.querySelector('body').style.setProperty("--button-color-blend", button_
 /* Set Values */
 document.querySelector('body').style.setProperty("--button-color-dark", buttoncolor1);
 document.querySelector('body').style.setProperty("--button-color-text", buttoncolor2);
-$('input[type="color"][name="buttoncolor"]').val(chroma(button_color));
 
 
 /** Header Color **/
@@ -384,7 +494,6 @@ document.querySelector('body').style.setProperty("--community-header-bg-blend", 
 /* Set Values */
 document.querySelector('body').style.setProperty("--community-header-dark", headercolor1final);
 document.querySelector('body').style.setProperty("--community-header-text", headercolor2);
-$('input[type="color"][name="header"]').val(chroma(header_color));
 
 /** Link Color **/
 /* Set Vars */
@@ -408,7 +517,6 @@ document.querySelector('body').style.setProperty("--link-color-blend", getComput
 /* Set Values */
 document.querySelector('body').style.setProperty("--link-color-dark", linkcolor1final);
 document.querySelector('body').style.setProperty("--link-color-text", linkcolor2);
-$('input[type="color"][name="linkcolor"]').val(chroma(link_color));
 
 /** Content Border **/
 /* Set Vars */
@@ -429,7 +537,6 @@ document.querySelector('body').style.setProperty("--content-border-blend", borde
 /* Set Values */
 document.querySelector('body').style.setProperty("--content-border-dark", bordercolor1);
 document.querySelector('body').style.setProperty("--content-border-text", bordercolor2);
-$('input[type="color"][name="border"]').val(chroma(border_color));
 
 /** Dropdown BG **/
 /* Set Vars */
@@ -452,9 +559,11 @@ var emphasiscolor2 = chroma.mix(border_color, button_color, 0.55);
 document.querySelector('body').style.setProperty("--dropdown-bg", dropdowncolor);
 document.querySelector('body').style.setProperty("--emphasis-bg", emphasiscolor);
 document.querySelector('body').style.setProperty("--accent-bg", emphasiscolor2);
-$('input[type="color"][name="bg"]').val(chroma(body_bg));
-$('input[type="color"][name="contentbg"]').val(chroma(content_color));
-$('input[type="color"][name="contentcolor"]').val(chroma(content_text));
+
+
+	if ($("body.options").length) {
+		UpdateSet()
+	}
 
 }
 
