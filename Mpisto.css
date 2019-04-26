@@ -1659,7 +1659,7 @@ input[type="range"]::-webkit-slider-thumb {
   background-color: #18bbc5;
   background-color: rgb(var(--link-color));
   box-shadow: 0 0 0 8px rgba(24, 187, 197, 0.5);
-  box-shadow: 0 0 0 8px rgba(var(--link-color), 0.5);
+  box-shadow: 0 0 0 8px rgba(var(--link-color-blend-light), 0.5);
   border: 0;
   -webkit-appearance: none;
   width: 8px;
@@ -1673,7 +1673,7 @@ input[type="range"]::-ms-thumb {
   background-color: #18bbc5;
   background-color: rgb(var(--link-color));
   box-shadow: 0 0 0 8px rgba(24, 187, 197, 0.5);
-  box-shadow: 0 0 0 8px rgba(var(--link-color), 0.5);
+  box-shadow: 0 0 0 8px rgba(var(--link-color-blend-light), 0.5);
   border: 0;
   -webkit-appearance: none;
   width: 8px;
@@ -1686,7 +1686,7 @@ input[type="range"]::-moz-range-thumb {
   background-color: #18bbc5;
   background-color: rgb(var(--link-color));
   box-shadow: 0 0 0 8px rgba(24, 187, 197, 0.5);
-  box-shadow: 0 0 0 8px rgba(var(--link-color), 0.5);
+  box-shadow: 0 0 0 8px rgba(var(--link-color-blend-light), 0.5);
   border: 0;
   -webkit-appearance: none;
   width: 8px;
@@ -1694,16 +1694,16 @@ input[type="range"]::-moz-range-thumb {
   vertical-align: middle;
 }
 input[type="range"]:active::-ms-thumb {
-  box-shadow: 0 0 0 8px rgba(24, 187, 197, 0.7);
-  box-shadow: 0 0 0 8px rgba(var(--link-color), 0.7);
+  box-shadow: 0 0 0 8px rgba(24, 187, 197, 0.6);
+  box-shadow: 0 0 0 8px rgba(var(--link-color-blend), 0.6);
 }
 input[type="range"]:active::-webkit-slider-thumb {
-  box-shadow: 0 0 0 8px rgba(24, 187, 197, 0.7);
-  box-shadow: 0 0 0 8px rgba(var(--link-color), 0.7);
+  box-shadow: 0 0 0 8px rgba(24, 187, 197, 0.6);
+  box-shadow: 0 0 0 8px rgba(var(--link-color-blend), 0.6);
 }
 input[type="range"]:active::-moz-range-thumb {
-  box-shadow: 0 0 0 8px rgba(24, 187, 197, 0.7);
-  box-shadow: 0 0 0 8px rgba(var(--link-color), 0.7);
+  box-shadow: 0 0 0 8px rgba(24, 187, 197, 0.6);
+  box-shadow: 0 0 0 8px rgba(var(--link-color-blend), 0.6);
 }
 input[type="range"]::-ms-track {
   border: 0;
@@ -1758,6 +1758,51 @@ input[type="range"]::-qq-slider-filler {
   background-color: rgb(var(--link-color));
   border: 0;
   height: 4px;
+}
+
+
+/* For Touch Devices or Phones */
+.phone input[type="range"] {
+  height: 35px;
+  min-width: 150px;
+  line-height:0;
+}
+.phone input[type="range"]::-webkit-slider-thumb {
+  width: 16px;
+  height: 16px;
+  margin-top: -4px;
+  /* Hack for Chrome and Safari */
+}
+.phone input[type="range"]::-ms-thumb {
+  width: 16px;
+  height: 16px;
+  margin-top: 0;
+  /* Needed because Edge recognizes ::-webkit-slider-thumb unfortunately and will break that browser */
+}
+.phone input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+}
+.phone input[type="range"]::-ms-track {
+  height: 8px;
+}
+.phone input[type="range"]::-webkit-slider-runnable-track {
+  height: 8px;
+}
+.phone input[type="range"]::-moz-range-track {
+  height: 8px;
+}
+.phone input[type="range"]::-ms-fill-lower {
+  height: 8px;
+}
+.phone input[type="range"]::-webkit-slider-track {
+  height: 8px;
+}
+.phone input[type="range"]::-moz-range-progress {
+  height: 8px;
+}
+.phone input[type="range"]::-qq-slider-filler {
+  height: 8px;
 }
 
 
@@ -6724,7 +6769,6 @@ border:1px solid currentColor;
 
 .mpisto-option-way.p4 .wds-button.wds-is-square {
   display:inline-block;
-  cursor:url("Windows/hand.cur"), pointer;
   padding:2px;
 }
 
@@ -6800,8 +6844,8 @@ border:1px solid currentColor;
 	width:auto;
   	color:rgb(248,248,248);
 	color:rgb(var(--community-header-text));
-	box-shadow:0 2px 12px #000, 0 -1px 2px #ccc, 0 1px 2px #ccc;
-	box-shadow:0 2px 12px var(--content-color), 0 -1px 2px var(--content-border), 0 1px 2px var(--content-border);
+	box-shadow:0 1px 14px #000, 0 -1px 2px #ccc, 0 1px 2px #ccc;
+	box-shadow:0 1px 14px var(--content-color), 0 -1px 2px var(--content-border), 0 1px 2px var(--content-border);
 	transform:translateY(-100%);
 	transition:transform 100ms;
 	border-radius:10px;
@@ -6816,7 +6860,7 @@ border:1px solid currentColor;
 
 @media (orientation:landscape) {
 .lightbox {
-	transform:translateX(100%);
+	transform:translateX(-100%);
 }
 
 .lightbox-container:target .lightbox {

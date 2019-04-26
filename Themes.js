@@ -618,6 +618,9 @@ function HCclear() {
        
        
         x.className = x.className.replace(" win10", "");
+		if ($("body.options").length) {
+			$(".win10-off").removeAttr('disabled');
+		}
 		ColorUpdate();
 }
 
@@ -630,6 +633,9 @@ function HCcustom0() {
         x.className += " win10";
     }
         x.className = x.className.replace(" basic", "");
+		if ($("body.options").length) {
+			$(".win10-off").attr('disabled', 'true');
+		}
 		ColorUpdate();
 }
 
@@ -640,6 +646,9 @@ function HCcustom() {
     }
         x.className = x.className.replace(" win10", "");
         x.className = x.className.replace(" basic", "");
+		if ($("body.options").length) {
+			$(".win10-off").removeAttr('disabled');
+		}
 		ColorUpdate();
 }
 
@@ -650,6 +659,8 @@ function HCcustom2() {
     }
         x.className = x.className.replace(" contrast", "");
         x.className = x.className.replace(" win10", "");
-
+		if ($("body.options").length) {
+			$(".win10-off").removeAttr('disabled');
+		}
 		ColorUpdate();
 }
