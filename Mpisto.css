@@ -3812,7 +3812,6 @@ content:":"
 }
 
 .mpisto-page-header {
-padding: 0 0 10px;
 border-bottom:1px solid #ccc;
 border-bottom:1px solid var(--content-border);
 display:flex;
@@ -3822,6 +3821,9 @@ align-items:flex-start;
 justify-content:flex-end;
 position:relative;
 z-index:6;
+margin:0 -19px 0;
+background-color:#03a2ac;
+background-color:var(--button-color-blend);
 }
 
 .mpisto-page-header-main {
@@ -3855,12 +3857,13 @@ text-shadow:0 0 2px var(--button-color-text);
 }
 
 .mpisto-content .mpisto-page-header-title {
-border-bottom:1px solid #ccc;
+/*border-bottom:1px solid #ccc;
 border-bottom:1px solid var(--content-border);
+*/
 display:-ms-flexbox;
 display:flex;
 line-height:1.35;
-margin:0px -19px 8px;
+margin:0;
 padding:8px 19px;
 align-items:center;
 	background-color:#18bbc5;
@@ -3874,42 +3877,18 @@ flex-wrap:wrap;
 background-clip:padding-box;
 }
 
-.mpisto-page-header-title .wds-button:not(.wds-is-secondary):not(.wds-is-text) {
-	color:#18bbc5;
-	color:var(--button-color);
-	background-color:#000;
-	background-color:var(--button-color-text);
-	border-color:#000;
-	border-color:var(--button-color-text);
-	transition-property:opacity;
-	transition-duration:200ms;
-}
-
-.mpisto-page-header-title .wds-button:not(.wds-is-secondary):not(.wds-is-text):hover {
-	opacity:0.8;
-}
-
-.mpisto-page-header-title .wds-button.wds-is-secondary {
-	color:currentColor;
-	border-color:currentColor;
-	transition-property:opacity;
-	transition-duration:200ms;
-}
-
-.mpisto-page-header-title .wds-button.wds-is-secondary:hover {
-	color:currentColor;
-	border-color:currentColor;
-	opacity:0.8;
-}
 
 
-.mpisto-content .mpisto-sub {
+.mpisto-content .mpisto-page-header .mpisto-sub {
 font-size:12px;
-line-height:1.1;
+line-height:1;
 font-weight:200;
 max-width:100%;
 word-wrap: break-word;
-margin-top:0;
+margin:0;
+padding:8px 18px;
+color:#000;
+color:var(--button-color-text);
 }
 
 .mpisto-page-header-contribution {
@@ -3919,17 +3898,35 @@ align-self:stretch;
 flex-direction: column;
 flex-shrink:0;
 justify-content: space-between;
-margin-left: 20px;
+padding:8px 18px;
 /*text-align:right;*/
 }
 
-/*
-.mpisto-page-header-contribution-buttons * {
-text-align:left;
-}
-*/
 
-.mpisto-page-header-contribution .wds-button.wds-is-secondary {
+.mpisto-page-header-contribution-buttons {
+margin-left: 20px;
+}
+
+
+.mpisto-page-header .wds-button {
+	border-color:#ccc;
+	border-color:var(--content-border);
+	background-color:#ccc;
+	background-color:var(--content-border);
+	color:#000;
+	color:var(--content-border-text)
+}
+
+.mpisto-page-header .wds-button:hover, .mpisto-page-header .wds-button:active, .mpisto-page-header .wds-button:focus {
+	border-color:#b3b3b3;
+	border-color:var(--content-border-dark);
+	background-color:#b3b3b3;
+	background-color:var(--content-border-dark);
+	color:#000;
+	color:var(--content-border-text)
+}
+
+.mpisto-page-header .wds-button.wds-is-secondary {
 	border-color:#ccc;
 	border-color:var(--content-border);
 	color:#ccc;
@@ -3937,7 +3934,7 @@ text-align:left;
 }
 
 
-.mpisto-page-header-contribution .wds-button.wds-is-secondary:hover, .mpisto-page-header-contribution .wds-button.wds-is-secondary:focus {
+.mpisto-page-header .wds-button.wds-is-secondary:hover, .mpisto-page-header .wds-button.wds-is-secondary:active, .mpisto-page-header .wds-button.wds-is-secondary:focus {
 	border-color:#b3b3b3;
 	border-color:var(--content-border-dark);
 	color:#b3b3b3;
@@ -3945,16 +3942,52 @@ text-align:left;
 }
 
 
-.mpisto-page-header-contribution .wds-button.wds-is-text {
+.mpisto-page-header .wds-button.wds-is-text {
 	color:#ccc;
 	color:var(--content-border);
 }
 
 
-.mpisto-page-header-contribution .wds-button.wds-is-text:hover, .mpisto-page-header-contribution .wds-button.wds-is-text:focus {
+.mpisto-page-header .wds-button.wds-is-text:hover, .mpisto-page-header .wds-button.wds-is-text:active,  .mpisto-page-header .wds-button.wds-is-text:focus {
 	color:#b3b3b3;
 	color:var(--content-border-dark);
 }
+
+.mpisto-page-header .wds-button-group>.wds-button:not(.wds-is-secondary):not(:hover):not(:last-child), .mpisto-page-header .wds-button-group>.wds-dropdown:not(:last-child) .wds-button:not(.wds-is-secondary):not(:hover) {
+border-right-color:var(--button-color-blend);
+border-right-width:1px;
+border-right-style:solid
+}
+.mpisto-page-header .wds-button-group>.wds-button:not(.wds-is-secondary):not(:hover):not(:first-child), .mpisto-page-header .wds-button-group>.wds-dropdown:not(:first-child) .wds-button:not(.wds-is-secondary):not(:hover) {
+border-left-color:var(--button-color-blend);
+border-left-width:1px;
+border-left-style:solid
+}
+
+.mpisto-page-header .wds-button-groups > .wds-button-group:last-child:not(:first-child):not(:only-child) > .wds-button:not(:hover):not(.wds-is-secondary),
+.mpisto-page-header .wds-button-groups > .wds-button-group:last-child:not(:first-child):not(:only-child) > .wds-dropdown .wds-button:not(:hover):not(.wds-is-secondary) {
+	border-top-color:var(--button-color-blend);
+	border-top-width:1px;
+	border-top-style:solid;
+}
+
+.mpisto-page-header .wds-button-groups > .wds-button-group:not(:last-child):first-child:not(:only-child) > .wds-button:not(:hover):not(.wds-is-secondary),
+.mpisto-page-header .wds-button-groups > .wds-button-group:not(:last-child):first-child:not(:only-child) > .wds-dropdown .wds-button:not(:hover):not(.wds-is-secondary) {
+	border-bottom-color:var(--button-color-blend);
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+}
+
+.mpisto-page-header .wds-button-groups > .wds-button-group:not(:last-child):not(:first-child):not(:only-child) > .wds-button:not(:hover):not(.wds-is-secondary),
+.mpisto-page-header .wds-button-groups > .wds-button-group:not(:last-child):not(:first-child):not(:only-child) > .wds-dropdown .wds-button:not(:hover):not(.wds-is-secondary) {
+	border-top-color:var(--button-color-blend);
+	border-top-width:1px;
+	border-top-style:solid;
+	border-bottom-color:var(--button-color-blend);
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+}
+
 
 
 .mpisto-article-wrapper {
