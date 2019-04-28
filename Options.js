@@ -42,6 +42,10 @@ function Widescreen2() {
     }
 }
 
+function Cursor(cur) {
+	$("body").attr("cursor", cur);
+}
+
 
 /* Some JS for some older browsers */
 if (!CSS.supports('(flex-wrap:wrap)')) {
