@@ -3120,7 +3120,7 @@ background-color:#fff;
 background-color:var(--content-bg);
 width:100%;
 height:100%;
-opacity:0.9;
+opacity:0.85;
 content:"";
 border-radius:inherit;
 /*-webkit-backdrop-filter:blur(5px) contrast(110%) saturate(110%);
@@ -3187,7 +3187,7 @@ backdrop-filter:blur(5px) contrast(110%) saturate(110%);
 	display:flex;
 	align-items:center;
 	margin:0 0 8px;
-	font-size:36px;
+	font-size:34px;
 	font-weight:700;
 }
 
@@ -3254,8 +3254,8 @@ position:absolute;
 top:0;
 left:0;
 z-index:-1;
-background-color:#fff;
-background-color:var(--content-bg);
+background-color:#000;
+background-color:var(--content-color);
 width:100%;
 height:100%;
 opacity:0.25;
@@ -3264,7 +3264,6 @@ border-radius:inherit;
 /*-webkit-backdrop-filter:blur(5px) contrast(110%) saturate(110%);
 backdrop-filter:blur(5px) contrast(110%) saturate(110%);
 */border-radius:inherit;
-filter:invert(1);
 }
 
 
@@ -3358,13 +3357,13 @@ left:0;
 	font-size:11px;
 	padding:6px 5px;
 	line-height:13px;
-	color:#18bbc5;
-	color:rgb(var(--link-color));
+	color:#ccc;
+	color:var(--content-border);
 }
 
 .mpisto-spotlight-footer nav item .general .wds-button.wds-is-text:hover {
-	color:#fff;
-	color:var(--content-bg);
+	color:#b3b3b3;
+	color:var(--content-border-dark);
 }
 
 .mpisto-spotlight-footer nav item ul {
@@ -3495,21 +3494,21 @@ left:0;
 .mpisto-spotlight-footer nav item div .wds-button.wds-is-full-width {
 	flex:1;
 	margin:0 8px 8px;
-	color:#92DFE4;
-	color:var(--emphasis-bg);
-	border-color:#18bbc5;
-	border-color:rgb(var(--link-color));
-	background-color:#18bbc5;
-	background-color:rgb(var(--link-color));
+	color:#000;
+	color:var(--content-border-text);
+	border-color:#ccc;
+	border-color:var(--content-border);
+	background-color:#ccc;
+	background-color:var(--content-border);
 }
 
 .mpisto-spotlight-footer nav item div .wds-button.wds-is-full-width:hover, .mpisto-spotlight-footer nav item div .wds-button.wds-is-full-width:focus {
 /*	color:#92DFE4;
 	color:var(--emphasis-bg);
-*/	border-color:#fff;
-	border-color:var(--content-bg);
-	background-color:#fff;
-	background-color:var(--content-bg);
+*/	border-color:#b3b3b3;
+	border-color:var(--content-border-dark);
+	background-color:#b3b3b3;
+	background-color:var(--content-border-dark);
 }
 
 .mpisto-userpages-actions {
