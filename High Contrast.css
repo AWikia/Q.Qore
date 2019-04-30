@@ -553,13 +553,10 @@ color:inherit;
 }
 
 
-.contrast .mpisto-option-way h1, .contrast .editor-header {
-	background-image:none;
-}
-
-.contrast .mpisto-content .mpisto-page-header-title {
+.contrast .mpisto-option-way h1, .contrast .editor-header, .contrast .mpisto-content .mpisto-page-header-title {
 	background-image:linear-gradient(to bottom, var(--button-color-blend-light) 0%, var(--button-color-blend-light) 50%,  var(--button-color-blend) 0%, var(--button-color-blend) 100%);
 }
+
 .contrast .editor-controls {
 	border-color:var(--content-color);
 }

@@ -1,9 +1,13 @@
-﻿(function () {
+﻿window.MW18auto = true;
+(function () {
 document.querySelector('html').className += " theme-A"; // We begin with the first theme selected
 ColorUpdate();
 	if ($("body.options").length) {
 		UpdateSet()
 	}
+		$('body').attr("cursor", "mpisto");
+		CursorT('auto');
+		
 })();
 
 
@@ -23,12 +27,32 @@ function UpdateSitename() {
 	}
 }
 
+function CursorT(theme) {
+	if (theme === 'auto') {
+		window.MW18auto = true;
+	}	else {
+			$('body').attr("curtheme", theme);
+			window.MW18auto = false;
+	}
+   if (window.MW18auto === true) {
+		var body_bg =	getComputedStyle(document.querySelector('html')).getPropertyValue("--content-bg");
+		if ((chroma(body_bg).get('lab.l')) > 54) {
+			$('body').attr("curtheme", "light")
+		} else {
+			$('body').attr("curtheme", "dark")
+		}
+	}
+
+
+}
+
 function UploadPicture1(files) {
 window.URL = window.URL || window.webkitURL;
 const img = document.createElement("img");
 img.src = window.URL.createObjectURL(files[0]);
 
 if (files[0].size > 1000000) {
+	console.error("Image is too big. Please pick another one.");
 	alert("Image is too big. Please pick another one.");
 	return
 }
@@ -76,6 +100,7 @@ img.src = window.URL.createObjectURL(files[0]);
 
 
 if (files[0].size > 1000000) {
+	console.error("Image is too big. Please pick another one.");
 	alert("Image is too big. Please pick another one.");
 	return
 }
@@ -94,6 +119,7 @@ img.height = 115;
 
 
 if (files[0].size > 1000000) {
+	console.error("Image is too big. Please pick another one.");
 	alert("Image is too big. Please pick another one.");
 	return
 }
@@ -117,6 +143,7 @@ img.height = 115;
 
 
 if (files[0].size > 1000000) {
+	console.error("Image is too big. Please pick another one.");
 	alert("Image is too big. Please pick another one.");
 	return
 }
@@ -559,8 +586,9 @@ var emphasiscolor2 = chroma.mix(border_color, button_color, 0.55);
 document.querySelector('body').style.setProperty("--dropdown-bg", dropdowncolor);
 document.querySelector('body').style.setProperty("--emphasis-bg", emphasiscolor);
 document.querySelector('body').style.setProperty("--accent-bg", emphasiscolor2);
-
-
+if (window.MW18auto === true) {
+CursorT('auto');
+}
 	if ($("body.options").length) {
 		UpdateSet()
 	}

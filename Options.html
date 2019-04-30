@@ -430,26 +430,6 @@ document.getElementById("Handler").className += " mpisto-servers"
     </fieldset>
     </div>
 
-    <div class="fieldset cursors">
-    <fieldset>     
-     <legend>Cursor Style</legend>
-    <input type="radio" name="cur" id="cur-0" onclick="Cursor('mpisto')" checked></input><label for="cur-0">Normal</label>
-	<br>
-    <input type="radio" name="cur" id="cur-1" onclick="Cursor('mpistod')"></input><label for="cur-1">Normal Dark</label>
-	<br>
-    <input type="radio" name="cur" id="cur-2" onclick="Cursor('mpisto2d')"></input><label for="cur-2">Mpisto OS</label>
-	<br>
-    <input type="radio" name="cur" id="cur-3" onclick="Cursor('mpisto2')"></input><label for="cur-3">Mpisto OS Dark</label>
-	<br>
-    <input type="radio" name="cur" id="cur-4" onclick="Cursor('linux')"></input><label for="cur-4">Ubuntu Linux</label>
-	<br>
-    <input type="radio" name="cur" id="cur-5" onclick="Cursor('linuxd')"></input><label for="cur-5">Ubuntu Linux Dark</label>
- 	<br>
-    <input type="radio" name="cur" id="cur-6" onclick="Cursor('apple')"></input><label for="cur-6">Apple macOS</label>
-	<br>
-    <input type="radio" name="cur" id="cur-7" onclick="Cursor('none')"></input><label for="cur-7">System Defaults</label>
-    </fieldset>
-    </div>
 
 
     <div class="fieldset">
@@ -1171,6 +1151,40 @@ Checked = VisualEditor as default mode
     <div class="contrastnotice">
     Your browser does not support CSS variables which are required for High Contrast Mode to work
     </div>
+    </fieldset>
+    </div>
+
+    <div class="fieldset cursors">
+    <fieldset>     
+     <legend>Cursors</legend>
+    <div class="fieldset cursors">
+    <fieldset>     
+     <legend>Cursor Style</legend>
+    <input type="radio" name="cur" id="cur-0" onclick="Cursor('mpisto')" checked></input><label for="cur-0">Normal</label>
+	<br>
+    <input type="radio" name="cur" id="cur-1" onclick="Cursor('mpisto2d')"></input><label for="cur-1">Mpisto OS</label>
+	<br>
+    <input type="radio" name="cur" id="cur-2" onclick="Cursor('linux')"></input><label for="cur-2">Ubuntu Linux</label>
+ 	<br>
+    <input type="radio" name="cur" id="cur-3" onclick="Cursor('apple')"></input><label for="cur-3">Apple macOS</label>
+	<br>
+    <input type="radio" name="cur" id="cur-4" onclick="Cursor('none')"></input><label for="cur-4">System Defaults</label>
+    </fieldset>
+    </div>
+
+    <div class="fieldset cursors">
+    <fieldset>     
+     <legend>Cursor Theme</legend>
+    <input type="radio" name="cur1" id="cur-5" onclick="CursorT('auto')" checked title="Forces Light Cursor theme"></input><label for="cur-5" title="Picks the best cursor theme based on the theme currently used">Auto</label>
+	<br>
+    <input type="radio" name="cur1" id="cur-6" onclick="CursorT('light')" title="Forces Light Cursor theme"></input><label for="cur-6" title="Forces Light Cursor theme">Light</label>
+	<br>
+    <input type="radio" name="cur1" id="cur-7" onclick="CursorT('dark')" title="Forces Light Cursor theme"></input><label for="cur-7" title="Forces Dark Cursor theme">Dark</label>
+    <br>
+    <small>This option has no effect on MacOS and System cursors</small>
+    </fieldset>
+    </div>
+
     </fieldset>
     </div>
 

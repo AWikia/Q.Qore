@@ -460,7 +460,8 @@ text-shadow:0 0 1px rgba(255,0,0,0.1), 0 0 1px rgba(0,255,0,0.1), 0 0 1px rgba(0
 ::selection {
 	background-color:rgba(24,187,197, 0.5);
 background-color:rgba(var(--link-color-dark), 0.5);
-
+cursor:inherit;
+text-shadow:none;
 }
 
 .serif body { /* Noto Sans */
@@ -663,9 +664,8 @@ background-image:none!Important;
 
 
 .accent	{
-
-	background-color: #92DFE4;
-	background-color:var(--emphasis-bg);
+	background-color:#69c3d0;
+	background-color:var(--accent-bg);
 	border-color: #18bbc5;
 	border-color:rgb(var(--link-color));
 	color: #000;
@@ -673,7 +673,6 @@ background-image:none!Important;
 }
 
 .neutral {
-
 	background-color: #ccc;
 	background-color: var(--content-border);
 	border-color: #18bbc5;
@@ -695,11 +694,10 @@ body:not(.editor) .mpisto-article floatingbanner .wds-banner-notification__conta
 	display:none!important;
 }
 
-/* Monaco-Compatibility */
 
 
 floatingbanner {
-all:initial!important; /* IE and Edge do not support this but anyways -_- */
+all:initial!important;
 }
 
 abbr[title] {
@@ -716,8 +714,6 @@ letter-spacing:normal; /* Drops the inheritance of letter-spacing in Linux and A
 word-spacing:normal; /* Drops the inheritance of word-spacing in Linux and Android Qorta Qorte */
 box-shadow:none;
 text-shadow:none;
-/* mInerva Specific Code */
-(M)-webkit-user-select:all;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -7545,30 +7541,7 @@ left:100%;padding:10px 14px; position:absolute; top:-1px; font-size:0.8em;}
 }
 
 
-/* Disable custom cursors for Smart TVs because it fall backs to normal ones */
-[cursor*="none"] {
-  cursor:auto;
-}
 
-[cursor*="none"] abbr[title] {
-  cursor:help;
-}
-
-[cursor*="none"] :not(.unset)[disabled], :not(.unset):disabled {
-cursor:not-allowed!important;
-}
-
-[cursor*="none"] textarea, [cursor*="none"] [contenteditable], [cursor*="none"] header.mpisto-navbar .search .search-input, [cursor*="none"] .mpisto-input {
-  cursor:text;
-}
-
-[cursor*="none"] .wds-dropdown .link, [cursor*="none"] .wds-button, [cursor*="none"] .wds-button:disabled, [cursor*="none"] .wds-is-disabled, [cursor*="none"] .wds-community-header__local-navigation a[href="#"], [cursor*="none"] .wds-tabs__tab {
-  cursor:default;
-}
-
-[cursor*="none"] a:hover, [cursor*="none"] .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), [cursor*="none"] .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), [cursor*="none"] a.wds-button, [cursor*="none"] button.wds-button, [cursor*="none"] .editor-header .wordmark, [cursor*="none"] .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, [cursor*="none"] .wds-banner-notification__close, [cursor*="none"] a label, [cursor*="none"] a input[type="checkbox"], [cursor*="none"] a input[type="radio"], [cursor*="none"] .wds-floating-button:not([disabled]), [cursor*="none"] .wds-floating-button:not(.wds-is-disabled), [cursor*="none"] .wds-dropdown .wds-dropdown__toggle {
-cursor:pointer;
-}
 
 /* OS X Cursors */
 [cursor*="apple"] {
@@ -7595,7 +7568,56 @@ cursor:url("OSX/banned.cur"), not-allowed!important;
 cursor:url("OSX/hand.cur"), pointer;
 }
 
+
+[cursor*="apple"][curtheme*="dark"] {
+  cursor:url("OSX/default.cur"), auto;
+}
+
+[cursor*="apple"][curtheme*="dark"] abbr[title] {
+  cursor:url("OSX/help.cur"), help;
+}
+
+[cursor*="apple"][curtheme*="dark"] :not(.unset)[disabled], :not(.unset):disabled {
+cursor:url("OSX/banned.cur"), not-allowed!important;
+}
+
+[cursor*="apple"][curtheme*="dark"] textarea, [cursor*="apple"][curtheme*="dark"] [contenteditable], [cursor*="apple"][curtheme*="dark"] header.mpisto-navbar .search .search-input, [cursor*="apple"][curtheme*="dark"] .mpisto-input {
+  cursor:url("OSX/text.cur"), text;
+}
+
+[cursor*="apple"][curtheme*="dark"] .wds-dropdown .link, [cursor*="apple"][curtheme*="dark"] .wds-button, [cursor*="apple"][curtheme*="dark"] .wds-button:disabled, [cursor*="apple"][curtheme*="dark"] .wds-is-disabled, [cursor*="apple"][curtheme*="dark"] .wds-community-header__local-navigation a[href="#"], [cursor*="apple"][curtheme*="dark"] .wds-tabs__tab, [cursor*="apple"][curtheme*="dark"] label {
+  cursor:url("OSX/default.cur"), default;
+}
+
+[cursor*="apple"][curtheme*="dark"] a, [cursor*="apple"][curtheme*="dark"] a:hover, [cursor*="apple"][curtheme*="dark"] .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), [cursor*="apple"][curtheme*="dark"] .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), [cursor*="apple"][curtheme*="dark"] a.wds-button, [cursor*="apple"][curtheme*="dark"] button.wds-button, [cursor*="apple"][curtheme*="dark"] .editor-header .wordmark, [cursor*="apple"][curtheme*="dark"] .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, [cursor*="apple"][curtheme*="dark"] .wds-banner-notification__close, [cursor*="apple"][curtheme*="dark"] a label, [cursor*="apple"][curtheme*="dark"] a input[type="checkbox"], [cursor*="apple"][curtheme*="dark"] a input[type="radio"], [cursor*="apple"][curtheme*="dark"] .wds-floating-button:not([disabled]), [cursor*="apple"][curtheme*="dark"] .wds-floating-button:not(.wds-is-disabled), [cursor*="apple"][curtheme*="dark"] .wds-dropdown .wds-dropdown__toggle {
+cursor:url("OSX/hand.cur"), pointer;
+}
+
 /* Linux Cursors */
+[cursor*="linux"][curtheme*="dark"] {
+  cursor:url("Lenux/Ddefault.cur"), auto;
+}
+
+[cursor*="linux"][curtheme*="dark"] abbr[title] {
+  cursor:url("Lenux/Dhelp.cur"), help;
+}
+
+[cursor*="linux"][curtheme*="dark"] :not(.unset)[disabled], :not(.unset):disabled {
+cursor:url("Lenux/Dbanned.cur"), not-allowed!important;
+}
+
+[cursor*="linux"][curtheme*="dark"] textarea, [cursor*="linux"][curtheme*="dark"] [contenteditable], [cursor*="linux"][curtheme*="dark"] header.mpisto-navbar .search .search-input, [cursor*="linux"][curtheme*="dark"] .mpisto-input {
+  cursor:url("Lenux/Dtext.cur"), text;
+}
+
+[cursor*="linux"][curtheme*="dark"] .wds-dropdown .link, [cursor*="linux"][curtheme*="dark"] .wds-button, [cursor*="linux"][curtheme*="dark"] .wds-button:disabled, [cursor*="linux"][curtheme*="dark"] .wds-is-disabled, [cursor*="linux"][curtheme*="dark"] .wds-community-header__local-navigation a[href="#"], [cursor*="linux"][curtheme*="dark"] .wds-tabs__tab, [cursor*="linux"][curtheme*="dark"] label {
+  cursor:url("Lenux/Ddefault.cur"), default;
+}
+
+[cursor*="linux"][curtheme*="dark"] a,[cursor*="linux"][curtheme*="dark"] a:hover, [cursor*="linux"][curtheme*="dark"] .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), [cursor*="linux"][curtheme*="dark"] .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), [cursor*="linux"][curtheme*="dark"] a.wds-button, [cursor*="linux"][curtheme*="dark"] button.wds-button, [cursor*="linux"][curtheme*="dark"] .editor-header .wordmark, [cursor*="linux"][curtheme*="dark"] .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, [cursor*="linux"][curtheme*="dark"] .wds-banner-notification__close, [cursor*="linux"][curtheme*="dark"] a label, [cursor*="linux"][curtheme*="dark"] a input[type="checkbox"], [cursor*="linux"][curtheme*="dark"] a input[type="radio"], [cursor*="linux"][curtheme*="dark"] .wds-floating-button:not([disabled]), [cursor*="linux"][curtheme*="dark"] .wds-floating-button:not(.wds-is-disabled), [cursor*="linux"][curtheme*="dark"] .wds-dropdown .wds-dropdown__toggle {
+cursor:url("Lenux/Dhand.cur"), pointer;
+}
+
 [cursor*="linux"] {
   cursor:url("Lenux/default.cur"), auto;
 }
@@ -7608,117 +7630,143 @@ cursor:url("OSX/hand.cur"), pointer;
 cursor:url("Lenux/banned.cur"), not-allowed!important;
 }
 
-[cursor*="linux"] textarea, [cursor*="linux"] [contenteditable], [cursor*="linux"] header.mpisto-navbar .search .search-input, [cursor*="linux"] .mpisto-input {
+[cursor*="linux"] textarea, [cursor*="linuxd"] [contenteditable], [cursor*="linuxd"] header.mpisto-navbar .search .search-input, [cursor*="linuxd"] .mpisto-input {
   cursor:url("Lenux/text.cur"), text;
-}
-
-[cursor*="linux"] .wds-dropdown .link, [cursor*="linux"] .wds-button, [cursor*="linux"] .wds-button:disabled, [cursor*="linux"] .wds-is-disabled, [cursor*="linux"] .wds-community-header__local-navigation a[href="#"], [cursor*="linux"] .wds-tabs__tab, [cursor*="linux"] label {
-  cursor:url("Lenux/default.cur"), default;
-}
-
-[cursor*="linux"] a,[cursor*="linux"] a:hover, [cursor*="linux"] .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), [cursor*="linux"] .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), [cursor*="linux"] a.wds-button, [cursor*="linux"] button.wds-button, [cursor*="linux"] .editor-header .wordmark, [cursor*="linux"] .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, [cursor*="linux"] .wds-banner-notification__close, [cursor*="linux"] a label, [cursor*="linux"] a input[type="checkbox"], [cursor*="linux"] a input[type="radio"], [cursor*="linux"] .wds-floating-button:not([disabled]), [cursor*="linux"] .wds-floating-button:not(.wds-is-disabled), [cursor*="linux"] .wds-dropdown .wds-dropdown__toggle {
-cursor:url("Lenux/hand.cur"), pointer;
-}
-
-[cursor*="linuxd"] {
-  cursor:url("Lenux/Ddefault.cur"), auto;
-}
-
-[cursor*="linuxd"] abbr[title] {
-  cursor:url("Lenux/Dhelp.cur"), help;
-}
-
-[cursor*="linuxd"] :not(.unset)[disabled], :not(.unset):disabled {
-cursor:url("Lenux/Dbanned.cur"), not-allowed!important;
-}
-
-[cursor*="linuxd"] textarea, [cursor*="linuxd"] [contenteditable], [cursor*="linuxd"] header.mpisto-navbar .search .search-input, [cursor*="linuxd"] .mpisto-input {
-  cursor:url("Lenux/Dtext.cur"), text;
 }
 
 [cursor*="linuxd"] .wds-dropdown .link, [cursor*="linuxd"] .wds-button, [cursor*="linuxd"] .wds-button:disabled, [cursor*="linuxd"] .wds-is-disabled, [cursor*="linuxd"] .wds-community-header__local-navigation a[href="#"], [cursor*="linuxd"] .wds-tabs__tab, [cursor*="linuxd"] label {
   cursor:url("Lenux/Ddefault.cur"), default;
 }
 
-[cursor*="linuxd"] a,[cursor*="linuxd"] a:hover, [cursor*="linuxd"] .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), [cursor*="linuxd"] .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), [cursor*="linuxd"] a.wds-button, [cursor*="linuxd"] button.wds-button, [cursor*="linuxd"] .editor-header .wordmark, [cursor*="linuxd"] .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, [cursor*="linuxd"] .wds-banner-notification__close, [cursor*="linuxd"] a label, [cursor*="linuxd"] a input[type="checkbox"], [cursor*="linuxd"] a input[type="radio"], [cursor*="linuxd"] .wds-floating-button:not([disabled]), [cursor*="linuxd"] .wds-floating-button:not(.wds-is-disabled), [cursor*="linuxd"] .wds-dropdown .wds-dropdown__toggle {
-cursor:url("Lenux/Dhand.cur"), pointer;
+[cursor*="linux"] a,[cursor*="linux"] a:hover, [cursor*="linux"] .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), [cursor*="linux"] .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), [cursor*="linux"] a.wds-button, [cursor*="linux"] button.wds-button, [cursor*="linux"] .editor-header .wordmark, [cursor*="linux"] .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, [cursor*="linux"] .wds-banner-notification__close, [cursor*="linux"] a label, [cursor*="linux"] a input[type="checkbox"], [cursor*="linux"] a input[type="radio"], [cursor*="linux"] .wds-floating-button:not([disabled]), [cursor*="linux"] .wds-floating-button:not(.wds-is-disabled), [cursor*="linux"] .wds-dropdown .wds-dropdown__toggle {
+cursor:url("Lenux/hand.cur"), pointer;
 }
 
 /* Dark */
-[cursor*="mpistod"] {
+[cursor*="mpisto"][curtheme*="dark"] {
   cursor:url("Dark/default.cur"), auto;
 }
 
-[cursor*="mpistod"] abbr[title] {
+[cursor*="mpisto"][curtheme*="dark"] abbr[title] {
   cursor:url("Dark/help.cur"), help;
 }
 
-[cursor*="mpistod"] :not(.unset)[disabled], :not(.unset):disabled {
+[cursor*="mpisto"][curtheme*="dark"] :not(.unset)[disabled], :not(.unset):disabled {
 cursor:url("Dark/banned.cur"), not-allowed!important;
 }
 
-[cursor*="mpistod"] textarea, [cursor*="mpistod"] [contenteditable], [cursor*="mpistod"] header.mpisto-navbar .search .search-input, [cursor*="mpistod"] .mpisto-input {
+[cursor*="mpisto"][curtheme*="dark"] textarea, [cursor*="mpisto"][curtheme*="dark"] [contenteditable], [cursor*="mpisto"][curtheme*="dark"] header.mpisto-navbar .search .search-input, [cursor*="mpisto"][curtheme*="dark"] .mpisto-input {
   cursor:url("Dark/text.cur"), text;
 }
 
-[cursor*="mpistod"] .wds-dropdown .link, [cursor*="mpistod"] .wds-button, [cursor*="mpistod"] .wds-button:disabled, [cursor*="mpistod"] .wds-is-disabled, [cursor*="mpistod"] .wds-community-header__local-navigation a[href="#"], [cursor*="mpistod"] .wds-tabs__tab, [cursor*="mpistod"] label {
+[cursor*="mpisto"][curtheme*="dark"] .wds-dropdown .link, [cursor*="mpisto"][curtheme*="dark"] .wds-button, [cursor*="mpisto"][curtheme*="dark"] .wds-button:disabled, [cursor*="mpisto"][curtheme*="dark"] .wds-is-disabled, [cursor*="mpisto"][curtheme*="dark"] .wds-community-header__local-navigation a[href="#"], [cursor*="mpisto"][curtheme*="dark"] .wds-tabs__tab, [cursor*="mpisto"][curtheme*="dark"] label {
   cursor:url("Dark/default.cur"), default;
 }
 
-[cursor*="mpistod"] a,[cursor*="mpistod"] a:hover, [cursor*="mpistod"] .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), [cursor*="mpistod"] .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), [cursor*="mpistod"] a.wds-button, [cursor*="mpistod"] button.wds-button, [cursor*="mpistod"] .editor-header .wordmark, [cursor*="mpistod"] .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, [cursor*="mpistod"] .wds-banner-notification__close, [cursor*="mpistod"] a label, [cursor*="mpistod"] a input[type="checkbox"], [cursor*="mpistod"] a input[type="radio"], [cursor*="mpistod"] .wds-floating-button:not([disabled]), [cursor*="mpistod"] .wds-floating-button:not(.wds-is-disabled), [cursor*="mpistod"] .wds-dropdown .wds-dropdown__toggle {
+[cursor*="mpisto"][curtheme*="dark"] a,[cursor*="mpisto"][curtheme*="dark"] a:hover, [cursor*="mpisto"][curtheme*="dark"] .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), [cursor*="mpisto"][curtheme*="dark"] .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), [cursor*="mpisto"][curtheme*="dark"] a.wds-button, [cursor*="mpisto"][curtheme*="dark"] button.wds-button, [cursor*="mpisto"][curtheme*="dark"] .editor-header .wordmark, [cursor*="mpisto"][curtheme*="dark"] .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, [cursor*="mpisto"][curtheme*="dark"] .wds-banner-notification__close, [cursor*="mpisto"][curtheme*="dark"] a label, [cursor*="mpisto"][curtheme*="dark"] a input[type="checkbox"], [cursor*="mpisto"][curtheme*="dark"] a input[type="radio"], [cursor*="mpisto"][curtheme*="dark"] .wds-floating-button:not([disabled]), [cursor*="mpisto"][curtheme*="dark"] .wds-floating-button:not(.wds-is-disabled), [cursor*="mpisto"][curtheme*="dark"] .wds-dropdown .wds-dropdown__toggle {
 cursor:url("Dark/hand.cur"), pointer;
 }
 
 /* Mpisto OS */
 [cursor*="mpisto2"] {
-  cursor:url("Mpisto OS/default.cur"), auto;
+  cursor:url("Mpisto OS/Ddefault.cur"), auto;
 }
 
 [cursor*="mpisto2"] abbr[title] {
-  cursor:url("Mpisto OS/help.cur"), help;
+  cursor:url("Mpisto OS/Dhelp.cur"), help;
 }
 
 [cursor*="mpisto2"] :not(.unset)[disabled], :not(.unset):disabled {
-cursor:url("Mpisto OS/banned.cur"), not-allowed!important;
+cursor:url("Mpisto OS/Dbanned.cur"), not-allowed!important;
 }
 
 [cursor*="mpisto2"] textarea, [cursor*="mpisto2"] [contenteditable], [cursor*="mpisto2"] header.mpisto-navbar .search .search-input, [cursor*="mpisto2"] .mpisto-input {
-  cursor:url("Mpisto OS/text.cur"), text;
+  cursor:url("Mpisto OS/Dtext.cur"), text;
 }
 
 [cursor*="mpisto2"] .wds-dropdown .link, [cursor*="mpisto2"] .wds-button, [cursor*="mpisto2"] .wds-button:disabled, [cursor*="mpisto2"] .wds-is-disabled, [cursor*="mpisto2"] .wds-community-header__local-navigation a[href="#"], [cursor*="mpisto2"] .wds-tabs__tab, [cursor*="mpisto2"] label {
-  cursor:url("Mpisto OS/default.cur"), default;
+  cursor:url("Mpisto OS/Ddefault.cur"), default;
 }
 
 [cursor*="mpisto2"] a,[cursor*="mpisto2"] a:hover, [cursor*="mpisto2"] .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), [cursor*="mpisto2"] .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), [cursor*="mpisto2"] a.wds-button, [cursor*="mpisto2"] button.wds-button, [cursor*="mpisto2"] .editor-header .wordmark, [cursor*="mpisto2"] .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, [cursor*="mpisto2"] .wds-banner-notification__close, [cursor*="mpisto2"] a label, [cursor*="mpisto2"] a input[type="checkbox"], [cursor*="mpisto2"] a input[type="radio"], [cursor*="mpisto2"] .wds-floating-button:not([disabled]), [cursor*="mpisto2"] .wds-floating-button:not(.wds-is-disabled), [cursor*="mpisto2"] .wds-dropdown .wds-dropdown__toggle {
+cursor:url("Mpisto OS/Dhand.cur"), pointer;
+}
+
+
+[cursor*="mpisto2"][curtheme*="dark"] {
+  cursor:url("Mpisto OS/default.cur"), auto;
+}
+
+[cursor*="mpisto2"][curtheme*="dark"] abbr[title] {
+  cursor:url("Mpisto OS/help.cur"), help;
+}
+
+[cursor*="mpisto2"][curtheme*="dark"] :not(.unset)[disabled], :not(.unset):disabled {
+cursor:url("Mpisto OS/banned.cur"), not-allowed!important;
+}
+
+[cursor*="mpisto2"][curtheme*="dark"] textarea, [cursor*="mpisto2"][curtheme*="dark"] [contenteditable], [cursor*="mpisto2"][curtheme*="dark"] header.mpisto-navbar .search .search-input, [cursor*="mpisto2"][curtheme*="dark"] .mpisto-input {
+  cursor:url("Mpisto OS/text.cur"), text;
+}
+
+[cursor*="mpisto2"][curtheme*="dark"] .wds-dropdown .link, [cursor*="mpisto2"][curtheme*="dark"] .wds-button, [cursor*="mpisto2"][curtheme*="dark"] .wds-button:disabled, [cursor*="mpisto2"][curtheme*="dark"] .wds-is-disabled, [cursor*="mpisto2"][curtheme*="dark"] .wds-community-header__local-navigation a[href="#"], [cursor*="mpisto2"][curtheme*="dark"] .wds-tabs__tab, [cursor*="mpisto2"][curtheme*="dark"] label {
+  cursor:url("Mpisto OS/default.cur"), default;
+}
+
+[cursor*="mpisto2"][curtheme*="dark"] a,[cursor*="mpisto2"][curtheme*="dark"] a:hover, [cursor*="mpisto2"][curtheme*="dark"] .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), [cursor*="mpisto2"][curtheme*="dark"] .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), [cursor*="mpisto2"][curtheme*="dark"] a.wds-button, [cursor*="mpisto2"][curtheme*="dark"] button.wds-button, [cursor*="mpisto2"][curtheme*="dark"] .editor-header .wordmark, [cursor*="mpisto2"][curtheme*="dark"] .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, [cursor*="mpisto2"][curtheme*="dark"] .wds-banner-notification__close, [cursor*="mpisto2"][curtheme*="dark"] a label, [cursor*="mpisto2"][curtheme*="dark"] a input[type="checkbox"], [cursor*="mpisto2"][curtheme*="dark"] a input[type="radio"], [cursor*="mpisto2"][curtheme*="dark"] .wds-floating-button:not([disabled]), [cursor*="mpisto2"][curtheme*="dark"] .wds-floating-button:not(.wds-is-disabled), [cursor*="mpisto2"][curtheme*="dark"] .wds-dropdown .wds-dropdown__toggle {
 cursor:url("Mpisto OS/hand.cur"), pointer;
 }
 
 
-[cursor*="mpisto2d"] {
-  cursor:url("Mpisto OS/Ddefault.cur"), auto;
+
+/* Disable custom cursors for Smart TVs because it fall backs to normal ones */
+[cursor*="none"] {
+  cursor:auto;
 }
 
-[cursor*="mpisto2d"] abbr[title] {
-  cursor:url("Mpisto OS/Dhelp.cur"), help;
+[cursor*="none"] abbr[title] {
+  cursor:help;
 }
 
-[cursor*="mpisto2d"] :not(.unset)[disabled], :not(.unset):disabled {
-cursor:url("Mpisto OS/Dbanned.cur"), not-allowed!important;
+[cursor*="none"] :not(.unset)[disabled], :not(.unset):disabled {
+cursor:not-allowed!important;
 }
 
-[cursor*="mpisto2d"] textarea, [cursor*="mpisto2d"] [contenteditable], [cursor*="mpisto2d"] header.mpisto-navbar .search .search-input, [cursor*="mpisto2d"] .mpisto-input {
-  cursor:url("Mpisto OS/Dtext.cur"), text;
+[cursor*="none"] textarea, [cursor*="none"] [contenteditable], [cursor*="none"] header.mpisto-navbar .search .search-input, [cursor*="none"] .mpisto-input {
+  cursor:text;
 }
 
-[cursor*="mpisto2d"] .wds-dropdown .link, [cursor*="mpisto2d"] .wds-button, [cursor*="mpisto2d"] .wds-button:disabled, [cursor*="mpisto2d"] .wds-is-disabled, [cursor*="mpisto2d"] .wds-community-header__local-navigation a[href="#"], [cursor*="mpisto2d"] .wds-tabs__tab, [cursor*="mpisto2d"] label {
-  cursor:url("Mpisto OS/Ddefault.cur"), default;
+[cursor*="none"] .wds-dropdown .link, [cursor*="none"] .wds-button, [cursor*="none"] .wds-button:disabled, [cursor*="none"] .wds-is-disabled, [cursor*="none"] .wds-community-header__local-navigation a[href="#"], [cursor*="none"] .wds-tabs__tab {
+  cursor:default;
 }
 
-[cursor*="mpisto2d"] a,[cursor*="mpisto2d"] a:hover, [cursor*="mpisto2d"] .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), [cursor*="mpisto2d"] .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), [cursor*="mpisto2d"] a.wds-button, [cursor*="mpisto2d"] button.wds-button, [cursor*="mpisto2d"] .editor-header .wordmark, [cursor*="mpisto2d"] .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, [cursor*="mpisto2d"] .wds-banner-notification__close, [cursor*="mpisto2d"] a label, [cursor*="mpisto2d"] a input[type="checkbox"], [cursor*="mpisto2d"] a input[type="radio"], [cursor*="mpisto2d"] .wds-floating-button:not([disabled]), [cursor*="mpisto2d"] .wds-floating-button:not(.wds-is-disabled), [cursor*="mpisto2d"] .wds-dropdown .wds-dropdown__toggle {
-cursor:url("Mpisto OS/Dhand.cur"), pointer;
+[cursor*="none"] a:hover, [cursor*="none"] .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), [cursor*="none"] .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), [cursor*="none"] a.wds-button, [cursor*="none"] button.wds-button, [cursor*="none"] .editor-header .wordmark, [cursor*="none"] .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, [cursor*="none"] .wds-banner-notification__close, [cursor*="none"] a label, [cursor*="none"] a input[type="checkbox"], [cursor*="none"] a input[type="radio"], [cursor*="none"] .wds-floating-button:not([disabled]), [cursor*="none"] .wds-floating-button:not(.wds-is-disabled), [cursor*="none"] .wds-dropdown .wds-dropdown__toggle {
+cursor:pointer;
 }
 
+[cursor*="none"][curtheme*="dark"] {
+  cursor:auto;
+}
+
+[cursor*="none"][curtheme*="dark"] abbr[title] {
+  cursor:help;
+}
+
+[cursor*="none"][curtheme*="dark"] :not(.unset)[disabled], :not(.unset):disabled {
+cursor:not-allowed!important;
+}
+
+[cursor*="none"][curtheme*="dark"] textarea, [cursor*="none"][curtheme*="dark"] [contenteditable], [cursor*="none"][curtheme*="dark"] header.mpisto-navbar .search .search-input, [cursor*="none"][curtheme*="dark"] .mpisto-input {
+  cursor:text;
+}
+
+[cursor*="none"][curtheme*="dark"] .wds-dropdown .link, [cursor*="none"][curtheme*="dark"] .wds-button, [cursor*="none"][curtheme*="dark"] .wds-button:disabled, [cursor*="none"][curtheme*="dark"] .wds-is-disabled, [cursor*="none"][curtheme*="dark"] .wds-community-header__local-navigation a[href="#"], [cursor*="none"][curtheme*="dark"] .wds-tabs__tab {
+  cursor:default;
+}
+
+[cursor*="none"][curtheme*="dark"] a:hover, [cursor*="none"][curtheme*="dark"] .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), [cursor*="none"][curtheme*="dark"] .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), [cursor*="none"][curtheme*="dark"] a.wds-button, [cursor*="none"][curtheme*="dark"] button.wds-button, [cursor*="none"][curtheme*="dark"] .editor-header .wordmark, [cursor*="none"][curtheme*="dark"] .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, [cursor*="none"][curtheme*="dark"] .wds-banner-notification__close, [cursor*="none"][curtheme*="dark"] a label, [cursor*="none"][curtheme*="dark"] a input[type="checkbox"], [cursor*="none"][curtheme*="dark"] a input[type="radio"], [cursor*="none"][curtheme*="dark"] .wds-floating-button:not([disabled]), [cursor*="none"][curtheme*="dark"] .wds-floating-button:not(.wds-is-disabled), [cursor*="none"][curtheme*="dark"] .wds-dropdown .wds-dropdown__toggle {
+cursor:pointer;
+}
 
 
 
@@ -7749,12 +7797,13 @@ cursor:pointer;
 
 
 /** Mobile Only CSS **/
-/* Show the Mobile site link */
+/* Show the Mobile site link ^^^ (Currently suppressed since Mpistoskin2 does support Mobile 
 .phone .mobile-data {
   display:block;
 }
+*/
 
-.phone .curosrs, .edge .cursors {
+.phone .cursors, .edge .cursors {
 	display:none!important;
 }
 
