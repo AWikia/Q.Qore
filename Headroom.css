@@ -1,8 +1,9 @@
 /* Headroom */
 .mpisto-gnav.headroom:after {
-	transition:background-color 400ms ease;
-	will-change:background-color;
+	transition:opacity 400ms ease, -webkit-backdrop-filter 400ms ease, backdrop-filter 400ms ease, -webkit-backdrop-filter 400ms ease, background-color 400ms ease;
+	will-change:opacity;
 }
+
 
 .mpisto-gnav.headroom {
 	transition:transform 400ms ease;
@@ -13,14 +14,22 @@
 	transform:translateY(-100%);
 }
 
-.mpisto-gnav.headroom.headroom--not-top::after {
-	background-color:#000;
-	background-color:var(--content-color);
+html:not(.contrast):not(.basic) .mpisto-gnav.headroom.headroom--not-top::after {
+	opacity:0.8;
+	-webkit-backdrop-filter:blur(10px) sepia(10%) contrast(110%) invert(10%) grayscale(10%) saturate(110%) hue-rotate(10deg) brightness(110%);
+	backdrop-filter:blur(10px) sepia(10%) contrast(110%) invert(10%) grayscale(10%) saturate(110%) hue-rotate(10deg) brightness(110%);
 }
 
-.mpisto-gnav.headroom.headroom--not-top {
-	color:#fff;
-	color:var(--content-bg);
+
+.mpisto-gnav.headroom.headroom--not-top::after {
+	background-color:#69c3d0;
+	background-color:var(--accent-bg);
+}
+
+
+html:not(.contrast) .mpisto-gnav.headroom.headroom--not-top {
+	color:#000;
+	color:var(--button-color-text);
 	box-shadow: 0 0 3px var(--content-color), 0 0 3px var(--dropdown-bg);
 }
 
