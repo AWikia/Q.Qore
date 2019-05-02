@@ -25,6 +25,13 @@
 }
 
 
+@media only screen and (min-width:1100px) and (max-width:1399px) {
+	.basicp .color-header .title, .modernp.pane-on .color-header .title {
+		font-size:26px;
+	}
+}
+
+
 
 @media only screen and (max-width:359px) {
 	.main .mpisto-2018 {
@@ -209,6 +216,8 @@ visibility:visible;
 opacity:1;
 top:0;
 filter:brightness(1);
+padding-left:4px;
+padding-right:4px;
 }
 
 .pane-on .mpisto-article-wrapper{
@@ -493,6 +502,10 @@ width:100%;
 	margin:0!important;
 }
 
+.basicp .mpisto-option-way h1 .toggle {
+  display:inline;
+}
+
 }
 
 
@@ -518,6 +531,8 @@ border-width:0 1px 2px;
 top:-51px;
 filter:brightness(1.5);
 display:inline-block; /* Required or else IE but not Edge will not show properly */
+padding-left:2px;
+padding-right:2px;
 }
 
 
@@ -560,9 +575,6 @@ filter:brightness(1);
   overflow-y:visible;
 }
 
-.basicp .mpisto-option-way h1 .toggle {
-  display:inline;
-}
 
 .basicp .mpisto-option-way {
 width:100%;
@@ -618,10 +630,26 @@ padding-right:10px;
 }
 */
 
+.mpisto-option-pane {
+	min-width:230px;
+}
+
+
+.option-link {
+	font-size:18px;
+}
+
+.mpisto-option-pane h1 {
+	font-size:30px;
+}
+
 .mpisto-content, header.mpisto-navbar .mpisto-navbar-wrapper, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .mpisto-options-content, .main .page-wrapper /*.lightbox */ {
 width:926px;
 }
 
+.basicp .color-header .title, .modernp.pane-on .color-header .title {
+	font-size:22px;
+}
 
 /*
 .wide .mpisto-content, .wide footer.mpisto-footer .mpisto-wrapper, .wide .lightbox, .wide header.mpisto-footer-container > div, .wide header.mpisto-navbar .mpisto-navbar-wrapper {
@@ -854,5 +882,12 @@ font-size:40px;
 
 footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container td h2 {
 font-size:30px;
+}
+}
+
+/* M + L + XXL */
+@media only screen and (min-width:960px) and (max-width:1599px) {
+.basicp .mpisto-header-container .wordmark, .modernp.pane-on .mpisto-header-container .wordmark {
+	display:none!important
 }
 }
