@@ -64,8 +64,9 @@ background-image:linear-gradient(to left,rgba(24,187,198, 0) 200px,rgb(24,187,19
 }
 
 
-.mpisto-header-container::before {
+.mpisto-header-container::before, .mpisto-header-container::after {
 	background-image:linear-gradient(to left,rgba(24,187,198, 0) 170px,rgb(24,187,198) 365px);
+	background-image:none;
 }
 
 .main .wds-community-header::after, .mpisto-header-container::after {

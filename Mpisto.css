@@ -967,7 +967,7 @@ font-family:"Source Serif Pro", "Song Myung",  "Noto Serif JP", "David Libre", "
 		white-space:nowrap;
 	}
 	
-	.mpisto-gnav:not(.newnav) .mpisto-global-navigation .link span {
+	.mpisto-gnav:not(.newnav) .mpisto-global-navigation .link span, .mpisto-gnav:not(.newnav) .mpisto-global-navigation .link .wds-icon {
 		height:inherit!important;
 }
 	
@@ -1097,9 +1097,6 @@ font-family:"Source Serif Pro", "Song Myung",  "Noto Serif JP", "David Libre", "
 	color:rgb(24,187,197);
 	color:rgb(var(--link-color));
 	}
-	.mpisto-global-navigation .link.company {
-		width:100%;
-	}
 	
 
 
@@ -1158,7 +1155,7 @@ background-color:rgba(var(--link-color), 0.1);
 }
 
 
-.newnav .mpisto-global-navigation .link.company, .newnav .mpisto-global-navigation .search-link {
+.newnav .mpisto-global-navigation .search-link {
 	width:auto!important;
 	flex:1;
 }
@@ -1181,7 +1178,19 @@ background-color:rgba(var(--link-color), 0.1);
 
 /** Responsive Global Nav **/
 	@media only screen and (max-width:754px) {
-		.mpisto-global-navigation .link .name {
+		.mpisto-global-navigation .link .small-up {
+			display:none!important;
+		}
+
+		#GlobalNavigation:not(.active-search) .search-off {
+			display:none!important;
+		}
+
+		#GlobalNavigation:not(.active-search) .search-link {
+			visibility:hidden;
+	}
+
+		#GlobalNavigation.active-search .search-on {
 			display:none!important;
 		}
 
@@ -1190,8 +1199,17 @@ background-color:rgba(var(--link-color), 0.1);
 	}
 	}
 
+	@media only screen and (min-width:755px) {
+		.mpisto-global-navigation .mob-only {
+			display:none!important;
+		}
+	}
+
 	@media only screen and (min-width:960px) {
 		.mpisto-global-navigation .small-only {
+			display:none!important;
+		}
+		.mpisto-global-navigation .mob-only {
 			display:none!important;
 		}
 	}
@@ -1200,7 +1218,14 @@ background-color:rgba(var(--link-color), 0.1);
 		.mpisto-global-navigation .med-up {
 			display:none!important;
 		}
+
+	.mpisto-global-navigation .mpisto-input {
+		padding-left:10px;
+		padding-right:10px;
 	}
+
+
+}
 
 	@media only screen and (min-width:1100px) {
 		.mpisto-global-navigation .med-down {
@@ -1215,15 +1240,52 @@ background-color:rgba(var(--link-color), 0.1);
 			display:none!important;
 		}
 		
+	.mpisto-global-navigation .link .wds-icon {
+		width:24px;
+		height:24px;
+		
+	}
+
+	.mpisto-global-navigation .link .wds-icon.wds-icon-small {
+		width:18px;
+		height:18px;
+	}
+
+
+	.mpisto-global-navigation .link .wds-icon.wds-icon-tiny {
+		width:12px;
+		height:12px;
+
+
+	}
+
+	.mpisto-global-navigation .link .mpisto-avatar {
+		width:24px;
+		height:24px;
+		min-width:24px;
+		min-height:24px;
+		border-width:1.25px;
+	}
+
+	.mpisto-global-navigation .link, .mpisto-global-navigation .mpisto-input {
+		font-size:15px;
+	}
+
+	.mpisto-global-navigation .mpisto-input {
+		padding-left:12px;
+		padding-right:12px;
+	}
+
 	}
 	
 	@media only screen and (max-width:1399px) {
-		#GlobalNavigation:not(.active-search) .search-off {
+/*		#GlobalNavigation:not(.active-search) .search-off {
 			display:none!important;
 		}
 		#GlobalNavigation.active-search .search-on {
 			display:none!important;
 		}
+*/
 }
 
 
@@ -1232,9 +1294,6 @@ background-color:rgba(var(--link-color), 0.1);
 			display:none!important;
 		}
 
-	.mpisto-global-navigation .search-link, .mpisto-global-navigation .link.company {
-		width:50%;
-	}
 		
 	}
 
