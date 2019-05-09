@@ -248,9 +248,11 @@ padding-right:4px;
   overflow-y:visible;
 }
 
- .mpisto-option-way h1 .toggle {
+.basicp .mpisto-option-way h1 .toggle {
   display:inline;
 }
+
+
 
  .mpisto-option-way {
 width:100%;
@@ -436,6 +438,19 @@ header.mpisto-footer-container > div {
   width:754px;
 }
 */
+
+label {
+	font-size:18px;
+}
+
+.mpisto-option-way > div .fieldset fieldset legend {
+	font-size:20px;
+}
+
+.mpisto-option-way .store-cards .store-card {
+	font-size:13px;
+}
+
 footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container th.mpisto-footer-bar h3 {
 font-size:14px;
 }
@@ -502,9 +517,6 @@ width:100%;
 	margin:0!important;
 }
 
-.basicp .mpisto-option-way h1 .toggle {
-  display:inline;
-}
 
 }
 
@@ -520,7 +532,7 @@ width:100%;
 	-webkit-text-stroke-width:1.25px;
 }
 
-.basicp .mpisto-option-pane {
+/*.basicp .mpisto-option-pane {
 width:100%;
 height:auto;
 visibility:hidden;
@@ -530,7 +542,7 @@ z-index:1000;
 border-width:0 1px 2px;
 top:-51px;
 filter:brightness(1.5);
-display:inline-block; /* Required or else IE but not Edge will not show properly */
+display:inline-block; // Required or else IE but not Edge will not show properly
 padding-left:2px;
 padding-right:2px;
 }
@@ -608,16 +620,16 @@ display:inline-flex;
   height:22px;
   min-width:22px;
 }
-
-.modernp .mpisto-option-pane .option-link span {
+*/
+.mpisto-option-pane .option-link span {
 	display:none;
 }
 
-.modernp .mpisto-option-pane {
+.mpisto-option-pane {
 	min-width:20px;
 }
 
-.modernp .mpisto-option-pane h1 {
+.mpisto-option-pane h1 {
 	font-size:10px;
 }
 }
@@ -780,6 +792,20 @@ font-size:20px;
 footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container td {
 font-size:18px;
 }
+
+label {
+	font-size:24px;
+}
+
+.mpisto-option-way > div .fieldset fieldset legend {
+	font-size:28px;
+}
+
+.mpisto-option-way .store-cards .store-card {
+	font-size:16px;
+}
+
+
 }
 
 /* XXL */
@@ -852,6 +878,19 @@ footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container td {
 font-size:19px;
 }
 
+label {
+	font-size:25px;
+}
+
+.mpisto-option-way > div .fieldset fieldset legend {
+	font-size:30px;
+}
+
+.mpisto-option-way .store-cards .store-card {
+	font-size:20px;
+}
+
+
 /* Don't allocate whole screen 
 html:not(.chat) {
 	box-shadow:0 0 40px 0px;
@@ -885,7 +924,7 @@ font-size:30px;
 }
 }
 
-/* M + L + XXL */
+/* M + L + XL */
 @media only screen and (min-width:960px) and (max-width:1599px) {
 .basicp .mpisto-header-container .wordmark, .modernp.pane-on .mpisto-header-container .wordmark {
 	display:none!important
