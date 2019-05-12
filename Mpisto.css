@@ -958,7 +958,7 @@ font-family:"Source Serif Pro", "Song Myung",  "Noto Serif JP", "David Libre", "
 		margin:0 auto;
 	}
 	.mpisto-global-navigation .link {
-		transition:background-color 400ms ease, color 400ms ease, border-color 400ms ease, text-shadow 400ms ease;
+		transition:background-color 400ms ease, color 400ms ease, border-color 400ms ease, text-shadow 400ms ease, padding 300ms ease, width 300ms ease, font-size 300ms ease;
 		padding: 0 10px;
 		height:49px;
 		color:inherit;
@@ -986,6 +986,7 @@ font-family:"Source Serif Pro", "Song Myung",  "Noto Serif JP", "David Libre", "
 	
 	.mpisto-global-navigation .link * {
 		vertical-align:middle;
+		transition: padding 300ms ease, width 300ms ease, height 300ms ease;
 	}
 	
 	.mpisto-global-navigation .link big {
@@ -1176,11 +1177,6 @@ background-color:rgba(var(--link-color), 0.1);
 			margin-left:3px;
 		}
 
-/** Responsive Global Nav **/
-	@media only screen and (max-width:754px) {
-		.mpisto-global-navigation .link .small-up {
-			display:none!important;
-		}
 
 		#GlobalNavigation:not(.active-search) .search-off {
 			display:none!important;
@@ -1190,26 +1186,50 @@ background-color:rgba(var(--link-color), 0.1);
 			visibility:hidden;
 	}
 
-		#GlobalNavigation.active-search .search-on {
+		#GlobalNavigation.active-search .search-on, #GlobalNavigation.active-search .search-on + .link, #GlobalNavigation.active-search .search-on + .link + .link {
+				font-size:0!important;
+				padding:0!important;
+		}
+
+		#GlobalNavigation.active-search .search-on .wds-icon, #GlobalNavigation.active-search .search-on + .link .wds-icon, #GlobalNavigation.active-search .search-on + .link + .link .wds-icon,
+		#GlobalNavigation.active-search .search-on img, #GlobalNavigation.active-search .search-on + .link img, #GlobalNavigation.active-search .search-on + .link + .link img {
+				font-size:0!important;
+				padding:0!important;
+				width:0!important;	
+				height:0!important;			
+		}
+
+		#GlobalNavigation.active-search svg.search-on {
+			display:none!Important;
+		}
+
+/** Responsive Global Nav **/
+	@media only screen and (max-width:754px) {
+		.mpisto-global-navigation .link .small-up {
 			display:none!important;
 		}
+
 
 	.mpisto-global-navigation .wds-dropdown__toggle-chevron {
 		display:none;
 	}
+
+	.mpisto-global-navigation .mpisto-input {
+		padding-left:7.5px;
+		padding-right:7.5px;
+		width:80%!important;
+	}
+
 	}
 
 	@media only screen and (min-width:755px) {
-		.mpisto-global-navigation .mob-only {
+		.mpisto-global-navigation svg.mob-only {
 			display:none!important;
 		}
 	}
 
 	@media only screen and (min-width:960px) {
 		.mpisto-global-navigation .small-only {
-			display:none!important;
-		}
-		.mpisto-global-navigation .mob-only {
 			display:none!important;
 		}
 	}
