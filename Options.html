@@ -1613,7 +1613,7 @@ Checked = VisualEditor as default mode
     <br><br>
     <label>Color:</label> 
 
-    <div class="wds-dropdown win10-off">
+    <div class="wds-dropdown win10-off adapt-off">
     <button class="wds-button wds-is-square">
 			<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; background-color:var(--content-color);"></div>
     </button>
@@ -1636,15 +1636,15 @@ Checked = VisualEditor as default mode
     </div>
 
     
-    <button class="wds-floating-button no-flex win10-off" onclick="RandomColor4()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+    <button class="wds-floating-button no-flex win10-off adapt-off" onclick="RandomColor4()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-information" />
-         </svg></button> <button class="wds-floating-button no-flex win10-off" onclick="PickColor4()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+         </svg></button> <button class="wds-floating-button no-flex win10-off adapt-off" onclick="PickColor4()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-text" />
          </svg></button>
     <br><br>
     <label>Border-color:</label> 
     
-    <div class="wds-dropdown win10-off">
+    <div class="wds-dropdown win10-off adapt-off">
     <button class="wds-button wds-is-square">
 			<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; background-color:var(--content-border);"></div>
     </button>
@@ -1666,9 +1666,9 @@ Checked = VisualEditor as default mode
 	</div>
     </div>
 
-    <button class="wds-floating-button no-flex win10-off" onclick="RandomColor5()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+    <button class="wds-floating-button no-flex win10-off adapt-off" onclick="RandomColor5()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-information" />
-         </svg></button> <button class="wds-floating-button no-flex win10-off" onclick="PickColor5()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+         </svg></button> <button class="wds-floating-button no-flex win10-off adapt-off" onclick="PickColor5()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-text" />
          </svg></button>
     <br><br>
@@ -1733,6 +1733,8 @@ Checked = VisualEditor as default mode
          </svg></button> <button class="wds-floating-button no-flex win10-off" onclick="PickColor7()"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-text" />
          </svg></button>
+        <br>
+        <input type="checkbox" class="win10-off" id="ThmAdpt" autocomplete="off" onclick="ToggleAdapt()"></input> <label for="ThmAdpt" class="win10-off">Adaptive Theme (Automatic content border and color values)</label>
     </fieldset>
     </div>
     </fieldset>
