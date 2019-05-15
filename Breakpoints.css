@@ -105,6 +105,10 @@ column-count:1!important;
 .mpisto-gnav .active-search .wds-dropdown .link {
 				font-size:0!important;
 				padding:0!important;
+				max-width:0!important;
+				margin-left:0!Important;
+				margin-right:0!Important;
+				overflow:hidden;			
 }
 
 		.mpisto-gnav .active-search .wds-dropdown .link * {
