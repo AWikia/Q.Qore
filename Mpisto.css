@@ -2298,7 +2298,61 @@ border:0;
 background:none;
 }
 
+/* WDS Font Weights (Compatibility) */
+.wds-font-size-xxs{font-size:10px}
+.wds-font-size-xs{font-size:12px}
+.wds-font-size-s{font-size:14px}
+.wds-font-size-base{font-size:16px}
+.wds-font-size-l{font-size:18px}
+.wds-font-size-xl{font-size:24px}
+.wds-font-size-xxl{font-size:28px}
+.wds-font-size-3xl{font-size:36px}
+.wds-font-size-4xl{font-size:52px}
+.wds-leading-none{line-height:1}
+.wds-leading-tight{line-height:1.25}
+.wds-leading-normal{line-height:1.5}
+.wds-leading-loose{line-height:1.75}
+.wds-font-weight-light{font-weight:300}
+.wds-font-weight-normal{font-weight:400}
+.wds-font-weight-medium{font-weight:500}
+.wds-font-weight-bold{font-weight:700}
+.wds-font-weight-black{font-weight:900}
+.wds-font-style-italic{font-style:italic}
+.wds-font-style-normal{font-style:normal}
+.wds-text-transform-capitalize{text-transform:capitalize}
+.wds-text-transform-uppercase{text-transform:uppercase}
+.wds-text-transform-lowercase{text-transform:lowercase}
+.wds-text-transform-none{text-transform:none}
 
+/** Fandom Toggles (Compatibility) **/
+.wds-toggle__input{display:none!important;}.wds-toggle__label{cursor:url("Windows/hand.cur"),pointer;font-size:16px;padding:7px 5px 7px 52px;position:relative}.wds-toggle__label:empty{padding-left:45px}.wds-toggle__label::after,.wds-toggle__label::before{content:"";margin:0;outline:0;position:absolute;top:50%;transform:translateY(-50%);transition:transform,background-color;transition-duration:.3s;transition-timing-function:ease}.wds-toggle__label::before{background-color:#999;border-radius:8px;height:14px;left:6px;width:34px}.wds-toggle__label::after{height:20px;min-width:20px;width:20px;background-color:#f6f6f6;border-radius:50%;box-shadow:0 3px 1px -2px rgba(0,0,0,.14),0 2px 2px 0 rgba(0,0,0,.098),0 1px 5px 0 rgba(0,0,0,.084);left:5px}.wds-toggle__input:checked+.wds-toggle__label::before{background-color:#7fdbdc}.wds-toggle__input:checked+.wds-toggle__label::after{background-color:#00d6d6;transform:translate(80%,-50%)}
+
+/* Removes background color when clickling on a WDS Toggle */
+input[type="checkbox"] + .wds-toggle__label:active {
+	background-color:transparent;
+}
+
+/* Theming */
+.main .wds-toggle__label::before{
+background-color:var(--content-border-dark);
+}
+
+.wds-toggle__label::after{
+background-color:var(--dropdown-bg);
+box-shadow:0 3px 1px -2px rgba(0,0,0,.14),0 2px 2px 0 rgba(0,0,0,.098),0 1px 5px 0 rgba(0,0,0,.084), 0 3px 1px -2px rgba(255,255,255,.14),0 2px 2px 0 rgba(255,255,255,.098),0 1px 5px 0 rgba(255,255,255,.084);
+}
+
+.main .wds-toggle__label::before{
+background-color:var(--content-color);
+}
+
+.main .wds-toggle__input:checked+.wds-toggle__label::before{
+background-color:var(--emphasis-bg);
+}
+
+.main .wds-toggle__input:checked+.wds-toggle__label::after{
+background-color:rgb(var(--link-color));
+}
 
 /* Floating Buttons */
 .wds-floating-button {
@@ -7662,7 +7716,7 @@ cursor:url("OSX/banned.cur"), not-allowed!important;
   cursor:url("OSX/default.cur"), default;
 }
 
-[cursor*="apple"] a, [cursor*="apple"] a:hover, [cursor*="apple"] .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), [cursor*="apple"] .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), [cursor*="apple"] a.wds-button, [cursor*="apple"] button.wds-button, [cursor*="apple"] .editor-header .wordmark, [cursor*="apple"] .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, [cursor*="apple"] .wds-banner-notification__close, [cursor*="apple"] a label, [cursor*="apple"] a input[type="checkbox"], [cursor*="apple"] a input[type="radio"], [cursor*="apple"] .wds-floating-button:not([disabled]), [cursor*="apple"] .wds-floating-button:not(.wds-is-disabled), [cursor*="apple"] .wds-dropdown .wds-dropdown__toggle {
+[cursor*="apple"] a, [cursor*="apple"] a:hover, [cursor*="apple"] .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), [cursor*="apple"] .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), [cursor*="apple"] a.wds-button, [cursor*="apple"] button.wds-button, [cursor*="apple"] .editor-header .wordmark, [cursor*="apple"] .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, [cursor*="apple"] .wds-banner-notification__close, [cursor*="apple"] a label, [cursor*="apple"] a input[type="checkbox"], [cursor*="apple"] a input[type="radio"], [cursor*="apple"] .wds-floating-button:not([disabled]), [cursor*="apple"] .wds-floating-button:not(.wds-is-disabled), [cursor*="apple"] .wds-dropdown .wds-dropdown__toggle, [cursor*="apple"] .wds-toggle__label {
 cursor:url("OSX/hand.cur"), pointer;
 }
 
@@ -7687,7 +7741,7 @@ cursor:url("OSX/banned.cur"), not-allowed!important;
   cursor:url("OSX/default.cur"), default;
 }
 
-[cursor*="apple"][curtheme*="dark"] a, [cursor*="apple"][curtheme*="dark"] a:hover, [cursor*="apple"][curtheme*="dark"] .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), [cursor*="apple"][curtheme*="dark"] .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), [cursor*="apple"][curtheme*="dark"] a.wds-button, [cursor*="apple"][curtheme*="dark"] button.wds-button, [cursor*="apple"][curtheme*="dark"] .editor-header .wordmark, [cursor*="apple"][curtheme*="dark"] .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, [cursor*="apple"][curtheme*="dark"] .wds-banner-notification__close, [cursor*="apple"][curtheme*="dark"] a label, [cursor*="apple"][curtheme*="dark"] a input[type="checkbox"], [cursor*="apple"][curtheme*="dark"] a input[type="radio"], [cursor*="apple"][curtheme*="dark"] .wds-floating-button:not([disabled]), [cursor*="apple"][curtheme*="dark"] .wds-floating-button:not(.wds-is-disabled), [cursor*="apple"][curtheme*="dark"] .wds-dropdown .wds-dropdown__toggle {
+[cursor*="apple"][curtheme*="dark"] a, [cursor*="apple"][curtheme*="dark"] a:hover, [cursor*="apple"][curtheme*="dark"] .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), [cursor*="apple"][curtheme*="dark"] .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), [cursor*="apple"][curtheme*="dark"] a.wds-button, [cursor*="apple"][curtheme*="dark"] button.wds-button, [cursor*="apple"][curtheme*="dark"] .editor-header .wordmark, [cursor*="apple"][curtheme*="dark"] .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, [cursor*="apple"][curtheme*="dark"] .wds-banner-notification__close, [cursor*="apple"][curtheme*="dark"] a label, [cursor*="apple"][curtheme*="dark"] a input[type="checkbox"], [cursor*="apple"][curtheme*="dark"] a input[type="radio"], [cursor*="apple"][curtheme*="dark"] .wds-floating-button:not([disabled]), [cursor*="apple"][curtheme*="dark"] .wds-floating-button:not(.wds-is-disabled), [cursor*="apple"][curtheme*="dark"] .wds-dropdown .wds-dropdown__toggle, [cursor*="apple"][curtheme*="dark"] .wds-toggle__label {
 cursor:url("OSX/hand.cur"), pointer;
 }
 
@@ -7712,7 +7766,7 @@ cursor:url("Lenux/Dbanned.cur"), not-allowed!important;
   cursor:url("Lenux/Ddefault.cur"), default;
 }
 
-[cursor*="linux"][curtheme*="dark"] a,[cursor*="linux"][curtheme*="dark"] a:hover, [cursor*="linux"][curtheme*="dark"] .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), [cursor*="linux"][curtheme*="dark"] .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), [cursor*="linux"][curtheme*="dark"] a.wds-button, [cursor*="linux"][curtheme*="dark"] button.wds-button, [cursor*="linux"][curtheme*="dark"] .editor-header .wordmark, [cursor*="linux"][curtheme*="dark"] .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, [cursor*="linux"][curtheme*="dark"] .wds-banner-notification__close, [cursor*="linux"][curtheme*="dark"] a label, [cursor*="linux"][curtheme*="dark"] a input[type="checkbox"], [cursor*="linux"][curtheme*="dark"] a input[type="radio"], [cursor*="linux"][curtheme*="dark"] .wds-floating-button:not([disabled]), [cursor*="linux"][curtheme*="dark"] .wds-floating-button:not(.wds-is-disabled), [cursor*="linux"][curtheme*="dark"] .wds-dropdown .wds-dropdown__toggle {
+[cursor*="linux"][curtheme*="dark"] a,[cursor*="linux"][curtheme*="dark"] a:hover, [cursor*="linux"][curtheme*="dark"] .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), [cursor*="linux"][curtheme*="dark"] .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), [cursor*="linux"][curtheme*="dark"] a.wds-button, [cursor*="linux"][curtheme*="dark"] button.wds-button, [cursor*="linux"][curtheme*="dark"] .editor-header .wordmark, [cursor*="linux"][curtheme*="dark"] .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, [cursor*="linux"][curtheme*="dark"] .wds-banner-notification__close, [cursor*="linux"][curtheme*="dark"] a label, [cursor*="linux"][curtheme*="dark"] a input[type="checkbox"], [cursor*="linux"][curtheme*="dark"] a input[type="radio"], [cursor*="linux"][curtheme*="dark"] .wds-floating-button:not([disabled]), [cursor*="linux"][curtheme*="dark"] .wds-floating-button:not(.wds-is-disabled), [cursor*="linux"][curtheme*="dark"] .wds-dropdown .wds-dropdown__toggle, [cursor*="linux"][curtheme*="dark"] .wds-toggle__label {
 cursor:url("Lenux/Dhand.cur"), pointer;
 }
 
@@ -7732,11 +7786,8 @@ cursor:url("Lenux/banned.cur"), not-allowed!important;
   cursor:url("Lenux/text.cur"), text;
 }
 
-[cursor*="linuxd"] .wds-dropdown .link, [cursor*="linuxd"] .wds-button, [cursor*="linuxd"] .wds-button:disabled, [cursor*="linuxd"] .wds-is-disabled, [cursor*="linuxd"] .wds-community-header__local-navigation a[href="#"], [cursor*="linuxd"] .wds-tabs__tab, [cursor*="linuxd"] label {
-  cursor:url("Lenux/Ddefault.cur"), default;
-}
 
-[cursor*="linux"] a,[cursor*="linux"] a:hover, [cursor*="linux"] .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), [cursor*="linux"] .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), [cursor*="linux"] a.wds-button, [cursor*="linux"] button.wds-button, [cursor*="linux"] .editor-header .wordmark, [cursor*="linux"] .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, [cursor*="linux"] .wds-banner-notification__close, [cursor*="linux"] a label, [cursor*="linux"] a input[type="checkbox"], [cursor*="linux"] a input[type="radio"], [cursor*="linux"] .wds-floating-button:not([disabled]), [cursor*="linux"] .wds-floating-button:not(.wds-is-disabled), [cursor*="linux"] .wds-dropdown .wds-dropdown__toggle {
+[cursor*="linux"] a,[cursor*="linux"] a:hover, [cursor*="linux"] .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), [cursor*="linux"] .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), [cursor*="linux"] a.wds-button, [cursor*="linux"] button.wds-button, [cursor*="linux"] .editor-header .wordmark, [cursor*="linux"] .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, [cursor*="linux"] .wds-banner-notification__close, [cursor*="linux"] a label, [cursor*="linux"] a input[type="checkbox"], [cursor*="linux"] a input[type="radio"], [cursor*="linux"] .wds-floating-button:not([disabled]), [cursor*="linux"] .wds-floating-button:not(.wds-is-disabled), [cursor*="linux"] .wds-dropdown .wds-dropdown__toggle, [cursor*="linux"] .wds-toggle__label {
 cursor:url("Lenux/hand.cur"), pointer;
 }
 
@@ -7761,7 +7812,7 @@ cursor:url("Dark/banned.cur"), not-allowed!important;
   cursor:url("Dark/default.cur"), default;
 }
 
-[cursor*="mpisto"][curtheme*="dark"] a,[cursor*="mpisto"][curtheme*="dark"] a:hover, [cursor*="mpisto"][curtheme*="dark"] .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), [cursor*="mpisto"][curtheme*="dark"] .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), [cursor*="mpisto"][curtheme*="dark"] a.wds-button, [cursor*="mpisto"][curtheme*="dark"] button.wds-button, [cursor*="mpisto"][curtheme*="dark"] .editor-header .wordmark, [cursor*="mpisto"][curtheme*="dark"] .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, [cursor*="mpisto"][curtheme*="dark"] .wds-banner-notification__close, [cursor*="mpisto"][curtheme*="dark"] a label, [cursor*="mpisto"][curtheme*="dark"] a input[type="checkbox"], [cursor*="mpisto"][curtheme*="dark"] a input[type="radio"], [cursor*="mpisto"][curtheme*="dark"] .wds-floating-button:not([disabled]), [cursor*="mpisto"][curtheme*="dark"] .wds-floating-button:not(.wds-is-disabled), [cursor*="mpisto"][curtheme*="dark"] .wds-dropdown .wds-dropdown__toggle {
+[cursor*="mpisto"][curtheme*="dark"] a,[cursor*="mpisto"][curtheme*="dark"] a:hover, [cursor*="mpisto"][curtheme*="dark"] .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), [cursor*="mpisto"][curtheme*="dark"] .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), [cursor*="mpisto"][curtheme*="dark"] a.wds-button, [cursor*="mpisto"][curtheme*="dark"] button.wds-button, [cursor*="mpisto"][curtheme*="dark"] .editor-header .wordmark, [cursor*="mpisto"][curtheme*="dark"] .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, [cursor*="mpisto"][curtheme*="dark"] .wds-banner-notification__close, [cursor*="mpisto"][curtheme*="dark"] a label, [cursor*="mpisto"][curtheme*="dark"] a input[type="checkbox"], [cursor*="mpisto"][curtheme*="dark"] a input[type="radio"], [cursor*="mpisto"][curtheme*="dark"] .wds-floating-button:not([disabled]), [cursor*="mpisto"][curtheme*="dark"] .wds-floating-button:not(.wds-is-disabled), [cursor*="mpisto"][curtheme*="dark"] .wds-dropdown .wds-dropdown__toggle, [cursor*="mpisto"][curtheme*="dark"] .wds-toggle__label {
 cursor:url("Dark/hand.cur"), pointer;
 }
 
@@ -7786,7 +7837,7 @@ cursor:url("Mpisto OS/Dbanned.cur"), not-allowed!important;
   cursor:url("Mpisto OS/Ddefault.cur"), default;
 }
 
-[cursor*="mpisto2"] a,[cursor*="mpisto2"] a:hover, [cursor*="mpisto2"] .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), [cursor*="mpisto2"] .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), [cursor*="mpisto2"] a.wds-button, [cursor*="mpisto2"] button.wds-button, [cursor*="mpisto2"] .editor-header .wordmark, [cursor*="mpisto2"] .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, [cursor*="mpisto2"] .wds-banner-notification__close, [cursor*="mpisto2"] a label, [cursor*="mpisto2"] a input[type="checkbox"], [cursor*="mpisto2"] a input[type="radio"], [cursor*="mpisto2"] .wds-floating-button:not([disabled]), [cursor*="mpisto2"] .wds-floating-button:not(.wds-is-disabled), [cursor*="mpisto2"] .wds-dropdown .wds-dropdown__toggle {
+[cursor*="mpisto2"] a,[cursor*="mpisto2"] a:hover, [cursor*="mpisto2"] .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), [cursor*="mpisto2"] .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), [cursor*="mpisto2"] a.wds-button, [cursor*="mpisto2"] button.wds-button, [cursor*="mpisto2"] .editor-header .wordmark, [cursor*="mpisto2"] .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, [cursor*="mpisto2"] .wds-banner-notification__close, [cursor*="mpisto2"] a label, [cursor*="mpisto2"] a input[type="checkbox"], [cursor*="mpisto2"] a input[type="radio"], [cursor*="mpisto2"] .wds-floating-button:not([disabled]), [cursor*="mpisto2"] .wds-floating-button:not(.wds-is-disabled), [cursor*="mpisto2"] .wds-dropdown .wds-dropdown__toggle, [cursor*="mpisto2"] .wds-toggle__label {
 cursor:url("Mpisto OS/Dhand.cur"), pointer;
 }
 
@@ -7811,7 +7862,7 @@ cursor:url("Mpisto OS/banned.cur"), not-allowed!important;
   cursor:url("Mpisto OS/default.cur"), default;
 }
 
-[cursor*="mpisto2"][curtheme*="dark"] a,[cursor*="mpisto2"][curtheme*="dark"] a:hover, [cursor*="mpisto2"][curtheme*="dark"] .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), [cursor*="mpisto2"][curtheme*="dark"] .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), [cursor*="mpisto2"][curtheme*="dark"] a.wds-button, [cursor*="mpisto2"][curtheme*="dark"] button.wds-button, [cursor*="mpisto2"][curtheme*="dark"] .editor-header .wordmark, [cursor*="mpisto2"][curtheme*="dark"] .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, [cursor*="mpisto2"][curtheme*="dark"] .wds-banner-notification__close, [cursor*="mpisto2"][curtheme*="dark"] a label, [cursor*="mpisto2"][curtheme*="dark"] a input[type="checkbox"], [cursor*="mpisto2"][curtheme*="dark"] a input[type="radio"], [cursor*="mpisto2"][curtheme*="dark"] .wds-floating-button:not([disabled]), [cursor*="mpisto2"][curtheme*="dark"] .wds-floating-button:not(.wds-is-disabled), [cursor*="mpisto2"][curtheme*="dark"] .wds-dropdown .wds-dropdown__toggle {
+[cursor*="mpisto2"][curtheme*="dark"] a,[cursor*="mpisto2"][curtheme*="dark"] a:hover, [cursor*="mpisto2"][curtheme*="dark"] .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), [cursor*="mpisto2"][curtheme*="dark"] .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), [cursor*="mpisto2"][curtheme*="dark"] a.wds-button, [cursor*="mpisto2"][curtheme*="dark"] button.wds-button, [cursor*="mpisto2"][curtheme*="dark"] .editor-header .wordmark, [cursor*="mpisto2"][curtheme*="dark"] .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, [cursor*="mpisto2"][curtheme*="dark"] .wds-banner-notification__close, [cursor*="mpisto2"][curtheme*="dark"] a label, [cursor*="mpisto2"][curtheme*="dark"] a input[type="checkbox"], [cursor*="mpisto2"][curtheme*="dark"] a input[type="radio"], [cursor*="mpisto2"][curtheme*="dark"] .wds-floating-button:not([disabled]), [cursor*="mpisto2"][curtheme*="dark"] .wds-floating-button:not(.wds-is-disabled), [cursor*="mpisto2"][curtheme*="dark"] .wds-dropdown .wds-dropdown__toggle, [cursor*="mpisto2"][curtheme*="dark"] .wds-toggle__label {
 cursor:url("Mpisto OS/hand.cur"), pointer;
 }
 
@@ -7838,7 +7889,7 @@ cursor:not-allowed!important;
   cursor:default;
 }
 
-[cursor*="none"] a:hover, [cursor*="none"] .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), [cursor*="none"] .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), [cursor*="none"] a.wds-button, [cursor*="none"] button.wds-button, [cursor*="none"] .editor-header .wordmark, [cursor*="none"] .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, [cursor*="none"] .wds-banner-notification__close, [cursor*="none"] a label, [cursor*="none"] a input[type="checkbox"], [cursor*="none"] a input[type="radio"], [cursor*="none"] .wds-floating-button:not([disabled]), [cursor*="none"] .wds-floating-button:not(.wds-is-disabled), [cursor*="none"] .wds-dropdown .wds-dropdown__toggle {
+[cursor*="none"] a:hover, [cursor*="none"] .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), [cursor*="none"] .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), [cursor*="none"] a.wds-button, [cursor*="none"] button.wds-button, [cursor*="none"] .editor-header .wordmark, [cursor*="none"] .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, [cursor*="none"] .wds-banner-notification__close, [cursor*="none"] a label, [cursor*="none"] a input[type="checkbox"], [cursor*="none"] a input[type="radio"], [cursor*="none"] .wds-floating-button:not([disabled]), [cursor*="none"] .wds-floating-button:not(.wds-is-disabled), [cursor*="none"] .wds-dropdown .wds-dropdown__toggle, [cursor*="none"] .wds-toggle__label {
 cursor:pointer;
 }
 
@@ -7862,7 +7913,7 @@ cursor:not-allowed!important;
   cursor:default;
 }
 
-[cursor*="none"][curtheme*="dark"] a:hover, [cursor*="none"][curtheme*="dark"] .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), [cursor*="none"][curtheme*="dark"] .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), [cursor*="none"][curtheme*="dark"] a.wds-button, [cursor*="none"][curtheme*="dark"] button.wds-button, [cursor*="none"][curtheme*="dark"] .editor-header .wordmark, [cursor*="none"][curtheme*="dark"] .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, [cursor*="none"][curtheme*="dark"] .wds-banner-notification__close, [cursor*="none"][curtheme*="dark"] a label, [cursor*="none"][curtheme*="dark"] a input[type="checkbox"], [cursor*="none"][curtheme*="dark"] a input[type="radio"], [cursor*="none"][curtheme*="dark"] .wds-floating-button:not([disabled]), [cursor*="none"][curtheme*="dark"] .wds-floating-button:not(.wds-is-disabled), [cursor*="none"][curtheme*="dark"] .wds-dropdown .wds-dropdown__toggle {
+[cursor*="none"][curtheme*="dark"] a:hover, [cursor*="none"][curtheme*="dark"] .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), [cursor*="none"][curtheme*="dark"] .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), [cursor*="none"][curtheme*="dark"] a.wds-button, [cursor*="none"][curtheme*="dark"] button.wds-button, [cursor*="none"][curtheme*="dark"] .editor-header .wordmark, [cursor*="none"][curtheme*="dark"] .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, [cursor*="none"][curtheme*="dark"] .wds-banner-notification__close, [cursor*="none"][curtheme*="dark"] a label, [cursor*="none"][curtheme*="dark"] a input[type="checkbox"], [cursor*="none"][curtheme*="dark"] a input[type="radio"], [cursor*="none"][curtheme*="dark"] .wds-floating-button:not([disabled]), [cursor*="none"][curtheme*="dark"] .wds-floating-button:not(.wds-is-disabled), [cursor*="none"][curtheme*="dark"] .wds-dropdown .wds-dropdown__toggle, [cursor*="none"][curtheme*="dark"] .wds-toggle__label {
 cursor:pointer;
 }
 
@@ -7889,7 +7940,7 @@ cursor:not-allowed!important;
   cursor:default;
 }
 
-.edge a:hover, .edge .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), .edge .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), .edge a.wds-button, .edge button.wds-button, .edge .editor-header .wordmark, .edge .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, .edge .wds-banner-notification__close, .edge a label, .edge a input[type="checkbox"], .edge a input[type="radio"], .edge .wds-floating-button:not([disabled]), .edge .wds-floating-button:not(.wds-is-disabled), .edge .wds-dropdown .wds-dropdown__toggle {
+.edge a:hover, .edge .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), .edge .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), .edge a.wds-button, .edge button.wds-button, .edge .editor-header .wordmark, .edge .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, .edge .wds-banner-notification__close, .edge a label, .edge a input[type="checkbox"], .edge a input[type="radio"], .edge .wds-floating-button:not([disabled]), .edge .wds-floating-button:not(.wds-is-disabled), .edge .wds-dropdown .wds-dropdown__toggle, .edge .wds-toggle__label {
 cursor:pointer;
 }
 

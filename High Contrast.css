@@ -249,9 +249,7 @@ background-image:linear-gradient(to left,rgba(255,255,255, 0) 200px,rgb(var(--co
 
 
 .contrast .mpisto-header-container .link {
-	transition-delay:0ms, 10ms, 10ms, 0ms;
-	transition-duration:400ms, 10ms, 10ms, 200ms;
-	transition-property:background-color, color, border-color, transform;
+	transition:background-color 400ms ease 0ms, color 10ms ease 10ms, border-color 10ms ease 10ms, transform 200ms ease 0ms;
 }
 
 .contrast .color-header .link {
@@ -306,9 +304,17 @@ box-shadow:0 4px 0 6px rgba(0,0,0,.4), 0 4px 0 6px rgba(255,255,255,0.4)!importa
 	color:inherit;
 }
 
-.contrast :not(.freepseudo):not(.wds-dropdown):not(.wds-community-header):not(time):not(.wds-list):not(input):not(.mpisto-content):not(body):before,.contrast :not(.freepseudo):not(.wds-dropdown):not(.wds-community-header):not(.wds-list):not(.mpisto-article-wrapper):not(.mpisto-header-container):not(.mpisto-gnav):not(input):not(body):not(em):after, .basic header.mpisto-navbar:after, .basic footer.mpisto-footer:after, .basic header.mpisto-footer-container:after, .basic .mpisto-option-pane:after, .basic .mpisto-content:after, .basic .mpisto-option-way:after, .basic header.mpisto-navbar:before, .basic footer.mpisto-footer:before, .basic header.mpisto-footer-container:before, .basic .mpisto-option-pane:before, .basic .mpisto-option-way:before {
+.contrast :not(.freepseudo):not(.wds-toggle__label):not(.wds-dropdown):not(.wds-community-header):not(time):not(.wds-list):not(input):not(.mpisto-content):not(body):before,.contrast :not(.freepseudo):not(.wds-toggle__label):not(.wds-dropdown):not(.wds-community-header):not(.wds-list):not(.mpisto-article-wrapper):not(.mpisto-header-container):not(.mpisto-gnav):not(input):not(body):not(em):after, .basic header.mpisto-navbar:after, .basic footer.mpisto-footer:after, .basic header.mpisto-footer-container:after, .basic .mpisto-option-pane:after, .basic .mpisto-content:after, .basic .mpisto-option-way:after, .basic header.mpisto-navbar:before, .basic footer.mpisto-footer:before, .basic header.mpisto-footer-container:before, .basic .mpisto-option-pane:before, .basic .mpisto-option-way:before {
 display:none!important;
 }
+
+.main.contrast .wds-toggle__input:checked+.wds-toggle__label::before{
+background-color:var(--button-color-text);
+}
+.main.contrast .wds-toggle__input:checked+.wds-toggle__label::after{
+background-color:var(--button-color);
+}
+
 
 	.contrast .mpisto-global-navigation .link:active, .contrast .mpisto-global-navigation .link:focus, .contrast .mpisto-global-navigation .wds-dropdown.wds-is-active .link {
 	background-color:var(--button-color);
