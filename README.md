@@ -1,4 +1,4 @@
-# Mpisto
+# Κορα Κορε Web
 OpenSource Mpirthi Project with great modern browser support.
 
 # Wrappers
