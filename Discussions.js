@@ -30,7 +30,7 @@ function SwitchEditorB() {
 
 
 function NewRule () {
-	if ($(".guidelines li span").length == 14) { // 14 Rules
+	if ($(".guidelines li span").length > 13) { // 14 Rules
 		alert("You can't have more than 14 guidelines. Please remove some in order to place new ones");
 	} else { // Less than 14
 		var answer = prompt("You're now making guideline " + ($(".guidelines li span").length + 1) + ". What will it be about?")
