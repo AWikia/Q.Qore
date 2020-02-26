@@ -91,6 +91,43 @@ if (files[0].size > 1000000) {
 
 }
 
+function UploadPicture1Β() {
+img=prompt("Set Background Image (Leave empty for imageless)", "");
+
+	if ($("html.theme-A").length) {
+		$("style.designer-style.theme-A").append(
+		'.theme-A:not(.win10) {' +
+		'--background-image:url("' + img + '")!important;' +
+		'}'
+		);	
+	}
+
+	if ($("html.theme-B").length) {
+		$("style.designer-style.theme-B").append(
+		'.theme-B:not(.win10) {' +
+		'--background-image:url("' + img + '")!important;' +
+		'}'
+		);	
+	}
+
+	if ($("html.theme-C").length) {
+		$("style.designer-style.theme-C").append(
+		'.theme-B:not(.win10) {' +
+		'--background-image:url("' + img + '")!important;' +
+		'}'
+		);	
+	}
+
+	if ($("html.theme-D").length) {
+		$("style.designer-style.theme-D").append(
+		'.theme-D:not(.win10) {' +
+		'--background-image:url("' + img + '")!important;' +
+		'}'
+		);	
+	}
+
+}
+
 
 
 function UploadPicture2(files) {
@@ -108,6 +145,24 @@ if (files[0].size > 1000000) {
 $("img[alt='HM100']").attr("src", img.src);
 
 }
+
+function UploadPicture2Β() {
+img=prompt("Set Avatar Image (Leave empty for default)", "");
+
+if (img=='') {
+	$("img[alt='HM100']").attr("src", "https://vignette.wikia.nocookie.net/messaging/images/1/19/Avatar.jpg/revision/latest/scale-to-width-down/150");
+} else {
+	$("img[alt='HM100']").attr("src", img);
+}
+
+}
+
+function RemovePicture2() {
+if (confirm('Are you sure you want to reset your account\'s avatar to default? This action cannot be undone') === true) {
+	$("img[alt='HM100']").attr("src", "https://vignette.wikia.nocookie.net/messaging/images/1/19/Avatar.jpg/revision/latest/scale-to-width-down/150");
+}
+}
+
 
 
 function UploadPicture3(files) {
@@ -130,6 +185,17 @@ if (files[0].size > 1000000) {
 		'}'
 		);	
 
+
+}
+
+function UploadPicture3Β() {
+img=prompt("Set Header Graphic Image (Leave empty for imageless)", "");
+
+		$("style.designer-style.theme-Global").append(
+		'html {' +
+		'--graphic:url("' + img + '")!important;' +
+		'}'
+		);	
 
 }
 
@@ -156,6 +222,40 @@ if (files[0].size > 1000000) {
 		$(".mpisto-header-container .wordmark img").attr("src", img.src);
 
 }
+
+function UploadPicture5(files) {
+window.URL = window.URL || window.webkitURL;
+const img = document.createElement("img");
+img.src = window.URL.createObjectURL(files[0]);
+
+
+if (files[0].size > 1000000) {
+	console.error("Image is too big. Please pick another one.");
+	alert("Image is too big. Please pick another one.");
+	return
+}
+
+$("img[alt='altavatar']").attr("src", img.src);
+
+}
+
+function UploadPicture5Β() {
+img=prompt("Set Bot Avatar Image (Leave empty for default, can be the same as the ones from the main account)", "");
+
+if (img=='') {
+	$("img[alt='altavatar']").attr("src", "https://vignette.wikia.nocookie.net/messaging/images/1/19/Avatar.jpg/revision/latest/scale-to-width-down/150");
+} else {
+	$("img[alt='altavatar']").attr("src", img);
+}
+
+}
+
+function RemovePicture5() {
+if (confirm('Are you sure you want to reset your bot account\'s avatar to default? This action cannot be undone') === true) {
+	$("img[alt='altavatar']").attr("src", "https://vignette.wikia.nocookie.net/messaging/images/1/19/Avatar.jpg/revision/latest/scale-to-width-down/150");
+}
+}
+
 
 
 function RandomColor1() {
@@ -487,12 +587,12 @@ function ColorUpdate() {
 var button_color = getComputedStyle(document.querySelector('html')).getPropertyValue("--button-color");
 
 if ((chroma(button_color).get('lab.l')) > 54) {
-var buttoncolor1 = chroma.mix(button_color, 'black', 0.15);
+var buttoncolor1 = chroma.mix(button_color, 'black', 0.2);
 var buttoncolor2 = 'black';
 document.querySelector('body').style.setProperty("--button-color-blend-light", button_color);
 document.querySelector('body').style.setProperty("--button-color-blend", buttoncolor1);
 } else {
-var buttoncolor1 = chroma.mix(button_color, 'white', 0.15);
+var buttoncolor1 = chroma.mix(button_color, 'white', 0.2);
 var buttoncolor2 = 'white';
 document.querySelector('body').style.setProperty("--button-color-blend-light", buttoncolor1);
 document.querySelector('body').style.setProperty("--button-color-blend", button_color);
@@ -508,13 +608,13 @@ document.querySelector('body').style.setProperty("--button-color-text", buttonco
 var header_color =	'rgb(' + getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg") + ')';
 
 if ((chroma(header_color).get('lab.l')) > 54) {
-var headercolor1 = chroma.mix(header_color, 'black', 0.15);
+var headercolor1 = chroma.mix(header_color, 'black', 0.2);
 var headercolor2 = '0,0,0';
 var headercolor1final = chroma(headercolor1).get('rgb.r') + ',' + chroma(headercolor1).get('rgb.g') + ',' + chroma(headercolor1).get('rgb.b'); 
 document.querySelector('body').style.setProperty("--community-header-bg-blend-light", getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg"));
 document.querySelector('body').style.setProperty("--community-header-bg-blend", headercolor1final);
 } else {
-var headercolor1 = chroma.mix(header_color, 'white', 0.15);
+var headercolor1 = chroma.mix(header_color, 'white', 0.2);
 var headercolor2 = '255,255,255';
 var headercolor1final = chroma(headercolor1).get('rgb.r') + ',' + chroma(headercolor1).get('rgb.g') + ',' + chroma(headercolor1).get('rgb.b'); 
 document.querySelector('body').style.setProperty("--community-header-bg-blend-light", headercolor1final);
@@ -530,13 +630,13 @@ document.querySelector('body').style.setProperty("--community-header-text", head
 var link_color = 'rgb(' + getComputedStyle(document.querySelector('html')).getPropertyValue("--link-color") + ')';
 
 if ((chroma(link_color).get('lab.l')) > 54) {
-var linkcolor1 = chroma.mix(link_color, 'black', 0.15);
+var linkcolor1 = chroma.mix(link_color, 'black', 0.2);
 var linkcolor2 = 'black';
 var linkcolor1final = chroma(linkcolor1).get('rgb.r') + ',' + chroma(linkcolor1).get('rgb.g') + ',' + chroma(linkcolor1).get('rgb.b'); 
 document.querySelector('body').style.setProperty("--link-color-blend-light", getComputedStyle(document.querySelector('html')).getPropertyValue("--link-color"));
 document.querySelector('body').style.setProperty("--link-color-blend", linkcolor1final);
 } else {
-var linkcolor1 = chroma.mix(link_color, 'white', 0.15);
+var linkcolor1 = chroma.mix(link_color, 'white', 0.2);
 var linkcolor2 = 'white';
 var linkcolor1final = chroma(linkcolor1).get('rgb.r') + ',' + chroma(linkcolor1).get('rgb.g') + ',' + chroma(linkcolor1).get('rgb.b'); 
 document.querySelector('body').style.setProperty("--link-color-blend-light", linkcolor1final);
@@ -558,7 +658,7 @@ var body_bg =	getComputedStyle(document.querySelector('html')).getPropertyValue(
 if ((chroma(content_color).get('lab.l')) > 89) {
 	var dropdowncolor = 'white';
 	if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--adaptive-content-bg") === 'true') && !($("html.contrast.win10").length)  ) {
-		var dropdowncolor2 = chroma.mix(content_color, 'black', 0.55);
+		var dropdowncolor2 = chroma.mix(content_color, 'black', 0.2);
 		var dropdowncolor3 = '#2b2b2b';		
 	} else {
 		var dropdowncolor2 = 'inherit';
@@ -566,9 +666,9 @@ if ((chroma(content_color).get('lab.l')) > 89) {
 	}
 	
 } else if ((chroma(content_color).get('lab.l')) > 54) {
-var dropdowncolor = chroma.mix(content_color, 'black', 0.15);
+var dropdowncolor = chroma.mix(content_color, 'black', 0.2);
 	if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--adaptive-content-bg") === 'true') && !($("html.contrast.win10").length)  ) {
-		var dropdowncolor2 = chroma.mix(content_color, 'black', 0.55);
+		var dropdowncolor2 = chroma.mix(content_color, 'black', 0.5);
 		var dropdowncolor3 = '#2b2b2b';		
 	} else {
 		var dropdowncolor2 = 'inherit';
@@ -578,7 +678,7 @@ var dropdowncolor = chroma.mix(content_color, 'black', 0.15);
 } else {
 var dropdowncolor = chroma.mix(content_color, 'white', 0.15);
 	if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--adaptive-content-bg") === 'true') && !($("html.contrast.win10").length)  ) {
-		var dropdowncolor2 = chroma.mix(content_color, 'white', 0.55);
+		var dropdowncolor2 = chroma.mix(content_color, 'white', 0.5);
 		var dropdowncolor3 = '#e2e2e2';		
 	} else {
 		var dropdowncolor2 = 'inherit';
@@ -639,10 +739,11 @@ function CheckAdapt() {
 	if ($("body.options").length) {
 		if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--adaptive-content-bg") === 'true') && !($("html.contrast.win10").length)  ) {
 				document.querySelector('input#ThmAdpt').checked = true;
-				console.log('Adaptive theme enabled. Content border and Content Color theming are now automatically calculated');
+				console.log('Adaptive theme enabled. Content border and Content Color theming are now automatically calculated.');
 				$(".adapt-off").attr('disabled', 'true');
 		} else {
 				document.querySelector('input#ThmAdpt').checked = false;
+				console.log('Adaptive theme disabled. Content border and Content Color theming are now manually chosen.');
 				$(".adapt-off").removeAttr('disabled');
 		}
 	}
