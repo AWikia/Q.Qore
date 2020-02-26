@@ -190,7 +190,7 @@ document.getElementById("Handler").className += " mpisto-servers"
 					<input type="search" class="mpisto-input" placeholder="Search on Mpisto..."></input>
 				</a>
 				  <div class="wds-dropdown wds-has-dark-shadow">
-					<div class="link cell wds-dropdown__toggle"><img class="mpisto-avatar" src="HM100.png"></img> <small class="name med-up">HM100</small> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
+					<div class="link cell wds-dropdown__toggle"><img class="mpisto-avatar" alt="HM100" src="HM100.png"></img> <small class="name med-up">HM100</small> <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny wds-dropdown__toggle-chevron">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-dropdown-tiny" />
                   </svg>
 				</div>
@@ -953,6 +953,9 @@ document.getElementById("Handler").className += " mpisto-servers"
 					<a class="wds-floating-button accent" title="Webcam">		<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-camera" />
          </svg></a>
+					<a class="wds-floating-button critical" onclick="UploadPicture2Β()" title="Custom (Use with caution)">		<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-explore" />
+         </svg></a>
 					<label for="41"><a class="wds-floating-button" title="Local Storage">		<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-upload" />
          </svg></a></label>
@@ -963,7 +966,7 @@ document.getElementById("Handler").className += " mpisto-servers"
     </div>
     <br>
     <br>
-    <button class="wds-button wds-is-squished wds-is-full-width">Remove avatar</button>
+    <button class="wds-button wds-is-squished" onclick="RemovePicture2()">Remove avatar</button>
     </fieldset>
     </div>
     <div class="fieldset">
@@ -973,7 +976,7 @@ document.getElementById("Handler").className += " mpisto-servers"
     <br>
     <label>Avatar Pic (.png/.jpg/.gif needed, up to 1000KB possible, gets updated to your base account, seen on MpistoLite while editing articles, must differ from main account's avatar)</label>
     <br>
-    Current avatar: <img class="options-avatar" src="HM100alt.png"></img> 
+    Current avatar: <img class="options-avatar" alt="altavatar" src="HM100alt.png"></img> 
     <div class="wds-dropdown upload-actions wds-no-chevron">
 		<div class="wds-floating-button">
 		<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
@@ -982,7 +985,7 @@ document.getElementById("Handler").className += " mpisto-servers"
          <div class="wds-dropdown__content wds-is-not-scrollable">
 			<ul class="wds-list">
 			<li class="wds-is-hidden">
-				<input name="05" id="41-1" type="file"></input>
+				<input name="05" id="41-1" onchange="UploadPicture5(this.files)" type="file"></input>
 			</li>
 			<li>
 				<div class="wds-floating-button-group wds-is-vertical">
@@ -991,6 +994,9 @@ document.getElementById("Handler").className += " mpisto-servers"
          </svg></a>
 					<a class="wds-floating-button accent" title="Webcam">		<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-camera" />
+         </svg></a>
+					<a class="wds-floating-button critical" onclick="UploadPicture5Β()" title="Custom (Use with caution)">		<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-explore" />
          </svg></a>
 					<label for="41-1"><a class="wds-floating-button" title="Local Storage">		<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-upload" />
@@ -1002,7 +1008,7 @@ document.getElementById("Handler").className += " mpisto-servers"
     </div>
     <br>
     <br>
-    <button class="wds-button wds-is-squished">Remove avatar</button>
+    <button class="wds-button wds-is-squished" onclick="RemovePicture5()">Remove avatar</button>
     <button class="wds-button wds-is-squished">Reset Name</button>
     </fieldset>
     </div>
@@ -1465,6 +1471,9 @@ Checked = VisualEditor as default mode
 					<a class="wds-floating-button accent" title="Webcam">		<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-camera" />
          </svg></a>
+					<a class="wds-floating-button critical" onclick="UploadPicture1Β()" title="Custom (Use with caution)">		<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-explore" />
+         </svg></a>
 					<label for="41-5"><a class="wds-floating-button" title="Local Storage">		<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-upload" />
          </svg></a></label>
@@ -1530,6 +1539,9 @@ Checked = VisualEditor as default mode
          </svg></a>
 					<a class="wds-floating-button accent" title="Webcam">		<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-camera" />
+         </svg></a>
+					<a class="wds-floating-button critical" onclick="UploadPicture3Β()" title="Custom (Use with caution)">		<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-explore" />
          </svg></a>
 					<label for="42"><a class="wds-floating-button" title="Local Storage">		<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-upload" />

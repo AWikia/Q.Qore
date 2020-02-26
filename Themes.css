@@ -3,19 +3,11 @@
 --background-image:url("headbg.jpg");
 --background-color:#e995ca;
 --link-color:24,187,197;
---link-color-dark:3,162,172;
---link-color-text:black;
 --content-bg:#ffffff;
---dropdown-bg:#FFFFFF;
---emphasis-bg:#92DFE4;
 --content-border:#ccc;
---content-border-dark:#B3B3B3;
 --content-color:#000000;
 --button-color:#18BBC5;
---button-color-dark:#03A2AC;
---button-color-text:black;
 --community-header-bg:0,0,255;
---community-header-text:248,248,248;
 }
 
 /* Standard (V2) */
@@ -23,19 +15,11 @@
 --background-image:url("headbg2.jpg");
 --background-color:#e995ca;
 --link-color:25,77,204;
---link-color-dark:51,103,230;
---link-color-text:white;
 --content-bg:#ffffff;
---dropdown-bg:#FFFFFF;
---emphasis-bg:#92ABE7;
 --content-border:#ccc;
---content-border-dark:#B3B3B3;
 --content-color:#010101;
 --button-color:#194cd1;
---button-color-dark:#3366EB;
---button-color-text:white;
 --community-header-bg:153,153,255;
---community-header-text:23,23,23;
 }
 
 /* Standard (V3) */
@@ -43,19 +27,11 @@
 --background-image:url("headbg7.jpg");
 --background-color:#672752;
 --link-color:232,30,40;
---link-color-dark:255,58,68;
---link-color-text:white;
 --content-bg:#fffaf5;
---dropdown-bg:#FFFFFF;
---emphasis-bg:#F49294;
 --content-border:#bbbbbb;
---content-border-dark:#A2A2A2;
 --content-color:#111122;
 --button-color:#CA3A22;
---button-color-dark:#E4553D;
---button-color-text:white;
 --community-header-bg:88,53,130;
---community-header-text:248,248,248;
 }
 
 /* Standard (V4) */
@@ -63,19 +39,11 @@
 --background-image:url("headbg7.jpg");
 --background-color:#672752;
 --link-color:232,30,40;
---link-color-dark:255,58,68;
---link-color-text:white;
 --content-bg:#fffcfa;
---dropdown-bg:#FFFFFF;
---emphasis-bg:#F49396;
 --content-border:#bbbbbb;
---content-border-dark:#A2A2A2;
 --content-color:#111122;
 --button-color:#583582;
---button-color-dark:#724F9B;
---button-color-text:white;
 --community-header-bg:202,58,34;
---community-header-text:248,248,248;
 }
 
 /* Standard (V5) */
@@ -83,19 +51,11 @@
 --background-image:url("headbg8.jpg");
 --background-color:#67f0ff;
 --link-color:163,71,208;
---link-color-dark:137,44,183;
---link-color-text:black;
 --content-bg:#fbedfe;
---dropdown-bg:#ffffff;
---emphasis-bg:#D19EE8;
 --content-border:#ffdc87;
---content-border-dark:#E6BF62;
 --content-color:#2a4b6c;
 --button-color:#7AB247;
---button-color-dark:#96CC65;
---button-color-text:white;
 --community-header-bg:82,192,251;
---community-header-text:23,23,23;
 }
 
 /* Standard (V6) */
@@ -103,19 +63,11 @@
 --background-image:url("headbg9.jpg");
 --background-color:#ffa257;
 --link-color:255,0,0;
---link-color-dark:255,25,25;
---link-color-text:white;
 --content-bg:#f9e6e8;
---dropdown-bg:#ffffff;
---emphasis-bg:#FC797A;
 --content-border:#bdbdbd;
---content-border-dark:#A4A4A4;
 --content-color:#1f0000;
 --button-color:#F10C35;
---button-color-dark:#FF264D;
---button-color-text:white;
 --community-header-bg:230,162,138;
---community-header-text:23,23,23;
 }
 
 /* Standard (V7) */
@@ -123,19 +75,11 @@
 --background-image:url("headbg9.jpg");
 --background-color:#ffa257;
 --link-color:255,0,0;
---link-color-dark:255,25,25;
---link-color-text:white;
 --content-bg:#fcf0f2;
---dropdown-bg:#ffffff;
---emphasis-bg:#FE7E7F;
 --content-border:#bdbdbd;
---content-border-dark:#A4A4A4;
 --content-color:#1f0000;
 --button-color:#e6a28a;
---button-color-dark:#cc8166;
---button-color-text:black;
 --community-header-bg:241,12,53;
---community-header-text:248,248,248;
 }
 
 /* Standard (V8) */
@@ -143,19 +87,11 @@
 --background-image:url("headbg2.jpg");
 --background-color:#599ace;
 --link-color:114,137,218;
---link-color-dark:81,106,193;
---link-color-text:white;
 --content-bg:#d9e9f9;
---dropdown-bg:#ffffff;
---emphasis-bg:#A8BCEA;
 --content-border:#b2b2b2;
---content-border-dark:#999999;
 --content-color:#10001a;
 --button-color:#4E5D94;
---button-color-dark:#6C7BAD;
---button-color-text:white;
 --community-header-bg:25,161,95;
---community-header-text:248,248,248;
 }
 
 /* Standard (V9) */
@@ -163,19 +99,11 @@
 --background-image:url("headbg7.jpg");
 --background-color:#ff0000;
 --link-color:78,93,148;
---link-color-dark:108,123,173;
---link-color-text:white;
 --content-bg:#fefff1;
---dropdown-bg:#ffffff;
---emphasis-bg:#ABB2C5;
 --content-border:#b0cccc;
---content-border-dark:#88B3B3;
 --content-color:#3c1a2b;
 --button-color:#404A57;
---button-color-dark:#5E6670;
---button-color-text:white;
 --community-header-bg:149,49,81;
---community-header-text:248,248,248;
 }
 
 /* Standard (V10) */
@@ -183,19 +111,11 @@
 --background-image:url("headbg7.jpg");
 --background-color:#ff0000;
 --link-color:78,93,148;
---link-color-dark:108,123,173;
---link-color-text:white;
 --content-bg:#fffaf5;
---dropdown-bg:#FFFFFF;
---emphasis-bg:#ABB0C7;
 --content-border:#b0cccc;
---content-border-dark:#88B3B3;
 --content-color:#3c1a2b;
 --button-color:#953151;
---button-color-dark:#ad4b6a;
---button-color-text:white;
 --community-header-bg:64,74,87;
---community-header-text:248,248,248;
 }
 
 /* Standard (V11) */
@@ -203,19 +123,11 @@
 --background-image:url("headbg8.jpg");
 --background-color:#9df6fe;
 --link-color:128,0,128;
---link-color-dark:153,15,153;
---link-color-text:white;
 --content-bg:#f8ceff;
---dropdown-bg:#ffffff;
---emphasis-bg:#BF6CC3;
 --content-border:#e75254;
---content-border-dark:#CE3436;
 --content-color:#0a385a;
 --button-color:#A749E7;
---button-color-dark:#8C2CCE;
---button-color-text:black;
 --community-header-bg:0,191,255;
---community-header-text:23,23,23;
 }
 
 /* Standard (V12) */
@@ -223,19 +135,11 @@
 --background-image:url("headbg9.jpg");
 --background-color:#ffddbb;
 --link-color:224,57,135;
---link-color-dark:199,30,109;
---link-color-text:black;
 --content-bg:#feb0a4;
---dropdown-bg:#F5D2CE;
---emphasis-bg:#F07896;
 --content-border:#9214da;
---content-border-dark:#7A00C1;
 --content-color:#700658;
 --button-color:#F838A9;
---button-color-dark:#DF1C8E;
---button-color-text:black;
 --community-header-bg:222,50,204;
---community-header-text:23,23,23;
 }
 
 /* Standard (V13) */
@@ -243,39 +147,35 @@
 --background-image:url("headbg9.jpg");
 --background-color:#ffddbb;
 --link-color:224,57,135;
---link-color-dark:199,30,109;
---link-color-text:black;
 --content-bg:#f2c4b8;
---dropdown-bg:#EFDCD8;
---emphasis-bg:#EA82A1;
 --content-border:#9214da;
---content-border-dark:#7A00C1;
 --content-color:#700658;
 --button-color:#DC32CC;
---button-color-dark:#C518B3;
---button-color-text:black;
 --community-header-bg:248,56,169;
---community-header-text:23,23,23;
 }
 
-/* Standard */
+/* Standard (V14) */
 .theme-A {
 --background-image:url("A Wikia Cover.png");
 --background-color:#01d7e5;
 --link-color:26,74,74;
---link-color-dark:45,99,99;
---link-color-text:white;
 --content-bg:#f5f5f5;
---dropdown-bg:#FFFFFF;
---emphasis-bg:#8DA4A4;
 --content-border:#cccddd;
---content-border-dark:#A1A3C4;
 --content-color:#010000;
 --button-color:#18BBC6;
---button-color-dark:#03A2AD;
---button-color-text:black;
 --community-header-bg:8,156,166;
---community-header-text:248,248,248;
+}
+
+/* Standard */
+.theme-A {
+--background-image:url("loadbg_dev.png");
+--background-color:#ffa500;
+--link-color:250,128,114;
+--content-bg:#f9fafb;
+--content-border:#dddccc;
+--content-color:#202020;
+--button-color:#663399;
+--community-header-bg:255,99,71;
 }
 
 
@@ -284,19 +184,11 @@
 --background-image:url("headbg.jpg");
 --background-color:#54d9f8;
 --link-color:134,4,152;
---link-color-dark:159,22,177;
---link-color-text:white;
 --content-bg:#ffecff;
---dropdown-bg:#ffffff;
---emphasis-bg:#C67ECE;
 --content-border:#ddf759;
---content-border-dark:#C3DE39;
 --content-color:#2a2a2a;
 --button-color:#70C800;
---button-color-dark:#88E216;
---button-color-text:white;
 --community-header-bg:80,103,155;
---community-header-text:248,248,248;
 }
 
 /* Standard Dark Version ~ */
@@ -304,19 +196,11 @@
 --background-image:url("headbg3.jpg");
 --background-color:#610038;
 --link-color:0,0,255;
---link-color-dark:25,25,255;
---link-color-text:white;
 --content-bg:#282828;
---dropdown-bg:#1A1A1A;
---emphasis-bg:#15158E;
 --content-border:#cccccc;
---content-border-dark:#A1A3C4;
 --content-color:#f9f9f9;
 --button-color:#00178C;
---button-color-dark:#1029A5;
---button-color-text:white;
 --community-header-bg:127,105,105;
---community-header-text:248,248,248;
 }
 
 /* Standard Nightly Version */
@@ -324,19 +208,11 @@
 --background-image:url("https://d1u5p3l4wpay3k.cloudfront.net/maia_gamepedia/9/98/Bg.jpg?version=b5f279562cd466d98662305ef384edb0");
 --background-color:#000;
 --link-color:0,255,255;
---link-color-dark:0,230,230;
---link-color-text:black;
 --content-bg:#3a3a3a;
---dropdown-bg:#232323;
---emphasis-bg:#1E9797;
 --content-border:#cccddd;
---content-border-dark:#A1A3C4;
 --content-color:#c9d4d5;
 --button-color:#264774;
---button-color-dark:#3C5E8D;
---button-color-text:white;
 --community-header-bg:102,51,153;
---community-header-text:248,248,248;
 }
 
 /* Standard Canary Version (V1) */
@@ -344,19 +220,11 @@
 --background-image:url("canary.jpg");
 --background-color:#fcc101;
 --link-color:231,105,1;
---link-color-dark:255,130,26;
---link-color-text:white;
 --content-bg:#ebe5da;
---dropdown-bg:#ffffff;
---emphasis-bg:#E9AA73;
 --content-border:#ebc780;
---content-border-dark:#D2AA5D;
 --content-color:#1a1a1a;
 --button-color:#F5A14C;
---button-color-dark:#DC852E;
---button-color-text:black;
 --community-header-bg:225,171,24;
---community-header-text:23,23,23;
 }
 
 /* Standard Canary Version */
@@ -364,19 +232,11 @@
 --background-image:url("canary.jpg");
 --background-color:#f8e9ae;
 --link-color:175,66,0;
---link-color-dark:201,88,20;
---link-color-text:white;
 --content-bg:#fbe7b5;
---dropdown-bg:#ffffff;
---emphasis-bg:#D7995F;
 --content-border:#c9b991;
---content-border-dark:#B09D6D;
 --content-color:#2b2b2b;
 --button-color:#FE7E03;
---button-color-dark:#FF8C1C;
---button-color-text:white;
 --community-header-bg:161,119,79;
---community-header-text:248,248,248;
 }
 
 /* Standard Beta Version */
@@ -384,19 +244,11 @@
 --background-image:url("headbg6-1.jpg");
 --background-color:#ac599e;
 --link-color:92,187,129;
---link-color-dark:63,162,101;
---link-color-text:black;
 --content-bg:#ffffff;
---dropdown-bg:#FFFFFF;
---emphasis-bg:#B2DFC3;
 --content-border:#cacaca;
---content-border-dark:#B1B1B1;
 --content-color:#000000;
 --button-color:#5CBB81;
---button-color-dark:#3FA265;
---button-color-text:black;
 --community-header-bg:255,0,0;
---community-header-text:248,248,248;
 }
 
 
@@ -405,19 +257,11 @@
 --background-image:url("dev.jpg");
 --background-color:#0000aa;
 --link-color:0,170,255;
---link-color-dark:0,153,230;
---link-color-text:black;
 --content-bg:#0000a8;
---dropdown-bg:#7D7FD0;
---emphasis-bg:#0050D1;
 --content-border:#aaaacc;
---content-border-dark:#8383B3;
 --content-color:#f9f9f9;
 --button-color:#00699E;
---button-color-dark:#1280B7;
---button-color-text:white;
 --community-header-bg:22,196,196;
---community-header-text:23,23,23;
 }
 
 /* Standard Developer Version */
@@ -425,19 +269,11 @@
 --background-image:url("headbg6-2.jpg");
 --background-color:#d9d9d9;
 --link-color:187,187,187;
---link-color-dark:162,162,162;
---link-color-text:black;
 --content-bg:#ffffff;
---dropdown-bg:#FFFFFF;
---emphasis-bg:#DFDFDF;
 --content-border:#cacaca;
---content-border-dark:#B1B1B1;
 --content-color:#000000;
 --button-color:#CCCCCC;
---button-color-dark:#B3B3B3;
---button-color-text:black;
 --community-header-bg:170,170,170;
---community-header-text:23,23,23;
 }
 
 /* Agent */
@@ -445,19 +281,11 @@
 --background-image:url("headbg.jpg");
 --background-color:#aa00aa;
 --link-color:221,154,255;
---link-color-dark:191,115,230;
---link-color-text:black;
 --content-bg:#1aef28;
---dropdown-bg:#14791A;
---emphasis-bg:#76C78E;
 --content-border:#b0a1ee;
---content-border-dark:#8C7AD5;
 --content-color:#002200;
 --button-color:#18C5BB;
---button-color-dark:#03ACA2;
---button-color-text:black;
 --community-header-bg:170,153,0;
---community-header-text:248,248,248;
 }
 
 /* Sagent */
@@ -465,19 +293,11 @@
 --background-image:url("headbg4.jpg");
 --background-color:#e95500;
 --link-color:148,24,197;
---link-color-dark:173,49,223;
---link-color-text:white;
 --content-bg:#fdfeff;
---dropdown-bg:#FFFFFF;
---emphasis-bg:#CB91E4;
 --content-border:#eee;
---content-border-dark:#D5D5D5;
 --content-color:#1a2a3a;
 --button-color:#FF7E09;
---button-color-dark:#E66D00;
---button-color-text:black;
 --community-header-bg:255,126,9;
---community-header-text:23,23,23;
 }
 
 /* Flipin */
@@ -485,19 +305,11 @@
 --background-image:url("headbg.jpg");
 --background-color:#9e55ac;
 --link-color:129,187,92;
---link-color-dark:101,162,63;
---link-color-text:black;
 --content-bg:#ffffff;
---dropdown-bg:#FFFFFF;
---emphasis-bg:#C3DFB2;
 --content-border:#cccccc;
---content-border-dark:#B3B3B3;
 --content-color:#000000;
 --button-color:#81BB5C;
---button-color-dark:#65A23F;
---button-color-text:black;
 --community-header-bg:0,0,255;
---community-header-text:248,248,248;
 }
 
 
@@ -507,19 +319,11 @@
 --background-image:url("headbg6.jpg");
 --background-color:#ac599e;
 --link-color:92,187,129;
---link-color-dark:63,162,101;
---link-color-text:black;
 --content-bg:#ffffff;
---dropdown-bg:#FFFFFF;
---emphasis-bg:#B2DFC3;
 --content-border:#cccccc;
---content-border-dark:#B3B3B3;
 --content-color:#000000;
 --button-color:#5CBB81;
---button-color-dark:#3FA265;
---button-color-text:black;
 --community-header-bg:255,0,0;
---community-header-text:248,248,248;
 }
 
 /* GleunFlippin */
@@ -527,19 +331,11 @@
 --background-image:url("headbg6.jpg");
 --background-color:#ca95e9;
 --link-color:197,187,24;
---link-color-dark:172,162,3;
---link-color-text:black;
 --content-bg:#ffffff;
---dropdown-bg:#FFFFFF;
---emphasis-bg:#E4DF92;
 --content-border:#cccccc;
---content-border-dark:#B3B3B3;
 --content-color:#000000;
 --button-color:#C5BB18;
---button-color-dark:#ACA203;
---button-color-text:black;
 --community-header-bg:255,0,0;
---community-header-text:248,248,248;
 }
 
 /* Classic ~ */
@@ -547,19 +343,11 @@
 --background-image:url("headbg.jpg");
 --background-color:#3975a9;
 --link-color:0,0,159;
---link-color-dark:18,18,184;
---link-color-text:white;
 --content-bg:#d6cec8;
---dropdown-bg:#E2E1DF;
---emphasis-bg:#8686D2;
 --content-border:#848484;
---content-border-dark:#6A6A6A;
 --content-color:#000000;
 --button-color:#08226C;
---button-color-dark:#173485;
---button-color-text:white;
 --community-header-bg:46,84,146;
---community-header-text:248,248,248;
 }
 
 /* Greeny ~ */
@@ -567,19 +355,11 @@
 --background-image:url("headbg.jpg");
 --background-color:#aaffaa;
 --link-color:24,255,187;
---link-color-dark:0,230,162;
---link-color-text:black;
 --content-bg:#22bb22;
---dropdown-bg:#186018;
---emphasis-bg:#1DDB6A;
 --content-border:#00aaff;
---content-border-dark:#0099E6;
 --content-color:#d9e9f9;
 --button-color:#32DC32;
---button-color-dark:#50F650;
---button-color-text:white;
 --community-header-bg:34,170,51;
---community-header-text:248,248,248;
 }
 
 /* Brightness A */
@@ -587,19 +367,11 @@
 --background-image:url("");
 --background-color:#000000;
 --link-color:128,128,255;
---link-color-dark:92,92,230;
---link-color-text:black;
 --content-bg:#000000;
---dropdown-bg:#080808;
---emphasis-bg:#3C3C79;
 --content-border:#00ff00;
---content-border-dark:#19FF19;
 --content-color:#ffff00;
 --button-color:#008000;
---button-color-dark:#0F990F;
---button-color-text:white;
 --community-header-bg:0,0,255;
---community-header-text:248,248,248;
 }
 
 /* Brightness B */
@@ -607,19 +379,11 @@
 --background-image:url("");
 --background-color:#000000;
 --link-color:128,128,255;
---link-color-dark:92,92,230;
---link-color-text:black;
 --content-bg:#000000;
---dropdown-bg:#080808;
---emphasis-bg:#3C3C79;
 --content-border:#c0c0c0;
---content-border-dark:#A7A7A7;
 --content-color:#00ff00;
 --button-color:#0000FF;
---button-color-dark:#1919FF;
---button-color-text:white;
 --community-header-bg:0,255,255;
---community-header-text:23,23,23;
 }
 
 /* Brightness C */
@@ -627,19 +391,11 @@
 --background-image:url("");
 --background-color:#000000;
 --link-color:255,255,0;
---link-color-dark:230,230,0;
---link-color-text:black;
 --content-bg:#000000;
---dropdown-bg:#080808;
---emphasis-bg:#797900;
 --content-border:#3ff23f;
---content-border-dark:#5CFF5C;
 --content-color:#ffffff;
 --button-color:#1AEBFF;
---button-color-dark:#00D2E6;
---button-color-text:black;
 --community-header-bg:55,0,110;
---community-header-text:248,248,248;
 }
 
 /* Brightness D */
@@ -647,19 +403,11 @@
 --background-image:url("");
 --background-color:#ffffff;
 --link-color:0,0,159;
---link-color-dark:18,18,184;
---link-color-text:white;
 --content-bg:#ffffff;
---dropdown-bg:#FFFFFF;
---emphasis-bg:#8686D2;
 --content-border:#600000;
---content-border-dark:#790C0C;
 --content-color:#000000;
 --button-color:#37006E;
---button-color-dark:#4A0D87;
---button-color-text:white;
 --community-header-bg:0,0,0;
---community-header-text:248,248,248;
 }
 
 /* Gaming Wiki (V1) */
@@ -667,19 +415,11 @@
 --background-image:url("headbg5.jpg");
 --background-color:#76f6ff;
 --link-color:128,0,128;
---link-color-dark:153,15,153;
---link-color-text:white;
 --content-bg:#e0e8ee;
---dropdown-bg:#ffffff;
---emphasis-bg:#B37ABA;
 --content-border:#ffc0cb;
---content-border-dark:#E696A4;
 --content-color:#1a2b3c;
 --button-color:#E78097;
---button-color-dark:#CE5D76;
---button-color-text:black;
 --community-header-bg:195,132,223;
---community-header-text:23,23,23;
 }
 
 /* Gaming Wiki (V2) */
@@ -687,19 +427,11 @@
 --background-image:url("headbg5.jpg");
 --background-color:#76f6ff;
 --link-color:145,19,206;
---link-color-dark:170,44,232;
---link-color-text:white;
 --content-bg:#34ecc6;
---dropdown-bg:#95EFDE;
---emphasis-bg:#6085CA;
 --content-border:#e78097;
---content-border-dark:#CE5D76;
 --content-color:#341b23;
 --button-color:#FFE2AC;
---button-color-dark:#E6C384;
---button-color-text:black;
 --community-header-bg:192,14,4;
---community-header-text:248,248,248;
 }
 
 /* Gaming Wiki (V3) */
@@ -707,19 +439,11 @@
 --background-image:url("grwbg.jpg");
 --background-color:#28d96d;
 --link-color:79,14,141;
---link-color-dark:101,33,166;
---link-color-text:white;
 --content-bg:#fecb3c;
---dropdown-bg:#F5DF9D;
---emphasis-bg:#AB7162;
 --content-border:#c3b0a9;
---content-border-dark:#AA8D82;
 --content-color:#1c6945;
 --button-color:#F8523C;
---button-color-dark:#DF351F;
---button-color-text:black;
 --community-header-bg:252,221,94;
---community-header-text:23,23,23;
 }
 
 /* Gaming Wiki */
@@ -727,19 +451,11 @@
 --background-image:url("grwbg.jpg");
 --background-color:#ff00ff;
 --link-color:40,217,109;
---link-color-dark:69,243,137;
---link-color-text:white;
 --content-bg:#d99f6c;
---dropdown-bg:#E4CAB4;
---emphasis-bg:#85BA6C;
 --content-border:#fba944;
---content-border-dark:#E28E26;
 --content-color:#1c6945;
 --button-color:#fcd32b;
---button-color-dark:#E3C23E;
---button-color-text:black;
 --community-header-bg:178,43,178;
---community-header-text:23,23,23;
 }
 
 /* Grays ~ */
@@ -747,19 +463,11 @@
 --background-image:url("");
 --background-color:#eee;
 --link-color:187,187,187;
---link-color-dark:162,162,162;
---link-color-text:black;
 --content-bg:#ffffff;
---dropdown-bg:#FFFFFF;
---emphasis-bg:#DFDFDF;
 --content-border:#cccccc;
---content-border-dark:#B3B3B3;
 --content-color:#000000;
 --button-color:#CCCCCC;
---button-color-dark:#B3B3B3;
---button-color-text:black;
 --community-header-bg:255,255,255;
---community-header-text:23,23,23;
 }
 
 /* MameDev (V1) */
@@ -767,19 +475,11 @@
 --background-image:url("");
 --background-color:#f8f8f8;
 --link-color:76,139,202;
---link-color-dark:48,112,177;
---link-color-text:black;
 --content-bg:#a6e2fa;
---dropdown-bg:#ffffff;
---emphasis-bg:#7BB9E3;
 --content-border:#85b5c8;
---content-border-dark:#6299AF;
 --content-color:#3a3a3a;
 --button-color:#4698C6;
---button-color-dark:#2B7EAD;
---button-color-text:black;
 --community-header-bg:165,181,198;
---community-header-text:23,23,23;
 }
 
 /* MameDev */
@@ -787,18 +487,11 @@
 --background-image:url("");
 --background-color:#f8f7f6;
 --link-color:70,198,138;
---link-color-dark:43,173,112;
---link-color-text:black;
 --content-bg:#7e86ae;
---emphasis-bg:#63A49D;
---dropdown-bg:#B8BED3;
 --content-border:#8793cc;
 --content-color:#3a3a3a;
 --button-color:#E67300;
---button-color-dark:#FF8C19;
---button-color-text:white;
 --community-header-bg:70,152,198;
---community-header-text:23,23,23;
 }
 
 
@@ -807,19 +500,11 @@
 --background-image:url("");
 --background-color:#f6f6f6;
 --link-color:0,183,224;
---link-color-dark:0,162,199;
---link-color-text:black;
 --content-bg:#ffffff;
---content-border-dark:#B3B3B3;
---dropdown-bg:#FFFFFF;
---emphasis-bg:#86DDF1;
 --content-border:#cccccc;
 --content-color:#1a1a1a;
 --button-color:#00B7E0;
---button-color-dark:#00A2C7;
---button-color-text:black;
 --community-header-bg:64,74,87;
---community-header-text:248,248,248;
 }
 
 /* WDS ~ */
@@ -827,19 +512,11 @@
 --background-image:url("");
 --background-color:#f6f6f6;
 --link-color:0,214,214;
---link-color-dark:0,189,189;
---link-color-text:black;
 --content-bg:#ffffff;
---dropdown-bg:#FFFFFF;
---emphasis-bg:#86ECEC;
 --content-border:#cccccc;
---content-border-dark:#B3B3B3;
 --content-color:#002a32;
 --button-color:#00D6D6;
---button-color-dark:#00BDBD;
---button-color-text:black;
 --community-header-bg:19,40,44;
---community-header-text:248,248,248;
 }
 
 
@@ -848,19 +525,11 @@
 --background-image:url("");
 --background-color:#a2ddfe;
 --link-color:225,74,34;
---link-color-dark:251,102,63;
---link-color-text:white;
 --content-bg:#fefeff;
---dropdown-bg:#FFFFFF;
---emphasis-bg:#F0A996;
 --content-border:#7e787d;
---content-border-dark:#979797;
 --content-color:#020002;
 --button-color:#FEAFD3;
---button-color-dark:#E587B1;
---button-color-text:black;
 --community-header-bg:99,157,4;
---community-header-text:248,248,248;
 }
 
 /* Horoscope Referata */
@@ -868,19 +537,11 @@
 --background-image:url("https://upload.wikimedia.org/wikipedia/commons/8/89/Meister_von_San_Vitale_in_Ravenna.jpg");
 --background-color:#4b0082;
 --link-color:75,255,130;
---link-color-dark:44,230,101;
---link-color-text:black;
 --content-bg:#961e76;
---dropdown-bg:#4F1640;
---emphasis-bg:#72897C;
 --content-border:#add8e7;
---content-border-dark:#85BBCE;
 --content-color:#d3e4e5;
 --button-color:#800080;
---button-color-dark:#990F99;
---button-color-text:white;
 --community-header-bg:128,0,128;
---community-header-text:248,248,248;
 }
 
 /* A Help Wiki */
@@ -888,19 +549,11 @@
 --background-image:url("http://a-help.referata.com/w/images/Besto-BACK.jpg");
 --background-color:#012e55;
 --link-color:169,206,58;
---link-color-dark:143,181,32;
---link-color-text:black;
 --content-bg:#ffffff;
---dropdown-bg:#FFFFFF;
---emphasis-bg:#D6E8A2;
 --content-border:#cccccc;
---content-border-dark:#B3B3B3;
 --content-color:#1a1a1a;
 --button-color:#F15920;
---button-color-dark:#FF713B;
---button-color-text:white;
 --community-header-bg:241,89,32;
---community-header-text:248,248,248;
 }
 
 /* Mpisto Scenes (V1) */
@@ -908,19 +561,11 @@
 --background-image:url("headbg.jpg");
 --background-color:#a99b3a;
 --link-color:24,170,213;
---link-color-dark:2,145,188;
---link-color-text:black;
 --content-bg:#abc123;
---dropdown-bg:#CEDA91;
---emphasis-bg:#65B677;
 --content-border:#ace135;
---content-border-dark:#92C81B;
 --content-color:#000111;
 --button-color:#3D3D99;
---button-color-dark:#5959B2;
---button-color-text:white;
 --community-header-bg:61,61,153;
---community-header-text:248,248,248;
 }
 
 /* Mpisto Scenes ~ */
@@ -928,19 +573,11 @@
 --background-image:url("headbg8.jpg");
 --background-color:#52c0fb;
 --link-color:122,178,71;
---link-color-dark:150,204,101;
---link-color-text:white;
 --content-bg:#f0f8ff;
---dropdown-bg:#FFFFFF;
---emphasis-bg:#B8D7A8;
 --content-border:#abc123;
---content-border-dark:#92A80D;
 --content-color:#000011;
 --button-color:#FF7F50;
---button-color-dark:#E66131;
---button-color-text:black;
 --community-header-bg:140,204,81;
---community-header-text:23,23,23;
 }
 
 /* Besto Besigns */
@@ -948,38 +585,22 @@
 --background-image:url("");
 --background-color:#000000;
 --link-color:255,127,80;
---link-color-dark:230,97,49;
---link-color-text:black;
 --content-bg:#f0f8ff;
---dropdown-bg:#FFFFFF;
---emphasis-bg:#FFC3AC;
 --content-border:#ff7f50;
---content-border-dark:#E66131;
 --content-color:#ff7f50;
 --button-color:#DCDCDC;
---button-color-dark:#C3C3C3;
---button-color-text:black;
 --community-header-bg:220,220,220;
---community-header-text:23,23,23;
 }
 
-/* Best Beta */
+/* Best? Beta */
 .theme-A {
 --background-image:url("headbg.jpg");
 --background-color:#e995ca;
 --link-color:24,187,197;
---link-color-dark:3,162,172;
---link-color-text:black;
---content-bg:#ffffff;
---dropdown-bg:#FFFFFF;
 --content-border:#000000;
---content-border-dark:#191919;
 --content-color:#000000;
 --button-color:#18BBC5;
---button-color-dark:#03a1ab;
---button-color-text:black;
 --community-header-bg:24,187,197;
---community-header-text:23,23,23;
 }
 
 /* Latex ~ */
@@ -987,19 +608,11 @@
 --background-image:url("headbg7.jpg");
 --background-color:#ff3333;
 --link-color:23,23,230;
---link-color-dark:51,51,255;
---link-color-text:white;
 --content-bg:#e6e6ff;
---dropdown-bg:#EAECF9;
---emphasis-bg:#92DFE4;
 --content-border:#b3b3b3;
---content-border-dark:#9A9A9A;
 --content-color:#1a1a1a;
 --button-color:#404080;
---button-color-dark:#5C5C99;
---button-color-text:white;
 --community-header-bg:0,0,204;
---community-header-text:248,248,248;
 }
 
 /* Sharp X1 ~ */
@@ -1007,19 +620,11 @@
 --background-image:url("");
 --background-color:#ff00ff;
 --link-color:255,255,0;
---link-color-dark:230,230,0;
---link-color-text:black;
 --content-bg:#ffffff;
---dropdown-bg:#FFFFFF;
---emphasis-bg:#FFFF86;
 --content-border:#00ff00;
---content-border-dark:#19FF19;
 --content-color:#000000;
 --button-color:#00FFFF;
---button-color-dark:#00e6e6;
---button-color-text:black;
 --community-header-bg:0,0,255;
---community-header-text:248,248,248;
 }
 
 /* Medicore ~ */
@@ -1027,19 +632,11 @@
 --background-image:url("headbg2.jpg");
 --background-color:#18bbc5;
 --link-color:103,214,225;
---link-color-dark:71,188,200;
---link-color-text:black;
 --content-bg:#ece1c1;
---dropdown-bg:#ffffff;
---emphasis-bg:#ADDCDF;
 --content-border:#ffa500;
---content-border-dark:#E69400;
 --content-color:#2b2b2b;
 --button-color:#A1774F;
---button-color-dark:#BA936E;
---button-color-text:white;
 --community-header-bg:112,200,0;
---community-header-text:248,248,248;
 }
 
 /* Maxthon ~ */
@@ -1047,19 +644,11 @@
 --background-image:url("headbg4.jpg");
 --background-color:#c9e2f8;
 --link-color:255,50,194;
---link-color-dark:230,22,168;
---link-color-text:black;
 --content-bg:#ffe6f8;
---dropdown-bg:#ffffff;
---emphasis-bg:#FF91DF;
 --content-border:#ff5b63;
---content-border-dark:#E63B43;
 --content-color:#1a2b3c;
 --button-color:#F7C854;
---button-color-dark:#DEAD35;
---button-color-text:black;
 --community-header-bg:135,228,209;
---community-header-text:23,23,23;
 }
 
 /* Prism ~ */
@@ -1067,19 +656,11 @@
 --background-image:url("prism.png");
 --background-color:#f20c0c;
 --link-color:187,34,34;
---link-color-dark:213,60,60;
---link-color-text:white;
 --content-bg:#e00045;
---dropdown-bg:#720828;
---emphasis-bg:#CF1034;
 --content-border:#f5cbdd;
---content-border-dark:#DCA0B9;
 --content-color:#e9e9e9;
 --button-color:#ED0111;
---button-color-dark:#FF1A2A;
---button-color-text:white;
 --community-header-bg:237,173,200;
---community-header-text:23,23,23;
 }
 
 /* PokeViews A */
@@ -1087,19 +668,11 @@
 --background-image:url("views.png");
 --background-color:#32cd80;
 --link-color:255,127,80;
---link-color-dark:230,97,49;
---link-color-text:black;
 --content-bg:#e6fae6;
---dropdown-bg:#ffffff;
---emphasis-bg:#F2C09F;
 --content-border:#aaccbb;
---content-border-dark:#83B39B;
 --content-color:#2b1a2b;
 --button-color:#FF4500;
---button-color-dark:#FF5719;
---button-color-text:white;
 --community-header-bg:50,205,50;
---community-header-text:248,248,248;
 }
 
 /* PokeViews B */
@@ -1107,19 +680,11 @@
 --background-image:url("headbg9.jpg");
 --background-color:#ffc0cb;
 --link-color:50,205,50;
---link-color-dark:79,231,79;
---linkc-color-text:white;
 --content-bg:#708090;
---emphasis-bg:#52A463;
---dropdown-bg:#B2BBC5;
 --content-border:#ffa500;
---content-border-dark:#E69400;
 --content-color:#ffeeff;
 --button-color:#FFF7E0;
---button-color-dark:#E6D8B3;
---button-color-text:black;
 --community-header-bg:210,105,30;
---community-header-text:248,248,248;
 }
 
 /* FANDOM 2.0 */
@@ -1127,19 +692,11 @@
 --background-image:url("");
 --background-color:#f6f6f6;
 --link-color:255,106,100;
---link-color-dark:230,73,67;
---link-color-text:black;
 --content-bg:#f6f6f6;
---dropdown-bg:#FFFFFF;
---emphasis-bg:#FBB4B1;
 --content-border:#00d6d6;
---content-border-dark:#00BDBD;
 --content-color:#002a32;
 --button-color:#00D6D6;
---button-color-dark:#00BDBD;
---button-color-text:black;
 --community-header-bg:19,40,44;
---community-header-text:248,248,248;
 }
 
 /* CSS Colors ~ */
@@ -1147,19 +704,11 @@
 --background-image:url("");
 --background-color:#ff6347;
 --link-color:205,133,63;
---link-color-dark:180,107,37;
---link-color-text:black;
 --content-bg:#f5f5f5;
---dropdown-bg:#FFFFFF;
---emphasis-bg:#E2C09F;
 --content-border:#708090;
---content-border-dark:#506376;
 --content-color:#000000;
 --button-color:#191970;
---button-color-dark:#2C2C89;
---button-color-text:white;
 --community-header-bg:210,105,30;
---community-header-text:248,248,248;
 }
 
 /* FrenzySpace */
@@ -1167,19 +716,11 @@
 --background-image:url("http://a-help.referata.com/w/images/Besto-BACK.jpg");
 --background-color:#012e55;
 --link-color:206,169,58;
---link-color-dark:181,143,32;
---link-color-text:black;
 --content-bg:#f6f7ff;
---dropdown-bg:#FFFFFF;
---emphasis-bg:#E3D2A2;
 --content-border:#bbccbb;
---content-border-dark:#92B392;
 --content-color:#1a1a3a;
 --button-color:#1F9502;
---button-color-dark:#32AE13;
---button-color-text:white;
 --community-header-bg:169,206,58;
---community-header-text:23,23,23;
 }
 
 /* Clearwriter */
@@ -1187,19 +728,11 @@
 --background-image:url("headbg8.jpg");
 --background-color:#ffd69f;
 --link-color:223,217,181;
---link-color-dark:198,189,141;
---link-color-text:black;
 --content-bg:#1687ef;
---dropdown-bg:#87BFF2;
---emphasis-bg:#75AED4;
 --content-border:#8637ce;
---content-border-dark:#6D1EB5;
 --content-color:#ffefdb;
 --button-color:#F8D3FE;
---button-color-dark:#DCA7E5;
---button-color-text:black;
 --community-header-bg:203,68,196;
---community-header-text:23,23,23;
 }
 
 /* Orbitron */
@@ -1208,17 +741,20 @@
 --background-color:#e995ca;
 --background-size:2200px 1000px;
 --link-color:255,0,255;
---link-color:230,0,230;
---link-color-text:black;
 --content-bg:#ffc0cb;
---dropdown-bg:#ffffff;
---emphasis-bg:#FF65E4;
---content-border:#ffb6c1;
---content-border-dark:#E68D9A;
 --content-color:#020202;
 --button-color:#FF0051;
---button-color-dark:#FF1962;
---button-color-text:white;
 --community-header-bg:255,0,81;
---community-header-text:248,248,248;
+}
+
+/* Qora Qore Telecommunities */
+.theme-A {
+--background-image:url("loadbg_dev.png");
+--background-color:#552288;
+--link-color:255,165,74;
+--content-bg:#f2f2f2;
+--content-border:#abcdef;
+--content-color:#012345;
+--button-color:#ff4500;
+--community-header-bg:68,17,119;
 }
