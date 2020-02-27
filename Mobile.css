@@ -75,16 +75,16 @@ background-image:linear-gradient(to left,rgba(24,187,198, 0) 200px,rgb(24,187,19
 }
 
 .main .wds-community-header .wds-button.wds-is-secondary:hover {
-color:rgba(248,248,248,0.8);
+/*color:rgba(248,248,248,0.8);
 background-color:rgba(248,248,248,0.2);
 border-color:transparent;
-/*border-color:rgba(248,248,248,0.8);
+border-color:rgba(248,248,248,0.8);
 background-color:rgba(24,187,198,0.4);
 */}
 
 .main .wds-community-header .wds-button.wds-is-secondary {
-color:rgba(248,248,248);
-/*border-color:rgba(248,248,248);
+/*color:rgba(248,248,248);
+border-color:rgba(248,248,248);
 background-color:rgba(24,187,198,0.2);
 */}
 
@@ -218,14 +218,15 @@ border-left-color:var(--button-color);
 
 
 .mpisto-global-navigation .link:active, .mpisto-global-navigation .link:focus,  .mpisto-global-navigation .wds-dropdown.wds-is-active .link,
-.mpisto-header-container .link:hover, .mpisto-header-container .wds-dropdown.wds-is-active .link {
+.mpisto-header-container .link:hover, .mpisto-header-container .link:focus, .mpisto-header-container .wds-dropdown.wds-is-active .link {
 	background-color:#00d7e6;
 	background-color:var(--button-color-blend-light);
 	-webkit-animation:none;
 	animation:none;
-	transition:color 400ms ease, background-color 400ms ease;
+	transition:color 400ms ease, background-color 400ms ease, transform 300ms ease, opacity 300ms ease;
 	border-color:transparent;
 	color:inherit;
+	box-shadow:none;
 }
 
 

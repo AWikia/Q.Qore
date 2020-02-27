@@ -579,6 +579,39 @@ if (confirm('Are you sure you want to reset all themes to the pre-set ones? This
 }
 }
 
+function ResetThemesΒ() {
+if (confirm('Are you sure you want to reset everything to factory defaults? This action cannot be undone') === true) {
+		$("style.designer-style.theme-A").text('/* This CSS left intentionally blank */');	
+		$("style.designer-style.theme-B").text('/* This CSS left intentionally blank */');	
+		$("style.designer-style.theme-C").text('/* This CSS left intentionally blank */');	
+		$("style.designer-style.theme-D").text('/* This CSS left intentionally blank */');	
+		$("style.designer-style.theme-Miscellaneous").text('/* This CSS left intentionally blank */');	
+
+	ColorUpdate();
+	ResetMisc2();
+}
+}
+
+function ResetMisc() {
+if (confirm('Are you sure you want to reset every miscellaneous setting to factory defaults? This action cannot be undone') === true) {
+		$("style.designer-style.theme-Miscellaneous").text('/* This CSS left intentionally blank */');	
+
+	ResetMisc2();
+}
+}
+
+
+function ResetMisc2() {
+$('input.font_2nd').val('');
+$('input.button_radi').val(3);
+$('input.filter1').val('');
+$('input.filter2').val('');
+var x = $('input.filter_duration').val(300);
+var x = $('input.filter_delay').val(0);
+}
+
+
+
 
 
 function ColorUpdate() {
@@ -739,11 +772,9 @@ function CheckAdapt() {
 	if ($("body.options").length) {
 		if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--adaptive-content-bg") === 'true') && !($("html.contrast.win10").length)  ) {
 				document.querySelector('input#ThmAdpt').checked = true;
-				console.log('Adaptive theme enabled. Content border and Content Color theming are now automatically calculated.');
 				$(".adapt-off").attr('disabled', 'true');
 		} else {
 				document.querySelector('input#ThmAdpt').checked = false;
-				console.log('Adaptive theme disabled. Content border and Content Color theming are now manually chosen.');
 				$(".adapt-off").removeAttr('disabled');
 		}
 	}
@@ -784,8 +815,7 @@ var x = document.querySelector('input#ThmAdpt');
 		'}'
 		);	
 	}
-
-
+	console.log('Adaptive theme enabled. Content border and Content Color theming are now automatically calculated.');
 	} else {
 
 	if ($("html.theme-A").length) {
@@ -819,7 +849,7 @@ var x = document.querySelector('input#ThmAdpt');
 		'}'
 		);	
 	}
-
+	console.log('Adaptive theme disabled. Content border and Content Color theming are now manually chosen.');
 	}	
 	ColorUpdate();
 }
@@ -922,4 +952,128 @@ function HCcustom2() {
 		if ($("body.options").length) {
 			$(".win10-off").removeAttr('disabled');
 		}
+}
+
+function UpdateContrast() {
+var x = $('input[type="range"][name="contrasts"].big').val();
+	if (x==0) {
+		HCclear();
+	}
+	if (x==1) {
+		HCcustom2();
+	}
+	if (x==2) {
+		HCcustom();
+	}
+	if (x==3) {
+		HCcustom0();
+	}
+}
+
+function UpdateFont() {
+var x = $('input.font_2nd').val();
+	if (x=="") {
+		$("style.designer-style.theme-Miscellaneous").append(
+		'html {' +
+		'--secondary-font:"Arimo", "Liberation Sans", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR"!important;' +
+		'}'
+		);	
+		
+	} else {
+		$("style.designer-style.theme-Miscellaneous").append(
+		'html {' +
+		'--secondary-font:' + x + ', "Arimo", "Liberation Sans", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR"!important;' +
+		'}'
+		);	
+	}
+}
+
+function UpdateButtonRadi() {
+var x = $('input.button_radi').val();
+	if (x=="0") {
+		$("style.designer-style.theme-Miscellaneous").append(
+		'html {' +
+		'--button-radius:0!important;' +
+		'}'
+		);	
+		
+	} else {
+		$("style.designer-style.theme-Miscellaneous").append(
+		'html {' +
+		'--button-radius:' + x + 'px!important;' +
+		'}'
+		);	
+	}
+}
+
+function UpdateFilter1() {
+var x = $('input.filter1').val();
+	if (x=="") {
+		$("style.designer-style.theme-Miscellaneous").append(
+		'html {' +
+		'--wordmark-filter:initial!important;' +
+		'}'
+		);	
+		
+	} else {
+		$("style.designer-style.theme-Miscellaneous").append(
+		'html {' +
+		'--wordmark-filter:' + x +'!important;' +
+		'}'
+		);	
+	}
+}
+
+function UpdateFilter2() {
+var x = $('input.filter2').val();
+	if (x=="") {
+		$("style.designer-style.theme-Miscellaneous").append(
+		'html {' +
+		'--wordmark-filter2:initial!important;' +
+		'}'
+		);	
+		
+	} else {
+		$("style.designer-style.theme-Miscellaneous").append(
+		'html {' +
+		'--wordmark-filter2:' + x +'!important;' +
+		'}'
+		);	
+	}
+}
+
+function UpdateFilter3() {
+var x = $('input.filter_duration').val();
+	if (x=="0") {
+		$("style.designer-style.theme-Miscellaneous").append(
+		'html {' +
+		'--wordmark-filter-duration:0!important;' +
+		'}'
+		);	
+		
+	} else {
+		$("style.designer-style.theme-Miscellaneous").append(
+		'html {' +
+		'--wordmark-filter-duration:' + x +'ms!important;' +
+		'}'
+		);	
+	}
+}
+
+function UpdateFilter4() {
+var x = $('input.filter_delay').val();
+	if (x=="0") {
+		$("style.designer-style.theme-Miscellaneous").append(
+		'html {' +
+		'--wordmark-filter-delay:0!important;' +
+		'}'
+		);	
+		
+	} else {
+		$("style.designer-style.theme-Miscellaneous").append(
+		'html {' +
+		'--wordmark-filter-delay:' + x +'ms!important;' +
+		'}'
+		);	
+	}
 }

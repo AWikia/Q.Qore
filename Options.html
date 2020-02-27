@@ -395,7 +395,7 @@ document.getElementById("Handler").className += " mpisto-servers"
     </div> 
     <div class="fieldset">
     <fieldset>     
-     <legend>Misc</legend>
+     <legend>Miscellaneous</legend>
     <input type="checkbox" name="03" id="21" onclick="NoPix()" checked></input><label for="21">Always pixelate images</label>
 	<br>
     <input type="checkbox" name="03" id="23" checked></input><label for="23">Load Site CSS through MpistoAgent.css</label>
@@ -1134,11 +1134,22 @@ Checked = VisualEditor as default mode
     <div class="fieldset">
     <fieldset>
     <legend>Rendering Mode</legend>
-    Default mode:
-    <br>
-    <input type="radio" name="21" id="201" checked onclick="HCclear()"></input> <label for="201">Normal</label>
+<!--    Default mode:-->
     <br>
     <div class="highcontrastmodes">
+				<input type="range" oninput="UpdateContrast()" name="contrasts" style="width:100%" class="big" min="0" max="3" autocomplete="false" value="0"></input>
+				<br>
+				Move the slider to change rendering modes:
+				<ul>
+				<li>0 means Normal</li>
+				<li>1 means Performance</li>
+				<li>2 means High Contrast</li>
+				<li>3 means Super High Contrast</li>
+				</ul>
+    </div>
+    <div class="highcontrastmodes wds-is-hidden">
+    <input type="radio" name="21" id="201" checked onclick="HCclear()"></input> <label for="201">Normal</label>
+    <br>
     <input type="radio" name="21" id="202" onclick="HCcustom0()"></input> <label for="202">High Constrast (Windows 10 Themes)</label>
     <br>
     <input type="radio" name="21" id="203" onclick="HCcustom()"></input> <label for="203">High Constrast (Wiki Themes)</label>
@@ -1343,9 +1354,10 @@ Checked = VisualEditor as default mode
 
     <div class="fieldset">
     <fieldset>
-    <legend>Misc</legend>
+    <legend>Miscellaneous</legend>
     <div class="prm-option"><input type="checkbox" name="23" id="221" onclick="prmon()"></input> <label for="221">Use Reduced Motion experience</label></div>
     <div class="prt-option"><input type="checkbox" name="23" id="224" onclick="prton()"></input> <label for="224">Use Reduced Transparency experience</label></div>
+    <div class="xooption"><input type="checkbox" name="23" id="225" onclick="togglezoom()"></input> <label for="225">Use enlarged range inputs everywhere</label></div>
     <input type="checkbox" name="23" id="222"></input> <label for="222">Edit pages by double clicking on its title</label>
     <br>
     <input type="checkbox" name="23" id="223"></input> <label for="223">Watch/Unwatch pages by clicking on its title for more than 4 seconds</label>
@@ -1383,9 +1395,14 @@ Checked = VisualEditor as default mode
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-undo" />
                   </svg>
 				</a>
-				<a class="wds-floating-button critical" onclick="ResetThemes()" title="Reset evry theme to Standard theme">
+				<a class="wds-floating-button critical" onclick="ResetThemes()" title="Reset every theme to Standard theme">
                   <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-undo" />
+                  </svg>
+				</a>
+				<a class="wds-floating-button critical" onclick="ResetThemesΒ()" title="Reset everything (Except some header options) to factory">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-explore" />
                   </svg>
 				</a>
 				<a class="wds-floating-button" title="Download theme to your computer">
@@ -1414,6 +1431,9 @@ Checked = VisualEditor as default mode
 			<style class="designer-style theme-Global">
 			/* This CSS left intentionally blank */
 			</style>
+			<style class="designer-style theme-Miscellaneous">
+			/* This CSS left intentionally blank */
+			</style>
 
     <div class="fieldset" style="position:relative; z-index:3;">
     <fieldset>
@@ -1424,8 +1444,8 @@ Checked = VisualEditor as default mode
     <legend>Body</legend>
     <label>Background-color:</label> 
     <div class="wds-dropdown win10-off">
-    <button class="wds-button wds-is-square">
-			<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; background-color:var(--background-color);"></div>
+    <button class="wds-button wds-is-square color-button">
+			<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:var(--background-color);"></div>
     </button>
 	<div class="wds-dropdown__content wds-is-not-scrollable">
 		<ul class="wds-list">
@@ -1491,8 +1511,8 @@ Checked = VisualEditor as default mode
     <label>Header-color:</label> 
     
         <div class="wds-dropdown win10-off">
-    <button class="wds-button wds-is-square">
-			<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; background-color:rgb(var(--community-header-bg));"></div>
+    <button class="wds-button wds-is-square color-button">
+			<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:rgb(var(--community-header-bg));"></div>
     </button>
 	<div class="wds-dropdown__content wds-is-not-scrollable">
 		<ul class="wds-list">
@@ -1596,8 +1616,8 @@ Checked = VisualEditor as default mode
     <legend>Page</legend>
     <label>Background-color:</label> 
         <div class="wds-dropdown win10-off">
-    <button class="wds-button wds-is-square">
-			<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; background-color:var(--content-bg);"></div>
+    <button class="wds-button wds-is-square color-button">
+			<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:var(--content-bg);"></div>
     </button>
 	<div class="wds-dropdown__content wds-is-not-scrollable">
 		<ul class="wds-list">
@@ -1626,8 +1646,8 @@ Checked = VisualEditor as default mode
     <label>Color:</label> 
 
     <div class="wds-dropdown win10-off adapt-off">
-    <button class="wds-button wds-is-square">
-			<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; background-color:var(--content-color);"></div>
+    <button class="wds-button wds-is-square color-button">
+			<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:var(--content-color);"></div>
     </button>
 	<div class="wds-dropdown__content wds-is-not-scrollable">
 		<ul class="wds-list">
@@ -1657,8 +1677,8 @@ Checked = VisualEditor as default mode
     <label>Border-color:</label> 
     
     <div class="wds-dropdown win10-off adapt-off">
-    <button class="wds-button wds-is-square">
-			<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; background-color:var(--content-border);"></div>
+    <button class="wds-button wds-is-square color-button">
+			<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:var(--content-border);"></div>
     </button>
 	<div class="wds-dropdown__content wds-is-not-scrollable">
 		<ul class="wds-list">
@@ -1687,8 +1707,8 @@ Checked = VisualEditor as default mode
     <label>Link-color:</label> 
 
     <div class="wds-dropdown win10-off">
-    <button class="wds-button wds-is-square">
-			<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; background-color:rgb(var(--link-color));"></div>
+    <button class="wds-button wds-is-square color-button">
+			<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:rgb(var(--link-color));"></div>
     </button>
 	<div class="wds-dropdown__content wds-is-not-scrollable">
 		<ul class="wds-list">
@@ -1718,8 +1738,8 @@ Checked = VisualEditor as default mode
     <label>Button-color:</label> 
 
     <div class="wds-dropdown win10-off">
-    <button class="wds-button wds-is-square">
-			<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; background-color:var(--button-color);"></div>
+    <button class="wds-button wds-is-square color-button">
+			<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:var(--button-color);"></div>
     </button>
 	<div class="wds-dropdown__content wds-is-not-scrollable">
 		<ul class="wds-list">
@@ -1749,6 +1769,29 @@ Checked = VisualEditor as default mode
         <input type="checkbox" class="win10-off" id="ThmAdpt" autocomplete="off" onclick="ToggleAdapt()"></input> <label for="ThmAdpt" class="win10-off">Adaptive Theme (Automatic content border and color values)</label>
     </fieldset>
     </div>
+
+    <div class="fieldset">
+    <fieldset>
+    <legend>Miscellaneous</legend>
+    <label>Secondary Font:</label><input class="mpisto-input font_2nd" autocomplete="off" value="" placeholder="Enter your 2nd font (leave empty to default)" ></input> <button class="wds-button wds-is-squished" onclick="UpdateFont()">Update Font</button>
+	  <br>
+	  <div style="display:flex; align-items:center;">
+     <label>Button Radius:</label><input type="range" onchange="UpdateButtonRadi()" class="button_radi big" style="flex:1; padding:0 5px;" autocomplete="off" value="3" min="0" max="15" ></input>
+     </div>
+    <label>Wordamrk Filter:</label><input class="mpisto-input filter1" autocomplete="off" value="" placeholder="Enter your filter function here (Can be empty)" ></input> <button class="wds-button wds-is-squished" onclick="UpdateFilter1()">Update Filter</button>
+	  <br>
+    <label>Wordamrk Filter (Hover):</label><input class="mpisto-input filter2" autocomplete="off" value="" placeholder="Enter your filter function here (Can be empty)" ></input> <button class="wds-button wds-is-squished" onclick="UpdateFilter2()">Update Filter</button>
+	  <div style="display:flex; align-items:center;">
+     <label>Filter Transition Duration:</label><input type="range" onchange="UpdateFilter3()" class="filter_duration big" style="flex:1; padding:0 5px;" autocomplete="off" value="300" min="0" max="1000" step="20" ></input>
+     </div>
+	  <div style="display:flex; align-items:center;">
+     <label>Filter Transition Delay:</label><input type="range" onchange="UpdateFilter4()" class="filter_delay big" style="flex:1; padding:0 5px;" autocomplete="off" value="0" min="0" max="1000" step="20" ></input>
+     </div>
+     <button class="wds-button wds-is-squished wds-is-alternate" onclick="ResetMisc()">Clear Customizations</button>
+    </fieldset>
+    </div>
+
+
     </fieldset>
     </div>
 
@@ -2648,26 +2691,6 @@ function BarSwitch() {
 
 
 
-/* Make SmartTVs recognize cursors */
-if (navigator.userAgent.match("SmartTV")) {
-document.getElementById("Handler").className += " smart"
-}
-
-if (navigator.userAgent.match("Macintosh")) {
-document.getElementById("Handler").className += " osx"
-}
-
-if (navigator.userAgent.match("Linux")) {
-document.getElementById("Handler").className += " xubuntu"
-}
-
-if (navigator.userAgent.match("Trident")) {
-document.getElementById("Handler").className += " explorer"
-}
-
-if (navigator.userAgent.match("Edge")) {
-document.getElementById("Handler").className += " edge"
-}
 
 
 /* Mobile Only CSS */

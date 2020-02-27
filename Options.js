@@ -32,6 +32,16 @@ function Widescreen() {
     }
 }
 
+function togglezoom() {
+    var x = document.querySelector('html');
+    if (x.className.indexOf("xo") == -1) {
+        x.className += " xo";
+    } else {
+        x.className = x.className.replace(" xo", "");
+    }
+}
+
+
 
 function Widescreen2() {
     var x = document.querySelector('html');

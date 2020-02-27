@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28.66698" height="27.66698">
+	<filter xmlns="http://www.w3.org/2000/svg" id="invert">
+		<feComponentTransfer>
+			<feFuncR type="table" tableValues="1 0" />
+			<feFuncG type="table" tableValues="1 0" />
+			<feFuncB type="table" tableValues="1 0" />
+		</feComponentTransfer>
+	 </filter>
+
+	<g transform="translate(-226.86368,-167.206)">
+		<g data-paper-data="{&quot;isPaintingLayer&quot;:true}" fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+			<path d="M238.0991,179.113l-11.05718,12.093c-0.11914,-0.123 -0.17824,-0.246 -0.17824,-0.463v-23.229c0,-0.123 0.029,-0.215 0.0581,-0.308zM238.84491,179.914l-9.27001,10.184c2.86044,-1.695 8.04758,-4.739 8.04758,-4.739l4.08094,-2.4l-2.85849,-3.045zM242.71957,175.694c0.56764,0.36 4.32116,2.58 4.76577,2.835c0.48044,0.246 0.53759,0.708 -0.0281,1.046c-0.53567,0.308 -4.28919,2.524 -4.76965,2.8l-3.06677,-3.292zM228.64502,167.385c2.23758,1.326 8.96295,5.298 8.96295,5.298l4.12548,2.431l-2.89045,3.169z" data-paper-data="{&quot;origPos&quot;:null}" fill="currentColor"/>
+			<path d="M247.53066,194.87298c-0.409,0 -0.776,-0.249 -0.929,-0.629l-7.071,-17.679l-3.071,7.679c-0.153,0.38 -0.52,0.629 -0.929,0.629h-3c-0.55228,0 -1,-0.44772 -1,-1c0,-0.55228 0.44772,-1 1,-1h2.323l3.748,-9.371c0.15304,-0.37866 0.52058,-0.62655 0.929,-0.62655c0.40842,0 0.77596,0.24789 0.929,0.62655l7.071,17.679l3.071,-7.679c0.153,-0.38 0.52,-0.629 0.929,-0.629h3c0.55228,0 1,0.44772 1,1c0,0.55228 -0.44772,1 -1,1h-2.323l-3.748,9.371c-0.153,0.38 -0.52,0.629 -0.929,0.629" data-paper-data="{&quot;origPos&quot;:null}" id="activity-a" fill="currentColor" filter="url(#invert)"/>
+		</g>
+	</g>
+</svg>
