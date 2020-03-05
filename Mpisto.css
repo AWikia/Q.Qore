@@ -971,6 +971,8 @@ font-family:"Source Serif Pro", "Song Myung",  "Noto Serif JP", "David Libre", "
 		font-size:18px;
 		white-space:nowrap;
 		width:100%;
+		transition:opacity 300ms ease;
+		opacity:1;
 	}
 
 	
@@ -1175,7 +1177,8 @@ background-color:rgba(var(--link-color), 0.1);
 		}
 
 		#GlobalNavigation:not(.active-search) .search-link {
-			visibility:hidden;
+			pointer-events:none;
+			opacity:0;
 	}
 
 		#GlobalNavigation.active-search .search-on, #GlobalNavigation.active-search .search-on + .link, #GlobalNavigation.active-search .search-on + .link + .link {
@@ -1966,8 +1969,8 @@ color:#94abac}
 
 
 .wds-button.wds-is-active,.wds-button:active,.wds-button:focus:not(:disabled),.wds-button:hover:not(:disabled){
-background-color:#94abac;
-border-color:#94abac;
+background-color:#00686a;
+border-color:#00686a;
 text-decoration:none;
 }
 
@@ -1988,7 +1991,7 @@ border:0
 }
 .wds-button.wds-is-text.wds-is-active,.wds-button.wds-is-text:active,.wds-button.wds-is-text:focus:not(:disabled),.wds-button.wds-is-text:hover:not(:disabled){
 background-color:transparent;
-color:#94abac}
+color:#00686a}
 */
 
 a.wds-button,button.wds-button{
@@ -2456,7 +2459,7 @@ margin-left:0;
  
  .wds-dropdown__content .wds-list.wds-is-linked>li{padding:0}
  
- .wds-dropdown__content .wds-list.wds-is-linked>li>a:not(.wds-button){color:#39424d;padding-left:10px;padding-right:9px;text-decoration:none;transition-duration:.2s;transition-property:background-color,color}
+ .wds-dropdown__content .wds-list.wds-is-linked>li>a:not(.wds-button){color:#39424d;padding-left:9px;padding-right:9px;text-decoration:none;transition-duration:.2s;transition-property:background-color,color}
  .wds-dropdown__content .wds-list.wds-is-linked>li.wds-is-selected>a:not(.wds-button),.wds-dropdown__content .wds-list.wds-is-linked>li:hover>a:not(.wds-button) {background-color:rgba(0,183,224,.1);color:#00cdd0}
  
  .wds-dropdown::after,.wds-dropdown::before{bottom:-1px;content:'';display:none;height:0;left:50%;pointer-events:none;position:absolute;width:0;z-index:2}
@@ -2965,6 +2968,9 @@ border-left-color:rgba(var(--community-header-text),0.8);
 		font-size:120%;
 	}
 	
+.mpisto-header-container .wds-dropdown.small {
+	display:none;
+}
 
 	.mpisto-header-container .link {
 		-webkit-transition:color 200ms ease, background-color 150ms linear 100ms, border-color 150ms linear 100ms, background-image 150ms linear 100ms, transform 150ms linear 100ms, box-shadow 0ms linear 100ms;
@@ -3090,6 +3096,16 @@ border-left-color:rgba(var(--community-header-text),0.8);
 		font-size:26px;
 	}
 
+
+.mpisto-header-container .link.large {
+	display:none;
+}
+
+.mpisto-header-container .wds-dropdown.small {
+	display:inline-block;
+}
+
+
 }
 
 
@@ -3126,6 +3142,7 @@ border-left-color:rgba(var(--community-header-text),0.8);
 .mpisto-header-container .wordmark {
 	display:none;
 }
+
 
 }
 
@@ -5704,6 +5721,7 @@ header.mpisto-footer-container {
   border-bottom-width:0px;
   box-shadow:0 0 9px #ccc, 0 0 2.5px #000, 0 0 1.5px #fff;
   box-shadow:0 0 9px var(--content-border), 0 0 2.5px #000, 0 0 1.5px #fff;
+ -webkit-backdrop-filter: none;
   transition:opacity 100ms;
 }
 
@@ -5752,7 +5770,6 @@ header.mpisto-footer-container:before {
     width: 100%;
     z-index: -1;
     background-color: #000;
-    -webkit-backdrop-filter: none;
     opacity: 0.15;
     top: 0px;
     left: 0px;
@@ -6388,6 +6405,13 @@ font-weight:300;
 text-shadow:none; /* Disable Embolding caused by the update */
 }
 
+@media only screen and (min-width:755px) {
+
+.browser-warning + .mpisto-article-wrapper .mpisto-option-pane {
+height:calc(100vh - 177px);
+}
+}
+
 .mpisto-option-pane div {
   display:flex;
   flex-direction:column;
@@ -6499,6 +6523,12 @@ display:flex;
     height:calc(100vh - 141px);
     margin:0 auto;    
 }
+
+
+.browser-warning + .mpisto-article-wrapper .mpisto-option-way > div {
+height:calc(100vh - 239px);
+}
+
 
 @supports (-moz-appearance:none) {
 .mpisto-option-way > div {
@@ -7511,7 +7541,6 @@ margin-right:0;
   -webkit-transform: rotateX(-90deg) translateZ(50px);
           transform: rotateX(-90deg) translateZ(50px);
 }
-
 
 /** Legacy Components  **/
 

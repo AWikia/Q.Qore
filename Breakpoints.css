@@ -245,8 +245,24 @@ padding-right:4px;
 }
 
 .pane-on .mpisto-article-wrapper{
-	z-index:61
+	z-index:61;
+	
 }
+
+.pane-on .mpisto-article-wrapper:before {
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 61;
+    top:0;
+    left:0;
+    -webkit-backdrop-filter:blur(17px) saturate(1.5);
+    backdrop-filter:blur(17px) saturate(1.5);
+	border-radius:inherit;
+}
+
 
 .pane-on .mpisto-article-wrapper:after {
     content: "";
@@ -260,8 +276,6 @@ padding-right:4px;
     opacity:0.6;
     top:0;
     left:0;
-    -webkit-backdrop-filter:blur(17px) saturate(1.5);
-    backdrop-filter:blur(17px) saturate(1.5);
 	border-radius:inherit;
 }
 
@@ -556,6 +570,15 @@ width:100%;
 	-webkit-text-stroke-width:1.25px;
 }
 
+.browser-warning + .mpisto-article-wrapper .mpisto-option-way > div {
+height:calc(100vh - 275px);
+}
+
+.browser-warning + .mpisto-article-wrapper .mpisto-option-pane {
+height:calc(100vh - 212px);
+}
+
+
 /*.basicp .mpisto-option-pane {
 width:100%;
 height:auto;
@@ -665,6 +688,8 @@ padding-left:10px;
 padding-right:10px;
 }
 */
+
+
 
 .mpisto-option-pane {
 	min-width:230px;
@@ -946,6 +971,18 @@ font-size:40px;
 footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container td h2 {
 font-size:30px;
 }
+
+
+/* Some CSS when banner is on - Assumes that Inter is the font chosen */
+.browser-warning + .mpisto-article-wrapper .mpisto-option-pane {
+height:calc(100vh - 159px);
+}
+
+.browser-warning + .mpisto-article-wrapper .mpisto-option-way > div {
+height:calc(100vh - 221px);
+}
+
+
 }
 
 /* M + L + XL */
