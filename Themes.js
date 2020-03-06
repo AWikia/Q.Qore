@@ -36,7 +36,7 @@ function CursorT(theme) {
 	}
    if (window.MW18auto === true) {
 		var body_bg =	getComputedStyle(document.querySelector('html')).getPropertyValue("--content-bg");
-		if ((chroma(body_bg).get('lab.l')) > 54) {
+		if ((chroma(body_bg).get('lab.l')) > 49) {
 			$('body').attr("curtheme", "light")
 		} else {
 			$('body').attr("curtheme", "dark")
@@ -619,13 +619,13 @@ function ColorUpdate() {
 /* Set Vars */
 var button_color = getComputedStyle(document.querySelector('html')).getPropertyValue("--button-color");
 
-if ((chroma(button_color).get('lab.l')) > 54) {
-var buttoncolor1 = chroma.mix(button_color, 'black', 0.2);
+if ((chroma(button_color).get('lab.l')) > 49) {
+var buttoncolor1 = chroma(button_color).darken(1);
 var buttoncolor2 = 'black';
 document.querySelector('body').style.setProperty("--button-color-blend-light", button_color);
 document.querySelector('body').style.setProperty("--button-color-blend", buttoncolor1);
 } else {
-var buttoncolor1 = chroma.mix(button_color, 'white', 0.2);
+var buttoncolor1 = chroma(button_color).darken(-1);
 var buttoncolor2 = 'white';
 document.querySelector('body').style.setProperty("--button-color-blend-light", buttoncolor1);
 document.querySelector('body').style.setProperty("--button-color-blend", button_color);
@@ -640,14 +640,14 @@ document.querySelector('body').style.setProperty("--button-color-text", buttonco
 /* Set Vars */
 var header_color =	'rgb(' + getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg") + ')';
 
-if ((chroma(header_color).get('lab.l')) > 54) {
-var headercolor1 = chroma.mix(header_color, 'black', 0.2);
+if ((chroma(header_color).get('lab.l')) > 49) {
+var headercolor1 = chroma(header_color).darken(1);
 var headercolor2 = '0,0,0';
 var headercolor1final = chroma(headercolor1).get('rgb.r') + ',' + chroma(headercolor1).get('rgb.g') + ',' + chroma(headercolor1).get('rgb.b'); 
 document.querySelector('body').style.setProperty("--community-header-bg-blend-light", getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg"));
 document.querySelector('body').style.setProperty("--community-header-bg-blend", headercolor1final);
 } else {
-var headercolor1 = chroma.mix(header_color, 'white', 0.2);
+var headercolor1 = chroma(header_color).darken(-1);
 var headercolor2 = '255,255,255';
 var headercolor1final = chroma(headercolor1).get('rgb.r') + ',' + chroma(headercolor1).get('rgb.g') + ',' + chroma(headercolor1).get('rgb.b'); 
 document.querySelector('body').style.setProperty("--community-header-bg-blend-light", headercolor1final);
@@ -662,14 +662,14 @@ document.querySelector('body').style.setProperty("--community-header-text", head
 /* Set Vars */
 var link_color = 'rgb(' + getComputedStyle(document.querySelector('html')).getPropertyValue("--link-color") + ')';
 
-if ((chroma(link_color).get('lab.l')) > 54) {
-var linkcolor1 = chroma.mix(link_color, 'black', 0.2);
+if ((chroma(link_color).get('lab.l')) > 49) {
+var linkcolor1 = chroma(link_color).darken(1);
 var linkcolor2 = 'black';
 var linkcolor1final = chroma(linkcolor1).get('rgb.r') + ',' + chroma(linkcolor1).get('rgb.g') + ',' + chroma(linkcolor1).get('rgb.b'); 
 document.querySelector('body').style.setProperty("--link-color-blend-light", getComputedStyle(document.querySelector('html')).getPropertyValue("--link-color"));
 document.querySelector('body').style.setProperty("--link-color-blend", linkcolor1final);
 } else {
-var linkcolor1 = chroma.mix(link_color, 'white', 0.2);
+var linkcolor1 = chroma(link_color).darken(-1);
 var linkcolor2 = 'white';
 var linkcolor1final = chroma(linkcolor1).get('rgb.r') + ',' + chroma(linkcolor1).get('rgb.g') + ',' + chroma(linkcolor1).get('rgb.b'); 
 document.querySelector('body').style.setProperty("--link-color-blend-light", linkcolor1final);
@@ -688,20 +688,20 @@ var content_color =	getComputedStyle(document.querySelector('html')).getProperty
 var content_text =	getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color");
 var body_bg =	getComputedStyle(document.querySelector('html')).getPropertyValue("--background-color");
 
-if ((chroma(content_color).get('lab.l')) > 89) {
+if ((chroma(content_color).get('lab.l')) > 74) {
 	var dropdowncolor = 'white';
 	if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--adaptive-content-bg") === 'true') && !($("html.contrast.win10").length)  ) {
-		var dropdowncolor2 = chroma.mix(content_color, 'black', 0.2);
+		var dropdowncolor2 = chroma(content_color).darken(1);
 		var dropdowncolor3 = '#2b2b2b';		
 	} else {
 		var dropdowncolor2 = 'inherit';
 		var dropdowncolor3 = 'inherit';
 	}
 	
-} else if ((chroma(content_color).get('lab.l')) > 54) {
-var dropdowncolor = chroma.mix(content_color, 'black', 0.2);
+} else if ((chroma(content_color).get('lab.l')) > 49) {
+var dropdowncolor = chroma(content_color).darken(1);
 	if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--adaptive-content-bg") === 'true') && !($("html.contrast.win10").length)  ) {
-		var dropdowncolor2 = chroma.mix(content_color, 'black', 0.5);
+		var dropdowncolor2 = chroma(content_color).darken(2);
 		var dropdowncolor3 = '#2b2b2b';		
 	} else {
 		var dropdowncolor2 = 'inherit';
@@ -709,9 +709,9 @@ var dropdowncolor = chroma.mix(content_color, 'black', 0.2);
 	}
 
 } else {
-var dropdowncolor = chroma.mix(content_color, 'white', 0.15);
+var dropdowncolor = chroma(content_color).darken(-1);
 	if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--adaptive-content-bg") === 'true') && !($("html.contrast.win10").length)  ) {
-		var dropdowncolor2 = chroma.mix(content_color, 'white', 0.5);
+		var dropdowncolor2 = chroma(content_color).darken(-2);
 		var dropdowncolor3 = '#e2e2e2';		
 	} else {
 		var dropdowncolor2 = 'inherit';
@@ -733,13 +733,13 @@ if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--adapti
 } else {
 	var border_color =	getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border");
 }
-if ((chroma(border_color).get('lab.l')) > 54) {
-var bordercolor1 = chroma.mix(border_color, 'black', 0.15);
+if ((chroma(border_color).get('lab.l')) > 49) {
+var bordercolor1 = chroma(border_color).darken(1);
 var bordercolor2 = 'black';
 document.querySelector('body').style.setProperty("--content-border-blend-light", border_color);
 document.querySelector('body').style.setProperty("--content-border-blend", bordercolor1);
 } else {
-var bordercolor1 = chroma.mix(border_color, 'white', 0.15);
+var bordercolor1 = chroma(border_color).darken(-1);
 var bordercolor2 = 'white';
 document.querySelector('body').style.setProperty("--content-border-blend-light", bordercolor1);
 document.querySelector('body').style.setProperty("--content-border-blend", border_color);
@@ -750,8 +750,8 @@ document.querySelector('body').style.setProperty("--content-border-dark", border
 document.querySelector('body').style.setProperty("--content-border-text", bordercolor2);
 
 /* Emphasis Themes */
-var emphasiscolor = chroma.mix(content_color, link_color, 0.55);
-var emphasiscolor2 = chroma.mix(border_color, button_color, 0.55);
+var emphasiscolor = chroma.mix(content_color, link_color, 0.7);
+var emphasiscolor2 = chroma.mix(border_color, button_color, 0.7);
 document.querySelector('body').style.setProperty("--emphasis-bg", emphasiscolor);
 document.querySelector('body').style.setProperty("--accent-bg", emphasiscolor2);
 

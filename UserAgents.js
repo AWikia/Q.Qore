@@ -79,7 +79,7 @@ window.MW18newnavblock=false;
 	}
 })();
 
-if ( (navigator.userAgent.match("Edge")) || (navigator.userAgent.match("BlackBerry")) || (navigator.userAgent.match("IEMobile")) || window.oldchrome || window.oldfox || !(CSS.supports("--s","none"))  ) {
+if ( (navigator.userAgent.match("Edge")) || (navigator.userAgent.match("BlackBerry")) || (navigator.userAgent.match("IEMobile")) || window.oldchrome || window.oldfox || !(CSS.supports("color","var(--color)"))  ) {
 $('.mpisto-content .mpisto-wrapper').prepend ( 
       '<div class="wds-banner-notification__container browser-warning" id="floatingbanner2">' +
         '<div class="wds-banner-notification wds-warning" id="BannerBrowser">' +
