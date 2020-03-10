@@ -54,16 +54,11 @@ These wrappers use the Hybrid Desktop/Mobile Skin also known as Mpistodiscuss2, 
 
 [Main](https://awikia.github.io/Q.Qore/Ryneeeel%20Grooze%20Discussions.html)
 
-# Browser Requirements (Bold ones are discouraged in use browsers, Italic ones are fictional aka orbitron-only browsers)
+# Browser Requirements
+Κορα Κορε will at least run on:
+- Google Chrome 57/Opera 44 (Google Chrome 66/Opera 53 recommended)
+- Firefox  57 (Firefox 62 recommended)
+- Microsoft Edge (Chromium only)
+- Safari Browser 11
+- Any other browser metting the above requirements
 
-Edge 17+ (Future versions will be Blink-based, Old versions are not recommended)
-
-Chrome 62+/Opera 49+ (Most Recommended Browser)
-
-Firefox 55+
-
-Safari 10.1+
-
-*Qorta Browser 9+*
-
-*mInevra bRowser 10+ (V14+ on Android, V14.5 on MpistoOS and V15.2 elsewhere are Gecko-based)*
