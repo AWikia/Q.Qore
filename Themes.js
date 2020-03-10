@@ -150,7 +150,7 @@ function UploadPicture2Β() {
 img=prompt("Set Avatar Image (Leave empty for default)", "");
 
 if (img=='') {
-	$("img[alt='HM100']").attr("src", "https://vignette.wikia.nocookie.net/messaging/images/1/19/Avatar.jpg/revision/latest/scale-to-width-down/150");
+	$("img[alt='HM100']").attr("src", "QoreVatar/Avatar0.png");
 } else {
 	$("img[alt='HM100']").attr("src", img);
 }
@@ -159,7 +159,7 @@ if (img=='') {
 
 function RemovePicture2() {
 if (confirm('Are you sure you want to reset your account\'s avatar to default? This action cannot be undone') === true) {
-	$("img[alt='HM100']").attr("src", "https://vignette.wikia.nocookie.net/messaging/images/1/19/Avatar.jpg/revision/latest/scale-to-width-down/150");
+	SetAvatar("0");
 }
 }
 
@@ -243,7 +243,7 @@ function UploadPicture5Β() {
 img=prompt("Set Bot Avatar Image (Leave empty for default, can be the same as the ones from the main account)", "");
 
 if (img=='') {
-	$("img[alt='altavatar']").attr("src", "https://vignette.wikia.nocookie.net/messaging/images/1/19/Avatar.jpg/revision/latest/scale-to-width-down/150");
+	$("img[alt='altavatar']").attr("src", "QoreVatar/Avatar0.png");
 } else {
 	$("img[alt='altavatar']").attr("src", img);
 }
@@ -252,7 +252,16 @@ if (img=='') {
 
 function RemovePicture5() {
 if (confirm('Are you sure you want to reset your bot account\'s avatar to default? This action cannot be undone') === true) {
-	$("img[alt='altavatar']").attr("src", "https://vignette.wikia.nocookie.net/messaging/images/1/19/Avatar.jpg/revision/latest/scale-to-width-down/150");
+	SetAvatar("0",true);
+}
+}
+
+/* Sets an avatar. Expected file is QoreVatar/Avatar@.png where @ is a number between 0 to 17. Set the 2nd value to true (Not required) to affect alt avatar */
+function SetAvatar(avatar="", alt=false) {
+if (alt) {
+	$("img[alt='altavatar']").attr("src", "QoreVatar/Avatar" + avatar + ".png");
+} else {
+	$("img[alt='HM100']").attr("src", "QoreVatar/Avatar" + avatar + ".png");
 }
 }
 

@@ -966,7 +966,8 @@ document.getElementById("Handler").className += " mpisto-servers"
     </div>
     <br>
     <br>
-    <button class="wds-button wds-is-squished" onclick="RemovePicture2()">Remove avatar</button>
+    <a class="wds-button wds-is-squished" href="#modal2" onclick="">Change Avatar</a>
+<!--    <button class="wds-button wds-is-squished" onclick="RemovePicture2()">Remove avatar</button>-->
     </fieldset>
     </div>
     <div class="fieldset">
@@ -1008,7 +1009,8 @@ document.getElementById("Handler").className += " mpisto-servers"
     </div>
     <br>
     <br>
-    <button class="wds-button wds-is-squished" onclick="RemovePicture5()">Remove avatar</button>
+    <a class="wds-button wds-is-squished" href="#modal3" onclick="">Change Avatar</a>
+<!--    <button class="wds-button wds-is-squished" onclick="RemovePicture5()">Remove avatar</button>-->
     <button class="wds-button wds-is-squished">Reset Name</button>
     </fieldset>
     </div>
@@ -2560,7 +2562,7 @@ Checked = VisualEditor as default mode
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" />
                   </svg></a></h1>
    <section>
-   Horay, you're submitting a theme. Type the name, cost and description and press enter to move on.
+   Hooray, you're submitting a theme. Type the name, cost and description and press enter to move on.
     <br>
     <label>Name:</label> <input class="mpisto-input" value="Qora Qore Web" placeholder="Name"></input>
     <br>
@@ -2576,6 +2578,98 @@ Checked = VisualEditor as default mode
    </footer>
     </div>
 </div>
+
+<div class="lightbox-container" id="modal2">
+    <div class="lightbox">
+      <h1><span>Set your Avatar</span> <a class="wds-button wds-is-square wds-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" />
+                  </svg></a></h1>
+   <section>
+   Hooray, you're changing your avatar!!! You can pick one of the 18 defined avatars below. Remember that you must close the modal to upload your own avatar since it is near to your current avatar and not here.
+	<h2>Regular Avatars</h2>
+	<div style="display:flex; margin:0 auto; max-width:640px; align-items:center; align-content:space-evenly; flex-wrap:wrap; justify-content:space-evenly;">
+		<a onclick="SetAvatar('0')"><img src="QoreVatar/Avatar0.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('1')"><img src="QoreVatar/Avatar1.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('2')"><img src="QoreVatar/Avatar2.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('3')"><img src="QoreVatar/Avatar3.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('4')"><img src="QoreVatar/Avatar4.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('5')"><img src="QoreVatar/Avatar5.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('6')"><img src="QoreVatar/Avatar6.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('7')"><img src="QoreVatar/Avatar7.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('8')"><img src="QoreVatar/Avatar8.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('9')"><img src="QoreVatar/Avatar9.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('10')"><img src="QoreVatar/Avatar10.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('11')"><img src="QoreVatar/Avatar11.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('12')"><img src="QoreVatar/Avatar12.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('13')"><img src="QoreVatar/Avatar13.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('14')"><img src="QoreVatar/Avatar14.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('15')"><img src="QoreVatar/Avatar15.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('16')"><img src="QoreVatar/Avatar16.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('17')"><img src="QoreVatar/Avatar17.png" class="options-avatar" /></a>
+	</div>
+	<h2>Transparent Avatars</h2>
+	<div style="display:flex; margin:0 auto; max-width:640px; align-items:center; align-content:space-evenly; flex-wrap:wrap; justify-content:space-evenly;">
+		<a onclick="SetAvatar('18')"><img src="QoreVatar/Avatar18.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('19')"><img src="QoreVatar/Avatar19.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('20')"><img src="QoreVatar/Avatar20.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('21')"><img src="QoreVatar/Avatar21.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('22')"><img src="QoreVatar/Avatar22.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('23')"><img src="QoreVatar/Avatar23.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('24')"><img src="QoreVatar/Avatar24.png" class="options-avatar" /></a>
+	</div>	
+   </section>
+   <footer>
+   <button class="wds-button wds-is-secondary wds-is-alternate wds-is-squished">Which one is the bast?</button>
+   </footer>
+    </div>
+</div>
+
+<div class="lightbox-container" id="modal3">
+    <div class="lightbox">
+      <h1><span>Set your Bot's Avatar</span> <a class="wds-button wds-is-square wds-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" />
+                  </svg></a></h1>
+   <section>
+   Hooray, you're changing your bot's avatar!!! You can pick one of the 18 defined avatars below. Remember that you must close the modal to upload your own avatar since it is near to your current avatar and not here.
+	<h2>Regular Avatars</h2>
+	<div style="display:flex; margin:0 auto; max-width:640px; align-items:center; align-content:space-evenly; flex-wrap:wrap; justify-content:space-evenly;">
+		<a onclick="SetAvatar('0',true)"><img src="QoreVatar/Avatar0.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('1',true)"><img src="QoreVatar/Avatar1.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('2',true)"><img src="QoreVatar/Avatar2.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('3',true)"><img src="QoreVatar/Avatar3.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('4',true)"><img src="QoreVatar/Avatar4.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('5',true)"><img src="QoreVatar/Avatar5.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('6',true)"><img src="QoreVatar/Avatar6.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('7',true)"><img src="QoreVatar/Avatar7.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('8',true)"><img src="QoreVatar/Avatar8.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('9',true)"><img src="QoreVatar/Avatar9.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('10',true)"><img src="QoreVatar/Avatar10.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('11',true)"><img src="QoreVatar/Avatar11.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('12',true)"><img src="QoreVatar/Avatar12.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('13',true)"><img src="QoreVatar/Avatar13.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('14',true)"><img src="QoreVatar/Avatar14.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('15',true)"><img src="QoreVatar/Avatar15.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('16',true)"><img src="QoreVatar/Avatar16.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('17',true)"><img src="QoreVatar/Avatar17.png" class="options-avatar" /></a>
+	</div>
+	<h2>Transparent Avatars</h2>
+	<div style="display:flex; margin:0 auto; max-width:640px; align-items:center; align-content:space-evenly; flex-wrap:wrap; justify-content:space-evenly;">
+		<a onclick="SetAvatar('18')"><img src="QoreVatar/Avatar18.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('19')"><img src="QoreVatar/Avatar19.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('20')"><img src="QoreVatar/Avatar20.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('21')"><img src="QoreVatar/Avatar21.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('22')"><img src="QoreVatar/Avatar22.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('23')"><img src="QoreVatar/Avatar23.png" class="options-avatar" /></a>
+		<a onclick="SetAvatar('24')"><img src="QoreVatar/Avatar24.png" class="options-avatar" /></a>
+	</div>	
+   </section>
+   <footer>
+   <button class="wds-button wds-is-secondary wds-is-alternate wds-is-squished">Which one is the bast?</button>
+   </footer>
+    </div>
+</div>
+
+
 </body>
 </html>
 <head>
