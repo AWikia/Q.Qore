@@ -1892,7 +1892,7 @@ color:#000;
 align-items:center;
 border-style:solid;
 border-width:1px;
-box-sizing:border-box;
+box-sizing:content-box;
 cursor:url("Windows/default.cur"), default;
 display:-ms-inline-flexbox;
 display:inline-flex;
