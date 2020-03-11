@@ -258,7 +258,7 @@ background-image:linear-gradient(to left,rgba(255,255,255, 0) 200px,rgb(var(--co
 	color:var(--content-color);
 }
 
-.contrast .mpisto-header-container .link:hover, .contrast .mpisto-header-container .link:focus, .contrast .mpisto-header-container .wds-dropdown.wds-is-active .link {
+.contrast .mpisto-header-container .link:hover, .contrast .mpisto-header-container .link:focus, .contrast .mpisto-header-container .wds-dropdown.wds-is-active .link, .contrast .mpisto-header-container .link.active {
 	-webkit-animation:none;
 	animation:none;
 	color:var(--button-color-text);
@@ -304,7 +304,7 @@ box-shadow:0 4px 0 6px rgba(0,0,0,.4), 0 4px 0 6px rgba(255,255,255,0.4)!importa
 	color:inherit;
 }
 
-.contrast :not(.freepseudo):not(.wds-toggle__label):not(.wds-dropdown):not(.wds-community-header):not(time):not(.wds-list):not(input):not(.mpisto-content):not(body):before,.contrast :not(.freepseudo):not(.wds-toggle__label):not(.wds-dropdown):not(.wds-community-header):not(.wds-list):not(.mpisto-article-wrapper):not(.mpisto-header-container):not(.mpisto-gnav):not(input):not(body):not(em):after, .basic header.mpisto-navbar:after, .basic footer.mpisto-footer:after, .basic header.mpisto-footer-container:after, .basic .mpisto-option-pane:after, .basic .mpisto-content:after, .basic .mpisto-option-way:after, .basic header.mpisto-navbar:before, .basic footer.mpisto-footer:before, .basic header.mpisto-footer-container:before, .basic .mpisto-option-pane:before, .basic .mpisto-option-way:before {
+.contrast :not(.freepseudo):not(.mpisto-wrapper):not(.wds-toggle__label):not(.wds-dropdown):not(.wds-community-header):not(time):not(.wds-list):not(input):not(.mpisto-content):not(body):before,.contrast :not(.freepseudo):not(.mpisto-wrapper):not(.wds-toggle__label):not(.wds-dropdown):not(.wds-community-header):not(.wds-list):not(.mpisto-article-wrapper):not(.mpisto-header-container):not(.mpisto-gnav):not(input):not(body):not(em):after, .basic header.mpisto-navbar:after, .basic footer.mpisto-footer:after, .basic header.mpisto-footer-container:after, .basic .mpisto-option-pane:after, .basic .mpisto-content:after, .basic .mpisto-option-way:after, .basic header.mpisto-navbar:before, .basic footer.mpisto-footer:before, .basic header.mpisto-footer-container:before, .basic .mpisto-option-pane:before, .basic .mpisto-option-way:before {
 display:none!important;
 }
 

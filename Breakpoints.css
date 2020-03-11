@@ -432,15 +432,15 @@ position:sticky!important;
 
 
 .mpisto-userpages-header .mpisto-profile-masthead hgroup h1 {
-	font-size:26px;
+	font-size:30px;
 }
 
 .mpisto-userpages-header .mpisto-profile-masthead hgroup h2 {
-	font-size:20px;
+	font-size:22px;
 }
 
 .mpisto-userpages-header .mpisto-profile-masthead hgroup span {
-	font-size:14px;
+	font-size:15px;
 }
 
 .mpisto-grooze .desktop-wiki {
@@ -761,11 +761,15 @@ column-count:1;
 .mpisto-userpages-header .mpisto-userpages-main .mpisto-avatar {
 	margin:0 auto;
 	display:block;
+	border-bottom-width:0;
+	border-bottom-left-radius:0;
+	border-bottom-right-radius:0;
+	
 }
 
 .mpisto-userpages-header .mpisto-profile-masthead {
 	margin-left:0;
-	margin-top:9px;
+
 }
 
 }
@@ -990,4 +994,19 @@ height:calc(100vh - 221px);
 .basicp .mpisto-header-container .wordmark, .modernp.pane-on .mpisto-header-container .wordmark {
 	display:none!important
 }
+}
+
+/* L + XL + XXL */
+@media only screen and (min-width:1100px)  {
+.mpisto-userpages-header .mpisto-profile-masthead {
+	border-top-left-radius:0;
+}
+
+.mpisto-userpages-header .mpisto-userpages-main .mpisto-avatar {
+	border-right-width:0;
+	border-top-right-radius:0;
+	border-bottom-right-radius:0;
+	
+}
+
 }

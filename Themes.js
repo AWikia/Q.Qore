@@ -91,7 +91,7 @@ if (files[0].size > 1000000) {
 
 }
 
-function UploadPicture1Β() {
+function UploadPicture1B() {
 img=prompt("Set Background Image (Leave empty for imageless)", "");
 
 	if ($("html.theme-A").length) {
@@ -146,7 +146,7 @@ $("img[alt='HM100']").attr("src", img.src);
 
 }
 
-function UploadPicture2Β() {
+function UploadPicture2B() {
 img=prompt("Set Avatar Image (Leave empty for default)", "");
 
 if (img=='') {
@@ -188,7 +188,7 @@ if (files[0].size > 1000000) {
 
 }
 
-function UploadPicture3Β() {
+function UploadPicture3B() {
 img=prompt("Set Header Graphic Image (Leave empty for imageless)", "");
 
 		$("style.designer-style.theme-Global").append(
@@ -239,7 +239,7 @@ $("img[alt='altavatar']").attr("src", img.src);
 
 }
 
-function UploadPicture5Β() {
+function UploadPicture5B() {
 img=prompt("Set Bot Avatar Image (Leave empty for default, can be the same as the ones from the main account)", "");
 
 if (img=='') {
@@ -588,7 +588,7 @@ if (confirm('Are you sure you want to reset all themes to the pre-set ones? This
 }
 }
 
-function ResetThemesΒ() {
+function ResetThemesB() {
 if (confirm('Are you sure you want to reset everything to factory defaults? This action cannot be undone') === true) {
 		$("style.designer-style.theme-A").text('/* This CSS left intentionally blank */');	
 		$("style.designer-style.theme-B").text('/* This CSS left intentionally blank */');	
