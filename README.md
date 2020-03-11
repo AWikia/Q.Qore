@@ -5,21 +5,19 @@ OpenSource Mpirthi Project with great modern browser support.
 ## Main aka Mpistoskin2
 These wrappers use the Desktop Skin also known as Mpistoskin2 or Mpisto War 2018:
 
-[Changelog](https://awikia.github.io/Q.Qore/Ryneeeel%20Grooze%20Chancelog.html)
-
 [Design System](https://awikia.github.io/Q.Qore/Ryneeeel%20Grooze%20Systems.html)
 
 [Settings](https://awikia.github.io/Q.Qore/Options.html)
 
-[Main Page](https://awikia.github.io/Q.Qore/Ryneeeel%20Grooze.html)
+[Main Page (Without new editor)](https://awikia.github.io/Q.Qore/Ryneeeel%20Grooze.html)
 
 [Rules](https://awikia.github.io/Q.Qore/Ryneeeel%20Grooze%20Contributions.html)
 
 [Elements Translation](https://awikia.github.io/Q.Qore/Ryneeeel%20Grooze%20Element%20Translation.html)
 
-[Editor](https://awikia.github.io/Q.Qore/Ryneeeel%20Grooze%20Editor.html)
+[Classic Editor](https://awikia.github.io/Q.Qore/Ryneeeel%20Grooze%20Editor.html)
  
-[New Editor](https://awikia.github.io/Q.Qore/Ryneeeel%20Grooze%20Article%20Constructor.html)
+[Main Page](https://awikia.github.io/Q.Qore/Ryneeeel%20Grooze%20Article%20Constructor.html)
 
 [EraIcons testcase](https://awikia.github.io/Q.Qore/Ryneeeel%20Grooze%20Icons.html)
 
@@ -31,7 +29,7 @@ These wrappers use the Desktop Skin also known as Mpistoskin2 or Mpisto War 2018
 
 [Anon Interface](https://awikia.github.io/Q.Qore/Ryneeeel%20Grooze%20(Anons).html)
 
-[Main Page (With Spotlight footer)](https://awikia.github.io/Q.Qore/Ryneeeel%20Grooze%20(Spotlight).html)
+[Main Page (With Spotlight footer and without new editor)](https://awikia.github.io/Q.Qore/Ryneeeel%20Grooze%20(Spotlight).html)
 ## Chat aka Mpistochat2
 These wrappers use the Desktop Skin also known as Mpistochat2 or Mpisto War 2018 Chatroom, powered by Mprilyiaano Services for Chatting:
 
