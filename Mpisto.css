@@ -4296,12 +4296,13 @@ justify-content:space-between;
 .mpisto-article {
 min-height:300px;
 width:100%;
-padding:0 10px;
+padding:10px 10px 0;
 overflow:visible;
 position:relative;
 word-wrap: break-word;
 font-size:14px;
 }
+
 
 .mpisto-article-wrapper .mpisto-article {
 width:calc(-300px + 100%);
@@ -5941,6 +5942,7 @@ body.constructor .mpisto-article-wrapper .mpisto-article {
 	width:100%;
 	position:relative;
 	overflow:visible;
+	padding-top:0;
 }
 
 body.constructor .mpisto-sub {
