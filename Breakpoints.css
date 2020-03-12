@@ -102,6 +102,15 @@ column-count:1!important;
 	padding:0 7.5px;
 }
 
+.mpisto-userpages-header .mpisto-profile-masthead hgroup .wds-button span {
+	display:none;
+}
+
+.mpisto-userpages-header .mpisto-profile-masthead hgroup .wds-button .wds-icon {
+	margin:0;
+}
+
+
 .mpisto-gnav .active-search .wds-dropdown .link {
 				font-size:0!important;
 				padding:0!important;
@@ -355,7 +364,7 @@ display:inline-flex;
 }
 
 .mpisto-userpages-header .mpisto-userpages-main .mpisto-avatar {
-	width:63px;
+	width:64px;
 	border-width:3px;
 }
 
@@ -380,6 +389,11 @@ display:inline!important;
 	width:calc(100% - (34px / 0.8))!important;
 }
 */
+
+.mpisto-userpages-header .mpisto-profile-masthead hgroup .wds-button {
+	padding-left:12px;
+	padding-right:12px;
+}
 
 .mpisto-option-way h1 {
 	white-space:nowrap;
@@ -439,7 +453,7 @@ position:sticky!important;
 	font-size:22px;
 }
 
-.mpisto-userpages-header .mpisto-profile-masthead hgroup span {
+.mpisto-userpages-header .mpisto-profile-masthead hgroup .aka {
 	font-size:15px;
 }
 
