@@ -640,6 +640,14 @@ document.querySelector('body').style.setProperty("--button-color-blend-light", b
 document.querySelector('body').style.setProperty("--button-color-blend", button_color);
 }
 
+/* Legibility */
+if ((chroma(button_color).luminance()) > .275) {
+var buttoncolor2 = 'black';
+} else {
+var buttoncolor2 = 'white';
+}
+
+
 /* Set Values */
 document.querySelector('body').style.setProperty("--button-color-dark", buttoncolor1);
 document.querySelector('body').style.setProperty("--button-color-text", buttoncolor2);
@@ -663,6 +671,14 @@ document.querySelector('body').style.setProperty("--community-header-bg-blend-li
 document.querySelector('body').style.setProperty("--community-header-bg-blend", getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg"));
 }
 
+/* Legibility */
+if ((chroma(header_color).luminance()) > .275) {
+var headercolor2 = '0,0,0';
+} else {
+var headercolor2 = '255,255,255';
+}
+
+
 /* Set Values */
 document.querySelector('body').style.setProperty("--community-header-dark", headercolor1final);
 document.querySelector('body').style.setProperty("--community-header-text", headercolor2);
@@ -683,6 +699,13 @@ var linkcolor2 = 'white';
 var linkcolor1final = chroma(linkcolor1).get('rgb.r') + ',' + chroma(linkcolor1).get('rgb.g') + ',' + chroma(linkcolor1).get('rgb.b'); 
 document.querySelector('body').style.setProperty("--link-color-blend-light", linkcolor1final);
 document.querySelector('body').style.setProperty("--link-color-blend", getComputedStyle(document.querySelector('html')).getPropertyValue("--link-color"));
+}
+
+/* Legibility */
+if ((chroma(link_color).luminance()) > .275) {
+var linkcolor2 = 'black';
+} else {
+var linkcolor2 = 'white';
 }
 
 
@@ -753,6 +776,14 @@ var bordercolor2 = 'white';
 document.querySelector('body').style.setProperty("--content-border-blend-light", bordercolor1);
 document.querySelector('body').style.setProperty("--content-border-blend", border_color);
 }
+
+/* Legibility */
+if ((chroma(border_color).luminance()) > .275) {
+var bordercolor2 = 'black';
+} else {
+var bordercolor2 = 'white';
+}
+
 
 /* Set Values */
 document.querySelector('body').style.setProperty("--content-border-dark", bordercolor1);

@@ -333,25 +333,25 @@ Raleway = Rest
 
 .theme-B { /* Standard Gloved */
 --background-image:url("headbg.jpg");
---background-color:#54d9f8;
---link-color:134,4,152;
---content-bg:#ffecff;
---content-border:#ddf759;
+--background-color:#39bae6;
+--link-color:153,15,153;
+--content-bg:#eefcee;
+--content-border:#8cb114;
 --content-color:#2a2a2a;
---button-color:#70C800;
---community-header-bg:80,103,155;
+--button-color:#7aea32;
+--community-header-bg:70,90,190;
 }
 
 
 .theme-C { /* Standard Dark */
 --background-image:url("headbg3.jpg");
---background-color:#610038;
---link-color:0,0,255;
---content-bg:#282828;
---content-border:#cccccc;
+--background-color:#66144b;
+--link-color:0,85,255;
+--content-bg:#303030;
+--content-border:#bebebe;
 --content-color:#f9f9f9;
---button-color:#00178C;
---community-header-bg:127,105,105;
+--button-color:#1f5299;
+--community-header-bg:127,95,95;
 }
 
 

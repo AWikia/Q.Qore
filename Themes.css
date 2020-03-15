@@ -178,8 +178,7 @@
 --community-header-bg:255,99,71;
 }
 
-
-/* Standard Gloved Version ~~ */
+/* Standard Gloved Version (V1) */
 .theme-A {
 --background-image:url("headbg.jpg");
 --background-color:#54d9f8;
@@ -191,7 +190,19 @@
 --community-header-bg:80,103,155;
 }
 
-/* Standard Dark Version ~ */
+/* Standard Gloved Version ~~ */
+.theme-A {
+--background-image:url("headbg.jpg");
+--background-color:#39bae6;
+--link-color:153,15,153;
+--content-bg:#eefcee;
+--content-border:#8cb114;
+--content-color:#2a2a2a;
+--button-color:#7aea32;
+--community-header-bg:70,90,190;
+}
+
+/* Standard Dark Version (V1) */
 .theme-A {
 --background-image:url("headbg3.jpg");
 --background-color:#610038;
@@ -201,6 +212,18 @@
 --content-color:#f9f9f9;
 --button-color:#00178C;
 --community-header-bg:127,105,105;
+}
+
+/* Standard Dark Version ~ */
+.theme-A {
+--background-image:url("headbg3.jpg");
+--background-color:#66144b;
+--link-color:0,85,255;
+--content-bg:#303030;
+--content-border:#bebebe;
+--content-color:#f9f9f9;
+--button-color:#1f5299;
+--community-header-bg:127,95,95;
 }
 
 /* Standard Nightly Version */
@@ -757,4 +780,28 @@
 --content-color:#012345;
 --button-color:#ff4500;
 --community-header-bg:68,17,119;
+}
+
+/* WDS Dark */
+.theme-A {
+--background-image:url("");
+--background-color:#002a32;
+--link-color:26,94,184;
+--content-bg:#0e191a;
+--content-border:#7f9998;
+--content-color:#d4d5d5;
+--button-color:#1a5eb8;
+--community-header-bg:64,74,86;
+}
+
+/* WDS Dark 2 */
+.theme-A {
+--background-image:url("");
+--background-color:#002a32;
+--link-color:95,122,123;
+--content-bg:#0e191a;
+--content-border:#7f9998;
+--content-color:#f2f5f5;
+--button-color:#5f7a7b;
+--community-header-bg:190,207,208;
 }
