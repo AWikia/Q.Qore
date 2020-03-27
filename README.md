@@ -1,5 +1,5 @@
-# Κορα Κορε Web (Formerly Mpisto War 2018)
-OpenSource Mpirthi Project with great modern browser support.
+# Qortex Essentials Diadyktio
+OpenSource Mpirthi Project with great modern browser support.  (Formerly Mpisto War 2018)
 
 # Wrappers
 ## Main aka Mpistoskin2
