@@ -30,10 +30,16 @@ window.oldfox = ((navigator.userAgent.match("Firefox/31\\.")) || (navigator.user
 // Some old Google Versions
 window.oldchrome =  ((navigator.userAgent.match("Chrome/48\\.")) || (navigator.userAgent.match("Chrome/49\\.")) || (navigator.userAgent.match("Chrome/50\\.")) || (navigator.userAgent.match("Chrome/51\\.")) || (navigator.userAgent.match("Chrome/52\\.")) || (navigator.userAgent.match("Chrome/53\\.")) || (navigator.userAgent.match("Chrome/54\\.")) || (navigator.userAgent.match("Chrome/55\\.")) || (navigator.userAgent.match("Chrome/56\\.")) || (navigator.userAgent.match("Chrome/27\\.")) || (navigator.userAgent.match("Chrome/26\\.")) || (navigator.userAgent.match("Chrome/25\\.")) || (navigator.userAgent.match("Chrome/24\\.")) || (navigator.userAgent.match("Chrome/23\\.")) || (navigator.userAgent.match("Chrome/22\\.")) || (navigator.userAgent.match("Chrome/21\\.")) || (navigator.userAgent.match("Chrome/20\\.")) || (navigator.userAgent.match("Chrome/19\\.")) || (navigator.userAgent.match("Chrome/18\\.")) || (navigator.userAgent.match("Chrome/17\\.")) || (navigator.userAgent.match("Chrome/16\\.")) || (navigator.userAgent.match("Chrome/15\\.")) || (navigator.userAgent.match("Chrome/14\\.")) || (navigator.userAgent.match("Chrome/13\\.")) || (navigator.userAgent.match("Chrome/12\\.")) || (navigator.userAgent.match("Chrome/11\\.")) || (navigator.userAgent.match("Chrome/10\\.")) || (navigator.userAgent.match("Chrome/9\\.")) || (navigator.userAgent.match("Chrome/8\\.")) || (navigator.userAgent.match("Chrome/7\\.")) || (navigator.userAgent.match("Chrome/6\\.")) || (navigator.userAgent.match("Chrome/5\\.")) || (navigator.userAgent.match("Chrome/4\\.")) || (navigator.userAgent.match("Chrome/3\\.")) || (navigator.userAgent.match("Chrome/2\\.")) || (navigator.userAgent.match("Chrome/1\\.")) )
 
-window.oldbrowser = (CSS.supports("color","var(--color)") || CSS.supports("color:var(--color)"))
+
+/* Hack */
+if ((navigator.userAgent.match("Trident")) || (navigator.userAgent.match("Presto")) || (navigator.userAgent.match("Tessera")) || (navigator.userAgent.match("MINERVOULA")) || (navigator.userAgent.match("Silk")) || (navigator.userAgent.match("PLAYSTATION 3")) || (navigator.userAgent.match("Nintendo DSi")) || (navigator.userAgent.match("Nintendo 3DS")) || (navigator.userAgent.match("PLAYSTATION PORTABLE")) || (navigator.userAgent.match("Edge")) || (navigator.userAgent.match("BlackBerry")) || (navigator.userAgent.match("IEMobile")) || window.oldchrome || window.oldfox) {
+window.location.replace("https://hm100.github.io/UnsupportedBanners/Mpisto.html");window.location.href = "https://hm100.github.io/UnsupportedBanners/Mpisto.html";
+}
 
 
-if ((navigator.userAgent.match("Trident")) || (navigator.userAgent.match("Presto")) || (navigator.userAgent.match("Tessera")) || (navigator.userAgent.match("MINERVOULA")) || (navigator.userAgent.match("Silk")) || (navigator.userAgent.match("PLAYSTATION 3")) || (navigator.userAgent.match("Nintendo DSi")) || (navigator.userAgent.match("Nintendo 3DS")) || (navigator.userAgent.match("PLAYSTATION PORTABLE")) || (navigator.userAgent.match("Edge")) || (navigator.userAgent.match("BlackBerry")) || (navigator.userAgent.match("IEMobile")) || window.oldchrome || window.oldfox || !window.oldbrowser ) {
+window.newbrowser = (CSS.supports("color","var(--color)") || CSS.supports("color:var(--color)") ) 
+
+if (!window.newbrowser ) {
 window.location.replace("https://hm100.github.io/UnsupportedBanners/Mpisto.html");window.location.href = "https://hm100.github.io/UnsupportedBanners/Mpisto.html";
 }
 

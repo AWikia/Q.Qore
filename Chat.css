@@ -86,9 +86,7 @@ body *, :before, :after {
 	height:75px;
 	margin:0 0 10px;
 	align-items:center;
-	border:1px solid #ccc;
 	border-color:var(--content-border);
-	background-color:#fff;
 	background-color:var(--content-bg);
 	border-radius:6px 6px 0 0;
 	padding:0 18px;
@@ -108,7 +106,6 @@ body *, :before, :after {
 .chat-header .member-container {
 	display:flex;
 	align-items:center;
-	border-left:1px solid #ccc;
 	border-left-color:var(--content-border);
 	padding:0 5px 0 10px;
 	height:75px;
@@ -120,7 +117,6 @@ body *, :before, :after {
 	height:57px;
 	border-width:4px;
 	box-sizing:border-box;
-	border-color:#ccc;
 	border-color:var(--content-border);
 	padding:2px;
 	box-shadow:0 0 0 2px currentColor, 0 0 0 2px currentColor inset;
@@ -139,16 +135,13 @@ body *, :before, :after {
 	width:100%;
 	display:flex;
 	flex-direction:column;
-	border:1px solid #ccc;
 	border-color:var(--content-border);
-	background-color:#fff;
 	background-color:var(--content-bg);
 	border-radius:0 0 6px 6px;
 }
 
 .chat-content * {
 	scrollbar-width:thin;
-	scrollbar-color:#92DFE4 transparent;
 	scrollbar-color:var(--emphasis-bg) transparent;
 }
 
@@ -159,7 +152,6 @@ body *, :before, :after {
 .chat-content .wrapper {
 	display:flex;
 	flex:1;
-	border-bottom:1px solid #ccc;
 	border-color:var(--content-border);
 	width:100%;
 }
@@ -222,7 +214,6 @@ body *, :before, :after {
 
 
 .chat-content .wrapper section message[you] {
-	background-color:#ffffff;
 	background-color:var(--dropdown-bg);
 }
 
@@ -276,9 +267,8 @@ body *, :before, :after {
 
 .chat-content .wrapper section:not([pane]) {
 	flex:1;
-	border:1px solid #ccc;
+	border:1px solid :var(--content-border);
 	border-style:hidden solid;
-	border-color:var(--content-border);
 	overflow-x:hidden;
 	overflow-y:auto;
 }
@@ -291,8 +281,7 @@ body *, :before, :after {
 
 .chat-content .wrapper section[pane] .wds-button-group {
 	display:flex;
-	border-top:1px solid #ccc;
-	border-color:var(--content-border);
+	border-top:1px solid var(--content-border);
 	padding:5px;
 }
 
@@ -307,8 +296,7 @@ body *, :before, :after {
 	font-weight:inherit;
 	line-height:20px;
 	text-align:center;
-	border-bottom:1px solid #ccc;
-	border-color:var(--content-border);
+	border-bottom:1px solid var(--content-border);
 }
 
 .chat-content .wrapper section[pane] .list {
@@ -340,9 +328,6 @@ body *, :before, :after {
 }
 
 body:not([class*="page"]) .chat-content .wrapper section[pane] .list .channel:nth-child(1), .page-1 .chat-content .wrapper section[pane] .list .channel:nth-child(2) {
-	background-color:rgba(24,187,197,0.2);
-	border-color:rgba(24,187,197,0.2);
-	color:#18bbc5;
 	background-color:rgba(var(--link-color),0.2);
 	border-color:rgba(var(--link-color),0.2);
 	color:rgb(var(--link-color));
@@ -364,7 +349,6 @@ body:not([class*="page"]) .chat-content .wrapper section[pane] .list .channel:nt
 }
 
 .chat-content .wrapper section[pane] .list .wds-dropdown:hover .info {
-	background-color:#ffffff;
 	background-color:var(--dropdown-bg);
 }
 
@@ -427,9 +411,7 @@ body:not(.contrast) .chat-content .wrapper section[pane] .list .info span[offlin
 	height:45px;
 	border-width:1px;
 	border-style:solid;
-	border-color:#ccc;
 	border-color:var(--content-border);
-	background-color:#ffffff;
 	background-color:var(--dropdown-bg);
 	box-sizing:border-box;
 	font-family:inherit;

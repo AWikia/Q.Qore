@@ -22,18 +22,15 @@ html:not(.contrast):not(.basic) .mpisto-gnav.headroom.headroom--not-top::after {
 
 
 .mpisto-gnav.headroom.headroom--not-top::after {
-	background-color:#69c3d0;
 	background-color:var(--accent-bg);
 }
 
 
 html:not(.contrast) .mpisto-gnav.headroom.headroom--not-top {
-	color:#000;
 	color:var(--button-color-text);
 	box-shadow: 0 0 3px var(--content-color), 0 0 3px var(--dropdown-bg);
 }
 
 .mpisto-gnav.headroom.headroom--not-top .wds-list {
-	color:#000;
 	color:var(--content-color);
 }

@@ -43,14 +43,12 @@
 @media only screen and (max-width:754px) {
 :root {
 	scrollbar-width:thin;
-	scrollbar-color:#0000ff #fff;
 	scrollbar-color:rgb(var(--community-header-bg)) var(--content-bg);
 }
 
 
 
 .mpisto-2018:before {
-  background-color:#fff;
   background-color:var(--content-bg)!important;
 }
 
@@ -280,7 +278,6 @@ padding-right:4px;
     position: absolute;
     width: 100%;
     z-index: 61;
-    background-color:#000;
     background-color:var(--content-color);
     opacity:0.6;
     top:0;
@@ -631,7 +628,6 @@ filter:brightness(1);
     position: absolute;
     width: 100%;
     z-index: 61;
-    background-color:#000;
     background-color:var(--content-color);
     opacity:0.6;
     top:0;

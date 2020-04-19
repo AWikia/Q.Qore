@@ -11,6 +11,11 @@ ColorUpdate();
 })();
 
 
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+
+
 function UpdateSitename() {
     var x = document.getElementById("311");
     var y = $(".mpisto-input.sitename").val();
@@ -36,7 +41,7 @@ function CursorT(theme) {
 	}
    if (window.MW18auto === true) {
 		var body_bg =	getComputedStyle(document.querySelector('html')).getPropertyValue("--content-bg");
-		if ((chroma(body_bg).get('lab.l')) > 49) {
+		if ((chroma(body_bg).luminance()) > .25) {
 			$('body').attr("curtheme", "light")
 		} else {
 			$('body').attr("curtheme", "dark")
@@ -341,6 +346,11 @@ function RandomColor() {
 	RandomColor5();
 	RandomColor6();
 	RandomColor7();
+	checkon = document.querySelector('input#ThmAdpt').checked
+	document.querySelector('input#ThmAdpt').checked = (getRandomInt(2) === 0)
+	if (checkon != document.querySelector('input#ThmAdpt').checked) {
+	ToggleAdapt();
+	}
 }
 
 
@@ -628,7 +638,7 @@ function ColorUpdate() {
 /* Set Vars */
 var button_color = getComputedStyle(document.querySelector('html')).getPropertyValue("--button-color");
 
-if ((chroma(button_color).get('lab.l')) > 49) {
+if ((chroma(button_color).luminance()) > .25) {
 var buttoncolor1 = chroma(button_color).darken(1);
 var buttoncolor2 = 'black';
 document.querySelector('body').style.setProperty("--button-color-blend-light", button_color);
@@ -640,12 +650,6 @@ document.querySelector('body').style.setProperty("--button-color-blend-light", b
 document.querySelector('body').style.setProperty("--button-color-blend", button_color);
 }
 
-/* Legibility */
-if ((chroma(button_color).luminance()) > .275) {
-var buttoncolor2 = 'black';
-} else {
-var buttoncolor2 = 'white';
-}
 
 
 /* Set Values */
@@ -657,7 +661,7 @@ document.querySelector('body').style.setProperty("--button-color-text", buttonco
 /* Set Vars */
 var header_color =	'rgb(' + getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg") + ')';
 
-if ((chroma(header_color).get('lab.l')) > 49) {
+if ((chroma(header_color).luminance()) > .25) {
 var headercolor1 = chroma(header_color).darken(1);
 var headercolor2 = '0,0,0';
 var headercolor1final = chroma(headercolor1).get('rgb.r') + ',' + chroma(headercolor1).get('rgb.g') + ',' + chroma(headercolor1).get('rgb.b'); 
@@ -671,12 +675,6 @@ document.querySelector('body').style.setProperty("--community-header-bg-blend-li
 document.querySelector('body').style.setProperty("--community-header-bg-blend", getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg"));
 }
 
-/* Legibility */
-if ((chroma(header_color).luminance()) > .275) {
-var headercolor2 = '0,0,0';
-} else {
-var headercolor2 = '255,255,255';
-}
 
 
 /* Set Values */
@@ -687,7 +685,7 @@ document.querySelector('body').style.setProperty("--community-header-text", head
 /* Set Vars */
 var link_color = 'rgb(' + getComputedStyle(document.querySelector('html')).getPropertyValue("--link-color") + ')';
 
-if ((chroma(link_color).get('lab.l')) > 49) {
+if ((chroma(link_color).luminance()) > .25) {
 var linkcolor1 = chroma(link_color).darken(1);
 var linkcolor2 = 'black';
 var linkcolor1final = chroma(linkcolor1).get('rgb.r') + ',' + chroma(linkcolor1).get('rgb.g') + ',' + chroma(linkcolor1).get('rgb.b'); 
@@ -701,12 +699,6 @@ document.querySelector('body').style.setProperty("--link-color-blend-light", lin
 document.querySelector('body').style.setProperty("--link-color-blend", getComputedStyle(document.querySelector('html')).getPropertyValue("--link-color"));
 }
 
-/* Legibility */
-if ((chroma(link_color).luminance()) > .275) {
-var linkcolor2 = 'black';
-} else {
-var linkcolor2 = 'white';
-}
 
 
 /* Set Values */
@@ -720,7 +712,7 @@ var content_color =	getComputedStyle(document.querySelector('html')).getProperty
 var content_text =	getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color");
 var body_bg =	getComputedStyle(document.querySelector('html')).getPropertyValue("--background-color");
 
-if ((chroma(content_color).get('lab.l')) > 74) {
+if ((chroma(content_color).luminance()) > .5) {
 	var dropdowncolor = 'white';
 	if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--adaptive-content-bg") === 'true') && !($("html.contrast.win10").length)  ) {
 		var dropdowncolor2 = chroma(content_color).darken(1);
@@ -730,7 +722,7 @@ if ((chroma(content_color).get('lab.l')) > 74) {
 		var dropdowncolor3 = 'inherit';
 	}
 	
-} else if ((chroma(content_color).get('lab.l')) > 49) {
+} else if ((chroma(content_color).luminance()) > .25) {
 var dropdowncolor = chroma(content_color).darken(1);
 	if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--adaptive-content-bg") === 'true') && !($("html.contrast.win10").length)  ) {
 		var dropdowncolor2 = chroma(content_color).darken(2);
@@ -765,7 +757,7 @@ if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--adapti
 } else {
 	var border_color =	getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border");
 }
-if ((chroma(border_color).get('lab.l')) > 49) {
+if ((chroma(border_color).luminance()) > .25) {
 var bordercolor1 = chroma(border_color).darken(1);
 var bordercolor2 = 'black';
 document.querySelector('body').style.setProperty("--content-border-blend-light", border_color);
@@ -776,14 +768,6 @@ var bordercolor2 = 'white';
 document.querySelector('body').style.setProperty("--content-border-blend-light", bordercolor1);
 document.querySelector('body').style.setProperty("--content-border-blend", border_color);
 }
-
-/* Legibility */
-if ((chroma(border_color).luminance()) > .275) {
-var bordercolor2 = 'black';
-} else {
-var bordercolor2 = 'white';
-}
-
 
 /* Set Values */
 document.querySelector('body').style.setProperty("--content-border-dark", bordercolor1);
@@ -809,7 +793,7 @@ CursorT('auto');
 }
 
 function CheckAdapt() {
-	if ($("body.options").length) {
+	if ($("body.options").length   && !($("html.contrast.win10").length) ) {
 		if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--adaptive-content-bg") === 'true') && !($("html.contrast.win10").length)  ) {
 				document.querySelector('input#ThmAdpt').checked = true;
 				$(".adapt-off").attr('disabled', 'true');

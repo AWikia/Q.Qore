@@ -39,7 +39,6 @@ font-family:'Inter', -apple-system, BlinkMacSystemFont, "Noto Sans", "Noto Sans 
 
 .mpisto-discussions-wrapper .card {
 	display:flex;
-	background-color:#fff;
 	background-color:var(--content-bg);
 	border-radius:10px;
 	padding:10px;
@@ -48,8 +47,7 @@ font-family:'Inter', -apple-system, BlinkMacSystemFont, "Noto Sans", "Noto Sans 
 	text-shadow:none;
 	align-items:center;
 	flex-direction:column;
-	border:2px solid #69c3d0;
-	border-color:var(--accent-bg);	
+	border:2px solid var(--accent-bg);	
 }
 
 .mpisto-discussions-wrapper .card.first, .mpisto-discussions-wrapper .card.last {
@@ -59,7 +57,6 @@ font-family:'Inter', -apple-system, BlinkMacSystemFont, "Noto Sans", "Noto Sans 
 	position:sticky;
 	overflow-y:auto;
 	scrollbar-width:thin;
-	scrollbar-color:#ccc transparent;
 	scrollbar-color:var(--content-border) transparent;
 	overscroll-behavior:contain;
 	align-self:flex-start
@@ -118,13 +115,11 @@ font-family:'Inter', -apple-system, BlinkMacSystemFont, "Noto Sans", "Noto Sans 
 	position:-webkit-sticky;
 	position:sticky;
 	top:49px;
-	border:2px solid #69c3d0;
 	border-color:var(--accent-bg);	
 	border-top:0;
 	border-bottom-left-radius:10px;
 	border-bottom-right-radius:10px;
 	z-index:9;
-	background-color:#ffffff;
 	background-color:var(--dropdown-bg);
 	padding:10px;
 	width:100%;
@@ -133,14 +128,12 @@ font-family:'Inter', -apple-system, BlinkMacSystemFont, "Noto Sans", "Noto Sans 
 
 .mpisto-discussions-wrapper .card.main .post-send .post-area {
 	border-radius:10px;
-	box-shadow:0 0 10px 0.25px rgba(24,187,197,0.6), 0 0 6px 0 rgba(0,0,0,.2), 0 0 6px 0 rgba(255,255,255,0.2);
 	box-shadow:0 0 10px 0.25px rgba(var(--link-color),0.6), 0 0 6px 0 rgba(0,0,0,.2), 0 0 6px 0 rgba(255,255,255,0.2);
 	border:0;
 	width:100%;
 	padding:10px;
 	height:80px;
 	font-size:14px;
-	background-color:#92DFE4;
 	background-color:var(--emphasis-bg);
 	color:inherit;
 	font-family:inherit;
@@ -206,15 +199,13 @@ font-family:'Inter', -apple-system, BlinkMacSystemFont, "Noto Sans", "Noto Sans 
 .mpisto-discussions-wrapper .card.main .post .message {
 	line-height:1.3;
 	font-weight:300;
-	border-bottom:1px solid #ccc;
-	border-bottom-color:var(--content-border);
+	border-bottom:1px solid var(--content-border);
 }
 
 
 .mpisto-discussions-wrapper .card.main .post .post {
 	padding-left:50px;
-	border-bottom:1px solid #ccc;
-	border-bottom-color:var(--content-border);
+	border-bottom:1px solid var(--content-border);
 }
 
 
@@ -244,13 +235,11 @@ body.editor1 .editor1off, body.editor2 .editor2off, body:not(.editor1) .editor1o
 @media only screen and (max-width:959px) {
 :root {
 	scrollbar-width:thin;
-	scrollbar-color:#0000ff transparent;
 	scrollbar-color:rgb(var(--community-header-bg)) transparent;
 	min-width:360px;
 }
 
 .mpisto-content {
-	background-color:#fff;
 	background-color:var(--content-bg);
 	width:100%!important;
 }
@@ -304,7 +293,6 @@ footer.mpisto-footer {
 }
 
 .mpisto-2018, .mpisto-discuss-2018:before, .mpisto-discuss-2018:after {
-	background:white;
 	background:var(--content-bg);
 }
 }
