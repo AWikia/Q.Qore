@@ -1,23 +1,26 @@
 /* Headroom */
+.mpisto-gnav.headroom {
+	transition:/*-webkit-backdrop-filter 400ms ease, backdrop-filter 400ms ease,*/ transform 400ms ease;
+	will-change:color, background-color;
+}
+
 .mpisto-gnav.headroom:after {
-	transition:opacity 400ms ease, -webkit-backdrop-filter 400ms ease, backdrop-filter 400ms ease, -webkit-backdrop-filter 400ms ease, background-color 400ms ease;
+	transition:opacity 400ms ease, background-color 400ms ease;
 	will-change:opacity;
 }
 
-
-.mpisto-gnav.headroom {
-	transition:transform 400ms ease;
-	will-change: color, background-color;
-}
 
 .mpisto-gnav.headroom--bottom {
 	transform:translateY(-100%);
 }
 
+html:not(.contrast):not(.basic) .mpisto-gnav.headroom.headroom--not-top {
+	-webkit-backdrop-filter:blur(20px) sepia(20%) contrast(120%) invert(20%) grayscale(20%) saturate(120%) hue-rotate(20deg) brightness(120%);
+	backdrop-filter:blur(4px) sepia(24%) contrast(124%) invert(24%) grayscale(24%) saturate(124%) hue-rotate(24deg) brightness(124%);
+}
+
 html:not(.contrast):not(.basic) .mpisto-gnav.headroom.headroom--not-top::after {
-	opacity:0.8;
-	-webkit-backdrop-filter:blur(10px) sepia(10%) contrast(110%) invert(10%) grayscale(10%) saturate(110%) hue-rotate(10deg) brightness(110%);
-	backdrop-filter:blur(10px) sepia(10%) contrast(110%) invert(10%) grayscale(10%) saturate(110%) hue-rotate(10deg) brightness(110%);
+	opacity:0.7;
 }
 
 

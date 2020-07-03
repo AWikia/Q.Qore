@@ -385,6 +385,8 @@ body * {
 --community-header-bg:inherit;
 }
 
+
+
 main {
 overflow:hidden!important;
 }
@@ -2380,17 +2382,17 @@ margin-left:0;
  .wds-dropdown__content .wds-list.wds-is-linked>li>a:not(.wds-button){color:#39424d;padding-left:9px;padding-right:9px;text-decoration:none;transition-duration:.2s;transition-property:background-color,color}
  .wds-dropdown__content .wds-list.wds-is-linked>li.wds-is-selected>a:not(.wds-button),.wds-dropdown__content .wds-list.wds-is-linked>li:hover>a:not(.wds-button) {background-color:rgba(0,183,224,.1);color:#00cdd0}
  
- .wds-dropdown::after,.wds-dropdown::before{bottom:-1px;content:'';display:none;height:0;left:50%;pointer-events:none;position:absolute;width:0;z-index:2}
+ .wds-dropdown::after,.wds-dropdown::before{bottom:-1px;content:'';display:none;;height:0;left:50%;position:absolute;width:0;z-index:2}
  
  .wds-dropdown::after{border:8px solid transparent;border-bottom-color:#fff;margin-left:-8px}
 
 .wds-dropdown::before{border:9px solid transparent;border-bottom-color:#ccc;margin-left:-9px}
 
-.wds-dropdown.wds-is-active::after,.wds-dropdown.wds-is-active::before {display:block}
+.wds-dropdown.wds-is-active::after,.wds-dropdown.wds-is-active::before {display:block; opacity:1;}
 
 .wds-dropdown.wds-no-chevron::before, .wds-dropdown.wds-no-chevron::after {display:none!important;}
 
-.wds-dropdown.wds-is-active .wds-dropdown__content {display:inline-block; *display:inline; *zoom:1;
+.wds-dropdown.wds-is-active .wds-dropdown__content {display:inline-block; *display:inline; *zoom:1; opacity:1; pointer-events:all;
 }
 
 .wds-dropdown.wds-is-active .wds-dropdown__toggle-chevron {-ms-transform:rotate(180deg);transform:rotate(180deg)}
@@ -2414,7 +2416,7 @@ margin-left:0;
 
 .wds-dropdown__content .wds-list.wds-is-linked .wds-dropdown-level-2 .wds-dropdown-level-2__content .wds-list.wds-is-linked>li>a:not(.wds-button){font-size:12px}
 
-.wds-dropdown__content .wds-list.wds-is-linked .wds-dropdown-level-2.wds-is-active .wds-dropdown-level-2__content,.wds-dropdown__content .wds-list.wds-is-linked .wds-dropdown-level-2:hover .wds-dropdown-level-2__content{display:block}
+.wds-dropdown__content .wds-list.wds-is-linked .wds-dropdown-level-2.wds-is-active .wds-dropdown-level-2__content,.wds-dropdown__content .wds-list.wds-is-linked .wds-dropdown-level-2:hover .wds-dropdown-level-2__content{display:block; opacity:1; pointer-events:all;}
 
 .wds-icon{fill:currentColor;height:24px;min-width:24px;width:24px}
 
@@ -5301,7 +5303,7 @@ header.mpisto-footer-container {
   z-index:51;
   min-height:27px;
   width:100%;
-  border-color:rgb(var(--link-color));
+  border:3px solid rgb(var(--link-color));
   border-left-width:0px;
   border-right-width:0px;
   border-bottom-width:0px;
@@ -7165,6 +7167,82 @@ margin-right:0;
           transform: rotateX(-90deg) translateZ(50px);
 }
 
+/* Gliding Menu */
+
+.wds-dropdown.wds-is-active .wds-dropdown__content{
+ animation: contribution-dropdown 0.3s;
+ pointer-events:all;
+ top:100% ;
+}
+
+.wds-dropdown .wds-dropdown__content .wds-dropdown-level-2:hover .wds-dropdown-level-2__content,
+.wds-dropdown .wds-dropdown__content .wds-dropdown-level-2.wds-is-active .wds-dropdown-level-2__content {
+ animation: dropdown-2 0.3s;
+ pointer-events:all;
+ opacity:1;
+}
+
+.wds-dropdown.wds-is-active::before, .wds-dropdown.wds-is-active::after {
+ animation: contribution-dropdown-b 0.3s;
+ opacity:1;
+ pointer-events:all;
+}
+
+
+.wds-dropdown .wds-dropdown__content{
+ top:calc(100% - 10px);
+ display:inline-block;
+ pointer-events:none;
+ opacity:0;
+ animation: contribution-dropdown-r 0.3s;
+}
+
+.wds-dropdown .wds-dropdown__content .wds-dropdown-level-2 .wds-dropdown-level-2__content {
+ opacity:0;
+ pointer-events:none;
+ display:block;
+ animation: dropdown-2-r 0.3s;
+}
+
+.wds-dropdown::before, .wds-dropdown::after {
+ opacity:0;
+ display:block;
+ animation: contribution-dropdown-b-r 0.3s;
+}
+
+
+
+@keyframes contribution-dropdown {
+ from {opacity: 0; top: calc(100% - 10px);}
+ to {opacity: 1; top: 100%;}
+}
+
+@keyframes contribution-dropdown-r {
+ from {opacity: 1; top: 100%;}
+ to {opacity: 0; top: calc(100% - 10px);}
+}
+
+@keyframes contribution-dropdown-b {
+ from {opacity: 0; bottom: 9px;}
+ to {opacity: 1; bottom: -1px;}
+}
+
+@keyframes contribution-dropdown-b-r {
+ from {opacity: 1; bottom: -1px;}
+ to {opacity: 0; bottom: 9px;}
+}
+
+@keyframes dropdown-2 {
+ from {opacity: 0; transform: translateX(-10px);}
+ to {opacity: 1; transform: translateX(0);}
+}
+
+@keyframes dropdown-2-r {
+ from {opacity: 1; transform: translateX(0);}
+ to {opacity: 0; transform: translateX(-10px);}
+}
+
+
 /** Legacy Components  **/
 
 /* Button Group */
@@ -7639,34 +7717,6 @@ cursor:not-allowed!important;
 cursor:pointer;
 }
 
-
-
-/* Edge Cursor fix */
-.edge {
-  cursor:auto;
-}
-
-.edge abbr[title] {
-  cursor:help;
-}
-
-.edge :not(.unset)[disabled], :not(.unset):disabled {
-cursor:not-allowed!important;
-}
-
-.edge textarea, .edge [contenteditable], .edge header.mpisto-navbar .search .search-input, .edge .mpisto-input {
-  cursor:text;
-}
-
-.edge .wds-dropdown .link, .edge .wds-button, .edge .wds-button:disabled, .edge .wds-is-disabled, .edge .wds-community-header__local-navigation a[href="#"], .edge .wds-tabs__tab {
-  cursor:default;
-}
-
-.edge a:hover, .edge .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), .edge .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), .edge a.wds-button, .edge button.wds-button, .edge .editor-header .wordmark, .edge .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, .edge .wds-banner-notification__close, .edge a label, .edge a input[type="checkbox"], .edge a input[type="radio"], .edge .wds-floating-button:not([disabled]), .edge .wds-floating-button:not(.wds-is-disabled), .edge .wds-dropdown .wds-dropdown__toggle, .edge .wds-toggle__label {
-cursor:pointer;
-}
-
-
 /** Mobile Only CSS **/
 /* Show the Mobile site link ^^^ (Currently suppressed since Mpistoskin2 does support Mobile 
 .phone .mobile-data {
@@ -7674,7 +7724,7 @@ cursor:pointer;
 }
 */
 
-.phone .cursors, .phone .xooption, .edge .cursors {
+.phone .cursors, .phone .xooption {
 	display:none!important;
 }
 

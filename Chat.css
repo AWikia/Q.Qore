@@ -86,7 +86,7 @@ body *, :before, :after {
 	height:75px;
 	margin:0 0 10px;
 	align-items:center;
-	border-color:var(--content-border);
+	border:1px solid var(--content-border);
 	background-color:var(--content-bg);
 	border-radius:6px 6px 0 0;
 	padding:0 18px;
@@ -135,7 +135,7 @@ body *, :before, :after {
 	width:100%;
 	display:flex;
 	flex-direction:column;
-	border-color:var(--content-border);
+	border:1px solid var(--content-border);
 	background-color:var(--content-bg);
 	border-radius:0 0 6px 6px;
 }
@@ -152,7 +152,7 @@ body *, :before, :after {
 .chat-content .wrapper {
 	display:flex;
 	flex:1;
-	border-color:var(--content-border);
+	border-bottom:1px solid var(--content-border);
 	width:100%;
 }
 
@@ -267,7 +267,7 @@ body *, :before, :after {
 
 .chat-content .wrapper section:not([pane]) {
 	flex:1;
-	border:1px solid :var(--content-border);
+	border:1px solid var(--content-border);
 	border-style:hidden solid;
 	overflow-x:hidden;
 	overflow-y:auto;
@@ -333,7 +333,7 @@ body:not([class*="page"]) .chat-content .wrapper section[pane] .list .channel:nt
 	color:rgb(var(--link-color));
 }
 
-.contrast:not([class*="page"]) .chat-content .wrapper section[pane] .list .channel:nth-child(1), .contrast.page-1 .chat-content .wrapper section[pane] .list .channel:nth-child(2) {
+.contrast body:not([class*="page"]) .chat-content .wrapper section[pane] .list .channel:nth-child(1), .contrast .page-1 .chat-content .wrapper section[pane] .list .channel:nth-child(2) {
 	border-color:var(--button-color-text);
 	background-color:var(--button-color);
 	color:var(--button-color-text);
