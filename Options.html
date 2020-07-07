@@ -1185,7 +1185,9 @@ Checked = VisualEditor as default mode
     <div class="fieldset cursors">
     <fieldset>     
      <legend>Cursor Theme</legend>
-    <input type="radio" name="cur1" id="cur-5" onclick="CursorT('auto')" checked title="Forces Light Cursor theme"></input><label for="cur-5" title="Picks the best cursor theme based on the theme currently used">Auto</label>
+    <input type="radio" name="cur1" id="cur-5" onclick="CursorT('auto')" checked title="Sets theme based on your current theme"></input><label for="cur-5" title="Picks the best cursor theme based on the theme currently used">Auto</label>
+	<br>
+    <input type="radio" name="cur1" id="cur-8" onclick="CursorT('auto-r')" title="Sets theme based on your curren theme but in reverse"></input><label for="cur-8" title="Picks the best cursor theme based on the theme currently used">Auto-Dark</label>
 	<br>
     <input type="radio" name="cur1" id="cur-6" onclick="CursorT('light')" title="Forces Light Cursor theme"></input><label for="cur-6" title="Forces Light Cursor theme">Light</label>
 	<br>
@@ -1348,7 +1350,7 @@ Checked = VisualEditor as default mode
 
 </nav>
     <!-- End Preview -->
-    If your browser supports CSS Variables and @supports, you can change the look of the above pictures by picking other themes or customizing them
+    You can change the look of the above pictures by picking other themes, customizing them or changing some accesibility options
     </fieldset>
     </div>
     </fieldset>
@@ -1357,6 +1359,8 @@ Checked = VisualEditor as default mode
     <div class="fieldset">
     <fieldset>
     <legend>Miscellaneous</legend>
+    <input title="Content Background Color behaves as Content Text Color and vice versa" type="checkbox" name="23" id="226" onclick="rvcolor()"></input> <label for="226">Reversed Colors</label>
+    <br>
     <div class="prm-option"><input type="checkbox" name="23" id="221" onclick="prmon()"></input> <label for="221">Use Reduced Motion experience</label></div>
     <div class="prt-option"><input type="checkbox" name="23" id="224" onclick="prton()"></input> <label for="224">Use Reduced Transparency experience</label></div>
     <div class="xooption"><input type="checkbox" name="23" id="225" onclick="togglezoom()"></input> <label for="225">Use enlarged range inputs everywhere</label></div>
@@ -1619,7 +1623,7 @@ Checked = VisualEditor as default mode
     <label>Background-color:</label> 
         <div class="wds-dropdown win10-off">
     <button class="wds-button wds-is-square color-button">
-			<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:var(--content-bg);"></div>
+			<div class="rvbg1" style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:var(--content-bg);"></div>
     </button>
 	<div class="wds-dropdown__content wds-is-not-scrollable">
 		<ul class="wds-list">
@@ -1649,7 +1653,7 @@ Checked = VisualEditor as default mode
 
     <div class="wds-dropdown win10-off adapt-off">
     <button class="wds-button wds-is-square color-button">
-			<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:var(--content-color);"></div>
+			<div class="rvbg2" style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:var(--content-color);"></div>
     </button>
 	<div class="wds-dropdown__content wds-is-not-scrollable">
 		<ul class="wds-list">

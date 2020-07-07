@@ -1,4 +1,7 @@
 ﻿window.MW18auto = true;
+window.MW18autoDark = false;
+window.MW18darkmode = false;
+
 (function () {
 document.querySelector('html').className += " theme-A"; // We begin with the first theme selected
 ColorUpdate();
@@ -35,9 +38,14 @@ function UpdateSitename() {
 function CursorT(theme) {
 	if (theme === 'auto') {
 		window.MW18auto = true;
+		window.MW18autoDark = false
+	} 	else if (theme === 'auto-r') {
+		window.MW18autoDark = true
+		window.MW18auto = false
 	}	else {
 			$('body').attr("curtheme", theme);
 			window.MW18auto = false;
+			window.MW18autoDark = false;
 	}
    if (window.MW18auto === true) {
 		var body_bg =	getComputedStyle(document.querySelector('html')).getPropertyValue("--content-bg");
@@ -49,6 +57,33 @@ function CursorT(theme) {
 	}
 
 
+   if (window.MW18autoDark === true) {
+		var body_bg =	getComputedStyle(document.querySelector('html')).getPropertyValue("--content-bg");
+		if ((chroma(body_bg).luminance()) < .26) {
+			$('body').attr("curtheme", "light")
+		} else {
+			$('body').attr("curtheme", "dark")
+		}
+	}
+
+
+}
+
+function rvcolor() {
+	if (window.MW18darkmode === true) {
+		window.MW18darkmode = false;
+		if ($("body.options").length) {
+			document.querySelector('.rvbg2').style.setProperty("background-color", 'var(--content-color)');
+			document.querySelector('.rvbg1').style.setProperty("background-color", 'var(--content-bg)');
+		}
+	} else {
+		window.MW18darkmode = true;
+		if ($("body.options").length) {
+		document.querySelector('.rvbg1').style.setProperty("background-color", 'var(--content-color)');
+			document.querySelector('.rvbg2').style.setProperty("background-color", 'var(--content-bg)');
+		}
+	}
+	ColorUpdate();
 }
 
 function UploadPicture1(files) {
@@ -526,8 +561,6 @@ var headercolorfinal = $('input[type="range"][name="header"].red').val() + ',' +
 		);	
 	}
 	/**/
-
-	
 	UpdateSet();
 	/* Color Update */
 	ColorUpdate();
@@ -708,8 +741,13 @@ document.querySelector('body').style.setProperty("--link-color-text", linkcolor2
 
 /** Dropdown BG **/
 /* Set Vars */
-var content_color =	getComputedStyle(document.querySelector('html')).getPropertyValue("--content-bg");
-var content_text =	getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color");
+if (window.MW18darkmode === true) {
+	var content_color =	getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color");
+	var content_text =	getComputedStyle(document.querySelector('html')).getPropertyValue("--content-bg");
+} else {
+	var content_color =	getComputedStyle(document.querySelector('html')).getPropertyValue("--content-bg");
+	var content_text =	getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color");
+}
 var body_bg =	getComputedStyle(document.querySelector('html')).getPropertyValue("--background-color");
 
 if ((chroma(content_color).luminance()) > .5) {
@@ -745,10 +783,18 @@ var dropdowncolor = chroma(content_color).darken(-1);
 }
 
 
-
 document.querySelector('body').style.setProperty("--dropdown-bg", dropdowncolor);
 document.querySelector('body').style.setProperty("--content-border", dropdowncolor2);
 document.querySelector('body').style.setProperty("--content-color", dropdowncolor3);
+if (window.MW18darkmode === true) {
+	document.querySelector('body').style.setProperty("--content-bg", content_color);
+	if (dropdowncolor3 === 'inherit') {
+		document.querySelector('body').style.setProperty("--content-color", content_text);
+	}
+} else {
+	document.querySelector('body').style.setProperty("--content-bg", 'inherit');
+}
+
 
 /** Content Border **/
 /* Set Vars */
@@ -785,6 +831,9 @@ CheckAdapt()
 /* Cursor Theme */
 if (window.MW18auto === true) {
 CursorT('auto');
+}
+if (window.MW18autoDark === true) {
+CursorT('auto-r');
 }
 	if ($("body.options").length) {
 		UpdateSet()
