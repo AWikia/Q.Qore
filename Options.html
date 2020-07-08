@@ -343,7 +343,7 @@ document.getElementById("Handler").className += " mpisto-servers"
     <a class="option-link p4" onclick="p4()">
                           <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-controls" />
-                  </svg> <span>Theme Designer</span>
+                  </svg> <span>Wiki Personalization</span>
     </a>
     <a class="option-link p5" onclick="p5()">
                           <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
@@ -406,7 +406,7 @@ document.getElementById("Handler").className += " mpisto-servers"
 	<br>
     <input type="checkbox" name="03" id="26" checked></input><label for="26">Load Site Flags (That are enforced)</label>
 	<br>
-	<input autocomplete="off" type="checkbox" name="03" id="27" onclick="ModernPrefs()" title="This makes preferences page on 755+ screens to force the preferences pane to be visible. On the one hand, it makes it more comfortable for users who need it open. On the other hand, less space is available for preferences content, making the community header preview in Theme Designer page to have lesser items in XL Breakpoint and below."></input><label title="This makes preferences page on 755+ screens to force the preferences pane to be visible. On the one hand, it makes it more comfortable for users who need it open. On the other hand, less space is available for preferences content, making the community header preview in Theme Designer page to have lesser items in XL Breakpoint and below." for="27">Always show preferences pane on large screens</label>
+	<input autocomplete="off" type="checkbox" name="03" id="27" onclick="ModernPrefs()" title="This makes preferences page on 755+ screens to force the preferences pane to be visible. On the one hand, it makes it more comfortable for users who need it open. On the other hand, less space is available for preferences content, making the community header preview in Wiki Personalization page to have lesser items in XL Breakpoint and below."></input><label title="This makes preferences page on 755+ screens to force the preferences pane to be visible. On the one hand, it makes it more comfortable for users who need it open. On the other hand, less space is available for preferences content, making the community header preview in Wiki Personalization page to have lesser items in XL Breakpoint and below." for="27">Always show preferences pane on large screens</label>
     </fieldset>
     </div>
 
@@ -1191,7 +1191,7 @@ Checked = VisualEditor as default mode
 	<br>
     <input type="radio" name="cur1" id="cur-6" onclick="CursorT('light')" title="Forces Light Cursor theme"></input><label for="cur-6" title="Forces Light Cursor theme">Light</label>
 	<br>
-    <input type="radio" name="cur1" id="cur-7" onclick="CursorT('dark')" title="Forces Light Cursor theme"></input><label for="cur-7" title="Forces Dark Cursor theme">Dark</label>
+    <input type="radio" name="cur1" id="cur-7" onclick="CursorT('dark')" title="Forces Dark Cursor theme"></input><label for="cur-7" title="Forces Dark Cursor theme">Dark</label>
     <br>
     <small>This option has no effect on MacOS and System cursors</small>
     </fieldset>
@@ -1199,6 +1199,20 @@ Checked = VisualEditor as default mode
 
     </fieldset>
     </div>
+
+    <div class="fieldset themes">
+    <fieldset>     
+     <legend>Wiki Theme</legend>
+    <input type="radio" name="theme1" id="theme-5" onclick="colortheme('auto')" checked title="Sets theme based on Wiki's Config"></input><label for="theme-5" title="Picks the Wiki's theme in accordance of the Wiki Personalization configuration">Auto</label>
+	<br>
+    <input type="radio" name="theme1" id="theme-8" onclick="colortheme('auto-r')" title="Sets theme based on Wiki's Config but in reverse"></input><label for="theme-8" title="Picks the Wiki's theme in accordance of the Wiki Personalization configuration but reversed">Auto-Dark</label>
+	<br>
+    <input type="radio" name="theme1" id="theme-6" onclick="colortheme('light')" title="Forces Light Wiki theme"></input><label for="theme-6" title="Makes Wiki theme be light, even if that theme is dark-themed">Light</label>
+	<br>
+    <input type="radio" name="theme1" id="theme-7" onclick="colortheme('dark')" title="Forces Dark Wiki theme"></input><label for="theme-7" title="Makes Wiki theme be dark, even if that theme is light-themed">Dark</label>
+    </fieldset>
+    </div>
+
 
     <div class="fieldset">
     <fieldset>
@@ -1359,8 +1373,6 @@ Checked = VisualEditor as default mode
     <div class="fieldset">
     <fieldset>
     <legend>Miscellaneous</legend>
-    <input title="Content Background Color behaves as Content Text Color and vice versa" type="checkbox" name="23" id="226" onclick="rvcolor()"></input> <label for="226">Reversed Colors</label>
-    <br>
     <div class="prm-option"><input type="checkbox" name="23" id="221" onclick="prmon()"></input> <label for="221">Use Reduced Motion experience</label></div>
     <div class="prt-option"><input type="checkbox" name="23" id="224" onclick="prton()"></input> <label for="224">Use Reduced Transparency experience</label></div>
     <div class="xooption"><input type="checkbox" name="23" id="225" onclick="togglezoom()"></input> <label for="225">Use enlarged range inputs everywhere</label></div>
@@ -1378,7 +1390,7 @@ Checked = VisualEditor as default mode
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-menu" />
                   </svg><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon close">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" />
-                  </svg></a> <span>Theme Designer Preferences</span></h1>
+                  </svg></a> <span>Wiki Personalization Preferences</span></h1>
     <div>
 			<div class="wds-floating-button-group option-controls">
 				<a class="wds-floating-button" title="Load theme from Store">
@@ -1959,7 +1971,7 @@ Checked = VisualEditor as default mode
 						<a class="link cell large" title="Images"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-image" /> 
 					</svg></a>
-						<a class="link cell large" title="Theme Designer"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
+						<a class="link cell large" title="Wiki Personalization"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-gift" /> 
 					</svg></a>
 						<a class="link cell large" title="Special Pages"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
@@ -2532,7 +2544,7 @@ Checked = VisualEditor as default mode
         <ul class="wds-list wds-is-linked">
           <li><a>History</a></li>
           <li><a>What links here</a></li>
-          <li><a>Theme Designer</a></li>
+          <li><a>Wiki Personalization</a></li>
           <li><a>Public Logs</a></li>
           <li><a>Recent Bashes</a></li>
         </ul>

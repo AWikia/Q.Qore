@@ -206,10 +206,6 @@ html:not(.contrast):not(.basic) .highcontrastbutton.wds-dropdown {
   display:block;
 }
 }
-/* Remove the default High Contrast mode for Edge 15+ since we use our version of HighContrast, improved than ever */
-* {
--ms-high-contrast-adjust:none;
-}
 
 
 
@@ -364,7 +360,7 @@ color:rgba(var(--community-header-text), 0.8);
 
 
 /* Edge and Safari fix */
-@supports (position:-ms-page) or (position:-webkit-sticky) {
+@supports (position:-webkit-sticky) {
 body {
 	z-index:3;
 }
@@ -630,7 +626,7 @@ background-color:var(--button-color);
 
 
 /* Inverse Selection Styles per B19 */
-@supports (position:-ms-page) or (-moz-appearance:none) {
+@supports (-moz-appearance:none) {
 .contrast .notification.wds-dropdown__content .wds-list.wds-has-lines-between.wds-has-ellipsis > li:not(:last-child):not(.empty):hover ::selection {
 background-color:var(--button-color-text);
 color:var(--button-color);

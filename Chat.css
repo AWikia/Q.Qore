@@ -424,10 +424,6 @@ body:not(.contrast) .chat-content .wrapper section[pane] .list .info span[offlin
 
 /* Implement IE Behavior of placeholder on focused input/textarea element on other browsers */
 
-.chat-content .footer textarea:focus::-ms-input-placeholder {
-	color:transparent;
-}
-
 .chat-content .footer textarea:focus::placeholder {
 	color:transparent;
 }
