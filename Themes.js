@@ -4,12 +4,13 @@ window.MW18darkmode = false;
 
 (function () {
 document.querySelector('html').className += " theme-A"; // We begin with the first theme selected
-ColorUpdate();
+ColorUpdate(true);
 	if ($("body.options").length) {
 		UpdateSet()
 	}
 		$('body').attr("cursor", "mpisto");
 		CursorT('auto');
+		colortheme('auto');
 		
 })();
 
@@ -48,7 +49,7 @@ function CursorT(theme) {
 			window.MW18autoDark = false;
 	}
    if (window.MW18auto === true) {
-		var body_bg =	getComputedStyle(document.querySelector('html')).getPropertyValue("--content-bg");
+		var body_bg =	getComputedStyle(document.querySelector('body')).getPropertyValue("--content-bg");
 		if ((chroma(body_bg).luminance()) > .25) {
 			$('body').attr("curtheme", "light")
 		} else {
@@ -58,32 +59,52 @@ function CursorT(theme) {
 
 
    if (window.MW18autoDark === true) {
-		var body_bg =	getComputedStyle(document.querySelector('html')).getPropertyValue("--content-bg");
-		if ((chroma(body_bg).luminance()) < .26) {
-			$('body').attr("curtheme", "light")
-		} else {
+		var body_bg =	getComputedStyle(document.querySelector('body')).getPropertyValue("--content-bg");
+		if ((chroma(body_bg).luminance()) > .25) {
 			$('body').attr("curtheme", "dark")
+		} else {
+			$('body').attr("curtheme", "light")
 		}
 	}
 
 
 }
 
-function rvcolor() {
-	if (window.MW18darkmode === true) {
+function colortheme(theme) {
+    var body_bg =	getComputedStyle(document.querySelector('html')).getPropertyValue("--content-bg");
+	if (theme === 'auto') {
 		window.MW18darkmode = false;
+	} 	else if (theme === 'auto-r') {
+		window.MW18darkmode = true;
+	} 	else if (theme === 'light') {
+		if ((chroma(body_bg).luminance()) > .25) {
+		window.MW18darkmode = false;
+		} else {
+		window.MW18darkmode = true;
+		}
+	} 	else if (theme === 'dark') {
+		if ((chroma(body_bg).luminance()) > .25) {
+		window.MW18darkmode = true;
+		} else {
+		window.MW18darkmode = false;
+		}
+	} else {
+		window.MW18darkmode = false;
+	}
+	$('body').attr("wikitheme", theme);
+	if (window.MW18darkmode === true) {
+		if ($("body.options").length) {
+			document.querySelector('.rvbg1').style.setProperty("background-color", 'var(--content-color)');
+			document.querySelector('.rvbg2').style.setProperty("background-color", 'var(--content-bg)');
+		}
+	} else {
 		if ($("body.options").length) {
 			document.querySelector('.rvbg2').style.setProperty("background-color", 'var(--content-color)');
 			document.querySelector('.rvbg1').style.setProperty("background-color", 'var(--content-bg)');
 		}
-	} else {
-		window.MW18darkmode = true;
-		if ($("body.options").length) {
-		document.querySelector('.rvbg1').style.setProperty("background-color", 'var(--content-color)');
-			document.querySelector('.rvbg2').style.setProperty("background-color", 'var(--content-bg)');
-		}
 	}
-	ColorUpdate();
+	ColorUpdate(false);
+
 }
 
 function UploadPicture1(files) {
@@ -563,7 +584,7 @@ var headercolorfinal = $('input[type="range"][name="header"].red').val() + ',' +
 	/**/
 	UpdateSet();
 	/* Color Update */
-	ColorUpdate();
+	ColorUpdate(true);
 }
 
 function ResetTheme() {
@@ -584,7 +605,7 @@ if (confirm('Are you sure you want to reset this theme to the pre-set ones? This
 		$("style.designer-style.theme-D").text('/* This CSS left intentionally blank */');	
 	}
 
-	ColorUpdate();
+	ColorUpdate(true);
 }
 }
 
@@ -592,7 +613,7 @@ if (confirm('Are you sure you want to reset this theme to the pre-set ones? This
 function ResetThemeA() {
 if (confirm('Are you sure you want to reset this theme to the pre-set ones? This action cannot be undone') === true) {
 		$("style.designer-style.theme-A").text('/* This CSS left intentionally blank */');	
-	ColorUpdate();
+	ColorUpdate(true);
 }
 }
 
@@ -600,21 +621,21 @@ if (confirm('Are you sure you want to reset this theme to the pre-set ones? This
 function ResetThemeB() {
 if (confirm('Are you sure you want to reset this theme to the pre-set ones? This action cannot be undone') === true) {
 		$("style.designer-style.theme-B").text('/* This CSS left intentionally blank */');	
-	ColorUpdate();
+	ColorUpdate(true);
 }
 }
 
 function ResetThemeC() {
 if (confirm('Are you sure you want to reset this theme to the pre-set ones? This action cannot be undone') === true) {
 		$("style.designer-style.theme-C").text('/* This CSS left intentionally blank */');	
-	ColorUpdate();
+	ColorUpdate(true);
 }
 }
 
 function ResetThemeD() {
 if (confirm('Are you sure you want to reset this theme to the pre-set ones? This action cannot be undone') === true) {
 		$("style.designer-style.theme-D").text('/* This CSS left intentionally blank */');	
-	ColorUpdate();
+	ColorUpdate(true);
 }
 }
 
@@ -627,7 +648,7 @@ if (confirm('Are you sure you want to reset all themes to the pre-set ones? This
 		$("style.designer-style.theme-C").text('/* This CSS left intentionally blank */');	
 		$("style.designer-style.theme-D").text('/* This CSS left intentionally blank */');	
 
-	ColorUpdate();
+	ColorUpdate(true);
 }
 }
 
@@ -639,7 +660,7 @@ if (confirm('Are you sure you want to reset everything to factory defaults? This
 		$("style.designer-style.theme-D").text('/* This CSS left intentionally blank */');	
 		$("style.designer-style.theme-Miscellaneous").text('/* This CSS left intentionally blank */');	
 
-	ColorUpdate();
+	ColorUpdate(true);
 	ResetMisc2();
 }
 }
@@ -666,7 +687,7 @@ var x = $('input.filter_delay').val(0);
 
 
 
-function ColorUpdate() {
+function ColorUpdate(refresh) {
 /** Button Color **/
 /* Set Vars */
 var button_color = getComputedStyle(document.querySelector('html')).getPropertyValue("--button-color");
@@ -829,6 +850,9 @@ CheckAdapt()
 
 
 /* Cursor Theme */
+if (refresh === true) {
+	colortheme($('body').attr("wikitheme"))
+}
 if (window.MW18auto === true) {
 CursorT('auto');
 }
@@ -924,7 +948,7 @@ var x = document.querySelector('input#ThmAdpt');
 	}
 	console.log('Adaptive theme disabled. Content border and Content Color theming are now manually chosen.');
 	}	
-	ColorUpdate();
+	ColorUpdate(true);
 }
 
 function HCa() {
@@ -935,7 +959,7 @@ function HCa() {
         x.className = x.className.replace(" theme-B", "");
         x.className = x.className.replace(" theme-C", "");
         x.className = x.className.replace(" theme-D", "");
-		ColorUpdate();
+		ColorUpdate(true);
 }
 
 function HCb() {
@@ -946,7 +970,7 @@ function HCb() {
         x.className = x.className.replace(" theme-A", "");
         x.className = x.className.replace(" theme-C", "");
         x.className = x.className.replace(" theme-D", "");
-		ColorUpdate();
+		ColorUpdate(true);
 }
 
 function HCc() {
@@ -957,7 +981,7 @@ function HCc() {
         x.className = x.className.replace(" theme-A", "");
         x.className = x.className.replace(" theme-B", "");
         x.className = x.className.replace(" theme-D", "");
-		ColorUpdate();
+		ColorUpdate(true);
 }
 
 function HCd() {
@@ -968,7 +992,7 @@ function HCd() {
         x.className = x.className.replace(" theme-A", "");
         x.className = x.className.replace(" theme-B", "");
         x.className = x.className.replace(" theme-C", "");
-		ColorUpdate();
+		ColorUpdate(true);
 }
 
 function HCclear() {
@@ -978,7 +1002,7 @@ function HCclear() {
        
        
         x.className = x.className.replace(" win10", "");
-		ColorUpdate();
+		ColorUpdate(true);
 		if ($("body.options").length) {
 			$(".win10-off").removeAttr('disabled');
 		}
@@ -994,7 +1018,7 @@ function HCcustom0() {
         x.className += " win10";
     }
         x.className = x.className.replace(" basic", "");
-		ColorUpdate();
+		ColorUpdate(true);
 		if ($("body.options").length) {
 			$(".win10-off").attr('disabled', 'true');
 		}
@@ -1007,7 +1031,7 @@ function HCcustom() {
     }
         x.className = x.className.replace(" win10", "");
         x.className = x.className.replace(" basic", "");
-		ColorUpdate();
+		ColorUpdate(true);
 		if ($("body.options").length) {
 			$(".win10-off").removeAttr('disabled');
 		}
@@ -1021,7 +1045,7 @@ function HCcustom2() {
     }
         x.className = x.className.replace(" contrast", "");
         x.className = x.className.replace(" win10", "");
-		ColorUpdate();
+		ColorUpdate(true);
 		if ($("body.options").length) {
 			$(".win10-off").removeAttr('disabled');
 		}
