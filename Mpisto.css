@@ -7503,6 +7503,56 @@ cursor:url("MpistoOS/banned.cur"), not-allowed!important;
 cursor:url("MpistoOS/hand.cur"), pointer;
 }
 
+/* Mpisto OS X */
+[cursor*="mpisto3"] {
+  cursor:url("Mpisto10/default.cur"), auto;
+}
+
+[cursor*="mpisto3"] abbr[title] {
+  cursor:url("Mpisto10/help.cur"), help;
+}
+
+[cursor*="mpisto3"] :not(.unset)[disabled], :not(.unset):disabled {
+cursor:url("Mpisto10/banned.cur"), not-allowed!important;
+}
+
+[cursor*="mpisto3"] textarea, [cursor*="mpisto3"] [contenteditable], [cursor*="mpisto3"] header.mpisto-navbar .search .search-input, [cursor*="mpisto3"] .mpisto-input {
+  cursor:url("Mpisto10/text.cur"), text;
+}
+
+[cursor*="mpisto3"] .wds-dropdown .link, [cursor*="mpisto3"] .wds-button, [cursor*="mpisto3"] .wds-button:disabled, [cursor*="mpisto3"] .wds-is-disabled, [cursor*="mpisto3"] .wds-community-header__local-navigation a[href="#"], [cursor*="mpisto3"] .wds-tabs__tab, [cursor*="mpisto3"] label {
+  cursor:url("Mpisto10/default.cur"), default;
+}
+
+[cursor*="mpisto3"] a,[cursor*="mpisto3"] a:hover, [cursor*="mpisto3"] .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), [cursor*="mpisto3"] .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), [cursor*="mpisto3"] a.wds-button, [cursor*="mpisto3"] button.wds-button, [cursor*="mpisto3"] .editor-header .wordmark, [cursor*="mpisto3"] .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, [cursor*="mpisto3"] .wds-banner-notification__close, [cursor*="mpisto3"] a label, [cursor*="mpisto3"] a input[type="checkbox"], [cursor*="mpisto3"] a input[type="radio"], [cursor*="mpisto3"] .wds-floating-button:not([disabled]), [cursor*="mpisto3"] .wds-floating-button:not(.wds-is-disabled), [cursor*="mpisto3"] .wds-dropdown .wds-dropdown__toggle, [cursor*="mpisto3"] .wds-toggle__label {
+cursor:url("Mpisto10/hand.cur"), pointer;
+}
+
+
+[cursor*="mpisto3"][curtheme*="dark"] {
+  cursor:url("Mpisto10/DDefault.cur"), auto;
+}
+
+[cursor*="mpisto3"][curtheme*="dark"] abbr[title] {
+  cursor:url("Mpisto10/Dhelp.cur"), help;
+}
+
+[cursor*="mpisto3"][curtheme*="dark"] :not(.unset)[disabled], :not(.unset):disabled {
+cursor:url("Mpisto10/Dbanned.cur"), not-allowed!important;
+}
+
+[cursor*="mpisto3"][curtheme*="dark"] textarea, [cursor*="mpisto3"][curtheme*="dark"] [contenteditable], [cursor*="mpisto3"][curtheme*="dark"] header.mpisto-navbar .search .search-input, [cursor*="mpisto3"][curtheme*="dark"] .mpisto-input {
+  cursor:url("Mpisto10/Dtext.cur"), text;
+}
+
+[cursor*="mpisto3"][curtheme*="dark"] .wds-dropdown .link, [cursor*="mpisto3"][curtheme*="dark"] .wds-button, [cursor*="mpisto3"][curtheme*="dark"] .wds-button:disabled, [cursor*="mpisto3"][curtheme*="dark"] .wds-is-disabled, [cursor*="mpisto3"][curtheme*="dark"] .wds-community-header__local-navigation a[href="#"], [cursor*="mpisto3"][curtheme*="dark"] .wds-tabs__tab, [cursor*="mpisto3"][curtheme*="dark"] label {
+  cursor:url("Mpisto10/DDefault.cur"), default;
+}
+
+[cursor*="mpisto3"][curtheme*="dark"] a,[cursor*="mpisto3"][curtheme*="dark"] a:hover, [cursor*="mpisto3"][curtheme*="dark"] .notification.wds-dropdown__content .wds-list > li:not(:last-child):not(.empty), [cursor*="mpisto3"][curtheme*="dark"] .notification.wds-dropdown-level-2__content .wds-list > li:not(:last-child):not(.empty), [cursor*="mpisto3"][curtheme*="dark"] a.wds-button, [cursor*="mpisto3"][curtheme*="dark"] button.wds-button, [cursor*="mpisto3"][curtheme*="dark"] .editor-header .wordmark, [cursor*="mpisto3"][curtheme*="dark"] .mpisto-option-way.p4 input[type="color"].wds-button.wds-is-square, [cursor*="mpisto3"][curtheme*="dark"] .wds-banner-notification__close, [cursor*="mpisto3"][curtheme*="dark"] a label, [cursor*="mpisto3"][curtheme*="dark"] a input[type="checkbox"], [cursor*="mpisto3"][curtheme*="dark"] a input[type="radio"], [cursor*="mpisto3"][curtheme*="dark"] .wds-floating-button:not([disabled]), [cursor*="mpisto3"][curtheme*="dark"] .wds-floating-button:not(.wds-is-disabled), [cursor*="mpisto3"][curtheme*="dark"] .wds-dropdown .wds-dropdown__toggle, [cursor*="mpisto3"][curtheme*="dark"] .wds-toggle__label {
+cursor:url("Mpisto10/Dhand.cur"), pointer;
+}
+
 
 
 /* Disable custom cursors for Smart TVs because it fall backs to normal ones */
