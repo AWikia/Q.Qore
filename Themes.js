@@ -10,7 +10,7 @@ ColorUpdate(true);
 	}
 		$('body').attr("cursor", "mpisto");
 		CursorT('auto');
-		colortheme('auto');
+		colortheme('system-a');
 		
 })();
 
@@ -70,6 +70,32 @@ function CursorT(theme) {
 
 }
 
+function CheckTheme() {
+
+/* Dark Mode */
+
+ if (window.matchMedia('(prefers-color-scheme: dark)'))  {
+	if (($('body').attr("wikitheme") === 'system-a') && !(window.MW18darkmode)) {
+		colortheme('system-a')
+	}
+	if (($('body').attr("wikitheme") === 'system') && !(window.MW18darkmode)) {
+		colortheme('system')
+	}
+ }
+
+/* Light Mode */
+
+ if (window.matchMedia('(prefers-color-scheme: dark)'))  {
+	if (($('body').attr("wikitheme") === 'system-a') && (window.MW18darkmode)) {
+		colortheme('system-a')
+	}
+	if (($('body').attr("wikitheme") === 'system') && (window.MW18darkmode)) {
+		colortheme('system')
+	}
+ }
+
+}
+
 function colortheme(theme) {
     var body_bg =	getComputedStyle(document.querySelector('html')).getPropertyValue("--content-bg");
 	if (theme === 'auto') {
@@ -87,6 +113,26 @@ function colortheme(theme) {
 		window.MW18darkmode = true;
 		} else {
 		window.MW18darkmode = false;
+		}
+	} 	else if (theme === 'system-a') {
+		if ( window.matchMedia('(prefers-color-scheme: dark)').matches ) {
+		window.MW18darkmode = true;
+		} else {
+		window.MW18darkmode = false;
+		}
+	} 	else if (theme === 'system') {
+		if ((chroma(body_bg).luminance()) > .25) {
+			if ( window.matchMedia('(prefers-color-scheme: dark)').matches ) {
+			window.MW18darkmode = true;
+			} else {
+			window.MW18darkmode = false;
+			}
+		} else {
+			if ( window.matchMedia('(prefers-color-scheme: dark)').matches ) {
+			window.MW18darkmode = false;
+			} else {
+			window.MW18darkmode = true;
+			}
 		}
 	} else {
 		window.MW18darkmode = false;

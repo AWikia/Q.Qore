@@ -126,7 +126,7 @@
 </defs>
 
 <html class="main">
-  <body class="mpisto-2018 options" style="overflow:hidden;" id="Handler" onclick="">
+  <body onfocus="CheckTheme()" onblur="CheckTheme()"  class="mpisto-2018 options" style="overflow:hidden;" id="Handler" onclick="">
   <script>
 
 function GNavSearch() {
@@ -1205,13 +1205,17 @@ Checked = VisualEditor as default mode
     <div class="fieldset themes">
     <fieldset>     
      <legend>Wiki Theme</legend>
-    <input type="radio" name="theme1" id="theme-5" onclick="colortheme('auto')" checked title="Sets theme based on Wiki's Config"></input><label for="theme-5" title="Picks the Wiki's theme in accordance of the Wiki Personalization configuration">Auto</label>
+    <input type="radio" name="theme1" id="theme-5" onclick="colortheme('auto')" title="Sets theme based on Wiki's Config"></input><label for="theme-5" title="Picks the Wiki's theme in accordance of the Wiki Personalization configuration">Auto</label>
 	<br>
     <input type="radio" name="theme1" id="theme-8" onclick="colortheme('auto-r')" title="Sets theme based on Wiki's Config but in reverse"></input><label for="theme-8" title="Picks the Wiki's theme in accordance of the Wiki Personalization configuration but reversed">Auto-Dark</label>
+	<br>
+    <input type="radio" name="theme1" id="theme-2" onclick="colortheme('system-a')" checked title="Sets theme based on Wiki's Config"></input><label for="theme-2" title="Picks the Wiki's theme in accordance of the Wiki Personalization configuration but based on System's Color Scheme">Auto-System</label>
 	<br>
     <input type="radio" name="theme1" id="theme-6" onclick="colortheme('light')" title="Forces Light Wiki theme"></input><label for="theme-6" title="Makes Wiki theme be light, even if that theme is dark-themed">Light</label>
 	<br>
     <input type="radio" name="theme1" id="theme-7" onclick="colortheme('dark')" title="Forces Dark Wiki theme"></input><label for="theme-7" title="Makes Wiki theme be dark, even if that theme is light-themed">Dark</label>
+	<br>
+    <input type="radio" name="theme1" id="theme-3" onclick="colortheme('system')" title="Sets theme based on Wiki's Config"></input><label for="theme-3" title="Picks the Wiki's theme in accordance of System's Color Scheme">System</label>
     </fieldset>
     </div>
 
