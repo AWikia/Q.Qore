@@ -1,5 +1,9 @@
 # Qortex Essentials Diadyktio
-OpenSource Mpirthi Project with great modern browser support.  (Formerly Mpisto War 2018)
+- OpenSource Mpirthi Project with great modern browser support.  (Formerly Mpisto War 2018)
+- Current Build: 			3125
+- Current Internet Release: 113
+- Current API Version:		312.5
+- Current Version:			3.12.5
 
 # Wrappers
 ## Main aka Mpistoskin2
@@ -59,4 +63,3 @@ These wrappers use the Hybrid Desktop/Mobile Skin also known as Mpistodiscuss2, 
 - Microsoft Edge (Chromium only)
 - Safari Browser 11
 - Any other browser metting the above requirements
-
