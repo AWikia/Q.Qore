@@ -752,6 +752,7 @@ textarea {
 	border-color: #27a0da;
 	background-image:none;
 -webkit-appearance:none;
+appearance:none;
 font-family:monospace;
 }
 
@@ -1657,6 +1658,7 @@ input[type="range"] {
   height: 30px;
   min-width: 150px;
   -webkit-appearance: none;
+  appearance:none;
   cursor:inherit;
 }
 input[type="range"]::-webkit-slider-thumb {
@@ -1665,6 +1667,7 @@ input[type="range"]::-webkit-slider-thumb {
   box-shadow: 0 0 0 8px rgba(var(--link-color-blend-light), 0.5);
   border: 0;
   -webkit-appearance: none;
+  appearance:none;
   width: 10px;
   height: 10px;
   margin-top: -2.5px;
@@ -1677,6 +1680,7 @@ input[type="range"]::-moz-range-thumb {
   box-shadow: 0 0 0 8px rgba(var(--link-color-blend-light), 0.5);
   border: 0;
   -webkit-appearance: none;
+  appearance:none;
   width: 10px;
   height: 10px;
   vertical-align: middle;
@@ -1694,6 +1698,7 @@ input[type="range"]::-webkit-slider-runnable-track {
   color: transparent;
   height: 5px;
   -webkit-appearance: none;
+  appearance:none;
   vertical-align: middle;
 }
 input[type="range"]::-moz-range-track {
@@ -1703,6 +1708,7 @@ input[type="range"]::-moz-range-track {
   color: transparent;
   height: 5px;
   -webkit-appearance: none;
+  appearance:none;
   vertical-align: middle;
 }
 input[type="range"]::-webkit-slider-track {
@@ -1781,6 +1787,7 @@ transition-duration:.3s;
 transition-property:background-color,border-color,color;
 vertical-align:top;
 -webkit-appearance:none;
+appearance:none;
 border-radius:var(--button-radius);
 background-image:none; /* Supress Gradient set by buttons */
 text-shadow:none; /* Disable Embolding caused by the update */
@@ -4086,6 +4093,7 @@ font-weight:bold;
 .stats-table .progress progress {
 	width:280px;
 	-webkit-appearance:none;
+	appearance:none;
 	border:1px solid currentColor;
 	height:1em;
 	background-color:var(--dropdown-bg);
@@ -4094,12 +4102,14 @@ font-weight:bold;
 
 .stats-table .progress progress::-webkit-progress-bar {
 	-webkit-appearance:none;
+	appearance:none;
 	background-color:transparent;
 	border:0;
 }
 
 .stats-table .progress progress::-webkit-progress-value { /* Webkit and Blink */
 	-webkit-appearance:none;
+	appearance:none;
 	background-color:#005fff;
 	background-image:linear-gradient(to right, #005fff 0 70px, #00bf32 0 140px, #ffbe00 0 210px, #ff4333 0 280px);
 	border:0;
@@ -4107,6 +4117,7 @@ font-weight:bold;
 
 .stats-table .progress progress::-moz-progress-bar { /* Gecko */
 	-webkit-appearance:none;
+	appearance:none;
 	background-color:#005fff;
 	background-image:linear-gradient(to right, #005fff 0 70px, #00bf32 0 140px, #ffbe00 0 210px, #ff4333 0 280px);
 	border:0;
@@ -4128,6 +4139,7 @@ input[type="number"] {
 	border:1px solid;
 	box-sizing:content-box;
 	-webkit-appearance:none;
+	appearance:none;
 }
 
 input[type="number"]:focus {
@@ -4161,9 +4173,11 @@ input[type="number"]:placeholder-shown {
 /* Hide Spin buttons from number input type */
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
+  appearance:none;
 }
 input::-webkit-outer-spin-button {
   -webkit-appearance: none;
+  appearance:none;
   margin: 0;
 }
 
@@ -4181,6 +4195,7 @@ transition:border 170ms, box-shadow 170ms;
 cursor:url("Windows/text.cur"), text;
 border-radius:50px;
 -webkit-appearance:none;
+appearance:none;
 opacity:0.9;
 background-image:linear-gradient(to bottom,rgba(50,50,50,0.15), rgba(50,50,50,0.15)), linear-gradient(to bottom, rgba(206,206,206,0.15), rgba(206,206,206,0.15));
 background-clip:padding-box;
@@ -6233,6 +6248,7 @@ input[type="checkbox"], input[type="radio"] {
   vertical-align:middle;
   -moz-appearance:none;
   -webkit-appearance:none;
+  appearance:none;
   border:0;
 }
 
@@ -6397,6 +6413,7 @@ outline:0;
 cursor:url("Windows/default.cur"), default;
 border-radius:3px;
 -webkit-appearance:none;
+appearance:none;
 }
 
 input[type="file"]::-webkit-file-upload-button:hover {
