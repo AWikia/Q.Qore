@@ -8,9 +8,13 @@ ColorUpdate(true);
 	if ($("body.options").length) {
 		UpdateSet()
 	}
+		$("head").append(
+		'<meta name="theme-color" content="' + chroma(getComputedStyle(document.querySelector('body')).getPropertyValue("--emphasis-bg")) + '">'
+		);	
 		$('body').attr("cursor", "mpisto");
 		CursorT('auto');
 		colortheme('system-a');
+		
 		
 })();
 
@@ -93,6 +97,19 @@ function CheckTheme() {
 		colortheme('system')
 	}
  }
+
+if ($("html.contrast").length) {
+	$('meta[name*="theme-color"]').attr("content", chroma(getComputedStyle(document.querySelector('body')).getPropertyValue("--dropdown-bg")));
+} else {
+	$('meta[name*="theme-color"]').attr("content", chroma(getComputedStyle(document.querySelector('body')).getPropertyValue("--accent-bg")));
+/*
+	if ($(".headroom--not-top").length) {
+		$('meta[name*="theme-color"]').attr("content", chroma(getComputedStyle(document.querySelector('body')).getPropertyValue("--accent-bg")));
+	} else {
+		$('meta[name*="theme-color"]').attr("content", chroma(getComputedStyle(document.querySelector('body')).getPropertyValue("--emphasis-bg")));
+	}
+*/
+}
 
 }
 
@@ -493,7 +510,7 @@ UpdateValue()
 }
 
 function PickColor5() {
-var x= prompt("Page Border Color", chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border")));
+var x= prompt("Page Border Color", );
 
 $('input[type="range"][name="border"].red').val(chroma(x).get('rgb.r') );
 $('input[type="range"][name="border"].green').val(chroma(x).get('rgb.g') );
@@ -892,6 +909,18 @@ var emphasiscolor2 = chroma.mix(border_color, button_color, 0.7);
 document.querySelector('body').style.setProperty("--emphasis-bg", emphasiscolor);
 document.querySelector('body').style.setProperty("--accent-bg", emphasiscolor2);
 
+if ($("html.contrast").length) {
+	$('meta[name*="theme-color"]').attr("content", chroma(getComputedStyle(document.querySelector('body')).getPropertyValue("--dropdown-bg")));
+} else {
+	$('meta[name*="theme-color"]').attr("content", chroma(getComputedStyle(document.querySelector('body')).getPropertyValue("--accent-bg")));
+/*
+	if ($(".headroom--not-top").length) {
+		$('meta[name*="theme-color"]').attr("content", chroma(getComputedStyle(document.querySelector('body')).getPropertyValue("--accent-bg")));
+	} else {
+		$('meta[name*="theme-color"]').attr("content", chroma(getComputedStyle(document.querySelector('body')).getPropertyValue("--emphasis-bg")));
+	}
+*/
+}
 CheckAdapt()
 
 
