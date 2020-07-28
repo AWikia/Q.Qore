@@ -2595,9 +2595,9 @@ border-left-color:rgba(var(--community-header-text),0.8);
 	.mobile-header section {
 		width:100%;
 		display:flex;
-		padding:5px 18px;
+		padding:5px 0 0 5px;
 		justify-content:space-around;
-		align-items:stretech;
+		align-items:stretch;
 	}
 
 	.mobile-header .title {
@@ -2624,10 +2624,14 @@ border-left-color:rgba(var(--community-header-text),0.8);
 	.mobile-header .counters {
 		font-size:16px;
 		flex-wrap:wrap;
+		flex:1;
+		padding-right:5px;
+		justify-content:flex-start;
 	}
 
 	.mobile-header .counter {
 		white-space:nowrap;
+		align-self:center;
 	}
 
 	.mobile-header .counter big {
@@ -2652,8 +2656,8 @@ border-left-color:rgba(var(--community-header-text),0.8);
 		display:inline-flex;
 		align-items:center;
 		justify-content:center;
-		padding: 0 9px;
-		height:55px;
+		padding: 0 8px;
+		height:50px;
 	}
 
 .mobile-header .wds-dropdown {
