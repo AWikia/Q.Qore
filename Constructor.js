@@ -130,10 +130,9 @@ UpdateSource();
 
 
 function UpdateVisual() {
-UnsaveWarn();
 var x = $('.mpisto-article.source').val();
 $('.mpisto-content .mpisto-article section').html( x );
-$('#modal12 .lightbox section').prepend ( 
+$('#modalE12 .lightbox section').prepend ( 
       '<div class="wds-banner-notification__container" id="floatingbanner" style="top:auto; position:relative;">' +
         '<div class="wds-banner-notification wds-success wds-is-transparent" style="transform:none;" id="BannerSave">' +
           '<div class="wds-banner-notification__icon">' +
@@ -149,6 +148,7 @@ $('#modal12 .lightbox section').prepend (
       '</div>'
 
 );
+UnsaveWarn();
 
 setTimeout(RemoveBannerSave2, 10)
 setTimeout(RemoveBannerSave, 2500);
@@ -166,7 +166,7 @@ window.MW18oldtitle = document.querySelector(".mpisto-content .mpisto-title").in
 window.MW18unsaved = false;
 var title = document.querySelector(".mpisto-content .mpisto-title");
 title.className = title.className.replace (" unsaved", "");
-$('#modal10 .lightbox .save-page-wrapper').prepend ( 
+$('#modalE10 .lightbox .save-page-wrapper').prepend ( 
       '<div class="wds-banner-notification__container" id="floatingbanner" style="top:auto; position:relative;">' +
         '<div class="wds-banner-notification wds-success wds-is-transparent" style="transform:none;" id="BannerSave">' +
           '<div class="wds-banner-notification__icon">' +
@@ -189,7 +189,7 @@ setTimeout(RemoveBannerSave, 2500);
 }
 
 function RemoveBannerSave() {
-	$('#modal10 .lightbox .save-page-wrapper #BannerSave').attr("style", "");
+	$('#modaEl10 .lightbox .save-page-wrapper #BannerSave').attr("style", "");
     var x = document.getElementById("BannerSave");
         x.className += " wds-is-transparent";
 	    setTimeout(RemoveBannerSave1, 405) 
@@ -203,8 +203,12 @@ function RemoveBannerSave2() {
 function RemoveBannerSave1() {
     var x = document.getElementById("BannerSave");
 	document.getElementById("floatingbanner").removeChild(x);
-	document.querySelector("#modal10 .lightbox .save-page-wrapper").removeChild(document.getElementById("floatingbanner"));
-	document.querySelector("#modal12 .lightbox section").removeChild(document.getElementById("floatingbanner"));
+	if (document.getElementById("modalE10").length > 0) {
+		document.querySelector("#modalE10 .lightbox .save-page-wrapper").removeChild(document.getElementById("floatingbanner"));
+	}
+	if (document.getElementById("modalE12").length > 0) {
+		document.querySelector("#modalE12 .lightbox section").removeChild(document.getElementById("floatingbanner"));
+	}
 }
 
 function BoldText() {

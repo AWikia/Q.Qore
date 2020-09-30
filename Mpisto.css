@@ -1300,6 +1300,7 @@ path, g, polygon {
 }
 
 a {
+transition:color 200ms;
 text-decoration:none;
 color:rgb(var(--link-color));
 cursor:url("Windows/hand.cur"), pointer;
@@ -1309,8 +1310,7 @@ background-color:transparent;
 }
 
 a:hover {
-color:rgb(var(--link-color));
-text-decoration:underline;
+color:rgb(var(--link-color-dark));
 cursor:url("Windows/hand.cur"), pointer;
 }
 

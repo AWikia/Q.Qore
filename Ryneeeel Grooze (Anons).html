@@ -1255,17 +1255,25 @@ Can be found on Chancelog page
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" />
                   </svg></a></h1>
    <section>
-   <h2>Permission Error</h2>
-   You do not have permission to edit this article for the following reason(s):
-    <ul>
-      <li>
-      This page has been locked to prevent spamming
-      </li>
-      <li>
-      Editing Templates and Wiki's mainpage requires logged-in user. Log in with any supported Social Media to proceed
-      </li>
-    </ul>
-    <h2>Source Code</h2>
+      <div class="wds-banner-notification__container" id="floatingbanner" style="top:auto; position:relative;"> 
+        <div class="wds-banner-notification wds-alert" style="transform:none;"> 
+          <div class="wds-banner-notification__icon"> 
+            <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small"> 
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-error-small" /> 
+            </svg> 
+          </div> 
+          <span class="wds-banner-notification__text">
+			Unable to edit this page. This may be due to:
+			<ul>
+				<li>Page being locked to prevent spamming</li>
+				<li>Mainpage and Template editing being disabled for anons. Log in using any social media to proceed</li>
+			</ul>
+          </span> 
+          <svg xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny"> 
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross-tiny" /> 
+          </svg> 
+        </div> 
+      </div>
       You can view and copy the source code of the article below:
       <textarea readonly class="mpisto-article source" style="overflow:auto;">
       <h1>Welcome</h1>
