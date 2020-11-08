@@ -702,56 +702,34 @@ color:var(--button-color);
 .theme-A.contrast.win10 {
 --background-image:url("");
 --background-color:#000000;
---link-color:128,128,255;
---link-color-dark:92,92,230;
---link-color-text:black;
+--link-color:242,8,132;
 --content-bg:#000000;
---dropdown-bg:#080808;
---content-border-dark:#19FF19;
---content-border:#00ff00;
---content-color:#ffff00;
---button-color:#008000;
---button-color-dark:#0F990F;
---button-color-text:white;
---community-header-bg:0,0,255;
---community-header-text:248,248,248;
-;
+--content-border:#1fb714;
+--content-color:#fbf305;
+--button-color:#006412;
+--community-header-bg:0,0,211;
 }
 
 .theme-B.contrast.win10 {
 --background-image:url("");
 --background-color:#000000;
---link-color:128,128,255;
---link-color-dark:92,92,230;
---link-color-text:black;
+--link-color:242,8,132;
 --content-bg:#000000;
---dropdown-bg:#080808;
---content-border-dark:#A7A7A7;
 --content-border:#c0c0c0;
---content-color:#00ff00;
---button-color:#0000FF;
---button-color-dark:#1919FF;
---button-color-text:white;
---community-header-bg:0,255,255;
---community-header-text:23,23,23;
+--content-color:#1fb714;
+--button-color:#0000d3;
+--community-header-bg:2,171,234;
 }
 
 .theme-C.contrast.win10 {
 --background-image:url("");
 --background-color:#000000;
---link-color:255,255,0;
---link-color-dark:230,230,0;
---link-color-text:black;
+--link-color:251,243,5;
 --content-bg:#000000;
---dropdown-bg:#080808;
---content-border:#3ff23f;
---content-border-dark:#5CFF5C;
+--content-border:#1fb714;
 --content-color:#ffffff;
---button-color:#1AEBFF;
---button-color-dark:#00D2E6;
---button-color-text:black;
---community-header-bg:55,0,110;
---community-header-text:248,248,248;
+--button-color:#02abea;
+--community-header-bg:71,0,165;
 }
 
 
@@ -759,16 +737,57 @@ color:var(--button-color);
 --background-image:url("");
 --background-color:#ffffff;
 --link-color:0,0,159;
---link-color-dark:18,18,184;
---link-color-text:white;
 --content-bg:#ffffff;
---dropdown-bg:#FFFFFF;
+--content-border:#562c05;
+--content-color:#000000;
+--button-color:#4700a5;
+--community-header-bg:0,0,0;
+}
+
+
+/* Old Themes 
+.theme-A.contrast.win10 {
+--background-image:url("");
+--background-color:#000000;
+--link-color:128,128,255;
+--content-bg:#000000;
+--content-border:#00ff00;
+--content-color:#ffff00;
+--button-color:#008000;
+--community-header-bg:0,0,255;
+}
+
+.theme-B.contrast.win10 {
+--background-image:url("");
+--background-color:#000000;
+--link-color:128,128,255;
+--content-bg:#000000;
+--content-border:#c0c0c0;
+--content-color:#00ff00;
+--button-color:#0000FF;
+--community-header-bg:0,255,255;
+}
+
+.theme-C.contrast.win10 {
+--background-image:url("");
+--background-color:#000000;
+--link-color:255,255,0;
+--content-bg:#000000;
+--content-border:#3ff23f;
+--content-color:#ffffff;
+--button-color:#1AEBFF;
+--community-header-bg:55,0,110;
+}
+
+
+.theme-D.contrast.win10 {
+--background-image:url("");
+--background-color:#ffffff;
+--link-color:0,0,159;
+--content-bg:#ffffff;
 --content-border:#600000;
---content-border-dark:#790C0C;
 --content-color:#000000;
 --button-color:#37006E;
---button-color-dark:#4A0D87;
---button-color-text:white;
 --community-header-bg:0,0,0;
---community-header-text:248,248,248;
 }
+*/

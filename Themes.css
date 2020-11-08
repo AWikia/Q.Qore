@@ -805,3 +805,14 @@
 --button-color:#5f7a7b;
 --community-header-bg:190,207,208;
 }
+
+/* Windows Theme Compat */
+.theme-A {
+--background-image:url("");
+--background-color:#000000;
+--link-color:0,102,204;
+--content-bg:#ffffff;
+--content-border:#b9b9b9;
+--content-color:#323232;
+--button-color:#0066cc;
+--community-header-bg:150,180,209;
