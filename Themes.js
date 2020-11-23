@@ -55,7 +55,7 @@ function CursorT(theme) {
 	}
    if (window.MW18auto === true) {
 		var body_bg =	getComputedStyle(document.querySelector('body')).getPropertyValue("--content-bg");
-		if ((chroma(body_bg).luminance()) > .25) {
+		if (isLightColor(body_bg)) {
 			$('body').attr("curtheme", "light")
 		} else {
 			$('body').attr("curtheme", "dark")
@@ -65,7 +65,7 @@ function CursorT(theme) {
 
    if (window.MW18autoDark === true) {
 		var body_bg =	getComputedStyle(document.querySelector('body')).getPropertyValue("--content-bg");
-		if ((chroma(body_bg).luminance()) > .25) {
+		if (isLightColor(body_bg)) {
 			$('body').attr("curtheme", "dark")
 		} else {
 			$('body').attr("curtheme", "light")
@@ -121,13 +121,13 @@ function colortheme(theme) {
 	} 	else if (theme === 'auto-r') {
 		window.MW18darkmode = true;
 	} 	else if (theme === 'light') {
-		if ((chroma(body_bg).luminance()) > .25) {
+		if (isLightColor(body_bg)) {
 		window.MW18darkmode = false;
 		} else {
 		window.MW18darkmode = true;
 		}
 	} 	else if (theme === 'dark') {
-		if ((chroma(body_bg).luminance()) > .25) {
+		if (isLightColor(body_bg)) {
 		window.MW18darkmode = true;
 		} else {
 		window.MW18darkmode = false;
@@ -139,7 +139,7 @@ function colortheme(theme) {
 		window.MW18darkmode = false;
 		}
 	} 	else if (theme === 'system') {
-		if ((chroma(body_bg).luminance()) > .25) {
+		if (isLightColor(body_bg)) {
 			if ( window.matchMedia('(prefers-color-scheme: dark)').matches ) {
 			window.MW18darkmode = true;
 			} else {
@@ -176,7 +176,7 @@ window.URL = window.URL || window.webkitURL;
 const img = document.createElement("img");
 img.src = window.URL.createObjectURL(files[0]);
 
-if (files[0].size > 1000000) {
+if (files[0].size > 1024000) {
 	console.error("Image is too big. Please pick another one.");
 	alert("Image is too big. Please pick another one.");
 	return
@@ -261,7 +261,7 @@ const img = document.createElement("img");
 img.src = window.URL.createObjectURL(files[0]);
 
 
-if (files[0].size > 1000000) {
+if (files[0].size > 1024000) {
 	console.error("Image is too big. Please pick another one.");
 	alert("Image is too big. Please pick another one.");
 	return
@@ -298,7 +298,7 @@ img.width = 471;
 img.height = 115;
 
 
-if (files[0].size > 1000000) {
+if (files[0].size > 1024000) {
 	console.error("Image is too big. Please pick another one.");
 	alert("Image is too big. Please pick another one.");
 	return
@@ -333,7 +333,7 @@ img.width = 471;
 img.height = 115;
 
 
-if (files[0].size > 1000000) {
+if (files[0].size > 1024000) {
 	console.error("Image is too big. Please pick another one.");
 	alert("Image is too big. Please pick another one.");
 	return
@@ -354,7 +354,7 @@ const img = document.createElement("img");
 img.src = window.URL.createObjectURL(files[0]);
 
 
-if (files[0].size > 1000000) {
+if (files[0].size > 1024000) {
 	console.error("Image is too big. Please pick another one.");
 	alert("Image is too big. Please pick another one.");
 	return
@@ -872,7 +872,7 @@ var link_color = 'rgb(' + getComputedStyle(document.querySelector('html')).getPr
 var linkcolor1 = ColorTest2(link_color,false);
 var linkcolor2 = ColorTest(link_color,true);
 
-if (isLightColor(button_color)) {
+if (isLightColor(link_color)) {
 document.querySelector('body').style.setProperty("--link-color-blend-light", getComputedStyle(document.querySelector('html')).getPropertyValue("--link-color"));
 document.querySelector('body').style.setProperty("--link-color-blend", linkcolor1);
 } else {

@@ -762,9 +762,9 @@
 .theme-A {
 --background-image:url("headbg.jpg");
 --background-color:#e995ca;
---background-size:2200px 1000px;
 --link-color:255,0,255;
 --content-bg:#ffc0cb;
+--content-border:#ffb6c1;
 --content-color:#020202;
 --button-color:#FF0051;
 --community-header-bg:255,0,81;
@@ -816,3 +816,4 @@
 --content-color:#323232;
 --button-color:#0066cc;
 --community-header-bg:150,180,209;
+}
