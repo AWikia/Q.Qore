@@ -1,9 +1,9 @@
 # Qortex Essentials Diadyktio
 OpenSource Mpirthi Project with great modern browser support.  (Formerly Mpisto War 2018)
-- Current Build: 			3300
-- Current Internet Release: 120
-- Current API Version:		330.0
-- Current Version:			3.30.0
+- Current Build: 			3325
+- Current Internet Release: 121
+- Current API Version:		332.5
+- Current Version:			3.32.5
 
 # Wrappers
 ## Main aka Mpistoskin2
