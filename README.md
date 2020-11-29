@@ -58,8 +58,9 @@ These wrappers use the Hybrid Desktop/Mobile Skin also known as Mpistodiscuss2, 
 
 # Browser Requirements
 Κορα Κορε will at least run on:
-- Google Chrome 57/Opera 44 (Google Chrome 66/Opera 53 recommended)
-- Firefox  57 (Firefox 62 recommended)
+- Google Chromium 65
+- Firefox  60
 - Microsoft Edge (Chromium only)
 - Safari Browser 11
 - Any other browser metting the above requirements
+The latest version of each of the mentioned browser is strongly recommended
