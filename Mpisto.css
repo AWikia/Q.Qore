@@ -689,6 +689,16 @@ box-shadow:none;
 text-shadow:none;
 }
 
+option {
+background-color:var(--dropdown-bg);
+}
+
+option:hover {
+background-color:var(--button-color)!important;
+color:var(--button-color-text)!important;
+}
+
+
 h1,h2,h3,h4,h5,h6 {
 margin:8px 0;
 font-style:inherit;
@@ -1088,7 +1098,8 @@ background-color:rgba(var(--link-color), 0.1);
 }
 */
 
-.newnav .mpisto-global-navigation .tr {
+.newnav .mpisto-global-navigation .tr,
+.newnav .mpisto-global-navigation .left-links {
 	display:flex;
 }
 
