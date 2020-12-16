@@ -511,7 +511,7 @@ UpdateValue()
 }
 
 function PickColor5() {
-var x= prompt("Page Border Color", );
+var x= prompt("Page Border Color", chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border")));
 
 $('input[type="range"][name="border"].red').val(chroma(x).get('rgb.r') );
 $('input[type="range"][name="border"].green').val(chroma(x).get('rgb.g') );
