@@ -207,11 +207,6 @@ header.mpisto-footer-container > div .item {
 	min-height:18px;
 }
 
-
-.mpisto-option-way > div .fieldset fieldset legend {
-	font-size:16px;
-}
-
 .mpisto-option-way .store-cards .store-card {
 	font-size:12px;
 }
@@ -499,6 +494,15 @@ label {
 .mpisto-option-way > div .fieldset fieldset legend {
 	font-size:20px;
 }
+
+.mpisto-option-way > div .fieldset fieldset legend .wds-icon {
+	margin-right:4px;
+	width:24px;
+	height:24px;
+	min-width:24px;
+	min-height:24px
+}
+
 
 .mpisto-option-way .store-cards .store-card {
 	font-size:13px;
@@ -868,6 +872,15 @@ label {
 	font-size:28px;
 }
 
+.mpisto-option-way > div .fieldset fieldset legend .wds-icon {
+	margin-right:6px;
+	width:32px;
+	height:32px;
+	min-width:32px;
+	min-height:32px
+}
+
+
 .mpisto-option-way .store-cards .store-card {
 	font-size:16px;
 }
@@ -952,6 +965,15 @@ label {
 .mpisto-option-way > div .fieldset fieldset legend {
 	font-size:30px;
 }
+
+.mpisto-option-way > div .fieldset fieldset legend .wds-icon {
+	margin-right:7px;
+	width:34px;
+	height:34px;
+	min-width:34px;
+	min-height:34px;
+}
+
 
 .mpisto-option-way .store-cards .store-card {
 	font-size:20px;
