@@ -491,11 +491,13 @@ label {
 	font-size:18px;
 }
 
-.mpisto-option-way > div .fieldset fieldset legend {
+.mpisto-option-way > div .fieldset fieldset legend,
+.mpisto-option-way > div .fieldset > fieldset > h2 {
 	font-size:20px;
 }
 
-.mpisto-option-way > div .fieldset fieldset legend .wds-icon {
+.mpisto-option-way > div .fieldset fieldset legend .wds-icon,
+.mpisto-option-way > div .fieldset > fieldset > h2 .wds-icon {
 	margin-right:4px;
 	width:24px;
 	height:24px;
@@ -868,11 +870,13 @@ label {
 	font-size:24px;
 }
 
-.mpisto-option-way > div .fieldset fieldset legend {
+.mpisto-option-way > div .fieldset fieldset legend,
+.mpisto-option-way > div .fieldset > fieldset > h2 {
 	font-size:28px;
 }
 
-.mpisto-option-way > div .fieldset fieldset legend .wds-icon {
+.mpisto-option-way > div .fieldset fieldset legend .wds-icon,
+.mpisto-option-way > div .fieldset > fieldset > h2 .wds-icon {
 	margin-right:6px;
 	width:32px;
 	height:32px;
@@ -962,11 +966,13 @@ label {
 	font-size:25px;
 }
 
-.mpisto-option-way > div .fieldset fieldset legend {
+.mpisto-option-way > div .fieldset fieldset legend,
+.mpisto-option-way > div .fieldset > fieldset > h2 {
 	font-size:30px;
 }
 
-.mpisto-option-way > div .fieldset fieldset legend .wds-icon {
+.mpisto-option-way > div .fieldset fieldset legend .wds-icon,
+.mpisto-option-way > div .fieldset > fieldset > h2 .wds-icon {
 	margin-right:7px;
 	width:34px;
 	height:34px;
