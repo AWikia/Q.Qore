@@ -804,13 +804,20 @@ document.getElementById("Handler").className += " mpisto-servers"
         <h4 class="mpisto-sub">From Qora Qore Web</h4>
         <div class="mpisto-page-header-contribution">
           <div class="mpisto-page-header-contribution-buttons">
-			<a class="wds-is-squished wds-button">				
-              <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-pencil-small" />
-			  </svg>				
-			  <span>Build Package</span>
-            </a>
-
+			<div class="wds-button-group">
+				<a class="wds-is-squished wds-button">				
+				  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-pencil-small" />
+				  </svg>				
+				  <span>Build Package</span>
+				</a>
+				<a href="#QORE "class="wds-is-squished wds-button">				
+				  <svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-preformat-small" />
+				  </svg>				
+				  <span>Get Beta Channel</span>
+				</a>
+			</div>
           <div class="wds-dropdown">				
             <div class="wds-button wds-is-squished wds-dropdown__toggle">
             <svg class="wds-icon wds-icon-small" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 0H0v24h24z" fill="none"/><path d="M17.66 7.93L12 2.27 6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58c2.05 0 4.1-.78 5.66-2.34 3.12-3.12 3.12-8.19 0-11.31zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/></svg>
@@ -1158,6 +1165,40 @@ document.getElementById("Handler").className += " mpisto-servers"
 -->
 
 <!-- End Toolbar -->
+
+
+<div class="lightbox-container" id="QORE">
+    <div class="lightbox">
+      <h1>
+	<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
+		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-preformat" />
+	</svg>
+      <span>Download Qora Qore Beta</span> <a class="wds-button wds-is-square wds-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" />
+                  </svg></a></h1>
+   <section>
+		<div style="margin:0 auto; display:flex; align-items:center; justify-content:center;">
+		<img height="200" src="BetaQ.png" />
+		</div>
+		Hooray, you're downloading the beta channel. Be aware of unstableness.
+		<h2>Instructions</h2>
+		<ol>
+		<li>Download the Stable Channel <a href="https://drive.google.com/file/d/1B-zz2-D50fDs00CydjATk1xMxy7k7RnE/view?usp=sharing">here</a></li>
+		<li>Extract the files of the Stable channel into a folder names Qora Qore ΙΕ or similar</li>
+		<li>Download the beta Channel (It is on the bottom button called <b>Download Beta Channel</b>). Or you can do it <a href="https://drive.google.com/file/d/1l2H1Eyy3c8LCUMibSONtyI8o_S0l9vZ-/view?usp=sharing">here</a></li>
+		<li>Extract the files of the Beta channel into a different folder</li>
+		<li>Move the files of the Beta channel to the files where the Stable channel was extracted. Once windows asks you what to do with the files, replace them.</li>
+		<li>Open game.rxproj if you have RPG XP and do a playtest (If you don't have it, after the game loads, press F12) in order to compile data.</li>
+		<li>If title screen shows the Beta Channel logo, you're at Beta Channel</li>
+		</ol>
+		<a class="wds-button wds-is-full-width wds-is-borderline" href="https://drive.google.com/file/d/1l2H1Eyy3c8LCUMibSONtyI8o_S0l9vZ-/view?usp=sharing">Download Beta Channel Files</a>
+   </section>
+   <footer>
+   <a href="https://bision.fandom.com/el/Qora" class="wds-button wds-is-squished wds-is-alternate">Wiki Page</a>
+   </footer>
+    </div>
+</div>
+
 
 </body>
 </html>

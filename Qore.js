@@ -113,7 +113,7 @@
 	// FPS
 	var provider2 = [ 
 					 ["120","72", "72", "72"], // Emerald
-					 ["<h4>Via dGPU</h4>20-120<h4>Via CEU</h4>33-120","<h4>Via dGPU</h4>44-72<h4>Via CEU</h4>70-144","<h4>Via dGPU</h4>32-70<h4>Via CEU</h4>57-100","<h4>Via dGPU</h4>24-64<h4>Via CEU</h4>38-80"], //Intensive Plantilia Emulator 
+					 ["<h4>Via dGPU</h4>20-120<h4>Via CEU</h4>33-120","<h4>Via dGPU</h4>44-72 (Standard)<br>50-110 (Benchmark)<h4>Via CEU</h4>70-144","<h4>Via dGPU</h4>32-70 (Standard)<br>37-82 (Benchmark)<h4>Via CEU</h4>57-100","<h4>Via dGPU</h4>24-64 (Standard)<br>29-70 (Benchmark)<h4>Via CEU</h4>38-80"], //Intensive Plantilia Emulator 
 					 ["36-60","31-60","20-54","<b>7-27</b>"], //Jinnybell 2010 
 					 ["<h4>Via dGPU</h4>43-72<h4>Via CEU</h4>54-72","<h4>Via dGPU</h4>54-72<h4>Via CEU</h4>74-80","<h4>Via dGPU</h4>44-72<h4>Via CEU</h4>60-80","<h4>Via dGPU</h4>39-68<h4>Via CEU</h4>50-80"], //Jinnybell 2020
 					 ["14-30","<b>7-14</b>","???","???"], // PC Ready Emulator 2009 
