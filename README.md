@@ -9,6 +9,8 @@ OpenSource Mpirthi Project with great modern browser support.  (Formerly Mpisto 
 ## Main aka Mpistoskin2
 These wrappers use the Desktop Skin also known as Mpistoskin2 or Mpisto War 2018:
 
+[Qortex Essentials](https://awikia.github.io/Q.Qore/Ryneeeel%20Grooze%20Qore.html)
+
 [Design System](https://awikia.github.io/Q.Qore/Ryneeeel%20Grooze%20Systems.html)
 
 [Settings](https://awikia.github.io/Q.Qore/Options.html)
