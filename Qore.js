@@ -142,3 +142,13 @@
 	$('table .fps3').html(provider2[2]);
 	$('table .fps4').html(provider2[3]);
 }
+
+
+function DevQore() {
+    var x = document.getElementById("QORE-2");
+    if (!(x.checked)) {
+        document.getElementById("QORE-2_button").setAttribute('disabled', 'true');
+    } else {
+        document.getElementById("QORE-2_button").removeAttribute('disabled');
+    }
+}

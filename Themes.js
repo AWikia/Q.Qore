@@ -17,6 +17,7 @@ ColorUpdate(true);
 		CursorT('auto');
 		colortheme('system-a');
 		SocialCompile();
+		ManagerRows(); // For Task Manager Only
 		
 		
 })();
@@ -112,7 +113,36 @@ if ($("html.contrast").length) {
 */
 }
 
+ManagerRows();
+
 }
+
+
+/* Used only on Task Manager, ignored elsewhere */
+function ManagerRows() {
+
+/* For Task Manager */
+if ($("body.tskmngr").length) {
+	if ( ($("cpu").length) < 4) {
+		document.querySelector('aside.heatmap').style.setProperty("--heatmap-rows", $("cpu").length);
+	} else if ( ($("cpu").length) < 6 ) {
+		document.querySelector('aside.heatmap').style.setProperty("--heatmap-rows", 2);
+	} else if ( ($("cpu").length) < 13 ) {
+		document.querySelector('aside.heatmap').style.setProperty("--heatmap-rows", 3);
+	} else if ( ($("cpu").length) < 30 ) {
+		document.querySelector('aside.heatmap').style.setProperty("--heatmap-rows", 4);
+	} else if ( ($("cpu").length) < 64 ) {
+		document.querySelector('aside.heatmap').style.setProperty("--heatmap-rows", 6);
+	} else if ( ($("cpu").length) < 99 ) {
+		document.querySelector('aside.heatmap').style.setProperty("--heatmap-rows", 8);
+	} else {
+		document.querySelector('aside.heatmap').style.setProperty("--heatmap-rows", 10);
+	}
+}
+
+
+}
+
 
 /* Changes Wiki theme style
    Supported values: auto, auto-r, light, dark, system-a, system-ar, system, system-r */
