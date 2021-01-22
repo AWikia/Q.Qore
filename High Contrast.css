@@ -298,7 +298,12 @@ box-shadow:0 4px 0 6px rgba(0,0,0,.4), 0 4px 0 6px rgba(255,255,255,0.4)!importa
 	color:inherit;
 }
 
-.contrast :not(.freepseudo):not(.mpisto-wrapper):not(.wds-toggle__label):not(.wds-dropdown):not(.wds-community-header):not(time):not(.wds-list):not(input):not(.mpisto-content):not(body):before,.contrast :not(.freepseudo):not(.mpisto-wrapper):not(.wds-toggle__label):not(.wds-dropdown):not(.wds-community-header):not(.wds-list):not(.mpisto-article-wrapper):not(.mpisto-header-container):not(.mpisto-gnav):not(input):not(body):not(em):after, .basic header.mpisto-navbar:after, .basic footer.mpisto-footer:after, .basic header.mpisto-footer-container:after, .basic .mpisto-option-pane:after, .basic .mpisto-content:after, .basic .mpisto-option-way:after, .basic header.mpisto-navbar:before, .basic footer.mpisto-footer:before, .basic header.mpisto-footer-container:before, .basic .mpisto-option-pane:before, .basic .mpisto-option-way:before {
+.contrast .gradient-overlay {
+	-webkit-mask-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+	mask-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+}
+
+.contrast :not(.freepseudo):not(.gradient-overlay):not(.mpisto-wrapper):not(.wds-toggle__label):not(.wds-dropdown):not(.wds-community-header):not(time):not(.wds-list):not(input):not(.mpisto-content):not(body):before,.contrast :not(.freepseudo):not(.mpisto-wrapper):not(.wds-toggle__label):not(.wds-dropdown):not(.wds-community-header):not(.wds-list):not(.mpisto-article-wrapper):not(.mpisto-header-container):not(.mpisto-gnav):not(input):not(body):not(em):after, .basic header.mpisto-navbar:after, .basic footer.mpisto-footer:after, .basic header.mpisto-footer-container:after, .basic .mpisto-option-pane:after, .basic .mpisto-content:after, .basic .mpisto-option-way:after, .basic header.mpisto-navbar:before, .basic footer.mpisto-footer:before, .basic header.mpisto-footer-container:before, .basic .mpisto-option-pane:before, .basic .mpisto-option-way:before {
 display:none!important;
 }
 
@@ -313,11 +318,6 @@ background-color:var(--button-color);
 	.contrast .mpisto-global-navigation .link:active, .contrast .mpisto-global-navigation .link:focus, .contrast .mpisto-global-navigation .wds-dropdown.wds-is-active .link {
 	background-color:var(--button-color);
 	color:var(--button-color-text);
-}
-
-.contrast .mpisto-2018:before, .contrast .mpisto-2018-mobile:before {
-	background-image:var(--background-image);
-
 }
 
 .contrast .mpisto-content, .contrast .pane-on .mpisto-article-wrapper:after, .basic .mpisto-content {

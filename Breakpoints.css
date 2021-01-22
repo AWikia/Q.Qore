@@ -48,7 +48,7 @@
 
 
 
-.mpisto-2018:before {
+.mpisto-2018 .gradient-overlay {
   background-color:var(--content-bg)!important;
 }
 
@@ -364,7 +364,9 @@ display:inline-flex;
 	border-width:3px;
 }
 
-
+.pageheader-search .mpisto-input {
+	width:175px;
+}
 
 }
 
@@ -417,9 +419,14 @@ margin-top:8px!important;
 }
 */
 
-.mpisto-2018, .mpisto-2018:before, .mpisto-2018:after {
+.mpisto-2018, .mpisto-2018 .gradient-overlay , .mpisto-2018 .gradient-overlay:before {
   background-image:none!important
 }
+
+.mpisto-2018 .gradient-overlay {
+  display:none!Important;
+}
+
 
 /* Fixes for Blink, Webkit, Gecko and Qorta
 ** Blink and Webkit do not render fixed elements.

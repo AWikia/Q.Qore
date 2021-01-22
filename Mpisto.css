@@ -382,6 +382,10 @@ scrollbar-color:var(--button-color) var(--background-color);
 	--scrollbar-thumb-color-1:var(--button-color);
 	--scrollbar-thumb-color-2:var(--button-color-dark);
 	--scrollbar-thumb-color-3:var(--button-color-dark-super);
+/* Alias */
+--background-overlay:var(--background-color);
+--adaptive-content-bg:false;
+--body-display:modern;
 }
 
 
@@ -509,6 +513,7 @@ cursor:url("Windows/default.cur"), default;
 border-radius:1px; /* mInerva and some other browsers do not render local attachment without this */
 overscroll-behavior:none;
 position:relative;
+z-index
 text-rendering:optimizeSpeed;
 -webkit-font-smoothing:antialised;
 -moz-osx-font-smoothing:grayscale;
@@ -521,6 +526,13 @@ touch-action:manipulation;
 text-shadow:0 0 1px rgba(0,0,0,0.1),0 0 1px rgba(255,255,255,0.1); /* Partially Embolding */
 
 /*text-shadow:0 0 1px rgba(255,0,0,0.1), 0 0 1px rgba(0,255,0,0.1), 0 0 1px rgba(0,0,255,0.1), 0 0 1px rgba(255,255,0,0.1), 0 0 1px rgba(255,0,255,0.1), 0 0 1px rgba(0,255,255,0.1), 0 0 1px rgba(0,0,0,0.1), 0 0 1px rgba(255,255,255,0.1); */
+}
+
+body[body-display*="legacy"] {
+	background-size:auto;
+	background-position:top center;
+	background-repeat:repeat;
+	--background-overlay:var(--background-color)!important;
 }
 
 ::selection {
@@ -659,40 +671,42 @@ height:min-content;
   font-family:var(--secondary-font), cursive;
 }
 
-.mpisto-2018:before, .mpisto-2018-mobile:before {
+body[body-display*="legacy"] .gradient-overlay {
+	display:none!important;
+}
+
+.mpisto-2018 .gradient-overlay:before, .mpisto-2018-mobile .gradient-overlay:before {
 	top:0;
 	left:0;
 	width:100%;
 	height:100%;
-	position:fixed;
+	position:fixed!Important;
 	display:block;
 	content:"";
 	background:inherit;
 	background-attachment:inherit;
 	z-index:-1;
-	background-image:linear-gradient(to bottom, rgba(0,0,0,0), var(--background-color)), var(--background-image);
-	background-color:var(--background-color);
-	opacity:1;
+	background-image:linear-gradient(to bottom, rgba(0,0,0,0), var(--background-overlay, var(--background-color)) 100%);
+	-webkit-mask-image:linear-gradient(0deg, rgba(0,0,0,1), rgba(0,0,0,0.55) 200%);
+	mask-image:linear-gradient(0deg, rgba(0,0,0,1), rgba(0,0,0,0.55) 200%);
+	opacity:0.99;
   image-rendering:initial;                  /* CSS4 Proposed  */
   -qq-image-blurring:tick;                  /* 4x4 Web 1-2    */
-  -webkit-mask-image:linear-gradient(#000,transparent);
-  mask-image:linear-gradient(#000,transparent);
 }
 
 
 
-.mpisto-2018:after, .mpisto-2018-mobile:after {
+.mpisto-2018 .gradient-overlay, .mpisto-2018-mobile .gradient-overlay {
 	top:0;
 	left:0;
 	width:100%;
 	height:100%;
-	position:fixed;
+	position:fixed!Important;
 	display:block;
 	content:"";
 	background:inherit;
 	background-attachment:inherit;
 	z-index:-1;
-	opacity:0.55;
 	background-color:var(--background-color);
 	/* background-color:rgb(var(--community-header-bg)); */
 	pointer-events:none;
@@ -700,7 +714,7 @@ height:min-content;
 
 
 .mpisto-2018, .mpisto-2018-mobile {
-background-image:none!Important;
+/*background-image:none!Important;*/
 }
 
 /* Monaco Skin Compatibility CSS */
