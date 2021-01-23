@@ -1146,7 +1146,7 @@ function CompileRecColors() {
 
 	$(".rec-colors-cnbg").append(str);
 
-// Page Background Border Color
+// Page Background Text Color
 	str = '';
     var Colors = ['ffffff','8e8e8e','000000','e2e2e2','cccccc','2e2e2e','f2f5f5','bed1cf','0e191a','e6ecf2','c5ced9','39424d']
 	var socialAM = Colors.length
@@ -1159,14 +1159,14 @@ function CompileRecColors() {
 
 	$(".rec-colors-cntxt").append(str);
 
-// Page Background Text Color
+// Page Background Border Color
 	str = '';
     var Colors = ['ffffff','8e8e8e','000000','e2e2e2','cccccc','2e2e2e','f2f5f5','bed1cf','0e191a','e6ecf2','c5ced9','39424d']
 	var socialAM = Colors.length
 
 	for (let i = 0; i < socialAM; i++) {
 	  var color = Colors[i];
-	  var data = '<button class="wds-button wds-is-square color-button"' + 'onclick="PickColor3(' + "'#" + color + "'" + ')">' + '<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div>' + '</button>'
+	  var data = '<button class="wds-button wds-is-square color-button"' + 'onclick="PickColor5(' + "'#" + color + "'" + ')">' + '<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div>' + '</button>'
 	  str = str + data;
 	}
 
@@ -1480,23 +1480,51 @@ function CheckAdapt() {
 	}
 }
 
-
+/* Different with the ToggleBG function, only one is present for all three */
 function CheckBG() {
-	if ($("body.options").length   && !($("html.contrast.win10").length) ) {
+	if ($("body.options").length   && !($("html.contrast.win10").length) ) { // Don't run if not on Preferences Page
+	/* BG */
 		if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--body-display") === 'legacy') && !($("html.contrast.win10").length)  ) {
 				document.querySelector('input#BG_2').checked = true;
 				document.querySelector('input#BG_1').checked = false;
 				$(".legacy-off").attr('disabled', 'true');
+				$(".modern-off").removeAttr('disabled');
 		} else {
+				$(".legacy-off").removeAttr('disabled');
+				$(".modern-off").attr('disabled', 'true');
 				document.querySelector('input#BG_1').checked = true;
 				document.querySelector('input#BG_2').checked = false;
-				$(".legacy-off").removeAttr('disabled');
+		}
+	/* BG1 */
+		if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--background-va") === 'center') && !($("html.contrast.win10").length)  ) {
+				document.querySelector('input#BG1_2').checked = true;
+				document.querySelector('input#BG1_1').checked = false;
+				document.querySelector('input#BG1_3').checked = false;
+		} else if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--background-va") === 'bottom') && !($("html.contrast.win10").length)  ) {
+				document.querySelector('input#BG1_3').checked = true;
+				document.querySelector('input#BG1_1').checked = false;
+				document.querySelector('input#BG1_2').checked = false;
+		} else {
+				document.querySelector('input#BG1_1').checked = true;
+				document.querySelector('input#BG1_2').checked = false;
+				document.querySelector('input#BG1_3').checked = false;
+		}
+	/* BG2 */
+		if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--background-no-tiling") === 'true') && !($("html.contrast.win10").length)  ) {
+				document.querySelector('input#BG2').checked = true;
+		} else {
+				document.querySelector('input#BG2').checked = false;
 		}
 	}
 	$("body").attr('body-display', getComputedStyle(document.querySelector('html')).getPropertyValue("--body-display") );
-
+	$("body").attr('body-no-tiling', getComputedStyle(document.querySelector('html')).getPropertyValue("--background-no-tiling") );
 }
 
+/* 
+** BG  = Backgkround Body Display - body-display attribute is ued
+** BG1 = Background Position - No body attribute is used
+** BG2 = Background Tiling (Only on Legacy Background Display) - body-tiling attribute is used
+*/
 
 function ToggleBG() {
 var modern = document.querySelector('input#BG_1');
@@ -1572,6 +1600,126 @@ var legacy = document.querySelector('input#BG_2');
 	}	
 	ColorUpdate(true);
 }
+
+function ToggleBG1() {
+var top = document.querySelector('input#BG1_1');
+var middle = document.querySelector('input#BG1_2');
+var bottom = document.querySelector('input#BG1_3');
+let str = "";
+if (top.checked) {
+	str = "top";
+} else if (middle.checked) {
+	str = "center";
+} else if (bottom.checked) {
+	str = "bottom";
+}
+	if ($("html.theme-A").length) {
+		$("style.designer-style.theme-A").append(
+		'.theme-A:not(.win10) {' +
+		'--background-va:' + str + '!important;' +
+		'}'
+		);	
+	}
+
+	if ($("html.theme-B").length) {
+		$("style.designer-style.theme-B").append(
+		'.theme-B:not(.win10) {' +
+		'--background-va:' + str + '!important;' +
+		'}'
+		);	
+	}
+
+	if ($("html.theme-C").length) {
+		$("style.designer-style.theme-C").append(
+		'.theme-C:not(.win10) {' +
+		'--background-va:' + str + '!important;' +
+		'}'
+		);	
+	}
+
+	if ($("html.theme-D").length) {
+		$("style.designer-style.theme-D").append(
+		'.theme-D:not(.win10) {' +
+		'--background-va:' + str + '!important;' +
+		'}'
+		);	
+	}
+	ColorUpdate(true);
+}
+
+function ToggleBG2() {
+var x = document.querySelector('input#BG2');
+	if (x.checked) {
+
+	if ($("html.theme-A").length) {
+		$("style.designer-style.theme-A").append(
+		'.theme-A:not(.win10) {' +
+		'--background-no-tiling:true!important;' +
+		'}'
+		);	
+	}
+
+	if ($("html.theme-B").length) {
+		$("style.designer-style.theme-B").append(
+		'.theme-B:not(.win10) {' +
+		'--background-no-tiling:true!important;' +
+		'}'
+		);	
+	}
+
+	if ($("html.theme-C").length) {
+		$("style.designer-style.theme-C").append(
+		'.theme-C:not(.win10) {' +
+		'--background-no-tiling:true!important;' +
+		'}'
+		);	
+	}
+
+	if ($("html.theme-D").length) {
+		$("style.designer-style.theme-D").append(
+		'.theme-D:not(.win10) {' +
+		'--background-no-tiling:true!important;' +
+		'}'
+		);	
+	}
+	} else {
+
+	if ($("html.theme-A").length) {
+		$("style.designer-style.theme-A").append(
+		'.theme-A:not(.win10) {' +
+		'--background-no-tiling:false!important;' +
+		'}'
+		);	
+	}
+
+	if ($("html.theme-B").length) {
+		$("style.designer-style.theme-B").append(
+		'.theme-B:not(.win10) {' +
+		'--background-no-tiling:false!important;' +
+		'}'
+		);	
+	}
+
+	if ($("html.theme-C").length) {
+		$("style.designer-style.theme-C").append(
+		'.theme-C:not(.win10) {' +
+		'--background-no-tiling:false!important;' +
+		'}'
+		);	
+	}
+
+	if ($("html.theme-D").length) {
+		$("style.designer-style.theme-D").append(
+		'.theme-D:not(.win10) {' +
+		'--background-no-tiling:false!important;' +
+		'}'
+		);	
+	}
+	}	
+	ColorUpdate(true);
+}
+
+
 
 
 function ToggleAdapt() {

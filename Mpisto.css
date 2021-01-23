@@ -382,10 +382,12 @@ scrollbar-color:var(--button-color) var(--background-color);
 	--scrollbar-thumb-color-1:var(--button-color);
 	--scrollbar-thumb-color-2:var(--button-color-dark);
 	--scrollbar-thumb-color-3:var(--button-color-dark-super);
-/* Alias */
+/* Aliases */
 --background-overlay:var(--background-color);
 --adaptive-content-bg:false;
 --body-display:modern;
+--background-va:top;
+--background-no-tiling:false;
 }
 
 
@@ -508,6 +510,7 @@ background-repeat:no-repeat;
 background-attachment:local;
 background-attachment:fixed;
 background-position:center;
+background-position-y:var(--background-va);
 background-size:cover;
 cursor:url("Windows/default.cur"), default;
 border-radius:1px; /* mInerva and some other browsers do not render local attachment without this */
@@ -530,10 +533,14 @@ text-shadow:0 0 1px rgba(0,0,0,0.1),0 0 1px rgba(255,255,255,0.1); /* Partially 
 
 body[body-display*="legacy"] {
 	background-size:auto;
-	background-position:top center;
 	background-repeat:repeat;
 	--background-overlay:var(--background-color)!important;
 }
+
+body[body-display*="legacy"][body-no-tiling*="true"] {
+	background-repeat:no-repeat;
+}
+
 
 ::selection {
 background-color:rgba(var(--link-color-dark), 0.5);
