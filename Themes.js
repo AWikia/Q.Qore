@@ -9,6 +9,7 @@ document.querySelector('html').className += " theme-A"; // We begin with the fir
 ColorUpdate(true);
 	if ($("body.options").length) {
 		UpdateSet()
+		CompileRecColors();
 	}
 		$("head").append(
 		'<meta name="theme-color" content="' + chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--emphasis-bg")) + '">'
@@ -690,7 +691,7 @@ function PresetTheme(theme="") {
 /* These functions asks about what color should the user use if no value is set and sets it to an individual component such as Body Background color (The current color is used as initial answer in case of accidental use)
 ** If a value is set directly in the function, it instead uses that color instead of asking the user to write a color
 ** Used in Preferences only
-** Possible Variations of PickColor() 1 = Body Color | 2 = Header Color | 3 = Content Color | 4 = Content Text Color | 5 = Content Border Color | 6 = Link Color | 7 = Button Color
+** Possible Variations of PickColor() 1 = Body Color | 2 = Header Color | 3 = Content Color | 4 = Content Text Color | 5 = Content Border Color | 6 = Link Color | 7 = Button Color | 8 = Body Overlay Color
 */
 function PickColor1(color="") {
 if (color==="") {
@@ -1090,6 +1091,119 @@ function isSuperLightColor(color) {
 	return ((chroma(color).get('lab.l')) > window.MW18LightThreshold*1.4);
 }
 
+/* # is added automatically so no need to be used. Only hex values please when editing this function */
+function CompileRecColors() {
+	let str = '';
+// Body Background Color
+	str = '';
+	var Colors = ['f9ebc3','ede5dd','f7e1d3','dfdbc3','fbe300','ffbf99','fdc355','cdbd89','d5a593','a37719','836d35','776b41','f14700','dd3509','a34111','7b3b09', '4f4341','454545','611d03','891100','71130f','ebfffb','ebf1f5','f5ebf5','e7f3d1','bde9fd','dfbddd','c3d167','a5b5c5','6599ff','6b93b1','978f33','53835d','7f6f9f','d335f7','337700','006baf','2b53b5','2d2b17','003715','012d59','6f017b','790145','ffffff','f1f1f1','ebebeb','000000']
+	var socialAM = Colors.length
+
+	for (let i = 0; i < socialAM; i++) {
+	  var color = Colors[i];
+	  var data = '<button class="wds-button wds-is-square color-button"' + 'onclick="PickColor1(' + "'#" + color + "'" + ')">' + '<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div>' + '</button>'
+	  str = str + data;
+	}
+
+	$(".rec-colors-body").append(str);
+
+// Overlay Color
+	str = '';
+	var Colors = ['f9ebc3','ede5dd','f7e1d3','dfdbc3','fbe300','ffbf99','fdc355','cdbd89','d5a593','a37719','836d35','776b41','f14700','dd3509','a34111','7b3b09', '4f4341','454545','611d03','891100','71130f','ebfffb','ebf1f5','f5ebf5','e7f3d1','bde9fd','dfbddd','c3d167','a5b5c5','6599ff','6b93b1','978f33','53835d','7f6f9f','d335f7','337700','006baf','2b53b5','2d2b17','003715','012d59','6f017b','790145','ffffff','f1f1f1','ebebeb','000000']
+	var socialAM = Colors.length
+
+	for (let i = 0; i < socialAM; i++) {
+	  var color = Colors[i];
+	  var data = '<button class="wds-button wds-is-square color-button"' + 'onclick="PickColor8(' + "'#" + color + "'" + ')">' + '<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div>' + '</button>'
+	  str = str + data;
+	}
+
+	$(".rec-colors-overlay").append(str);
+
+// Header Color
+	str = '';
+	var Colors = ['fec356','6699ff','6c93b1','a47719','846d35','786c42','f14800','337800','006cb0','dd360a','a34112','474646','7b3b0a','4f4341','0038d8','2d2c18','611e03','003816','891100','012e59','721410','6f027c','7a0146'] 
+	var socialAM = Colors.length
+
+	for (let i = 0; i < socialAM; i++) {
+	  var color = Colors[i];
+	  var data = '<button class="wds-button wds-is-square color-button"' + 'onclick="PickColor2(' + "'#" + color + "'" + ')">' + '<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div>' + '</button>'
+	  str = str + data;
+	}
+
+	$(".rec-colors-header").append(str);
+
+// Page Background Color
+	str = '';
+	var Colors = ['ebf2f5','e7f4d2','f5ebf5','f9ecc3','eee5de','f7e1d4','d4e6f7','dfdbc3','dfbddd','cebe8a','a5b5c6','474646','2d2c18','611e03','012e59','ffffff','f2f2f2','ebebeb','000000'] 
+	var socialAM = Colors.length
+
+	for (let i = 0; i < socialAM; i++) {
+	  var color = Colors[i];
+	  var data = '<button class="wds-button wds-is-square color-button"' + 'onclick="PickColor3(' + "'#" + color + "'" + ')">' + '<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div>' + '</button>'
+	  str = str + data;
+	}
+
+	$(".rec-colors-cnbg").append(str);
+
+// Page Background Border Color
+	str = '';
+    var Colors = ['ffffff','8e8e8e','000000','e2e2e2','cccccc','2e2e2e','f2f5f5','bed1cf','0e191a','e6ecf2','c5ced9','39424d']
+	var socialAM = Colors.length
+
+	for (let i = 0; i < socialAM; i++) {
+	  var color = Colors[i];
+	  var data = '<button class="wds-button wds-is-square color-button"' + 'onclick="PickColor4(' + "'#" + color + "'" + ')">' + '<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div>' + '</button>'
+	  str = str + data;
+	}
+
+	$(".rec-colors-cntxt").append(str);
+
+// Page Background Text Color
+	str = '';
+    var Colors = ['ffffff','8e8e8e','000000','e2e2e2','cccccc','2e2e2e','f2f5f5','bed1cf','0e191a','e6ecf2','c5ced9','39424d']
+	var socialAM = Colors.length
+
+	for (let i = 0; i < socialAM; i++) {
+	  var color = Colors[i];
+	  var data = '<button class="wds-button wds-is-square color-button"' + 'onclick="PickColor3(' + "'#" + color + "'" + ')">' + '<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div>' + '</button>'
+	  str = str + data;
+	}
+
+	$(".rec-colors-cnbrd").append(str);
+
+
+
+// Link Color
+	str = '';
+	var Colors = ['fce300','fec356','c4d167','6699ff','6c93b1','a47719','54845e','337800','006cb0','0148c2','6f027c','ffffff'] 
+	var socialAM = Colors.length
+
+	for (let i = 0; i < socialAM; i++) {
+	  var color = Colors[i];
+	  var data = '<button class="wds-button wds-is-square color-button"' + 'onclick="PickColor6(' + "'#" + color + "'" + ')">' + '<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div>' + '</button>'
+	  str = str + data;
+	}
+
+	$(".rec-colors-link").append(str);
+
+
+// Button Color
+	str = '';
+	var Colors = ['fec356','6699ff','6c93b1','a47719','846d35','786c42','f14800','337800','006cb0','dd360a','a34112','474646','7b3b0a','4f4341','0038d8','2d2c18','611e03','003816','891100','012e59','721410','6f027c','7a0146'] 
+	var socialAM = Colors.length
+
+	for (let i = 0; i < socialAM; i++) {
+	  var color = Colors[i];
+	  var data = '<button class="wds-button wds-is-square color-button"' + 'onclick="PickColor7(' + "'#" + color + "'" + ')">' + '<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div>' + '</button>'
+	  str = str + data;
+	}
+
+	$(".rec-colors-button").append(str);
+
+
+}
+
 
 function SocialCompile() {
 
@@ -1192,7 +1306,7 @@ if ( (window.MW18darkmode === true) ) {
 // Adaptive
 	if (getComputedStyle(document.querySelector('html')).getPropertyValue("--adaptive-content-bg") === 'true') {
 		if (isLightColor(content_text)) {
-			var content_color = '#2b2b2b';	
+			var content_color = '#2e2e2e';	
 		} else {
 			var content_color = '#e2e2e2';
 		}
@@ -1215,7 +1329,7 @@ if (isSuperLightColor(content_color)) {
 	var dropdowncolor = 'white';
 	if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--adaptive-content-bg") === 'true') && !($("html.contrast.win10").length)  ) {
 		var dropdowncolor2 = chroma.mix(content_color,'black',MW18HoverThreshold, 'hsl');
-		var dropdowncolor3 = '#2b2b2b';	
+		var dropdowncolor3 = '#2e2e2e';	
 	} else {
 		var dropdowncolor2 = 'inherit';
 		var dropdowncolor3 = 'inherit';
