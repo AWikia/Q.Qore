@@ -826,7 +826,8 @@ document.getElementById("Handler").className += " mpisto-servers"
 					<div class="wds-dropdown__content wds-is-right-aligned wds-is-not-scrollable">					
 					  <ul class="wds-list wds-is-linked">						
 						<li><a href="#QORE">Beta Channel</a></li>
-						<li><a href="#QORE2">Dev Channel</a></li>
+						<li><a href="#QORE3">Dev Channel</a></li>
+						<li><a href="#QORE2">Canary Channel</a></li>
 					  </ul>
 					</div>
 				</div>
@@ -1213,7 +1214,7 @@ document.getElementById("Handler").className += " mpisto-servers"
 </div>
 
 
-<div class="lightbox-container" id="QORE2">
+<div class="lightbox-container" id="QORE3">
     <div class="lightbox">
       <h1>
 	<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
@@ -1226,10 +1227,10 @@ document.getElementById("Handler").className += " mpisto-servers"
 		<div style="margin:0 auto; display:flex; align-items:center; justify-content:center;">
 		<img width="330" src="DevQ.png" />
 		</div>
-		Hooray, you're downloading the dev channel.<br><b>Please note that this channel, unlike others, will be frequently updated when required. So you have to download the required files every time a new release comes which comes every hour or day but it will not have a lot of stability or completeness. In addition, some unfinished parts may also be seen but those builds will often be released without too many unfinished parts.</b>
+		Hooray, you're downloading the dev channel.This channel will be updated every week when required. So you have to download the required files every time a new release comes. It has a lot of stability or completeness compared to the Canary Channel but less than the beta ones.
 		<h2>Instructions</h2>
 		<ol>
-		<li>Download the Stable Channel <a href="https://drive.google.com/file/d/1B-zz2-D50fDs00CydjATk1xMxy7k7RnE/view?usp=sharing">here</a></li>
+		<li>Download the Stable Channel <a href="https://drive.google.com/file/d/1m9g2LVZEk6W5UtfbNMha9_cX8hoVsaci/view?usp=sharing">here</a></li>
 		<li>Extract the files of the Stable channel into a folder names Qora Qore ΙΕ or similar</li>
 		<li>Download the dev Channel (It is on the bottom button called <b>Download Dev Channel</b>). Or you can do it <a href="https://drive.google.com/file/d/1pc8RM8NwvXaL6BPWrQjYmCxmjnLqV3W1/view?usp=sharing">here</a></li>
 		<li>Extract the files of the Dev channel into a different folder</li>
@@ -1238,8 +1239,42 @@ document.getElementById("Handler").className += " mpisto-servers"
 		<li>If title screen shows the Dev Channel logo, you're at Dev Channel</li>
 		<li>Join in our <a href="https://discord.gg/9JEWA8S">Discord Server</a> if you have to report a bug to us to fix that. Lastly, you must check the below bow before you can start digging into the dev channel</li>
 		</ol>
-		<input type="checkbox" id="QORE-2" name="dev" onclick="DevQore()"></input><label for="QORE-2">I have read the bolded pargraph and I know that once I download the Dev Channel, I have to watch out for instabilities I will face</label>
-		<a class="wds-button wds-is-full-width wds-is-borderline" id="QORE-2_button" disabled href="https://drive.google.com/file/d/1pc8RM8NwvXaL6BPWrQjYmCxmjnLqV3W1/view?usp=sharing">Download Dev Channel Files</a>
+		<a class="wds-button wds-is-full-width wds-is-borderline" href="https://drive.google.com/file/d/1m9g2LVZEk6W5UtfbNMha9_cX8hoVsaci/view?usp=sharing">Download Dev Channel Files</a>
+   </section>
+   <footer>
+   <a href="https://bision.fandom.com/el/Qora" class="wds-button wds-is-squished wds-is-alternate">Wiki Page</a>
+   </footer>
+    </div>
+</div>
+
+
+<div class="lightbox-container" id="QORE2">
+    <div class="lightbox">
+      <h1>
+	<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
+		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-preformat" />
+	</svg>
+      <span>Download Qora Qore Canary</span> <a class="wds-button wds-is-square wds-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="wds-icon">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" />
+                  </svg></a></h1>
+   <section>
+		<div style="margin:0 auto; display:flex; align-items:center; justify-content:center;">
+		<img width="330" src="CanaryQ.png" />
+		</div>
+		Hooray, you're downloading the canary channel.<br><b>Please note that this channel, unlike others, will be frequently updated when required. So you have to download the required files every time a new release comes which comes every hour or day but it will not have a lot of stability or completeness. In addition, some unfinished parts may also be seen but those builds will often be released without too many unfinished parts.</b>
+		<h2>Instructions</h2>
+		<ol>
+		<li>Download the Stable Channel <a href="https://drive.google.com/file/d/1B-zz2-D50fDs00CydjATk1xMxy7k7RnE/view?usp=sharing">here</a></li>
+		<li>Extract the files of the Stable channel into a folder names Qora Qore ΙΕ or similar</li>
+		<li>Download the canary Channel (It is on the bottom button called <b>Download Canary Channel</b>).<!-- Or you can do it <a href="https://drive.google.com/file/d/1pc8RM8NwvXaL6BPWrQjYmCxmjnLqV3W1/view?usp=sharing">here</a>--></li>
+		<li>Extract the files of the Canary channel into a different folder</li>
+		<li>Move the files of the Canary channel to the files where the Stable channel was extracted. Once windows asks you what to do with the files, replace them.</li>
+		<li>Open game.rxproj if you have RPG XP and do a playtest (If you don't have it, after the game loads, press F12) in order to compile data.</li>
+		<li>If title screen shows the Canary Channel logo, you're at Canary Channel</li>
+		<li>Join in our <a href="https://discord.gg/9JEWA8S">Discord Server</a> if you have to report a bug to us to fix that. Lastly, you must check the below bow before you can start digging into the canary channel</li>
+		</ol>
+		<input type="checkbox" id="QORE-2" name="canary" onclick="DevQore()"></input><label for="QORE-2">I have read the bolded pargraph and I know that once I download the Canary Channel, I have to watch out for instabilities I will face</label>
+		<a class="wds-button wds-is-full-width wds-is-borderline" id="QORE-2_button" disabled href="https://drive.google.com/file/d/1pc8RM8NwvXaL6BPWrQjYmCxmjnLqV3W1/view?usp=sharing">Download Canary Channel Files</a>
    </section>
    <footer>
    <a href="https://bision.fandom.com/el/Qora" class="wds-button wds-is-squished wds-is-alternate">Wiki Page</a>
