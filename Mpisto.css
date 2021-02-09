@@ -2,33 +2,45 @@
 /* 
 **
 Gothic A1 = Korean
-M PLUS 1p = Japana
+M PLUS 1p = Japanese
 Prompt = Thailandish
 Cairo = Arabic
 Ramabhadra = Telegu
 Catamaran = Tamil
-Source Sans Pro/Ubuntu = Rest
+Noto Sans = Devanagari and Chinese
+Hind Siliguri = Bengali
+M PLUS Rounded 1c = Hebrew
+Inter/Didact Gothic = Greek, Latin and Cyrillic
 **
 */
 @import url('https://fonts.googleapis.com/css?family=Gothic+A1:100,200,300,400,500,600,700,800,900|M+PLUS+1p:100,300,400,500,700,800,900|Prompt:100,200,300,400,500,600,700,800,900|Source+Sans+Pro:200,300,400,600,700,900&subset=cyrillic,cyrillic-ext,greek,greek-ext,hebrew,japanese,korean,latin-ext,thai,vietnamese');
 
 @import url('https://fonts.googleapis.com/css?family=Cairo:200,300,400,600,700,900|Catamaran:100,200,300,400,500,600,700,800,900|Ramabhadra|Ubuntu:300,400,500,700&subset=arabic,cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,tamil,telugu');
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Noto+Sans+SC:100,300,400,500,700,900|Noto+Sans+TC:100,300,400,500,700,900|Noto+Sans+HK:100,300,400,500,700,900|Hind+Siliguri:300,400,500,600,700|Didact+Gothic');
 /** Secondary Fonts **/
 /* 
 **
 Jua (Formerly Nanum Gothic) = Korean
-M PLUS Rounded 1c = Japana and Evraika
+M PLUS Rounded 1c = Japanese
 Mitr = Thailandish
-Mada = Arabich
+Mada = Arabic
 NTR = Telegu
 Pavanam = Tamil
-Jura = Greek and Kyrillic
-Raleway = Rest
+Mukta = Devanagari
+Noto Sans = Chinese
+Baloo Da 2 = Bengali
+Jura = Greek and Cyrillic (Old)
+Arimo = Greek
+Rubik = Latin, Cyrrilic and Hebrew
+Raleway = Latin (Old)
 **
 */
 @import url('https://fonts.googleapis.com/css?family=Jura:300,400,500,600,700|M+PLUS+Rounded+1c:100,300,400,500,700,800|Mitr:200,300,400,500,600,700|Nanum+Gothic:400,700,800|Raleway:100,200,300,400,500,600,700,800,900&subset=cyrillic,cyrillic-ext,greek,greek-ext,hebrew,japanese,korean,latin-ext,thai,vietnamese');
 
 @import url('https://fonts.googleapis.com/css?family=Jua|Mada:200,300,400,500,600,700,900|NTR|Pavanam&subset=arabic,korean,latin-ext,tamil,telugu');
+
+@import url('https://fonts.googleapis.com/css?family=Mukta:200,300,400,500,600,700,800|Baloo+Da+2');
 /* Arniki Forniki and former versions of MpistoMobile2 */
 @import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900&subset=cyrillic,hebrew,latin-ext');
 /* Misc */
@@ -388,6 +400,13 @@ scrollbar-color:var(--button-color) var(--background-color);
 --body-display:modern;
 --background-va:top;
 --background-no-tiling:false;
+/* Fonts */
+--font-family:"Didact Gothic", "Inter", -apple-system, BlinkMacSystemFont;
+--foreign-fonts:"Nanum Gothic", "M PLUS 1p", "Prompt", "Cairo", "Ramabhadra", "Catamaran", "Noto Sans", "Noto Sans SC", "Noto Sans TC", "Noto Sans HK", "Hind Siliguri", "M PLUS Rounded 1c";
+--secondary-foreign-fonts:"Jua","M PLUS Rounded 1c", "Mitr", "NTR", "Pavanam", "Mukta", "Noto Sans SC", "Noto Sans TC", "Noto Sans HK", "Baloo Da 2", "Rubik";
+--secondary-font:"Rubik","Arimo", "Liberation Sans", var(--secondary-foreign-fonts);
+--button-radius:3px;
+
 }
 
 
@@ -504,7 +523,7 @@ body {
 margin:0 auto;
 /*font-family:Source Sans Pro, "Trebuchet MS", "Prompt",  "M PLUS 1p", "Gothic A1", sans-serif;
 */
-font-family:"Inter", -apple-system, BlinkMacSystemFont,  "Arial",  "Prompt",  "M PLUS 1p", "Gothic A1", "Cairo", "Catamaran", "Ramabhadra", sans-serif; /* Uses a font stack suitable for High Contrast Mode */
+font-family:var(--font-family), var(--foreign-fonts);
 color:var(--content-color);
 background-repeat:no-repeat;
 background-attachment:local;
@@ -549,123 +568,119 @@ text-shadow:none;
 }
 
 .serif body { /* Noto Sans */
-font-family:Mpisto Serif, "Times New Roman", "Song Myung",  "Noto Serif JP", "David Libre", "Pridi", "Amiri", "Catamaran", "Ramaraja", serif; /* Uses a font stack suitable for High Contrast Mode */
+--font-family:Aleo, "Times New Roman",serif; /* Uses a font stack suitable for High Contrast Mode */
+--foreign-fonts:"Song Myung",  "Noto Serif JP", "David Libre", "Pridi", "Amiri", "Catamaran", "Ramaraja";
 }
 
 
 .main .system-font { /* Deprecated */
-font-family: system-ui, -qq-osfont, -apple-system, BlinkMacSystemFont, "Segoe UI", "MLS Sans", "MLSystem", "Helvetica Neue", sans-serif!important; /* MLS Sans must be above Oxygen and Roboto because Mpisto OS contains both fonts and can cause problems - MLSystem is for MLS Challenge and below - -qq-osfont is for Qorta Web 4-5 and mInerva 4.5-5.1 which works like system-ui but only on Windows - -apple-system and BlinkMacSystemFont are equilavant of system-ui only for Apple Mac Computers */
+--font-family: system-ui, -qq-osfont, -apple-system, BlinkMacSystemFont, "Segoe UI", "MLS Sans", "MLSystem", "Helvetica Neue", sans-serif!important; /* MLS Sans must be above Oxygen and Roboto because Mpisto OS contains both fonts and can cause problems - MLSystem is for MLS Challenge and below - -qq-osfont is for Qorta Web 4-5 and mInerva 4.5-5.1 which works like system-ui but only on Windows - -apple-system and BlinkMacSystemFont are equilavant of system-ui only for Apple Mac Computers */
 }
 
 .serif.main .system-font { /* Deprecated */
-font-family: system-ui, -qq-osfont, -apple-system, BlinkMacSystemFont, "Segoe UI", "MLS Sans", "MLSystem", "Helvetica Neue", serif!important; /* MLS Sans must be above Oxygen and Roboto because Mpisto OS contains both fonts and can cause problems - MLSystem is for MLS Challenge and below - -qq-osfont is for Qorta Web 4-5 and mInerva 4.5-5.1 which works like system-ui but only on Windows - -apple-system and BlinkMacSystemFont are equilavant of system-ui only for Apple Mac Computers */
+--font-family: system-ui, -qq-osfont, -apple-system, BlinkMacSystemFont, "Segoe UI", "MLS Sans", "MLSystem", "Helvetica Neue", serif!important; /* MLS Sans must be above Oxygen and Roboto because Mpisto OS contains both fonts and can cause problems - MLSystem is for MLS Challenge and below - -qq-osfont is for Qorta Web 4-5 and mInerva 4.5-5.1 which works like system-ui but only on Windows - -apple-system and BlinkMacSystemFont are equilavant of system-ui only for Apple Mac Computers */
 }
 
 /* A Secure Classic */
 
 .main .rzz-font {
-font-family:Tahoma2, Tahoma, Yu Gothic UI, Segoe UI, MLS Sans, Ubuntu, Roboto, Droid Sans, Oxygen, Calibri, sans-serif!important; /* Use the set of given fonts and fallback to others if some of them don't exist and use sans otherwise */
+--font-family:Tahoma2, Tahoma, Yu Gothic UI, Segoe UI, MLS Sans, Ubuntu, Roboto, Droid Sans, Oxygen, Calibri, sans-serif!important; /* Use the set of given fonts and fallback to others if some of them don't exist and use sans otherwise */
 }
 
 .serif.main .rzz-font {
-font-family:Georgia2, Georgia, Yu Gothic UI, Segoe UI, MLS Sans, Ubuntu, Roboto, Droid Sans, Oxygen, Calibri, serif!important; /* Use the set of given fonts and fallback to others if some of them don't exist and use sans otherwise */
+--font-family:Georgia2, Georgia, Yu Gothic UI, Segoe UI, MLS Sans, Ubuntu, Roboto, Droid Sans, Oxygen, Calibri, serif!important; /* Use the set of given fonts and fallback to others if some of them don't exist and use sans otherwise */
 }
 
 /* Noto Sans Classic */
 
 .main .mob-font {
-font-family:Open Sans, "Trebuchet MS", sans-serif!important; /* Use the preloaded open sans font instead of the Source Sans Pro font */
+--font-family:Open Sans, "Trebuchet MS", sans-serif!important; /* Use the preloaded open sans font instead of the Source Sans Pro font */
 }
 
 .serif.main .mob-font {
-font-family:Noto Serif, "Palatino", erif!important; /* Use the preloaded open sans font instead of the Source Sans Pro font */
+--font-family:Noto Serif, "Palatino", erif!important; /* Use the preloaded open sans font instead of the Source Sans Pro font */
 }
 
 /* Corporate Classic */
 
 .main .mob2-font {
-font-family:Fira Sans, "Verdana", sans-serif!important; /* Use the preloaded fira sans font instead of the Source Sans Pro font */
+--font-family:Fira Sans, "Verdana", sans-serif!important; /* Use the preloaded fira sans font instead of the Source Sans Pro font */
 }
 
 .serif.main .mob2-font {
-font-family:Cutive, "Liberation Serif", serif!important; /* Use the preloaded fira sans font instead of the Source Sans Pro font */
+--font-family:Cutive, "Liberation Serif", serif!important; /* Use the preloaded fira sans font instead of the Source Sans Pro font */
 }
 
 /* Roboto */
 
 .main .mob3-font {
-font-family:GTK, Merriweather Sans, "Arial", sans-serif!important; /* Uses Rubik Font */
+--font-family:GTK, Merriweather Sans, "Arial", sans-serif!important; /* Uses Rubik Font */
 }
 
 .serif.main .mob3-font {
-font-family:Merriweather, "Times New Roman", serif!important; /* Uses Rubik Font */
+--font-family:Merriweather, "Times New Roman", serif!important; /* Uses Rubik Font */
 }
 
 /* Source Pro */
 
 .main .mob4-font {
-font-family:Source Pro Sans, Microsoft Sans Serif, Futura,"Arial", sans-serif!important; /* Uses a font stack suitable for High Contrast Mode */
+--font-family:Source Pro Sans, Microsoft Sans Serif, Futura,"Arial", sans-serif!important; /* Uses a font stack suitable for High Contrast Mode */
 }
 
 .serif.main .mob4-font {
-font-family:Source Pro Serif, Microsoft Sans Serif, Futura, "Times New Roman", serif!important; /* Uses a font stack suitable for High Contrast Mode */
+--font-family:Source Pro Serif, Microsoft Sans Serif, Futura, "Times New Roman", serif!important; /* Uses a font stack suitable for High Contrast Mode */
 }
 
 /* Slack Classic */
 
 .main .mob5-font {
-font-family:Lato, Carlito, "Verdana", sans-serif!important; /* Uses a font stack suitable for High Contrast Mode */
+--font-family:Lato, Carlito, "Verdana", sans-serif!important; /* Uses a font stack suitable for High Contrast Mode */
 }
 
 .serif.main .mob5-font {
-font-family:Aleo, Cambo, Caladea, "Liberation Serif", serif!important; /* Uses a font stack suitable for High Contrast Mode */
+--font-family:Cambo, Caladea, "Liberation Serif", serif!important; /* Uses a font stack suitable for High Contrast Mode */
 }
 
 /* Corporate */
 
 .main .mob6-font {
-font-family:Source Sans Pro, "Verdana", sans-serif!important; /* Uses a font stack suitable for High Contrast Mode */
+--font-family:Source Sans Pro, "Verdana", sans-serif!important; /* Uses a font stack suitable for High Contrast Mode */
 }
 
 .serif.main .mob6-font {
-font-family:Source Serif Pro, "Liberation Serif", serif!important; /* Uses a font stack suitable for High Contrast Mode */
+--font-family:Source Serif Pro, "Liberation Serif", serif!important; /* Uses a font stack suitable for High Contrast Mode */
 }
 
 /* A Secure */
 
 .main .mob7-font {
-font-family:Varela, "Arial", sans-serif!important; /* Uses a font stack suitable for High Contrast Mode */
+--font-family:Varela, "Arial", sans-serif!important; /* Uses a font stack suitable for High Contrast Mode */
 }
 
 .serif.main .mob7-font {
-font-family:Gentium Basic, "Times New Roman", serif!important; /* Uses a font stack suitable for High Contrast Mode */
+--font-family:Gentium Basic, "Times New Roman", serif!important; /* Uses a font stack suitable for High Contrast Mode */
 }
 
 /* Roboto Classic */
 
 .main .mob8-font {
-font-family:Roboto, "Arial", sans-serif!important; /* Uses a font stack suitable for High Contrast Mode */
+--font-family:Roboto, "Arial", sans-serif!important; /* Uses a font stack suitable for High Contrast Mode */
 }
 
 .serif.main .mob8-font {
-font-family:Roboto Slab, "Times New Roman", serif!important; /* Uses a font stack suitable for High Contrast Mode */
+--font-family:Roboto Slab, "Times New Roman", serif!important; /* Uses a font stack suitable for High Contrast Mode */
 }
 
 /* ParaType Classic */
 
 .main .mob9-font {
-font-family:"PT Sans", "Play", "Verdana", sans-serif!important; /* Noto Sans */
+--font-family:"PT Sans", "Play", "Verdana", sans-serif!important; /* Noto Sans */
 }
 
 .serif.main .mob9-font {
-font-family:"PT Serif", "Liberation Serif", serif!important;
+--font-family:"PT Serif", "Liberation Serif", serif!important;
 }
 
-
-html {
---secondary-font:"Arimo", "Liberation Sans", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR";
---button-radius:3px;
-}
 
 .mpisto-2018 {
 overflow-x:hidden!important;
@@ -1921,7 +1936,7 @@ background-image:none; /* Supress Gradient set by buttons */
 text-shadow:none; /* Disable Embolding caused by the update */
 }
 
-.wds-button.wds-is-active,.wds-button:active,.wds-button:focus:not(:disabled),.wds-button:hover:not(:disabled){
+.wds-button.wds-is-active,.wds-button:active,.wds-button:focus-visible:not(:disabled),.wds-button:hover:not(:disabled){
 background-color:#00686a;
 border-color:#00686a;
 text-decoration:none;
@@ -1933,7 +1948,7 @@ background-color:transparent;
 border-color:#5f7a7b;
 color:#5f7a7b
 }
-.wds-button.wds-is-secondary.wds-is-active,.wds-button.wds-is-secondary:active,.wds-button.wds-is-secondary:focus:not(:disabled),.wds-button.wds-is-secondary:hover:not(:disabled){
+.wds-button.wds-is-secondary.wds-is-active,.wds-button.wds-is-secondary:active,.wds-button.wds-is-secondary:focus-visible:not(:disabled),.wds-button.wds-is-secondary:hover:not(:disabled){
 background-color:transparent;
 border-color:#94abac;
 color:#94abac;
@@ -1945,7 +1960,7 @@ border:0
 }
 
 
-.wds-button.wds-is-text.wds-is-active,.wds-button.wds-is-text:active,.wds-button.wds-is-text:focus:not(:disabled),.wds-button.wds-is-text:hover:not(:disabled){
+.wds-button.wds-is-text.wds-is-active,.wds-button.wds-is-text:active,.wds-button.wds-is-text:focus-visible:not(:disabled),.wds-button.wds-is-text:hover:not(:disabled){
 background-color:transparent;
 color:#94abac}
 

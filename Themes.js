@@ -1101,7 +1101,7 @@ function CompileRecColors() {
 
 	for (let i = 0; i < socialAM; i++) {
 	  var color = Colors[i];
-	  var data = '<button class="wds-button wds-is-square color-button"' + 'onclick="PickColor1(' + "'#" + color + "'" + ')">' + '<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div>' + '</button>'
+	  var data = '<button class="wds-button wds-is-square color-button" onclick="PickColor1(' + "'#" + color + "'" + ')"> <div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div> </button>'
 	  str = str + data;
 	}
 
@@ -1114,7 +1114,7 @@ function CompileRecColors() {
 
 	for (let i = 0; i < socialAM; i++) {
 	  var color = Colors[i];
-	  var data = '<button class="wds-button wds-is-square color-button"' + 'onclick="PickColor8(' + "'#" + color + "'" + ')">' + '<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div>' + '</button>'
+	  var data = '<button class="wds-button wds-is-square color-button" onclick="PickColor8(' + "'#" + color + "'" + ')"> <div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div> </button>'
 	  str = str + data;
 	}
 
@@ -1127,7 +1127,7 @@ function CompileRecColors() {
 
 	for (let i = 0; i < socialAM; i++) {
 	  var color = Colors[i];
-	  var data = '<button class="wds-button wds-is-square color-button"' + 'onclick="PickColor2(' + "'#" + color + "'" + ')">' + '<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div>' + '</button>'
+	  var data = '<button class="wds-button wds-is-square color-button" onclick="PickColor2(' + "'#" + color + "'" + ')"> <div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div> </button>'
 	  str = str + data;
 	}
 
@@ -1140,7 +1140,7 @@ function CompileRecColors() {
 
 	for (let i = 0; i < socialAM; i++) {
 	  var color = Colors[i];
-	  var data = '<button class="wds-button wds-is-square color-button"' + 'onclick="PickColor3(' + "'#" + color + "'" + ')">' + '<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div>' + '</button>'
+	  var data = '<button class="wds-button wds-is-square color-button" onclick="PickColor3(' + "'#" + color + "'" + ')"> <div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div> </button>'
 	  str = str + data;
 	}
 
@@ -1153,7 +1153,7 @@ function CompileRecColors() {
 
 	for (let i = 0; i < socialAM; i++) {
 	  var color = Colors[i];
-	  var data = '<button class="wds-button wds-is-square color-button"' + 'onclick="PickColor4(' + "'#" + color + "'" + ')">' + '<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div>' + '</button>'
+	  var data = '<button class="wds-button wds-is-square color-button" onclick="PickColor4(' + "'#" + color + "'" + ')"> <div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div> </button>'
 	  str = str + data;
 	}
 
@@ -1166,7 +1166,7 @@ function CompileRecColors() {
 
 	for (let i = 0; i < socialAM; i++) {
 	  var color = Colors[i];
-	  var data = '<button class="wds-button wds-is-square color-button"' + 'onclick="PickColor5(' + "'#" + color + "'" + ')">' + '<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div>' + '</button>'
+	  var data = '<button class="wds-button wds-is-square color-button" onclick="PickColor5(' + "'#" + color + "'" + ')"> <div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div> </button>'
 	  str = str + data;
 	}
 
@@ -1181,7 +1181,7 @@ function CompileRecColors() {
 
 	for (let i = 0; i < socialAM; i++) {
 	  var color = Colors[i];
-	  var data = '<button class="wds-button wds-is-square color-button"' + 'onclick="PickColor6(' + "'#" + color + "'" + ')">' + '<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div>' + '</button>'
+	  var data = '<button class="wds-button wds-is-square color-button" onclick="PickColor6(' + "'#" + color + "'" + ')"> <div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div> </button>'
 	  str = str + data;
 	}
 
@@ -1195,7 +1195,7 @@ function CompileRecColors() {
 
 	for (let i = 0; i < socialAM; i++) {
 	  var color = Colors[i];
-	  var data = '<button class="wds-button wds-is-square color-button"' + 'onclick="PickColor7(' + "'#" + color + "'" + ')">' + '<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div>' + '</button>'
+	  var data = '<button class="wds-button wds-is-square color-button" onclick="PickColor7(' + "'#" + color + "'" + ')"> <div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div> </button>'
 	  str = str + data;
 	}
 
@@ -1922,14 +1922,14 @@ var x = $('input.font_2nd').val();
 	if (x=="") {
 		$("style.designer-style.theme-Miscellaneous").append(
 		'html {' +
-		'--secondary-font:"Arimo", "Liberation Sans", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR"!important;' +
+		'--secondary-font:"Rubik", "Arimo", "Liberation Sans", var(--secondary-foreign-fonts)!important;' +
 		'}'
 		);	
 		
 	} else {
 		$("style.designer-style.theme-Miscellaneous").append(
 		'html {' +
-		'--secondary-font:' + x + ', "Arimo", "Liberation Sans", "Mitr", "M PLUS Rounded 1c", "Namum Gothic", "Mada", "Pavanam", "NTR"!important;' +
+		'--secondary-font:' + x + ', "Rubik", "Arimo", "Liberation Sans", var(--secondary-foreign-fonts)!important;' +
 		'}'
 		);	
 	}
