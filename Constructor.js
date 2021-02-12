@@ -202,12 +202,12 @@ function RemoveBannerSave2() {
 
 function RemoveBannerSave1() {
     var x = document.getElementById("BannerSave");
-	document.getElementById("floatingbanner").removeChild(x);
+	document.querySelector(".lightbox #floatingbanner").removeChild(x);
 	if (document.getElementById("modalE10").length > 0) {
-		document.querySelector("#modalE10 .lightbox .save-page-wrapper").removeChild(document.getElementById("floatingbanner"));
+		document.querySelector("#modalE10 .lightbox .save-page-wrapper").removeChild(document.querySelector(".lightbox #floatingbanner"));
 	}
 	if (document.getElementById("modalE12").length > 0) {
-		document.querySelector("#modalE12 .lightbox section").removeChild(document.getElementById("floatingbanner"));
+		document.querySelector("#modalE12 .lightbox section").removeChild(document.querySelector(".lightbox #floatingbanner"));
 	}
 }
 
