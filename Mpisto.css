@@ -5002,6 +5002,11 @@ border-top:1px solid var(--content-border);
 }
 
 
+.mpisto-module > span {
+transition-property:margin, padding, visibility, height;
+transition-duration:200ms;
+}
+
 .mpisto-module .buttons * {
 margin:2px;
 }
@@ -5028,12 +5033,13 @@ border-bottom-left-radius:inherit;
 border-bottom-right-radius:inherit;
 }
 
-.hidden-module.mpisto-module ul, .hidden-module.mpisto-module .buttons {
+.hidden-module.mpisto-module ul, .hidden-module.mpisto-module .buttons, .hidden-module.mpisto-module > span {
     margin: 0;
     height: 0px;
     visibility: hidden;
     padding:0;
     overflow:hidden;
+    border-width:0;
  }
 
 

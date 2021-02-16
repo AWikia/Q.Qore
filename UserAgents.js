@@ -163,3 +163,23 @@ function RemoveBannerBrowser1() {
 	}
 }
 
+
+/* Module Toggle */
+function ToggleModule() {
+
+		$('.mpisto-module')
+				.click(function() {
+						var $this = $(this);
+						if ($this.hasClass("hidden-module")) {
+							$this.removeClass("hidden-module");
+						} else {
+							$this.addClass("hidden-module");
+						}
+
+						$('.mpisto-module').off( "click" );
+
+
+			});
+
+}
+
