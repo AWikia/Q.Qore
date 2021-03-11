@@ -2,14 +2,13 @@
 /* 
 **
 Gothic A1 = Korean
-M PLUS 1p = Japanese
+M PLUS 1p = Japanese and Hebrew
 Prompt = Thailandish
 Cairo = Arabic
 Ramabhadra = Telegu
 Catamaran = Tamil
 Noto Sans = Devanagari and Chinese
 Hind Siliguri = Bengali
-M PLUS Rounded 1c = Hebrew
 Inter/Didact Gothic = Greek, Latin and Cyrillic
 **
 */
@@ -421,7 +420,7 @@ scrollbar-color:var(--button-color) var(--background-color);
 --background-no-tiling:false;
 /* Fonts */
 --font-family:"Didact Gothic", "Inter", -apple-system, BlinkMacSystemFont;
---foreign-fonts:"Didact Gothic", "Nanum Gothic", "M PLUS 1p", "Prompt", "Cairo", "Ramabhadra", "Catamaran", "Noto Sans", "Noto Sans SC", "Noto Sans TC", "Noto Sans HK", "Hind Siliguri", "M PLUS Rounded 1c";
+--foreign-fonts:"Didact Gothic", "Nanum Gothic", "M PLUS 1p", "Prompt", "Cairo", "Ramabhadra", "Catamaran", "Noto Sans", "Noto Sans SC", "Noto Sans TC", "Noto Sans HK", "Hind Siliguri";
 --secondary-foreign-fonts:"Jua","M PLUS Rounded 1c", "Mitr", "NTR", "Pavanam", "Mukta", "Noto Sans SC", "Noto Sans TC", "Noto Sans HK", "Baloo Da 2", "Rubik";
 --secondary-font:"Rubik","Arimo", "Liberation Sans", var(--secondary-foreign-fonts);
 --button-radius:3px;
@@ -6729,6 +6728,10 @@ border:1px solid currentColor;
 
 .mpisto-option-way.p4 .wds-list label + div .wds-button.wds-is-square {
 	margin-top:8px;
+	min-width:24px;
+	width:24px;
+	height:24px;
+	padding:2px;
 }
 
 .mpisto-option-way.p4 .wds-floating-button, .mpisto-option-way.p4 .wds-dropdown {

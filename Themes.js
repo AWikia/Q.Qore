@@ -457,7 +457,9 @@ if (alt) {
 ** Possible Variations of RandomColor() 1 = Body Color | 2 = Header Color | 3 = Content Color | 4 = Content Text Color | 5 = Content Border Color | 6 = Link Color | 7 = Button Color
 */
 function RandomColor1() {
-var x = chroma.random()
+// var x = chroma.random()
+var Colors = ['1d1d1d','8d0017','ac0000','d34500','eb9900','ffb317','7d9b34','5ea200','417800','1d5100','003c00','44a177','008d8f','00a8a9','009bf0','0068b7','003981','091a45','180052','490090','711993','8d37af','8c005a','ab0064','ea0098','5e5e5e','be0021','f73400','ff892b','ffc12c','ffc91a','8acb00','6db000','169900','58cc7d','00d1d2','41c3ff','008ee1','00baff','0075c6','4617b4','6800b3','a13bc9','bd56e5','c02883','f900a5','ff5fdc','e2e2e2']
+ var x = '#' + Colors[getRandomInt(Colors.length)]
 $('input[type="range"][name="bg"].red').val(chroma(x).get('rgb.r'));
 $('input[type="range"][name="bg"].green').val( chroma(x).get('rgb.g'));
 $('input[type="range"][name="bg"].blue').val( chroma(x).get('rgb.b'));
@@ -467,7 +469,9 @@ UpdateValue()
 }
 
 function RandomColor2() {
-var x = chroma.random()
+// var x = chroma.random()
+	var Colors = ['ababab','8acfff','f598d6','f3d240','add85f','78d9d9','ffaf51','ff6f6f','f359a8','47cf74','c48aff','58b1fc','9898ff','c3b5a8','ffffff','576dcd','4074ff','4099e1','40b2cc','40c5ae','40c280','9bcc3f','fce840','f98a48','e1676a','ed4c5a','ef4086','bc3b8c','7e73a5','879289'] 
+ var x = '#' + Colors[getRandomInt(Colors.length)]
 $('input[type="range"][name="header"].red').val(chroma(x).get('rgb.r') );
 $('input[type="range"][name="header"].green').val( chroma(x).get('rgb.g') );
 $('input[type="range"][name="header"].blue').val( chroma(x).get('rgb.b') );
@@ -476,7 +480,9 @@ UpdateValue()
 }
 
 function RandomColor3() {
-var x = chroma.random()
+// var x = chroma.random()
+	var Colors = ['000000','ffffff','dcdcdc','787878','464646','0a3b76','4395d1','99d9ea','0076a3','0d686b','00a99d','00a99d','7accc8','82ca9c','74a402','c4df9b','84871c','d9d56f','fff468','fff799','ffc20e','eb6119','fbaf5d','e57300','c14000','9e6b52','8c6239','c7b299','b82832','d85171','fedfec','563f7f','a186be','d9cfe5']
+ var x = '#' + Colors[getRandomInt(Colors.length)]
 $('input[type="range"][name="contentbg"].red').val(chroma(x).get('rgb.r') );
 $('input[type="range"][name="contentbg"].green').val( chroma(x).get('rgb.g') );
 $('input[type="range"][name="contentbg"].blue').val( chroma(x).get('rgb.b') );
@@ -485,7 +491,9 @@ UpdateValue()
 }
 
 function RandomColor4() {
-var x = chroma.random()
+// var x = chroma.random()
+	var Colors = ['000000','3a3a3a','bfbfbf','e6e6e6','ffffff','ff0000','00ff00','0000ff','ffff00','ff00ff','00ffff']
+ var x = '#' + Colors[getRandomInt(Colors.length)]
 $('input[type="range"][name="contentcolor"].red').val(chroma(x).get('rgb.r') );
 $('input[type="range"][name="contentcolor"].green').val(chroma(x).get('rgb.g') );
 $('input[type="range"][name="contentcolor"].blue').val(chroma(x).get('rgb.b') );
@@ -494,7 +502,9 @@ UpdateValue()
 }
 
 function RandomColor5() {
-var x = chroma.random()
+// var x = chroma.random()
+	  var Colors = ['808080','cccccc','6e6e6e','3c3c3c','a3a3a3','800000','008000','000080','808000','800080','008080']
+ var x = '#' + Colors[getRandomInt(Colors.length)]
 $('input[type="range"][name="border"].red').val(chroma(x).get('rgb.r') );
 $('input[type="range"][name="border"].green').val(chroma(x).get('rgb.g') );
 $('input[type="range"][name="border"].blue').val(chroma(x).get('rgb.b') );
@@ -503,7 +513,9 @@ UpdateValue()
 }
 
 function RandomColor6() {
-var x = chroma.random()
+// var x = chroma.random()
+	var Colors = ['00ff00','8080ff','c0c0c0','000000','ffffff','ffff00','77ffff','00007f','600000','ff0000','952aab','ff0066','fa6d6d','00ffff','ccffff','c056a2','ff6ec7','ff7f00','8e236b','7f500d','0366cc','fbf305','ff6403','dd0907','f20884','4700a5','0000d3','02abea','1fb714','006412','562c05','90713a','404040','117dbb','8b12ae','4da60c','a74f01'] 
+ var x = '#' + Colors[getRandomInt(Colors.length)]
 $('input[type="range"][name="linkcolor"].red').val(chroma(x).get('rgb.r') );
 $('input[type="range"][name="linkcolor"].green').val(chroma(x).get('rgb.g') );
 $('input[type="range"][name="linkcolor"].blue').val(chroma(x).get('rgb.b') );
@@ -513,7 +525,9 @@ UpdateValue()
 }
 
 function RandomColor7() {
-var x = chroma.random()
+// var x = chroma.random()
+	var Colors = ['ff8c00','e81123','d13438','c30052','bf0077','9a0089','881798','744da9','10893e','107c10','018574','2d7d9a','0063b1','6b69d6','8e8cd8','8764b8','038387','486860','525e54','7e735f','4c4a48','515c6b','4a5459','000000','ffffff']
+ var x = '#' + Colors[getRandomInt(Colors.length)]
 $('input[type="range"][name="buttoncolor"].red').val(chroma(x).get('rgb.r') );
 $('input[type="range"][name="buttoncolor"].green').val(chroma(x).get('rgb.g') );
 $('input[type="range"][name="buttoncolor"].blue').val(chroma(x).get('rgb.b') );
@@ -523,7 +537,9 @@ UpdateValue()
 }
 
 function RandomColor8() {
-var x = chroma.random()
+// var x = chroma.random()
+var Colors = ['1d1d1d','8d0017','ac0000','d34500','eb9900','ffb317','7d9b34','5ea200','417800','1d5100','003c00','44a177','008d8f','00a8a9','009bf0','0068b7','003981','091a45','180052','490090','711993','8d37af','8c005a','ab0064','ea0098','5e5e5e','be0021','f73400','ff892b','ffc12c','ffc91a','8acb00','6db000','169900','58cc7d','00d1d2','41c3ff','008ee1','00baff','0075c6','4617b4','6800b3','a13bc9','bd56e5','c02883','f900a5','ff5fdc','e2e2e2']
+ var x = '#' + Colors[getRandomInt(Colors.length)]
 $('input[type="range"][name="bgo"].red').val(chroma(x).get('rgb.r'));
 $('input[type="range"][name="bgo"].green').val( chroma(x).get('rgb.g'));
 $('input[type="range"][name="bgo"].blue').val( chroma(x).get('rgb.b'));
@@ -1096,7 +1112,8 @@ function CompileRecColors() {
 	let str = '';
 // Body Background Color
 	str = '';
-	var Colors = ['f9ebc3','ede5dd','f7e1d3','dfdbc3','fbe300','ffbf99','fdc355','cdbd89','d5a593','a37719','836d35','776b41','f14700','dd3509','a34111','7b3b09', '4f4341','454545','611d03','891100','71130f','ebfffb','ebf1f5','f5ebf5','e7f3d1','bde9fd','dfbddd','c3d167','a5b5c5','6599ff','6b93b1','978f33','53835d','7f6f9f','d335f7','337700','006baf','2b53b5','2d2b17','003715','012d59','6f017b','790145','ffffff','f1f1f1','ebebeb','000000']
+//	var Colors = ['f9ebc3','ede5dd','f7e1d3','dfdbc3','fbe300','ffbf99','fdc355','cdbd89','d5a593','a37719','836d35','776b41','f14700','dd3509','a34111','7b3b09', '4f4341','454545','611d03','891100','71130f','ebfffb','ebf1f5','f5ebf5','e7f3d1','bde9fd','dfbddd','c3d167','a5b5c5','6599ff','6b93b1','978f33','53835d','7f6f9f','d335f7','337700','006baf','2b53b5','2d2b17','003715','012d59','6f017b','790145','ffffff','f1f1f1','ebebeb','000000']
+	var Colors = ['1d1d1d','8d0017','ac0000','d34500','eb9900','ffb317','7d9b34','5ea200','417800','1d5100','003c00','44a177','008d8f','00a8a9','009bf0','0068b7','003981','091a45','180052','490090','711993','8d37af','8c005a','ab0064','ea0098','5e5e5e','be0021','f73400','ff892b','ffc12c','ffc91a','8acb00','6db000','169900','58cc7d','00d1d2','41c3ff','008ee1','00baff','0075c6','4617b4','6800b3','a13bc9','bd56e5','c02883','f900a5','ff5fdc','e2e2e2']
 	var socialAM = Colors.length
 
 	for (let i = 0; i < socialAM; i++) {
@@ -1109,7 +1126,9 @@ function CompileRecColors() {
 
 // Overlay Color
 	str = '';
-	var Colors = ['f9ebc3','ede5dd','f7e1d3','dfdbc3','fbe300','ffbf99','fdc355','cdbd89','d5a593','a37719','836d35','776b41','f14700','dd3509','a34111','7b3b09', '4f4341','454545','611d03','891100','71130f','ebfffb','ebf1f5','f5ebf5','e7f3d1','bde9fd','dfbddd','c3d167','a5b5c5','6599ff','6b93b1','978f33','53835d','7f6f9f','d335f7','337700','006baf','2b53b5','2d2b17','003715','012d59','6f017b','790145','ffffff','f1f1f1','ebebeb','000000']
+//	var Colors = ['f9ebc3','ede5dd','f7e1d3','dfdbc3','fbe300','ffbf99','fdc355','cdbd89','d5a593','a37719','836d35','776b41','f14700','dd3509','a34111','7b3b09', '4f4341','454545','611d03','891100','71130f','ebfffb','ebf1f5','f5ebf5','e7f3d1','bde9fd','dfbddd','c3d167','a5b5c5','6599ff','6b93b1','978f33','53835d','7f6f9f','d335f7','337700','006baf','2b53b5','2d2b17','003715','012d59','6f017b','790145','ffffff','f1f1f1','ebebeb','000000']
+	var Colors = ['1d1d1d','8d0017','ac0000','d34500','eb9900','ffb317','7d9b34','5ea200','417800','1d5100','003c00','44a177','008d8f','00a8a9','009bf0','0068b7','003981','091a45','180052','490090','711993','8d37af','8c005a','ab0064','ea0098','5e5e5e','be0021','f73400','ff892b','ffc12c','ffc91a','8acb00','6db000','169900','58cc7d','00d1d2','41c3ff','008ee1','00baff','0075c6','4617b4','6800b3','a13bc9','bd56e5','c02883','f900a5','ff5fdc','e2e2e2']
+
 	var socialAM = Colors.length
 
 	for (let i = 0; i < socialAM; i++) {
@@ -1122,7 +1141,9 @@ function CompileRecColors() {
 
 // Header Color
 	str = '';
-	var Colors = ['fec356','6699ff','6c93b1','a47719','846d35','786c42','f14800','337800','006cb0','dd360a','a34112','474646','7b3b0a','4f4341','0038d8','2d2c18','611e03','003816','891100','012e59','721410','6f027c','7a0146'] 
+//	var Colors = ['fec356','6699ff','6c93b1','a47719','846d35','786c42','f14800','337800','006cb0','dd360a','a34112','474646','7b3b0a','4f4341','0038d8','2d2c18','611e03','003816','891100','012e59','721410','6f027c','7a0146'] 
+	var Colors = ['ababab','8acfff','f598d6','f3d240','add85f','78d9d9','ffaf51','ff6f6f','f359a8','47cf74','c48aff','58b1fc','9898ff','c3b5a8','ffffff','576dcd','4074ff','4099e1','40b2cc','40c5ae','40c280','9bcc3f','fce840','f98a48','e1676a','ed4c5a','ef4086','bc3b8c','7e73a5','879289'] 
+
 	var socialAM = Colors.length
 
 	for (let i = 0; i < socialAM; i++) {
@@ -1135,7 +1156,8 @@ function CompileRecColors() {
 
 // Page Background Color
 	str = '';
-	var Colors = ['ebf2f5','e7f4d2','f5ebf5','f9ecc3','eee5de','f7e1d4','d4e6f7','dfdbc3','dfbddd','cebe8a','a5b5c6','474646','2d2c18','611e03','012e59','ffffff','f2f2f2','ebebeb','000000'] 
+//	var Colors = ['ebf2f5','e7f4d2','f5ebf5','f9ecc3','eee5de','f7e1d4','d4e6f7','dfdbc3','dfbddd','cebe8a','a5b5c6','474646','2d2c18','611e03','012e59','ffffff','f2f2f2','ebebeb','000000'] 
+	var Colors = ['000000','ffffff','dcdcdc','787878','464646','0a3b76','4395d1','99d9ea','0076a3','0d686b','00a99d','00a99d','7accc8','82ca9c','74a402','c4df9b','84871c','d9d56f','fff468','fff799','ffc20e','eb6119','fbaf5d','e57300','c14000','9e6b52','8c6239','c7b299','b82832','d85171','fedfec','563f7f','a186be','d9cfe5']
 	var socialAM = Colors.length
 
 	for (let i = 0; i < socialAM; i++) {
@@ -1148,7 +1170,8 @@ function CompileRecColors() {
 
 // Page Background Text Color
 	str = '';
-    var Colors = ['ffffff','8e8e8e','000000','e2e2e2','cccccc','2e2e2e','f2f5f5','bed1cf','0e191a','e6ecf2','c5ced9','39424d']
+//    var Colors = ['ffffff','8e8e8e','000000','e2e2e2','cccccc','2e2e2e','f2f5f5','bed1cf','0e191a','e6ecf2','c5ced9','39424d']
+	var Colors = ['000000','3a3a3a','bfbfbf','e6e6e6','ffffff','ff0000','00ff00','0000ff','ffff00','ff00ff','00ffff']
 	var socialAM = Colors.length
 
 	for (let i = 0; i < socialAM; i++) {
@@ -1161,7 +1184,8 @@ function CompileRecColors() {
 
 // Page Background Border Color
 	str = '';
-    var Colors = ['ffffff','8e8e8e','000000','e2e2e2','cccccc','2e2e2e','f2f5f5','bed1cf','0e191a','e6ecf2','c5ced9','39424d']
+//    var Colors = ['ffffff','8e8e8e','000000','e2e2e2','cccccc','2e2e2e','f2f5f5','bed1cf','0e191a','e6ecf2','c5ced9','39424d']
+	  var Colors = ['808080','cccccc','6e6e6e','3c3c3c','a3a3a3','800000','008000','000080','808000','800080','008080']
 	var socialAM = Colors.length
 
 	for (let i = 0; i < socialAM; i++) {
@@ -1176,7 +1200,8 @@ function CompileRecColors() {
 
 // Link Color
 	str = '';
-	var Colors = ['fce300','fec356','c4d167','6699ff','6c93b1','a47719','54845e','337800','006cb0','0148c2','6f027c','ffffff'] 
+//	var Colors = ['fce300','fec356','c4d167','6699ff','6c93b1','a47719','54845e','337800','006cb0','0148c2','6f027c','ffffff'] 
+	var Colors = ['00ff00','8080ff','c0c0c0','000000','ffffff','ffff00','77ffff','00007f','600000','ff0000','952aab','ff0066','fa6d6d','00ffff','ccffff','c056a2','ff6ec7','ff7f00','8e236b','7f500d','0366cc','fbf305','ff6403','dd0907','f20884','4700a5','0000d3','02abea','1fb714','006412','562c05','90713a','404040','117dbb','8b12ae','4da60c','a74f01'] 
 	var socialAM = Colors.length
 
 	for (let i = 0; i < socialAM; i++) {
@@ -1190,7 +1215,8 @@ function CompileRecColors() {
 
 // Button Color
 	str = '';
-	var Colors = ['fec356','6699ff','6c93b1','a47719','846d35','786c42','f14800','337800','006cb0','dd360a','a34112','474646','7b3b0a','4f4341','0038d8','2d2c18','611e03','003816','891100','012e59','721410','6f027c','7a0146'] 
+//	var Colors = ['fec356','6699ff','6c93b1','a47719','846d35','786c42','f14800','337800','006cb0','dd360a','a34112','474646','7b3b0a','4f4341','0038d8','2d2c18','611e03','003816','891100','012e59','721410','6f027c','7a0146'] 
+	var Colors = ['ff8c00','e81123','d13438','c30052','bf0077','9a0089','881798','744da9','10893e','107c10','018574','2d7d9a','0063b1','6b69d6','8e8cd8','8764b8','038387','486860','525e54','7e735f','4c4a48','515c6b','4a5459','000000','ffffff']
 	var socialAM = Colors.length
 
 	for (let i = 0; i < socialAM; i++) {
@@ -1353,7 +1379,6 @@ var dropdowncolor = chroma.mix(content_color,'white',MW18HoverThreshold, 'hsl');
 	} else {
 		var dropdowncolor2 = 'inherit';
 		var dropdowncolor3 = 'inherit';
-		var dropdowncolor5 = 'inherit';
 	}
 
 }
@@ -1362,9 +1387,9 @@ var dropdowncolor = chroma.mix(content_color,'white',MW18HoverThreshold, 'hsl');
 
 document.querySelector('html').style.setProperty("--dropdown-bg", dropdowncolor);
 document.querySelector('body').style.setProperty("--content-border", dropdowncolor2);
-document.querySelector('body').style.setProperty("--content-color", content_text);
 if (window.MW18darkmode === true) {
 	document.querySelector('body').style.setProperty("--content-bg", content_color);
+	document.querySelector('body').style.setProperty("--content-color", content_text);
 } else {
 	document.querySelector('body').style.setProperty("--content-bg", 'inherit');
 	document.querySelector('body').style.setProperty("--content-color", dropdowncolor3);
@@ -1463,19 +1488,10 @@ function CheckAdapt() {
 	if ($("body.options").length   && !($("html.contrast.win10").length) ) {
 		if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--adaptive-content-bg") === 'true') && !($("html.contrast.win10").length)  ) {
 				document.querySelector('input#ThmAdpt').checked = true;
-				if (window.MW18darkmode === true) {
-					$(".adapt-off1").removeAttr('disabled');
-					$(".adapt-off2").attr('disabled', 'true');
-				} else {
-					$(".adapt-off1").attr('disabled', 'true');
-					$(".adapt-off2").removeAttr('disabled');
-				}	
 				$(".adapt-off").attr('disabled', 'true');
 		} else {
 				document.querySelector('input#ThmAdpt').checked = false;
 				$(".adapt-off").removeAttr('disabled');
-				$(".adapt-off1").removeAttr('disabled');
-				$(".adapt-off2").removeAttr('disabled');
 		}
 	}
 }
