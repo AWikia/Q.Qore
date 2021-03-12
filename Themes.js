@@ -24,9 +24,6 @@ ColorUpdate(true);
 		$("head").append(
 		'<meta name="theme-color" content="' + chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--emphasis-bg")) + '">' +
 		'<meta name="color-scheme" content="light dark">' +
-		'<link rel="manifest" href="manifest.json" crossorigin="use-credentials">' +
-		'<link rel="shortcut icon href="Icons/favicon.ico">' +
-		'<link rel="shortcut icon href="Icons/favicon.ico">'
 		);	
 		$('body').attr("cursor", "mpisto");
 		CursorT('auto');
