@@ -15,7 +15,7 @@
 }
 
 html:not(.contrast):not(.basic) body:not(.phone) .mpisto-gnav.headroom.headroom--not-top {
-	-webkit-backdrop-filter:blur(20px) sepia(20%) contrast(120%) invert(20%) grayscale(20%) saturate(120%) hue-rotate(20deg) brightness(120%);
+	-webkit-backdrop-filter:blur(4px) sepia(24%) contrast(124%) invert(24%) grayscale(24%) saturate(124%) hue-rotate(24deg) brightness(124%);
 	backdrop-filter:blur(4px) sepia(24%) contrast(124%) invert(24%) grayscale(24%) saturate(124%) hue-rotate(24deg) brightness(124%);
 }
 
@@ -24,12 +24,12 @@ html:not(.contrast):not(.basic) body:not(.phone) .mpisto-gnav.headroom.headroom-
 }
 
 
-body:not(.phone) .mpisto-gnav.headroom.headroom--not-top::after {
+html:not(.basic) body:not(.phone) .mpisto-gnav.headroom.headroom--not-top::after {
 	background-color:var(--accent-bg);
 }
 
 
-html:not(.contrast) body:not(.phone) .mpisto-gnav.headroom.headroom--not-top {
+html:not(.contrast):not(.basic) body:not(.phone) .mpisto-gnav.headroom.headroom--not-top {
 	color:var(--button-color-text);
 	box-shadow: 0 0 3px var(--content-color), 0 0 3px var(--dropdown-bg);
 }
