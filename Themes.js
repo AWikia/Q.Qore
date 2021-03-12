@@ -7,12 +7,26 @@ window.MW18HoverThreshold = 0.25;
 (function () {
 document.querySelector('html').className += " theme-A"; // We begin with the first theme selected
 ColorUpdate(true);
+	if ( ($("body.mpisto-2018").length) || ($("body.mpisto-2018-mobile").length)) {
+		$("head").append(
+		'<meta name="theme-color" content="' + chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--emphasis-bg")) + '">' +
+		'<meta name="color-scheme" content="light dark">' +
+		'<link rel="manifest" href="manifest.json" crossorigin="use-credentials">' +
+		'<link rel="shortcut icon href="favicon.ico">' +
+		'<link rel="icon href="favicon.ico">' +
+		'<link rel="favicon href="favicon.ico">'
+		);	
+	}
 	if ($("body.options").length) {
 		UpdateSet()
 		CompileRecColors();
 	}
 		$("head").append(
-		'<meta name="theme-color" content="' + chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--emphasis-bg")) + '">'
+		'<meta name="theme-color" content="' + chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--emphasis-bg")) + '">' +
+		'<meta name="color-scheme" content="light dark">' +
+		'<link rel="manifest" href="manifest.json" crossorigin="use-credentials">' +
+		'<link rel="shortcut icon href="Icons/favicon.ico">' +
+		'<link rel="shortcut icon href="Icons/favicon.ico">'
 		);	
 		$('body').attr("cursor", "mpisto");
 		CursorT('auto');
@@ -100,9 +114,11 @@ function CheckTheme() {
  }
 
 /* Top bar for Mobile Devices */
-
 if ($("html.contrast").length) {
 	$('meta[name*="theme-color"]').attr("content", chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--dropdown-bg")));
+} else if ($("html.basic").length) {
+	$('meta[name*="theme-color"]').attr("content", chroma('rgb(' + getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg") + ')'));
+
 } else {
 	$('meta[name*="theme-color"]').attr("content", chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--emphasis-bg")));
 /*

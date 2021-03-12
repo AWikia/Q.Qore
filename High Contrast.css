@@ -622,10 +622,18 @@ color:inherit;
 .contrast .mpisto-option-way h1, .contrast .editor-header, .contrast .mpisto-content .mpisto-page-header-title {
 	background-image:none;
 	color:rgb(var(--community-header-text));
-	border-bottom:1px solid transparent;
+	border-bottom:1px solid rgb(var(--community-header-text));
 	background-color:rgb(var(--community-header-bg));
 	box-shadow:-1px 0px rgb(var(--community-header-bg)), 1px 0px rgb(var(--community-header-bg)),
-			   0px -1px 0 1px rgb(var(--community-header-bg)), 0px 1px rgb(var(--community-header-text))!important;
+			   0px -1px 0 1px rgb(var(--community-header-bg))!important;
+
+}
+
+.basic .mpisto-userpages-header, .contrast .mpisto-userpages-header{
+	color:rgb(var(--community-header-text));
+	background-color:rgb(var(--community-header-bg));
+	box-shadow:-1px 0px rgb(var(--community-header-bg)), 1px 0px rgb(var(--community-header-bg)),
+			   0px -1px 0 1px rgb(var(--community-header-bg))!important;
 
 }
 

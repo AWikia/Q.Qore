@@ -6293,8 +6293,8 @@ height:calc(100vh - 142px);
   display:block;
   display:flex;
   align-items:center;
-  padding:10px 0 6px 10px;
-  margin:0;
+  padding:10px 1px 6px 11px;
+  margin:0 -1px;
 /*
   border-bottom:1px solid var(--content-border);
 */
