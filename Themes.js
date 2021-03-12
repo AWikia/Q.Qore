@@ -12,9 +12,9 @@ ColorUpdate(true);
 		'<meta name="theme-color" content="' + chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--emphasis-bg")) + '">' +
 		'<meta name="color-scheme" content="light dark">' +
 		'<link rel="manifest" href="manifest.json" crossorigin="use-credentials">' +
-		'<link rel="shortcut icon href="favicon.ico">' +
-		'<link rel="icon href="favicon.ico">' +
-		'<link rel="favicon href="favicon.ico">'
+		'<link rel="shortcut icon" href="favicon.ico">' +
+		'<link rel="icon" href="favicon.ico">' +
+		'<link rel="favicon" href="favicon.ico">'
 		);	
 	}
 	if ($("body.options").length) {
