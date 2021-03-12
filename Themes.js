@@ -23,7 +23,7 @@ ColorUpdate(true);
 	}
 		$("head").append(
 		'<meta name="theme-color" content="' + chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--emphasis-bg")) + '">' +
-		'<meta name="color-scheme" content="light dark">' +
+		'<meta name="color-scheme" content="light dark">'
 		);	
 		$('body').attr("cursor", "mpisto");
 		CursorT('auto');
