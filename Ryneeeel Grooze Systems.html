@@ -440,7 +440,7 @@ document.getElementById("Handler").className += " mpisto-servers"
 							<a>Export as PDF</a>
 							</li>
 							<li>
-							<a>Export article HTML source</a>
+							<a onclick="RawContent()">Export article HTML source
 							</li>
 						  </ul>
 				  </div>
@@ -594,7 +594,7 @@ document.getElementById("Handler").className += " mpisto-servers"
 						<a>Export as PDF</a>
 						</li>
 						<li>
-						<a>Export article HTML source</a>
+						<a onclick="RawContent()">Export article HTML source
 						</li>
 					  </ul>
 			  </div>
@@ -752,7 +752,7 @@ document.getElementById("Handler").className += " mpisto-servers"
                     <a>Export as PDF</a>
                     </li>
                     <li>
-                    <a>Export article HTML source</a>
+                    <a onclick="RawContent()">Export article HTML source</a>
                     </li>
                   </ul>
               </div>		
@@ -4554,6 +4554,7 @@ Toggle is a control that is used to quickly switch between two possible states. 
 
 <script src="jQuery.js"></script>
 <script src="Chroma.js"></script>
+<script src="FileSaver.js"></script>
 <script src="UserAgents.js" ></script>
 <script src="MpistoAgent.js"></script>
 <script src="Headroom.js" /></script>

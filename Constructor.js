@@ -416,3 +416,7 @@ function CategoryRemove() {
 
 			});
 }
+
+function RawContent() {
+	DownloadData(window.MW18oldcontent, window.MW18oldtitle, 'html');
+}

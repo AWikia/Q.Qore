@@ -956,6 +956,27 @@ function UpdateValue() {
 	ColorUpdate(true);
 }
 
+/* Downloads all modificative values of the current selected theme to a file */
+function DownloadTheme() {
+result = '.theme-A {\n' + // Beginning
+		 '--background-image:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-image")  + ';\n' +
+		 '--background-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-color")  + ';\n' +
+		 '--background-overlay:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-overlay")  + ';\n' +
+		 '--link-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--link-color")  + ';\n' +
+		 '--content-bg:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--content-bg")  + ';\n' +
+		 '--content-border:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border")  + ';\n' +
+		 '--content-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color")  + ';\n' +
+		 '--button-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--button-color")  + ';\n' +
+		 '--community-header-bg:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg")  + ';\n' +
+		 '--adaptive-content-bg:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--adaptive-content-bg")  + ';\n' +
+		 '--body-display:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--body-display")  + ';\n' +
+		 '--background-va:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-va")  + ';\n' +
+		 '--background-no-tiling:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-no-tiling")  + ';\n' +
+		 '}' // Ending
+DownloadData(result,'MyTheme','css');
+alert('Once you save the file, put the stylesheet contents to MpistoAgent.css for loading to other sessions or upload it to any website.');
+}
+
 /* Resets the Theme to defaults */
 function ResetTheme() {
 if (confirm('Are you sure you want to reset this theme to the pre-set ones? This action cannot be undone') === true) {
