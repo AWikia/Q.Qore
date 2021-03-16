@@ -235,6 +235,20 @@ background-image:linear-gradient(to left,rgba(255,255,255, 0) 200px,rgb(var(--co
 }
 
 
+.basic .preview-window-window h2 button {
+	--button-background-hover:rgba(var(--link-color),0.2);
+	--button-background-active:rgba(var(--link-color-dark),0.4);
+	--button-background-color:inherit;
+	border-color:currentColor;
+	border-top:0;
+	border-bottom:0;
+}
+
+.basic .preview-window-window h2 button.close {
+	--button-background-hover:rgba(255,0,0,0.2);
+	--button-background-active:rgba(191,0,0,0.4);
+	--button-background-color:inherit;
+}
 
 
 /* CSS configuration for Brightness */
@@ -629,13 +643,68 @@ color:inherit;
 
 }
 
-.basic .mpisto-userpages-header, .contrast .mpisto-userpages-header{
-	color:rgb(var(--community-header-text));
-	background-color:rgb(var(--community-header-bg));
-	box-shadow:-1px 0px rgb(var(--community-header-bg)), 1px 0px rgb(var(--community-header-bg)),
-			   0px -1px 0 1px rgb(var(--community-header-bg))!important;
+.basic .mpisto-userpages-header,  .basic .preview-window-window,
+.contrast .mpisto-userpages-header, .contrast .preview-window-window {
+	box-shadow:-4px 0 0 0 rgb(var(--community-header-bg)),
+				4px 0 0 0 rgb(var(--community-header-bg)),
+				0 4px 0 0 rgb(var(--community-header-bg)),
+				4px 4px 0 0 rgb(var(--community-header-bg)),
+				-4px 4px 0 0 rgb(var(--community-header-bg)),
+				-5px 0 0 0 rgb(var(--community-header-text)),
+				5px 0 0 0 rgb(var(--community-header-text)),
+				0 5px 0 0 rgb(var(--community-header-text)),
+				5px 5px 0 0 rgb(var(--community-header-text)),
+				-5px 5px 0 0 rgb(var(--community-header-text)),
+				0 -1px 0 0 rgb(var(--community-header-text)),
+				-5px -1px 0 0 rgb(var(--community-header-text)),
+				5px -1px 0 0 rgb(var(--community-header-text))!important;
 
 }
+
+
+.basic .preview-window-window.inactive,
+.contrast .preview-window-window.inactive {
+	box-shadow:-4px 0 0 0 var(--content-border-blend-light),
+				4px 0 0 0 var(--content-border-blend-light),
+				0 4px 0 0 var(--content-border-blend-light),
+				4px 4px 0 0 var(--content-border-blend-light),
+				-4px 4px 0 0 var(--content-border-blend-light),
+				-5px 0 0 0 var(--content-border-blend),
+				5px 0 0 0 var(--content-border-blend),
+				0 5px 0 0 var(--content-border-blend),
+				5px 5px 0 0 var(--content-border-blend),
+				-5px 5px 0 0 var(--content-border-blend),
+				0 -1px 0 0 var(--content-border-blend),
+				-5px -1px 0 0 var(--content-border-blend),
+				5px -1px 0 0 var(--content-border-blend)!important;
+
+}
+
+
+.basic .preview-window-window section, .contrast .preview-window-window section {
+	border-color:rgb(var(--community-header-text));
+}
+
+.basic .preview-window-window.inactive section, .contrast .preview-window-window.inactive section {
+	border-color:var(--content-border-blend);
+}
+
+
+.contrast .preview-window-window h2 button {
+	background-clip:padding-box;
+	background-color:var(--dropdown-bg);
+	color:var(--content-color);
+}
+
+
+.contrast .preview-window-window h2 button:hover {
+	background-color:var(--button-color);
+	color:var(--button-color-text);
+	border-color:currentColor;
+}
+
+
+
 
 .contrast .editor-controls {
 	border-color:var(--content-color);

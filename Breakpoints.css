@@ -368,6 +368,11 @@ display:inline-flex;
 	width:175px;
 }
 
+.preview-window-desk {
+	grid: auto-flow / repeat(1, 1fr);
+	width:300px;
+}
+
 }
 
 /* XS + S */
@@ -706,6 +711,13 @@ display:inline-flex;
 .mpisto-option-pane h1 {
 	font-size:10px;
 }
+
+.basicp .preview-window-desk, .modernp.pane-on .preview-window-desk {
+	grid: auto-flow / repeat(1, 1fr);
+	width:300px;
+}
+
+
 }
 
 /* M */

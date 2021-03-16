@@ -3069,6 +3069,7 @@ border-left-color:rgba(var(--community-header-text),0.8);
 	.color-header .link {
 		padding: 0 11px;
 		height:60px;
+		margin:0 0 0 -1px;
 	}
 	
 	.color-header .wds-dropdown {
@@ -6772,6 +6773,99 @@ border:1px solid currentColor;
 .mpisto-option-way.p4 .wds-dropdown__content .wds-list label {
 	display:block;
 }
+
+.preview-window-desk {
+	background-color:var(--background-color);
+	min-height:300px;
+	width:600px;
+	margin:10px auto 0;
+	display:grid;
+	grid: auto-flow / repeat(2, 1fr);
+}
+
+.preview-window-window {
+	margin:0px auto 20px;
+	top:10px;
+	position:relative;
+	width:280px;
+	display:flex;
+	flex-direction:column;
+	background-color:rgb(var(--community-header-bg));
+	color:rgb(var(--community-header-text));
+	box-shadow:0px 0px 0 1px rgb(var(--community-header-dark)), 0 0 10px -3px rgb(var(--community-header-text))!important;
+}
+
+
+.preview-window-window.inactive {
+	background-color:var(--content-border-blend-light);
+	box-shadow:0px 0px 0 1px var(--content-border-blend), 0 0 10px -3px rgb(var(--community-header-text))!important;
+	color:var(--content-border-blend);
+}
+
+
+.preview-window-window h2 {
+	display:flex;
+	align-items:center;
+	margin:0;
+	padding:0 0 0 4px;
+}
+
+.preview-window-window h2 span {
+flex:1;
+font-size:13px;
+vertical-align:middle;
+overflow:hidden;
+text-overflow:ellipsis;
+white-space:nowrap;
+}
+
+.preview-window-window h2 button {
+	--button-background-hover:rgba(var(--community-header-text),0.2);
+	--button-background-active:rgba(var(--community-header-text),0.4);
+	--button-background-color:inherit;
+	background-color:transparent;
+	background-image:none;
+	color:inherit;
+	border-color:transparent;
+	transition:150ms;
+	height:28px;
+	width:33px;
+	display:inline-flex;
+	align-items:center;
+	justify-content:center;
+	margin:0 0 0 -1px;
+}
+
+.preview-window-window.inactive h2 button {
+	--button-background-color:var(--content-border-text);
+}
+
+.preview-window-window h2 button.close {
+	--button-background-hover:red;
+	--button-background-active:rgba(255,0,0,0.5);
+	--button-background-color:white;
+}
+
+.preview-window-window h2 button:hover {
+	background-color:var(--button-background-hover);
+	color:var(--button-background-color);
+}
+
+.preview-window-window h2 button:active {
+	background-color:var(--button-background-active);
+	color:var(--button-background-color);
+}
+
+
+.preview-window-window section {
+	background-color:var(--content-bg);
+	color:var(--content-color);
+	border:1px solid transparent;
+	padding:4px;
+	font-size:12px;
+	flex:1;
+}
+
 
 .lightbox-container {
   visibility:hidden;
