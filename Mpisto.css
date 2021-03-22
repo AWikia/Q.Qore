@@ -414,8 +414,7 @@ scrollbar-color:var(--button-color) var(--background-color);
 	--scrollbar-thumb-color-3:var(--button-color-dark-super);
 	--scrollbar-thumb-text:var(--button-color-text);
 /* Aliases */
---background-overlay:var(--background-color);
---adaptive-content-bg:false;
+--background-overlay:auto;
 --body-display:modern;
 --background-va:top;
 --background-no-tiling:false;
@@ -593,6 +592,15 @@ body[body-display*="legacy"][body-no-tiling*="true"] {
 	background-repeat:no-repeat;
 }
 
+
+body[content-color-auto*="false"] .colora-on,
+body[content-color-auto*="true"] .colora-off,
+body[content-border-auto*="false"] .bordera-on,
+body[content-border-auto*="true"] .bordera-off,
+body[background-overlay-auto*="false"] .overlaya-on,
+body[background-overlay-auto*="true"] .overlaya-off { 
+	display:none!important;
+}
 
 ::selection {
 background-color:rgba(var(--link-color-dark), 0.5);
@@ -6808,6 +6816,15 @@ border:1px solid currentColor;
 	align-items:center;
 	margin:0;
 	padding:0 0 0 4px;
+}
+
+.preview-window-window h2 img {
+	width:16px;
+	height:16px;
+}
+
+.preview-window-window h2 img + span {
+	margin-left:4px;
 }
 
 .preview-window-window h2 span {
