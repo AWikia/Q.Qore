@@ -1007,6 +1007,7 @@ result = '.theme-A {\n' + // Beginning
 		 '--community-header-bg:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg")  + ';\n' +
 		 '--body-display:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--body-display")  + ';\n' +
 		 '--background-va:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-va")  + ';\n' +
+		 '--background-size:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-size")  + ';\n' +
 		 '--background-no-tiling:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-no-tiling")  + ';\n' +
 		 '}' // Ending
 DownloadData(result,'MyTheme','css');
@@ -1636,15 +1637,52 @@ function CheckBG() {
 		} else {
 				document.querySelector('input#BG2').checked = false;
 		}
+	/* BG3 */
+		if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--background-size") === 'contain') && !($("html.contrast.win10").length)  ) {
+				document.querySelector('input#BG3_2').checked = true;
+				document.querySelector('input#BG3_1').checked = false;
+				document.querySelector('input#BG3_3').checked = false;
+				document.querySelector('input#BG3_4').checked = false;
+				$(".cover-off").removeAttr('disabled');
+				$(".stretch-off").removeAttr('disabled');
+				$(".noncover-off").attr('disabled', 'true');
+		} else if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--background-size") === 'stretched') && !($("html.contrast.win10").length)  ) {
+				document.querySelector('input#BG3_3').checked = true;
+				document.querySelector('input#BG3_1').checked = false;
+				document.querySelector('input#BG3_2').checked = false;
+				document.querySelector('input#BG3_4').checked = false;
+				$(".cover-off").removeAttr('disabled');
+				$(".stretch-off").attr('disabled', 'true');
+				$(".noncover-off").attr('disabled', 'true');
+		} else if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--background-size") === 'full') && !($("html.contrast.win10").length)  ) {
+				document.querySelector('input#BG3_4').checked = true;
+				document.querySelector('input#BG3_1').checked = false;
+				document.querySelector('input#BG3_2').checked = false;
+				document.querySelector('input#BG3_3').checked = false;
+				$(".cover-off").removeAttr('disabled');
+				$(".stretch-off").removeAttr('disabled');
+				$(".noncover-off").attr('disabled', 'true');
+		} else {
+				document.querySelector('input#BG3_1').checked = true;
+				document.querySelector('input#BG3_2').checked = false;
+				document.querySelector('input#BG3_3').checked = false;
+				document.querySelector('input#BG3_4').checked = false;
+				$(".noncover-off").removeAttr('disabled');
+				$(".stretch-off").removeAttr('disabled');
+				$(".cover-off").attr('disabled', 'true');
+		}
 	}
+
 	$("body").attr('body-display', getComputedStyle(document.querySelector('html')).getPropertyValue("--body-display") );
+	$("body").attr('background-size', getComputedStyle(document.querySelector('html')).getPropertyValue("--background-size") );
 	$("body").attr('body-no-tiling', getComputedStyle(document.querySelector('html')).getPropertyValue("--background-no-tiling") );
 }
 
 /* 
 ** BG  = Backgkround Body Display - body-display attribute is ued
 ** BG1 = Background Position - No body attribute is used
-** BG2 = Background Tiling (Only on Legacy Background Display) - body-tiling attribute is used
+** BG2 = Background Tiling (Only on Legacy Background Display with Full or Contain sizing) - background-no-tiling attribute is used
+** BG3 = Background Size (Only on Legacy Background Display) - background-size attribute is used
 */
 
 function ToggleBG() {
@@ -1683,7 +1721,6 @@ var legacy = document.querySelector('input#BG_2');
 		'}'
 		);	
 	}
-//	console.log('Adaptive theme enabled. Content border and Content Color theming are now automatically calculated.');
 	} else if (modern.checked) {
 
 	if ($("html.theme-A").length) {
@@ -1717,7 +1754,6 @@ var legacy = document.querySelector('input#BG_2');
 		'}'
 		);	
 	}
-//	console.log('Adaptive theme disabled. Content border and Content Color theming are now manually chosen.');
 	}	
 	ColorUpdate(true);
 }
@@ -1841,6 +1877,55 @@ var x = document.querySelector('input#BG2');
 }
 
 
+
+function ToggleBG3() {
+var cover= document.querySelector('input#BG3_1');
+var contain = document.querySelector('input#BG3_2');
+var stretched = document.querySelector('input#BG3_3');
+var full = document.querySelector('input#BG3_4');
+let str = "";
+if (cover.checked) {
+	str = "cover";
+} else if (contain.checked) {
+	str = "contain";
+} else if (stretched.checked) {
+	str = "stretched";
+} else if (full.checked) {
+	str = "full";
+}
+	if ($("html.theme-A").length) {
+		$("style.designer-style.theme-A").append(
+		'.theme-A:not(.win10) {' +
+		'--background-size:' + str + '!important;' +
+		'}'
+		);	
+	}
+
+	if ($("html.theme-B").length) {
+		$("style.designer-style.theme-B").append(
+		'.theme-B:not(.win10) {' +
+		'--background-size:' + str + '!important;' +
+		'}'
+		);	
+	}
+
+	if ($("html.theme-C").length) {
+		$("style.designer-style.theme-C").append(
+		'.theme-C:not(.win10) {' +
+		'--background-size:' + str + '!important;' +
+		'}'
+		);	
+	}
+
+	if ($("html.theme-D").length) {
+		$("style.designer-style.theme-D").append(
+		'.theme-D:not(.win10) {' +
+		'--background-size:' + str + '!important;' +
+		'}'
+		);	
+	}
+	ColorUpdate(true);
+}
 
 
 /* Toggles Theme */

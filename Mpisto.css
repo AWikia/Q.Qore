@@ -417,6 +417,7 @@ scrollbar-color:var(--button-color) var(--background-color);
 --background-overlay:auto;
 --body-display:modern;
 --background-va:top;
+--background-size:cover;
 --background-no-tiling:false;
 /* Fonts */
 --font-family:"Didact Gothic", "Inter", -apple-system, BlinkMacSystemFont;
@@ -583,9 +584,21 @@ text-shadow:0 0 1px rgba(0,0,0,0.1),0 0 1px rgba(255,255,255,0.1); /* Partially 
 }
 
 body[body-display*="legacy"] {
-	background-size:auto;
 	background-repeat:repeat;
 	--background-overlay:var(--background-color)!important;
+}
+
+body[body-display*="legacy"][background-size*="contain"] {
+	background-size:contain;
+}
+
+body[body-display*="legacy"][background-size*="stretched"] {
+	background-size:100% 100%;
+	background-position:center;
+}
+
+body[body-display*="legacy"][background-size*="full"] {
+	background-size:auto;
 }
 
 body[body-display*="legacy"][body-no-tiling*="true"] {
