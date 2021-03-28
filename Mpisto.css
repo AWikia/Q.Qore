@@ -7185,18 +7185,14 @@ margin-right:0;
 .main .wds-banner-notification{background-color:var(--dropdown-bg); color:var(--content-color);}
 .main .wds-banner-notification+.wds-banner-notification .wds-banner-notification__close,.wds-banner-notification+.wds-banner-notification .wds-banner-notification__text{ border-color:var(--content-border);}
 .main .wds-banner-notification__text{color:inherit}
-.main .wds-banner-notification__container{box-shadow:0 2px 6px 0 rgba(0,0,0,.2), 0 2px 6px 0 rgba(255,255,255,0.2);}
-.wds-banner-notification__container:empty {
-	display:none;
-}
+.main .wds-banner-notification__container{box-shadow:0 2px 6px 0 rgba(0,0,0,.2), 0 2px 6px 0 rgba(255,255,255,0.2);  z-index:19;}
 
-@supports (position:sticky) or (position:-webkit-sticky) {
-.wds-banner-notification__container {
-  position:-webkit-sticky;
-  position:sticky;
+.headroom.headroom--not-top .top-gap .wds-banner-notification__container#floatingbanner {
+  position:fixed;
   top:49px;
   z-index:19; /* Needed lower value to allow header dropdowns not to overlap */
 }
+
 
 .wds-banner-notification__container.constructor-controls {
   position:-webkit-sticky;
@@ -7205,7 +7201,6 @@ margin-right:0;
   z-index:100000; /* Needed lower value to allow header dropdowns not to overlap */
 }
 
-}
 
 
 .mpisto-article .wds-banner-notification__container:not(.constructor-controls) {top:auto; position:relative; z-index:0;}
