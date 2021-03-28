@@ -1,39 +1,39 @@
 /* Headroom */
-.mpisto-gnav.headroom {
+.headroom .mpisto-gnav {
 	transition:/*-webkit-backdrop-filter 400ms ease, backdrop-filter 400ms ease,*/ transform 400ms ease;
 	will-change:color, background-color;
 }
 
-.mpisto-gnav.headroom:after {
+.headroom .mpisto-gnav:after {
 	transition:opacity 400ms ease, background-color 400ms ease;
 	will-change:opacity;
 }
 
 
-.mpisto-gnav.headroom--bottom, .phone .mpisto-gnav.headroom.headroom--unpinned {
+.headroom--bottom .mpisto-gnav, .phone.headroom.headroom--unpinned .mpisto-gnav {
 	transform:translateY(-100%);
 }
 
-html:not(.contrast):not(.basic) body:not(.phone) .mpisto-gnav.headroom.headroom--not-top {
+html:not(.contrast):not(.basic) body:not(.phone).headroom.headroom--not-top .mpisto-gnav {
 	-webkit-backdrop-filter:blur(4px) sepia(24%) contrast(124%) invert(24%) grayscale(24%) saturate(124%) hue-rotate(24deg) brightness(124%);
 	backdrop-filter:blur(4px) sepia(24%) contrast(124%) invert(24%) grayscale(24%) saturate(124%) hue-rotate(24deg) brightness(124%);
 }
 
-html:not(.contrast):not(.basic) body:not(.phone) .mpisto-gnav.headroom.headroom--not-top::after {
+html:not(.contrast):not(.basic) body:not(.phone).headroom.headroom--not-top .mpisto-gnav::after {
 	opacity:0.7;
 }
 
 
-html:not(.basic) body:not(.phone) .mpisto-gnav.headroom.headroom--not-top::after {
+html:not(.basic) body:not(.phone).headroom.headroom--not-top .mpisto-gnav::after {
 	background-color:var(--accent-bg);
 }
 
 
-html:not(.contrast):not(.basic) body:not(.phone) .mpisto-gnav.headroom.headroom--not-top {
+html:not(.contrast):not(.basic) body:not(.phone).headroom.headroom--not-top .mpisto-gnav {
 	color:var(--button-color-text);
 	box-shadow: 0 0 3px var(--content-color), 0 0 3px var(--dropdown-bg);
 }
 
-.mpisto-gnav.headroom .wds-list {
+.headroom .mpisto-gnav .wds-list {
 	color:var(--content-color);
 }
