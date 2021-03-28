@@ -803,7 +803,7 @@ document.getElementById("Handler").className += " mpisto-servers"
             </svg>
           </div>
           <span class="wds-banner-notification__text">					Stacked notification 1.</span>
-            <svg onclick="RemoveBannerA()" xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">
+            <svg onclick="RemoveBanner()" xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross-tiny" />
             </svg>
         </div>
@@ -814,7 +814,7 @@ document.getElementById("Handler").className += " mpisto-servers"
             </svg>
           </div>
           <span class="wds-banner-notification__text">					Stacked notification 2.</span>
-          <svg onclick="RemoveBannerB()" xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">
+          <svg onclick="RemoveBanner()" xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross-tiny" />
           </svg>
         </div>
@@ -825,7 +825,7 @@ document.getElementById("Handler").className += " mpisto-servers"
             </svg>
           </div>
           <span class="wds-banner-notification__text">					Stacked notification 3.</span>
-          <svg onclick="RemoveBannerC()" xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">
+          <svg onclick="RemoveBanner()" xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross-tiny" />
           </svg>
         </div>
@@ -836,7 +836,7 @@ document.getElementById("Handler").className += " mpisto-servers"
             </svg>
           </div>
           <span class="wds-banner-notification__text">					Stacked notification 4.</span>
-          <svg onclick="RemoveBannerD()" xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">
+          <svg onclick="RemoveBanner()" xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross-tiny" />
           </svg>
         </div>
@@ -2179,47 +2179,6 @@ function BarSwitch() {
         x.className = x.className.replace(" bar-hidden", "");
     }
 }
-
-function RemoveBannerA() {
-    var x = document.getElementById("Banner1");
-        x.className += " wds-is-transparent";
-	    setTimeout(RemoveBannerA1, 405) 
-}
-function RemoveBannerA1() {
-    var x = document.getElementById("Banner1");
-	document.getElementById("floatingbanner").removeChild(x);
-}
-
-function RemoveBannerB() {
-    var x = document.getElementById("Banner2");
-        x.className += " wds-is-transparent";
-	    setTimeout(RemoveBannerB1, 405) 
-}
-function RemoveBannerB1() {
-    var x = document.getElementById("Banner2");
-	document.getElementById("floatingbanner").removeChild(x);
-}
-
-function RemoveBannerC() {
-    var x = document.getElementById("Banner3");
-        x.className += " wds-is-transparent";
-	    setTimeout(RemoveBannerC1, 405) 
-}
-function RemoveBannerC1() {
-    var x = document.getElementById("Banner3");
-	document.getElementById("floatingbanner").removeChild(x);
-}
-
-function RemoveBannerD() {
-    var x = document.getElementById("Banner4");
-        x.className += " wds-is-transparent";
-	    setTimeout(RemoveBannerD1, 405) 
-}
-function RemoveBannerD1() {
-    var x = document.getElementById("Banner4");
-	document.getElementById("floatingbanner").removeChild(x);
-}
-
 
 /* Make SmartTVs recognize cursors */
 if (navigator.userAgent.match("SmartTV")) {

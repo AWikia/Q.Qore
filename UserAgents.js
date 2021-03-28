@@ -183,3 +183,17 @@ function ToggleModule() {
 
 }
 
+/* Banner Removal */
+function RemoveBanner() {
+$('#floatingbanner .wds-banner-notification')
+	.click(function() {
+		var $this= $(this);
+		$this.addClass("wds-is-transparent")
+		setTimeout(
+		(function () {
+			$this.remove();
+			$('#floatingbanner .wds-banner-notification').off( "click" );
+		}),405);
+	}
+	);
+}
