@@ -150,12 +150,12 @@ if ($("body.tskmngr").length) {
 function ContrastBanner() {
 
 /* For Task Manager */
-if ( ($("body.mpisto-2018").length) && (window.MW18ContrastNotice === false)) {
-	if ( window.matchMedia('(forced-colors: active)').matches ) {
+if  ($("body.mpisto-2018").length) {
+	if ( ( window.matchMedia('(forced-colors: active)').matches ) && (window.MW18ContrastNotice === false) ) {
 		window.MW18ContrastNotice = true;
-		AddFloatingBanner("You're currently using a high contrast theme on your device. You may want to enable high contrast here with either <a onclick='HCcustom()'>leaving the colors unchanged</a> or <a onclick='HCcustom0()'>putting some specialized colors</a> so as to have a consistent high contrast experience.",'contrastbanner')  
+		AddFloatingBanner("You're currently using a high contrast theme on your device. You may want to enable high contrast here with either <a onclick='HCcustom()'>leaving the colors unchanged</a> or <a onclick='HCcustom0()'>putting some specialized colors</a> so as to have a consistent high contrast experience.",'message','contrastbanner')  
 	} else {
-		if ($(".top-gap .contrastbanner").length) {
+		if (!($(".top-gap #contrastbanner").length)) {
 			window.MW18ContrastNotice = false;
 		}
 	}
