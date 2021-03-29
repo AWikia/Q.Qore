@@ -109,43 +109,12 @@ window.MW18newnavblock=false;
 })();
 
 if ( (navigator.userAgent.match("BrowserWarn")) || window.disco ) {
-	$('.mpisto-content .mpisto-wrapper').prepend ( 
-		  '<div class="wds-banner-notification__container browser-warning" id="floatingbanner2">' +
-			'<div class="wds-banner-notification wds-warning" id="BannerBrowser">' +
-			  '<div class="wds-banner-notification__icon">' +
-				'<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">' +
-				  '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-alert-small" />' +
-				'</svg>' +
-			  '</div>' +
-			  '<span class="wds-banner-notification__text"> We\'re dropping support on your browser soon. Please make sure that you must update your browser before its too late!<br>If your device doesn\'t allow you to upgrade your browser or can\'t afford a cutting-edge browser, this means we\'re also dropping support on your device.<br>You can download <a href="https://www.google.com/chrome/">Google Chrome</a>, <a href="https://www.mozilla.org/firefox/">Mozilla Firefox</a> or the <a href="https://support.microsoft.com/help/4501095/download-the-new-microsoft-edge-based-on-chromium">Chromium Edge</a> if you want to still use Qora Qore.</span>' +
-			  '<svg onclick="RemoveBannerBrowser()" xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">' +
-				'<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross-tiny" />' +
-			  '</svg>' +
-			'</div>' +
-		  '</div>'
-
-	);
-
-	$('.mpisto-options-content').prepend ( 
-		  '<div class="wds-banner-notification__container browser-warning" id="floatingbanner2">' +
-			'<div class="wds-banner-notification wds-warning" id="BannerBrowser">' +
-			  '<div class="wds-banner-notification__icon">' +
-				'<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">' +
-				  '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-alert-small" />' +
-				'</svg>' +
-			  '</div>' +
-			  '<span class="wds-banner-notification__text"> We\'re dropping support on your browser soon. Please make sure that you must update your browser before its too late!<br>If your device doesn\'t allow you to upgrade your browser or can\'t afford a cutting-edge browser, this means we\'re also dropping support on your device.<br>You can download <a href="https://www.google.com/chrome/">Google Chrome</a>, <a href="https://www.mozilla.org/firefox/">Mozilla Firefox</a> or the <a href="https://support.microsoft.com/help/4501095/download-the-new-microsoft-edge-based-on-chromium">Chromium Edge</a> if you want to still use Qora Qore.</span>' +
-			  '<svg onclick="RemoveBannerBrowser()" xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">' +
-				'<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross-tiny" />' +
-			  '</svg>' +
-			'</div>' +
-		  '</div>'
-
-	);
+AddFloatingBanner('We\'re dropping support on your browser soon. Please make sure that you must update your browser before its too late!<br>If your device doesn\'t allow you to upgrade your browser or can\'t afford a cutting-edge browser, this means we\'re also dropping support on your device.<br>You can download <a href="https://www.google.com/chrome/">Google Chrome</a>, <a href="https://www.mozilla.org/firefox/">Mozilla Firefox</a> or the <a href="https://support.microsoft.com/help/4501095/download-the-new-microsoft-edge-based-on-chromium">Chromium Edge</a> if you want to still use Qora Qore.','warning','BrowserBanner')
 
 
 }
 
+// Not in use
 function RemoveBannerBrowser() {
     var x = document.getElementById("BannerBrowser");
         x.className += " wds-is-transparent";
