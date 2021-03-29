@@ -183,7 +183,7 @@ function ToggleModule() {
 
 }
 
-/* Banner Removal */
+/* Banners */
 function RemoveBanner() {
 $('#floatingbanner .wds-banner-notification')
 	.click(function() {
@@ -193,7 +193,46 @@ $('#floatingbanner .wds-banner-notification')
 		(function () {
 			$this.remove();
 			$('#floatingbanner .wds-banner-notification').off( "click" );
+	if (!($("#floatingbanner .wds-banner-notification").length)) {
+		$('#floatingbanner').remove();
+	}
 		}),405);
 	}
 	);
+	
+
+}
+
+function AddFloatingBanner(content='Sample Content',kind='message') {
+	if (kind === 'warning') {
+		var icon = 'wds-icons-alert-small'
+	} else if (kind === 'alert') {
+		var icon = 'wds-icons-error-small'
+	} else if (kind === 'success') {
+		var icon = 'wds-icons-checkmark-small'
+	} else {
+		var icon = 'wds-icons-flag-small'
+	}
+	if (!($(".top-gap #floatingbanner").length)) {
+		$('.top-gap').prepend ( 
+			  '<div class="wds-banner-notification__container" id="floatingbanner">' +
+			  '\n</div>'
+		);
+	}
+
+	$('.top-gap #floatingbanner').append ( 
+			'<div class="wds-banner-notification wds-' + kind + '" id="BannerBrowser">' +
+			  '<div class="wds-banner-notification__icon">' +
+				'<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">' +
+				  '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#' + icon +'" />' +
+				'</svg>' +
+			  '</div>' +
+			  '<span class="wds-banner-notification__text">' + content + '</span>' +
+			  '<svg onclick="RemoveBanner()" xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">' +
+				'<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross-tiny" />' +
+			  '</svg>' +
+			'</div>' 
+	);
+
+
 }
