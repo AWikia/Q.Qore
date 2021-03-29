@@ -153,7 +153,11 @@ function ContrastBanner() {
 if ( ($("body.mpisto-2018").length) && (window.MW18ContrastNotice === false)) {
 	if ( window.matchMedia('(forced-colors: active)').matches ) {
 		window.MW18ContrastNotice = true;
-		AddFloatingBanner("You're currently using a high contrast theme on your device. You may want to enable high contrast here with either <a onclick='HCcustom()'>leaving the colors unchanged</a> or <a onclick='HCcustom0()'>putting some specialized colors</a> so as to have a consistent high contrast experience.")  
+		AddFloatingBanner("You're currently using a high contrast theme on your device. You may want to enable high contrast here with either <a onclick='HCcustom()'>leaving the colors unchanged</a> or <a onclick='HCcustom0()'>putting some specialized colors</a> so as to have a consistent high contrast experience.",'contrastbanner')  
+	} else {
+		if ($(".top-gap .contrastbanner").length) {
+			window.MW18ContrastNotice = false;
+		}
 	}
 }
 

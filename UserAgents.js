@@ -203,7 +203,7 @@ $('#floatingbanner .wds-banner-notification')
 
 }
 
-function AddFloatingBanner(content='Sample Content',kind='message') {
+function AddFloatingBanner(content='Sample Content',kind='message',extraclass='') {
 	if (kind === 'warning') {
 		var icon = 'wds-icons-alert-small'
 	} else if (kind === 'alert') {
@@ -221,7 +221,7 @@ function AddFloatingBanner(content='Sample Content',kind='message') {
 	}
 
 	$('.top-gap #floatingbanner').append ( 
-			'<div class="wds-banner-notification wds-' + kind + '" id="BannerBrowser">' +
+			'<div class="' + extraclass + ' wds-banner-notification wds-' + kind + '" id="BannerBrowser">' +
 			  '<div class="wds-banner-notification__icon">' +
 				'<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">' +
 				  '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#' + icon +'" />' +
