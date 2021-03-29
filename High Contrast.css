@@ -379,9 +379,9 @@ box-shadow:0 4px 0 6px rgba(0,0,0,.4), 0 4px 0 6px rgba(255,255,255,0.4)!importa
 	color:inherit;
 }
 
-.contrast .gradient-overlay {
-	-webkit-mask-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
-	mask-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+.contrast .gradient-overlay-2 {
+	-webkit-mask-image:linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));
+	mask-image:linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));
 }
 
 .contrast :not(.freepseudo):not(.gradient-overlay):not(.mpisto-wrapper):not(.wds-toggle__label):not(.wds-dropdown):not(.wds-community-header):not(time):not(.wds-list):not(input):not(.mpisto-content):not(body):before,.contrast :not(.freepseudo):not(.mpisto-wrapper):not(.wds-toggle__label):not(.wds-dropdown):not(.wds-community-header):not(.wds-list):not(.mpisto-article-wrapper):not(.mpisto-header-container):not(.mpisto-gnav):not(input):not(body):not(em):after, 

@@ -3,6 +3,7 @@ window.MW18autoDark = false;
 window.MW18darkmode = false;
 window.MW18LightThreshold = 50;
 window.MW18HoverThreshold = 0.25;
+window.MW18ContrastNotice = false;
 
 (function () {
 document.querySelector('html').className += " theme-A"; // We begin with the first theme selected
@@ -30,6 +31,7 @@ ColorUpdate(true);
 		colortheme('system-a');
 		SocialCompile();
 		ManagerRows(); // For Task Manager Only
+		ContrastBanner(); // Notice
 		
 		
 })();
@@ -92,24 +94,11 @@ function CursorT(theme) {
 }
 
 /* Used for some wiki theme modes 
+	Also used for some notifications
 	Called on body element only */
 function CheckTheme() {
 /* Wiki theme */
- if (window.matchMedia('(prefers-color-scheme: dark)'))  {
-	if ($('body').attr("wikitheme") === 'system-a')  {
-		colortheme('system-a')
-	}
-	if ($('body').attr("wikitheme") === 'system-ar')  {
-		colortheme('system-ar')
-	}
-	if ($('body').attr("wikitheme") === 'system')  {
-		colortheme('system')
-	}
-	if ($('body').attr("wikitheme") === 'system-r')  {
-		colortheme('system-r')
-	}
- }
-
+ColorUpdate(true);
 /* Top bar for Mobile Devices */
 if ($("html.contrast").length) {
 	$('meta[name*="theme-color"]').attr("content", chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--dropdown-bg")));
@@ -128,6 +117,7 @@ if ($("html.contrast").length) {
 }
 
 ManagerRows();
+ContrastBanner();
 
 }
 
@@ -156,6 +146,24 @@ if ($("body.tskmngr").length) {
 
 
 }
+
+function ContrastBanner() {
+
+/* For Task Manager */
+if  ($("body.mpisto-2018").length) {
+	if ( ( window.matchMedia('(forced-colors: active)').matches ) && (window.MW18ContrastNotice === false) ) {
+		window.MW18ContrastNotice = true;
+		AddFloatingBanner("You're currently using a high contrast theme on your device. You may want to enable high contrast here with either <a onclick='HCcustom()'>leaving the colors unchanged</a> or <a onclick='HCcustom0()'>putting some specialized colors</a> so as to have a consistent high contrast experience.",'message','contrastbanner')  
+	} else {
+		if (!($(".top-gap #contrastbanner").length)) {
+			window.MW18ContrastNotice = false;
+		}
+	}
+}
+
+
+}
+
 
 
 /* Changes Wiki theme style
@@ -1984,6 +1992,7 @@ function HCclear() {
 		ColorUpdate(true);
 		if ($("body.options").length) {
 			$(".win10-off").removeAttr('disabled');
+			CheckBG();
 		}
 
 }
@@ -2015,6 +2024,7 @@ function HCcustom() {
 		ColorUpdate(true);
 		if ($("body.options").length) {
 			$(".win10-off").removeAttr('disabled');
+			CheckBG();
 		}
 
 }
@@ -2030,6 +2040,7 @@ function HCcustom2() {
 		ColorUpdate(true);
 		if ($("body.options").length) {
 			$(".win10-off").removeAttr('disabled');
+			CheckBG();
 		}
 }
 

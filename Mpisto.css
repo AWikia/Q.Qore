@@ -747,11 +747,12 @@ height:min-content;
   font-family:var(--secondary-font), cursive;
 }
 
-body[body-display*="legacy"] .gradient-overlay {
+body[body-display*="legacy"] .gradient-overlay,
+body[body-display*="legacy"] .gradient-overlay-2 {
 	display:none!important;
 }
 
-.mpisto-2018 .gradient-overlay:before, .mpisto-2018-mobile .gradient-overlay:before {
+.mpisto-2018 .gradient-overlay-2, .mpisto-2018-mobile .gradient-overlay-2 {
 	top:0;
 	left:0;
 	width:100%;
@@ -759,13 +760,9 @@ body[body-display*="legacy"] .gradient-overlay {
 	position:fixed!Important;
 	display:block;
 	content:"";
-	background:inherit;
-	background-attachment:inherit;
-	z-index:-1;
-	background-image:linear-gradient(to bottom, rgba(0,0,0,0), var(--background-overlay, var(--background-color)) 100%);
-	-webkit-mask-image:linear-gradient(0deg, rgba(0,0,0,1), rgba(0,0,0,0.55) 200%);
-	mask-image:linear-gradient(0deg, rgba(0,0,0,1), rgba(0,0,0,0.55) 200%);
-	opacity:0.99;
+	z-index:1;
+	background-color:var(--background-overlay);
+	-webkit-mask-image:linear-gradient(to bottom, rgba(0,0,0,0), black 98%);
   image-rendering:initial;                  /* CSS4 Proposed  */
   -qq-image-blurring:tick;                  /* 4x4 Web 1-2    */
 }
@@ -780,11 +777,9 @@ body[body-display*="legacy"] .gradient-overlay {
 	position:fixed!Important;
 	display:block;
 	content:"";
-	background:inherit;
-	background-attachment:inherit;
-	z-index:-1;
+	z-index:1;
 	background-color:var(--background-color);
-	/* background-color:rgb(var(--community-header-bg)); */
+	opacity:0.75;
 	pointer-events:none;
 }
 
@@ -1011,6 +1006,7 @@ resize:none;
 border-radius:0; /* Remove initial border-radius set by some agents such as FF for Android in input fields */
 -qq-invert-style:classic; /* Prevent extra 180deg hue-rotation on inverts on mInerva */
   scrollbar-color:inherit; /* Qorta Qorte does not seem to inherit scrollbar-color. This line forces that browser to inherit */
+  forced-color-adjust:none;
 }
 
 .pixelatedoff *, .pixelatedoff {
@@ -1716,7 +1712,7 @@ font-family:"Fira Sans", serif;
 
 /* Gap */
 .top-gap {
-margin-top:20px;
+margin-bottom:20px;
 }
 
 /* Avatars */
@@ -2590,7 +2586,7 @@ margin-left:0;
  .wds-dropdown__content .wds-list.wds-is-linked>li>a:not(.wds-button){color:#39424d;padding-left:9px;padding-right:9px;text-decoration:none;transition-duration:.2s;transition-property:background-color,color}
  .wds-dropdown__content .wds-list.wds-is-linked>li.wds-is-selected>a:not(.wds-button),.wds-dropdown__content .wds-list.wds-is-linked>li:hover>a:not(.wds-button) {background-color:rgba(0,183,224,.1);color:#00cdd0}
  
- .wds-dropdown::after,.wds-dropdown::before{bottom:-1px;content:'';display:none;;height:0;left:50%;position:absolute;width:0;z-index:2}
+ .wds-dropdown::after,.wds-dropdown::before{bottom:-1px;content:'';display:none;;height:0;left:50%;position:absolute;width:0;z-index:3}
  
  .wds-dropdown::after{border:8px solid transparent;border-bottom-color:#fff;margin-left:-8px}
 
@@ -7189,18 +7185,14 @@ margin-right:0;
 .main .wds-banner-notification{background-color:var(--dropdown-bg); color:var(--content-color);}
 .main .wds-banner-notification+.wds-banner-notification .wds-banner-notification__close,.wds-banner-notification+.wds-banner-notification .wds-banner-notification__text{ border-color:var(--content-border);}
 .main .wds-banner-notification__text{color:inherit}
-.main .wds-banner-notification__container{box-shadow:0 2px 6px 0 rgba(0,0,0,.2), 0 2px 6px 0 rgba(255,255,255,0.2);}
-.wds-banner-notification__container:empty {
-	display:none;
-}
+.main .wds-banner-notification__container{box-shadow:0 2px 6px 0 rgba(0,0,0,.2), 0 2px 6px 0 rgba(255,255,255,0.2);  z-index:19;}
 
-@supports (position:sticky) or (position:-webkit-sticky) {
-.wds-banner-notification__container {
-  position:-webkit-sticky;
-  position:sticky;
+.headroom.headroom--not-top .top-gap .wds-banner-notification__container#floatingbanner {
+  position:fixed;
   top:49px;
   z-index:19; /* Needed lower value to allow header dropdowns not to overlap */
 }
+
 
 .wds-banner-notification__container.constructor-controls {
   position:-webkit-sticky;
@@ -7209,7 +7201,6 @@ margin-right:0;
   z-index:100000; /* Needed lower value to allow header dropdowns not to overlap */
 }
 
-}
 
 
 .mpisto-article .wds-banner-notification__container:not(.constructor-controls) {top:auto; position:relative; z-index:0;}
