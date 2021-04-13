@@ -1438,7 +1438,7 @@ if (isSuperLightColor(content_color)) {
 	}
 
 	if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border") === 'auto') && !($("html.contrast.win10").length)  ) {
-		var dropdowncolor2 = chroma.mix(content_color,'black',MW18HoverThreshold*0.8, 'hsv');
+		var dropdowncolor2 = chroma.mix(content_color,'black',MW18HoverThreshold*1.1, 'hsv');
 	} else {
 		var dropdowncolor2 = 'inherit';
 	}
