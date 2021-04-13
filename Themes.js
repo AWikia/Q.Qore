@@ -1446,6 +1446,7 @@ document.querySelector('html').style.setProperty("--button-color-blend-light", b
 document.querySelector('html').style.setProperty("--button-color-blend", button_color);
 }
 
+buttonmixl = ColorTestTwin(content_color,button_color,0.75,'rgb');
 buttonmix = ColorTestTwin(content_color,button_color,1.5,'rgb');
 
 
@@ -1453,6 +1454,7 @@ buttonmix = ColorTestTwin(content_color,button_color,1.5,'rgb');
 document.querySelector('html').style.setProperty("--button-color-dark", buttoncolor1);
 document.querySelector('html').style.setProperty("--button-color-dark-super", buttoncolor3); // Scrollbar
 document.querySelector('html').style.setProperty("--button-color-text", buttoncolor2);
+document.querySelector('html').style.setProperty("--button-color-content-bg-mix-light", buttonmixl);
 document.querySelector('html').style.setProperty("--button-color-content-bg-mix", buttonmix);
 
 
@@ -1471,6 +1473,7 @@ document.querySelector('html').style.setProperty("--community-header-bg-blend-li
 document.querySelector('html').style.setProperty("--community-header-bg-blend", getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg"));
 }
 
+headermixl = ColorTestTwin(content_color,header_color,0.75,'rgb');
 headermix = ColorTestTwin(content_color,header_color,1.5,'rgb');
 
 
@@ -1479,7 +1482,9 @@ headermix = ColorTestTwin(content_color,header_color,1.5,'rgb');
 document.querySelector('html').style.setProperty("--community-header-dark", headercolor1);
 document.querySelector('html').style.setProperty("--community-header-dark-super", headercolor3); // Scrollbar
 document.querySelector('html').style.setProperty("--community-header-text", headercolor2);
+document.querySelector('html').style.setProperty("--community-header-bg-content-bg-mix-light", headermixl);
 document.querySelector('html').style.setProperty("--community-header-bg-content-bg-mix", headermix);
+
 
 /** Link Color **/
 /* Set Vars */
@@ -1498,6 +1503,7 @@ document.querySelector('html').style.setProperty("--link-color-blend-light", lin
 document.querySelector('html').style.setProperty("--link-color-blend", getComputedStyle(document.querySelector('html')).getPropertyValue("--link-color"));
 }
 
+linkmixl = ColorTestTwin(content_color,link_color,0.75,'rgb');
 linkmix = ColorTestTwin(content_color,link_color,1.5,'rgb');
 
 
@@ -1505,6 +1511,7 @@ linkmix = ColorTestTwin(content_color,link_color,1.5,'rgb');
 document.querySelector('html').style.setProperty("--link-color-dark", linkcolor1);
 document.querySelector('html').style.setProperty("--link-color-dark-super", linkcolor3); // Scrollbar
 document.querySelector('html').style.setProperty("--link-color-text", linkcolor2);
+document.querySelector('html').style.setProperty("--link-color-content-bg-mix-light", linkmixl);
 document.querySelector('html').style.setProperty("--link-color-content-bg-mix", linkmix);
 
 /** Content Border **/
@@ -1528,12 +1535,14 @@ document.querySelector('html').style.setProperty("--content-border-blend-light",
 document.querySelector('html').style.setProperty("--content-border-blend", border_color);
 }
 
+bordermixl = ColorTestTwin(content_color,border_color,0.75,'rgb');
 bordermix = ColorTestTwin(content_color,border_color,1.5,'rgb');
 
 /* Set Values */
 document.querySelector('html').style.setProperty("--content-border-dark", bordercolor1);
 document.querySelector('html').style.setProperty("--content-border-dark-super", bordercolor3); // Scrollbar
 document.querySelector('html').style.setProperty("--content-border-text", bordercolor2);
+document.querySelector('html').style.setProperty("--content-border-content-bg-mix-light", bordermixl);
 document.querySelector('html').style.setProperty("--content-border-content-bg-mix", bordermix);
 
 
@@ -1552,12 +1561,14 @@ document.querySelector('html').style.setProperty("--background-color-blend-light
 document.querySelector('html').style.setProperty("--background-color-blend", head_color);
 }
 
+headmixl = ColorTestTwin(content_color,head_color,0.75,'rgb');
 headmix = ColorTestTwin(content_color,head_color,1.5,'rgb');
 
 /* Set Values */
 document.querySelector('html').style.setProperty("--background-color-dark", headcolor1);
 document.querySelector('html').style.setProperty("--background-color-dark-super", headcolor3); // Scrollbar
 document.querySelector('html').style.setProperty("--background-color-text", headcolor2);
+document.querySelector('html').style.setProperty("--background-color-content-bg-mix-light", headmixl);
 document.querySelector('html').style.setProperty("--background-color-content-bg-mix", headmix);
 
 
