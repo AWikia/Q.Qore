@@ -29,6 +29,7 @@ ColorUpdate(true);
 		$('body').attr("cursor", "mpisto");
 		CursorT('auto');
 		colortheme('system-a');
+		$("head").append('<style class="social-colors"></style>');
 		SocialCompile();
 		ManagerRows(); // For Task Manager Only
 		ContrastBanner(); // Notice
@@ -1317,21 +1318,40 @@ function CompileRecColors() {
 
 
 function SocialCompile() {
-
+	$("head .social-colors").text('');	
 	let str = '';
 	var socialV = ['facebook','googleplus','line','linkedin','instagram','meneame','nk','odnoklassniki','reddit','tumblr','twitter','vkontakte','wykop','weibo','youtube','discord','fandom','asecure','steam','spotify','twitch','qore','mpisto','splashhol','gamepedia']
 	var socialC = ['#3b5998','#dd4b39','#00c300','#0077b5','#e02d69','#ff6400','#4077a7','#f96900','#ff4500','#34465d','#1da1f2','#587ca3','#fb803f','#ff8140','#cd201f','#7289da','#00acac','#0009FF','#000','#1ed760','#563194','#ff4500','#18bbc5','#61448d','#f4801f']
 	var socialAM = socialC.length
+// Start Content BG
+		if ( (window.MW18darkmode === true) ) {
+		// Adaptive
+			if (getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color") === 'auto') {
+				if (isLightColor(content_text)) {
+					var content_color = '#2e2e2e';	
+				} else {
+					var content_color = '#e2e2e2';
+				}
+			} else {
+				var content_color =	getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color");
+			}
+		//End Adaptive
+		} else {
+			var content_color =	getComputedStyle(document.querySelector('html')).getPropertyValue("--content-bg");
+		}
+// End Content BG
 
 	for (let i = 0; i < socialAM; i++) {
 	  var color = socialC[i];
+	  var colormixl = ColorTestTwin(content_color,color,0.75,'rgb');
+      var colormix = ColorTestTwin(content_color,color,1.5,'rgb');
 	  var name = socialV[i];
 	  var data = '.main .wds-button.wds-is-' + name + '-color{' +'--button-color:' + color + '!important;' + '--button-color-dark:' + ColorTest(color,false) + '!important;' + '--button-color-text:' + ColorTest(color,true) + '!important;' +'--content-border:' + color + '!important;' + '--content-border-dark:' + ColorTest(color,false) + '!important;' + '--content-border-text:' + ColorTest(color,true) + '!important;' +'--background-color:' + color + '!important;' + '--background-color-dark:' + ColorTest(color,false) + '!important;' + '--background-color-text:' + ColorTest(color,true) + '!important;' +'--link-color:' + Color2(color) + '!important;' + '--link-color-dark:' + ColorTest2(color,false) + '!important;' + '--link-color-text:' + ColorTest(color,true) + '!important;' + '}' + // WDS Buttons
-				'.cpe-button.cpe-is-' + name + '-color{' +'--button-color:' + color + '!important;' + '--button-color-dark:' + ColorTest(color,false) + '!important;' + '--button-color-dark-super:' + SuperColorTest(color,false) + '!important;' + '--button-color-text:' + ColorTest(color,true) + '!important;' +'--content-border:' + color + '!important;' + '--content-border-dark:' + ColorTest(color,false) + '!important;' + '--content-border-dark-super:' + SuperColorTest(color,false) + '--content-border-text:' + ColorTest(color,true) + '!important;' +'--background-color:' + color + '!important;' + '--background-color-dark:' + ColorTest(color,false) + '!important;' + '--background-color-dark-super:' + SuperColorTest(color,false) + '--background-color-text:' + ColorTest(color,true) + '!important;' +'--link-color:' + Color2(color) + '!important;' + '--link-color-dark:' + ColorTest2(color,false) + '!important;' + '--link-color-dark-super:' + SuperColorTest2(color,false) + '--link-color-text:' + ColorTest(color,true) + '!important;' + '}'
+				'.cpe-button.cpe-is-' + name + '-color{' +'--button-color:' + color + '!important;' + '--button-color-dark:' + ColorTest(color,false) + '!important;' + '--button-color-dark-super:' + SuperColorTest(color,false) + '!important;' + '--button-color-text:' + ColorTest(color,true) + '!important;' + '--button-color-content-bg-mix-light:' + colormixl + '!important;' + '--button-color-content-bg-mix:' + colormix + '!important;' + '}'
 	  str = str + data;
 	}
 
-	$("head").append('<style>' + str + '</style>');
+	$("head .social-colors").append(str);
 
 }
 
@@ -1608,6 +1628,7 @@ if (refresh === true) {
 	CheckAdapt()
 	colortheme($('body').attr("wikitheme"))
 }
+SocialCompile();
 if (window.MW18auto === true) {
 CursorT('auto');
 }
@@ -2201,12 +2222,10 @@ function UpdateColorThreshold() {
 	var x = $('input.color_threshold').val();
 	window.MW18LightThreshold = x;
 	ColorUpdate(true);
-	SocialCompile();
 }
 
 function UpdateHoverRation() {
 	var x = $('input.hover_ration').val();
 	window.MW18HoverThreshold = x * 0.005;
 	ColorUpdate(true);
-	SocialCompile();
 }
