@@ -1324,7 +1324,21 @@ function SocialCompile() {
 	var socialC = ['#3b5998','#dd4b39','#00c300','#0077b5','#e02d69','#ff6400','#4077a7','#f96900','#ff4500','#34465d','#1da1f2','#587ca3','#fb803f','#ff8140','#cd201f','#7289da','#00acac','#0009FF','#000','#1ed760','#563194','#ff4500','#18bbc5','#61448d','#f4801f']
 	var socialAM = socialC.length
 // Start Content BG
+		if ( (window.MW18darkmode === true) ) {
+		// Adaptive
+			if (getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color") === 'auto') {
+				if (isLightColor(content_text)) {
+					var content_color = '#2e2e2e';	
+				} else {
+					var content_color = '#e2e2e2';
+				}
+			} else {
+				var content_color =	getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color");
+			}
+		//End Adaptive
+		} else {
 			var content_color =	getComputedStyle(document.querySelector('html')).getPropertyValue("--content-bg");
+		}
 // End Content BG
 
 	for (let i = 0; i < socialAM; i++) {
