@@ -15,12 +15,14 @@
 }
 
 html:not(.contrast):not(.basic) body:not(.phone).headroom.headroom--not-top .mpisto-gnav {
+/*
 	-webkit-backdrop-filter:blur(4px) sepia(24%) contrast(124%) invert(24%) grayscale(24%) saturate(124%) hue-rotate(24deg) brightness(124%);
 	backdrop-filter:blur(4px) sepia(24%) contrast(124%) invert(24%) grayscale(24%) saturate(124%) hue-rotate(24deg) brightness(124%);
+*/
 }
 
 html:not(.contrast):not(.basic) body:not(.phone).headroom.headroom--not-top .mpisto-gnav::after {
-	opacity:0.7;
+	opacity:0.9;
 }
 
 

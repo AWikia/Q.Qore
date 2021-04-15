@@ -53,16 +53,16 @@ $('.mpisto-editors-content .mpisto-article.source.sourceonly').val( x );
 function SaveChanges() {
 window.MW18oldcontent = document.querySelector(".mpisto-editors-content .mpisto-article.visualonly").innerHTML;
 $('#modal10 .lightbox .save-page-wrapper').prepend ( 
-      '<div class="wds-banner-notification__container" id="floatingbanner" style="top:auto; position:relative;">' +
-        '<div class="wds-banner-notification wds-success wds-is-transparent" style="transform:none;" id="BannerSave">' +
-          '<div class="wds-banner-notification__icon">' +
-            '<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">' +
-              '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark-small" />' +
+      '<div class="cpe-banner-notification__container" id="floatingbanner" style="top:auto; position:relative;">' +
+        '<div class="cpe-banner-notification cpe-success cpe-is-transparent" style="transform:none;" id="BannerSave">' +
+          '<div class="cpe-banner-notification__icon">' +
+            '<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">' +
+              '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-checkmark-small" />' +
             '</svg>' +
           '</div>' +
-          '<span class="wds-banner-notification__text">	Changes Successfully saved!</span>' +
-          '<svg onclick="RemoveBannerSave()" xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">' +
-            '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross-tiny" />' +
+          '<span class="cpe-banner-notification__text">	Changes Successfully saved!</span>' +
+          '<svg onclick="RemoveBannerSave()" xmlns="http://www.w3.org/2000/svg" class="cpe-banner-notification__close cpe-icon cpe-icon-tiny">' +
+            '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-cross-tiny" />' +
           '</svg>' +
         '</div>' +
       '</div>'
@@ -77,13 +77,13 @@ setTimeout(RemoveBannerSave, 2500);
 function RemoveBannerSave() {
 	$('#modal10 .lightbox .save-page-wrapper #BannerSave').attr("style", "");
     var x = document.getElementById("BannerSave");
-        x.className += " wds-is-transparent";
+        x.className += " cpe-is-transparent";
 	    setTimeout(RemoveBannerSave1, 405) 
 }
 
 function RemoveBannerSave2() {
     var x = document.getElementById("BannerSave");
-       x.className = x.className.replace (" wds-is-transparent", "");
+       x.className = x.className.replace (" cpe-is-transparent", "");
 }
 
 function RemoveBannerSave1() {
@@ -316,13 +316,13 @@ UpdateVisual();
 
 
 function CategoryAdd() {
-	if ( $('.category-module.editor-module .mpisto-input:focus').length ||  $('.category-module.editor-module .wds-button:focus').length ) {
+	if ( $('.category-module.editor-module .mpisto-input:focus').length ||  $('.category-module.editor-module .cpe-button:focus').length ) {
 		$('.category-module.editor-module ul li .items').append(
 			'<div class="item">' +
 			'<span contenteditable>' + $('.category-module.editor-module .category-add input').val() + '</span>' + 
 			'<a onclick="CategoryRemove()" title="Remove category">' +
-			'<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">' +
-			'<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross" /></svg>' +
+			'<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny">' +
+			'<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-cross" /></svg>' +
 			'</a>'
 		);
 	}

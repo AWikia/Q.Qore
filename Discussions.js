@@ -40,8 +40,8 @@ function NewRule () {
 		answer + 
 		'</span>' +
 		'<a class="editor2on delete">' +
-		'<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-tiny">' +
-		'<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-trash" />' +
+		'<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny">' +
+		'<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-trash" />' +
 		'</svg>' +
 		'</a>' +
 		'</li>'

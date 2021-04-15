@@ -28,87 +28,87 @@
 	$('h2.compat2').html("Compatibility of Pokémon Prograda in " + provider);
 	$('h2.compat3').html("Average FPS for Qora Qore and Pokémon Prograda in " + provider);
 	// 30 FPS
-	$('.thirty .wds-button').removeAttr("disabled");
+	$('.thirty .cpe-button').removeAttr("disabled");
 	// 40 FPS
 	if (chosen === "4") {
-		$('.fourty .wds-button').attr("disabled",true);
-		$('.prog1 .wds-button').attr("disabled",true);
+		$('.fourty .cpe-button').attr("disabled",true);
+		$('.prog1 .cpe-button').attr("disabled",true);
 	} else {
-		$('.fourty .wds-button').removeAttr("disabled");
-		$('.prog1 .wds-button').removeAttr("disabled");
+		$('.fourty .cpe-button').removeAttr("disabled");
+		$('.prog1 .cpe-button').removeAttr("disabled");
 	}
 	// 60 FPS
 	var ready = [true,true,true,true,false,true,true,false,true,true,true,true,false,true,true,true,true,true,true,true,true,false,true,true][chosen]
 	if (ready) {
-		$('.sixty .wds-button').removeAttr("disabled");
-		$('.prog2 .wds-button').removeAttr("disabled");
+		$('.sixty .cpe-button').removeAttr("disabled");
+		$('.prog2 .cpe-button').removeAttr("disabled");
 	} else {
-		$('.sixty .wds-button').attr("disabled",true);
-		$('.prog2 .wds-button').attr("disabled",true);
+		$('.sixty .cpe-button').attr("disabled",true);
+		$('.prog2 .cpe-button').attr("disabled",true);
 	}
 	// 72 FPS
 	var ready = [true,true,false,true,false,true,true,false,false,true,true,false,false,false,true,true,true,false,false,true,true,false,false,false][chosen]
 	if (ready) {
-		$('.seventy .wds-button').removeAttr("disabled");
+		$('.seventy .cpe-button').removeAttr("disabled");
 	} else {
-		$('.seventy .wds-button').attr("disabled",true);
+		$('.seventy .cpe-button').attr("disabled",true);
 	}
 	// 90 FPS
 	var ready = [true,true,false,false,false,true,false,false,false,false,true,false,false,false,true,false,true,false,false,false,true,false,false,false][chosen]
 	if (ready) {
-		$('.ninety .wds-button').removeAttr("disabled");
+		$('.ninety .cpe-button').removeAttr("disabled");
 	} else {
-		$('.ninety .wds-button').attr("disabled",true);
+		$('.ninety .cpe-button').attr("disabled",true);
 	}
 	// 120 FPS
 	var ready = [true,true,false,false,false,false,false,false,false,false,false,false,false,false,true,false,true,false,false,false,false,false,false,false][chosen]
 	if (ready) {
-		$('.hundred .wds-button').removeAttr("disabled");
+		$('.hundred .cpe-button').removeAttr("disabled");
 	} else {
-		$('.hundred .wds-button').attr("disabled",true);
+		$('.hundred .cpe-button').attr("disabled",true);
 	}
 	// Low Profile
-	$('.prog3 .wds-button').removeAttr("title");
+	$('.prog3 .cpe-button').removeAttr("title");
 	var ready = [true,true,true,true,false,true,true,true,true,true,false,true,false,true,true,true,true,true,true,true,false,true,true,true][chosen]
 	if (ready) {
-		$('.prog3 .wds-button').removeAttr("disabled");
+		$('.prog3 .cpe-button').removeAttr("disabled");
 		if (chosen === "19") {
-			$('.prog3 .wds-button').attr("title","Medium and High GPU Transmission powers only");
+			$('.prog3 .cpe-button').attr("title","Medium and High GPU Transmission powers only");
 		}
 		if ( (chosen === "21") ) {
-			$('.prog3 .wds-button').attr("title","Only buildable with Compiled Emulated Unit");
+			$('.prog3 .cpe-button').attr("title","Only buildable with Compiled Emulated Unit");
 		}
 	} else {
-		$('.prog3 .wds-button').attr("disabled",true);
+		$('.prog3 .cpe-button').attr("disabled",true);
 	}
 	// Med Profile
-	$('.prog4 .wds-button').removeAttr("title");
+	$('.prog4 .cpe-button').removeAttr("title");
 	var ready = [true,true,true,true,false,true,true,false,true,true,false,true,false,false,true,true,true,true,true,true,false,false,true,true][chosen]
 	if (ready) {
-		$('.prog4 .wds-button').removeAttr("disabled");
+		$('.prog4 .cpe-button').removeAttr("disabled");
 		if (chosen === "19") {
-			$('.prog4 .wds-button').attr("title","High GPU Transmission power only");
+			$('.prog4 .cpe-button').attr("title","High GPU Transmission power only");
 
 		}
 	} else {
-		$('.prog4 .wds-button').attr("disabled",true);
+		$('.prog4 .cpe-button').attr("disabled",true);
 	}
 	// Hig Profile
-		$('.prog5 .wds-button').removeAttr("title");
+		$('.prog5 .cpe-button').removeAttr("title");
 	var ready = [true,true,false,true,false,true,true,false,true,true,false,true,false,false,true,true,true,false,true,true,false,false,true,true][chosen]
 	if (ready) {
-		$('.prog5 .wds-button').removeAttr("disabled");
+		$('.prog5 .cpe-button').removeAttr("disabled");
 		if ( (chosen === "15") || (chosen === "22") ) {
-			$('.prog5 .wds-button').attr("title","Only buildable with Compiled Emulated Unit");
+			$('.prog5 .cpe-button').attr("title","Only buildable with Compiled Emulated Unit");
 		}
 		if (chosen === "11") {
-			$('.prog5 .wds-button').attr("title","i9 and Xe modes only");
+			$('.prog5 .cpe-button').attr("title","i9 and Xe modes only");
 		}
 		if (chosen === "19") {
-			$('.prog5 .wds-button').attr("title","High Transmission power only");
+			$('.prog5 .cpe-button').attr("title","High Transmission power only");
 		}
 	} else { 
-		$('.prog5 .wds-button').attr("disabled",true);
+		$('.prog5 .cpe-button').attr("disabled",true);
 	}
 	// FPS
 	var provider2 = [ 

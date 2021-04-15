@@ -4,7 +4,7 @@
 @import url('https://rsms.me/inter/inter.css');
 
 /* Discussions CSS */
-:root, .wds-button {
+:root, .cpe-button {
 font-family:'Inter', -apple-system, BlinkMacSystemFont, "Noto Sans", "Noto Sans KR", "Noto Sans JP", "Noto Sans SC", "Noto Sans TC", sans-serif;
 }
 
@@ -20,6 +20,8 @@ font-family:'Inter', -apple-system, BlinkMacSystemFont, "Noto Sans", "Noto Sans 
 
 .mpisto-content {
 	box-shadow:none;
+	-webkit-backdrop-filter:none;
+	backdrop-filter:none;
 }
 
 .mpisto-content::after {
@@ -168,7 +170,7 @@ font-family:'Inter', -apple-system, BlinkMacSystemFont, "Noto Sans", "Noto Sans 
 		display:inline;
 }
 
-.mpisto-discussions-wrapper .card.main .post .post-container .wds-button.wds-is-square {
+.mpisto-discussions-wrapper .card.main .post .post-container .cpe-button.cpe-is-square {
 	width:26px;
 	height:26px;
 	min-width:26px;

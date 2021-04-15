@@ -5,47 +5,47 @@
 /* Chat CSS */
 
 /* Roboto Font Pack */
-:root body, .wds-button {
+:root body, .cpe-button {
 	font-family:"Roboto", sans-serif;
 	background-image:none!important;
 	margin:0;
 	overflow-y:hidden;
 }
 
-:root .serif, .serif .wds-button {
+:root .serif, .serif .cpe-button {
 	font-family:"Roboto Slab", serif;
 }
 
-:root .cursive, .cursive .wds-button {
+:root .cursive, .cursive .cpe-button {
 	font-family:"Dancing Script", cursive;
 }
 
-:root .comic, .comic .wds-button {
+:root .comic, .comic .cpe-button {
 	font-family:"Patrick Hand", fantasy;
 }
 
-:root .special, .special .wds-button {
+:root .special, .special .cpe-button {
 	font-family:"Coming Soon", casual;
 }
 
 /* Noto Font Pack */
-:root .sserif2, .sserif2 .wds-button {
+:root .sserif2, .sserif2 .cpe-button {
 	font-family:"Noto Sans", sans-serif;
 }
 
-:root .nserif2, .nserif2 .wds-button {
+:root .nserif2, .nserif2 .cpe-button {
 	font-family:"Noto Serif", serif;
 }
 
-:root .ncursive2, .ncursive2 .wds-button {
+:root .ncursive2, .ncursive2 .cpe-button {
 	font-family:"Parisienne", cursive;
 }
 
-:root .ncomic2, .ncomic2 .wds-button {
+:root .ncomic2, .ncomic2 .cpe-button {
 	font-family:"Gochi Hand", fantasy;
 }
 
-:root .nspecial2, .nspecial2 .wds-button {
+:root .nspecial2, .nspecial2 .cpe-button {
 	font-family:"Carrois Gothic", casual;
 }
 
@@ -100,7 +100,7 @@ body *, :before, :after {
 .chat-header .wordmark-container .wordmark img {
 	width:auto;
 	height:65px;
-	max-width:250px; /* Match .wds-community-header__wordmark */
+	max-width:250px; /* Match .cpe-community-header__wordmark */
 }
 
 .chat-header .member-container {
@@ -112,7 +112,7 @@ body *, :before, :after {
 	margin-left:5px;
 }
 
-.chat-header .member-container .wds-avatar {
+.chat-header .member-container .cpe-avatar {
 	width:57px;
 	height:57px;
 	border-width:4px;
@@ -174,7 +174,7 @@ body *, :before, :after {
 	text-shadow:none;
 }
 
-.emoji-reaction .wds-is-square {
+.emoji-reaction .cpe-is-square {
 	width:18px;
 	height:18px;
 	min-width:18px;
@@ -183,7 +183,7 @@ body *, :before, :after {
 	padding:0 2px;
 }
 
-.contrast .emoji-reaction .wds-is-square {
+.contrast .emoji-reaction .cpe-is-square {
 	color:inherit!important;
 }
 
@@ -192,15 +192,15 @@ body *, :before, :after {
 }
 
 
-.emoji-reaction .wds-dropdown__content .wds-list {
+.emoji-reaction .cpe-dropdown__content .cpe-list {
 	max-height:150px;
 }
 
-.emoji-reaction .wds-dropdown__content .wds-list>li>a {
+.emoji-reaction .cpe-dropdown__content .cpe-list>li>a {
 	display:flex;
  }
 
-.emoji-reaction .wds-dropdown__content .wds-list>li span:not(.reaction-count) {
+.emoji-reaction .cpe-dropdown__content .cpe-list>li span:not(.reaction-count) {
 	flex:1;
 }
 
@@ -222,7 +222,7 @@ body *, :before, :after {
 	background-color:var(--button-color);
 }
 
-.chat-content .wrapper section message .wds-avatar {
+.chat-content .wrapper section message .cpe-avatar {
 	width:40px;
 	height:40px;
 	border:0;
@@ -279,13 +279,13 @@ body *, :before, :after {
 	flex-direction:column;
 }
 
-.chat-content .wrapper section[pane] .wds-button-group {
+.chat-content .wrapper section[pane] .cpe-button-group {
 	display:flex;
 	border-top:1px solid var(--content-border);
 	padding:5px;
 }
 
-.chat-content .wrapper section[pane] .wds-button-group .wds-button, .chat-content .wrapper section[pane] .wds-button-group .wds-dropdown{
+.chat-content .wrapper section[pane] .cpe-button-group .cpe-button, .chat-content .wrapper section[pane] .cpe-button-group .cpe-dropdown{
 	flex:1;
 }
 
@@ -348,12 +348,12 @@ body:not([class*="page"]) .chat-content .wrapper section[pane] .list .channel:nt
 	width:100%;
 }
 
-.chat-content .wrapper section[pane] .list .wds-dropdown:hover .info {
+.chat-content .wrapper section[pane] .list .cpe-dropdown:hover .info {
 	background-color:var(--dropdown-bg);
 }
 
 
-.contrast .chat-content .wrapper section[pane] .list .wds-dropdown:hover .info {
+.contrast .chat-content .wrapper section[pane] .list .cpe-dropdown:hover .info {
 	background-color:var(--button-color);
 	color:var(--button-color-text);
 }
@@ -362,7 +362,7 @@ body:not([class*="page"]) .chat-content .wrapper section[pane] .list .channel:nt
 	margin-top:5px;
 }
 
-.chat-content .wrapper section[pane] .list .info .wds-avatar {
+.chat-content .wrapper section[pane] .list .info .cpe-avatar {
 	border:0;
 	margin-right:5px;
 }
@@ -399,7 +399,7 @@ body:not(.contrast) .chat-content .wrapper section[pane] .list .info span[offlin
 	align-items:center;
 }
 
-.chat-content .footer .wds-avatar {
+.chat-content .footer .cpe-avatar {
 	border-width:3px;
 	width:45px;
 	height:45px;

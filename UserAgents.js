@@ -63,38 +63,32 @@ if (navigator.userAgent.match("BrowserWarn")) {
 	window.disco = false
 }
 
-//$(' .wds-dropdown__toggle').attr('onclick', 'DropdownSwitch()')
-
-function DropdownSwitch() {
-		$(' .wds-dropdown.wds-is-active')
-				.click(function() {
-					var $this = $(this);
-					if ($this.hasClass('wds-is-active')) {
-						$this.removeClass('wds-is-active');
-							$(' .wds-dropdown.wds-is-active').click();
-						return;
-					}
-				});
-}
-
-(function () {
-
-
-
-$(' .wds-dropdown')
+function DropDown() {
+$(' .cpe-dropdown')
         .click(function(e) {
             var $this = $(this);
-			if ($this.hasClass('wds-is-active')) {
-				return;
+			if ($this.hasClass('cpe-is-active')) {
+            $this.removeClass('cpe-is-active');
+		$(' .cpe-dropdown').off( "click" );			
+
+ return;
 			}
 			e.preventDefault();
-			$this.addClass('wds-is-active');
-        }).mouseleave(function() {
-            $(this).removeClass('wds-is-active');
+			$this.addClass('cpe-is-active');
+		$(' .cpe-dropdown').off( "click" );			
+        });
+}
+
+
+$(".cpe-dropdown > :first-child").attr("onclick", "DropDown()");
+
+(function () {
+$(' .cpe-dropdown')
+.mouseleave(function() {
+            $(this).removeClass('cpe-is-active');
         });
 
 })();
-
 
 /* Enable New Global Navigation - No exception for now */
 window.MW18newnavblock=false;
@@ -117,7 +111,7 @@ AddFloatingBanner('We\'re dropping support on your browser soon. Please make sur
 // Not in use
 function RemoveBannerBrowser() {
     var x = document.getElementById("BannerBrowser");
-        x.className += " wds-is-transparent";
+        x.className += " cpe-is-transparent";
 	    setTimeout(RemoveBannerBrowser1, 405) 
 }
 
@@ -154,15 +148,15 @@ function ToggleModule() {
 
 /* Banners */
 function RemoveBanner() {
-$('#floatingbanner .wds-banner-notification')
+$('#floatingbanner .cpe-banner-notification')
 	.click(function() {
 		var $this= $(this);
-		$this.addClass("wds-is-transparent")
+		$this.addClass("cpe-is-transparent")
 		setTimeout(
 		(function () {
 			$this.remove();
-			$('#floatingbanner .wds-banner-notification').off( "click" );
-	if (!($("#floatingbanner .wds-banner-notification").length)) {
+			$('#floatingbanner .cpe-banner-notification').off( "click" );
+	if (!($("#floatingbanner .cpe-banner-notification").length)) {
 		$('#floatingbanner').remove();
 	}
 		}),405);
@@ -174,31 +168,31 @@ $('#floatingbanner .wds-banner-notification')
 
 function AddFloatingBanner(content='Sample Content',kind='message',extraclass='') {
 	if (kind === 'warning') {
-		var icon = 'wds-icons-alert-small'
+		var icon = 'cpe-icons-alert-small'
 	} else if (kind === 'alert') {
-		var icon = 'wds-icons-error-small'
+		var icon = 'cpe-icons-error-small'
 	} else if (kind === 'success') {
-		var icon = 'wds-icons-checkmark-small'
+		var icon = 'cpe-icons-checkmark-small'
 	} else {
-		var icon = 'wds-icons-flag-small'
+		var icon = 'cpe-icons-flag-small'
 	}
 	if (!($(".top-gap #floatingbanner").length)) {
 		$('.top-gap').prepend ( 
-			  '<div class="wds-banner-notification__container" id="floatingbanner">' +
+			  '<div class="cpe-banner-notification__container" id="floatingbanner">' +
 			  '\n</div>'
 		);
 	}
 
 	$('.top-gap #floatingbanner').append ( 
-			'<div class=" wds-banner-notification wds-' + kind + '" id="' + extraclass  + '">' +
-			  '<div class="wds-banner-notification__icon">' +
-				'<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">' +
+			'<div class=" cpe-banner-notification cpe-' + kind + '" id="' + extraclass  + '">' +
+			  '<div class="cpe-banner-notification__icon">' +
+				'<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">' +
 				  '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#' + icon +'" />' +
 				'</svg>' +
 			  '</div>' +
-			  '<span class="wds-banner-notification__text">' + content + '</span>' +
-			  '<svg onclick="RemoveBanner()" xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">' +
-				'<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross-tiny" />' +
+			  '<span class="cpe-banner-notification__text">' + content + '</span>' +
+			  '<svg onclick="RemoveBanner()" xmlns="http://www.w3.org/2000/svg" class="cpe-banner-notification__close cpe-icon cpe-icon-tiny">' +
+				'<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-cross-tiny" />' +
 			  '</svg>' +
 			'</div>' 
 	);

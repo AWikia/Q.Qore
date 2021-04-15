@@ -1204,7 +1204,7 @@ function CompileRecColors() {
 
 	for (let i = 0; i < socialAM; i++) {
 	  var color = Colors[i];
-	  var data = '<button class="wds-button wds-is-square color-button" onclick="PickColor1(' + "'#" + color + "'" + ')"> <div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div> </button>'
+	  var data = '<button class="cpe-button cpe-is-square color-button" onclick="PickColor1(' + "'#" + color + "'" + ')"> <div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div> </button>'
 	  str = str + data;
 	}
 
@@ -1219,7 +1219,7 @@ function CompileRecColors() {
 
 	for (let i = 0; i < socialAM; i++) {
 	  var color = Colors[i];
-	  var data = '<button class="wds-button wds-is-square color-button" onclick="PickColor8(' + "'#" + color + "'" + ')"> <div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div> </button>'
+	  var data = '<button class="cpe-button cpe-is-square color-button" onclick="PickColor8(' + "'#" + color + "'" + ')"> <div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div> </button>'
 	  str = str + data;
 	}
 
@@ -1234,7 +1234,7 @@ function CompileRecColors() {
 
 	for (let i = 0; i < socialAM; i++) {
 	  var color = Colors[i];
-	  var data = '<button class="wds-button wds-is-square color-button" onclick="PickColor2(' + "'#" + color + "'" + ')"> <div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div> </button>'
+	  var data = '<button class="cpe-button cpe-is-square color-button" onclick="PickColor2(' + "'#" + color + "'" + ')"> <div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div> </button>'
 	  str = str + data;
 	}
 
@@ -1248,7 +1248,7 @@ function CompileRecColors() {
 
 	for (let i = 0; i < socialAM; i++) {
 	  var color = Colors[i];
-	  var data = '<button class="wds-button wds-is-square color-button" onclick="PickColor3(' + "'#" + color + "'" + ')"> <div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div> </button>'
+	  var data = '<button class="cpe-button cpe-is-square color-button" onclick="PickColor3(' + "'#" + color + "'" + ')"> <div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div> </button>'
 	  str = str + data;
 	}
 
@@ -1262,7 +1262,7 @@ function CompileRecColors() {
 
 	for (let i = 0; i < socialAM; i++) {
 	  var color = Colors[i];
-	  var data = '<button class="wds-button wds-is-square color-button" onclick="PickColor4(' + "'#" + color + "'" + ')"> <div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div> </button>'
+	  var data = '<button class="cpe-button cpe-is-square color-button" onclick="PickColor4(' + "'#" + color + "'" + ')"> <div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div> </button>'
 	  str = str + data;
 	}
 
@@ -1276,7 +1276,7 @@ function CompileRecColors() {
 
 	for (let i = 0; i < socialAM; i++) {
 	  var color = Colors[i];
-	  var data = '<button class="wds-button wds-is-square color-button" onclick="PickColor5(' + "'#" + color + "'" + ')"> <div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div> </button>'
+	  var data = '<button class="cpe-button cpe-is-square color-button" onclick="PickColor5(' + "'#" + color + "'" + ')"> <div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div> </button>'
 	  str = str + data;
 	}
 
@@ -1292,7 +1292,7 @@ function CompileRecColors() {
 
 	for (let i = 0; i < socialAM; i++) {
 	  var color = Colors[i];
-	  var data = '<button class="wds-button wds-is-square color-button" onclick="PickColor6(' + "'#" + color + "'" + ')"> <div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div> </button>'
+	  var data = '<button class="cpe-button cpe-is-square color-button" onclick="PickColor6(' + "'#" + color + "'" + ')"> <div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div> </button>'
 	  str = str + data;
 	}
 
@@ -1307,7 +1307,7 @@ function CompileRecColors() {
 
 	for (let i = 0; i < socialAM; i++) {
 	  var color = Colors[i];
-	  var data = '<button class="wds-button wds-is-square color-button" onclick="PickColor7(' + "'#" + color + "'" + ')"> <div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div> </button>'
+	  var data = '<button class="cpe-button cpe-is-square color-button" onclick="PickColor7(' + "'#" + color + "'" + ')"> <div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div> </button>'
 	  str = str + data;
 	}
 
@@ -1324,21 +1324,7 @@ function SocialCompile() {
 	var socialC = ['#3b5998','#dd4b39','#00c300','#0077b5','#e02d69','#ff6400','#4077a7','#f96900','#ff4500','#34465d','#1da1f2','#587ca3','#fb803f','#ff8140','#cd201f','#7289da','#00acac','#0009FF','#000','#1ed760','#563194','#ff4500','#18bbc5','#61448d','#f4801f']
 	var socialAM = socialC.length
 // Start Content BG
-		if ( (window.MW18darkmode === true) ) {
-		// Adaptive
-			if (getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color") === 'auto') {
-				if (isLightColor(content_text)) {
-					var content_color = '#2e2e2e';	
-				} else {
-					var content_color = '#e2e2e2';
-				}
-			} else {
-				var content_color =	getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color");
-			}
-		//End Adaptive
-		} else {
 			var content_color =	getComputedStyle(document.querySelector('html')).getPropertyValue("--content-bg");
-		}
 // End Content BG
 
 	for (let i = 0; i < socialAM; i++) {
@@ -1346,8 +1332,7 @@ function SocialCompile() {
 	  var colormixl = ColorTestTwin(content_color,color,0.75,'rgb');
       var colormix = ColorTestTwin(content_color,color,1.5,'rgb');
 	  var name = socialV[i];
-	  var data = '.main .wds-button.wds-is-' + name + '-color{' +'--button-color:' + color + '!important;' + '--button-color-dark:' + ColorTest(color,false) + '!important;' + '--button-color-text:' + ColorTest(color,true) + '!important;' +'--content-border:' + color + '!important;' + '--content-border-dark:' + ColorTest(color,false) + '!important;' + '--content-border-text:' + ColorTest(color,true) + '!important;' +'--background-color:' + color + '!important;' + '--background-color-dark:' + ColorTest(color,false) + '!important;' + '--background-color-text:' + ColorTest(color,true) + '!important;' +'--link-color:' + Color2(color) + '!important;' + '--link-color-dark:' + ColorTest2(color,false) + '!important;' + '--link-color-text:' + ColorTest(color,true) + '!important;' + '}' + // WDS Buttons
-				'.cpe-button.cpe-is-' + name + '-color{' +'--button-color:' + color + '!important;' + '--button-color-dark:' + ColorTest(color,false) + '!important;' + '--button-color-dark-super:' + SuperColorTest(color,false) + '!important;' + '--button-color-text:' + ColorTest(color,true) + '!important;' + '--button-color-content-bg-mix-light:' + colormixl + '!important;' + '--button-color-content-bg-mix:' + colormix + '!important;' + '}'
+	  var data = '.cpe-button.cpe-is-' + name + '-color{' +'--button-color:' + color + '!important;' + '--button-color-dark:' + ColorTest(color,false) + '!important;' + '--button-color-dark-super:' + SuperColorTest(color,false) + '!important;' + '--button-color-text:' + ColorTest(color,true) + '!important;' + '--button-color-content-bg-mix-light:' + colormixl + '!important;' + '--button-color-content-bg-mix:' + colormix + '!important;' + '}'
 	  str = str + data;
 	}
 

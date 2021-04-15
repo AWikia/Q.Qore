@@ -14,86 +14,86 @@ $('.mpisto-userpages-header span.gender').html( x );
 // Site
 var x = $('#modal1 .mpisto-input.summary.ef_site').val();
 if (x === "") {
-	$('.mpisto-userpages-header .wds-button.site').removeAttr("href");
+	$('.mpisto-userpages-header .cpe-button.site').removeAttr("href");
 } else {
-	$('.mpisto-userpages-header .wds-button.site').attr("href", "https://" + x)
+	$('.mpisto-userpages-header .cpe-button.site').attr("href", "https://" + x)
 }
 // Facebook
 var x = $('#modal1 .mpisto-input.summary.ef_facebook').val();
 if (x === "") {
-	$('.mpisto-userpages-header .wds-button.facebook').removeAttr("href");
+	$('.mpisto-userpages-header .cpe-button.facebook').removeAttr("href");
 } else {
-	$('.mpisto-userpages-header .wds-button.facebook').attr("href", "https://www.facebook.com/" + x)
+	$('.mpisto-userpages-header .cpe-button.facebook').attr("href", "https://www.facebook.com/" + x)
 }
 // Twitter
 var x = $('#modal1 .mpisto-input.summary.ef_twitter').val();
 if (x === "") {
-	$('.mpisto-userpages-header .wds-button.twitter').removeAttr("href");
+	$('.mpisto-userpages-header .cpe-button.twitter').removeAttr("href");
 } else {
-	$('.mpisto-userpages-header .wds-button.twitter').attr("href", "https://www.twitter.com/" + x)
+	$('.mpisto-userpages-header .cpe-button.twitter').attr("href", "https://www.twitter.com/" + x)
 }
 // Reddit
 var x = $('#modal1 .mpisto-input.summary.ef_reddit').val();
 if (x === "") {
-	$('.mpisto-userpages-header .wds-button.reddit').removeAttr("href");
+	$('.mpisto-userpages-header .cpe-button.reddit').removeAttr("href");
 } else {
-	$('.mpisto-userpages-header .wds-button.reddit').attr("href", "https://www.reddit.com/user" + x)
+	$('.mpisto-userpages-header .cpe-button.reddit').attr("href", "https://www.reddit.com/user" + x)
 }
 // Fandom
 var x = $('#modal1 .mpisto-input.summary.ef_fandom').val();
 if (x === "") {
-	$('.mpisto-userpages-header .wds-button.fandom').removeAttr("href");
+	$('.mpisto-userpages-header .cpe-button.fandom').removeAttr("href");
 } else {
-	$('.mpisto-userpages-header .wds-button.fandom').attr("href", "https://community.fandom.com/User:" + x)
+	$('.mpisto-userpages-header .cpe-button.fandom').attr("href", "https://community.fandom.com/User:" + x)
 }
 // YouTube
 var x = $('#modal1 .mpisto-input.summary.ef_youtube').val();
 if (x === "") {
-	$('.mpisto-userpages-header .wds-button.youtube').removeAttr("href");
+	$('.mpisto-userpages-header .cpe-button.youtube').removeAttr("href");
 } else {
-	$('.mpisto-userpages-header .wds-button.youtube').attr("href", "https://www.youtube.com/user/" + x)
+	$('.mpisto-userpages-header .cpe-button.youtube').attr("href", "https://www.youtube.com/user/" + x)
 }
 // Tumblr
 var x = $('#modal1 .mpisto-input.summary.ef_tumblr').val();
 if (x === "") {
-	$('.mpisto-userpages-header .wds-button.tumblr').removeAttr("href");
+	$('.mpisto-userpages-header .cpe-button.tumblr').removeAttr("href");
 } else {
-	$('.mpisto-userpages-header .wds-button.tumblr').attr("href", "https://" + x + ".tumblr.com" )
+	$('.mpisto-userpages-header .cpe-button.tumblr').attr("href", "https://" + x + ".tumblr.com" )
 }
 // Steam
 var x = $('#modal1 .mpisto-input.summary.ef_steam').val();
 if (x === "") {
-	$('.mpisto-userpages-header .wds-button.steam').removeAttr("href");
+	$('.mpisto-userpages-header .cpe-button.steam').removeAttr("href");
 } else {
-	$('.mpisto-userpages-header .wds-button.steam').attr("href", "https://steamcommunity.com/id/" + x)
+	$('.mpisto-userpages-header .cpe-button.steam').attr("href", "https://steamcommunity.com/id/" + x)
 }
 // Spotify
 var x = $('#modal1 .mpisto-input.summary.ef_spotify').val();
 if (x === "") {
-	$('.mpisto-userpages-header .wds-button.spotify').removeAttr("href");
+	$('.mpisto-userpages-header .cpe-button.spotify').removeAttr("href");
 } else {
-	$('.mpisto-userpages-header .wds-button.spotify').attr("href", "https://open.spotify.com/user/" + x)
+	$('.mpisto-userpages-header .cpe-button.spotify').attr("href", "https://open.spotify.com/user/" + x)
 }
 // Twitch
 var x = $('#modal1 .mpisto-input.summary.ef_twitch').val();
 if (x === "") {
-	$('.mpisto-userpages-header .wds-button.twitch').removeAttr("href");
+	$('.mpisto-userpages-header .cpe-button.twitch').removeAttr("href");
 } else {
-	$('.mpisto-userpages-header .wds-button.twitch').attr("href", "https://twitch.tv/" + x)
+	$('.mpisto-userpages-header .cpe-button.twitch').attr("href", "https://twitch.tv/" + x)
 }
 
 /* Rest of script */
 $('#modal1 .lightbox .UP_editor').prepend ( 
-      '<div class="wds-banner-notification__container" id="floatingbanner" style="top:auto; position:relative;">' +
-        '<div class="wds-banner-notification wds-success wds-is-transparent" style="transform:none;" id="BannerSave">' +
-          '<div class="wds-banner-notification__icon">' +
-            '<svg xmlns="http://www.w3.org/2000/svg" class="wds-icon wds-icon-small">' +
-              '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-checkmark-small" />' +
+      '<div class="cpe-banner-notification__container" id="floatingbanner" style="top:auto; position:relative;">' +
+        '<div class="cpe-banner-notification cpe-success cpe-is-transparent" style="transform:none;" id="BannerSave">' +
+          '<div class="cpe-banner-notification__icon">' +
+            '<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">' +
+              '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-checkmark-small" />' +
             '</svg>' +
           '</div>' +
-          '<span class="wds-banner-notification__text">	Profile edited sucessfully!</span>' +
-          '<svg onclick="RemoveBannerSave()" xmlns="http://www.w3.org/2000/svg" class="wds-banner-notification__close wds-icon wds-icon-tiny">' +
-            '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-cross-tiny" />' +
+          '<span class="cpe-banner-notification__text">	Profile edited sucessfully!</span>' +
+          '<svg onclick="RemoveBannerUP1()" xmlns="http://www.w3.org/2000/svg" class="cpe-banner-notification__close cpe-icon cpe-icon-tiny">' +
+            '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-cross-tiny" />' +
           '</svg>' +
         '</div>' +
       '</div>'
@@ -108,13 +108,13 @@ setTimeout(RemoveBannerUP, 2500);
 function RemoveBannerUP() {
 	$('#modaEl10 .lightbox .save-page-wrapper #BannerSave').attr("style", "");
     var x = document.getElementById("BannerSave");
-        x.className += " wds-is-transparent";
+        x.className += " cpe-is-transparent";
 	    setTimeout(RemoveBannerUP1, 405) 
 }
 
 function RemoveBannerUP2() {
     var x = document.getElementById("BannerSave");
-       x.className = x.className.replace (" wds-is-transparent", "");
+       x.className = x.className.replace (" cpe-is-transparent", "");
 }
 
 function RemoveBannerUP1() {
