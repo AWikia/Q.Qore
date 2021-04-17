@@ -63,45 +63,6 @@ if (navigator.userAgent.match("BrowserWarn")) {
 	window.disco = false
 }
 
-function DropDown() {
-$(' .cpe-dropdown')
-        .click(function(e) {
-            var $this = $(this);
-			if ($this.hasClass('cpe-is-active')) {
-            $this.removeClass('cpe-is-active');
-		$(' .cpe-dropdown').off( "click" );			
-
- return;
-			}
-			e.preventDefault();
-			$this.addClass('cpe-is-active');
-		$(' .cpe-dropdown').off( "click" );			
-        });
-}
-
-
-$(".cpe-dropdown > :first-child").attr("onclick", "DropDown()");
-
-(function () {
-$(' .cpe-dropdown')
-.mouseleave(function() {
-            $(this).removeClass('cpe-is-active');
-        });
-
-})();
-
-/* Enable New Global Navigation - No exception for now */
-window.MW18newnavblock=false;
-(function () {
-	if (window.MW18newnavblock === true) {
-		return
-	}
-	if ($("body.mpisto-2018").length || $("body.mpisto-discuss-2018").length) {
-		document.querySelector('.mpisto-gnav[style]').className += " newnav";
-		document.querySelector('.mpisto-gnav:not([style])').className += " newnav";
-	}
-})();
-
 if ( (navigator.userAgent.match("BrowserWarn")) || window.disco ) {
 AddFloatingBanner('We\'re dropping support on your browser soon. Please make sure that you must update your browser before its too late!<br>If your device doesn\'t allow you to upgrade your browser or can\'t afford a cutting-edge browser, this means we\'re also dropping support on your device.<br>You can download <a href="https://www.google.com/chrome/">Google Chrome</a>, <a href="https://www.mozilla.org/firefox/">Mozilla Firefox</a> or the <a href="https://support.microsoft.com/help/4501095/download-the-new-microsoft-edge-based-on-chromium">Chromium Edge</a> if you want to still use Qora Qore.','warning','BrowserBanner')
 
@@ -125,6 +86,58 @@ function RemoveBannerBrowser1() {
 		document.querySelector(".mpisto-options-content").removeChild(document.getElementById("floatingbanner2"));
 	}
 }
+
+
+
+/* Dropdowns */
+// Function to be used on the first child of .cpe-dropdown container
+function DropDown() {
+$(' .cpe-dropdown')
+        .click(function(e) {
+            var $this = $(this);
+			if ($this.hasClass('cpe-is-active')) {
+            $this.removeClass('cpe-is-active');
+		$(' .cpe-dropdown').off( "click" );			
+
+ return;
+			}
+			e.preventDefault();
+			$this.addClass('cpe-is-active');
+		$(' .cpe-dropdown').off( "click" );			
+        });
+}
+
+// Calls the function on all toggles
+function DropDownUpdate() {
+$('.cpe-dropdown > :first-child').off( "click" );			
+$('.cpe-dropdown').off( "mouseleave" );	
+// Process Menus		
+$(".cpe-dropdown > :first-child")
+					.click( function(e) { 
+						e.preventDefault(); 
+						DropDown(); 
+					});
+					
+// Close dropdowns on mouse leave
+$(' .cpe-dropdown')
+.mouseleave(function() {
+            $(this).removeClass('cpe-is-active');
+        });
+
+}
+
+/* Enable New Global Navigation - No exception for now */
+window.MW18newnavblock=false;
+(function () {
+	if (window.MW18newnavblock === true) {
+		return
+	}
+	if ($("body.mpisto-2018").length || $("body.mpisto-discuss-2018").length) {
+		document.querySelector('.mpisto-gnav[style]').className += " newnav";
+		document.querySelector('.mpisto-gnav:not([style])').className += " newnav";
+	}
+	DropDownUpdate();
+})();
 
 
 /* Module Toggle */

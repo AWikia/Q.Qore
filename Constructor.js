@@ -47,26 +47,26 @@ function EditSwitch() {
 window.MW18oldtitle = document.querySelector(".mpisto-content .mpisto-title").innerHTML;
 window.MW18oldcontent = document.querySelector(".mpisto-content .mpisto-article section").innerHTML;
     } else { // Used Discard Changes Button
-		if (window.MW18unsaved === true) {
+		if (window.MW18unsaved === true) { // Changes were done but not saved
 			if (confirm("Discard changes to " + $('.mpisto-content .mpisto-title').text() +"?. If you do, any unsaved changes will be lost" ) === true) {
 				x.className = x.className.replace(" constructor", "");
 				x.className = x.className.replace(" editor", "");
-			var matches = document.getElementsByClassName('editor-editable');
-			while (matches.length > 0) {
-			  matches.item(0).removeAttribute('contenteditable');
-			  matches.item(0).classList.add('editor-edit');
-			  matches[0].classList.remove('editor-editable');
-			}
-			document.querySelector(".mpisto-content .mpisto-title").innerHTML = window.MW18oldtitle;
-			document.querySelector(".mpisto-content .mpisto-article section").innerHTML = window.MW18oldcontent;
-			  UpdateSource();
-			window.MW18unsaved = false;
-			var title = document.querySelector(".mpisto-content .mpisto-title");
-			title.className = title.className.replace (" unsaved", "");
+				var matches = document.getElementsByClassName('editor-editable');
+				while (matches.length > 0) {
+				  matches.item(0).removeAttribute('contenteditable');
+				  matches.item(0).classList.add('editor-edit');
+				  matches[0].classList.remove('editor-editable');
+				}
+				document.querySelector(".mpisto-content .mpisto-title").innerHTML = window.MW18oldtitle;
+				document.querySelector(".mpisto-content .mpisto-article section").innerHTML = window.MW18oldcontent;
+				  UpdateSource();
+				window.MW18unsaved = false;
+				var title = document.querySelector(".mpisto-content .mpisto-title");
+				title.className = title.className.replace (" unsaved", "");
 			}		
-		} else {
-				x.className = x.className.replace(" constructor", "");
-				x.className = x.className.replace(" editor", "");
+		} else { // No changes were made or it was saved
+			x.className = x.className.replace(" constructor", "");
+			x.className = x.className.replace(" editor", "");
 			var matches = document.getElementsByClassName('editor-editable');
 			while (matches.length > 0) {
 			  matches.item(0).removeAttribute('contenteditable');
@@ -126,6 +126,7 @@ window.MW18oldcontent = document.querySelector(".mpisto-content .mpisto-article 
 window.MW18oldtitle = document.querySelector(".mpisto-content .mpisto-title").innerHTML;
 window.MW18unsaved = false;
 var title = document.querySelector(".mpisto-content .mpisto-title");
+DropDownUpdate();
 title.className = title.className.replace (" unsaved", "");
 $('#modalE10 .lightbox .save-page-wrapper').prepend ( 
       '<div class="cpe-banner-notification__container" id="floatingbanner" style="top:auto; position:relative;">' +
