@@ -2114,7 +2114,7 @@ var x = $('input.font_2nd').val();
 	if (x=="") {
 		$("style.designer-style.theme-Miscellaneous").append(
 		'html {' +
-		'--custom:secondary-font:""!important;' +
+		'--custom-secondary-font:""!important;' +
 		'}'
 		);	
 		
