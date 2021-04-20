@@ -1130,15 +1130,15 @@ function ColorTest(color,text=false) {
 
 	if (isLightColor(color)) {
 		if (text === true) {
-			return '#000000';
+			return '#0a0a0a';
 		} else {
-			return ColorTestTwin(color,'#000000');
+			return ColorTestTwin(color,'#0a0a0a');
 		}
 	} else {
 		if (text === true) {
-			return '#ffffff';
+			return '#fafafa';
 		} else {
-			return ColorTestTwin(color,'#ffffff');
+			return ColorTestTwin(color,'#fafafa');
 		}
 	}
 
@@ -1147,10 +1147,10 @@ function ColorTest(color,text=false) {
 
 function SuperColorTest(color) {
 	if (isLightColor(color)) {
-		var mix = ColorTestTwin(color,'#000000');
+		var mix = ColorTestTwin(color,'#0a0a0a');
 		return ColorTestTwin(mix,'#000000');
 	} else {
-		var mix = ColorTestTwin(color,'#ffffff');
+		var mix = ColorTestTwin(color,'#fafafa');
 		return ColorTestTwin(mix,'#ffffff');
 	}
 }
@@ -1163,9 +1163,9 @@ function ColorTest2(color,text=false) {
 
 	if (text === true) {
 		if (isLightColor(color)) {
-			return '0,0,0';
+			return '10,10,10';
 		} else {
-			return '255,255,255';
+			return '250,250,250';
 		}
 	} else {
 		return Color2(ColorTest(color));
@@ -1343,8 +1343,8 @@ function SocialCompile() {
 
 	for (let i = 0; i < socialAM; i++) {
 	  var color = socialC[i];
-	  var colormixl = ColorTestTwin(content_color,color,0.75,'rgb');
-      var colormix = ColorTestTwin(content_color,color,1.5,'rgb');
+	  var colormixl = ColorTestTwin(content_color,color,0.8,'rgb');
+      var colormix = ColorTestTwin(colormixl,color,0.8,'rgb');
 	  var name = socialV[i];
 	  var data = '.cpe-button.cpe-is-' + name + '-color{' +'--button-color:' + color + '!important;' + '--button-color-dark:' + ColorTest(color,false) + '!important;' + '--button-color-dark-super:' + SuperColorTest(color,false) + '!important;' + '--button-color-text:' + ColorTest(color,true) + '!important;' + '--button-color-content-bg-mix-light:' + colormixl + '!important;' + '--button-color-content-bg-mix:' + colormix + '!important;' + '}'
 	  str = str + data;
@@ -1385,7 +1385,7 @@ var content_color3 = SuperColorTest(content_color); // Scrollbar
 
 
 if (isSuperLightColor(content_color)) {
-	var dropdowncolor = 'white';
+	var dropdowncolor = '#fafafa';
 	if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color") === 'auto') && !($("html.contrast.win10").length)  ) {
 		var dropdowncolor3 = '#2e2e2e';	
 	} else {
@@ -1393,34 +1393,34 @@ if (isSuperLightColor(content_color)) {
 	}
 
 	if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border") === 'auto') && !($("html.contrast.win10").length)  ) {
-		var dropdowncolor2 = chroma.mix(content_color,'black',MW18HoverThreshold*1.2, 'hsv');
+		var dropdowncolor2 = chroma.mix(content_color,'#0a0a0a',MW18HoverThreshold*1.2, 'hsv');
 	} else {
 		var dropdowncolor2 = 'inherit';
 	}
 
 	
 } else if (isLightColor(content_color)) {
-var dropdowncolor = chroma.mix(content_color,'black',MW18HoverThreshold*0.8, 'hsv');
+var dropdowncolor = chroma.mix(content_color,'#0a0a0a',MW18HoverThreshold*0.8, 'hsv');
 	if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color") === 'auto') && !($("html.contrast.win10").length)  ) {
-		var dropdowncolor3 = '#2b2b2b';	
+		var dropdowncolor3 = '#0a0a0a';	
 	} else {
 		var dropdowncolor3 = 'inherit';
 	}
 	if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border") === 'auto') && !($("html.contrast.win10").length)  ) {
-		var dropdowncolor2 = chroma.mix(content_color,'black',MW18HoverThreshold*2.2, 'hsv');
+		var dropdowncolor2 = chroma.mix(content_color,'#0a0a0a',MW18HoverThreshold*2.2, 'hsv');
 	} else {
 		var dropdowncolor2 = 'inherit';
 	}
 
 } else {
-var dropdowncolor = chroma.mix(content_color,'white',MW18HoverThreshold*0.8, 'hsv');
+var dropdowncolor = chroma.mix(content_color,'#fafafa',MW18HoverThreshold*0.8, 'hsv');
 	if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color") === 'auto') && !($("html.contrast.win10").length)  ) {
-		var dropdowncolor3 = '#e2e2e2';	
+		var dropdowncolor3 = '#fafafa';	
 	} else {
 		var dropdowncolor3 = 'inherit';
 	}
 	if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border") === 'auto') && !($("html.contrast.win10").length)  ) {
-		var dropdowncolor2 = chroma.mix(content_color,'white',MW18HoverThreshold*2.2, 'hsv');
+		var dropdowncolor2 = chroma.mix(content_color,'#fafafa',MW18HoverThreshold*2.2, 'hsv');
 	} else {
 		var dropdowncolor2 = 'inherit';
 	}
@@ -1466,8 +1466,8 @@ document.querySelector('html').style.setProperty("--button-color-blend-light", b
 document.querySelector('html').style.setProperty("--button-color-blend", button_color);
 }
 
-buttonmixl = ColorTestTwin(content_color,button_color,0.75,'rgb');
-buttonmix = ColorTestTwin(content_color,button_color,1.5,'rgb');
+buttonmixl = ColorTestTwin(content_color,button_color,0.8,'rgb');
+buttonmix = ColorTestTwin(buttonmixl,button_color,0.8,'rgb');
 
 
 /* Set Values */
@@ -1493,8 +1493,8 @@ document.querySelector('html').style.setProperty("--community-header-bg-blend-li
 document.querySelector('html').style.setProperty("--community-header-bg-blend", getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg"));
 }
 
-headermixl = ColorTestTwin(content_color,header_color,0.75,'rgb');
-headermix = ColorTestTwin(content_color,header_color,1.5,'rgb');
+headermixl = ColorTestTwin(content_color,header_color,0.8,'rgb');
+headermix = ColorTestTwin(headermixl,header_color,0.8,'rgb');
 
 
 
@@ -1523,8 +1523,8 @@ document.querySelector('html').style.setProperty("--link-color-blend-light", lin
 document.querySelector('html').style.setProperty("--link-color-blend", getComputedStyle(document.querySelector('html')).getPropertyValue("--link-color"));
 }
 
-linkmixl = ColorTestTwin(content_color,link_color,0.75,'rgb');
-linkmix = ColorTestTwin(content_color,link_color,1.5,'rgb');
+linkmixl = ColorTestTwin(content_color,link_color,0.8,'rgb');
+linkmix = ColorTestTwin(linkmixl,link_color,0.8,'rgb');
 
 
 /* Set Values */
@@ -1555,8 +1555,8 @@ document.querySelector('html').style.setProperty("--content-border-blend-light",
 document.querySelector('html').style.setProperty("--content-border-blend", border_color);
 }
 
-bordermixl = ColorTestTwin(content_color,border_color,0.75,'rgb');
-bordermix = ColorTestTwin(content_color,border_color,1.5,'rgb');
+bordermixl = ColorTestTwin(content_color,border_color,0.8,'rgb');
+bordermix = ColorTestTwin(bordermixl,border_color,0.8,'rgb');
 
 /* Set Values */
 document.querySelector('html').style.setProperty("--content-border-dark", bordercolor1);
@@ -1581,8 +1581,8 @@ document.querySelector('html').style.setProperty("--background-color-blend-light
 document.querySelector('html').style.setProperty("--background-color-blend", head_color);
 }
 
-headmixl = ColorTestTwin(content_color,head_color,0.75,'rgb');
-headmix = ColorTestTwin(content_color,head_color,1.5,'rgb');
+headmixl = ColorTestTwin(content_color,head_color,0.8,'rgb');
+headmix = ColorTestTwin(headmixl,button_color,0.8,'rgb');
 
 /* Set Values */
 document.querySelector('html').style.setProperty("--background-color-dark", headcolor1);
@@ -2114,14 +2114,14 @@ var x = $('input.font_2nd').val();
 	if (x=="") {
 		$("style.designer-style.theme-Miscellaneous").append(
 		'html {' +
-		'--secondary-font:"Rubik", "Arimo", "Liberation Sans", var(--secondary-foreign-fonts)!important;' +
+		'--custom:secondary-font:""!important;' +
 		'}'
 		);	
 		
 	} else {
 		$("style.designer-style.theme-Miscellaneous").append(
 		'html {' +
-		'--secondary-font:' + x + ', "Rubik", "Arimo", "Liberation Sans", var(--secondary-foreign-fonts)!important;' +
+		'--custom-secondary-font:' + x + '!important;' +
 		'}'
 		);	
 	}

@@ -595,7 +595,7 @@ width:100%;
 /* S */
 @media only screen and (min-width:755px) and (max-width:959px) {
 .mpisto-content, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .mpisto-options-content, .top-gap, .headroom.headroom--not-top .top-gap .cpe-banner-notification__container#floatingbanner  {
-  width:722px;
+  width:721px;
 }
 
 .mpisto-content .mpisto-title {

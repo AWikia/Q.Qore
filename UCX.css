@@ -1,0 +1,37 @@
+:root {
+--custom-secondary-font:@HEADINGFONT@;
+}
+
+.theme-A,
+.theme-B {
+--background-image:@BACKGROUNDIMAGE;
+--background-color:@COMMUNITYBACKGROUNDCOLOR@;
+--background-overlay:auto;
+--link-color:@LINKCOLOR@;
+--content-bg:@ARTICLEBACKGROUNDCOLOR@;
+--content-border:auto;
+--content-color:auto;
+--button-color:@ACCENTCOLOR@;
+--community-header-bg:@STICKYNAVCOLOR@;
+--body-display:legacy;
+--background-size:full;
+--background-va:top;
+--background-no-tiling:true;
+}
+
+.theme-C,
+.theme-D {
+--background-image:@BACKGROUNDIMAGE@DARK@;
+--background-color:@COMMUNITYBACKGROUNDCOLOR@DARK@;
+--background-overlay:auto;
+--link-color:@LINKCOLOR@DARK@;
+--content-bg:@ARTICLEBACKGROUNDCOLOR@DARK@;
+--content-border:auto;
+--content-color:auto;
+--button-color:@ACCENTCOLOR@DARK@;
+--community-header-bg:@STICKYNAVCOLOR@DARK@;
+--body-display:legacy;
+--background-size:full;
+--background-va:top;
+--background-no-tiling:true;
+}
