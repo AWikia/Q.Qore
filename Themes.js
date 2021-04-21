@@ -5,6 +5,11 @@ window.MW18LightThreshold = 50;
 window.MW18HoverThreshold = 0.25;
 window.MW18ContrastNotice = false;
 
+/* Visual Themes */
+var visualThemes = ['basic','contrast','contrast'];
+var visualColors = ['standard','standard','forcedcolors'];
+var visualThemeNames = ['Basic','High Contrast','High Contrast (Forced Colors)'];
+
 (function () {
 document.querySelector('html').className += " theme-A"; // We begin with the first theme selected
 ColorUpdate(true);
@@ -33,13 +38,48 @@ ColorUpdate(true);
 		SocialCompile();
 		ManagerRows(); // For Task Manager Only
 		ContrastBanner(); // Notice
-		
+		VisualStyleCompile(); // Compiles the Contrast Options
+		VisualStyle(-1); // We start without any visual style
 		
 })();
 
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
+}
+
+
+/* Visual Styles */
+function VisualStyle(style) {
+	var oldvisual = $('html').attr("visualcolors", "standard");
+	if (style === -1) { // Standard Style
+		$('html').attr("visualtheme", "standard");
+		$('html').attr("visualcolors", "standard");
+	} else {
+		$('html').attr("visualtheme", visualThemes[style]);
+		$('html').attr("visualcolors", visualColors[style]);
+	}
+	if (oldvisual !==	$('html').attr("visualcolors")) { // If Visual Colors get changed, update automated variables
+		ColorUpdate(true);
+	}
+}
+
+function VisualStyleCompile() {
+// Puts new options
+// In the Visual Styles Dropdown
+	for (let i = 0; i < visualThemes.length; i++) {
+		if ($("body.options").length) {
+			str = '<br><input type="radio" name="CPEVisual" id="CPEVisual_' + i + '" onclick="VisualStyle(' + i + ')"></input> <label for="CPEVisual_' + i + '">' + visualThemeNames[i] + '</label>'
+			$(".highcontrastmodes.cpe-visual-styles").append(str);
+
+		} else { // Non options page
+			str = '<li><a onclick="VisualStyle(' + i + ')">' + visualThemeNames[i] + '</a></li>'
+			$(".cpe-dropdown .cpe-dropdown__content .cpe-list.cpe-visual-styles").append(str);
+		}
+	}
+
+
+// In the Visual Styles Options
 }
 
 /* Changes Sitename */
@@ -154,7 +194,7 @@ function ContrastBanner() {
 if  ($("body.mpisto-2018").length) {
 	if ( ( window.matchMedia('(forced-colors: active)').matches ) && (window.MW18ContrastNotice === false) ) {
 		window.MW18ContrastNotice = true;
-		AddFloatingBanner("You're currently using a high contrast theme on your device. You may want to enable high contrast here with either <a onclick='HCcustom()'>leaving the colors unchanged</a> or <a onclick='HCcustom0()'>putting some specialized colors</a> so as to have a consistent high contrast experience.",'message','contrastbanner')  
+		AddFloatingBanner("You're currently using a high contrast theme on your device. You may want to use the High Contrast visual style found in the <b>Visual Styles</b> dropdown in the page header so as to have a consistent high contrast experience.",'message','contrastbanner')  
 	} else {
 		if (!($(".top-gap #contrastbanner").length)) {
 			window.MW18ContrastNotice = false;
@@ -1662,7 +1702,7 @@ function CheckAdapt() {
 /* Different with the ToggleBG function, only one is present for all three */
 function CheckBG() {
 	if ($("body.options").length   && !($("html.contrast.win10").length) ) { // Don't run if not on Preferences Page
-	/* BG */
+	/* BG */ // Background Style
 		if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--body-display") === 'legacy') && !($("html.contrast.win10").length)  ) {
 				document.querySelector('input#BG_2').checked = true;
 				document.querySelector('input#BG_1').checked = false;
@@ -1674,7 +1714,7 @@ function CheckBG() {
 				document.querySelector('input#BG_1').checked = true;
 				document.querySelector('input#BG_2').checked = false;
 		}
-	/* BG1 */
+	/* BG1 */ // Background Vertical Alingment
 		if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--background-va") === 'center') && !($("html.contrast.win10").length)  ) {
 				document.querySelector('input#BG1_2').checked = true;
 				document.querySelector('input#BG1_1').checked = false;
@@ -1688,13 +1728,21 @@ function CheckBG() {
 				document.querySelector('input#BG1_2').checked = false;
 				document.querySelector('input#BG1_3').checked = false;
 		}
-	/* BG2 */
+	/* BG2 */ // Background Tiling
 		if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--background-no-tiling") === 'true') && !($("html.contrast.win10").length)  ) {
 				document.querySelector('input#BG2').checked = true;
 		} else {
 				document.querySelector('input#BG2').checked = false;
 		}
 	/* BG3 */
+	/*
+	**
+	cover-off items are disabled when background-size is on Cover
+	stretch-off items are disabled when background-size is on Stretched
+	noncover-off items are enabled only if background-size is on Cover
+	noncover-off items are enabled only if background-size is on Cover
+	**
+	*/
 		if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--background-size") === 'contain') && !($("html.contrast.win10").length)  ) {
 				document.querySelector('input#BG3_2').checked = true;
 				document.querySelector('input#BG3_1').checked = false;
@@ -1719,7 +1767,7 @@ function CheckBG() {
 				$(".cover-off").removeAttr('disabled');
 				$(".stretch-off").removeAttr('disabled');
 				$(".noncover-off").attr('disabled', 'true');
-		} else {
+		} else { // Cover
 				document.querySelector('input#BG3_1').checked = true;
 				document.querySelector('input#BG3_2').checked = false;
 				document.querySelector('input#BG3_3').checked = false;
@@ -2028,85 +2076,6 @@ function HCd() {
         x.className = x.className.replace(" theme-B", "");
         x.className = x.className.replace(" theme-C", "");
 		ColorUpdate(true);
-}
-
-/* Remoes High Contrast */
-function HCclear() {
-    var x = document.querySelector('html');
-        x.className = x.className.replace(" contrast", "");
-        x.className = x.className.replace(" basic", "");
-       
-       
-        x.className = x.className.replace(" win10", "");
-		ColorUpdate(true);
-		if ($("body.options").length) {
-			$(".win10-off").removeAttr('disabled');
-			CheckBG();
-		}
-
-}
-
-/* Enables Super High Contrast */
-function HCcustom0() {
-    var x = document.querySelector('html');
-    if (x.className.indexOf("contrast") == -1) {
-        x.className += " contrast";
-    }
-    if (x.className.indexOf("win10") == -1) {
-        x.className += " win10";
-    }
-        x.className = x.className.replace(" basic", "");
-		ColorUpdate(true);
-		if ($("body.options").length) {
-			$(".win10-off").attr('disabled', 'true');
-		}
-}
-
-/* Enables High Contrast */
-function HCcustom() {
-    var x = document.querySelector('html');
-    if (x.className.indexOf("contrast") == -1) {
-        x.className += " contrast";
-    }
-        x.className = x.className.replace(" win10", "");
-        x.className = x.className.replace(" basic", "");
-		ColorUpdate(true);
-		if ($("body.options").length) {
-			$(".win10-off").removeAttr('disabled');
-			CheckBG();
-		}
-
-}
-
-/* Enables Increased Contrast */
-function HCcustom2() {
-    var x = document.querySelector('html');
-    if (x.className.indexOf("basic") == -1) {
-        x.className += " basic";
-    }
-        x.className = x.className.replace(" contrast", "");
-        x.className = x.className.replace(" win10", "");
-		ColorUpdate(true);
-		if ($("body.options").length) {
-			$(".win10-off").removeAttr('disabled');
-			CheckBG();
-		}
-}
-
-function UpdateContrast() {
-var x = $('input[type="range"][name="contrasts"].big').val();
-	if (x==0) {
-		HCclear();
-	}
-	if (x==1) {
-		HCcustom2();
-	}
-	if (x==2) {
-		HCcustom();
-	}
-	if (x==3) {
-		HCcustom0();
-	}
 }
 
 function UpdateFont() {

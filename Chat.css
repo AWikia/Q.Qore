@@ -145,7 +145,7 @@ body *, :before, :after {
 	scrollbar-color:var(--emphasis-bg) transparent;
 }
 
-.contrast .chat-content * {
+[visualtheme*="contrast"] .chat-content * {
 	scrollbar-color:var(--content-color) transparent;
 }
 
@@ -183,7 +183,7 @@ body *, :before, :after {
 	padding:0 2px;
 }
 
-.contrast .emoji-reaction .cpe-is-square {
+[visualtheme*="contrast"] .emoji-reaction .cpe-is-square {
 	color:inherit!important;
 }
 
@@ -217,7 +217,7 @@ body *, :before, :after {
 	background-color:var(--dropdown-bg);
 }
 
-.contrast .chat-content .wrapper section message[you] {
+[visualtheme*="contrast"] .chat-content .wrapper section message[you] {
 	color:var(--button-color-text);
 	background-color:var(--button-color);
 }
@@ -247,7 +247,7 @@ body *, :before, :after {
 	font-size:90%;
 }
 
-.contrast .chat-content .wrapper section message > div .user-info .time {
+[visualtheme*="contrast"] .chat-content .wrapper section message > div .user-info .time {
 	opacity:1;
 }
 
@@ -333,7 +333,7 @@ body:not([class*="page"]) .chat-content .wrapper section[pane] .list .channel:nt
 	color:rgb(var(--link-color));
 }
 
-.contrast body:not([class*="page"]) .chat-content .wrapper section[pane] .list .channel:nth-child(1), .contrast .page-1 .chat-content .wrapper section[pane] .list .channel:nth-child(2) {
+[visualtheme*="contrast"] body:not([class*="page"]) .chat-content .wrapper section[pane] .list .channel:nth-child(1), [visualtheme*="contrast"] .page-1 .chat-content .wrapper section[pane] .list .channel:nth-child(2) {
 	border-color:var(--button-color-text);
 	background-color:var(--button-color);
 	color:var(--button-color-text);
@@ -353,7 +353,7 @@ body:not([class*="page"]) .chat-content .wrapper section[pane] .list .channel:nt
 }
 
 
-.contrast .chat-content .wrapper section[pane] .list .cpe-dropdown:hover .info {
+[visualtheme*="contrast"] .chat-content .wrapper section[pane] .list .cpe-dropdown:hover .info {
 	background-color:var(--button-color);
 	color:var(--button-color-text);
 }
@@ -378,14 +378,14 @@ body:not([class*="page"]) .chat-content .wrapper section[pane] .list .channel:nt
 	text-overflow:ellipsis;
 }
 
-body:not(.contrast) .chat-content .wrapper section[pane] .list .info span[online] {
+body:not([visualtheme*="contrast"]) .chat-content .wrapper section[pane] .list .info span[online] {
 	color:limegreen;
 }
 
-body:not(.contrast) .chat-content .wrapper section[pane] .list .info span[idile] {
+body:not([visualtheme*="contrast"]) .chat-content .wrapper section[pane] .list .info span[idile] {
 	color:orange;
 }
-body:not(.contrast) .chat-content .wrapper section[pane] .list .info span[offline] {
+body:not([visualtheme*="contrast"]) .chat-content .wrapper section[pane] .list .info span[offline] {
 	color:red;
 }
 

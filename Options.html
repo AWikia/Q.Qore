@@ -1267,32 +1267,11 @@ Checked = VisualEditor as default mode
 	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon" width="24" height="24" viewBox="0 0 24 24">
 		<path d="M17.66 7.93L12 2.27 6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58c2.05 0 4.1-.78 5.66-2.34 3.12-3.12 3.12-8.19 0-11.31zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/></svg>
 	</svg>
-    Rendering Mode
+    Visual Styles
     </h2>
 <!--    Default mode:-->
-    <br>
-    <div class="highcontrastmodes">
-				<input type="range" oninput="UpdateContrast()" name="contrasts" style="width:100%" class="big" min="0" max="3" autocomplete="false" value="0"></input>
-				<br>
-				Move the slider to change rendering modes:
-				<ul>
-				<li>0 means Normal</li>
-				<li>1 means Performance</li>
-				<li>2 means High Contrast</li>
-				<li>3 means Super High Contrast</li>
-				</ul>
-    </div>
-    <div class="highcontrastmodes cpe-is-hidden">
-    <input type="radio" name="21" id="201" checked onclick="HCclear()"></input> <label for="201">Normal</label>
-    <br>
-    <input type="radio" name="21" id="202" onclick="HCcustom0()"></input> <label for="202">High Constrast (Windows 10 Themes)</label>
-    <br>
-    <input type="radio" name="21" id="203" onclick="HCcustom()"></input> <label for="203">High Constrast (Wiki Themes)</label>
-    <br>
-    <input type="radio" name="21" id="204" onclick="HCcustom2()"></input> <label for="204">Performance</label>
-    </div>
-    <div class="contrastnotice">
-    Your browser does not support CSS variables which are required for High Contrast Mode to work
+    <div class="highcontrastmodes cpe-visual-styles">
+    <input type="radio" name="CPEVisual" id="CPEVisual_-1" checked onclick="VisualStyle(-1)"></input> <label for="CPEVisual_-1">Standard</label>
     </div>
     </fieldset>
     </div>
