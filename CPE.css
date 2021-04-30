@@ -1687,6 +1687,15 @@ input[type="checkbox"]::after {
     left:30%;
 }
 
+input[type="checkbox"]:hover::after, input[type="radio"]:hover::after {
+  opacity:0;
+}
+
+input[type="checkbox"]:active::after, input[type="radio"]:active::after {
+  opacity:0;
+}
+
+
 /* These styles are not used in IE and Edge since we use the ms-check to display the square. This applies to other engines only to show a minus sign */
 input[type="checkbox"]:indeterminate::after {
     opacity:1;
@@ -1709,15 +1718,6 @@ input[type="radio"]::after {
   left:22.5%;
 }
 
-
-
-input[type="checkbox"]:hover::after, input[type="radio"]:hover::after {
-  opacity:0;
-}
-
-input[type="checkbox"]:active::after, input[type="radio"]:active::after {
-  opacity:0;
-}
 
 
 input[type="checkbox"]:checked::after, input[type="radio"]:checked::after {
