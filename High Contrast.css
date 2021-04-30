@@ -596,41 +596,44 @@ background-color:var(--content-bg);
 box-shadow:0 0 0 3px var(--content-border)!important;
 }
 
-/* Options */
-[visualtheme*="contrast"] input[type="checkbox"], [visualtheme*="contrast"] input[type="radio"] {
-box-shadow:0 0 0px 1px var(--content-color)!important;
+/* Checkboxes */
+[visualtheme*="basic"] input[type="checkbox"], [visualtheme*="basic"] input[type="radio"] ,
+[visualtheme*="contrast"] input[type="checkbox"], [visualtheme*="contrast"] input[type="radio"]  {
+	--checkbox-checked-bg:rgb(var(--link-color));
+	--checkbox-checked-bg-hover:rgb(var(--link-color-dark));
+	--checkbox-checked-shadow:var(--checkbox-checked-bg);
+	--checkbox-checked-shadow-hover:var(--checkbox-checked-bg-hover);
+	--checkbox-checked-text:var(--link-color-text);
 }
 
-/*
-[visualtheme*="contrast"] input[type="checkbox"]:hover, [visualtheme*="contrast"] input[type="radio"]:hover {
-box-shadow:0 0 0px 1px rgb(var(--link-color))!important;
+
+[visualtheme*="contrast"] input[type="checkbox"], [visualtheme*="contrast"] input[type="radio"] {
+	--checkbox-unchecked-shadow:var(--content-color);
+  box-shadow:0 0 0 1px var(--checkbox-unchecked-shadow)!important;
 }
-*/
+
+[visualtheme*="contrast"] input[type="checkbox"]:hover, [visualtheme*="contrast"] input[type="radio"]:hover {
+  box-shadow:0 0 0 1px var(--checkbox-active-bg)!important;
+}
 
 [visualtheme*="contrast"] input[type="checkbox"]:active, [visualtheme*="contrast"] input[type="radio"]:active {
-/*
-box-shadow:0 0 0px 1px var(--content-color)!important;
-*/
-box-shadow:0 0 0px 1px var(--content-border)!important;
+  box-shadow:0 0 0 1px var(--checkbox-active-bg)!important;
 }
 
 [visualtheme*="contrast"] input[type="checkbox"]:checked, [visualtheme*="contrast"] input[type="radio"]:checked,
 [visualtheme*="contrast"] input[type="checkbox"]:indeterminate, [visualtheme*="contrast"] input[type="radio"]:indeterminate {
-box-shadow:0 0 0px 1px var(--button-color)!important;
+  box-shadow:0 0 0 1px var(--checkbox-checked-shadow)!important;
 }
 
 [visualtheme*="contrast"] input[type="checkbox"]:checked:hover, [visualtheme*="contrast"] input[type="radio"]:checked:hover, 
 [visualtheme*="contrast"] input[type="checkbox"]:indeterminate:hover, [visualtheme*="contrast"] input[type="radio"]:indeterminate:hover {
-box-shadow:0 0 0px 1px var(--button-color-dark)!important;
+  box-shadow:0 0 0 1px var(--checkbox-checked-shadow-hover)!important;
 }
 
 
 [visualtheme*="contrast"] input[type="checkbox"]:checked:active, [visualtheme*="contrast"] input[type="radio"]:checked:active,
 [visualtheme*="contrast"] input[type="checkbox"]:indeterminate:active, [visualtheme*="contrast"] input[type="radio"]:indeterminate:active {
-/*
-box-shadow:0 0 0px 1px var(--button-color-text)!important;
-*/
-box-shadow:0 0 0px 1px var(--content-border)!important;
+  box-shadow:0 0 0 1px var(--checkbox-active-bg)!important;
 }
 
 

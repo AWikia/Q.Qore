@@ -55,6 +55,11 @@ body *, :before, :after {
 	-webkit-backdrop-filter:none!important;
 }
 
+/* Drop Overlay */
+.gradient-overlay, .gradient-overlay-2 {
+	display:none!important;
+}
+
 /* Drop Color Filters */
 [class*=filter] {
 	filter:none!important;
