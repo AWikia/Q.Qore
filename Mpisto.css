@@ -236,7 +236,7 @@ all:initial!important;
 }
 
 abbr[title] {
-  cursor:url("Windows/help.cur"), help;
+  cursor:var(--cpe-help-cursor);
   text-decoration:none;
   border-bottom:1px dotted currentColor;
 }
@@ -791,7 +791,7 @@ min-height:14px;
 }
 
 .cpe-dropdown .link {
-cursor:url("Windows/default.cur"), default;
+cursor:var(--cpe-auto-cursor);
 
 }
 
@@ -828,7 +828,7 @@ cursor:url("Windows/default.cur"), default;
   display:table;
   position:relative;
   z-index:2;
-  cursor:url("Windows/hand.cur"), pointer;
+  cursor:var(--cpe-hand-cursor);
   text-decoration:none;
 }
 
@@ -1194,7 +1194,7 @@ input[type="range"]::-qq-slider-filler {
 
 
 /* Used on spotlight footer only */
-.cpe-community-header{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;background-position:right center;background-repeat:no-repeat;background-size:contain;height:105px;position:relative;z-index:1}@media only screen and (max-width:1099px){.cpe-community-header{height:115px}}.cpe-community-header::before{content:'';display:block;height:100%;position:absolute;width:100%;z-index:-1}.cpe-community-header__wordmark{float:left;height:65px;margin:20px 0 20px 20px;max-width:250px;width:auto}.cpe-community-header__wordmark img{height:auto;max-height:100%;max-width:100%;width:auto}@media only screen and (max-width:1099px){.cpe-community-header__wordmark{height:49px;margin-bottom:0;max-width:175px}}.cpe-community-header__top-container{display:flex;height:59px}.cpe-community-header__sitename{flex:1;font-size:28px;font-weight:600;line-height:1;margin:25px 0 0 18px;overflow:hidden}.cpe-community-header__sitename a{text-decoration:none}@media only screen and (max-width:1099px){.cpe-community-header__top-container{height:69px}.cpe-community-header__sitename{font-size:24px;margin-top:20px;max-height:72px;white-space:normal;word-wrap:break-word}}@media only screen and (min-width:1100px){.cpe-community-header__sitename a{display:inline-block;height:100%;line-height:1.2;text-decoration:none}.cpe-community-header__sitename{text-overflow:ellipsis;white-space:nowrap}}.cpe-community-header__counter{font-weight:600;text-align:right;margin:17px 0 20px 20px}.cpe-community-header__counter-value{display:block;font-size:24px;line-height:1}@media only screen and (max-width:1099px){.cpe-community-header__counter{margin-top:22px}.cpe-community-header__counter-value{font-size:18px}}.cpe-community-header__counter-label{display:block;font-size:12px;line-height:1;margin-top:3px;text-transform:uppercase}.cpe-community-header__wiki-buttons{margin:20px 20px auto 15px}.cpe-community-header__local-navigation{display:flex;height:46px;padding-left:6px}.cpe-community-header__local-navigation a[href="#"]{cursor:url("Windows/default.cur"), default;}.cpe-community-header__local-navigation .cpe-dropdown__toggle-chevron{opacity:.5}.cpe-community-header__local-navigation .cpe-dropdown.cpe-is-active .cpe-dropdown__toggle-chevron{opacity:1}@media only screen and (max-width:1099px){.cpe-community-header__counter-label{font-size:10px}.cpe-community-header__local-navigation{clear:both}}@media only screen and (max-width:959px){.cpe-community-header__local-navigation .cpe-tabs__tab-label{font-size:10px}}
+.cpe-community-header{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;background-position:right center;background-repeat:no-repeat;background-size:contain;height:105px;position:relative;z-index:1}@media only screen and (max-width:1099px){.cpe-community-header{height:115px}}.cpe-community-header::before{content:'';display:block;height:100%;position:absolute;width:100%;z-index:-1}.cpe-community-header__wordmark{float:left;height:65px;margin:20px 0 20px 20px;max-width:250px;width:auto}.cpe-community-header__wordmark img{height:auto;max-height:100%;max-width:100%;width:auto}@media only screen and (max-width:1099px){.cpe-community-header__wordmark{height:49px;margin-bottom:0;max-width:175px}}.cpe-community-header__top-container{display:flex;height:59px}.cpe-community-header__sitename{flex:1;font-size:28px;font-weight:600;line-height:1;margin:25px 0 0 18px;overflow:hidden}.cpe-community-header__sitename a{text-decoration:none}@media only screen and (max-width:1099px){.cpe-community-header__top-container{height:69px}.cpe-community-header__sitename{font-size:24px;margin-top:20px;max-height:72px;white-space:normal;word-wrap:break-word}}@media only screen and (min-width:1100px){.cpe-community-header__sitename a{display:inline-block;height:100%;line-height:1.2;text-decoration:none}.cpe-community-header__sitename{text-overflow:ellipsis;white-space:nowrap}}.cpe-community-header__counter{font-weight:600;text-align:right;margin:17px 0 20px 20px}.cpe-community-header__counter-value{display:block;font-size:24px;line-height:1}@media only screen and (max-width:1099px){.cpe-community-header__counter{margin-top:22px}.cpe-community-header__counter-value{font-size:18px}}.cpe-community-header__counter-label{display:block;font-size:12px;line-height:1;margin-top:3px;text-transform:uppercase}.cpe-community-header__wiki-buttons{margin:20px 20px auto 15px}.cpe-community-header__local-navigation{display:flex;height:46px;padding-left:6px}.cpe-community-header__local-navigation a[href="#"]{cursor:var(--cpe-auto-cursor);}.cpe-community-header__local-navigation .cpe-dropdown__toggle-chevron{opacity:.5}.cpe-community-header__local-navigation .cpe-dropdown.cpe-is-active .cpe-dropdown__toggle-chevron{opacity:1}@media only screen and (max-width:1099px){.cpe-community-header__counter-label{font-size:10px}.cpe-community-header__local-navigation{clear:both}}@media only screen and (max-width:959px){.cpe-community-header__local-navigation .cpe-tabs__tab-label{font-size:10px}}
 
 
 
@@ -2766,7 +2766,7 @@ border:1px solid var(--content-color);
 */
 border:solid transparent 1px;
 transition:border 170ms, box-shadow 170ms;
-cursor:url("Windows/text.cur"), text;
+cursor:var(--cpe-text-cursor);
 border-radius:50px;
 -webkit-appearance:none;
 appearance:none;
@@ -3790,6 +3790,7 @@ header.mpisto-footer-container {
   min-height:27px;
   width:100%;
   border:3px solid rgb(var(--link-color));
+  color:var(--content-color);
   border-left-width:0px;
   border-right-width:0px;
   border-bottom-width:0px;
@@ -4162,7 +4163,7 @@ list-style:none!important;
 .editor-header .wordmark {
 	height:calc(65px * 0.64);
 	max-width:calc(250px * 0.64);
-	cursor:url("Windows/hand.cur"), pointer;
+	cursor:var(--cpe-hand-cursor);
 	transition-property:filter;
 	transition-delay:var(--wordmark-filter-delay,0);
 	transition-duration:var(--wordmark-filter-duration,300ms) ;
@@ -4877,7 +4878,7 @@ input[type="file"] {
 
 input[type="file"] {
   background-color:transparent;
-  cursor:url("Windows/default.cur"), default;
+  cursor:var(--cpe-auto-cursor);
 }
 
 
@@ -4887,7 +4888,7 @@ background-color:var(--button-color);
 color:var(--button-color-text);
 border:1px solid currentColor;
 outline:0;
-cursor:url("Windows/default.cur"), default;
+cursor:var(--cpe-auto-cursor);
 border-radius:3px;
 -webkit-appearance:none;
 appearance:none;
@@ -5507,7 +5508,7 @@ margin-right:0;
   transition:480ms;
   text-transform:uppercase;
   font-weight:500;
-  cursor:url("Windows/hand.cur"), pointer;
+  cursor:var(--cpe-hand-cursor);
 	display: inline-block;
   padding: 5px 10px;
   border-radius:calc(var(--button-radius) / 1.6);
@@ -5653,492 +5654,6 @@ left:100%;padding:10px 14px; position:absolute; top:-1px; font-size:0.8em;}
 
 
 
-
-/* OS X Cursors */
-[cursor*="apple"] {
-  cursor:url("OSX/default.cur"), auto;
-}
-
-[cursor*="apple"] abbr[title] {
-  cursor:url("OSX/help.cur"), help;
-}
-
-[cursor*="apple"] :not(.unset)[disabled], [cursor*="apple"] :not(.unset):disabled {
-cursor:url("OSX/banned.cur"), not-allowed!important;
-}
-
-[cursor*="apple"] textarea, 
-[cursor*="apple"] [contenteditable], 
-[cursor*="apple"] header.mpisto-navbar .search .search-input, 
-[cursor*="apple"] .mpisto-input {
-  cursor:url("OSX/text.cur"), text;
-}
-
-[cursor*="apple"] .cpe-dropdown .link, 
-[cursor*="apple"] .cpe-button, 
-[cursor*="apple"] .cpe-button:disabled, 
-[cursor*="apple"] .cpe-is-disabled, 
-[cursor*="apple"] .cpe-community-header__local-navigation a[href="#"], 
-[cursor*="apple"] .cpe-tabs__tab, 
-[cursor*="apple"] label {
-  cursor:url("OSX/default.cur"), default;
-}
-
-[cursor*="apple"] a, 
-[cursor*="apple"] a:hover, 
-[cursor*="apple"] .notification.cpe-dropdown__content .cpe-list > li:not(:last-child):not(.empty), 
-[cursor*="apple"] .notification.cpe-dropdown-level-2__content .cpe-list > li:not(:last-child):not(.empty), 
-[cursor*="apple"] a.cpe-button, 
-[cursor*="apple"] button.cpe-button, 
-[cursor*="apple"] .editor-header .wordmark, 
-[cursor*="apple"] .mpisto-option-way.p4 input[type="color"].cpe-button.cpe-is-square, 
-[cursor*="apple"] .cpe-banner-notification__close, [cursor*="apple"] a label, 
-[cursor*="apple"] a input[type="checkbox"], 
-[cursor*="apple"] a input[type="radio"], 
-[cursor*="apple"] .cpe-floating-button:not([disabled]), 
-[cursor*="apple"] .cpe-floating-button:not(.cpe-is-disabled), 
-[cursor*="apple"] .cpe-dropdown .cpe-dropdown__toggle, 
-[cursor*="apple"] .cpe-toggle__label {
-cursor:url("OSX/hand.cur"), pointer;
-}
-
-
-[cursor*="apple"][curtheme*="dark"] {
-  cursor:url("OSX/default.cur"), auto;
-}
-
-[cursor*="apple"][curtheme*="dark"] abbr[title] {
-  cursor:url("OSX/help.cur"), help;
-}
-
-[cursor*="apple"][curtheme*="dark"] :not(.unset)[disabled], 
-[cursor*="apple"][curtheme*="dark"] :not(.unset):disabled {
-cursor:url("OSX/banned.cur"), not-allowed!important;
-}
-
-[cursor*="apple"][curtheme*="dark"] textarea, 
-[cursor*="apple"][curtheme*="dark"] [contenteditable], 
-[cursor*="apple"][curtheme*="dark"] header.mpisto-navbar .search .search-input, 
-[cursor*="apple"][curtheme*="dark"] .mpisto-input {
-  cursor:url("OSX/text.cur"), text;
-}
-
-[cursor*="apple"][curtheme*="dark"] .cpe-dropdown .link, 
-[cursor*="apple"][curtheme*="dark"] .cpe-button, 
-[cursor*="apple"][curtheme*="dark"] .cpe-button:disabled, 
-[cursor*="apple"][curtheme*="dark"] .cpe-is-disabled, 
-[cursor*="apple"][curtheme*="dark"] .cpe-community-header__local-navigation a[href="#"], 
-[cursor*="apple"][curtheme*="dark"] .cpe-tabs__tab, 
-[cursor*="apple"][curtheme*="dark"] label {
-  cursor:url("OSX/default.cur"), default;
-}
-
-[cursor*="apple"][curtheme*="dark"] a, 
-[cursor*="apple"][curtheme*="dark"] a:hover, 
-[cursor*="apple"][curtheme*="dark"] .notification.cpe-dropdown__content .cpe-list > li:not(:last-child):not(.empty), 
-[cursor*="apple"][curtheme*="dark"] .notification.cpe-dropdown-level-2__content .cpe-list > li:not(:last-child):not(.empty), 
-[cursor*="apple"][curtheme*="dark"] a.cpe-button, 
-[cursor*="apple"][curtheme*="dark"] button.cpe-button, 
-[cursor*="apple"][curtheme*="dark"] .editor-header .wordmark, 
-[cursor*="apple"][curtheme*="dark"] .mpisto-option-way.p4 input[type="color"].cpe-button.cpe-is-square, [cursor*="apple"][curtheme*="dark"] .cpe-banner-notification__close, 
-[cursor*="apple"][curtheme*="dark"] a label, 
-[cursor*="apple"][curtheme*="dark"] a input[type="checkbox"], 
-[cursor*="apple"][curtheme*="dark"] a input[type="radio"], 
-[cursor*="apple"][curtheme*="dark"] .cpe-floating-button:not([disabled]), 
-[cursor*="apple"][curtheme*="dark"] .cpe-floating-button:not(.cpe-is-disabled), 
-[cursor*="apple"][curtheme*="dark"] .cpe-dropdown .cpe-dropdown__toggle, 
-[cursor*="apple"][curtheme*="dark"] .cpe-toggle__label {
-cursor:url("OSX/hand.cur"), pointer;
-}
-
-/* Linux Cursors */
-[cursor*="linux"][curtheme*="dark"] {
-  cursor:url("Lenux/Ddefault.cur"), auto;
-}
-
-[cursor*="linux"][curtheme*="dark"] abbr[title] {
-  cursor:url("Lenux/Dhelp.cur"), help;
-}
-
-[cursor*="linux"][curtheme*="dark"] :not(.unset)[disabled], 
-[cursor*="linux"][curtheme*="dark"]:not(.unset):disabled {
-cursor:url("Lenux/Dbanned.cur"), not-allowed!important;
-}
-
-[cursor*="linux"][curtheme*="dark"] textarea, 
-[cursor*="linux"][curtheme*="dark"] [contenteditable], 
-[cursor*="linux"][curtheme*="dark"] header.mpisto-navbar .search .search-input, 
-[cursor*="linux"][curtheme*="dark"] .mpisto-input {
-  cursor:url("Lenux/Dtext.cur"), text;
-}
-
-[cursor*="linux"][curtheme*="dark"] .cpe-dropdown .link, 
-[cursor*="linux"][curtheme*="dark"] .cpe-button, 
-[cursor*="linux"][curtheme*="dark"] .cpe-button:disabled, 
-[cursor*="linux"][curtheme*="dark"] .cpe-is-disabled, 
-[cursor*="linux"][curtheme*="dark"] .cpe-community-header__local-navigation a[href="#"], 
-[cursor*="linux"][curtheme*="dark"] .cpe-tabs__tab, 
-[cursor*="linux"][curtheme*="dark"] label {
-  cursor:url("Lenux/Ddefault.cur"), default;
-}
-
-[cursor*="linux"][curtheme*="dark"] a,
-[cursor*="linux"][curtheme*="dark"] a:hover, 
-[cursor*="linux"][curtheme*="dark"] .notification.cpe-dropdown__content .cpe-list > li:not(:last-child):not(.empty), 
-[cursor*="linux"][curtheme*="dark"] .notification.cpe-dropdown-level-2__content .cpe-list > li:not(:last-child):not(.empty), 
-[cursor*="linux"][curtheme*="dark"] a.cpe-button, 
-[cursor*="linux"][curtheme*="dark"] button.cpe-button, 
-[cursor*="linux"][curtheme*="dark"] .editor-header .wordmark, 
-[cursor*="linux"][curtheme*="dark"] .mpisto-option-way.p4 input[type="color"].cpe-button.cpe-is-square, 
-[cursor*="linux"][curtheme*="dark"] .cpe-banner-notification__close, 
-[cursor*="linux"][curtheme*="dark"] a label, 
-[cursor*="linux"][curtheme*="dark"] a input[type="checkbox"], 
-[cursor*="linux"][curtheme*="dark"] a input[type="radio"], 
-[cursor*="linux"][curtheme*="dark"] .cpe-floating-button:not([disabled]), 
-[cursor*="linux"][curtheme*="dark"] .cpe-floating-button:not(.cpe-is-disabled), 
-[cursor*="linux"][curtheme*="dark"] .cpe-dropdown .cpe-dropdown__toggle, 
-[cursor*="linux"][curtheme*="dark"] .cpe-toggle__label {
-cursor:url("Lenux/Dhand.cur"), pointer;
-}
-
-[cursor*="linux"] {
-  cursor:url("Lenux/default.cur"), auto;
-}
-
-[cursor*="linux"] abbr[title] {
-  cursor:url("Lenux/help.cur"), help;
-}
-
-[cursor*="linux"] :not(.unset)[disabled],
-[cursor*="linux"] :not(.unset):disabled {
-cursor:url("Lenux/banned.cur"), not-allowed!important;
-}
-
-[cursor*="linux"] textarea, 
-[cursor*="linuxd"] [contenteditable], 
-[cursor*="linuxd"] header.mpisto-navbar .search .search-input, 
-[cursor*="linuxd"] .mpisto-input {
-  cursor:url("Lenux/text.cur"), text;
-}
-
-
-[cursor*="linux"] a,
-[cursor*="linux"] a:hover,
-[cursor*="linux"] .notification.cpe-dropdown__content .cpe-list > li:not(:last-child):not(.empty),
-[cursor*="linux"] .notification.cpe-dropdown-level-2__content .cpe-list > li:not(:last-child):not(.empty),
-[cursor*="linux"] a.cpe-button, 
-[cursor*="linux"] button.cpe-button,
-[cursor*="linux"] .editor-header .wordmark,
-[cursor*="linux"] .mpisto-option-way.p4 input[type="color"].cpe-button.cpe-is-square,
-[cursor*="linux"] .cpe-banner-notification__close,
-[cursor*="linux"] a label,
-[cursor*="linux"] a input[type="checkbox"],
-[cursor*="linux"] a input[type="radio"],
-[cursor*="linux"] .cpe-floating-button:not([disabled]),
-[cursor*="linux"] .cpe-floating-button:not(.cpe-is-disabled),
-[cursor*="linux"] .cpe-dropdown .cpe-dropdown__toggle,
-[cursor*="linux"] .cpe-toggle__label {
-cursor:url("Lenux/hand.cur"), pointer;
-}
-
-/* Dark */
-[cursor*="mpisto"][curtheme*="dark"] {
-  cursor:url("Dark/default.cur"), auto;
-}
-
-[cursor*="mpisto"][curtheme*="dark"] abbr[title] {
-  cursor:url("Dark/help.cur"), help;
-}
-
-[cursor*="mpisto"][curtheme*="dark"] :not(.unset)[disabled],
-[cursor*="mpisto"][curtheme*="dark"] :not(.unset):disabled {
-cursor:url("Dark/banned.cur"), not-allowed!important;
-}
-
-[cursor*="mpisto"][curtheme*="dark"] textarea,
-[cursor*="mpisto"][curtheme*="dark"] [contenteditable],
-[cursor*="mpisto"][curtheme*="dark"] header.mpisto-navbar .search .search-input,
-[cursor*="mpisto"][curtheme*="dark"] .mpisto-input {
-  cursor:url("Dark/text.cur"), text;
-}
-
-[cursor*="mpisto"][curtheme*="dark"] .cpe-dropdown .link, 
-[cursor*="mpisto"][curtheme*="dark"] .cpe-button, 
-[cursor*="mpisto"][curtheme*="dark"] .cpe-button:disabled, 
-[cursor*="mpisto"][curtheme*="dark"] .cpe-is-disabled, 
-[cursor*="mpisto"][curtheme*="dark"] .cpe-community-header__local-navigation a[href="#"], 
-[cursor*="mpisto"][curtheme*="dark"] .cpe-tabs__tab, 
-[cursor*="mpisto"][curtheme*="dark"] label {
-  cursor:url("Dark/default.cur"), default;
-}
-
-[cursor*="mpisto"][curtheme*="dark"] a,
-[cursor*="mpisto"][curtheme*="dark"] a:hover, 
-[cursor*="mpisto"][curtheme*="dark"] .notification.cpe-dropdown__content .cpe-list > li:not(:last-child):not(.empty), 
-[cursor*="mpisto"][curtheme*="dark"] .notification.cpe-dropdown-level-2__content .cpe-list > li:not(:last-child):not(.empty), 
-[cursor*="mpisto"][curtheme*="dark"] a.cpe-button, 
-[cursor*="mpisto"][curtheme*="dark"] button.cpe-button,
-[cursor*="mpisto"][curtheme*="dark"] .editor-header .wordmark,
-[cursor*="mpisto"][curtheme*="dark"] .mpisto-option-way.p4 input[type="color"].cpe-button.cpe-is-square,
-[cursor*="mpisto"][curtheme*="dark"] .cpe-banner-notification__close,
-[cursor*="mpisto"][curtheme*="dark"] a label,
-[cursor*="mpisto"][curtheme*="dark"] a input[type="checkbox"],
-[cursor*="mpisto"][curtheme*="dark"] a input[type="radio"],
-[cursor*="mpisto"][curtheme*="dark"] .cpe-floating-button:not([disabled]), 
-[cursor*="mpisto"][curtheme*="dark"] .cpe-floating-button:not(.cpe-is-disabled),
-[cursor*="mpisto"][curtheme*="dark"] .cpe-dropdown .cpe-dropdown__toggle,
-[cursor*="mpisto"][curtheme*="dark"] .cpe-toggle__label {
-cursor:url("Dark/hand.cur"), pointer;
-}
-
-/* Mpisto OS */
-[cursor*="mpisto2"] {
-  cursor:url("MpistoOS/Ddefault.cur"), auto;
-}
-
-[cursor*="mpisto2"] abbr[title] {
-  cursor:url("MpistoOS/Dhelp.cur"), help;
-}
-
-[cursor*="mpisto2"] :not(.unset)[disabled], [cursor*="mpisto2"] :not(.unset):disabled {
-cursor:url("MpistoOS/Dbanned.cur"), not-allowed!important;
-}
-
-[cursor*="mpisto2"] textarea,
-[cursor*="mpisto2"] [contenteditable], 
-[cursor*="mpisto2"] header.mpisto-navbar .search .search-input, 
-[cursor*="mpisto2"] .mpisto-input {
-  cursor:url("MpistoOS/Dtext.cur"), text;
-}
-
-[cursor*="mpisto2"] .cpe-dropdown .link, 
-[cursor*="mpisto2"] .cpe-button, 
-[cursor*="mpisto2"] .cpe-button:disabled, 
-[cursor*="mpisto2"] .cpe-is-disabled, 
-[cursor*="mpisto2"] .cpe-community-header__local-navigation a[href="#"], 
-[cursor*="mpisto2"] .cpe-tabs__tab, 
-[cursor*="mpisto2"] label {
-  cursor:url("MpistoOS/Ddefault.cur"), default;
-}
-
-[cursor*="mpisto2"] a,
-[cursor*="mpisto2"] a:hover, 
-[cursor*="mpisto2"] .notification.cpe-dropdown__content .cpe-list > li:not(:last-child):not(.empty), 
-[cursor*="mpisto2"] .notification.cpe-dropdown-level-2__content .cpe-list > li:not(:last-child):not(.empty), 
-[cursor*="mpisto2"] a.cpe-button, 
-[cursor*="mpisto2"] button.cpe-button, 
-[cursor*="mpisto2"] .editor-header .wordmark, 
-[cursor*="mpisto2"] .mpisto-option-way.p4 input[type="color"].cpe-button.cpe-is-square, 
-[cursor*="mpisto2"] .cpe-banner-notification__close, 
-[cursor*="mpisto2"] a label, 
-[cursor*="mpisto2"] a input[type="checkbox"], 
-[cursor*="mpisto2"] a input[type="radio"], 
-[cursor*="mpisto2"] .cpe-floating-button:not([disabled]), 
-[cursor*="mpisto2"] .cpe-floating-button:not(.cpe-is-disabled), 
-[cursor*="mpisto2"] .cpe-dropdown .cpe-dropdown__toggle, 
-[cursor*="mpisto2"] .cpe-toggle__label {
-cursor:url("MpistoOS/Dhand.cur"), pointer;
-}
-
-
-[cursor*="mpisto2"][curtheme*="dark"] {
-  cursor:url("MpistoOS/default.cur"), auto;
-}
-
-[cursor*="mpisto2"][curtheme*="dark"] abbr[title] {
-  cursor:url("MpistoOS/help.cur"), help;
-}
-
-[cursor*="mpisto2"][curtheme*="dark"] :not(.unset)[disabled], :not(.unset):disabled {
-cursor:url("MpistoOS/banned.cur"), not-allowed!important;
-}
-
-[cursor*="mpisto2"][curtheme*="dark"] textarea, 
-[cursor*="mpisto2"][curtheme*="dark"] [contenteditable], 
-[cursor*="mpisto2"][curtheme*="dark"] header.mpisto-navbar .search .search-input, 
-[cursor*="mpisto2"][curtheme*="dark"] .mpisto-input {
-  cursor:url("MpistoOS/text.cur"), text;
-}
-
-[cursor*="mpisto2"][curtheme*="dark"] .cpe-dropdown .link, 
-[cursor*="mpisto2"][curtheme*="dark"] .cpe-button, 
-[cursor*="mpisto2"][curtheme*="dark"] .cpe-button:disabled, 
-[cursor*="mpisto2"][curtheme*="dark"] .cpe-is-disabled, 
-[cursor*="mpisto2"][curtheme*="dark"] .cpe-community-header__local-navigation a[href="#"], 
-[cursor*="mpisto2"][curtheme*="dark"] .cpe-tabs__tab, 
-[cursor*="mpisto2"][curtheme*="dark"] label {
-  cursor:url("MpistoOS/default.cur"), default;
-}
-
-[cursor*="mpisto2"][curtheme*="dark"] a,
-[cursor*="mpisto2"][curtheme*="dark"] a:hover, 
-[cursor*="mpisto2"][curtheme*="dark"] .notification.cpe-dropdown__content .cpe-list > li:not(:last-child):not(.empty),
-[cursor*="mpisto2"][curtheme*="dark"] .notification.cpe-dropdown-level-2__content .cpe-list > li:not(:last-child):not(.empty), 
-[cursor*="mpisto2"][curtheme*="dark"] a.cpe-button, 
-[cursor*="mpisto2"][curtheme*="dark"] button.cpe-button, 
-[cursor*="mpisto2"][curtheme*="dark"] .editor-header .wordmark, 
-[cursor*="mpisto2"][curtheme*="dark"] .mpisto-option-way.p4 input[type="color"].cpe-button.cpe-is-square,
-[cursor*="mpisto2"][curtheme*="dark"] .cpe-banner-notification__close,
-[cursor*="mpisto2"][curtheme*="dark"] a label,
-[cursor*="mpisto2"][curtheme*="dark"] a input[type="checkbox"],
-[cursor*="mpisto2"][curtheme*="dark"] a input[type="radio"],
-[cursor*="mpisto2"][curtheme*="dark"] .cpe-floating-button:not([disabled]),
-[cursor*="mpisto2"][curtheme*="dark"] .cpe-floating-button:not(.cpe-is-disabled),
-[cursor*="mpisto2"][curtheme*="dark"] .cpe-dropdown .cpe-dropdown__toggle,
-[cursor*="mpisto2"][curtheme*="dark"] .cpe-toggle__label {
-cursor:url("MpistoOS/hand.cur"), pointer;
-}
-
-/* Mpisto OS X */
-[cursor*="mpisto3"] {
-  cursor:url("Mpisto10/default.cur"), auto;
-}
-
-[cursor*="mpisto3"] abbr[title] {
-  cursor:url("Mpisto10/help.cur"), help;
-}
-
-[cursor*="mpisto3"] :not(.unset)[disabled],
-[cursor*="mpisto3"] :not(.unset):disabled {
-cursor:url("Mpisto10/banned.cur"), not-allowed!important;
-}
-
-[cursor*="mpisto3"] textarea, 
-[cursor*="mpisto3"] [contenteditable], 
-[cursor*="mpisto3"] header.mpisto-navbar .search .search-input, 
-[cursor*="mpisto3"] .mpisto-input {
-  cursor:url("Mpisto10/text.cur"), text;
-}
-
-[cursor*="mpisto3"] .cpe-dropdown .link,
-[cursor*="mpisto3"] .cpe-button,
-[cursor*="mpisto3"] .cpe-button:disabled,
-[cursor*="mpisto3"] .cpe-is-disabled,
-[cursor*="mpisto3"] .cpe-community-header__local-navigation a[href="#"],
-[cursor*="mpisto3"] .cpe-tabs__tab,
-[cursor*="mpisto3"] label {
-  cursor:url("Mpisto10/default.cur"), default;
-}
-
-[cursor*="mpisto3"] a,
-[cursor*="mpisto3"] a:hover,
-[cursor*="mpisto3"] .notification.cpe-dropdown__content .cpe-list > li:not(:last-child):not(.empty),
-[cursor*="mpisto3"] .notification.cpe-dropdown-level-2__content .cpe-list > li:not(:last-child):not(.empty), 
-[cursor*="mpisto3"] a.cpe-button,
-[cursor*="mpisto3"] button.cpe-button, 
-[cursor*="mpisto3"] .editor-header .wordmark, 
-[cursor*="mpisto3"] .mpisto-option-way.p4 input[type="color"].cpe-button.cpe-is-square,
-[cursor*="mpisto3"] .cpe-banner-notification__close, 
-[cursor*="mpisto3"] a label, 
-[cursor*="mpisto3"] a input[type="checkbox"], 
-[cursor*="mpisto3"] a input[type="radio"], 
-[cursor*="mpisto3"] .cpe-floating-button:not([disabled]), 
-[cursor*="mpisto3"] .cpe-floating-button:not(.cpe-is-disabled), 
-[cursor*="mpisto3"] .cpe-dropdown .cpe-dropdown__toggle, 
-[cursor*="mpisto3"] .cpe-toggle__label {
-cursor:url("Mpisto10/hand.cur"), pointer;
-}
-
-
-[cursor*="mpisto3"][curtheme*="dark"] {
-  cursor:url("Mpisto10/DDefault.cur"), auto;
-}
-
-[cursor*="mpisto3"][curtheme*="dark"] abbr[title] {
-  cursor:url("Mpisto10/Dhelp.cur"), help;
-}
-
-[cursor*="mpisto3"][curtheme*="dark"] :not(.unset)[disabled],
-[cursor*="mpisto3"][curtheme*="dark"] :not(.unset):disabled {
-cursor:url("Mpisto10/Dbanned.cur"), not-allowed!important;
-}
-
-[cursor*="mpisto3"][curtheme*="dark"] textarea, 
-[cursor*="mpisto3"][curtheme*="dark"] [contenteditable], 
-[cursor*="mpisto3"][curtheme*="dark"] header.mpisto-navbar .search .search-input, 
-[cursor*="mpisto3"][curtheme*="dark"] .mpisto-input {
-  cursor:url("Mpisto10/Dtext.cur"), text;
-}
-
-[cursor*="mpisto3"][curtheme*="dark"] .cpe-dropdown .link,
-[cursor*="mpisto3"][curtheme*="dark"] .cpe-button, [cursor*="mpisto3"][curtheme*="dark"] .cpe-button:disabled,
-[cursor*="mpisto3"][curtheme*="dark"] .cpe-is-disabled,
-[cursor*="mpisto3"][curtheme*="dark"] .cpe-community-header__local-navigation a[href="#"],
-[cursor*="mpisto3"][curtheme*="dark"] .cpe-tabs__tab,
-[cursor*="mpisto3"][curtheme*="dark"] label {
-  cursor:url("Mpisto10/DDefault.cur"), default;
-}
-
-[cursor*="mpisto3"][curtheme*="dark"] a,
-[cursor*="mpisto3"][curtheme*="dark"] a:hover,
-[cursor*="mpisto3"][curtheme*="dark"] .notification.cpe-dropdown__content .cpe-list > li:not(:last-child):not(.empty), 
-[cursor*="mpisto3"][curtheme*="dark"] .notification.cpe-dropdown-level-2__content .cpe-list > li:not(:last-child):not(.empty), 
-[cursor*="mpisto3"][curtheme*="dark"] a.cpe-button, 
-[cursor*="mpisto3"][curtheme*="dark"] button.cpe-button, 
-[cursor*="mpisto3"][curtheme*="dark"] .editor-header .wordmark, 
-[cursor*="mpisto3"][curtheme*="dark"] .mpisto-option-way.p4 input[type="color"].cpe-button.cpe-is-square, 
-[cursor*="mpisto3"][curtheme*="dark"] .cpe-banner-notification__close, 
-[cursor*="mpisto3"][curtheme*="dark"] a label, 
-[cursor*="mpisto3"][curtheme*="dark"] a input[type="checkbox"], 
-[cursor*="mpisto3"][curtheme*="dark"] a input[type="radio"], 
-[cursor*="mpisto3"][curtheme*="dark"] .cpe-floating-button:not([disabled]), 
-[cursor*="mpisto3"][curtheme*="dark"] .cpe-floating-button:not(.cpe-is-disabled), 
-[cursor*="mpisto3"][curtheme*="dark"] .cpe-dropdown .cpe-dropdown__toggle, 
-[cursor*="mpisto3"][curtheme*="dark"] .cpe-toggle__label {
-cursor:url("Mpisto10/Dhand.cur"), pointer;
-}
-
-
-
-/* Disable custom cursors for Smart TVs because it fall backs to normal ones */
-[cursor*="none"] {
-  cursor:auto;
-}
-
-[cursor*="none"] abbr[title] {
-  cursor:help;
-}
-
-[cursor*="none"] :not(.unset)[disabled], :not(.unset):disabled {
-cursor:not-allowed!important;
-}
-
-[cursor*="none"] textarea, [cursor*="none"] [contenteditable], [cursor*="none"] header.mpisto-navbar .search .search-input, [cursor*="none"] .mpisto-input {
-  cursor:text;
-}
-
-[cursor*="none"] .cpe-dropdown .link, [cursor*="none"] .cpe-button, [cursor*="none"] .cpe-button:disabled, [cursor*="none"] .cpe-is-disabled, [cursor*="none"] .cpe-community-header__local-navigation a[href="#"], [cursor*="none"] .cpe-tabs__tab {
-  cursor:default;
-}
-
-[cursor*="none"] a:hover, [cursor*="none"] .notification.cpe-dropdown__content .cpe-list > li:not(:last-child):not(.empty), [cursor*="none"] .notification.cpe-dropdown-level-2__content .cpe-list > li:not(:last-child):not(.empty), [cursor*="none"] a.cpe-button, [cursor*="none"] button.cpe-button, [cursor*="none"] .editor-header .wordmark, [cursor*="none"] .mpisto-option-way.p4 input[type="color"].cpe-button.cpe-is-square, [cursor*="none"] .cpe-banner-notification__close, [cursor*="none"] a label, [cursor*="none"] a input[type="checkbox"], [cursor*="none"] a input[type="radio"], [cursor*="none"] .cpe-floating-button:not([disabled]), [cursor*="none"] .cpe-floating-button:not(.cpe-is-disabled), [cursor*="none"] .cpe-dropdown .cpe-dropdown__toggle, [cursor*="none"] .cpe-toggle__label {
-cursor:pointer;
-}
-
-[cursor*="none"][curtheme*="dark"] {
-  cursor:auto;
-}
-
-[cursor*="none"][curtheme*="dark"] abbr[title] {
-  cursor:help;
-}
-
-[cursor*="none"][curtheme*="dark"] :not(.unset)[disabled], :not(.unset):disabled {
-cursor:not-allowed!important;
-}
-
-[cursor*="none"][curtheme*="dark"] textarea, [cursor*="none"][curtheme*="dark"] [contenteditable], [cursor*="none"][curtheme*="dark"] header.mpisto-navbar .search .search-input, [cursor*="none"][curtheme*="dark"] .mpisto-input {
-  cursor:text;
-}
-
-[cursor*="none"][curtheme*="dark"] .cpe-dropdown .link, [cursor*="none"][curtheme*="dark"] .cpe-button, [cursor*="none"][curtheme*="dark"] .cpe-button:disabled, [cursor*="none"][curtheme*="dark"] .cpe-is-disabled, [cursor*="none"][curtheme*="dark"] .cpe-community-header__local-navigation a[href="#"], [cursor*="none"][curtheme*="dark"] .cpe-tabs__tab {
-  cursor:default;
-}
-
-[cursor*="none"][curtheme*="dark"] a:hover, [cursor*="none"][curtheme*="dark"] .notification.cpe-dropdown__content .cpe-list > li:not(:last-child):not(.empty), [cursor*="none"][curtheme*="dark"] .notification.cpe-dropdown-level-2__content .cpe-list > li:not(:last-child):not(.empty), [cursor*="none"][curtheme*="dark"] a.cpe-button, [cursor*="none"][curtheme*="dark"] button.cpe-button, [cursor*="none"][curtheme*="dark"] .editor-header .wordmark, [cursor*="none"][curtheme*="dark"] .mpisto-option-way.p4 input[type="color"].cpe-button.cpe-is-square, [cursor*="none"][curtheme*="dark"] .cpe-banner-notification__close, [cursor*="none"][curtheme*="dark"] a label, [cursor*="none"][curtheme*="dark"] a input[type="checkbox"], [cursor*="none"][curtheme*="dark"] a input[type="radio"], [cursor*="none"][curtheme*="dark"] .cpe-floating-button:not([disabled]), [cursor*="none"][curtheme*="dark"] .cpe-floating-button:not(.cpe-is-disabled), [cursor*="none"][curtheme*="dark"] .cpe-dropdown .cpe-dropdown__toggle, [cursor*="none"][curtheme*="dark"] .cpe-toggle__label {
-cursor:pointer;
-}
-
 /** Mobile Only CSS **/
 /* Show the Mobile site link ^^^ (Currently suppressed since Mpistoskin2 does support Mobile 
 .phone .mobile-data {
@@ -6146,42 +5661,7 @@ cursor:pointer;
 }
 */
 
+/* Hides Cursors from Options Page */
 .phone .cursors, .phone .xooption {
 	display:none!important;
-}
-
-.phone * {
-	scrollbar-width:none!important;
-}
-
-.phone {
-  cursor:auto;
-}
-
-.phone abbr[title] {
-  cursor:help;
-}
-
-.phone :not(.unset)[disabled], :not(.unset):disabled {
-cursor:not-allowed!important;
-}
-
-.phone textarea, .phone [contenteditable], .phone header.mpisto-navbar .search .search-input, .phone .mpisto-input {
-  cursor:text;
-}
-
-.phone .cpe-dropdown .link, .phone .cpe-button, .phone .cpe-button:disabled, .phone .cpe-dropdown__toggle, .phone .cpe-is-disabled, .phone .cpe-community-header__local-navigation a[href="#"], .phone .cpe-tabs__tab {
-  cursor:pointer
-}
-
-.phone a:hover, .phone .notification.cpe-dropdown__content .cpe-list > li:not(:last-child):not(.empty), .phone .notification.cpe-dropdown-level-2__content .cpe-list > li:not(:last-child):not(.empty), .phone a.cpe-button, .phone button.cpe-button, .phone .editor-header .wordmark, .phone .mpisto-option-way.p4 input[type="color"].cpe-button.cpe-is-square, .phone .cpe-banner-notification__close, .phone a label, .phone a input[type="checkbox"], .phone a input[type="radio"], .phone .cpe-floating-button:not([disabled]), .phone .cpe-floating-button:not(.cpe-is-disabled) {
-cursor:pointer;
-}
-
-
-
-.phone {
-	-webkit-text-size-adjust:100%;
-	-moz-text-size-adjust:100%;
-	text-size-adjust:100%;
 }

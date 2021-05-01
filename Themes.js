@@ -1039,7 +1039,7 @@ function UpdateValue() {
 	/**/
 	UpdateSet();
 	/* Color Update */
-	ColorUpdate(true);
+	ColorUpdate(false);
 }
 
 /* Downloads all modificative values of the current selected theme to a file */
@@ -1090,7 +1090,9 @@ if (confirm('Are you sure you want to reset this theme to the pre-set ones? This
 function ResetThemeA() {
 if (confirm('Are you sure you want to reset this theme to the pre-set ones? This action cannot be undone') === true) {
 		$("style.designer-style.theme-A").text('/* This CSS left intentionally blank */');	
-	ColorUpdate(true);
+	if ($("html.theme-A").length) {
+		ColorUpdate(true);
+	}
 }
 }
 
@@ -1098,21 +1100,27 @@ if (confirm('Are you sure you want to reset this theme to the pre-set ones? This
 function ResetThemeB() {
 if (confirm('Are you sure you want to reset this theme to the pre-set ones? This action cannot be undone') === true) {
 		$("style.designer-style.theme-B").text('/* This CSS left intentionally blank */');	
-	ColorUpdate(true);
+	if ($("html.theme-B").length) {
+		ColorUpdate(true);
+	}
 }
 }
 
 function ResetThemeC() {
 if (confirm('Are you sure you want to reset this theme to the pre-set ones? This action cannot be undone') === true) {
 		$("style.designer-style.theme-C").text('/* This CSS left intentionally blank */');	
-	ColorUpdate(true);
+	if ($("html.theme-C").length) {
+		ColorUpdate(true);
+	}
 }
 }
 
 function ResetThemeD() {
 if (confirm('Are you sure you want to reset this theme to the pre-set ones? This action cannot be undone') === true) {
 		$("style.designer-style.theme-D").text('/* This CSS left intentionally blank */');	
-	ColorUpdate(true);
+	if ($("html.theme-D").length) {
+		ColorUpdate(true);
+	}
 }
 }
 
@@ -1666,6 +1674,9 @@ CheckBG()
 if (refresh === true) {
 	CheckAdapt()
 	colortheme($('body').attr("wikitheme"))
+	if ($("body.options").length) {
+		UpdateSet()
+	}
 }
 SocialCompile();
 if (window.MW18auto === true) {
@@ -1674,9 +1685,6 @@ CursorT('auto');
 if (window.MW18autoDark === true) {
 CursorT('auto-r');
 }
-	if ($("body.options").length) {
-		UpdateSet()
-	}
 
 }
 

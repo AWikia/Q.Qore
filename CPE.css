@@ -401,6 +401,12 @@ scrollbar-color:var(--button-color) var(--background-color);
 
 /* Body Styling */
 body {
+  --cpe-body-cursor:url("Windows/default.cur"), auto;
+  --cpe-auto-cursor:url("Windows/default.cur"), default;
+  --cpe-blocked-cursor:url("Windows/banned.cur"),not-allowed;
+  --cpe-help-cursor:url("Windows/help.cur"), help;
+  --cpe-text-cursor:url("Windows/text.cur"), text;
+  --cpe-hand-cursor:url("Windows/hand.cur"), text;
   margin:0 auto;
   background-color:var(--background-color);
   font-family:var(--font-family), var(--foreign-fonts);
@@ -413,7 +419,7 @@ body {
 	background-size:cover;
 	background-image:var(--background-image);
 	background-color:var(--background-color);
-	cursor:url("Windows/default.cur"), default;
+	cursor:var(--cpe-body-cursor);
 
 }
 
@@ -565,7 +571,7 @@ width:var(--scrollbar-width);
 height:var(--scrollbar-width);
 background-color:var(--scrollbar-track-color-1);
 position:relative;
-cursor:url("Windows/default.cur"), default;
+cursor:var(--cpe-auto-cursor);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -681,11 +687,11 @@ cursor:url("Windows/default.cur"), default;
     min-height:18px;
     box-shadow:0 0 1.5px 1.5px var(--button-color);
     margin:2.5px;
-    cursor:url("Windows/default.cur"), default;
+    cursor:var(--cpe-auto-cursor);
 }
 
 a.cpe-button, button.cpe-button {
-  cursor:url("Windows/hand.cur"), pointer;
+  cursor:var(--cpe-hand-cursor);
 }
 
 
@@ -951,7 +957,7 @@ flex:1 1 0;
 .cpe-text-transform-none{text-transform:none}
 
 /** Fandom Toggles (Compatibility) **/
-.cpe-toggle__input{display:none!important;}.cpe-toggle__label{cursor:url("Windows/hand.cur"),pointer;font-size:16px;padding:7px 5px 7px 52px;position:relative}.cpe-toggle__label:empty{padding-left:45px}.cpe-toggle__label::after,.cpe-toggle__label::before{content:"";margin:0;outline:0;position:absolute;top:50%;transform:translateY(-50%);transition:transform,background-color;transition-duration:.3s;transition-timing-function:ease}.cpe-toggle__label::before{background-color:#999;border-radius:8px;height:14px;left:6px;width:34px}.cpe-toggle__label::after{height:20px;min-width:20px;width:20px;background-color:#f6f6f6;border-radius:50%;box-shadow:0 3px 1px -2px rgba(0,0,0,.14),0 2px 2px 0 rgba(0,0,0,.098),0 1px 5px 0 rgba(0,0,0,.084);left:5px}.cpe-toggle__input:checked+.cpe-toggle__label::before{background-color:#7fdbdc}.cpe-toggle__input:checked+.cpe-toggle__label::after{background-color:#00d6d6;transform:translate(80%,-50%)}
+.cpe-toggle__input{display:none!important;}.cpe-toggle__label{cursor:var(--cpe-hand-cursor);font-size:16px;padding:7px 5px 7px 52px;position:relative}.cpe-toggle__label:empty{padding-left:45px}.cpe-toggle__label::after,.cpe-toggle__label::before{content:"";margin:0;outline:0;position:absolute;top:50%;transform:translateY(-50%);transition:transform,background-color;transition-duration:.3s;transition-timing-function:ease}.cpe-toggle__label::before{background-color:#999;border-radius:8px;height:14px;left:6px;width:34px}.cpe-toggle__label::after{height:20px;min-width:20px;width:20px;background-color:#f6f6f6;border-radius:50%;box-shadow:0 3px 1px -2px rgba(0,0,0,.14),0 2px 2px 0 rgba(0,0,0,.098),0 1px 5px 0 rgba(0,0,0,.084);left:5px}.cpe-toggle__input:checked+.cpe-toggle__label::before{background-color:#7fdbdc}.cpe-toggle__input:checked+.cpe-toggle__label::after{background-color:#00d6d6;transform:translate(80%,-50%)}
 
 /* Removes background color when clickling on a cpe Toggle */
 input[type="checkbox"] + .cpe-toggle__label:active {
@@ -987,7 +993,7 @@ position:relative;
 vertical-align:middle;
 }
 .cpe-dropdown .cpe-dropdown__toggle{
-cursor:url("Windows/hand.cur"), pointer;
+cursor:var(--cpe-hand-cursor);
 position:relative
 }
 
@@ -1191,7 +1197,7 @@ opacity:1;
 }
 
 
-.cpe-is-disabled{cursor:url("Windows/default.cur"), default;filter:grayscale(100%);pointer-events:none}
+.cpe-is-disabled{cursor:var(--cpe-auto-cursor);filter:grayscale(100%);pointer-events:none}
 
 .cpe-is-hidden{display:none!important}
 
@@ -1323,7 +1329,7 @@ opacity:1;
 }
 .cpe-floating-button:not([disabled]),
 .cpe-floating-button:not(.cpe-is-disabled) {
-  cursor:url("Windows/hand.cur"), pointer;
+  cursor:var(--cpe-hand-cursor);
 }
 .cpe-floating-button:not([disabled]):hover,
 .cpe-floating-button:not(.cpe-is-disabled):hover {
@@ -1381,7 +1387,7 @@ opacity:1;
 	--tabs-color:var(--button-color);
 	--tabs-color-dark:var(--button-color-dark);
 	--tabs-color-dark-super:var(--button-color-dark-super);
-	cursor:url("Windows/default.cur"), default;
+	cursor:var(--cpe-auto-cursor);
 	flex-shrink:0;
 	line-height:14px;
 	position:relative;
@@ -1511,7 +1517,7 @@ content:"";
 	padding:13px 12px;
 }
 .cpe-banner-notification__close{
-	cursor:url("Windows/hand.cur"),pointer;
+	cursor:var(--cpe-hand-cursor);
 	 padding:18px; 
 	 box-sizing:content-box;
  }
@@ -1533,13 +1539,13 @@ a {
 transition:color 200ms;
 text-decoration:none;
 color:rgb(var(--link-color));
-cursor:url("Windows/hand.cur"), pointer;
+cursor:var(--cpe-hand-cursor);
 background-color:transparent;
 }
 
 a:hover {
 color:rgb(var(--link-color-dark));
-cursor:url("Windows/hand.cur"), pointer;
+cursor:var(--cpe-hand-cursor);
 }
 
 
@@ -1548,7 +1554,7 @@ cursor:url("Windows/hand.cur"), pointer;
 }
 
 a label, a input[type="checkbox"], a input[type="radio"] {
-cursor:url("Windows/hand.cur"), pointer;
+cursor:var(--cpe-hand-cursor);
 }
 
 
@@ -1589,11 +1595,11 @@ pointer-events:none!important;
 -webkit-user-select:none!important;
 -moz-user-select:none!important;
 user-select:none!important;
-cursor:url("Windows/banned.cur"),not-allowed!important;
+cursor:var(--cpe-blocked-cursor)!important;
 }
 
 textarea, [contenteditable] {
-  cursor:url("Windows/text.cur"), text;
+  cursor:var(--cpe-text-cursor);
   scrollbar-width:thin;
   scrollbar-color:var(--content-color) transparent;
 /** Scrollbar Styling **/
@@ -1763,4 +1769,121 @@ input[type="checkbox"]:indeterminate:active, input[type="radio"]:indeterminate:a
   box-shadow:0 0 1px 1px var(--checkbox-active-bg);
   background-color:var(--checkbox-active-bg);
   color:var(--checkbox-active-bg);
+}
+
+/** Themed Cursors **/
+/* Apple */
+[cursor*="apple"],
+[cursor*="apple"][curtheme*="dark"] {
+  --cpe-body-cursor:url("OSX/default.cur"), auto;
+  --cpe-auto-cursor:url("OSX/default.cur"), default;
+  --cpe-blocked-cursor:url("OSX/banned.cur"),not-allowed;
+  --cpe-help-cursor:url("OSX/help.cur"), help;
+  --cpe-text-cursor:url("OSX/text.cur"), text;
+  --cpe-hand-cursor:url("OSX/hand.cur"), text;
+}
+
+/* Linux */
+[cursor*="linux"] {
+  --cpe-body-cursor:url("Lenux/default.cur"), auto;
+  --cpe-auto-cursor:url("Lenux/default.cur"), default;
+  --cpe-blocked-cursor:url("Lenux/banned.cur"),not-allowed;
+  --cpe-help-cursor:url("Lenux/help.cur"), help;
+  --cpe-text-cursor:url("Lenux/text.cur"), text;
+  --cpe-hand-cursor:url("Lenux/hand.cur"), text;
+}
+
+[cursor*="linux"][curtheme*="dark"] {
+  --cpe-body-cursor:url("Lenux/Ddefault.cur"), auto;
+  --cpe-auto-cursor:url("Lenux/Ddefault.cur"), default;
+  --cpe-blocked-cursor:url("Lenux/Dbanned.cur"),not-allowed;
+  --cpe-help-cursor:url("Lenux/Dhelp.cur"), help;
+  --cpe-text-cursor:url("Lenux/Dtext.cur"), text;
+  --cpe-hand-cursor:url("Lenux/Dhand.cur"), text;
+}
+
+/* Dark */
+[cursor*="mpisto"][curtheme*="dark"] {
+  --cpe-body-cursor:url("Dark/default.cur"), auto;
+  --cpe-auto-cursor:url("Dark/default.cur"), default;
+  --cpe-blocked-cursor:url("Dark/banned.cur"),not-allowed;
+  --cpe-help-cursor:url("Dark/help.cur"), help;
+  --cpe-text-cursor:url("Dark/text.cur"), text;
+  --cpe-hand-cursor:url("Dark/hand.cur"), text;
+}
+
+
+/* Mpisto OS */
+[cursor*="mpisto2"][curtheme*="dark"] {
+  --cpe-body-cursor:url("MpistoOS/default.cur"), auto;
+  --cpe-auto-cursor:url("MpistoOS/default.cur"), default;
+  --cpe-blocked-cursor:url("MpistoOS/banned.cur"),not-allowed;
+  --cpe-help-cursor:url("MpistoOS/help.cur"), help;
+  --cpe-text-cursor:url("MpistoOS/text.cur"), text;
+  --cpe-hand-cursor:url("MpistoOS/hand.cur"), text;
+}
+
+[cursor*="mpisto2"] {
+  --cpe-body-cursor:url("MpistoOS/Ddefault.cur"), auto;
+  --cpe-auto-cursor:url("MpistoOS/Ddefault.cur"), default;
+  --cpe-blocked-cursor:url("MpistoOS/Dbanned.cur"),not-allowed;
+  --cpe-help-cursor:url("MpistoOS/Dhelp.cur"), help;
+  --cpe-text-cursor:url("MpistoOS/Dtext.cur"), text;
+  --cpe-hand-cursor:url("MpistoOS/Dhand.cur"), text;
+}
+
+/* Mpisto OS X*/
+[cursor*="mpisto3"] {
+  --cpe-body-cursor:url("Mpisto10/default.cur"), auto;
+  --cpe-auto-cursor:url("Mpisto10/default.cur"), default;
+  --cpe-blocked-cursor:url("Mpisto10/banned.cur"),not-allowed;
+  --cpe-help-cursor:url("Mpisto10/help.cur"), help;
+  --cpe-text-cursor:url("Mpisto10/text.cur"), text;
+  --cpe-hand-cursor:url("Mpisto10/hand.cur"), text;
+}
+
+[cursor*="mpisto3"][curtheme*="dark"]  {
+  --cpe-body-cursor:url("Mpisto10/Ddefault.cur"), auto;
+  --cpe-auto-cursor:url("Mpisto10/Ddefault.cur"), default;
+  --cpe-blocked-cursor:url("Mpisto10/Dbanned.cur"),not-allowed;
+  --cpe-help-cursor:url("Mpisto10/Dhelp.cur"), help;
+  --cpe-text-cursor:url("Mpisto10/Dtext.cur"), text;
+  --cpe-hand-cursor:url("Mpisto10/Dhand.cur"), text;
+}
+
+
+/* No Special Cursor */
+[cursor*="none"],
+.phone  {
+  --cpe-body-cursor:auto;
+  --cpe-auto-cursor: default;
+  --cpe-blocked-cursor:not-allowed;
+  --cpe-help-cursor:help;
+  --cpe-text-cursor:text;
+  --cpe-hand-cursor:text;
+}
+
+
+/* No Special Cursor */
+.phone  {
+  --cpe-body-cursor:auto!important;
+  --cpe-auto-cursor: default!important;
+  --cpe-blocked-cursor:not-allowed!important;
+  --cpe-help-cursor:help!important;
+  --cpe-text-cursor:text!important;
+  --cpe-hand-cursor:text!important;
+}
+
+
+/* And one more thing */
+
+.phone * {
+	scrollbar-width:none!important;
+}
+
+
+.phone {
+	-webkit-text-size-adjust:100%;
+	-moz-text-size-adjust:100%;
+	text-size-adjust:100%;
 }
