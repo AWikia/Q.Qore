@@ -129,6 +129,7 @@ $(' .cpe-dropdown')
 /* Enable New Global Navigation - No exception for now */
 window.MW18newnavblock=false;
 (function () {
+	DropDownUpdate();
 	if (window.MW18newnavblock === true) {
 		return
 	}
@@ -136,7 +137,6 @@ window.MW18newnavblock=false;
 		document.querySelector('.mpisto-gnav[style]').className += " newnav";
 		document.querySelector('.mpisto-gnav:not([style])').className += " newnav";
 	}
-	DropDownUpdate();
 })();
 
 

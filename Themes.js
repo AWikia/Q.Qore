@@ -1630,7 +1630,7 @@ document.querySelector('html').style.setProperty("--background-color-blend", hea
 }
 
 headmixl = ColorTestTwin(content_color,head_color,0.8,'rgb');
-headmix = ColorTestTwin(headmixl,button_color,0.8,'rgb');
+headmix = ColorTestTwin(headmixl,head_color,0.8,'rgb');
 
 /* Set Values */
 document.querySelector('html').style.setProperty("--background-color-dark", headcolor1);
