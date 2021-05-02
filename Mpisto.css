@@ -352,6 +352,8 @@ border-radius:0; /* Remove initial border-radius set by some agents such as FF f
 
 
 .mpisto-gnav {
+--global-nav-color:var(--emphasis-bg);
+--global-nav-text-color:var(--content-color);
 /*
 box-shadow:0 0 9px 0.1px var(--content-border), 0 0 2.5px #000, 0 0 1.5px #fff;
 border-bottom:2px solid var(--content-border);
@@ -365,7 +367,7 @@ position:fixed;
 /*
 color:rgb(var(--community-header-text));
 */
-color:var(--content-color);
+color:var(--global-nav-text-color);
 box-shadow: 0 0 3px #000, 0 0 3px #fff;
 font-family:"Source Sans Pro", var(--foreign-fonts), cursive;
 box-sizing:content-box;
@@ -397,7 +399,7 @@ font-family:"Source Serif Pro", var(--foreign-fonts), cursive;
 	background-color:rgb(var(--community-header-bg));
 
 	background-color:var(--content-bg);*/
-	background-color:var(--emphasis-bg);
+	background-color:var(--global-nav-color);
 	opacity:0.9;
 /*	-webkit-backdrop-filter:invert(1) hue-rotate(180deg) saturate(1.2) blur(6.5px);
 	backdrop-filter:invert(1) hue-rotate(180deg) saturate(1.2) blur(6.5px);

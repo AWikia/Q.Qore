@@ -181,12 +181,9 @@ html:not([visualtheme*="contrast"]) .prt .pane-on .mpisto-article-wrapper:after 
   -webkit-backdrop-filter:none!important;
 }
 
-[visualtheme*="basic"] .mpisto-gnav:after {
-	background-color:rgb(var(--community-header-bg));
-}
-
 [visualtheme*="basic"] .mpisto-gnav {
-	color:rgb(var(--community-header-text));
+	--global-nav-color:rgb(var(--community-header-bg));
+	--global-nav-text-color:rgb(var(--community-header-text));
 }
 
 

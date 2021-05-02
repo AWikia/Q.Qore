@@ -15,8 +15,6 @@ document.querySelector('html').className += " theme-A"; // We begin with the fir
 ColorUpdate(true);
 	if ( ($("body.mpisto-2018").length) || ($("body.mpisto-2018-mobile").length)) {
 		$("head").append(
-		'<meta name="theme-color" content="' + chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--emphasis-bg")) + '">' +
-		'<meta name="color-scheme" content="light dark">' +
 		'<link rel="manifest" href="manifest.json" crossorigin="use-credentials">' +
 		'<link rel="shortcut icon" href="favicon.ico">' +
 		'<link rel="icon" href="favicon.ico">' +
@@ -27,8 +25,16 @@ ColorUpdate(true);
 		UpdateSet()
 		CompileRecColors();
 	}
+	if ( ($(".mpisto-gnav").length) ) {
 		$("head").append(
-		'<meta name="theme-color" content="' + chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--emphasis-bg")) + '">' +
+		'<meta name="theme-color" content="' + chroma( getComputedStyle(document.querySelector('.mpisto-gnav')).getPropertyValue("--global-nav-color") ) + '">'
+		);	
+	} else {
+		$("head").append(
+		'<meta name="theme-color" content="' + chroma( $('body').css('background-color') ) + '">'
+		);	
+	}
+		$("head").append(
 		'<meta name="color-scheme" content="light dark">'
 		);	
 		$('body').attr("cursor", "mpisto");
@@ -61,6 +67,7 @@ function VisualStyle(style) {
 	}
 	if (oldvisual !==	$('html').attr("visualcolors")) { // If Visual Colors get changed, update automated variables
 		ColorUpdate(true);
+		ThemeColorMetaTag();
 	}
 }
 
@@ -138,30 +145,23 @@ function CursorT(theme) {
 	Also used for some notifications
 	Called on body element only */
 function CheckTheme() {
-/* Wiki theme */
-ColorUpdate(true);
-/* Top bar for Mobile Devices */
-if ($("html.contrast").length) {
-	$('meta[name*="theme-color"]').attr("content", chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--dropdown-bg")));
-} else if ($("html.basic").length) {
-	$('meta[name*="theme-color"]').attr("content", chroma('rgb(' + getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg") + ')'));
-
-} else {
-	$('meta[name*="theme-color"]').attr("content", chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--emphasis-bg")));
-/*
-	if ($(".headroom--not-top").length) {
-		$('meta[name*="theme-color"]').attr("content", chroma(getComputedStyle(document.querySelector('body')).getPropertyValue("--accent-bg")));
-	} else {
-		$('meta[name*="theme-color"]').attr("content", chroma(getComputedStyle(document.querySelector('body')).getPropertyValue("--emphasis-bg")));
-	}
-*/
-}
-
+	/* Wiki theme */
+	ColorUpdate(true);
+	ThemeColorMetaTag();
 ManagerRows();
 ContrastBanner();
 
 }
 
+
+function ThemeColorMetaTag() {
+	/* Top bar for Mobile Devices */
+	if ( ($(".mpisto-gnav").length) ) {
+		$('meta[name*="theme-color"]').attr("content", chroma( getComputedStyle(document.querySelector('.mpisto-gnav')).getPropertyValue("--global-nav-color") ) );
+	} else {
+		$('meta[name*="theme-color"]').attr("content", chroma( $('body').css('background-color') ) );
+	}
+}
 
 /* Used only on Task Manager, ignored elsewhere */
 function ManagerRows() {
@@ -1685,6 +1685,7 @@ CursorT('auto');
 if (window.MW18autoDark === true) {
 CursorT('auto-r');
 }
+
 
 }
 
