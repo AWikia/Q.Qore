@@ -1657,7 +1657,6 @@ document.querySelector('html').style.setProperty("--emphasis-bg", emphasiscolor)
 document.querySelector('html').style.setProperty("--accent-bg", emphasiscolor2);
 
 ThemeColorMetaTag();
-}
 CheckBG()
 
 /* Cursor Theme */
