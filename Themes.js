@@ -1656,17 +1656,7 @@ var emphasiscolor2 = chroma.mix(border_color, button_color, MW18HoverThreshold*2
 document.querySelector('html').style.setProperty("--emphasis-bg", emphasiscolor);
 document.querySelector('html').style.setProperty("--accent-bg", emphasiscolor2);
 
-if ($("html.contrast").length) {
-	$('meta[name*="theme-color"]').attr("content", chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--dropdown-bg")));
-} else {
-	$('meta[name*="theme-color"]').attr("content", chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--emphasis-bg")));
-/*
-	if ($(".headroom--not-top").length) {
-		$('meta[name*="theme-color"]').attr("content", chroma(getComputedStyle(document.querySelector('body')).getPropertyValue("--accent-bg")));
-	} else {
-		$('meta[name*="theme-color"]').attr("content", chroma(getComputedStyle(document.querySelector('body')).getPropertyValue("--emphasis-bg")));
-	}
-*/
+ThemeColorMetaTag();
 }
 CheckBG()
 
