@@ -690,6 +690,7 @@ cursor:var(--cpe-auto-cursor);
     margin:2.5px;
     cursor:var(--cpe-text-cursor);
     min-width:200px;
+    -webkit-appearance:none;
 }
 
 
