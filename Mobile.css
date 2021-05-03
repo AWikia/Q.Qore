@@ -351,6 +351,7 @@ margin:0 5px 5px 0;
 justify-content:flex-start;
 border-radius:100px;
 flex-grow:1;
+display:flex;
 }
 
 .page-wrapper .store-content .store-items .cpe-button.col.cpe-is-secondary.shared {
@@ -880,7 +881,7 @@ height:60px;
 }
 
 
-@media only screen and (min-width:1400px) {
+@media only screen and (min-width:1380px) {
 .page-wrapper .store-content .store-header .counters {
 	font-size:18px;
 }
@@ -914,7 +915,7 @@ height:75px;
 
 }
 
-@media only screen and (min-width:1600px) {
+@media only screen and (min-width:2000px) {
 .page-wrapper .store-content .store-header .counters {
 	font-size:20px;
 }

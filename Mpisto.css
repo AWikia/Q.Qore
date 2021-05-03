@@ -751,7 +751,7 @@ background-color:rgba(var(--link-color), 0.1);
 
 	}
 	
-	@media only screen and (max-width:1399px) {
+	@media only screen and (max-width:1379px) {
 /*		#GlobalNavigation:not(.active-search) .search-off {
 			display:none!important;
 		}
@@ -762,7 +762,7 @@ background-color:rgba(var(--link-color), 0.1);
 }
 
 
-	@media only screen and (min-width:1400px) {
+	@media only screen and (min-width:1380px) {
 		.mpisto-global-navigation .large-down {
 			display:none!important;
 		}
