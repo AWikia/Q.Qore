@@ -200,7 +200,7 @@ document.getElementById("Handler").className += " mpisto-servers"
 					</div>
 				</div>
 				<a class="cell search-link">
-					<input type="search" class="mpisto-input" placeholder="Search on Mpisto..."></input>
+					<input type="search" class="cpe-input cpe-is-alternate" placeholder="Search on Mpisto..."></input>
 				</a>
 				  <div class="cpe-dropdown cpe-has-dark-shadow">
 					<div class="link cell cpe-dropdown__toggle"><img class="mpisto-avatar" alt="HM100" src="HM100.png"></img> <small class="name med-up">HM100</small> <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown__toggle-chevron">
@@ -1088,7 +1088,7 @@ document.getElementById("Handler").className += " mpisto-servers"
 	</svg>
     Secondary Account
     </h2>
-    <label>Account Name (Must differ from main account's name)</label> <input class="mpisto-input" value="HM100alt" placeholder="Alt account name"></input>
+    <label>Account Name (Must differ from main account's name)</label> <input class="cpe-input" value="HM100alt" placeholder="Alt account name"></input>
     <br>
     <label>Avatar Pic (.png/.jpg/.gif needed, up to 1000KB possible, gets updated to your base account, seen on MpistoLite while editing articles, must differ from main account's avatar)</label>
     <br>
@@ -1637,7 +1637,7 @@ Checked = VisualEditor as default mode
     You can choose a preset theme from the dropdown below to apply it to the wiki:
 		<br>
 		<div style="margin:0 auto; width:max-content;" class="pageheader-search">
-			<select class="mpisto-input preset_theme" placeholder="Choose your preset theme">
+			<select class="cpe-input preset_theme" placeholder="Choose your preset theme">
 				<option value="0">Oasis</option>
 				<option value="1">Sapphire</option>
 				<option value="2">Jade</option>
@@ -1911,9 +1911,9 @@ Checked = VisualEditor as default mode
          </div>
     </div>
     <br><br>
-    <label>Wiki-URL:</label><input class="mpisto-input" autocomplete="off" value="mpisto-war-2018" placeholder="Wiki URL" ></input>
+    <label>Wiki-URL:</label><input class="cpe-input" autocomplete="off" value="mpisto-war-2018" placeholder="Wiki URL" ></input>
     <br>
-    <label>Wiki Name:</label><input class="mpisto-input sitename" autocomplete="off" maxlength="30" oninput="UpdateSitename()" value="Qora Qore Web" placeholder="Wiki Name" ></input>
+    <label>Wiki Name:</label><input class="cpe-input sitename" autocomplete="off" maxlength="30" oninput="UpdateSitename()" value="Qora Qore Web" placeholder="Wiki Name" ></input>
     <br>
     <input type="checkbox" onclick="UpdateSitename()" name="32" autocomplete="off" id="311"></input> <label for="311">Add the<b> Wiki</b> suffix to the compiled sitename</label>
 
@@ -2126,14 +2126,14 @@ Checked = VisualEditor as default mode
 	</svg>
     Miscellaneous
     </h2>
-    <label>Secondary Font:</label><input class="mpisto-input font_2nd" autocomplete="off" value="" placeholder="Enter your 2nd font (leave empty to default)" ></input> <button class="cpe-button cpe-is-squished" onclick="UpdateFont()">Update Font</button>
+    <label>Secondary Font:</label><input class="cpe-input font_2nd" autocomplete="off" value="" placeholder="Enter your 2nd font (leave empty to default)" ></input> <button class="cpe-button cpe-is-squished" onclick="UpdateFont()">Update Font</button>
 	  <br>
 	  <div style="display:flex; align-items:center;">
      <label>Button Radius:</label><input type="range" onchange="UpdateButtonRadi()" class="button_radi big" style="flex:1; padding:0 5px;" autocomplete="off" value="3" min="0" max="15" ></input>
      </div>
-    <label>Wordamrk Filter:</label><input class="mpisto-input filter1" autocomplete="off" value="" placeholder="Enter your filter function here (Can be empty)" ></input> <button class="cpe-button cpe-is-squished" onclick="UpdateFilter1()">Update Filter</button>
+    <label>Wordamrk Filter:</label><input class="cpe-input filter1" autocomplete="off" value="" placeholder="Enter your filter function here (Can be empty)" ></input> <button class="cpe-button cpe-is-squished" onclick="UpdateFilter1()">Update Filter</button>
 	  <br>
-    <label>Wordamrk Filter (Hover):</label><input class="mpisto-input filter2" autocomplete="off" value="" placeholder="Enter your filter function here (Can be empty)" ></input> <button class="cpe-button cpe-is-squished" onclick="UpdateFilter2()">Update Filter</button>
+    <label>Wordamrk Filter (Hover):</label><input class="cpe-input filter2" autocomplete="off" value="" placeholder="Enter your filter function here (Can be empty)" ></input> <button class="cpe-button cpe-is-squished" onclick="UpdateFilter2()">Update Filter</button>
 	  <div style="display:flex; align-items:center;">
      <label>Filter Transition Duration:</label><input type="range" onchange="UpdateFilter3()" class="filter_duration big" style="flex:1; padding:0 5px;" autocomplete="off" value="300" min="0" max="1000" step="20" ></input>
      </div>
@@ -2676,7 +2676,7 @@ Checked = VisualEditor as default mode
 	</svg>
     Basic
     </h2>
-    <label>Server ID</label> <input class="mpisto-input" placeholder="Enter a Server ID or blank to deactivate it"></input>
+    <label>Server ID</label> <input class="cpe-input" placeholder="Enter a Server ID or blank to deactivate it"></input>
     </fieldset>
     </div>
     
@@ -3153,13 +3153,13 @@ Checked = VisualEditor as default mode
    <section>
    Hooray, you're submitting a theme. Type the name, cost and description and press enter to move on.
     <br>
-    <label>Name:</label> <input class="mpisto-input" value="Qora Qore Web" placeholder="Name"></input>
+    <label>Name:</label> <input class="cpe-input" value="Qora Qore Web" placeholder="Name"></input>
     <br>
     <br>
-    <label>Cost:</label> <input class="mpisto-input" placeholder="Up to 15.00 Euro. Leave empty or invalid string for free"></input>
+    <label>Cost:</label> <input class="cpe-input" placeholder="Up to 15.00 Euro. Leave empty or invalid string for free"></input>
     <br>
     <br>
-    <label>Description:</label> <textarea class="mpisto-input" placeholder="Description" style="resize:horizontal;"></textarea>
+    <label>Description:</label> <textarea class="cpe-input" placeholder="Description" style="resize:horizontal;"></textarea>
    </section>
    <footer>
    <button class="cpe-button cpe-is-secondary cpe-is-alternate cpe-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">

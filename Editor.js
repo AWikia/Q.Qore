@@ -316,7 +316,7 @@ UpdateVisual();
 
 
 function CategoryAdd() {
-	if ( $('.category-module.editor-module .mpisto-input:focus').length ||  $('.category-module.editor-module .cpe-button:focus').length ) {
+	if ( $('.category-module.editor-module .cpe-input:focus').length ||  $('.category-module.editor-module .cpe-button:focus').length ) {
 		$('.category-module.editor-module ul li .items').append(
 			'<div class="item">' +
 			'<span contenteditable>' + $('.category-module.editor-module .category-add input').val() + '</span>' + 

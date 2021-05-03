@@ -10,7 +10,7 @@
 }
 
 
-.headroom--bottom .mpisto-gnav, .phone.headroom.headroom--unpinned .mpisto-gnav {
+.headroom--bottom .mpisto-gnav /*, .phone.headroom.headroom--unpinned .mpisto-gnav */{
 	transform:translateY(-100%);
 }
 
@@ -26,16 +26,19 @@ html:not([visualtheme*="contrast"]):not([visualtheme*="basic"]) body:not(.phone)
 }
 
 
-html:not([visualtheme*="basic"]) body:not(.phone).headroom.headroom--not-top .mpisto-gnav::after {
-	background-color:var(--accent-bg);
+html:not([visualtheme*="basic"]) body:not(.phone).headroom.headroom--not-top .mpisto-gnav {
+	--global-nav-color:var(--accent-bg);
 }
+
+html:not([visualtheme*="basic"]) body:not(.phone).headroom.headroom--not-top .mpisto-gnav .cpe-input.cpe-is-alternate {
+	--input-box-hover:var(--button-color-content-bg-mix-light);
+	--input-box-focus:var(--button-color-content-bg-mix);
+	--input-box-solid:var(--button-color);
+}
+
 
 
 html:not([visualtheme*="contrast"]):not([visualtheme*="basic"]) body:not(.phone).headroom.headroom--not-top .mpisto-gnav {
 	color:var(--button-color-text);
 	box-shadow: 0 0 3px var(--content-color), 0 0 3px var(--dropdown-bg);
-}
-
-.headroom .mpisto-gnav .wds-list {
-	color:var(--content-color);
 }

@@ -198,7 +198,7 @@ document.getElementById("Handler").className += " mpisto-servers"
 					</div>
 				</div>
 				<a class="cell search-link">
-					<input type="search" class="mpisto-input" placeholder="Search on Mpisto..."></input>
+					<input type="search" class="cpe-input cpe-is-alternate" placeholder="Search on Mpisto..."></input>
 				</a>
 				  <div class="cpe-dropdown cpe-has-dark-shadow">
 					<div class="link cell cpe-dropdown__toggle"><img class="mpisto-avatar" src="HM100.png"></img> <small class="name med-up">HM100</small> <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown__toggle-chevron">
@@ -624,7 +624,7 @@ document.getElementById("Handler").className += " mpisto-servers"
 		<div class="mpisto-page-header-title">
 			<h1 class="mpisto-title editor-edit" oninput="UnsaveWarn()">Element Translation</h1>
 			<nav class="pageheader-search">
-			  <input class="mpisto-input" placeholder="Search Qora Qore Web;"></input>
+			  <input class="cpe-input cpe-is-bordeline" placeholder="Search Qora Qore Web;"></input>
 			  <button class="cpe-button cpe-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-magnifying-glass" />
 	</svg>
@@ -1173,8 +1173,8 @@ document.getElementById("Handler").className += " mpisto-servers"
 					  </svg> </a> </h2>
 				  <ul>
 					<li>
-					<input class="mpisto-input" id="FindText" placeholder="Find text"></input>
-					<input class="mpisto-input" id="ReplaceText" placeholder="Replace text"></input>
+					<input class="cpe-input" id="FindText" placeholder="Find text"></input>
+					<input class="cpe-input" id="ReplaceText" placeholder="Replace text"></input>
 					<div class="cpe-button-group">
 					  <button class="cpe-button" title="Finds the next result">Find Next</button>
 					  <button class="cpe-button" title="Finds the past result">Find Previous</button>
@@ -1227,7 +1227,7 @@ document.getElementById("Handler").className += " mpisto-servers"
 						</div>
 						</div>
 						<div class="category-add">
-							<input class="mpisto-input" placeholder="Add new category..." onchange="CategoryAdd()"></input> <button onclick="CategoryAdd()" class="cpe-button cpe-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-plus" /</svg> <span>Add</span></button>
+							<input class="cpe-input" placeholder="Add new category..." onchange="CategoryAdd()"></input> <button onclick="CategoryAdd()" class="cpe-button cpe-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-plus" /</svg> <span>Add</span></button>
 						</div>
 					</li>
 				   </ul>
@@ -1539,13 +1539,13 @@ document.getElementById("Handler").className += " mpisto-servers"
    <section>
    Horay, you're adding a picture<input type="file" class="cpe-is-hidden" id="FUpload1" accept="image/*"></input>
     <br>
-    <label>Name:</label> <input class="mpisto-input" value="" placeholder="Name of the pic"></input> <div class="cpe-button-group"><label class="uploadbutton" for="FUpload1"><a class="cpe-button"><span>Upload</span></a></label><a class="cpe-button"><span>Find Pic from wiki</span></a></div>
+    <label>Name:</label> <input class="cpe-input" value="" placeholder="Name of the pic"></input> <div class="cpe-button-group"><label class="uploadbutton" for="FUpload1"><a class="cpe-button"><span>Upload</span></a></label><a class="cpe-button"><span>Find Pic from wiki</span></a></div>
     <br>
     <br>
     <label>Image Size (Write full, 0 or leave empty for unchanged size):</label> <input type="number" style="width:60px;" id="InputImage1" placeholder="size"></input>
 	<br>
 	<br>
-    <label>Title:</label> <input class="mpisto-input" placeholder="Description"></input>
+    <label>Title:</label> <input class="cpe-input" placeholder="Description"></input>
     <br>
     <br>
     <label>Position:</label> <input type="radio" name="01" id="01" checked></input><label for="01">Left</label> <input type="radio" name="01" id="02"></input><label for="02">Center</label> <input type="radio" name="01" id="03"></input><label for="03">Right</label>
@@ -1572,10 +1572,10 @@ document.getElementById("Handler").className += " mpisto-servers"
    <section>
    Horay, you're adding a Video<input type="file" class="cpe-is-hidden" id="FUpload2" accept="video/*"></input>
     <br>
-    <label>Name:</label> <input class="mpisto-input" value="" placeholder="Name of the video"></input> <div class="cpe-button-group"><label class="uploadbutton" for="FUpload2"><a class="cpe-button"><span>Upload</span></a></label><a class="cpe-button"><span>Find Video from wiki</span></a></div>
+    <label>Name:</label> <input class="cpe-input" value="" placeholder="Name of the video"></input> <div class="cpe-button-group"><label class="uploadbutton" for="FUpload2"><a class="cpe-button"><span>Upload</span></a></label><a class="cpe-button"><span>Find Video from wiki</span></a></div>
     <br>
     <br>
-    <label>Title:</label> <input class="mpisto-input" placeholder="Description"></input>
+    <label>Title:</label> <input class="cpe-input" placeholder="Description"></input>
     <br>
     <br>
     <label>Position:</label> <input type="radio" name="11" id="11" checked></input><label for="11">Left</label> <input type="radio" name="11" id="12"></input><label for="12">Center</label> <input type="radio" name="11" id="13"></input><label for="13">Right</label>
@@ -1602,10 +1602,10 @@ document.getElementById("Handler").className += " mpisto-servers"
    <section>
    Horay, you're adding a Video from Youtube
     <br>
-    <label>URL:</label> <input type="url" class="mpisto-input" value="" style="width:400px;" placeholder="Youtube Video URL"></input>
+    <label>URL:</label> <input type="url" class="cpe-input" value="" style="width:400px;" placeholder="Youtube Video URL"></input>
     <br>
     <br>
-    <label>Title:</label> <input class="mpisto-input" placeholder="Description"></input>
+    <label>Title:</label> <input class="cpe-input" placeholder="Description"></input>
     <br>
     <br>
     <label>Position:</label> <input type="radio" name="21" id="21" checked></input><label for="21">Left</label> <input type="radio" name="21" id="22"></input><label for="22">Center</label> <input type="radio" name="21" id="23"></input><label for="23">Right</label>
@@ -1632,10 +1632,10 @@ document.getElementById("Handler").className += " mpisto-servers"
    <section>
    Horay, you're adding a Video from Vimeo
     <br>
-    <label>URL:</label> <input type="url" class="mpisto-input" value="" style="width:400px;" placeholder="Vimeo Video URL"></input>
+    <label>URL:</label> <input type="url" class="cpe-input" value="" style="width:400px;" placeholder="Vimeo Video URL"></input>
     <br>
     <br>
-    <label>Title:</label> <input class="mpisto-input" placeholder="Description"></input>
+    <label>Title:</label> <input class="cpe-input" placeholder="Description"></input>
     <br>
     <br>
     <label>Position:</label> <input type="radio" name="31" id="31" checked></input><label for="31">Left</label> <input type="radio" name="31" id="32"></input><label for="32">Center</label> <input type="radio" name="31" id="33"></input><label for="33">Right</label>
@@ -1664,10 +1664,10 @@ document.getElementById("Handler").className += " mpisto-servers"
    <section>
    Horay, you're adding a link
     <br>
-    <label>URL:</label> <input type="url" class="mpisto-input" value="" style="width:400px;" placeholder="Article Name"></input>
+    <label>URL:</label> <input type="url" class="cpe-input" value="" style="width:400px;" placeholder="Article Name"></input>
     <br>
     <br>
-    <label>Title:</label> <input class="mpisto-input" placeholder="Description"></input>
+    <label>Title:</label> <input class="cpe-input" placeholder="Description"></input>
     <br>
     <br>
     <label>Kind:</label> <input type="radio" name="41" id="41" checked></input><label for="41">Qora Qore Wikis</label> <input type="radio" name="41" id="42"></input><label for="42">External Site</label>
@@ -1726,7 +1726,7 @@ document.getElementById("Handler").className += " mpisto-servers"
    <section>
    Horay, you're adding an Inline Frame
     <br>
-    <label>URL:</label> <input type="url" class="mpisto-input" value="" style="width:400px;" placeholder="InlineFrame URL"></input>
+    <label>URL:</label> <input type="url" class="cpe-input" value="" style="width:400px;" placeholder="InlineFrame URL"></input>
     <br>
     <br>
     <label>Width:</label> <input type="number" style="width:70px;" placeholder="Width" value="480"></input> <label>Height:</label> <input type="number" style="width:70px;" placeholder="height" value="340"></input>
@@ -1782,7 +1782,7 @@ document.getElementById("Handler").className += " mpisto-servers"
     </iframe>
     </div>
     <h2><span>Already have it?</span></h2>
-    <label>Title:</label> <input class="mpisto-input" value="" style="width:300px;" placeholder="Infobox Title"></input> <a class="cpe-button"><span>Configure data</span></a>
+    <label>Title:</label> <input class="cpe-input" value="" style="width:300px;" placeholder="Infobox Title"></input> <a class="cpe-button"><span>Configure data</span></a>
    </section>
    <footer>
    <button class="cpe-button cpe-is-secondary cpe-is-alternate cpe-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
@@ -1854,7 +1854,7 @@ document.getElementById("Handler").className += " mpisto-servers"
    Say to us what you changed (Not mandatory)
    <br>
    <aside class="editor-field">
-    <input class="mpisto-input summary" placeholder="Add your summary..."></input>
+    <input class="cpe-input summary" placeholder="Add your summary..."></input>
    </aside>
    <h2>Options</h2>
    Additional options for saving the page:
