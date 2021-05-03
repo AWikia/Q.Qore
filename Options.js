@@ -23,15 +23,6 @@ function NoPix() {
     }
 }
 
-function Widescreen() {
-    var x = document.querySelector('html');
-    if (x.className.indexOf("wide") == -1) {
-        x.className += " wide";
-    } else {
-        x.className = x.className.replace(" wide", "");
-    }
-}
-
 function togglezoom() {
     var x = document.querySelector('html');
     if (x.className.indexOf("xo") == -1) {
