@@ -349,10 +349,6 @@ display:inline-flex;
 	width:175px;
 }
 
-.mpisto-gnav .pageheader-search .cpe-input {
-	min-width:auto;
-}
-
 
 .preview-window-desk {
 	grid: auto-flow / repeat(1, 1fr);
@@ -363,6 +359,11 @@ display:inline-flex;
 
 /* XS + S */
 @media only screen and (max-width:959px) {
+.cpe-input {
+	min-width:auto!important;
+}
+
+
 .main .page-wrapper {
 	width:100%!important;
 }
