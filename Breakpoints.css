@@ -349,6 +349,11 @@ display:inline-flex;
 	width:175px;
 }
 
+.mpisto-gnav .pageheader-search .cpe-input {
+	min-width:auto;
+}
+
+
 .preview-window-desk {
 	grid: auto-flow / repeat(1, 1fr);
 	width:300px;
