@@ -92,7 +92,7 @@ function VisualStyleCompile() {
 /* Changes Sitename */
 function UpdateSitename() {
     var x = document.getElementById("311");
-    var y = $(".mpisto-input.sitename").val();
+    var y = $(".cpe-input.sitename").val();
     if (y === '') {
 		var y = 'Untitled';
 		console.log('No Sitename is used. Untitled will be used as a fallback')
@@ -1657,10 +1657,10 @@ document.querySelector('html').style.setProperty("--emphasis-bg", emphasiscolor)
 document.querySelector('html').style.setProperty("--accent-bg", emphasiscolor2);
 
 ThemeColorMetaTag();
-CheckBG()
 
 /* Cursor Theme */
 if (refresh === true) {
+	CheckBG()
 	CheckAdapt()
 	colortheme($('body').attr("wikitheme"))
 	if ($("body.options").length) {
