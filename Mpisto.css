@@ -1,12 +1,12 @@
 .theme-A { /* Standard */
 --background-image:url("loadbg_dev.png");
---background-color:#ffa500;
---link-color:250,128,114;
---content-bg:#f9fafb;
---content-border:#dddccc;
---content-color:#202020;
---button-color:#663399;
---community-header-bg:255,99,71;
+--background-color:#441177;
+--link-color:221,35,0;
+--content-bg:#f1f2f3;
+--content-border:#aaabbb;
+--content-color:#222222;
+--button-color:#dd8300;
+--community-header-bg:184,131,0;
 }
 
 .theme-B { /* Standard Gloved */
@@ -1567,6 +1567,27 @@ color:rgba(var(--community-header-text), 0.8);
 		z-index:2;
 	}
 
+/** Responsive Design **/
+
+/* XL */
+@media only screen and (min-width:1380px) {
+	.color-header .title {
+		font-size:34px;
+	}
+
+	.mpisto-header-container .link {
+		font-size:20px;
+	}
+
+
+	.color-header .counters {
+		font-size:18px;
+	}
+
+}
+
+
+/* M */
 @media only screen and (max-width:1099px) {
 	.mpisto-header-container .wordmark {
 		height:54px;
@@ -1597,7 +1618,7 @@ color:rgba(var(--community-header-text), 0.8);
 
 }
 
-
+/* S */
 @media only screen and (max-width:959px) {
 	.color-header .title {
 		font-size:22px;
@@ -1635,6 +1656,7 @@ color:rgba(var(--community-header-text), 0.8);
 
 }
 
+/* S+ */
 @media only screen and (min-width:755px) {
 	.mobile-header {
 		display:none;
@@ -1644,6 +1666,7 @@ color:rgba(var(--community-header-text), 0.8);
 	}
 }
 
+/* XS */
 @media only screen and (max-width:754px) {
 	.color-header, .color-nav {
 		display:none;

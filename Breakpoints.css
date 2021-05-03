@@ -1,23 +1,4 @@
 /** Breakpoints for mpisto Zekzphire **/
-/* Widescreen Mode 
-.wide {
-    transform: scalex(0.8);
-    background-color: black;
-    width: calc(100% / 0.8);
-    position: relative;
-    left: -12.5%;
-    letter-spacing:0.1px;
-}
-
-.wide .mpisto-2018 {
-	height:100%!important;
-}
-
-.wide .mpisto-content, .wide footer.mpisto-footer .mpisto-wrapper, .wide .lightbox, .wide header.mpisto-footer-container > div, .wide header.mpisto-navbar .mpisto-navbar-wrapper {
-	width:calc(1066px / 0.8)!important;
-}
-*/
-
 .mpisto-content, .mpisto-options-content, .mpisto-editors-content, footer.mpisto-footer .mpisto-wrapper, .main .page-wrapper, .top-gap, .headroom.headroom--not-top .top-gap .cpe-banner-notification__container#floatingbanner  {
 	width:1066px;
 	margin-left:auto;
@@ -25,7 +6,7 @@
 }
 
 
-@media only screen and (min-width:1100px) and (max-width:1399px) {
+@media only screen and (min-width:1100px) and (max-width:1379px) {
 	.basicp .color-header .title, .modernp.pane-on .color-header .title {
 		font-size:26px;
 	}
@@ -377,9 +358,6 @@ display:inline-flex;
 
 /* XS + S */
 @media only screen and (max-width:959px) {
-/*.mpisto-grooze {
-display:inline!important;
-}*/
 .main .page-wrapper {
 	width:100%!important;
 }
@@ -387,11 +365,6 @@ display:inline!important;
 .mpisto-2018 .mpisto-content, .mpisto-2018 footer.mpisto-footer, .mpisto-2018 .mpisto-editors-content, .mpisto-2018 .lightbox, .mpisto-2018 .mpisto-options-content, .mpisto-2018 header.mpisto-navbar .mpisto-navbar-wrapper, .mpisto-2018 header.mpisto-global-navigation .mpisto-global-navigation-wrapper, .mpisto-2018 header.mpisto-footer-container > div {
 	min-width:360px;
 }
-
-/*.wide .mpisto-content, .wide footer.mpisto-footer .mpisto-wrapper, .wide .lightbox, .wide header.mpisto-footer-container > div, .wide header.mpisto-navbar .mpisto-navbar-wrapper {
-	width:calc(100% - (34px / 0.8))!important;
-}
-*/
 
 .mpisto-userpages-header .mpisto-profile-masthead hgroup .cpe-button {
 	padding-left:12px;
@@ -419,11 +392,6 @@ display:inline!important;
 }
 
 
-/*.top-gap {
-margin-top:8px!important;
-}
-*/
-
 .mpisto-2018, .mpisto-2018 .gradient-overlay , .mpisto-2018 .gradient-overlay:before {
   background-image:none!important
 }
@@ -432,25 +400,6 @@ margin-top:8px!important;
   display:none!Important;
 }
 
-
-/* Fixes for Blink, Webkit, Gecko and Qorta
-** Blink and Webkit do not render fixed elements.
-** Gecko and Qorta do but items do not seem to be clickable
-** This does not affect Microsoft Edge because none of the above cases apply to that browser
-
- 
-@supports (-webkit-box-shadow:0 0 10px) or (-moz-appearance:none) {
-
-.top-gap {
-padding:6px!important;
-}
-
-
-header.mpisto-navbar { 
-position:sticky!important;
-}
-}
-*/
 
 
 .mpisto-userpages-header .mpisto-profile-masthead hgroup h1 {
@@ -480,24 +429,6 @@ padding-right:24px;
 }
 */
 
-
-/*.mpisto-content, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .lightbox, .mpisto-options-content {
-width:754px;
-}
-
-.mpisto-content, .mpisto-editors-content, .mpisto-options-content {
-width:calc(754px - 36px);
-}
-
-footer.mpisto-footer .mpisto-wrapper, .lightbox {
-width:calc(754px - 72px);
-}
-
-
-header.mpisto-footer-container > div {
-  width:754px;
-}
-*/
 
 label {
 	font-size:18px;
@@ -601,14 +532,6 @@ width:100%;
 .mpisto-content .mpisto-title {
 	font-size:36px;
 	-webkit-text-stroke-width:1.25px;
-}
-
-.browser-warning + .mpisto-article-wrapper .mpisto-option-way > div {
-height:calc(100vh - 275px);
-}
-
-.browser-warning + .mpisto-article-wrapper .mpisto-option-pane {
-height:calc(100vh - 212px);
 }
 
 
@@ -751,16 +674,6 @@ width:926px;
 	font-size:22px;
 }
 
-/*
-.wide .mpisto-content, .wide footer.mpisto-footer .mpisto-wrapper, .wide .lightbox, .wide header.mpisto-footer-container > div, .wide header.mpisto-navbar .mpisto-navbar-wrapper {
-	width:calc(926px / 0.8)!important;
-}
-
-
-header.mpisto-footer-container > div {
-  width:926px;
-}
-*/
 
 .mpisto-userpages-header .mpisto-profile-masthead .left-pane {
 	width:50%;
@@ -833,17 +746,6 @@ padding-right:30px;
 width:1346px; /* Was 1146px */
 }
 
-/*
-.wide .mpisto-content, .wide footer.mpisto-footer .mpisto-wrapper, .wide .lightbox, .wide header.mpisto-footer-container > div, .wide header.mpisto-navbar .mpisto-navbar-wrapper {
-	width:calc(1146px / 0.8)!important;
-}
-
-
-header.mpisto-footer-container > div {
-  width:1146px;
-}
-
-*/
 .mpisto-content .mpisto-title {
 	font-size:50px;
 }
@@ -914,6 +816,15 @@ label {
 	font-size:16px;
 }
 
+footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container th h1 {
+font-size:40px;
+}
+
+footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container td h2 {
+font-size:30px;
+}
+
+
 
 }
 
@@ -928,129 +839,84 @@ padding-right:30px;
 .mpisto-content, header.mpisto-navbar .mpisto-navbar-wrapper, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .mpisto-options-content, .main .page-wrapper, .top-gap, .headroom.headroom--not-top .top-gap .cpe-banner-notification__container#floatingbanner  /*.lightbox */ {
 width:1966px; /* Was 1346px */
 }
-
-/*
-.wide .mpisto-content, .wide footer.mpisto-footer .mpisto-wrapper, .wide .lightbox, .wide header.mpisto-footer-container > div, .wide header.mpisto-navbar .mpisto-navbar-wrapper {
-	width:calc(1346px / 0.8)!important;
-}
-
-
-header.mpisto-footer-container > div {
-  width:1346px;
-}
-*/
-
 .mpisto-content .mpisto-title {
-	font-size:62px;
+	font-size:74px;
 }
 
 .mpisto-article h1 {
-font-size:44px;
+font-size:52px;
 }
 
 .mpisto-article h2 {
-font-size:32px;
+font-size:38px;
 }
 
 .mpisto-article h3 {
-font-size:27px;
+font-size:33px;
 }
 
 .mpisto-article h4 {
-font-size:22px;
+font-size:26px;
 }
 
 .mpisto-article h5 {
-font-size:18px;
+font-size:22px;
 }
 
 .mpisto-article h6 {
-font-size:16px;
+font-size:20px;
 }
 
 
 .mpisto-article {
-	font-size:18px;
+	font-size:22px;
 }
 
 .mpisto-content .mpisto-sub {
-	font-size:16px;
-}
-
-
-footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container th.mpisto-footer-bar h3 {
-font-size:22px;
-}
-
-
-footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container td {
-font-size:19px;
-}
-
-label {
-	font-size:25px;
-}
-
-.mpisto-option-way > div .fieldset fieldset legend,
-.mpisto-option-way > div .fieldset > fieldset > h2 {
-	font-size:30px;
-}
-
-.mpisto-option-way > div .fieldset fieldset legend .cpe-icon,
-.mpisto-option-way > div .fieldset > fieldset > h2 .cpe-icon {
-	margin-right:7px;
-	width:34px;
-	height:34px;
-	min-width:34px;
-	min-height:34px;
-}
-
-
-.mpisto-option-way .store-cards .store-card {
 	font-size:20px;
 }
 
 
-/* Don't allocate whole screen 
-html:not(.chat) {
-	box-shadow:0 0 40px 0px;
-	max-width:1600px;
-	margin:0 auto;
-}
-
-html:not(.chat) body, html:not(.chat) body::after, html:not(.chat) .mpisto-gnav, html:not(.chat) header.mpisto-footer-container, html:not(.chat) .lightbox-container {
-	max-width:inherit;
-	margin:inherit;
-	left:auto!important;
-	right:auto!important;
-}
-
-html:not(.chat) body {
-	display:block;
-}
-*/
+footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container th.mpisto-footer-bar h3 {
+font-size:26px;
 }
 
 
+footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container td {
+font-size:23px;
+}
 
-/* XL + XXL */
-@media only screen and (min-width:1380px) {
+label {
+	font-size:31px;
+}
+
+.mpisto-option-way > div .fieldset fieldset legend,
+.mpisto-option-way > div .fieldset > fieldset > h2 {
+	font-size:356px;
+}
+
+.mpisto-option-way > div .fieldset fieldset legend .cpe-icon,
+.mpisto-option-way > div .fieldset > fieldset > h2 .cpe-icon {
+	margin-right:9px;
+	width:42px;
+	height:42px;
+	min-width:42px;
+	min-height:42px;
+}
+
+
+.mpisto-option-way .store-cards .store-card {
+	font-size:24px;
+}
+
+
+
 footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container th h1 {
-font-size:40px;
+font-size:48px;
 }
 
 footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container td h2 {
-font-size:30px;
-}
-
-
-/* Some CSS when banner is on - Assumes that Inter is the font chosen */
-.browser-warning + .mpisto-article-wrapper .mpisto-option-pane {
-height:calc(100vh - 159px);
-}
-
-.browser-warning + .mpisto-article-wrapper .mpisto-option-way > div {
-height:calc(100vh - 221px);
+font-size:36px;
 }
 
 
