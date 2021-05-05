@@ -927,7 +927,7 @@ color:var(--button-color);
 }
 }
 
-/* Themes */
+/* Forced Colors */
 [visualcolors*="forced"]  {
 --background-overlay:var(--background-color)!important;
 }
@@ -975,6 +975,58 @@ color:var(--button-color);
 --content-color:#000000!important;
 --button-color:#4700a5!important;
 --community-header-bg:0,0,0!important;
+}
+
+
+/* Luna Colors */
+[visualcolors*="lunacolors"]  {
+--background-image:url("https://i.pinimg.com/originals/75/da/f4/75daf4ba563e173cddcd7b9e86a39257.jpg")!important;
+--background-overlay:auto!important;
+--body-display:legacy!important;
+--background-va:top!important;
+--background-size:stretched!important;
+--background-no-tiling:false!important;
+}
+
+.theme-A[visualcolors*="lunacolors"]  { /* Blue */
+--background-color:#215dc6!important;
+--link-color:33,93,198!important;
+--content-bg:#edead9!important;
+--content-border:#7292e1!important;
+--content-color:#333333!important;
+--button-color:#47ab47!important;
+--community-header-bg:33,93,198!important;
+}
+
+.theme-B[visualcolors*="lunacolors"]  { /* Olive */
+--background-color:#8e997d!important;
+--link-color:86,102,45!important;
+--content-bg:#edead9!important;
+--content-border:#cad8ab!important;
+--content-color:#333333!important;
+--button-color:#51824a!important;
+--community-header-bg:149,167,117!important;
+}
+
+.theme-C[visualcolors*="lunacolors"]  { /* Silver */
+--background-color:#3f3d3d!important;
+--link-color:63,61,61!important;
+--content-bg:#edead9!important;
+--content-border:#bdc0cf!important;
+--content-color:#333333!important;
+--button-color:#238f29!important;
+--community-header-bg:145,144,165!important;
+}
+
+
+.theme-D[visualcolors*="lunacolors"]  {
+--background-color:#666666!important;
+--link-color:0,0,128!important;
+--content-bg:#e2e2e2!important;
+--content-border:#666666!important;
+--content-color:#000000!important;
+--button-color:#e07330!important;
+--community-header-bg:40,40,40!important;
 }
 
 

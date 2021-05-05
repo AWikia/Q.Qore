@@ -406,7 +406,7 @@ body {
   --cpe-blocked-cursor:url("Windows/banned.cur"),not-allowed;
   --cpe-help-cursor:url("Windows/help.cur"), help;
   --cpe-text-cursor:url("Windows/text.cur"), text;
-  --cpe-hand-cursor:url("Windows/hand.cur"), text;
+  --cpe-hand-cursor:url("Windows/hand.cur"), pointer;
   margin:0 auto;
   background-color:var(--background-color);
   font-family:var(--font-family), var(--foreign-fonts);
@@ -710,7 +710,7 @@ select.cpe-input {
 }
 
 .cpe-input::placeholder { /* Standard */
-  color:inherit;
+  color:var(--content-color);
   opacity:0.8;
 }
 
@@ -1884,7 +1884,7 @@ input[type="checkbox"]:indeterminate:active, input[type="radio"]:indeterminate:a
   --cpe-blocked-cursor:url("OSX/banned.cur"),not-allowed;
   --cpe-help-cursor:url("OSX/help.cur"), help;
   --cpe-text-cursor:url("OSX/text.cur"), text;
-  --cpe-hand-cursor:url("OSX/hand.cur"), text;
+  --cpe-hand-cursor:url("OSX/hand.cur"), pointer;
 }
 
 /* Linux */
@@ -1894,7 +1894,7 @@ input[type="checkbox"]:indeterminate:active, input[type="radio"]:indeterminate:a
   --cpe-blocked-cursor:url("Lenux/banned.cur"),not-allowed;
   --cpe-help-cursor:url("Lenux/help.cur"), help;
   --cpe-text-cursor:url("Lenux/text.cur"), text;
-  --cpe-hand-cursor:url("Lenux/hand.cur"), text;
+  --cpe-hand-cursor:url("Lenux/hand.cur"), pointer;
 }
 
 [cursor*="linux"][curtheme*="dark"] {
@@ -1903,7 +1903,7 @@ input[type="checkbox"]:indeterminate:active, input[type="radio"]:indeterminate:a
   --cpe-blocked-cursor:url("Lenux/Dbanned.cur"),not-allowed;
   --cpe-help-cursor:url("Lenux/Dhelp.cur"), help;
   --cpe-text-cursor:url("Lenux/Dtext.cur"), text;
-  --cpe-hand-cursor:url("Lenux/Dhand.cur"), text;
+  --cpe-hand-cursor:url("Lenux/Dhand.cur"), pointer;
 }
 
 /* Dark */
@@ -1913,7 +1913,7 @@ input[type="checkbox"]:indeterminate:active, input[type="radio"]:indeterminate:a
   --cpe-blocked-cursor:url("Dark/banned.cur"),not-allowed;
   --cpe-help-cursor:url("Dark/help.cur"), help;
   --cpe-text-cursor:url("Dark/text.cur"), text;
-  --cpe-hand-cursor:url("Dark/hand.cur"), text;
+  --cpe-hand-cursor:url("Dark/hand.cur"), pointer;
 }
 
 
@@ -1924,7 +1924,7 @@ input[type="checkbox"]:indeterminate:active, input[type="radio"]:indeterminate:a
   --cpe-blocked-cursor:url("MpistoOS/banned.cur"),not-allowed;
   --cpe-help-cursor:url("MpistoOS/help.cur"), help;
   --cpe-text-cursor:url("MpistoOS/text.cur"), text;
-  --cpe-hand-cursor:url("MpistoOS/hand.cur"), text;
+  --cpe-hand-cursor:url("MpistoOS/hand.cur"), pointer;
 }
 
 [cursor*="mpisto2"] {
@@ -1933,7 +1933,7 @@ input[type="checkbox"]:indeterminate:active, input[type="radio"]:indeterminate:a
   --cpe-blocked-cursor:url("MpistoOS/Dbanned.cur"),not-allowed;
   --cpe-help-cursor:url("MpistoOS/Dhelp.cur"), help;
   --cpe-text-cursor:url("MpistoOS/Dtext.cur"), text;
-  --cpe-hand-cursor:url("MpistoOS/Dhand.cur"), text;
+  --cpe-hand-cursor:url("MpistoOS/Dhand.cur"), pointer;
 }
 
 /* Mpisto OS X*/
@@ -1943,7 +1943,7 @@ input[type="checkbox"]:indeterminate:active, input[type="radio"]:indeterminate:a
   --cpe-blocked-cursor:url("Mpisto10/banned.cur"),not-allowed;
   --cpe-help-cursor:url("Mpisto10/help.cur"), help;
   --cpe-text-cursor:url("Mpisto10/text.cur"), text;
-  --cpe-hand-cursor:url("Mpisto10/hand.cur"), text;
+  --cpe-hand-cursor:url("Mpisto10/hand.cur"), pointer;
 }
 
 [cursor*="mpisto3"][curtheme*="dark"]  {
@@ -1952,7 +1952,7 @@ input[type="checkbox"]:indeterminate:active, input[type="radio"]:indeterminate:a
   --cpe-blocked-cursor:url("Mpisto10/Dbanned.cur"),not-allowed;
   --cpe-help-cursor:url("Mpisto10/Dhelp.cur"), help;
   --cpe-text-cursor:url("Mpisto10/Dtext.cur"), text;
-  --cpe-hand-cursor:url("Mpisto10/Dhand.cur"), text;
+  --cpe-hand-cursor:url("Mpisto10/Dhand.cur"), pointer;
 }
 
 

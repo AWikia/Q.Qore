@@ -6,9 +6,9 @@ window.MW18HoverThreshold = 0.25;
 window.MW18ContrastNotice = false;
 
 /* Visual Themes */
-var visualThemes = ['basic','contrast','contrast'];
-var visualColors = ['standard','standard','forcedcolors'];
-var visualThemeNames = ['Basic','High Contrast','High Contrast (Forced Colors)'];
+var visualThemes = ['basic','contrast','contrast','basic'];
+var visualColors = ['standard','standard','forcedcolors','lunacolors'];
+var visualThemeNames = ['Basic','High Contrast','High Contrast (Forced Colors)','Basic (XP Luna Colors)'];
 
 (function () {
 document.querySelector('html').className += " theme-A"; // We begin with the first theme selected
@@ -316,7 +316,7 @@ if (files[0].size > 1024000) {
 
 	if ($("html.theme-C").length) {
 		$("style.designer-style.theme-C").append(
-		'.theme-B:not(.win10) {' +
+		'.theme-C:not(.win10) {' +
 		'--background-image:url("' + img.src + '")!important;' +
 		'}'
 		);	
@@ -1180,13 +1180,13 @@ function ColorTest(color,text=false) {
 		if (text === true) {
 			return '#0a0a0a';
 		} else {
-			return ColorTestTwin(color,'#0a0a0a');
+			return ColorTestTwin(color,'#000000');
 		}
 	} else {
 		if (text === true) {
 			return '#fafafa';
 		} else {
-			return ColorTestTwin(color,'#fafafa');
+			return ColorTestTwin(color,'#ffffff');
 		}
 	}
 
@@ -1195,10 +1195,10 @@ function ColorTest(color,text=false) {
 
 function SuperColorTest(color) {
 	if (isLightColor(color)) {
-		var mix = ColorTestTwin(color,'#0a0a0a');
+		var mix = ColorTestTwin(color,'#000000');
 		return ColorTestTwin(mix,'#000000');
 	} else {
-		var mix = ColorTestTwin(color,'#fafafa');
+		var mix = ColorTestTwin(color,'#ffffff');
 		return ColorTestTwin(mix,'#ffffff');
 	}
 }
@@ -1234,11 +1234,11 @@ function Color2(color) {
 }
 
 function isLightColor(color) {
-	return ((chroma(color).get('lab.l')) > window.MW18LightThreshold);
+	return ((chroma(color).luminance()) > MW18LightThreshold*0.01 - 0.01);
 }
 
 function isSuperLightColor(color) {
-	return ((chroma(color).get('lab.l')) > window.MW18LightThreshold*1.4);
+	return ((chroma(color).luminance()) > window.MW18LightThreshold*0.014 - 0.01);
 }
 
 /* # is added automatically so no need to be used. Only hex values please when editing this function */
