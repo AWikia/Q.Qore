@@ -468,111 +468,34 @@ background-color:var(--emphasis-bg);
 .page-wrapper .store-content .store-footer :only-child {
 flex:1;
 }
-
-header.mpisto-navbar {
-background-color:#fff;
-}
-
-header.mpisto-navbar:after, header.mpisto-navbar:before, footer.mpisto-footer:after, footer.mpisto-footer:before {
+footer.mpisto-footer:after, footer.mpisto-footer:before {
   display:none;
 }
 
-header.mpisto-navbar .link {
-  color:#cccddd;
+
+.cpe-dropdown__content,
+.cpe-dropdown__content .cpe-list.cpe-is-linked .cpe-dropdown-level-2 .cpe-dropdown-level-2__content {
+	border-color:transparent;
+	color:var(--link-color-text);
+	background-color:rgb(var(--link-color-blend-light));
 }
 
-header.mpisto-navbar .link:hover, header.mpisto-navbar .cpe-dropdown.cpe-is-active .link {
-    color:#0d0d0d;
+.cpe-dropdown__content:after,
+.cpe-dropdown__content .cpe-list.cpe-is-linked .cpe-dropdown-level-2 .cpe-dropdown-level-2__content:after {
+	display:none!important;
 }
 
-
-header.mpisto-navbar .cpe-list.cpe-is-linked > li > .cpe-button.cpe-is-secondary:hover, header.mpisto-navbar .cpe-list.cpe-is-linked > li > .cpe-button.cpe-is-secondary:active {
-color:rgba(0,183,224,0.8);
-border-color:rgba(0,183,224,0.8);
-background-color:rgba(0,183,224,0.2);
+.cpe-dropdown__content .cpe-list.cpe-is-linked>li.cpe-is-selected>a:not(.cpe-button), .cpe-dropdown__content .cpe-list.cpe-is-linked>li:hover>a:not(.cpe-button){
+	background-color:rgb(var(--link-color-blend));
+	color:inherit;
 }
 
-header.mpisto-navbar .link .cpe-icon.cpe-dropdown__toggle-chevron {
-color:#18bbc6;
-}
-
-
-header.mpisto-navbar .wiki .cpe-button.cpe-is-secondary {
-  color:#cccddd;
-  border-color:#cccddd;
-}
-
-header.mpisto-navbar .wiki .cpe-button.cpe-is-secondary:hover {
-  color:#0d0d0d;
-  border-color:#0d0d0d;
-}
-
-header.mpisto-navbar.active-search .search .search-input::-webkit-input-placeholder { /* Old Webkit */
-  color:#0d0d0d;
+.cpe-dropdown::after{
+	border-bottom-color:rgb(var(--link-color-blend-light));
 }
 
 
-header.mpisto-navbar.active-search .search .search-input::-moz-placeholder { /* Old Firefox */
-  color:#0d0d0d;
-}
-
-header.mpisto-navbar.active-search .search .search-input::placeholder { /* Standard */
-  color:#0d0d0d;
-}
-
-
-header.mpisto-navbar .search .cpe-button:not(.cpe-is-secondary):not(.cpe-is-text) {
-  color:#fff;
-  border-color:#cccddd;
-  background-color:#cccddd;
-}
-
-header.mpisto-navbar .search .cpe-button:not(.cpe-is-secondary):not(.cpe-is-text):hover, header.mpisto-navbar .search .cpe-button:not(.cpe-is-secondary):not(.cpe-is-text):active, header.mpisto-navbar .search .cpe-button:not(.cpe-is-secondary):not(.cpe-is-text):focus {
-  border-color:#0d0d0d;
-  background-color:#0d0d0d;
-}
-
-header.mpisto-navbar .search .cpe-button.cpe-is-text:not(.cpe-is-secondary) {
-  color:#cccddd;
-}
-
-header.mpisto-navbar .search .cpe-button.cpe-is-text:hover, header.mpisto-navbar .search .cpe-button.cpe-is-text:active, header.mpisto-navbar .search .cpe-button.cpe-is-text:focus {
-  color:#0d0d0d;
-}
-
-
-body:not(.mpisto-servers) header.mpisto-navbar .mpisto-navbar-wrapper.with-panther {
-padding-right:0!important;
-}
-
-
-/*footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container th::after, footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container td::after {
-    background-color:#39242d;
-}
-*/
-
-
-/* Some fixes for the search input */
-header.mpisto-navbar .search .search-input {
-font-family:inherit;
-font-size:13px;
-line-height:normal;
-background-color:transparent;
-    border-color:#39242d;
-}
-
-header.mpisto-navbar.active-search .search .search-input {
-  color:#0d0d0d;
-}
-
-
-#MobileNavigation .link[style] {
-	margin-left:0px;
-}
-
-#MobileNavigation .user .link {
-	margin-right:0px;
-}
+/* Old Code */
 
 .mobile-drawer {
 display:none;

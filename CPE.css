@@ -1316,22 +1316,22 @@ opacity:1;
 
 .cpe-dropdown .cpe-dropdown__content{
  top:calc(100% - 10px);
-/* display:inline-block; */
+ display:inline-block; 
  pointer-events:none;
  opacity:0;
- animation: contribution-dropdown-r 0.3s;
+/* animation: contribution-dropdown-r 0.3s; */
 }
 
 .cpe-dropdown .cpe-dropdown__content .cpe-dropdown-level-2 .cpe-dropdown-level-2__content {
  opacity:0;
  pointer-events:none;
-/* display:block; */
- animation: dropdown-2-r 0.3s;
+ display:block;
+/* animation: dropdown-2-r 0.3s; */
 }
 
 .cpe-dropdown::before, .cpe-dropdown::after {
  opacity:0;
- animation: contribution-dropdown-b-r 0.3s;
+/* animation: contribution-dropdown-b-r 0.3s; */
  pointer-events:none;
 }
 
@@ -1342,24 +1342,26 @@ opacity:1;
  to {opacity: 1; top: 100%;}
 }
 
-@keyframes contribution-dropdown-r {
- from {opacity: 1; top: 100%;}
- to {opacity: 0; top: calc(100% - 10px);}
-}
-
 @keyframes contribution-dropdown-b {
  from {opacity: 0; bottom: 9px;}
  to {opacity: 1; bottom: -1px;}
 }
 
-@keyframes contribution-dropdown-b-r {
- from {opacity: 1; bottom: -1px;}
- to {opacity: 0; bottom: 9px;}
-}
-
 @keyframes dropdown-2 {
  from {opacity: 0; transform: translateX(-10px);}
  to {opacity: 1; transform: translateX(0);}
+}
+
+/* Closing */
+
+@keyframes contribution-dropdown-r {
+ from {opacity: 1; top: 100%;}
+ to {opacity: 0; top: calc(100% - 10px);}
+}
+
+@keyframes contribution-dropdown-b-r {
+ from {opacity: 1; bottom: -1px;}
+ to {opacity: 0; bottom: 9px;}
 }
 
 @keyframes dropdown-2-r {
