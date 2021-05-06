@@ -85,7 +85,7 @@ text-rendering:optimizeSpeed;
 touch-action:manipulation;
 	overflow-y:auto;
 	font-weight:500;
-text-shadow:0 0 1px rgba(0,0,0,0.1),0 0 1px rgba(255,255,255,0.1); /* Partially Embolding */
+/* text-shadow:0 0 1px rgba(0,0,0,0.1),0 0 1px rgba(255,255,255,0.1);  Partially Embolding */
 
 /*text-shadow:0 0 1px rgba(255,0,0,0.1), 0 0 1px rgba(0,255,0,0.1), 0 0 1px rgba(0,0,255,0.1), 0 0 1px rgba(255,255,0,0.1), 0 0 1px rgba(255,0,255,0.1), 0 0 1px rgba(0,255,255,0.1), 0 0 1px rgba(0,0,0,0.1), 0 0 1px rgba(255,255,255,0.1); */
 }
@@ -495,6 +495,7 @@ font-family:"Source Serif Pro", var(--foreign-fonts), cursive;
 	.mpisto-global-navigation .search-link .cpe-input {
 		width:100%!important;
 		color:inherit;
+		min-width:auto!important;
 	}
 
 .mpisto-global-navigation .search-link input:placeholder-shown {

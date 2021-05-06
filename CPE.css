@@ -1629,9 +1629,11 @@ content:"";
 border-top:1px solid var(--content-border);}
 
 
-.headroom.headroom--not-top .top-gap .cpe-banner-notification__container#floatingbanner {
+.headroom.headroom--not-top .top-gap .cpe-banner-notification__container#floatingbanner,
+.options #floatingbanner {
   position:fixed;
   top:49px;
+  width:inherit;
   z-index:19; /* Needed lower value to allow header dropdowns not to overlap */
 }
 
@@ -1734,6 +1736,9 @@ appearance:none;
 font-family:monospace;
 }
 
+table {
+color:inherit;
+}
 
 /* Checkboxes */
 /* Commented Styles = Old Design */

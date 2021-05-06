@@ -747,6 +747,14 @@ color:inherit;
 
 
 
+/* Title */
+[visualtheme*="basic"] .mpisto-content .mpisto-page-header .mpisto-title,
+[visualtheme*="contrast"] .mpisto-content .mpisto-page-header .mpisto-title {
+	-webkit-text-fill-color:rgb(var(--community-header-bg));
+	-webkit-text-stroke-color:rgb(var(--community-header-text));
+	text-shadow:none;
+}
+
 /* Buttons */
 [visualtheme*="contrast"] .cpe-button {
     box-shadow:0 0 0 1.5px var(--button-color)!important;
@@ -840,6 +848,122 @@ border:0;
 }
 
 
+/* Simple Theme */
+[visualtheme*="simple"] .mpisto-header-container {
+margin:-1px;
+background-image:linear-gradient(to bottom, var(--button-color-blend-light) 35%, var(--button-color-blend) 70%)!important;
+}
+
+[visualtheme*="simple"]	.color-header .title a {
+		text-decoration:none;
+		color:inherit;
+		transition:color 400ms ease;
+		overflow:hidden;
+		text-overflow:ellipsis;
+	}
+
+
+[visualtheme*="simple"] .mpisto-header-container::before {
+	background-image:none;
+}
+
+[visualtheme*="simple"] .mpisto-header-container::after {
+	background-color:transparent;
+	background-image:none;
+	filter:none;
+}
+
+
+[visualtheme*="simple"] .mpisto-gnav, [visualtheme*="simple"] .mpisto-header-container {
+	background-color:var(--button-color-blend-light);
+	color:var(--button-color-text);
+}
+
+
+[visualtheme*="simple"] .mpisto-gnav:after, [visualtheme*="simple"] .mpisto-header-container:before {
+	display:none;
+}
+
+[visualtheme*="simple"] .mpisto-global-navigation .link:active, 
+[visualtheme*="simple"] .mpisto-global-navigation .link:focus,
+[visualtheme*="simple"] .mpisto-global-navigation .cpe-dropdown.cpe-is-active .link,
+[visualtheme*="simple"] .mpisto-header-container .link:hover, 
+[visualtheme*="simple"] .mpisto-header-container .link:focus, 
+[visualtheme*="simple"] .mpisto-header-container .cpe-dropdown.cpe-is-active .link {
+	background-color:var(--button-color-blend-light);
+	-webkit-animation:none;
+	animation:none;
+	transition:color 400ms ease, background-color 400ms ease, transform 300ms ease, opacity 300ms ease;
+	border-color:transparent;
+	color:inherit;
+	box-shadow:none;
+}
+
+
+[visualtheme*="simple"] .color-header .link:hover, 
+[visualtheme*="simple"] .color-header .cpe-dropdown.cpe-is-active .link,
+[visualtheme*="simple"] .mpisto-global-navigation .link:active, 
+[visualtheme*="simple"] .mpisto-global-navigation .link:focus,  [visualtheme*="simple"] 
+.mpisto-global-navigation .cpe-dropdown.cpe-is-active .link {
+	background-color:var(--button-color-blend);
+}
+
+	[visualtheme*="simple"] .mpisto-header-container .link:hover *:not([filter]), 
+	[visualtheme*="simple"] .mpisto-header-container .link.active *:not([filter]), 
+	[visualtheme*="simple"] .mpisto-global-navigation .link:hover *:not([filter]):not([filter]) {
+		filter:none;
+	}
+
+
+[visualtheme*="simple"] header.mpisto-footer-container {
+	color:var(--button-color-text);
+	border-color:var(--button-color-blend);
+	background-color:var(--button-color-blend-light);
+}
+
+
+[visualtheme*="simple"] header.mpisto-footer-container::before,
+[visualtheme*="simple"] header.mpisto-footer-container::after {
+	display:none!important;
+}
+
+[visualtheme*="simple"] .mpisto-content .mpisto-wrapper:after {
+	opacity:1;
+}
+
+[visualtheme*="simple"] .mpisto-content .mpisto-page-header .mpisto-title {
+	-webkit-text-fill-color:currentColor;
+	-webkit-text-stroke-color:transparent;
+	text-shadow:none;
+	color:inherit;
+}
+
+[visualtheme*="simple"] .mpisto-content .mpisto-page-header-title,
+[visualtheme*="simple"] .editor-header,
+[visualtheme*="simple"] .mpisto-option-way h1 {
+	background-image:none;
+	background-color:var(--emphasis-bg);
+}
+
+[visualtheme*="simple"] .mpisto-option-pane {
+	background-color:rgb(var(--community-header-bg-blend-light));
+	color:rgb(var(--community-header-text));
+}
+
+[visualtheme*="simple"] .mpisto-option-pane .option-link {
+	color:inherit;
+}
+
+[visualtheme*="simple"] .page-1 .option-link.p1, 
+[visualtheme*="simple"] .page-2 .option-link.p2, 
+[visualtheme*="simple"] .page-3 .option-link.p3, 
+[visualtheme*="simple"] .page-4 .option-link.p4, 
+[visualtheme*="simple"] .page-5 .option-link.p5, 
+[visualtheme*="simple"] .page-6 .option-link.p6 {
+	color:inherit;
+	background-color:rgb(var(--community-header-bg-blend));
+	border-color:rgb(var(--community-header-bg-blend));
+}
 
 
 /* Selection Styles per B19 */
