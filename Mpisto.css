@@ -35,6 +35,7 @@
 
 .theme-D { /* Sagent */
 --background-image:url("headbg4.jpg");
+--background-image:url("headbg4.jpg");
 --background-color:#e95500;
 --link-color:148,24,197;
 --content-bg:#fdfeff;
@@ -1401,10 +1402,6 @@ color:rgba(var(--community-header-text), 0.8);
 	}
 
 
-	.mpisto-header-container:not(.cpe-is-hidden) + .cpe-community-header {
-		display:none!important;
-	}
-
 	.color-header {
 		min-height:60px;
 		position:relative;
@@ -1485,16 +1482,23 @@ color:rgba(var(--community-header-text), 0.8);
 	
 	.color-nav .cpe-dropdown {
 		height:30px;
+		width:100%;
 	}
 	
-	.color-nav .cpe-dropdown__toggle-chevron:not(:only-child) {
-		margin:0;
-	}
 
 
 	.color-nav .link {
 		width:100%;
 		white-space:nowrap;
+		height:30px;
+		vertical-align:middle;
+		display:inline-flex;
+		align-items:center;
+		justify-content:center;
+	}
+
+	.color-nav .link * + * {
+		margin-left:6px;
 	}
 	
 	.mpisto-header-container .link:hover, .mpisto-header-container .link:focus, .mpisto-header-container .cpe-dropdown.cpe-is-active .link, .mpisto-header-container .link.active  {
@@ -1559,9 +1563,20 @@ color:rgba(var(--community-header-text), 0.8);
 	
 	.color-nav {
 		height:30px;
-		width:100%;
 		position:relative;
 		z-index:2;
+		display:flex;
+	}
+
+	.color-nav > .table {
+		flex:1;
+	}
+
+	.color-nav > .table > .tr {
+		display:inline-flex;
+		align-items:center;
+		justify-content:center;
+		width:100%;
 	}
 
 /** Responsive Design **/
@@ -2246,6 +2261,7 @@ text-align:right;
 	font-size:18px;
 	background-color:var(--button-color-blend-light);
 	margin:0 -19px 0;
+    color:var(--button-color-text);
 }
 
 .constructor .mpisto-userpages-header {
@@ -2276,7 +2292,6 @@ padding:10px 0 0;
 	display:flex;
 	justify-content:space-between;
     align-items:flex-start;
-    color:var(--button-color-text);
 }
 
 .mpisto-userpages-header .mpisto-userpages-main .mpisto-avatar {

@@ -1234,11 +1234,11 @@ function Color2(color) {
 }
 
 function isLightColor(color) {
-	return ((chroma(color).luminance()) > MW18LightThreshold*0.01 - 0.01);
+	return ((chroma.contrast('black', color)) > MW18LightThreshold*0.09);
 }
 
 function isSuperLightColor(color) {
-	return ((chroma(color).luminance()) > window.MW18LightThreshold*0.014 - 0.01);
+	return ((chroma.contrast('black', color)) > window.MW18LightThreshold*0.126);
 }
 
 /* # is added automatically so no need to be used. Only hex values please when editing this function */

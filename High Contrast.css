@@ -940,9 +940,11 @@ background-image:linear-gradient(to bottom, var(--button-color-blend-light) 35%,
 
 [visualtheme*="simple"] .mpisto-content .mpisto-page-header-title,
 [visualtheme*="simple"] .editor-header,
-[visualtheme*="simple"] .mpisto-option-way h1 {
+[visualtheme*="simple"] .mpisto-option-way h1,
+[visualtheme*="simple"] .mpisto-userpages-header {
 	background-image:none;
 	background-color:var(--emphasis-bg);
+	color:inherit;
 }
 
 [visualtheme*="simple"] .mpisto-option-pane {
