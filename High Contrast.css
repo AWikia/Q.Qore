@@ -1173,20 +1173,20 @@ color:var(--button-color);
 --background-color:#8e997d!important;
 --link-color:86,102,45!important;
 --content-bg:#edead9!important;
---content-border:#cad8ab!important;
+--content-border:#a8b689!important;
 --content-color:#333333!important;
 --button-color:#51824a!important;
---community-header-bg:149,167,117!important;
+--community-header-bg:142,160,110!important;
 }
 
 .theme-C[visualcolors*="lunacolors"]  { /* Silver */
 --background-color:#3f3d3d!important;
 --link-color:63,61,61!important;
 --content-bg:#edead9!important;
---content-border:#bdc0cf!important;
+--content-border:#acb0be!important;
 --content-color:#333333!important;
 --button-color:#238f29!important;
---community-header-bg:145,144,165!important;
+--community-header-bg:140,139,160!important;
 }
 
 
@@ -1194,7 +1194,7 @@ color:var(--button-color);
 --background-color:#666666!important;
 --link-color:0,0,128!important;
 --content-bg:#e2e2e2!important;
---content-border:#666666!important;
+--content-border:#555555!important;
 --content-color:#000000!important;
 --button-color:#e07330!important;
 --community-header-bg:40,40,40!important;

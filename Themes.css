@@ -166,7 +166,7 @@
 --community-header-bg:8,156,166;
 }
 
-/* Standard */
+/* Standard (V15) */
 .theme-A {
 --background-image:url("loadbg_dev.png");
 --background-color:#ffa500;
@@ -177,6 +177,19 @@
 --button-color:#663399;
 --community-header-bg:255,99,71;
 }
+
+/* Standard */
+.theme-A {
+--background-image:url("loadbg_dev.png");
+--background-color:#441177;
+--link-color:221,35,0;
+--content-bg:#f1f2f3;
+--content-border:#aaabbb;
+--content-color:#222222;
+--button-color:#dd8300;
+--community-header-bg:184,131,0;
+}
+
 
 /* Standard Gloved Version (V1) */
 .theme-A {
@@ -190,7 +203,7 @@
 --community-header-bg:80,103,155;
 }
 
-/* Standard Gloved Version ~~ */
+/* Standard Gloved Version (V2) */
 .theme-A {
 --background-image:url("headbg.jpg");
 --background-color:#39bae6;
@@ -201,6 +214,19 @@
 --button-color:#7aea32;
 --community-header-bg:70,90,190;
 }
+
+/* Standard Gloved Version ~~ */
+.theme-A {
+--background-image:url("headbg.jpg");
+--background-color:#39bae6;
+--link-color:153,15,153;
+--content-bg:#eefcee;
+--content-border:#8cb114;
+--content-color:#2a2a2a;
+--button-color:#73dd2f;
+--community-header-bg:70,90,190;
+}
+
 
 /* Standard Dark Version (V1) */
 .theme-A {
@@ -214,11 +240,23 @@
 --community-header-bg:127,105,105;
 }
 
-/* Standard Dark Version ~ */
+/* Standard Dark Version (V2) */
 .theme-A {
 --background-image:url("headbg3.jpg");
 --background-color:#66144b;
 --link-color:0,85,255;
+--content-bg:#303030;
+--content-border:#bebebe;
+--content-color:#f9f9f9;
+--button-color:#1f5299;
+--community-header-bg:127,95,95;
+}
+
+/* Standard Dark Version ~ */
+.theme-A {
+--background-image:url("headbg3.jpg");
+--background-color:#66144b;
+--link-color:0,153,221;
 --content-bg:#303030;
 --content-border:#bebebe;
 --content-color:#f9f9f9;
@@ -311,13 +349,25 @@
 --community-header-bg:170,153,0;
 }
 
-/* Sagent */
+/* Sagent (V1) */
 .theme-A {
 --background-image:url("headbg4.jpg");
 --background-color:#e95500;
 --link-color:148,24,197;
 --content-bg:#fdfeff;
 --content-border:#eee;
+--content-color:#1a2a3a;
+--button-color:#FF7E09;
+--community-header-bg:255,126,9;
+}
+
+/* Sagent */
+.theme-A {
+--background-image:url("headbg4.jpg");
+--background-color:#e95500;
+--link-color:148,24,197;
+--content-bg:#fdfeff;
+--content-border:#d1d1d1;
 --content-color:#1a2a3a;
 --button-color:#FF7E09;
 --community-header-bg:255,126,9;

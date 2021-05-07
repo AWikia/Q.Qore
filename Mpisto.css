@@ -2,7 +2,7 @@
 --background-image:url("loadbg_dev.png");
 --background-color:#441177;
 --link-color:221,35,0;
---content-bg:#f1f2f3;
+--content-bg:#fdfeff;
 --content-border:#aaabbb;
 --content-color:#222222;
 --button-color:#dd8300;
@@ -16,7 +16,7 @@
 --content-bg:#eefcee;
 --content-border:#8cb114;
 --content-color:#2a2a2a;
---button-color:#7aea32;
+--button-color:#73dd2f;
 --community-header-bg:70,90,190;
 }
 
@@ -24,7 +24,7 @@
 .theme-C { /* Standard Dark */
 --background-image:url("headbg3.jpg");
 --background-color:#66144b;
---link-color:0,85,255;
+--link-color:0,153,221;
 --content-bg:#303030;
 --content-border:#bebebe;
 --content-color:#f9f9f9;
@@ -35,11 +35,10 @@
 
 .theme-D { /* Sagent */
 --background-image:url("headbg4.jpg");
---background-image:url("headbg4.jpg");
 --background-color:#e95500;
 --link-color:148,24,197;
 --content-bg:#fdfeff;
---content-border:#eee;
+--content-border:#d1d1d1;
 --content-color:#1a2a3a;
 --button-color:#FF7E09;
 --community-header-bg:255,126,9;
@@ -643,7 +642,6 @@ background-color:rgba(var(--link-color), 0.1);
 		}
 
 		#GlobalNavigation.active-search .search-on:not(.logotype) .cpe-icon, 
-		#GlobalNavigation.active-search .search-on + .link .cpe-icon, 
 		#GlobalNavigation.active-search .menu .cpe-icon, 
 		#GlobalNavigation.active-search .search-on img {
 				font-size:0!important;
@@ -4888,6 +4886,18 @@ border:1px solid currentColor;
 
 .mpisto-option-way.p4 .cpe-button.cpe-is-square {
   display:inline-block;
+}
+
+.mpisto-option-way.p4 label .cpe-icon {
+	--icon-display:none;
+	display:var(--icon-display);
+	margin-right:5px;
+	vertical-align:middle;
+	
+}
+
+.mpisto-option-way.p4 label .cpe-icon + span {
+	vertical-align:middle;
 }
 
 .mpisto-option-way.p4 .cpe-list label + div .cpe-button.cpe-is-square {

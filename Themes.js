@@ -161,6 +161,7 @@ function ThemeColorMetaTag() {
 	} else {
 		$('meta[name*="theme-color"]').attr("content", chroma( $('body').css('background-color') ) );
 	}
+	CheckColorSuitability()
 }
 
 /* Used only on Task Manager, ignored elsewhere */
@@ -1234,12 +1235,22 @@ function Color2(color) {
 }
 
 function isLightColor(color) {
-	return ((chroma.contrast('black', color)) > MW18LightThreshold*0.09);
+	return ((chroma.contrast('#0A0A0A', color)) > MW18LightThreshold*0.09);
 }
 
 function isSuperLightColor(color) {
-	return ((chroma.contrast('black', color)) > window.MW18LightThreshold*0.126);
+	return ((chroma.contrast('#0A0A0A', color)) > window.MW18LightThreshold*0.126);
 }
+
+
+function isSuitableColor(color,color2) {
+return ((chroma.contrast(color, color2)) > MW18LightThreshold*0.06)
+}
+
+function isSuitableColor2(color,color2) {
+return ((chroma.contrast(color, color2)) > MW18LightThreshold*0.03) // For Border Color
+}
+
 
 /* # is added automatically so no need to be used. Only hex values please when editing this function */
 function CompileRecColors() {
@@ -1441,7 +1452,7 @@ if (isSuperLightColor(content_color)) {
 	}
 
 	if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border") === 'auto') && !($("html.contrast.win10").length)  ) {
-		var dropdowncolor2 = chroma.mix(content_color,'#0a0a0a',MW18HoverThreshold*1.2, 'hsv');
+		var dropdowncolor2 = chroma.mix(content_color,'#0a0a0a',MW18HoverThreshold*1.32, 'hsv');
 	} else {
 		var dropdowncolor2 = 'inherit';
 	}
@@ -1455,7 +1466,7 @@ var dropdowncolor = chroma.mix(content_color,'#0a0a0a',MW18HoverThreshold*0.8, '
 		var dropdowncolor3 = 'inherit';
 	}
 	if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border") === 'auto') && !($("html.contrast.win10").length)  ) {
-		var dropdowncolor2 = chroma.mix(content_color,'#0a0a0a',MW18HoverThreshold*2.2, 'hsv');
+		var dropdowncolor2 = chroma.mix(content_color,'#0a0a0a',MW18HoverThreshold*2.4, 'hsv');
 	} else {
 		var dropdowncolor2 = 'inherit';
 	}
@@ -1468,7 +1479,7 @@ var dropdowncolor = chroma.mix(content_color,'#fafafa',MW18HoverThreshold*0.8, '
 		var dropdowncolor3 = 'inherit';
 	}
 	if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border") === 'auto') && !($("html.contrast.win10").length)  ) {
-		var dropdowncolor2 = chroma.mix(content_color,'#fafafa',MW18HoverThreshold*2.2, 'hsv');
+		var dropdowncolor2 = chroma.mix(content_color,'#fafafa',MW18HoverThreshold*2.4, 'hsv');
 	} else {
 		var dropdowncolor2 = 'inherit';
 	}
@@ -1664,7 +1675,8 @@ if (refresh === true) {
 	CheckAdapt()
 	colortheme($('body').attr("wikitheme"))
 	if ($("body.options").length) {
-		UpdateSet()
+		UpdateSet();
+
 	}
 }
 SocialCompile();
@@ -1677,6 +1689,47 @@ CursorT('auto-r');
 
 
 }
+
+function CheckColorSuitability() {
+	if ($("body.options").length) {
+		/* Check Contrast Colors */
+		if (window.MW18darkmode === true) {
+			var color2 = getComputedStyle(document.querySelector('body')).getPropertyValue("--content-color");
+			var color1a  = getComputedStyle(document.querySelector('body')).getPropertyValue("--content-bg");
+		} else {
+			var color1a = getComputedStyle(document.querySelector('body')).getPropertyValue("--content-color");
+			var color2  = getComputedStyle(document.querySelector('body')).getPropertyValue("--content-bg");
+		}
+		var color1b = 'rgb(' + getComputedStyle(document.querySelector('html')).getPropertyValue("--link-color") + ')';
+		var color1c = getComputedStyle(document.querySelector('body')).getPropertyValue("--content-border");
+		var color1d = getComputedStyle(document.querySelector('html')).getPropertyValue("--button-color");
+		// Content Color
+		if (isSuitableColor(color1a,color2)) {
+			document.querySelector('label .color-warn').style.setProperty("--icon-display", "none");
+		} else {
+			document.querySelector('label .color-warn').style.setProperty("--icon-display", "inline");
+		}
+		// Link Color
+		if (isSuitableColor(color1b, color2)) {
+			document.querySelector('label .link-warn').style.setProperty("--icon-display", "none");
+		} else {
+			document.querySelector('label .link-warn').style.setProperty("--icon-display", "inline");
+		}
+		// Border Color
+		if (isSuitableColor2(color1c, color2)) {
+			document.querySelector('label .border-warn').style.setProperty("--icon-display", "none");
+		} else {
+			document.querySelector('label .border-warn').style.setProperty("--icon-display", "inline");
+		}
+		// Button Color
+		if (isSuitableColor2(color1d, color2)) {
+			document.querySelector('label .button-warn').style.setProperty("--icon-display", "none");
+		} else {
+			document.querySelector('label .button-warn').style.setProperty("--icon-display", "inline");
+		}
+	}
+}
+
 
 function CheckAdapt() {
 		if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--background-overlay") === 'auto') && !($("html.contrast.win10").length)  ) {
