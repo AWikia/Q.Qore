@@ -643,6 +643,8 @@ background-color:rgba(var(--link-color), 0.1);
 		}
 
 		#GlobalNavigation.active-search .search-on:not(.logotype) .cpe-icon, 
+		#GlobalNavigation.active-search .search-on + .link .cpe-icon, 
+		#GlobalNavigation.active-search .menu .cpe-icon, 
 		#GlobalNavigation.active-search .search-on img {
 				font-size:0!important;
 				padding:0!important;
