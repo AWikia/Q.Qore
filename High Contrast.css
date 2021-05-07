@@ -999,6 +999,20 @@ background-image:linear-gradient(to bottom, var(--button-color-blend-light) 35%,
 }
 
 
+[visualtheme*="simple"]  .notification.cpe-dropdown__content .cpe-list > li:not(:last-child):not(.empty) a:hover:after {
+	opacity:1;
+	background-color:rgb(var(--link-color-blend));
+}
+
+[visualtheme*="simple"] .notification.cpe-dropdown__content .cpe-list > li:not(:last-child) a div h3,
+[visualtheme*="simple"] .notification.cpe-dropdown__content .cpe-list > li:not(:last-child) div h6 {
+	color:var(--link-color-text);
+}
+
+[visualtheme*="simple"] .notification.cpe-dropdown__content .cpe-list > li:last-child  a {
+	color:var(--link-color-text);
+}
+
 /* Selection Styles per B19 */
 [visualtheme*="contrast"] ::selection {
 color:var(--button-color-text);

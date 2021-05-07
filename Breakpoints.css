@@ -94,7 +94,7 @@ column-count:1!important;
 }
 
 
-.mpisto-gnav .active-search .cpe-dropdown .link {
+.mpisto-gnav .active-search .cpe-dropdown:not(.menu) .link {
 				font-size:0!important;
 				padding:0!important;
 				max-width:0!important;
@@ -103,7 +103,7 @@ column-count:1!important;
 				overflow:hidden;			
 }
 
-		.mpisto-gnav .active-search .cpe-dropdown .link * {
+		.mpisto-gnav .active-search .cpe-dropdown:not(.menu) .link * {
 				font-size:0!important;
 				padding:0!important;
 				width:0!important;	

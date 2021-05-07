@@ -494,6 +494,20 @@ footer.mpisto-footer:after, footer.mpisto-footer:before {
 	border-bottom-color:rgb(var(--link-color-blend-light));
 }
 
+ .notification.cpe-dropdown__content .cpe-list > li:not(:last-child):not(.empty) a:hover:after {
+	opacity:1;
+	background-color:rgb(var(--link-color-blend));
+}
+
+.notification.cpe-dropdown__content .cpe-list > li:not(:last-child) a div h3,
+ .notification.cpe-dropdown__content .cpe-list > li:not(:last-child) div h6 {
+	color:var(--link-color-text);
+}
+
+.notification.cpe-dropdown__content .cpe-list > li:last-child  a {
+	color:var(--link-color-text);
+}
+
 
 /* Old Code */
 
