@@ -1962,6 +1962,26 @@ input[type="checkbox"]:indeterminate:active, input[type="radio"]:indeterminate:a
   --cpe-hand-cursor:url("Mpisto10/Dhand.cur"), pointer;
 }
 
+/* Mpisto OS X*/
+[cursor*="mpisto4"] {
+  --cpe-body-cursor:url("Mpisto10 2021/Light 1x/Default.cur"), auto;
+  --cpe-auto-cursor:url("Mpisto10 2021/Light 1x/Default.cur"), default;
+  --cpe-blocked-cursor:url("Mpisto10 2021/Light 1x/Banned.cur"),not-allowed;
+  --cpe-help-cursor:url("Mpisto10 2021/Light 1x/Help.cur"), help;
+  --cpe-text-cursor:url("Mpisto10 2021/Light 1x/Text.cur"), text;
+  --cpe-hand-cursor:url("Mpisto10 2021/Light 1x/Hand.cur"), pointer;
+}
+
+[cursor*="mpisto4"][curtheme*="dark"]  {
+  --cpe-body-cursor:url("Mpisto10 2021/Dark 1x/Default.cur"), auto;
+  --cpe-auto-cursor:url("Mpisto10 2021/Dark 1x/Default.cur"), default;
+  --cpe-blocked-cursor:url("Mpisto10 2021/Dark 1x/Banned.cur"),not-allowed;
+  --cpe-help-cursor:url("Mpisto10 2021/Dark 1x/Help.cur"), help;
+  --cpe-text-cursor:url("Mpisto10 2021/Dark 1x/Text.cur"), text;
+  --cpe-hand-cursor:url("Mpisto10 2021/Dark 1x/Hand.cur"), pointer;
+}
+
+
 
 /* No Special Cursor */
 [cursor*="none"],

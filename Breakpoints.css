@@ -847,6 +847,7 @@ width:1966px; /* Was 1346px */
 }
 .mpisto-content .mpisto-title {
 	font-size:74px;
+	-webkit-text-stroke-width:2.5px;
 }
 
 .mpisto-article h1 {
