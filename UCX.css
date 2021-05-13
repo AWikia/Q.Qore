@@ -14,7 +14,7 @@
 --button-color:@ACCENTCOLOR@;
 --community-header-bg:@STICKYNAVCOLOR@;
 --body-display:legacy;
---background-size:full;
+--background-size:@BACKGROUNDSIZE@;
 --background-va:top;
 --background-no-tiling:true;
 }
@@ -31,7 +31,7 @@
 --button-color:@ACCENTCOLOR@DARK@;
 --community-header-bg:@STICKYNAVCOLOR@DARK@;
 --body-display:legacy;
---background-size:full;
+--background-size:@BACKGROUNDSIZE@;
 --background-va:top;
 --background-no-tiling:true;
 }
