@@ -673,7 +673,7 @@ cursor:var(--cpe-auto-cursor);
     font-family:var(--secondary-font);
     font-weight:600;
     color:var(--content-color);
-    padding:9px 12px;
+    padding:8px 12px;
     border:0;
     border-radius:var(--button-radius);
     display:inline-flex;
