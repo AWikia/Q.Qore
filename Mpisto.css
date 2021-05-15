@@ -90,11 +90,6 @@ touch-action:manipulation;
 /*text-shadow:0 0 1px rgba(255,0,0,0.1), 0 0 1px rgba(0,255,0,0.1), 0 0 1px rgba(0,0,255,0.1), 0 0 1px rgba(255,255,0,0.1), 0 0 1px rgba(255,0,255,0.1), 0 0 1px rgba(0,255,255,0.1), 0 0 1px rgba(0,0,0,0.1), 0 0 1px rgba(255,255,255,0.1); */
 }
 
-.serif body { /* Noto Sans */
---font-family:Aleo; /* Uses a font stack suitable for High Contrast Mode */
---foreign-fonts:"Vollkorn", "Song Myung", "Noto Serif JP", "Pridi", "Amiri", "Ramaraja", "Catamaran", "Martel", "Noto Serif SC", "Noto Serif TC", "Hind Siliguri", "David Libre";
-}
-
 
 .main .system-font { /* Deprecated */
 --font-family: system-ui, -qq-osfont, -apple-system, BlinkMacSystemFont, "Segoe UI", "MLS Sans", "MLSystem", "Helvetica Neue"!important; /* MLS Sans must be above Oxygen and Roboto because Mpisto OS contains both fonts and can cause problems - MLSystem is for MLS Challenge and below - -qq-osfont is for Qorta Web 4-5 and mInerva 4.5-5.1 which works like system-ui but only on Windows - -apple-system and BlinkMacSystemFont are equilavant of system-ui only for Apple Mac Computers */
@@ -547,7 +542,7 @@ font-family:"Source Serif Pro", var(--foreign-fonts), cursive;
 	
 
 
-header.mpisto-global-navigation * {
+header.mpisto-global-navigation *:not(.cpe-input) {
 box-sizing:content-box;
 }
 
