@@ -778,6 +778,7 @@ function PresetTheme(theme="") {
 	PickColor4('auto');
 	PickColor5('auto');
 	PickColor8('auto');
+	colortheme($('body').attr("wikitheme"))
 }
 
 /* These functions asks about what color should the user use if no value is set and sets it to an individual component such as Body Background color (The current color is used as initial answer in case of accidental use)
