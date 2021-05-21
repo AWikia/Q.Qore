@@ -1099,7 +1099,8 @@ color:var(--button-color);
 }
 
 /* Forced Colors */
-[visualcolors*="forced"]  {
+[visualcolors*="forced"],
+[visualcolors*="forced"] body  {
 --background-overlay:var(--background-color)!important;
 }
 
@@ -1151,8 +1152,12 @@ color:var(--button-color);
 
 /* Luna Colors */
 [visualcolors*="lunacolors"]  {
---background-image:url("https://i.pinimg.com/originals/75/da/f4/75daf4ba563e173cddcd7b9e86a39257.jpg")!important;
 --background-overlay:auto!important;
+}
+
+[visualcolors*="lunacolors"],
+[visualcolors*="lunacolors"] body  {
+--background-image:url("https://i.pinimg.com/originals/75/da/f4/75daf4ba563e173cddcd7b9e86a39257.jpg")!important;
 --body-display:legacy!important;
 --background-va:top!important;
 --background-size:stretched!important;
@@ -1190,7 +1195,7 @@ color:var(--button-color);
 }
 
 
-.theme-D[visualcolors*="lunacolors"]  {
+.theme-D[visualcolors*="lunacolors"]  { /* Zune */
 --background-color:#666666!important;
 --link-color:0,0,128!important;
 --content-bg:#e2e2e2!important;

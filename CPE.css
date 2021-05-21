@@ -369,17 +369,12 @@ Aleo = Latin
 :root { /* Standard */
 --background-image:url("loadbg_dev.png");
 --background-color:#441177;
---background-overlay:auto;
 --link-color:221,35,0;
 --content-bg:#f1f2f3;
 --content-border:#aaabbb;
 --content-color:#222222;
 --button-color:#dd8300;
 --community-header-bg:184,131,0;
---body-display:modern;
---background-va:top;
---background-size:cover;
---background-no-tiling:false;
 }
 
 :root {
@@ -400,6 +395,8 @@ scrollbar-color:var(--button-color) var(--background-color);
 	--scrollbar-thumb-text:var(--button-color-text);
 /* Aliases */
 --background-overlay:auto;
+--content-border:auto;
+--content-color:auto;
 --body-display:modern;
 --background-va:top;
 --background-size:cover;
@@ -411,6 +408,8 @@ scrollbar-color:var(--button-color) var(--background-color);
 --secondary-font:var(--custom-secondary-font), "Rubik", "Arimo", "Liberation Sans", var(--secondary-foreign-fonts);
 --custom-secondary-font:"";
 --button-radius:3px;
+/* Shapes */
+--cpe-teadrop:url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSI4Mi42NjY2NyIgaGVpZ2h0PSI4Mi42NjY2NyIgdmlld0JveD0iMCwwLDgyLjY2NjY3LDgyLjY2NjY3Ij4NCgk8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTk4LjY2NjY2LC0xMzguNjY2NjYpIj4NCgkJPGcgZGF0YS1wYXBlci1kYXRhPSJ7JnF1b3Q7aXNQYWludGluZ0xheWVyJnF1b3Q7OnRydWV9IiBmaWxsPSIjMDAwMDAwIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMCIgc3Ryb2tlLWxpbmVjYXA9ImJ1dHQiIHN0cm9rZS1saW5lam9pbj0ibWl0ZXIiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLWRhc2hhcnJheT0iIiBzdHJva2UtZGFzaG9mZnNldD0iMCIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPg0KCQkJPHBhdGggZmlsbD0iIzAwMDAwMCIgZD0iTTE5OC42NjY2NywxODBjMCwtMjIuODI3NzcgNDEuMzMzMzQsLTQxLjMzMzM0IDQxLjMzMzM0LC00MS4zMzMzNGMwLDAgNDEuMzMzMzMsMTguNTA1NTcgNDEuMzMzMzMsNDEuMzMzMzRjMCwyMi44Mjc3NyAtMTguNTA1NTYsNDEuMzMzMzQgLTQxLjMzMzMzLDQxLjMzMzM0Yy0yMi44Mjc3NywwIC00MS4zMzMzNCwtMTguNTA1NTcgLTQxLjMzMzM0LC00MS4zMzMzNHoiLz4NCgkJPC9nPg0KCTwvZz4NCjwvc3ZnPg==")
 
 }
 

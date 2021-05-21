@@ -967,6 +967,10 @@ opacity:0.99;
 -qq-imaage-flip:noflip; /* Avoid flipping images by some custom CSSes */
   image-rendering:initial;                  /* CSS4 Proposed  */
   -qq-image-blurring:tick;                  /* 4x4 Web 1-2    */
+/*
+  -webkit-mask-image:var(--cpe-teadrop);
+  mask-image:var(--cpe-teadrop)
+*/
 }
 
 .mpisto-avatar-group {
@@ -4883,7 +4887,7 @@ border:1px solid currentColor;
   display:inline-block;
 }
 
-.mpisto-option-way.p4 label .cpe-icon {
+.mpisto-option-way.p4 label:not([for]) .cpe-icon {
 	--icon-display:none;
 	display:var(--icon-display);
 	margin-right:5px;

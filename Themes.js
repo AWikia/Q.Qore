@@ -654,104 +654,123 @@ function PresetTheme(theme="") {
 		var theme2= theme;
 	}
 	var body_bg=[
+				'ffffff', // Fandom Light
+				'000000', // Fandom Dark
+				'f6f6f6', // CC
+				'2c343d', // Fansun
+				'1f1f1f', // Dark
+				'cccccc', // A Secure Light
+				'333333', // A Secure Dark
+				'7f8afe', // A Wikia
+				'ffffff', // Gamepedia Light
+				'000000', // Gamepedia Dark
+				'3D3527', // Can I Use... Light
+				'17140e', // Can I Use... Dark
+				'ffffff', // Wikimedia Colors
+				'0b284f', // Zelda Blue
+				'441177', // CPE Default
 				'BACDD8', // Oasis
-				'2B54B5', // Sapphire
-				'003816', // Jade
-				'000000', // Babygirl
-				'BDEAFD', // Sky
-				'1A1A1A', // Carbon
-				'000000', // Moonlight
-				'525833', // Rockgarden
-				'AD3479', // Oppulence
-				'303641', // Bluesteel
-				'191919', // Obeession
-				'F8E9AE', // Creamsicle
-				'060606', // Plated
-				'97E4FE', // Beach
-				'000000', // Police
-				'353637', // Dragonstrip
-				'484534', // Aliencrate
+				'000000'  // Windows 10
 				][theme2];
 	var body_image=[
-				'Empty.png',				 // Oasis
-				'Preset Themes/Theme01.png', // Sapphire
-				'Empty.png',				 // Jade
-				'Preset Themes/Theme03.jpg', // Babygirl
-				'Preset Themes/Theme04.png', // Sky
-				'Preset Themes/Theme05.png', // Carbon
-				'Preset Themes/Theme06.jpg', // Moonlight
-				'Preset Themes/Theme07.jpg', // Rockgarden
-				'Preset Themes/Theme08.png', // Oppulence
-				'Preset Themes/Theme09.jpg', // Bluesteel
-				'Preset Themes/Theme10.jpg', // Obeession
-				'Preset Themes/Theme11.jpg', // Creamsicle
-				'Preset Themes/Theme12.jpg', // Plated
-				'Empty.png', 				 // Beach
-				'Preset Themes/Theme14.jpg', // Police
-				'Preset Themes/Theme15.jpg', // Dragonstrip
-				'Preset Themes/Theme16.jpg', // Aliencrate
+				'Empty.png',			 // Fandom Light
+				'Empty.png',			 // Fandom Dark
+				'Empty.png',			 // CC
+				'Empty.png',			 // Fansun
+				'Empty.png',			 // Dark
+				'Empty.png',			 // A Secure Light
+				'Empty.png',			 // A Secure Dark
+				'AWikia.png',			 // A Wikia
+				'Empty.png',			 // Gamepedia Light
+				'Empty.png',			 // Gamepedia Dark
+				'Empty.png',			 // Can I Use... Light
+				'Empty.png',			 // Can I Use... Dark
+				'Empty.png',			 // Wikimedia Colors
+				'Empty.png',			 // Zelda Blue
+				'loadbg_dev.png',		 // CPE Default
+				'Empty.png',			 // Oasis
+				'Empty.png'				 // Windows 10
 				][theme2];
 	var page_bg=[
+				'f3f5f4', // Fandom Light
+				'0e191a', // Fandom Dark
+				'ffffff', // CC
+				'39424d', // Fansun
+				'111111', // Dark
+				'f1f1f1', // A Secure Light
+				'0e0e0e', // A Secure Dark
+				'9ea4f2', // A Wikia
+				'ffffff', // Gamepedia Light
+				'0e191a', // Gamepedia Dark
+				'f2e8d5', // Can I Use... Light
+				'252017', // Can I Use... Dark
+				'ffffff', // Wikimedia Colors
+				'17456e', // Zelda Blue
+				'f1f2f3', // CPE Default
 				'FFFFFF', // Oasis
-				'FFFFFF', // Sapphire
-				'FFFFFF', // Jade
-				'FFFFFF', // Babygirl
-				'DEF4FE', // Sky
-				'474646', // Carbon
-				'CCD9F9', // Moonlight
-				'DFDBC3', // Rockgarden
-				'FFFFFF', // Oppulence
-				'FFFFFF', // Bluesteel
-				'1C0400', // Obeession
-				'FBE7B5', // Creamsicle
-				'474646', // Plated
-				'FFFFFF', // Beach
-				'0F142F', // Police
-				'0C0C0C', // Dragonstrip
-				'DAD5CB', // Aliencrate
+				'ffffff'  // Windows 10
 				][theme2];
 	var button_bg=[
+				'01cdd1', // Fandom Light
+				'01cdd1', // Fandom Dark
+				'404a57', // CC
+				'00b7e0', // Fansun
+				'343434', // Dark
+				'0009ff', // A Secure Light
+				'0009ff', // A Secure Dark
+				'848888', // A Wikia
+				'f5811f', // Gamepedia Light
+				'f5811f', // Gamepedia Dark
+				'ba2f00', // Can I Use... Light
+				'654600', // Can I Use... Dark
+				'3366cc', // Wikimedia Colors
+				'001339', // Zelda Blue
+				'dd8300', // CPE Default
 				'006CB0', // Oasis
-				'0038D8', // Sapphire
-				'25883D', // Jade
-				'6F027C', // Babygirl
-				'F9CE3A', // Sky
-				'012E59', // Carbon
-				'6F027C', // Moonlight
-				'1F5D04', // Rockgarden
-				'DE1C4E', // Oppulence
-				'0A3073', // Bluesteel
-				'891100', // Obeession
-				'FE7E03', // Creamsicle
-				'092F71', // Plated
-				'C2D04D', // Beach
-				'1A52AC', // Police
-				'30A900', // Dragonstrip
-				'653F03', // Aliencrate
+				'0066cc'  // Windows 10
+				][theme2];
+	var header_bg=[
+				'01cdd1', // Fandom Light
+				'01cdd1', // Fandom Dark
+				'dee7e5', // CC
+				'404a57', // Fansun
+				'232323', // Dark
+				'003fff', // A Secure Light
+				'003fff', // A Secure Dark
+				'6871e6', // A Wikia
+				'f5811f', // Gamepedia Light
+				'f5811f', // Gamepedia Dark
+				'AD6500', // Can I Use... Light
+				'654600', // Can I Use... Dark
+				'2a4b8d', // Wikimedia Colors
+				'1d578b', // Zelda Blue
+				'b88300', // CPE Default
+				'006CB0', // Oasis
+				'96b4d1'  // Windows 10
 				][theme2];
 	var link_bg=[
+				'088488', // Fandom Light
+				'01cdd1', // Fandom Dark
+				'009bbe', // CC
+				'00c8e0', // Fansun
+				'4a90e2', // Dark
+				'0009ff', // A Secure Light
+				'cdd6ff', // A Secure Dark
+				'0038ff', // A Wikia
+				'd9721b', // Gamepedia Light
+				'f5811f', // Gamepedia Dark
+				'bf6f00', // Can I Use... Light
+				'D4943A', // Can I Use... Dark
+				'3366cc', // Wikimedia Colors
+				'f4f26b', // Zelda Blue
+				'dd2300', // CPE Default
 				'006CB0', // Oasis
-				'0148C2', // Sapphire
-				'2B54B5', // Jade
-				'6F027C', // Babygirl
-				'285BAF', // Sky
-				'70B8FF', // Carbon
-				'6F027C', // Moonlight
-				'1F5D04', // Rockgarden
-				'810484', // Oppulence
-				'0A3073', // Bluesteel
-				'F97EC4', // Obeession
-				'AF4200', // Creamsicle
-				'FFD500', // Plated
-				'FE7801', // Beach
-				'1A52AC', // Police
-				'FFF000', // Dragonstrip
-				'02899D', // Aliencrate
+				'0066cc'  // Windows 10
 				][theme2];
 	/* Change Colors */
 	PickColor1(body_bg);
 	UploadPicture1B(body_image);
-	PickColor2(button_bg);
+	PickColor2(header_bg);
 	PickColor3(page_bg);
 	PickColor6(link_bg);
 	PickColor7(button_bg);
@@ -1385,15 +1404,7 @@ function SocialCompile() {
 // Start Content BG
 		if ( (window.MW18darkmode === true) ) {
 		// Adaptive
-			if (getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color") === 'auto') {
-				if (isLightColor(content_text)) {
-					var content_color = '#2e2e2e';	
-				} else {
-					var content_color = '#e2e2e2';
-				}
-			} else {
-				var content_color =	getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color");
-			}
+			var content_color =	getComputedStyle(document.querySelector('body')).getPropertyValue("--content-bg");
 		//End Adaptive
 		} else {
 			var content_color =	getComputedStyle(document.querySelector('html')).getPropertyValue("--content-bg");
@@ -1420,6 +1431,11 @@ function SocialCompile() {
 function ColorUpdate(refresh) {
 /** Page BG **/
 /* Set Vars */
+// content_text is Content Color
+// content_color is Content Bg
+// dropdowncolor is Dropdown Bg
+// dropdowncolor3 is Automatic Content Color
+// dropdowncolor2 is Content Border
 if ( (window.MW18darkmode === true) ) {
 	var content_text =	getComputedStyle(document.querySelector('html')).getPropertyValue("--content-bg");
 // Adaptive
