@@ -643,6 +643,9 @@ background-color:rgba(var(--link-color), 0.1);
 				padding:0!important;
 				width:0!important;	
 				height:0!important;
+				max-width:0!important;
+				margin:0;
+				opacity:0!important;
 		}
 
 		#GlobalNavigation.active-search svg.search-on {
@@ -1062,23 +1065,6 @@ color:var(--content-color);
 
 [class*="avatar"] {
 box-sizing:content-box;
-}
-
-/* Midlight */
-.cpe-midlight-color, .cpe-midlight-navy {
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
-    padding-left: 3px;
-    padding-right: 3px;
-    display:inline;
-}
-
-.cpe-midlight-navy {
-    background-image: linear-gradient(to top, rgba(0, 42, 50, 0.1) 54%, transparent 54%, transparent 100%);
-}
-
-.cpe-midlight-color {
-    background-image: linear-gradient(to top, rgba(var(--link-color), 0.25) 54%, transparent 54%, transparent 100%);
 }
 
 /* Ranges */
@@ -2323,7 +2309,7 @@ padding:10px 0 0;
 	text-shadow:none;
 	/*
 	background-color:var(--button-color-blend-light);
-	background-image:linear-gradient(to bottom, var(--button-color-blend-light) 35%, rgba(0,0,0,0));
+	background-image:linear-gradient(to bottom, var(--button-color-blend-light) 65%, rgba(0,0,0,0));
 	color:black;
 	color:var(--button-color-text);
 	-webkit-text-fill-color:var(--button-color);
@@ -2540,7 +2526,7 @@ line-height:1.35;
 margin:0;
 padding:8px 19px;
 align-items:center;
-	background-image:linear-gradient(to bottom, var(--button-color-blend-light) 35%, rgba(0,0,0,0));
+	background-image:linear-gradient(to bottom, var(--button-color-blend-light) 65%, rgba(0,0,0,0));
 /*
 	color:var(--button-color-text);
 */
@@ -4120,7 +4106,7 @@ list-style:none!important;
   position:relative;
   z-index:10;
   border-bottom:1px solid var(--content-border);
-	background-image:linear-gradient(to bottom, var(--button-color-blend-light) 35%, rgba(0,0,0,0));
+	background-image:linear-gradient(to bottom, var(--button-color-blend-light) 65%, rgba(0,0,0,0));
 /*
   color:var(--button-color-text);
 */
@@ -4576,7 +4562,7 @@ height:calc(100vh - 142px);
   z-index:1;
   height:63px;
   background-clip:padding-box;
-	background-image:linear-gradient(to bottom, var(--button-color-blend-light) 35%, rgba(0,0,0,0));
+	background-image:linear-gradient(to bottom, var(--button-color-blend-light) 65%, rgba(0,0,0,0));
 }
 
 

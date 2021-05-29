@@ -1097,6 +1097,24 @@ background-color:var(--emphasis-bg);
 background-color:rgb(var(--link-color));
 }
 
+/* Midlight */
+.cpe-midlight-color, .cpe-midlight-navy {
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    padding-left: 3px;
+    padding-right: 3px;
+    display:inline;
+}
+
+.cpe-midlight-navy {
+    background-image: linear-gradient(to top, rgba(0, 42, 50, 0.1) 54%, transparent 54%, transparent 100%);
+}
+
+.cpe-midlight-color {
+    background-image: linear-gradient(to top, rgba(var(--link-color), 0.25) 54%, transparent 54%, transparent 100%);
+}
+
+
 /* Dropdowns */
 .cpe-dropdown {
 display:inline-flex;
