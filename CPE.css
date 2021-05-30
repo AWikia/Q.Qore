@@ -1549,9 +1549,15 @@ opacity:1;
 	align-items:center;
 	display:inline-flex;
 	height:100%;
-	text-decoration:none
+	text-decoration:none;
+	color:inherit;
+	transition:none;
+}
+
+.cpe-tabs__tab-label > a:hover {
 	color:inherit;
 }
+
 
 .cpe-tabs__tab.cpe-is-current{
 	box-shadow:inset 0 -2px 0 0 currentColor;
