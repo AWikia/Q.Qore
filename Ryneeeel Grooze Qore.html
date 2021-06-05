@@ -629,198 +629,200 @@ fill="currentColor" stroke="none">
 <!-- End Header -->
 
   <div class="mpisto-wrapper">
-    <header class="mpisto-page-header" id ="PageHeader">
-      <div class="mpisto-page-header-main">
-		<div class="mpisto-page-header-title">
-			<h1 class="mpisto-title">GSA Qortex</h1>
-			<nav class="pageheader-search">
-			  <input class="cpe-input cpe-is-borderline" placeholder="Search Qora Qore Web;"></input>
-			  <button class="cpe-button cpe-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
-	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-magnifying-glass" />
-	</svg>
-			  </button>
-			</nav>
-		</div>
-        <h4 class="mpisto-sub">From Qora Qore Web</h4>
-        <div class="mpisto-page-header-contribution">
-          <div class="mpisto-page-header-contribution-buttons">
-			<div class="cpe-button-group">
-				<a class="cpe-is-squished cpe-button">				
-				  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
-					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-pencil-small" />
-				  </svg>				
-				  <span>Build Package</span>
-				</a>
-			  <div class="cpe-dropdown">				
-				<div class="cpe-is-squished cpe-button cpe-dropdown__toggle">				
-				  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
-					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-preformat-small" />
-				  </svg>				
-				  <span>Get Insider Versions</span>
-<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown__toggle-chevron">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown-tiny" />
-                    </svg>
-				</div>
-					<div class="cpe-dropdown__content cpe-is-right-aligned cpe-is-not-scrollable">					
-					  <ul class="cpe-list cpe-is-linked">						
-						<li><a href="#QORE">Beta Channel</a></li>
-						<li><a href="#QORE3">Dev Channel</a></li>
-						<li><a href="#QORE2">Canary Channel</a></li>
-					  </ul>
-					</div>
-				</div>
-			</div>
-          <div class="cpe-dropdown">				
-            <div class="cpe-button cpe-is-squished cpe-dropdown__toggle">
-            <svg class="cpe-icon cpe-icon-small" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 0H0v24h24z" fill="none"/><path d="M17.66 7.93L12 2.27 6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58c2.05 0 4.1-.78 5.66-2.34 3.12-3.12 3.12-8.19 0-11.31zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/></svg>
-            <span>Visual Styles</span>                   <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown__toggle-chevron">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown-tiny" />
-                  </svg></div>
-                <div class="cpe-dropdown__content cpe-is-right-aligned cpe-is-not-scrollable">					
-                  <ul class="cpe-list cpe-is-linked cpe-visual-styles">						
-                    <li><a onclick="VisualStyle(-1)">Standard</a></li>
-                  </ul>
-                </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </header>
     <div class="mpisto-article-wrapper">
-      <article class="mpisto-article special">
-      <!--Start Article-->
-		Here you can check if Qora Qore or Pokémon Prograde is buildable on an emulator and what FPS will you get
-		<br>
-		<div style="margin:0 auto; width:max-content;" class="pageheader-search">
-			<select class="cpe-input provider" placeholder="Choose your provider">
-				<option value="0">Emerald</option>
-				<option value="1">Plantilia</option>
-				<option value="2">Jinnybell 2010</option>
-				<option value="3">Jinnybell 2020</option>
-				<option value="4">PCReady 2009</option>
-				<option value="5">Bsibsina Action</option>
-				<option value="6">Quadro Gaming Centre</option>
-				<option value="7">Prima GameCube 2</option>
-				<option value="8">Prima Centre</option>
-				<option value="9">Intensive Délacour 2019</option>
-				<option value="10">Yorkbook G1/Plus G4-G7</option>
-				<option value="11">Prima Xtreme</option>
-				<option value="12">Yorkbook Bronze</option>
-				<option value="13">Yorkbook Silver</option>
-				<option value="14">Yorkbook Platinum</option>
-				<option value="15">Bsibsina Pentium</option>
-				<option value="16">Bsibsina Enthusiasts</option>
-				<option value="17">ΣΟΥΒΛ Crystal Silver</option>
-				<option value="18">ΣΟΥΒΛ Crystal Gold</option>
-				<option value="19">Yorkbook Xe</option>
-				<option value="20">Yorkbook G4/Plus G7</option>
-				<option value="21">PCReady 2020</option>
-				<option value="22">ΣΟΥΒΛ Crystal Silver 2021</option>
-				<option value="23">ΣΟΥΒΛ Crystal Gold 2021</option>
-			</select>
-			<button class="cpe-button" onclick="CalcAvail()">Check Availability</button>
-		</div>
+		<nav class="mpisto-left-pane special">
+			<header class="mpisto-page-header" id ="PageHeader">
+			  <div class="mpisto-page-header-main">
+				<div class="mpisto-page-header-title">
+					<h1 class="mpisto-title">GSA Qortex</h1>
+					<nav class="pageheader-search">
+					  <input class="cpe-input cpe-is-borderline" placeholder="Search Qora Qore Web;"></input>
+					  <button class="cpe-button cpe-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+			  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-magnifying-glass" />
+			</svg>
+					  </button>
+					</nav>
+				</div>
+				<h4 class="mpisto-sub">From Qora Qore Web</h4>
+				<div class="mpisto-page-header-contribution">
+				  <div class="mpisto-page-header-contribution-buttons">
+					<div class="cpe-button-group">
+						<a class="cpe-is-squished cpe-button">				
+						  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-pencil-small" />
+						  </svg>				
+						  <span>Build Package</span>
+						</a>
+					  <div class="cpe-dropdown">				
+						<div class="cpe-is-squished cpe-button cpe-dropdown__toggle">				
+						  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-preformat-small" />
+						  </svg>				
+						  <span>Get Insider Versions</span>
+		<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown__toggle-chevron">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown-tiny" />
+							</svg>
+						</div>
+							<div class="cpe-dropdown__content cpe-is-right-aligned cpe-is-not-scrollable">					
+							  <ul class="cpe-list cpe-is-linked">						
+								<li><a href="#QORE">Beta Channel</a></li>
+								<li><a href="#QORE3">Dev Channel</a></li>
+								<li><a href="#QORE2">Canary Channel</a></li>
+							  </ul>
+							</div>
+						</div>
+					</div>
+				  <div class="cpe-dropdown">				
+					<div class="cpe-button cpe-is-squished cpe-dropdown__toggle">
+					<svg class="cpe-icon cpe-icon-small" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 0H0v24h24z" fill="none"/><path d="M17.66 7.93L12 2.27 6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58c2.05 0 4.1-.78 5.66-2.34 3.12-3.12 3.12-8.19 0-11.31zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/></svg>
+					<span>Visual Styles</span>                   <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown__toggle-chevron">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown-tiny" />
+						  </svg></div>
+						<div class="cpe-dropdown__content cpe-is-right-aligned cpe-is-not-scrollable">					
+						  <ul class="cpe-list cpe-is-linked cpe-visual-styles">						
+							<li><a onclick="VisualStyle(-1)">Standard</a></li>
+						  </ul>
+						</div>
+					</div>
+
+				  </div>
+				</div>
+			  </div>
+			</header>
+		  <article class="mpisto-article">
+		  <!--Start Article-->
+			Here you can check if Qora Qore or Pokémon Prograde is buildable on an emulator and what FPS will you get
 			<br>
-		<h2 class="compat">Please select a provider above and hit Check Availability button to check Q.Qore</h2>
-	  <table class="stats-table" style="max-width:500px">
-		<tr>
-			<th colspan="2">Blinds</th>
-		</tr>
-		<tr class="hundred">
-			<td class="name">120 FPS</td>
-			<td class="progress"><button class="cpe-button" disabled>Start with 120Hz</button></td>
-		</tr>
-		<tr class="ninety">
-			<td class="name">90 FPS</td>
-			<td class="progress"><button class="cpe-button" disabled>Start with 90Hz</button></td>
-		</tr>
-		<tr class="seventy">
-			<td class="name">72 FPS</td>
-			<td class="progress"><button class="cpe-button" disabled>Start with 72Hz</button></td>
-		</tr>
-      </table>
-	  <table class="stats-table" style="max-width:500px">
-		<tr>
-			<th colspan="2">Corocorocorocorodinda</th>
-		</tr>
-		<tr class="sixty">
-			<td class="name">60 FPS</td>
-			<td class="progress"><button class="cpe-button" disabled>Start with 60Hz</button></td>
-		</tr>
-		<tr class="fourty">
-			<td class="name">40 FPS</td>
-			<td class="progress"><button class="cpe-button" disabled>Start with 40Hz</button></td>
-		</tr>
-		<tr class="thirty">
-			<td class="name">30 FPS</td>
-			<td class="progress"><button class="cpe-button" disabled>Start with 30Hz</button></td>
-		</tr>
-      </table>
-		<h2 class="compat2">Please select a provider above and hit Check Availability button to check Prograda</h2>
-	  <table class="stats-table" style="max-width:500px">
-		<tr>
-			<th colspan="2">Blinds</th>
-		</tr>
-		<tr class="prog5">
-			<td class="name">High Profile</td>
-			<td class="progress"><button class="cpe-button" disabled>Start with High Profile</button></td>
-		</tr>
-		<tr class="prog4">
-			<td class="name">Medium Profile</td>
-			<td class="progress"><button class="cpe-button" disabled>Start with Medium Profile</button></td>
-		</tr>
-		<tr class="prog3">
-			<td class="name">Low Profile</td>
-			<td class="progress"><button class="cpe-button" disabled>Start with Low Profile</button></td>
-		</tr>
-      </table>
-	  <table class="stats-table" style="max-width:500px">
-		<tr>
-			<th colspan="2">Corocorocorocorodinda</th>
-		</tr>
-		<tr class="prog2">
-			<td class="name">60 FPS</td>
-			<td class="progress"><button class="cpe-button" disabled>Start with 60Hz</button></td>
-		</tr>
-		<tr class="prog1">
-			<td class="name">40 FPS</td>
-			<td class="progress"><button class="cpe-button" disabled>Start with 40Hz</button></td>
-		</tr>
-      </table>
-	<h2 class="compat3">Please select a provider above and hit Check Availability button to check average FPS</h2>
-	  <table class="stats-table" style="max-width:500px">
-		<tr>
-			<th>Game Name</th>
-			<th>Average FPS</th>
-		</tr>
-		<tr>
-			<td class="name">Q.Qore</td>
-			<td class=""><span class="fps1">???</span></td>
-		</tr>
-		<tr >
-			<td class="name">Pokémon Prograda<br>Low Profile</td>
-			<td class=""><span class="fps2">???</span></td>
-		</tr>
-		<tr>
-			<td class="name">Pokémon Prograda<br>Medium Profile</td>
-			<td class=""><span class="fps3">???</span></td>
-		</tr>
-		<tr>
-			<td class="name">Pokémon Prograda<br>High Profile</td>
-			<td class=""><span class="fps4">???</span></td>
-		</tr>
-      </table>
-<!--
-		<ul>
-			<li>Average FPS you will have on Qora Qore: About  FPS</li>
-			<li>Average FPS you will have on Pokémon Prograda Low Profile: About <span class="fps2">???</span> FPS</li>
-			<li>Average FPS you will have on Pokémon Prograda Medium Profile: About <span class="fps3">???</span> FPS</li>
-			<li>Average FPS you will have on Pokémon Prograda High Profile: About <span class="fps4">???</span> FPS</li>
-		</ul>
--->
-      <!--Stop Article-->
-      </article>
+			<div style="margin:0 auto; width:max-content;" class="pageheader-search">
+				<select class="cpe-input provider" placeholder="Choose your provider">
+					<option value="0">Emerald</option>
+					<option value="1">Plantilia</option>
+					<option value="2">Jinnybell 2010</option>
+					<option value="3">Jinnybell 2020</option>
+					<option value="4">PCReady 2009</option>
+					<option value="5">Bsibsina Action</option>
+					<option value="6">Quadro Gaming Centre</option>
+					<option value="7">Prima GameCube 2</option>
+					<option value="8">Prima Centre</option>
+					<option value="9">Intensive Délacour 2019</option>
+					<option value="10">Yorkbook G1/Plus G4-G7</option>
+					<option value="11">Prima Xtreme</option>
+					<option value="12">Yorkbook Bronze</option>
+					<option value="13">Yorkbook Silver</option>
+					<option value="14">Yorkbook Platinum</option>
+					<option value="15">Bsibsina Pentium</option>
+					<option value="16">Bsibsina Enthusiasts</option>
+					<option value="17">ΣΟΥΒΛ Crystal Silver</option>
+					<option value="18">ΣΟΥΒΛ Crystal Gold</option>
+					<option value="19">Yorkbook Xe</option>
+					<option value="20">Yorkbook G4/Plus G7</option>
+					<option value="21">PCReady 2020</option>
+					<option value="22">ΣΟΥΒΛ Crystal Silver 2021</option>
+					<option value="23">ΣΟΥΒΛ Crystal Gold 2021</option>
+				</select>
+				<button class="cpe-button" onclick="CalcAvail()">Check Availability</button>
+			</div>
+				<br>
+			<h2 class="compat">Please select a provider above and hit Check Availability button to check Q.Qore</h2>
+		  <table class="stats-table" style="max-width:500px">
+			<tr>
+				<th colspan="2">Blinds</th>
+			</tr>
+			<tr class="hundred">
+				<td class="name">120 FPS</td>
+				<td class="progress"><button class="cpe-button" disabled>Start with 120Hz</button></td>
+			</tr>
+			<tr class="ninety">
+				<td class="name">90 FPS</td>
+				<td class="progress"><button class="cpe-button" disabled>Start with 90Hz</button></td>
+			</tr>
+			<tr class="seventy">
+				<td class="name">72 FPS</td>
+				<td class="progress"><button class="cpe-button" disabled>Start with 72Hz</button></td>
+			</tr>
+		  </table>
+		  <table class="stats-table" style="max-width:500px">
+			<tr>
+				<th colspan="2">Corocorocorocorodinda</th>
+			</tr>
+			<tr class="sixty">
+				<td class="name">60 FPS</td>
+				<td class="progress"><button class="cpe-button" disabled>Start with 60Hz</button></td>
+			</tr>
+			<tr class="fourty">
+				<td class="name">40 FPS</td>
+				<td class="progress"><button class="cpe-button" disabled>Start with 40Hz</button></td>
+			</tr>
+			<tr class="thirty">
+				<td class="name">30 FPS</td>
+				<td class="progress"><button class="cpe-button" disabled>Start with 30Hz</button></td>
+			</tr>
+		  </table>
+			<h2 class="compat2">Please select a provider above and hit Check Availability button to check Prograda</h2>
+		  <table class="stats-table" style="max-width:500px">
+			<tr>
+				<th colspan="2">Blinds</th>
+			</tr>
+			<tr class="prog5">
+				<td class="name">High Profile</td>
+				<td class="progress"><button class="cpe-button" disabled>Start with High Profile</button></td>
+			</tr>
+			<tr class="prog4">
+				<td class="name">Medium Profile</td>
+				<td class="progress"><button class="cpe-button" disabled>Start with Medium Profile</button></td>
+			</tr>
+			<tr class="prog3">
+				<td class="name">Low Profile</td>
+				<td class="progress"><button class="cpe-button" disabled>Start with Low Profile</button></td>
+			</tr>
+		  </table>
+		  <table class="stats-table" style="max-width:500px">
+			<tr>
+				<th colspan="2">Corocorocorocorodinda</th>
+			</tr>
+			<tr class="prog2">
+				<td class="name">60 FPS</td>
+				<td class="progress"><button class="cpe-button" disabled>Start with 60Hz</button></td>
+			</tr>
+			<tr class="prog1">
+				<td class="name">40 FPS</td>
+				<td class="progress"><button class="cpe-button" disabled>Start with 40Hz</button></td>
+			</tr>
+		  </table>
+		<h2 class="compat3">Please select a provider above and hit Check Availability button to check average FPS</h2>
+		  <table class="stats-table" style="max-width:500px">
+			<tr>
+				<th>Game Name</th>
+				<th>Average FPS</th>
+			</tr>
+			<tr>
+				<td class="name">Q.Qore</td>
+				<td class=""><span class="fps1">???</span></td>
+			</tr>
+			<tr >
+				<td class="name">Pokémon Prograda<br>Low Profile</td>
+				<td class=""><span class="fps2">???</span></td>
+			</tr>
+			<tr>
+				<td class="name">Pokémon Prograda<br>Medium Profile</td>
+				<td class=""><span class="fps3">???</span></td>
+			</tr>
+			<tr>
+				<td class="name">Pokémon Prograda<br>High Profile</td>
+				<td class=""><span class="fps4">???</span></td>
+			</tr>
+		  </table>
+	<!--
+			<ul>
+				<li>Average FPS you will have on Qora Qore: About  FPS</li>
+				<li>Average FPS you will have on Pokémon Prograda Low Profile: About <span class="fps2">???</span> FPS</li>
+				<li>Average FPS you will have on Pokémon Prograda Medium Profile: About <span class="fps3">???</span> FPS</li>
+				<li>Average FPS you will have on Pokémon Prograda High Profile: About <span class="fps4">???</span> FPS</li>
+			</ul>
+	-->
+		  <!--Stop Article-->
+		  </article>
+		</nav>
     </div>
 </section>
 

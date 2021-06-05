@@ -76,10 +76,13 @@ background-image:linear-gradient(to bottom, var(--button-color-blend-light) 35%,
 	.color-header .title a {
 		text-decoration:none;
 		color:inherit;
-		transition:color 400ms ease;
 		overflow:hidden;
 		text-overflow:ellipsis;
 	}
+
+	.color-header .title a:hover {
+	color:var(--button-color-text-dark);
+}
 
 
 .mpisto-header-container::after {
@@ -198,12 +201,12 @@ border-left-color:var(--button-color);
 	border-color:transparent;
 	color:inherit;
 	box-shadow:none;
+	color:var(--button-color-text-dark);
 }
 
 
 .color-header .link:hover, .color-header .cpe-dropdown.cpe-is-active .link,
 .mpisto-global-navigation .link:active, .mpisto-global-navigation .link:focus,  .mpisto-global-navigation .cpe-dropdown.cpe-is-active .link {
-	background-color:#18bbc6;
 	background-color:var(--button-color-blend);
 }
 
@@ -484,7 +487,7 @@ footer.mpisto-footer:after, footer.mpisto-footer:before {
 
 .cpe-dropdown__content .cpe-list.cpe-is-linked>li.cpe-is-selected>a:not(.cpe-button), .cpe-dropdown__content .cpe-list.cpe-is-linked>li:hover>a:not(.cpe-button){
 	background-color:rgb(var(--link-color-blend));
-	color:inherit;
+	color:var(--link-color-text-dark);
 }
 
 .cpe-dropdown::after{
@@ -493,6 +496,7 @@ footer.mpisto-footer:after, footer.mpisto-footer:before {
 
  .notification.cpe-dropdown__content .cpe-list > li:not(:last-child):not(.empty) a:hover:after {
 	opacity:1;
+	color:var(--link-color-text-dark);
 	background-color:rgb(var(--link-color-blend));
 }
 

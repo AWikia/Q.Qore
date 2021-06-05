@@ -482,12 +482,12 @@ font-size:14px;
 column-count:2;
 }
 
-.mpisto-article-wrapper .mpisto-article {
+.mpisto-article-wrapper .mpisto-left-pane {
 width:100%;
 }
 
 .mpisto-right-pane, .constructor .mpisto-wrapper .mpisto-right-pane, .mpisto-editors-content  .mpisto-right-pane, .mpisto-editors-content .mpisto-wrapper .mpisto-article-wrapper .mpisto-right-pane {
-width:100%;
+width:auto;
 }
 
 .mpisto-wrapper .mpisto-article-wrapper {

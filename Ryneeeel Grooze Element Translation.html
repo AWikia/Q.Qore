@@ -632,511 +632,514 @@ fill="currentColor" stroke="none">
 <!-- End Header -->
 
   <div class="mpisto-wrapper">
-    <header class="mpisto-page-header" id ="PageHeader">
-      <div class="mpisto-page-header-main">
-		<div class="mpisto-page-header-title">
-			<h1 class="mpisto-title editor-edit" oninput="UnsaveWarn()">Element Translation</h1>
-			<nav class="pageheader-search">
-			  <input class="cpe-input cpe-is-bordeline" placeholder="Search Qora Qore Web;"></input>
-			  <button class="cpe-button cpe-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
-	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-magnifying-glass" />
-	</svg>
-			  </button>
-			</nav>
-		</div>
-        <h4 class="mpisto-sub">From Qora Qore Web</h4>
-        <div class="mpisto-page-header-contribution">
-          <div class="mpisto-page-header-contribution-buttons">
-              <a class="cpe-is-squished cpe-button construct-only" href="#modalE10">				
-                <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-article-small" />
-              	</svg>				
-                <span>Save Changes</span>
-            	</a>
-              <a class="cpe-is-squished cpe-button cpe-is-secondary construct-only" onclick="EditSwitch()">				
-                <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-cross-small" />
-              	</svg>				
-                <span>Discard Changes</span>
-            	</a>
-
-            <div class="cpe-button-group construct-off">
-              <a class="cpe-is-squished cpe-button" onclick="EditSwitch()">				
-                <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-pencil-small" />
-              	</svg>				
-                <span>Edit</span>
-            	</a>
-              <div class="cpe-dropdown construct-off">				
-                <div class="cpe-button cpe-is-squished cpe-dropdown__toggle">	
-                  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown__toggle-chevron">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown-tiny" />
-                  </svg>
-                </div>
-                <div class="cpe-dropdown__content cpe-is-right-aligned cpe-is-not-scrollable">					
-                  <ul class="cpe-list cpe-is-linked">						
-                    <li><a><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-clock-tiny" />
-              	</svg> View History</a></li>
-                    <li><a><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-lock" />
-              	</svg> Protect</a></li>
-                    <li><a><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-trash" />
-              	</svg> Delete</a></li>
-                    <li><a><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny" style="color:#ccc; color:var(--content-border);">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-trash" />
-              	</svg> PowerDelete</a></li>
-                    <li><a><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-preformat" />
-              	</svg> Bash Page</a></li>
-                    <li><a><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-eye" />
-              	</svg> Add to followlist</a></li>
-                  </ul>
-                </div>
-              </div>		
-            </div>
-            <div class="cpe-button-group construct-off">
-              <a class="cpe-button cpe-is-squished cpe-is-secondary">
-              <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-reply-small" />
-              </svg>
-              <span>Comments</span></a>
-              <a class="cpe-button cpe-is-squished cpe-is-secondary">
-              <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-note" />
-              </svg>
-              <span>Talk</span></a>
-            </div>
-          <div class="cpe-dropdown construct-off">				
-            <div class="cpe-button cpe-is-squished cpe-is-secondary cpe-dropdown__toggle">
-            <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-share-small" />
-            </svg>
-            <span>Share</span>                   <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown__toggle-chevron">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown-tiny" />
-                  </svg></div>
-                <div class="cpe-dropdown__content cpe-is-right-aligned cpe-is-not-scrollable">					
-                  <ul class="cpe-list cpe-is-linked">						
-                    <li><a><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-googleplus" />
-              	</svg> Google+</a></li>
-                    <li><a><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-youtube" />
-              	</svg> Youtube</a></li>
-                    <li><a><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-facebook" />
-              	</svg> Facebook</a></li>
-                    <li><a><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-twitter" />
-              	</svg> Twitter</a></li>
-                    <li><a><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny" >
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-instagram" />
-              	</svg> Instagram</a></li>
-                    <li><a><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-reddit" />
-              	</svg> Reddit</a></li>
-                    <li><a><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny" viewBox="0 0 240 245" width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-discord" /></svg> Discord</a></li>
-                  </ul>
-                </div>
-            </div>
-
-          <div class="cpe-dropdown construct-off">				
-            <div class="cpe-button cpe-is-squished cpe-dropdown__toggle">
-            <svg class="cpe-icon cpe-icon-small" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 0H0v24h24z" fill="none"/><path d="M17.66 7.93L12 2.27 6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58c2.05 0 4.1-.78 5.66-2.34 3.12-3.12 3.12-8.19 0-11.31zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/></svg>
-            <span>Visual Styles</span>                   <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown__toggle-chevron">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown-tiny" />
-                  </svg></div>
-                <div class="cpe-dropdown__content cpe-is-right-aligned cpe-is-not-scrollable">					
-                  <ul class="cpe-list cpe-is-linked cpe-visual-styles">						
-                    <li><a onclick="VisualStyle(-1)">Standard</a></li>
-                  </ul>
-                </div>
-            </div>
-			<div class="cpe-button-group construct-only">
-          <div class="cpe-dropdown">				
-            <div class="cpe-button cpe-is-squished cpe-dropdown__toggle">
-            <svg class="cpe-icon cpe-icon-small" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 0H0v24h24z" fill="none"/><path d="M17.66 7.93L12 2.27 6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58c2.05 0 4.1-.78 5.66-2.34 3.12-3.12 3.12-8.19 0-11.31zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/></svg>
-            <span>Visual Styles</span>                   <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown__toggle-chevron">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown-tiny" />
-                  </svg></div>
-                <div class="cpe-dropdown__content cpe-is-right-aligned cpe-is-not-scrollable">					
-                  <ul class="cpe-list cpe-is-linked cpe-visual-styles">						
-                    <li><a onclick="VisualStyle(-1)">Standard</a></li>
-                  </ul>
-                </div>
-            </div>
-
-				<div class="cpe-dropdown">
-					<div class="cpe-button cpe-dropdown__toggle"><svg class="cpe-icon cpe-icon-small" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 0H0v24h24z" fill="none"/><path d="M17.66 7.93L12 2.27 6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58c2.05 0 4.1-.78 5.66-2.34 3.12-3.12 3.12-8.19 0-11.31zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/></svg>
-					<span>Themes</span>
-					 <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown__toggle-chevron">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown-tiny" />
-                  </svg></div>
-                  <div class="cpe-dropdown__content">
-					<ul class="cpe-list cpe-is-linked">
-						<li>
-							<a onclick="HCa()">
-								Theme A
-							</a>
-						</li>
-						<li>
-							<a onclick="HCb()">
-								Theme B
-							</a>
-						</li>
-						<li>
-							<a onclick="HCc()">
-								Theme C
-							</a>
-						</li>
-						<li>
-							<a onclick="HCd()" >
-								Theme D
-							</a>
-						</li>
-					</ul>
-                  </div>
-					</div>
-			</div>
-
-          </div>
-        </div>
-      </div>
-    </header>
     <div class="mpisto-article-wrapper">
-      <article class="mpisto-article">
-<div class="cpe-banner-notification__container constructor-controls construct-only">
-	<div class="cpe-banner-notification cpe-message">
-		<div class="cpe-banner-notification__icon">	
-			<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-flag-small" />
+		<nav class="mpisto-left-pane">
+			<header class="mpisto-page-header" id ="PageHeader">
+			  <div class="mpisto-page-header-main">
+				<div class="mpisto-page-header-title">
+					<h1 class="mpisto-title editor-edit" oninput="UnsaveWarn()">Element Translation</h1>
+					<nav class="pageheader-search">
+					  <input class="cpe-input cpe-is-bordeline" placeholder="Search Qora Qore Web;"></input>
+					  <button class="cpe-button cpe-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+			  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-magnifying-glass" />
 			</svg>
-		</div>
-		<span class="cpe-banner-notification__text">					Remember to send us any report that contain issues, if one found</span>
-			<svg xmlns="http://www.w3.org/2000/svg" class="cpe-banner-notification__close cpe-icon cpe-icon-tiny">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-cross-tiny" />
-			</svg>
-	</div>
-	<div class="cpe-banner-notification  constructor-controls">
-		<span class="cpe-banner-notification__text">
-				<div class="cpe-dropdown">
-				  <div class="cpe-button cpe-is-alternate cpe-is-squished" title="Styling">
-							  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
-	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-bold-small" /> 
-				</svg> 
-				  </div>
-				  <div class="cpe-dropdown__content cpe-is-not-scrollable">
-					<ul class="cpe-list cpe-is-linked">
-					  <li><a onclick="BoldText()"><span style="font-weight:bold">Bold</span></a></li>
-					  <li><a><span onclick="ItalText()" style="font-style:italic">Italics</span></a></li>
-					  <li><a><span onclick="UnderlText()" style="text-decoration:underline">Underline</span></a></li>
-					  <li><a><span onclick="LinedText()" style="text-decoration:line-through">Striked out</span></a></li>
-					  <li class="cpe-dropdown-level-2">
-						<a class="cpe-dropdown-level-2__toggle"><span>Shadow</span>                   
-					  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown-chevron" viewBox="0 0 12 12">
-						<path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
-					  </svg>
-					  </a>
-					  <div class="cpe-dropdown-level-2__content">
-						<ul class="cpe-list cpe-is-linked">
-						  <li><a onclick="ShadowOI()"><shadow class="small">Small</shadow></a></li>
-						  <li><a onclick="ShadowBOI()"><shadow class="small blur">Small/Blurred</shadow></a></li>
-						  <li><a onclick="Shadow()"><shadow>Standard</shadow></a></li>
-						  <li><a onclick="ShadowB()"><shadow class="blur">Standard/Blurred</shadow></a></li>
-						  <li><a onclick="ShadowI()"><shadow class="large">High</shadow></a></li>
-						  <li><a onclick="ShadowBI()"><shadow class="large blur">High/Blurred</shadow></a></li>
-						  <li><a onclick="ShadowII()"><shadow class="extreme">Enormous</shadow></a></li>
-						  <li><a onclick="ShadowBII()"><shadow class="extreme blur">Enormous/Blurred</shadow></a></li>
-						</ul>
-					  </div>  
-					  </li>
-					  <li class="cpe-dropdown-level-2">
-						<a class="cpe-dropdown-level-2__toggle"><span>Stroke</span>                   
-					  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown-chevron" viewBox="0 0 12 12">
-						<path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
-					  </svg>
-					  </a>
-					  <div class="cpe-dropdown-level-2__content">
-						<ul class="cpe-list cpe-is-linked">
-						  <li><a onclick="StrokeOI()"><stroke class="small">Small</stroke></a></li>
-						  <li><a onclick="StrokeBOI()"><stroke class="small blur">Small/Blurred</stroke></a></li>
-						  <li><a onclick="Stroke()"><stroke>Standard</stroke></a></li>
-						  <li><a onclick="StrokeB()"><stroke class="blur">Standard/Blurred</stroke></a></li>
-						  <li><a onclick="StrokeI()"><stroke class="large">High</stroke></a></li>
-						  <li><a onclick="StrokeBI()"><stroke class="large blur">High/Blurred</stroke></a></li>
-						  <li><a onclick="StrokeII()"><stroke class="extreme">Enormous</stroke></a></li>
-						  <li><a onclick="StrokeBII()"><stroke class="extreme blur">Enormous/Blurred</stroke></a></li>
-						</ul>
-					  </div>  
-					  </li>
-					</ul>
-				  </div>
+					  </button>
+					</nav>
 				</div>
-				  <a class="cpe-button cpe-is-alternate cpe-is-squished" title="Unordered List">
-							  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" viewBox="0 0 18 18">
-	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-numbered-list" /> 
-				</svg>
-				  </a>
-				  <a class="cpe-button cpe-is-alternate cpe-is-squished" title="Ordered List">
-							  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" viewBox="0 0 18 18">
-	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-bullet-list-small" /> 
-				</svg>
-				  </a>
-				  <a class="cpe-button cpe-is-alternate cpe-is-squished" title="Signature (Only use them in talk pages)">
-							  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" viewBox="0 0 18 18">
-					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-reply" />
-				</svg> <span>Signature</span>
-				  </a>
-				<div class="cpe-dropdown">
-				  <div class="cpe-button cpe-is-alternate cpe-is-squished cpe-dropdown__toggle" title="Styling">
-							  <span>Visual Styles</span>            <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown__toggle-chevron" viewBox="0 0 12 12">
-	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown-tiny" /> 
-	  </svg>
+				<h4 class="mpisto-sub">From Qora Qore Web</h4>
+				<div class="mpisto-page-header-contribution">
+				  <div class="mpisto-page-header-contribution-buttons">
+					  <a class="cpe-is-squished cpe-button construct-only" href="#modalE10">				
+						<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+						  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-article-small" />
+						</svg>				
+						<span>Save Changes</span>
+						</a>
+					  <a class="cpe-is-squished cpe-button cpe-is-secondary construct-only" onclick="EditSwitch()">				
+						<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+						  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-cross-small" />
+						</svg>				
+						<span>Discard Changes</span>
+						</a>
 
-				  </div>
-				  <div class="cpe-dropdown__content cpe-is-not-scrollable">
-					<ul class="cpe-list cpe-is-linked">
-					  <li class="cpe-dropdown-level-2">
-						<a class="cpe-dropdown-level-2__toggle"><span>Block elements</span>                   
-					  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown-chevron" viewBox="0 0 12 12">
-						<path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
-					  </svg>
-					  </a>
-					  <div class="cpe-dropdown-level-2__content">
-						<ul class="cpe-list cpe-is-linked">
-						  <li><a onclick="DivAdd()"><span>Div</span></a></li>
-						  <li><a onclick="DivAdd1()"><span>Section</span></a></li>
-						  <li><a onclick="DivAdd2()"><span>Article</span></a></li>
-						  <li><a onclick="DivAdd3()"><span>Header</span></a></li>
-						  <li><a onclick="DivAdd4()"><span>Nav</span></a></li>
-						</ul>
-					  </div>  
-					  </li>
-					  <li class="cpe-dropdown-level-2">
-						<a class="cpe-dropdown-level-2__toggle"><span>Inline elements</span>                   
-					  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown-chevron" viewBox="0 0 12 12">
-						<path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
-					  </svg>
-					  </a>
-					  <div class="cpe-dropdown-level-2__content">
-						<ul class="cpe-list cpe-is-linked">
-						  <li><a onclick="InlineAdd()"><span>Paragraph</span></a></li>
-						  <li><a onclick="InlineAdd1()"><span>Span</span></a></li>
-						  <li><a onclick="Shadow()"><span>Shadow</span></a></li>
-						  <li><a onclick="Stroke()"><span>Stroke</span></a></li>
-						  <li><a onclick="InlineAdd2()"><span>Mark</span></a></li>
-						</ul>
-					  </div>  
-					  </li>
-					  <li class="cpe-dropdown-level-2">
-						<a class="cpe-dropdown-level-2__toggle"><span>Headings</span>                   
-					  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown-chevron" viewBox="0 0 12 12">
-						<path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
-					  </svg>
-					  </a>
-					  <div class="cpe-dropdown-level-2__content">
-						<ul class="cpe-list cpe-is-linked">
-						  <li><a onclick="Heading1()"><span>Heading 1</span></a></li>
-						  <li><a onclick="Heading2()"><span>Heading 2</span></a></li>
-						  <li><a onclick="Heading3()"><span>Heading 3</span></a></li>
-						  <li><a onclick="Heading4()"><span>Heading 4</span></a></li>
-						  <li><a onclick="Heading5()"><span>Heading 5</span></a></li>
-						  <li><a onclick="Heading6()"><span>Heading 6</span></a></li>
-						</ul>
-					  </div>  
-					  </li>
-					  <li class="cpe-dropdown-level-2">
-						<a class="cpe-dropdown-level-2__toggle"><span>Table Maplupation</span>                   
-					  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown-chevron" viewBox="0 0 12 12">
-						<path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
-					  </svg>
-					  </a>
-					  <div class="cpe-dropdown-level-2__content">
-						<ul class="cpe-list cpe-is-linked">
-						  <li><a><span>Table</span></a></li>
-						  <li><a><span>Table body</span></a></li>
-						  <li><a><span>Table head</span></a></li>
-						  <li><a><span>Table Row</span></a></li>
-						  <li><a><span>Table Header</span></a></li>
-						  <li><a><span>Table Data</span></a></li>
-						  <li><a><span>Table Footer</span></a></li>
-						</ul>
-					  </div>  
-					  </li>
-					  <li class="cpe-dropdown-level-2 cpe-is-sticked-to-parent">
-						<a class="cpe-dropdown-level-2__toggle"><span>Coding</span>                   
-					  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown-chevron" viewBox="0 0 12 12">
-						<path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
-					  </svg>
-					  </a>
-					  <div class="cpe-dropdown-level-2__content">
-						<ul class="cpe-list cpe-is-linked">
-						  <li><a onclick="PreCode()"><span>Preformated</span></a></li>
-						  <li><a onclick="CodeAdd()"><span>Code</span></a></li>
-						</ul>
-					  </div>  
-					  </li>
-					</ul>
-				  </div>
-				</div>
-				  <div class="cpe-dropdown">
-				  <div class="cpe-button cpe-is-alternate cpe-is-squished cpe-dropdown__toggle" title="Spelling">
-							  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" viewBox="0 0 24 24">
-					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-document" />
-	 </svg> <span>Spellcheck</span> <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown__toggle-chevron" viewBox="0 0 12 12">
-	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown-tiny" /> 
-	  </svg>
-				  </div>
-				  <div class="cpe-dropdown__content">
-					  <ul class="cpe-list cpe-is-linked" style="line-height:1.2">
-					  <li>
-						<a>
-						<input type="radio" name="spell" id="spell1" checked></input><label for="spell1">Autoselect</label>
+					<div class="cpe-button-group construct-off">
+					  <a class="cpe-is-squished cpe-button" onclick="EditSwitch()">				
+						<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+						  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-pencil-small" />
+						</svg>				
+						<span>Edit</span>
 						</a>
-					  </li>
-					  <li>
-						<a title="English (US)">
-						<input type="radio" name="spell" id="spell2"></input><label for="spell2">English (US)</label>
-						</a>
-					  </li>
-					  <li>
-						<a title="English (UK)">
-						<input type="radio" name="spell" id="spell3"></input><label for="spell3">English (UK)</label>
-						</a>
-					  </li>
-					  <li>
-						<a title="French">
-						<input type="radio" name="spell" id="spell4"></input><label for="spell4">Francais</label>
-						</a>
-					  </li>
-					  <li>
-						<a title="German">
-						<input type="radio" name="spell" id="spell5"></input><label for="spell5">Deutsch</label>
-						</a>
-					  </li>
-					  <li>
-						<a title="Spanish">
-						<input type="radio" name="spell" id="spell6"></input><label for="spell6">Espanol</label>
-						</a>
-					  </li>
-					  <li>
-						<a title="Greek">
-						<input type="radio" name="spell" id="spell7"></input><label for="spell7">Ελληνικόν</label>
-						</a>
-					  </li>
-					  <li>
-						<a title="Italian">
-						<input type="radio" name="spell" id="spell8"></input><label for="spell8">Italiano</label>
-						</a>
-					  </li>
-					  <li>
-						<a title="Swedish">
-						<input type="radio" name="spell" id="spell9"></input><label for="spell9">Svenska</label>
-						</a>
-					  </li>
-					  </ul>
+					  <div class="cpe-dropdown construct-off">				
+						<div class="cpe-button cpe-is-squished cpe-dropdown__toggle">	
+						  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown__toggle-chevron">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown-tiny" />
+						  </svg>
+						</div>
+						<div class="cpe-dropdown__content cpe-is-right-aligned cpe-is-not-scrollable">					
+						  <ul class="cpe-list cpe-is-linked">						
+							<li><a><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny">
+						  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-clock-tiny" />
+						</svg> View History</a></li>
+							<li><a><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny">
+						  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-lock" />
+						</svg> Protect</a></li>
+							<li><a><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny">
+						  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-trash" />
+						</svg> Delete</a></li>
+							<li><a><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny" style="color:#ccc; color:var(--content-border);">
+						  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-trash" />
+						</svg> PowerDelete</a></li>
+							<li><a><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny">
+						  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-preformat" />
+						</svg> Bash Page</a></li>
+							<li><a><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny">
+						  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-eye" />
+						</svg> Add to followlist</a></li>
+						  </ul>
+						</div>
+					  </div>		
 					</div>
+					<div class="cpe-button-group construct-off">
+					  <a class="cpe-button cpe-is-squished cpe-is-secondary">
+					  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-reply-small" />
+					  </svg>
+					  <span>Comments</span></a>
+					  <a class="cpe-button cpe-is-squished cpe-is-secondary">
+					  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-note" />
+					  </svg>
+					  <span>Talk</span></a>
+					</div>
+				  <div class="cpe-dropdown construct-off">				
+					<div class="cpe-button cpe-is-squished cpe-is-secondary cpe-dropdown__toggle">
+					<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-share-small" />
+					</svg>
+					<span>Share</span>                   <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown__toggle-chevron">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown-tiny" />
+						  </svg></div>
+						<div class="cpe-dropdown__content cpe-is-right-aligned cpe-is-not-scrollable">					
+						  <ul class="cpe-list cpe-is-linked">						
+							<li><a><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny">
+						  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-googleplus" />
+						</svg> Google+</a></li>
+							<li><a><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny">
+						  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-youtube" />
+						</svg> Youtube</a></li>
+							<li><a><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny">
+						  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-facebook" />
+						</svg> Facebook</a></li>
+							<li><a><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny">
+						  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-twitter" />
+						</svg> Twitter</a></li>
+							<li><a><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny" >
+						  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-instagram" />
+						</svg> Instagram</a></li>
+							<li><a><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny">
+						  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-reddit" />
+						</svg> Reddit</a></li>
+							<li><a><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny" viewBox="0 0 240 245" width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-discord" /></svg> Discord</a></li>
+						  </ul>
+						</div>
+					</div>
+
+				  <div class="cpe-dropdown construct-off">				
+					<div class="cpe-button cpe-is-squished cpe-dropdown__toggle">
+					<svg class="cpe-icon cpe-icon-small" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 0H0v24h24z" fill="none"/><path d="M17.66 7.93L12 2.27 6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58c2.05 0 4.1-.78 5.66-2.34 3.12-3.12 3.12-8.19 0-11.31zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/></svg>
+					<span>Visual Styles</span>                   <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown__toggle-chevron">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown-tiny" />
+						  </svg></div>
+						<div class="cpe-dropdown__content cpe-is-right-aligned cpe-is-not-scrollable">					
+						  <ul class="cpe-list cpe-is-linked cpe-visual-styles">						
+							<li><a onclick="VisualStyle(-1)">Standard</a></li>
+						  </ul>
+						</div>
+					</div>
+					<div class="cpe-button-group construct-only">
+				  <div class="cpe-dropdown">				
+					<div class="cpe-button cpe-is-squished cpe-dropdown__toggle">
+					<svg class="cpe-icon cpe-icon-small" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 0H0v24h24z" fill="none"/><path d="M17.66 7.93L12 2.27 6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58c2.05 0 4.1-.78 5.66-2.34 3.12-3.12 3.12-8.19 0-11.31zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/></svg>
+					<span>Visual Styles</span>                   <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown__toggle-chevron">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown-tiny" />
+						  </svg></div>
+						<div class="cpe-dropdown__content cpe-is-right-aligned cpe-is-not-scrollable">					
+						  <ul class="cpe-list cpe-is-linked cpe-visual-styles">						
+							<li><a onclick="VisualStyle(-1)">Standard</a></li>
+						  </ul>
+						</div>
+					</div>
+
+						<div class="cpe-dropdown">
+							<div class="cpe-button cpe-dropdown__toggle"><svg class="cpe-icon cpe-icon-small" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 0H0v24h24z" fill="none"/><path d="M17.66 7.93L12 2.27 6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58c2.05 0 4.1-.78 5.66-2.34 3.12-3.12 3.12-8.19 0-11.31zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/></svg>
+							<span>Themes</span>
+							 <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown__toggle-chevron">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown-tiny" />
+						  </svg></div>
+						  <div class="cpe-dropdown__content">
+							<ul class="cpe-list cpe-is-linked">
+								<li>
+									<a onclick="HCa()">
+										Theme A
+									</a>
+								</li>
+								<li>
+									<a onclick="HCb()">
+										Theme B
+									</a>
+								</li>
+								<li>
+									<a onclick="HCc()">
+										Theme C
+									</a>
+								</li>
+								<li>
+									<a onclick="HCd()" >
+										Theme D
+									</a>
+								</li>
+							</ul>
+						  </div>
+							</div>
+					</div>
+
 				  </div>
-				  <a class="cpe-button cpe-is-alternate cpe-is-squished" title="Undo last action">
-							  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" viewBox="0 0 24 24">
-					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-undo" />
-				</svg>
-				  </a>
-				  <a class="cpe-button cpe-is-alternate cpe-is-squished" title="Redo last action">
-							  <svg xmlns="http://www.w3.org/2000/svg"  class="cpe-icon cpe-icon-small" viewBox="0 0 24 24">
-					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-redo" />
-				</svg>
-				  </a>
-				  <a class="cpe-button cpe-is-alternate cpe-is-squished visualonly" title="Switch to source editing" href="#modalE12">
-							  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" viewBox="0 0 24 24">
-				  <path d="M6.792 8.793L3.535 12.05l3.257 3.258a1.05 1.05 0 0 1-1.484 1.485l-4-4a1.05 1.05 0 0 1 0-1.485l4-4a1.049 1.049 0 1 1 1.484 1.485zm10.516 6.515l3.257-3.258-3.257-3.257a1.05 1.05 0 0 1 1.484-1.485l4 4c.41.41.41 1.075 0 1.485l-4 4a1.049 1.049 0 1 1-1.484-1.485zm-6.24 4.997a1.05 1.05 0 1 1-2.037-.512l4-16a1.05 1.05 0 1 1 2.041.51l-4 16z"/>
-				</svg> <span>Source</span>
-				  </a>
-				  <a class="cpe-button cpe-is-alternate cpe-is-squished visualonly" title="Convert Plain Text to HTML" onclick="HTMLize()">
-							  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" viewBox="0 0 24 24">
-				  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-document" />
-				</svg> <span>HTMLize</span>
-				  </a>
-				  <a class="cpe-button cpe-is-alternate cpe-is-squished visualonly" title="Convert HTML to Plain Text" onclick="unHTMLize()">
-							  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" viewBox="0 0 24 24">
-				  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-text" />
-				</svg> <span>Plain text</span>
-				  </a>
+				</div>
+			  </div>
+			</header>
 
-		</span>
+		  <article class="mpisto-article">
+	<div class="cpe-banner-notification__container constructor-controls construct-only">
+		<div class="cpe-banner-notification cpe-message">
+			<div class="cpe-banner-notification__icon">	
+				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-flag-small" />
+				</svg>
+			</div>
+			<span class="cpe-banner-notification__text">					Remember to send us any report that contain issues, if one found</span>
+				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-banner-notification__close cpe-icon cpe-icon-tiny">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-cross-tiny" />
+				</svg>
+		</div>
+		<div class="cpe-banner-notification  constructor-controls">
+			<span class="cpe-banner-notification__text">
+					<div class="cpe-dropdown">
+					  <div class="cpe-button cpe-is-alternate cpe-is-squished" title="Styling">
+								  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+		  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-bold-small" /> 
+					</svg> 
+					  </div>
+					  <div class="cpe-dropdown__content cpe-is-not-scrollable">
+						<ul class="cpe-list cpe-is-linked">
+						  <li><a onclick="BoldText()"><span style="font-weight:bold">Bold</span></a></li>
+						  <li><a><span onclick="ItalText()" style="font-style:italic">Italics</span></a></li>
+						  <li><a><span onclick="UnderlText()" style="text-decoration:underline">Underline</span></a></li>
+						  <li><a><span onclick="LinedText()" style="text-decoration:line-through">Striked out</span></a></li>
+						  <li class="cpe-dropdown-level-2">
+							<a class="cpe-dropdown-level-2__toggle"><span>Shadow</span>                   
+						  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown-chevron" viewBox="0 0 12 12">
+							<path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
+						  </svg>
+						  </a>
+						  <div class="cpe-dropdown-level-2__content">
+							<ul class="cpe-list cpe-is-linked">
+							  <li><a onclick="ShadowOI()"><shadow class="small">Small</shadow></a></li>
+							  <li><a onclick="ShadowBOI()"><shadow class="small blur">Small/Blurred</shadow></a></li>
+							  <li><a onclick="Shadow()"><shadow>Standard</shadow></a></li>
+							  <li><a onclick="ShadowB()"><shadow class="blur">Standard/Blurred</shadow></a></li>
+							  <li><a onclick="ShadowI()"><shadow class="large">High</shadow></a></li>
+							  <li><a onclick="ShadowBI()"><shadow class="large blur">High/Blurred</shadow></a></li>
+							  <li><a onclick="ShadowII()"><shadow class="extreme">Enormous</shadow></a></li>
+							  <li><a onclick="ShadowBII()"><shadow class="extreme blur">Enormous/Blurred</shadow></a></li>
+							</ul>
+						  </div>  
+						  </li>
+						  <li class="cpe-dropdown-level-2">
+							<a class="cpe-dropdown-level-2__toggle"><span>Stroke</span>                   
+						  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown-chevron" viewBox="0 0 12 12">
+							<path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
+						  </svg>
+						  </a>
+						  <div class="cpe-dropdown-level-2__content">
+							<ul class="cpe-list cpe-is-linked">
+							  <li><a onclick="StrokeOI()"><stroke class="small">Small</stroke></a></li>
+							  <li><a onclick="StrokeBOI()"><stroke class="small blur">Small/Blurred</stroke></a></li>
+							  <li><a onclick="Stroke()"><stroke>Standard</stroke></a></li>
+							  <li><a onclick="StrokeB()"><stroke class="blur">Standard/Blurred</stroke></a></li>
+							  <li><a onclick="StrokeI()"><stroke class="large">High</stroke></a></li>
+							  <li><a onclick="StrokeBI()"><stroke class="large blur">High/Blurred</stroke></a></li>
+							  <li><a onclick="StrokeII()"><stroke class="extreme">Enormous</stroke></a></li>
+							  <li><a onclick="StrokeBII()"><stroke class="extreme blur">Enormous/Blurred</stroke></a></li>
+							</ul>
+						  </div>  
+						  </li>
+						</ul>
+					  </div>
+					</div>
+					  <a class="cpe-button cpe-is-alternate cpe-is-squished" title="Unordered List">
+								  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" viewBox="0 0 18 18">
+		  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-numbered-list" /> 
+					</svg>
+					  </a>
+					  <a class="cpe-button cpe-is-alternate cpe-is-squished" title="Ordered List">
+								  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" viewBox="0 0 18 18">
+		  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-bullet-list-small" /> 
+					</svg>
+					  </a>
+					  <a class="cpe-button cpe-is-alternate cpe-is-squished" title="Signature (Only use them in talk pages)">
+								  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" viewBox="0 0 18 18">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-reply" />
+					</svg> <span>Signature</span>
+					  </a>
+					<div class="cpe-dropdown">
+					  <div class="cpe-button cpe-is-alternate cpe-is-squished cpe-dropdown__toggle" title="Styling">
+								  <span>Visual Styles</span>            <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown__toggle-chevron" viewBox="0 0 12 12">
+		  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown-tiny" /> 
+		  </svg>
+
+					  </div>
+					  <div class="cpe-dropdown__content cpe-is-not-scrollable">
+						<ul class="cpe-list cpe-is-linked">
+						  <li class="cpe-dropdown-level-2">
+							<a class="cpe-dropdown-level-2__toggle"><span>Block elements</span>                   
+						  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown-chevron" viewBox="0 0 12 12">
+							<path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
+						  </svg>
+						  </a>
+						  <div class="cpe-dropdown-level-2__content">
+							<ul class="cpe-list cpe-is-linked">
+							  <li><a onclick="DivAdd()"><span>Div</span></a></li>
+							  <li><a onclick="DivAdd1()"><span>Section</span></a></li>
+							  <li><a onclick="DivAdd2()"><span>Article</span></a></li>
+							  <li><a onclick="DivAdd3()"><span>Header</span></a></li>
+							  <li><a onclick="DivAdd4()"><span>Nav</span></a></li>
+							</ul>
+						  </div>  
+						  </li>
+						  <li class="cpe-dropdown-level-2">
+							<a class="cpe-dropdown-level-2__toggle"><span>Inline elements</span>                   
+						  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown-chevron" viewBox="0 0 12 12">
+							<path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
+						  </svg>
+						  </a>
+						  <div class="cpe-dropdown-level-2__content">
+							<ul class="cpe-list cpe-is-linked">
+							  <li><a onclick="InlineAdd()"><span>Paragraph</span></a></li>
+							  <li><a onclick="InlineAdd1()"><span>Span</span></a></li>
+							  <li><a onclick="Shadow()"><span>Shadow</span></a></li>
+							  <li><a onclick="Stroke()"><span>Stroke</span></a></li>
+							  <li><a onclick="InlineAdd2()"><span>Mark</span></a></li>
+							</ul>
+						  </div>  
+						  </li>
+						  <li class="cpe-dropdown-level-2">
+							<a class="cpe-dropdown-level-2__toggle"><span>Headings</span>                   
+						  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown-chevron" viewBox="0 0 12 12">
+							<path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
+						  </svg>
+						  </a>
+						  <div class="cpe-dropdown-level-2__content">
+							<ul class="cpe-list cpe-is-linked">
+							  <li><a onclick="Heading1()"><span>Heading 1</span></a></li>
+							  <li><a onclick="Heading2()"><span>Heading 2</span></a></li>
+							  <li><a onclick="Heading3()"><span>Heading 3</span></a></li>
+							  <li><a onclick="Heading4()"><span>Heading 4</span></a></li>
+							  <li><a onclick="Heading5()"><span>Heading 5</span></a></li>
+							  <li><a onclick="Heading6()"><span>Heading 6</span></a></li>
+							</ul>
+						  </div>  
+						  </li>
+						  <li class="cpe-dropdown-level-2">
+							<a class="cpe-dropdown-level-2__toggle"><span>Table Maplupation</span>                   
+						  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown-chevron" viewBox="0 0 12 12">
+							<path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
+						  </svg>
+						  </a>
+						  <div class="cpe-dropdown-level-2__content">
+							<ul class="cpe-list cpe-is-linked">
+							  <li><a><span>Table</span></a></li>
+							  <li><a><span>Table body</span></a></li>
+							  <li><a><span>Table head</span></a></li>
+							  <li><a><span>Table Row</span></a></li>
+							  <li><a><span>Table Header</span></a></li>
+							  <li><a><span>Table Data</span></a></li>
+							  <li><a><span>Table Footer</span></a></li>
+							</ul>
+						  </div>  
+						  </li>
+						  <li class="cpe-dropdown-level-2 cpe-is-sticked-to-parent">
+							<a class="cpe-dropdown-level-2__toggle"><span>Coding</span>                   
+						  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown-chevron" viewBox="0 0 12 12">
+							<path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
+						  </svg>
+						  </a>
+						  <div class="cpe-dropdown-level-2__content">
+							<ul class="cpe-list cpe-is-linked">
+							  <li><a onclick="PreCode()"><span>Preformated</span></a></li>
+							  <li><a onclick="CodeAdd()"><span>Code</span></a></li>
+							</ul>
+						  </div>  
+						  </li>
+						</ul>
+					  </div>
+					</div>
+					  <div class="cpe-dropdown">
+					  <div class="cpe-button cpe-is-alternate cpe-is-squished cpe-dropdown__toggle" title="Spelling">
+								  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" viewBox="0 0 24 24">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-document" />
+		 </svg> <span>Spellcheck</span> <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown__toggle-chevron" viewBox="0 0 12 12">
+		  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown-tiny" /> 
+		  </svg>
+					  </div>
+					  <div class="cpe-dropdown__content">
+						  <ul class="cpe-list cpe-is-linked" style="line-height:1.2">
+						  <li>
+							<a>
+							<input type="radio" name="spell" id="spell1" checked></input><label for="spell1">Autoselect</label>
+							</a>
+						  </li>
+						  <li>
+							<a title="English (US)">
+							<input type="radio" name="spell" id="spell2"></input><label for="spell2">English (US)</label>
+							</a>
+						  </li>
+						  <li>
+							<a title="English (UK)">
+							<input type="radio" name="spell" id="spell3"></input><label for="spell3">English (UK)</label>
+							</a>
+						  </li>
+						  <li>
+							<a title="French">
+							<input type="radio" name="spell" id="spell4"></input><label for="spell4">Francais</label>
+							</a>
+						  </li>
+						  <li>
+							<a title="German">
+							<input type="radio" name="spell" id="spell5"></input><label for="spell5">Deutsch</label>
+							</a>
+						  </li>
+						  <li>
+							<a title="Spanish">
+							<input type="radio" name="spell" id="spell6"></input><label for="spell6">Espanol</label>
+							</a>
+						  </li>
+						  <li>
+							<a title="Greek">
+							<input type="radio" name="spell" id="spell7"></input><label for="spell7">Ελληνικόν</label>
+							</a>
+						  </li>
+						  <li>
+							<a title="Italian">
+							<input type="radio" name="spell" id="spell8"></input><label for="spell8">Italiano</label>
+							</a>
+						  </li>
+						  <li>
+							<a title="Swedish">
+							<input type="radio" name="spell" id="spell9"></input><label for="spell9">Svenska</label>
+							</a>
+						  </li>
+						  </ul>
+						</div>
+					  </div>
+					  <a class="cpe-button cpe-is-alternate cpe-is-squished" title="Undo last action">
+								  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" viewBox="0 0 24 24">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-undo" />
+					</svg>
+					  </a>
+					  <a class="cpe-button cpe-is-alternate cpe-is-squished" title="Redo last action">
+								  <svg xmlns="http://www.w3.org/2000/svg"  class="cpe-icon cpe-icon-small" viewBox="0 0 24 24">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-redo" />
+					</svg>
+					  </a>
+					  <a class="cpe-button cpe-is-alternate cpe-is-squished visualonly" title="Switch to source editing" href="#modalE12">
+								  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" viewBox="0 0 24 24">
+					  <path d="M6.792 8.793L3.535 12.05l3.257 3.258a1.05 1.05 0 0 1-1.484 1.485l-4-4a1.05 1.05 0 0 1 0-1.485l4-4a1.049 1.049 0 1 1 1.484 1.485zm10.516 6.515l3.257-3.258-3.257-3.257a1.05 1.05 0 0 1 1.484-1.485l4 4c.41.41.41 1.075 0 1.485l-4 4a1.049 1.049 0 1 1-1.484-1.485zm-6.24 4.997a1.05 1.05 0 1 1-2.037-.512l4-16a1.05 1.05 0 1 1 2.041.51l-4 16z"/>
+					</svg> <span>Source</span>
+					  </a>
+					  <a class="cpe-button cpe-is-alternate cpe-is-squished visualonly" title="Convert Plain Text to HTML" onclick="HTMLize()">
+								  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" viewBox="0 0 24 24">
+					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-document" />
+					</svg> <span>HTMLize</span>
+					  </a>
+					  <a class="cpe-button cpe-is-alternate cpe-is-squished visualonly" title="Convert HTML to Plain Text" onclick="unHTMLize()">
+								  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" viewBox="0 0 24 24">
+					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-text" />
+					</svg> <span>Plain text</span>
+					  </a>
+
+			</span>
+		</div>
 	</div>
-</div>
 
-      <!--Start Article-->
-	<section class="editor-edit" oninput="UpdateSource()">
-      On Lineeeel War and above, due to CSS incombabilites, translation was required to be adjusted to proper selectors so as CSS to renaim combative. You can use the <code>/* NOCONVERT */</code> comment next to a selector to avoid the translation
-      <h1>Common Senses</h1>
-      As of Zekzphire 2018, most elements with <code>cpe</code> prefix no longer translate to other selectors since 2018 has implemented a raft of them. However, for some we still do it. He're some examples and how we do it.
-      <h2>FANDOM</h2>
-      Here's a list of what CSS converter will do:
-      <ul style="list-style:outside disc; line-height:1.5;">
-        <!--Begin-->
-        <li>
-        <code>.WikiaPage</code> gets translated into <code>.mpisto-content</code>
-        </li>
-        <li>
-        <code>#WikiaPage</code> gets translated into <code>#content</code>
-        </li>
-        <li>
-        <code>.WikiaMainContent</code> gets translated into <code>.mpisto-article-wrapper</code>
-        </li>
-        <li>
-        <code>#WikiaMainContent</code> gets translated into <code>.mpisto-article</code>
-        </li>
-        <li>
-        <code>.WikiaArticle</code> and <code>#WikiaArticle</code> gets translated into <code>.mpisto-article</code>
-        </li>
-        <li>
-        <code>.page-header</code> gets translated into <code>.mpisto-page-header</code>
-        </li>
-        <li>
-        <code>.page-header__title</code> gets translated into <code>.mpisto-title</code>
-        </li>
-        <li>
-        <code>.page-header__main</code> gets translated into <code>.mpisto-page-header-main</code>
-        </li>
-        <li>
-        <code>.WikiaRail</code> gets translated into <code>.mpisto-right-pane</code>
-        </li>
-        <li>
-        <code>.EditPageHeader</code> gets translated into <code>.editor-header</code>
-        </li>
-        <li>
-        <code>.WikiaPageBackground</code> gets translated into <code>.mpisto-content</code> and may get <code>:before</code> or <code>:after</code> pseudo if <code>.WikiaPage</code> Styles are used
-        </li>
-        <li>
-        <code>.WikiaSiteWrapper</code> gets translated into <code>.mpisto-2018</code>
-        </li>
-        <li>
-        <code>.skin-oasis</code> gets translated into <code>.main</code>
-        </li>
-        <li>
-        <code>.mediawiki</code> gets translated into <code>.mpisto-2018</code>
-        </li>
-        <li>
-        <code>.cpe-global-navigation</code> gets translated into <code>header.mpisto-navbar</code>
-        </li>
-        <li>
-        <code>.WikiaBarWrapper</code> gets translated into <code>footer.mpisto-footer-container</code> and the after pseudo element will be disabled unless used
-        </li>
-        <li>
-        <code>.WikiaBarWrapper .wikia-bar</code> gets translated into <code>footer.mpisto-footer-container > div</code>
-        </li>
-        <li>
-        <code>.rail-module</code> gets translated into <code>.mpisto-module</code> and unless after pseudo element is used, we may remove it for compability.
-        </li>
-        <!--End-->
-      </ul>
-      </section>
-      <!--Stop Article-->
-      </article>
+		  <!--Start Article-->
+		<section class="editor-edit" oninput="UpdateSource()">
+		  On Lineeeel War and above, due to CSS incombabilites, translation was required to be adjusted to proper selectors so as CSS to renaim combative. You can use the <code>/* NOCONVERT */</code> comment next to a selector to avoid the translation
+		  <h1>Common Senses</h1>
+		  As of Zekzphire 2018, most elements with <code>cpe</code> prefix no longer translate to other selectors since 2018 has implemented a raft of them. However, for some we still do it. He're some examples and how we do it.
+		  <h2>FANDOM</h2>
+		  Here's a list of what CSS converter will do:
+		  <ul style="list-style:outside disc; line-height:1.5;">
+			<!--Begin-->
+			<li>
+			<code>.WikiaPage</code> gets translated into <code>.mpisto-content</code>
+			</li>
+			<li>
+			<code>#WikiaPage</code> gets translated into <code>#content</code>
+			</li>
+			<li>
+			<code>.WikiaMainContent</code> gets translated into <code>.mpisto-article-wrapper</code>
+			</li>
+			<li>
+			<code>#WikiaMainContent</code> gets translated into <code>.mpisto-article</code>
+			</li>
+			<li>
+			<code>.WikiaArticle</code> and <code>#WikiaArticle</code> gets translated into <code>.mpisto-article</code>
+			</li>
+			<li>
+			<code>.page-header</code> gets translated into <code>.mpisto-page-header</code>
+			</li>
+			<li>
+			<code>.page-header__title</code> gets translated into <code>.mpisto-title</code>
+			</li>
+			<li>
+			<code>.page-header__main</code> gets translated into <code>.mpisto-page-header-main</code>
+			</li>
+			<li>
+			<code>.WikiaRail</code> gets translated into <code>.mpisto-right-pane</code>
+			</li>
+			<li>
+			<code>.EditPageHeader</code> gets translated into <code>.editor-header</code>
+			</li>
+			<li>
+			<code>.WikiaPageBackground</code> gets translated into <code>.mpisto-content</code> and may get <code>:before</code> or <code>:after</code> pseudo if <code>.WikiaPage</code> Styles are used
+			</li>
+			<li>
+			<code>.WikiaSiteWrapper</code> gets translated into <code>.mpisto-2018</code>
+			</li>
+			<li>
+			<code>.skin-oasis</code> gets translated into <code>.main</code>
+			</li>
+			<li>
+			<code>.mediawiki</code> gets translated into <code>.mpisto-2018</code>
+			</li>
+			<li>
+			<code>.cpe-global-navigation</code> gets translated into <code>header.mpisto-navbar</code>
+			</li>
+			<li>
+			<code>.WikiaBarWrapper</code> gets translated into <code>footer.mpisto-footer-container</code> and the after pseudo element will be disabled unless used
+			</li>
+			<li>
+			<code>.WikiaBarWrapper .wikia-bar</code> gets translated into <code>footer.mpisto-footer-container > div</code>
+			</li>
+			<li>
+			<code>.rail-module</code> gets translated into <code>.mpisto-module</code> and unless after pseudo element is used, we may remove it for compability.
+			</li>
+			<!--End-->
+		  </ul>
+		  </section>
+		  <!--Stop Article-->
+		  </article>
+      </nav>
       <nav class="mpisto-right-pane">
         <div style="width:100%;">
 			  <section class="mpisto-module editor-module editor-tools-module construct-only" id="module1">
