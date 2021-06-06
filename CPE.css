@@ -1169,6 +1169,13 @@ box-shadow:0 2px 6px 0 rgba(0,0,0,.2), 0 2px 6px 0 rgba(255,255,255,0.2);
 	--scrollbar-thumb-text:var(--content-color);
 }
 
+.cpe-dropdown[cpe-orient*="land"] .cpe-dropdown__content {
+	left:100%;
+	min-width:0;
+	top:-50%;
+	transform:none;
+}
+
 .cpe-dropdown.cpe-no-fadeout:not(.cpe-is-active) .cpe-dropdown__content {
 	display:none;
 }
@@ -1192,10 +1199,27 @@ left:auto;
 right:0;
 transform:none;
 }
+
 .cpe-dropdown__content.cpe-is-left-aligned{
-left:0;
+left:-10px;
+left:-10px;
 transform:none
 }
+
+.cpe-dropdown[cpe-orient*="land"] .cpe-dropdown__content.cpe-is-right-aligned{
+right:auto;
+right:revert;
+top:auto;
+bottom:0;
+transform:none;
+}
+.cpe-dropdown[cpe-orient*="land"] .cpe-dropdown__content.cpe-is-left-aligned{
+right:auto;
+right:revert;
+top:0;
+transform:none
+}
+
 .cpe-dropdown__content:not(.cpe-is-not-scrollable) .cpe-list{
 max-height:300px;
 overflow-y:auto;
@@ -1236,6 +1260,14 @@ color:rgb(var(--link-color));
 
 
  .cpe-dropdown::after,.cpe-dropdown::before{bottom:-1px;content:'';display:none;height:0;left:50%;position:absolute;width:0;z-index:3}
+
+ .cpe-dropdown[cpe-orient*="land"]::after,.cpe-dropdown[cpe-orient*="land"]::before {
+	transform:rotate(-90deg);
+	top:calc(50% - 5px);
+	bottom:auto;
+	left:auto;
+	right:-1px;
+ }
  
  .cpe-dropdown::after{border:8px solid transparent;border-bottom-color:var(--content-border);margin-left:-8px;}
 
@@ -1342,6 +1374,11 @@ opacity:1;
  top:100%;
 }
 
+.cpe-dropdown.cpe-is-active[cpe-orient*="land"] .cpe-dropdown__content {
+	left:100%;
+	animation:contribution-dropdown_land 0.3s;
+}
+
 .cpe-dropdown .cpe-dropdown__content .cpe-dropdown-level-2:hover .cpe-dropdown-level-2__content,
 .cpe-dropdown .cpe-dropdown__content .cpe-dropdown-level-2.cpe-is-active .cpe-dropdown-level-2__content {
  animation: dropdown-2 0.3s;
@@ -1354,6 +1391,10 @@ opacity:1;
  opacity:1;
 }
 
+.cpe-dropdown.cpe-is-active[cpe-orient*="land"]::before, .cpe-dropdown.cpe-is-active[cpe-orient*="land"]::after {
+ animation: contribution-dropdown-b_land 0.3s;
+}
+
 
 .cpe-dropdown .cpe-dropdown__content{
  top:calc(100% - 10px);
@@ -1361,6 +1402,11 @@ opacity:1;
  pointer-events:none;
  opacity:0;
 /* animation: contribution-dropdown-r 0.3s; */
+}
+
+.cpe-dropdown[cpe-orient*="land"] .cpe-dropdown__content{
+	left:calc(100% - 10px);
+	top:-50%;
 }
 
 .cpe-dropdown .cpe-dropdown__content .cpe-dropdown-level-2 .cpe-dropdown-level-2__content {
@@ -1377,17 +1423,32 @@ opacity:1;
 }
 
 
-
+/* Used for dropdowns */
 @keyframes contribution-dropdown {
  from {opacity: 0; top: calc(100% - 10px);}
  to {opacity: 1; top: 100%;}
 }
 
+@keyframes contribution-dropdown_land {
+ from {opacity: 0; left: calc(100% - 10px);}
+ to {opacity: 1; left: 100%;}
+}
+
+
+
+/* Used for dropdown arrows */
 @keyframes contribution-dropdown-b {
  from {opacity: 0; bottom: 9px;}
  to {opacity: 1; bottom: -1px;}
 }
 
+@keyframes contribution-dropdown-b_land {
+ from {opacity: 0; right: 9px;}
+ to {opacity: 1; right: -1px;}
+}
+
+
+/* Used for 2nd-level dropdown */
 @keyframes dropdown-2 {
  from {opacity: 0; transform: translateX(-10px);}
  to {opacity: 1; transform: translateX(0);}
