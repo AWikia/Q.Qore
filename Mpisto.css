@@ -3166,6 +3166,16 @@ background-color:var(--dropdown-bg);
 box-shadow:-1px 0 0 0 var(--dropdown-bg);
 }
 
+.mpisto-right-pane .search-container {
+	width:100%;
+	display:flex;
+	margin-bottom:10px;
+}
+
+.mpisto-right-pane .search-container .cpe-input {
+	width:100%;
+}
+
 .mpisto-module {
 background-color:var(--content-bg);
 box-shadow:0 2px 2px var(--content-border), 0 0 6px -1px #000, 0 0 10px -0.5px #fff;

@@ -20,6 +20,13 @@
 	}
 }
 
+@media only screen and (max-width:511px) {
+	.mpisto-option-way label.customization-label {
+		display:block;
+		font-size:18px;
+	}
+}
+
 /* XS */
 @media only screen and (max-width:754px) {
 :root {
@@ -35,7 +42,7 @@
 
 
 
-.mpisto-right-pane {
+.mpisto-right-pane .mpisto-right-pane-wrapper {
 -moz-column-count:1!important;
 -webkit-column-count:1!important;
 column-count:1!important;
@@ -482,7 +489,7 @@ padding:2px 4px 4px;
 font-size:14px;
 }
 
-.mpisto-right-pane {
+.mpisto-right-pane .mpisto-right-pane-wrapper {
 -moz-column-count:2;
 -webkit-column-count:2;
 column-count:2;

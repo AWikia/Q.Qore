@@ -634,13 +634,6 @@ fill="currentColor" stroke="none">
 			  <div class="mpisto-page-header-main">
 				<div class="mpisto-page-header-title">
 					<h1 class="mpisto-title">Main Page</h1>
-					<nav class="pageheader-search">
-					  <input class="cpe-input cpe-is-borderline" placeholder="Search Qora Qore Web;"></input>
-					  <button class="cpe-button cpe-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
-			  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-magnifying-glass" />
-			</svg>
-					  </button>
-					</nav>
 				</div>
 				<h4 class="mpisto-sub">From Qora Qore Web</h4>
 				<div class="mpisto-page-header-contribution">
@@ -873,7 +866,14 @@ fill="currentColor" stroke="none">
 		  </article>
       </nav>
       <nav class="mpisto-right-pane">
-        <div style="width:100%;">
+				<nav class="pageheader-search search-container">
+				  <input class="cpe-input cpe-is-borderline" placeholder="Search Qora Qore Web;"></input>
+				  <button class="cpe-button cpe-is-squished cpe-is-borderline"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+		  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-magnifying-glass" />
+		</svg>
+				  </button>
+				</nav>
+        <div class="mpisto-right-pane-wrapper" style="width:100%;">
           <section class="mpisto-module discord-module">
             <h2><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" viewBox="0 0 240 245" width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-discord" /></svg> <span>Discord Server</span> <a class="module-toggle" onclick="ToggleModule()">                  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny" viewBox="0 0 12 12">
 						<path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
