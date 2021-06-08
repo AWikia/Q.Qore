@@ -126,6 +126,23 @@ $(' .cpe-dropdown')
 
 }
 
+/* Select Inputs */
+$(' .cpe-dropdown.cpe-select .cpe-dropdown__content .cpe-list li:not(.cpe-dropdown-level-2)')
+.click(function(e) {
+						e.preventDefault();
+						var value = $(this).attr("value");
+						$(' .cpe-dropdown.cpe-select')
+						.click(function() {
+									var content = $('.cpe-select.cpe-is-active .cpe-dropdown__content .cpe-list li:not(.cpe-dropdown-level-2):hover > a').html();
+									$('.cpe-select.cpe-is-active .cpe-select__value').attr("value", value);
+									$('.cpe-select.cpe-is-active .cpe-select__value').html(content);
+									$(this).removeClass('cpe-is-active');
+									$(' .cpe-dropdown.cpe-select').off( "click" );
+								});
+        });
+
+
+
 /* Enable New Global Navigation - No exception for now */
 window.MW18newnavblock=false;
 (function () {

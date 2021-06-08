@@ -803,12 +803,14 @@ color:inherit;
 
 [visualtheme*="contrast"] .cpe-input,
 [visualtheme*="contrast"] .cpe-input:hover,
-[visualtheme*="contrast"] .cpe-input:focus {
+[visualtheme*="contrast"] .cpe-input:focus,
+[visualtheme*="contrast"] .cpe-select.cpe-is-active .cpe-input {
     box-shadow:0 0 0 1.5px currentColor!important;
 }
 
 
-[visualtheme*="contrast"] .cpe-input:focus {
+[visualtheme*="contrast"] .cpe-input:focus,
+[visualtheme*="contrast"] .cpe-select.cpe-is-active .cpe-input {
     box-shadow:0 0 0 1.5px var(--input-box-solid)!important;
 }
 

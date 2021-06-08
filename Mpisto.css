@@ -4225,6 +4225,10 @@ font-size:14px;
 flex:1;
 }
 
+.cpe-dropdown.cpe-select.summary {
+	flex:1;
+}
+
 .editor-header h2 > a.mainpage:hover {
 	opacity:0.8;
 }

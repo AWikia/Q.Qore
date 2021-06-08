@@ -687,32 +687,42 @@ fill="currentColor" stroke="none">
 			Here you can check if Qora Qore or Pokémon Prograde is buildable on an emulator and what FPS will you get
 			<br>
 			<div style="margin:0 auto; width:max-content;" class="pageheader-search">
-				<select class="cpe-input provider" placeholder="Choose your provider">
-					<option value="0">Emerald</option>
-					<option value="1">Plantilia</option>
-					<option value="2">Jinnybell 2010</option>
-					<option value="3">Jinnybell 2020</option>
-					<option value="4">PCReady 2009</option>
-					<option value="5">Bsibsina Action</option>
-					<option value="6">Quadro Gaming Centre</option>
-					<option value="7">Prima GameCube 2</option>
-					<option value="8">Prima Centre</option>
-					<option value="9">Intensive Délacour 2019</option>
-					<option value="10">Yorkbook G1/Plus G4-G7</option>
-					<option value="11">Prima Xtreme</option>
-					<option value="12">Yorkbook Bronze</option>
-					<option value="13">Yorkbook Silver</option>
-					<option value="14">Yorkbook Platinum</option>
-					<option value="15">Bsibsina Pentium</option>
-					<option value="16">Bsibsina Enthusiasts</option>
-					<option value="17">ΣΟΥΒΛ Crystal Silver</option>
-					<option value="18">ΣΟΥΒΛ Crystal Gold</option>
-					<option value="19">Yorkbook Xe</option>
-					<option value="20">Yorkbook G4/Plus G7</option>
-					<option value="21">PCReady 2020</option>
-					<option value="22">ΣΟΥΒΛ Crystal Silver 2021</option>
-					<option value="23">ΣΟΥΒΛ Crystal Gold 2021</option>
-				</select>
+				<div class="cpe-dropdown cpe-select">
+					<div class="cpe-input provider cpe-dropdown__toggle">
+						<span class="cpe-select__value" value="0">Emerald</span>
+						<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown__toggle-chevron">
+						  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown" />
+						</svg>		
+					</div>
+					<div class="cpe-dropdown__content">
+						<ul class="cpe-list cpe-is-linked">
+							<li value="0"><a>Emerald</a></li>
+							<li value="1"><a>Plantilia</a></li>
+							<li value="2"><a>Jinnybell 2010</a></li>
+							<li value="3"><a>Jinnybell 2020</a></li>
+							<li value="4"><a>PCReady 2009</a></li>
+							<li value="5"><a>Bsibsina Action</a></li>
+							<li value="6"><a>Quadro Gaming Centre</a></li>
+							<li value="7"><a>Prima GameCube 2</a></li>
+							<li value="8"><a>Prima Centre</a></li>
+							<li value="9"><a>Intensive Dιlacour 2019</a></li>
+							<li value="10"><a>Yorkbook G1/Plus G4-G7</a></li>
+							<li value="11"><a>Prima Xtreme</a></li>
+							<li value="12"><a>Yorkbook Bronze</a></li>
+							<li value="13"><a>Yorkbook Silver</a></li>
+							<li value="14"><a>Yorkbook Platinum</a></li>
+							<li value="15"><a>Bsibsina Pentium</a></li>
+							<li value="16"><a>Bsibsina Enthusiasts</a></li>
+							<li value="17"><a>ΣΟΥΒΛ Crystal Silver</a></li>
+							<li value="18"><a>ΣΟΥΒΛ Crystal Gold</a></li>
+							<li value="19"><a>Yorkbook Xe</a></li>
+							<li value="20"><a>Yorkbook G4/Plus G7</a></li>
+							<li value="21"><a>PCReady 2020</a></li>
+							<li value="22"><a>ΣΟΥΒΛ Crystal Silver 2021</a></li>
+							<li value="23"><a>ΣΟΥΒΛ Crystal Gold 2021</a></li>
+						</ul>
+					</div>
+				</div>
 				<button class="cpe-button" onclick="CalcAvail()">Check Availability</button>
 			</div>
 				<br>

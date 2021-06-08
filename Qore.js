@@ -22,7 +22,7 @@
 				Yorkbook Xe = 75
 				PCReady 2020 = 40 @
 */
-	var chosen = $('select.provider').val();
+	var chosen = $('.cpe-select .provider .cpe-select__value').attr("value");
 	var provider = ["Emerald Emulator", "Intensive Plantilia Emulator", "Jinnybell 2010", "Jinnybell 2020", "PC Ready Emulator 2009", "Bsibsina Action Emulator", "Quadro Gaming Centre", "Prima GameCube 2", "Prima Centre", "Intensive Délacour 2019", "Yorkbook G1, Yorkbook Plus G4 & Yorkbook Plus G7", "Prima Xtreme", "Yorkbook Bronze", "Yorkbook Silver", "Yorkbook Platinum", "Bsibsina Pentium", "Bsibsina Enthusiasts", "ΣΟΥΒΛ Crystal Silver", "ΣΟΥΒΛ Crystal Gold", "Yorkbook Xe", "Yorkbook G4, Yorkbook Plus G7 Silver & Yorkbook Plus G7 Gold", "PC Ready Emulator 2020", "ΣΟΥΒΛ Crystal Silver 2021", "ΣΟΥΒΛ Crystal Gold 2021"][chosen];
 	$('h2.compat').html("Compatibility of Q.Qore in " + provider);
 	$('h2.compat2').html("Compatibility of Pokémon Prograda in " + provider);

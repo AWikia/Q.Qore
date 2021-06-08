@@ -4,7 +4,7 @@ var x = $('#modal1 .cpe-input.summary.ef_name').val();
 $('.mpisto-userpages-header h2.aka_name').html( x );
 var x = $('#modal1 .cpe-input.summary.ef_reside').val();
 $('.mpisto-userpages-header span.living').html( x );
-var x = $('#modal1 .cpe-input.summary.ef_birthday1').val() + " " + $('#modal1 .cpe-input.summary.ef_birthday2').val();
+var x = $('#modal1 .cpe-input.summary.ef_birthday1 .cpe-select__value').attr('value') + " " + $('#modal1 .cpe-input.summary.ef_birthday2 .cpe-select__value').attr('value');
 $('.mpisto-userpages-header span.date').html( x );
 var x = $('#modal1 .cpe-input.summary.ef_hobby').val();
 $('.mpisto-userpages-header span.hobby').html( x );

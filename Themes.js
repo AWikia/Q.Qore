@@ -652,7 +652,8 @@ function RandomColor() {
 */
 function PresetTheme(theme="") {
 	if (theme==="") {
-		var theme2= $('select.preset_theme').val();
+	//	var theme2= $('select.preset_theme').val();
+		var theme2= $('.cpe-select .preset_theme .cpe-select__value').attr("value");
 	} else {
 		var theme2= theme;
 	}
