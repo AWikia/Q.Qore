@@ -874,6 +874,7 @@ a.cpe-button, button.cpe-button {
   --button-color-dark:rgb(var(--link-color-dark));
   --button-color-dark-super:rgb(var(--link-color-dark-super));
   --button-color-text:var(--link-color-text);
+  --button-color-text-dark:var(--link-color-text-dark);
   --button-color-content-bg-mix-light:var(--link-color-content-bg-mix-light);
   --button-color-content-bg-mix:var(--link-color-content-bg-mix);
 }
@@ -884,6 +885,7 @@ a.cpe-button, button.cpe-button {
   --button-color-dark:var(--content-border-dark);
   --button-color-dark-super:var(--content-border-dark-super);
   --button-color-text:var(--content-border-text);
+  --button-color-text-dark:var(--content-border-text-dark);
   --button-color-content-bg-mix-light:var(--content-border-content-bg-mix-light);
   --button-color-content-bg-mix:var(--content-border-content-bg-mix);
 }
@@ -894,6 +896,7 @@ a.cpe-button, button.cpe-button {
   --button-color-dark:var(--background-color-dark);
   --button-color-dark-super:var(--background-color-dark-super);
   --button-color-text:var(--background-color-text);
+  --button-color-text-dark:var(--background-color-text-dark);
   --button-color-content-bg-mix-light:var(--background-color-content-bg-mix-light);
   --button-color-content-bg-mix:var(--background-color-content-bg-mix);
 }
@@ -905,6 +908,7 @@ a.cpe-button, button.cpe-button {
   --button-color-dark:rgb(var(--community-header-dark));
   --button-color-dark-super:rgb(var(--community-header-dark-super));
   --button-color-text:rgb(var(--community-header-text));
+  --button-color-text-dark:rgb(var(--community-header-text-dark));
   --button-color-content-bg-mix-light:var(--community-header-bg-content-bg-mix-light);
   --button-color-content-bg-mix:var(--community-header-bg-content-bg-mix);
 }
