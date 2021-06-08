@@ -814,6 +814,7 @@ a.cpe-button, button.cpe-button {
   outline-color:currentcolor;
   outline-offset:-2px;
   border-color:var(--button-color);
+  color:var(--button-color-text-dark);
 }
 
 /* Secondary */

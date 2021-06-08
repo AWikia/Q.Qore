@@ -57,7 +57,7 @@ function getRandomInt(max) {
 
 /* Visual Styles */
 function VisualStyle(style) {
-	var oldvisual = $('html').attr("visualcolors", "standard");
+	var oldvisual = $('html').attr("visualcolors");
 	if (style === -1) { // Standard Style
 		$('html').attr("visualtheme", "standard");
 		$('html').attr("visualcolors", "standard");
@@ -67,8 +67,8 @@ function VisualStyle(style) {
 	}
 	if (oldvisual !==	$('html').attr("visualcolors")) { // If Visual Colors get changed, update automated variables
 		ColorUpdate(true);
-		ThemeColorMetaTag();
 	}
+		ThemeColorMetaTag();
 }
 
 function VisualStyleCompile() {
@@ -212,6 +212,7 @@ if  ($("body.mpisto-2018").length) {
    Supported values: auto, auto-r, light, dark, system-a, system-ar, system, system-r */
 function colortheme(theme) {
     var body_bg =	getComputedStyle(document.querySelector('html')).getPropertyValue("--content-bg");
+    var old_dark = window.MW18darkmode
 	if (theme === 'auto') { // Auto
 		window.MW18darkmode = false;
 	} 	else if (theme === 'auto-r') { // Auto-Dark
@@ -283,7 +284,9 @@ function colortheme(theme) {
 			document.querySelector('.rvbg1').style.setProperty("background-color", 'var(--content-bg)');
 		}
 	}
-	ColorUpdate(false);
+	if (old_dark != window.MW18darkmode) {
+		ColorUpdate(false);
+	}
 
 }
 
@@ -1417,7 +1420,7 @@ function SocialCompile() {
 	  var colormixl = ColorTestTwin(content_color,color,0.8,'rgb');
       var colormix = ColorTestTwin(colormixl,color,0.8,'rgb');
 	  var name = socialV[i];
-	  var data = '.cpe-button.cpe-is-' + name + '-color{' +'--button-color:' + color + '!important;' + '--button-color-dark:' + ColorTest(color,false) + '!important;' + '--button-color-dark-super:' + SuperColorTest(color,false) + '!important;' + '--button-color-text:' + ColorTest(color,true) + '!important;' + '--button-color-content-bg-mix-light:' + colormixl + '!important;' + '--button-color-content-bg-mix:' + colormix + '!important;' + '}'
+	  var data = '.cpe-button.cpe-is-' + name + '-color{' +'--button-color:' + color + '!important;' + '--button-color-dark:' + ColorTest(color,false) + '!important;' + '--button-color-dark-super:' + SuperColorTest(color,false) + '!important;' + '--button-color-text:' + ColorTest(color,true) + '!important;' + '--button-color-text-dark:' + ColorTest(ColorTest(color,true),false) + '!important;' + '--button-color-content-bg-mix-light:' + colormixl + '!important;' + '--button-color-content-bg-mix:' + colormix + '!important;' + '}'
 	  str = str + data;
 	}
 
