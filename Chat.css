@@ -5,7 +5,7 @@
 /* Chat CSS */
 
 /* Roboto Font Pack */
-:root body, .cpe-button {
+:root body container, .cpe-button {
 	font-family:"Roboto", sans-serif;
 	background-image:none!important;
 	margin:0;

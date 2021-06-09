@@ -411,7 +411,7 @@ display:inline-flex;
 }
 
 
-.mpisto-2018, .mpisto-2018 .gradient-overlay , .mpisto-2018 .gradient-overlay:before {
+.mpisto-2018 container, .mpisto-2018 .gradient-overlay , .mpisto-2018 .gradient-overlay-2 {
   background-image:none!important
 }
 
@@ -748,7 +748,7 @@ column-count:1;
 
 
 /* XL */
-@media only screen and (min-width:1380px) and (max-width:1999px) {
+@media only screen and (min-width:1380px) {
 /*.mpisto-content {
 padding-left:30px;
 padding-right:30px;
@@ -841,104 +841,7 @@ font-size:30px;
 
 }
 
-/* XXL */
-@media only screen and (min-width:2000px) {
-/*.mpisto-content {
-padding-left:30px;
-padding-right:30px;
-}
-*/
-
-.mpisto-content, header.mpisto-navbar .mpisto-navbar-wrapper, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .mpisto-options-content, .main .page-wrapper, .top-gap, .headroom.headroom--not-top .top-gap .cpe-banner-notification__container#floatingbanner  /*.lightbox */ {
-width:1966px; /* Was 1346px */
-}
-.mpisto-content .mpisto-title {
-	font-size:70px;
-	-webkit-text-stroke-width:2.5px;
-}
-
-.mpisto-article h1 {
-font-size:52px;
-}
-
-.mpisto-article h2 {
-font-size:38px;
-}
-
-.mpisto-article h3 {
-font-size:33px;
-}
-
-.mpisto-article h4 {
-font-size:26px;
-}
-
-.mpisto-article h5 {
-font-size:22px;
-}
-
-.mpisto-article h6 {
-font-size:20px;
-}
-
-
-.mpisto-article {
-	font-size:22px;
-}
-
-.mpisto-content .mpisto-sub {
-	font-size:20px;
-}
-
-
-footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container th.mpisto-footer-bar h3 {
-font-size:26px;
-}
-
-
-footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container td {
-font-size:23px;
-}
-
-label {
-	font-size:31px;
-}
-
-.mpisto-option-way > div .fieldset fieldset legend,
-.mpisto-option-way > div .fieldset > fieldset > h2 {
-	font-size:36px;
-}
-
-.mpisto-option-way > div .fieldset fieldset legend .cpe-icon,
-.mpisto-option-way > div .fieldset > fieldset > h2 .cpe-icon {
-	margin-right:9px;
-	width:42px;
-	height:42px;
-	min-width:42px;
-	min-height:42px;
-}
-
-
-.mpisto-option-way .store-cards .store-card {
-	font-size:24px;
-}
-
-
-
-footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container th h1 {
-font-size:48px;
-}
-
-footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container td h2 {
-font-size:36px;
-}
-
-
-}
-
-
-
-/* L + XL + XXL */
+/* L + XL */
 @media only screen and (min-width:1100px)  {
 .mpisto-userpages-header .mpisto-profile-masthead {
 	border-top-left-radius:0;

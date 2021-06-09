@@ -408,9 +408,16 @@ scrollbar-color:var(--button-color) var(--background-color);
 --secondary-font:var(--custom-secondary-font), "Rubik", "Arimo", "Liberation Sans", var(--secondary-foreign-fonts);
 --custom-secondary-font:"";
 --button-radius:3px;
+--max-width:2000px;
 /* Shapes */
 --cpe-teadrop:url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSI4Mi42NjY2NyIgaGVpZ2h0PSI4Mi42NjY2NyIgdmlld0JveD0iMCwwLDgyLjY2NjY3LDgyLjY2NjY3Ij4NCgk8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTk4LjY2NjY2LC0xMzguNjY2NjYpIj4NCgkJPGcgZGF0YS1wYXBlci1kYXRhPSJ7JnF1b3Q7aXNQYWludGluZ0xheWVyJnF1b3Q7OnRydWV9IiBmaWxsPSIjMDAwMDAwIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMCIgc3Ryb2tlLWxpbmVjYXA9ImJ1dHQiIHN0cm9rZS1saW5lam9pbj0ibWl0ZXIiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLWRhc2hhcnJheT0iIiBzdHJva2UtZGFzaG9mZnNldD0iMCIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPg0KCQkJPHBhdGggZmlsbD0iIzAwMDAwMCIgZD0iTTE5OC42NjY2NywxODBjMCwtMjIuODI3NzcgNDEuMzMzMzQsLTQxLjMzMzM0IDQxLjMzMzM0LC00MS4zMzMzNGMwLDAgNDEuMzMzMzMsMTguNTA1NTcgNDEuMzMzMzMsNDEuMzMzMzRjMCwyMi44Mjc3NyAtMTguNTA1NTYsNDEuMzMzMzQgLTQxLjMzMzMzLDQxLjMzMzM0Yy0yMi44Mjc3NywwIC00MS4zMzMzNCwtMTguNTA1NTcgLTQxLjMzMzM0LC00MS4zMzMzNHoiLz4NCgkJPC9nPg0KCTwvZz4NCjwvc3ZnPg==")
 
+}
+
+html {
+	max-width:var(--max-width);
+	position:relative;
+	margin:0 auto;
 }
 
 /* Body Styling */
@@ -422,9 +429,15 @@ body {
   --cpe-text-cursor:url("Windows/text.cur"), text;
   --cpe-hand-cursor:url("Windows/hand.cur"), pointer;
   margin:0 auto;
-  background-color:var(--background-color);
   font-family:var(--font-family), var(--foreign-fonts);
-  color:var(--background-color-text);
+	cursor:var(--cpe-body-cursor);
+	box-shadow:0 0 40px 0px;
+	max-width:var(--max-width);
+}
+
+
+container {
+    color:var(--background-color-text);
 	background-repeat:no-repeat;
 	background-attachment:local;
 	background-attachment:fixed;
@@ -433,10 +446,11 @@ body {
 	background-size:cover;
 	background-image:var(--background-image);
 	background-color:var(--background-color);
-	cursor:var(--cpe-body-cursor);
-
+	margin:0 auto;
+	max-width:var(--max-width);
+	position:relative;
+	display:block;
 }
-
 
 .serif body { /* Noto Sans */
 --font-family:Aleo;
@@ -445,27 +459,37 @@ body {
 
 
 
-body[body-display*="legacy"] {
+body[body-display*="legacy"] container {
 	background-repeat:repeat;
 	--background-overlay:var(--background-color)!important;
 }
 
-body[body-display*="legacy"][background-size*="contain"] {
+body[body-display*="legacy"][background-size*="contain"] container {
 	background-size:contain;
 }
 
-body[body-display*="legacy"][background-size*="stretched"] {
+body[body-display*="legacy"][background-size*="stretched"] container {
 	background-size:100% 100%;
 	background-position:center;
 }
 
-body[body-display*="legacy"][background-size*="full"] {
+body[body-display*="legacy"][background-size*="full"] container {
 	background-size:auto;
 }
 
-body[body-display*="legacy"][body-no-tiling*="true"] {
+body[body-display*="legacy"][body-no-tiling*="true"] container {
 	background-repeat:no-repeat;
 }
+
+@media only screen and (min-width:2000px) {
+	body[body-display*="legacy"][background-size*="stretched"] container {
+		background-size:var(--max-width) 100%;
+	}
+	body[body-display*="legacy"][background-size*="contain"] container {
+		background-size:var(--max-width);
+	}
+}
+
 
 
 body[content-color-auto*="false"] .colora-on,
@@ -488,7 +512,6 @@ body[body-display*="legacy"] .gradient-overlay-2 {
 
 .gradient-overlay-2 {
 	top:0;
-	left:0;
 	width:100%;
 	height:100%;
 	position:fixed!Important;
@@ -499,13 +522,13 @@ body[body-display*="legacy"] .gradient-overlay-2 {
 	-webkit-mask-image:linear-gradient(to bottom, rgba(0,0,0,0), black 98%);
   image-rendering:initial;                  /* CSS4 Proposed  */
   -qq-image-blurring:tick;                  /* 4x4 Web 1-2    */
+	max-width:var(--max-width);
 }
 
 
 
 .gradient-overlay, .gradient-overlay {
 	top:0;
-	left:0;
 	width:100%;
 	height:100%;
 	position:fixed!Important;
@@ -515,6 +538,7 @@ body[body-display*="legacy"] .gradient-overlay-2 {
 	background-color:var(--background-color);
 	opacity:0.75;
 	pointer-events:none;
+	max-width:var(--max-width);
 }
 
 /* Option and Headings */
@@ -526,6 +550,7 @@ letter-spacing:normal; /* Drops the inheritance of letter-spacing in Linux and A
 word-spacing:normal; /* Drops the inheritance of word-spacing in Linux and Android Qorta Qorte */
 box-shadow:none;
 text-shadow:none;
+cursor:var(--cpe-hand-cursor);
 }
 
 option {
