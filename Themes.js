@@ -9,6 +9,7 @@ window.MW18ContrastNotice = false;
 var visualThemes = ['basic','contrast','contrast','basic','simple'];
 var visualColors = ['standard','standard','forcedcolors','lunacolors','standard'];
 var visualThemeNames = ['Basic','High Contrast','High Contrast (Forced Colors)','Basic (XP Luna Colors)','Simple'];
+var contrastVisual = 1;
 
 (function () {
 document.querySelector('html').className += " theme-A"; // We begin with the first theme selected
@@ -43,9 +44,13 @@ ColorUpdate(true);
 		$("head").append('<style class="social-colors"></style>');
 		SocialCompile();
 		ManagerRows(); // For Task Manager Only
+		if ( ( window.matchMedia('(forced-colors: active)').matches ) ) {
+			VisualStyle(contrastVisual);
+		} else {
+			VisualStyle(-1); // We start without any visual style
+		}
 		ContrastBanner(); // Notice
 		VisualStyleCompile(); // Compiles the Contrast Options
-		VisualStyle(-1); // We start without any visual style
 		
 })();
 
@@ -193,7 +198,7 @@ function ContrastBanner() {
 
 /* For Task Manager */
 if  ($("body.mpisto-2018").length) {
-	if ( ( window.matchMedia('(forced-colors: active)').matches ) && (window.MW18ContrastNotice === false) ) {
+	if ( ( window.matchMedia('(forced-colors: active)').matches ) && (window.MW18ContrastNotice === false)  && ($('html').attr("visualtheme") !== 'contrast'  ) ) {
 		window.MW18ContrastNotice = true;
 		AddFloatingBanner("You're currently using a high contrast theme on your device. You may want to use the High Contrast visual style found in the <b>Visual Styles</b> dropdown in the page header so as to have a consistent high contrast experience.",'message','contrastbanner')  
 	} else {
