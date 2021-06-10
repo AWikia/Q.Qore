@@ -134,6 +134,7 @@
   <container>
   <div class="gradient-overlay" style="position:absolute; pointer-events:none;"></div>
   <div class="gradient-overlay-2" style="position:absolute; pointer-events:none;"></div>
+  <div class="body-community-background" style="position:absolute; pointer-events:none;"></div>
   <script>
 
 function GNavSearch() {
@@ -1577,7 +1578,7 @@ Checked = VisualEditor as default mode
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-upload" />
                   </svg>
 				</a>
-				<a class="cpe-floating-button no-flex critical win10-off" title="Randomize whole theme (Use with caution)" onclick="RandomColor()">
+				<a class="cpe-floating-button no-flex critical forcedcolors-off" title="Randomize whole theme (Use with caution)" onclick="RandomColor()">
 					<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-information" />
 					</svg>
@@ -1638,7 +1639,7 @@ Checked = VisualEditor as default mode
     </h2>
     You can choose a preset theme from the dropdown below to apply it to the wiki:
 		<br>
-		<div style="margin:0 auto; width:max-content;" class="pageheader-search">
+		<div style="margin:0 auto; width:max-content;" class="pageheader-search forcedcolors-off">
 			<div class="cpe-dropdown cpe-select">
 				<div class="cpe-input preset_theme cpe-dropdown__toggle">
 					<span class="cpe-select__value" value="0">Fandom Light</span>
@@ -1693,7 +1694,7 @@ Checked = VisualEditor as default mode
     Body
     </h2>
     <label class="customization-label">Background-color:</label> 
-    <div class="cpe-dropdown win10-off" cpe-orient="land">
+    <div class="cpe-dropdown forcedcolors-off" cpe-orient="land">
     <button class="cpe-button cpe-is-square color-button">
 			<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:var(--background-color);"></div>
     </button>
@@ -1720,14 +1721,14 @@ Checked = VisualEditor as default mode
 		</ul>
 	</div>
     </div>
-     <button class="cpe-floating-button no-flex win10-off" onclick="RandomColor1()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+     <button class="cpe-floating-button no-flex forcedcolors-off" onclick="RandomColor1()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-information" />
-         </svg></button> <button class="cpe-floating-button no-flex win10-off" onclick="PickColor1()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+         </svg></button> <button class="cpe-floating-button no-flex forcedcolors-off" onclick="PickColor1()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-text" />
          </svg></button>
 	<br><br>
     <label class="customization-label">Overlay-color:</label> 
-    <div class="cpe-dropdown win10-off legacy-off" cpe-orient="land">
+    <div class="cpe-dropdown forcedcolors-off legacy-off" cpe-orient="land">
     <button class="cpe-button cpe-is-square color-button">
 <svg xmlns="http://www.w3.org/2000/svg" class="overlaya-on" enable-background="new 0 0 24 24" height="28px" viewBox="0 0 24 24" width="28px" fill="currentColor"><g><rect fill="none" height="24" width="24"/></g><g><g><g><g><path d="M12,22C6.49,22,2,17.51,2,12S6.49,2,12,2s10,4.04,10,9c0,3.31-2.69,6-6,6h-1.77c-0.28,0-0.5,0.22-0.5,0.5 c0,0.12,0.05,0.23,0.13,0.33c0.41,0.47,0.64,1.06,0.64,1.67C14.5,20.88,13.38,22,12,22z M12,4c-4.41,0-8,3.59-8,8s3.59,8,8,8 c0.28,0,0.5-0.22,0.5-0.5c0-0.16-0.08-0.28-0.14-0.35c-0.41-0.46-0.63-1.05-0.63-1.65c0-1.38,1.12-2.5,2.5-2.5H16 c2.21,0,4-1.79,4-4C20,7.14,16.41,4,12,4z"/><circle cx="6.5" cy="11.5" r="1.5"/><circle cx="9.5" cy="7.5" r="1.5"/><circle cx="14.5" cy="7.5" r="1.5"/><circle cx="17.5" cy="11.5" r="1.5"/></g></g></g></g></svg>
 			<div class="overlaya-off" style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:var(--background-overlay);"></div>
@@ -1756,9 +1757,9 @@ Checked = VisualEditor as default mode
 		</ul>
 	</div>
     </div>
-     <button class="cpe-floating-button no-flex win10-off legacy-off" onclick="RandomColor8()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+     <button class="cpe-floating-button no-flex forcedcolors-off legacy-off" onclick="RandomColor8()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-information" />
-         </svg></button> <button class="cpe-floating-button no-flex win10-off legacy-off" onclick="PickColor8()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+         </svg></button> <button class="cpe-floating-button no-flex forcedcolors-off legacy-off" onclick="PickColor8()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-text" />
          </svg></button>
 
@@ -1766,7 +1767,7 @@ Checked = VisualEditor as default mode
     <label>Background-image: (.png/.jpg/.gif needed, up to 1000KB possible)</label>
     <br>
     Current Background:<div class="options-preview" style="background-image:url('headbg.jpg'); background-image:var(--background-image); background-size:contain; background-repeat:no-repeat; background-position:center;"></div>
-    <div class="cpe-dropdown upload-actions win10-off" cpe-orient="land">
+    <div class="cpe-dropdown upload-actions forcedcolors-off" cpe-orient="land">
 		<div class="cpe-floating-button">
 		<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-plus" />
@@ -1797,21 +1798,21 @@ Checked = VisualEditor as default mode
     </div>
     <br><br>
     <label class="customization-label">Background Display:</label>  
-    <input type="radio" checked name="themeBG" class="noncover-off win10-off" id="BG_1" autocomplete="off" onclick="ToggleBG()"></input> <label for="BG_1" class="noncover-off win10-off">Modern</label>  
-    <input type="radio" name="themeBG" class="win10-off" id="BG_2" autocomplete="off" onclick="ToggleBG()"></input> <label for="BG_2" class="win10-off">Legacy</label>
+    <input type="radio" checked name="themeBG" class="noncover-off forcedcolors-off" id="BG_1" autocomplete="off" onclick="ToggleBG()"></input> <label for="BG_1" class="noncover-off forcedcolors-off">Modern</label>  
+    <input type="radio" name="themeBG" class="forcedcolors-off" id="BG_2" autocomplete="off" onclick="ToggleBG()"></input> <label for="BG_2" class="forcedcolors-off">Legacy</label>
     <br><br>
     <label class="customization-label">Background Position:</label>  
-    <input type="radio" name="themeBG1" class="stretch-off win10-off" id="BG1_1" autocomplete="off" onclick="ToggleBG1()"></input> <label for="BG1_1" class="stretch-off win10-off">Top</label> 
-    <input type="radio" checked name="themeBG1" class="stretch-off win10-off" id="BG1_2" autocomplete="off" onclick="ToggleBG1()"></input> <label for="BG1_2" class="stretch-off win10-off">Middle</label>  
-    <input type="radio" name="themeBG1" class="stretch-off win10-off" id="BG1_3" autocomplete="off" onclick="ToggleBG1()"></input> <label for="BG1_3" class="stretch-off win10-off">Bottom</label>
+    <input type="radio" name="themeBG1" class="stretch-off forcedcolors-off" id="BG1_1" autocomplete="off" onclick="ToggleBG1()"></input> <label for="BG1_1" class="stretch-off forcedcolors-off">Top</label> 
+    <input type="radio" checked name="themeBG1" class="stretch-off forcedcolors-off" id="BG1_2" autocomplete="off" onclick="ToggleBG1()"></input> <label for="BG1_2" class="stretch-off forcedcolors-off">Middle</label>  
+    <input type="radio" name="themeBG1" class="stretch-off forcedcolors-off" id="BG1_3" autocomplete="off" onclick="ToggleBG1()"></input> <label for="BG1_3" class="stretch-off forcedcolors-off">Bottom</label>
 	<br><br>
     <label class="customization-label">Background Size:</label>    
-    <input type="radio"checked name="themeBG3" class="win10-off" id="BG3_1" autocomplete="off" onclick="ToggleBG3()"></input> <label for="BG3_1" class="win10-off">Cover</label> 
-    <input type="radio" name="themeBG3" class="modern-off win10-off" id="BG3_2" autocomplete="off" onclick="ToggleBG3()"></input> <label for="BG3_2" class="modern-off win10-off">Contain</label>  
-    <input type="radio" name="themeBG3" class="modern-off win10-off" id="BG3_3" autocomplete="off" onclick="ToggleBG3()"></input> <label for="BG3_3" class="modern-off win10-off">Stretched</label>
-    <input type="radio" name="themeBG3" class="modern-off win10-off" id="BG3_4" autocomplete="off" onclick="ToggleBG3()"></input> <label for="BG3_4" class="modern-off win10-off">Full</label>
+    <input type="radio"checked name="themeBG3" class="forcedcolors-off" id="BG3_1" autocomplete="off" onclick="ToggleBG3()"></input> <label for="BG3_1" class="forcedcolors-off">Cover</label> 
+    <input type="radio" name="themeBG3" class="modern-off forcedcolors-off" id="BG3_2" autocomplete="off" onclick="ToggleBG3()"></input> <label for="BG3_2" class="modern-off forcedcolors-off">Contain</label>  
+    <input type="radio" name="themeBG3" class="modern-off forcedcolors-off" id="BG3_3" autocomplete="off" onclick="ToggleBG3()"></input> <label for="BG3_3" class="modern-off forcedcolors-off">Stretched</label>
+    <input type="radio" name="themeBG3" class="modern-off forcedcolors-off" id="BG3_4" autocomplete="off" onclick="ToggleBG3()"></input> <label for="BG3_4" class="modern-off forcedcolors-off">Full</label>
 	<br><br>
-        <input type="checkbox" class="cover-off stretch-off modern-off win10-off" id="BG2" autocomplete="off" onclick="ToggleBG2()"></input> <label for="BG2" class="cover-off stretch-off modern-off win10-off">Disable Background Tiling</label>
+        <input type="checkbox" class="cover-off stretch-off modern-off forcedcolors-off" id="BG2" autocomplete="off" onclick="ToggleBG2()"></input> <label for="BG2" class="cover-off stretch-off modern-off forcedcolors-off">Disable Background Tiling</label>
     </fieldset>
     </div>
 
@@ -1825,7 +1826,7 @@ Checked = VisualEditor as default mode
     </h2>
     <label class="customization-label">Header-color:</label> 
     
-        <div class="cpe-dropdown win10-off" cpe-orient="land">
+        <div class="cpe-dropdown forcedcolors-off" cpe-orient="land">
     <button class="cpe-button cpe-is-square color-button">
 			<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:rgb(var(--community-header-bg));"></div>
     </button>
@@ -1854,9 +1855,9 @@ Checked = VisualEditor as default mode
     </div>
 
     
-     <button class="cpe-floating-button no-flex win10-off" onclick="RandomColor2()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+     <button class="cpe-floating-button no-flex forcedcolors-off" onclick="RandomColor2()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-information" />
-         </svg></button> <button class="cpe-floating-button no-flex win10-off" onclick="PickColor2()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+         </svg></button> <button class="cpe-floating-button no-flex forcedcolors-off" onclick="PickColor2()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-text" />
          </svg></button>
     <br><br>
@@ -1941,7 +1942,7 @@ Checked = VisualEditor as default mode
     Page
     </h2>
     <label class="customization-label">Background-color:</label> 
-        <div class="cpe-dropdown win10-off" cpe-orient="land">
+        <div class="cpe-dropdown forcedcolors-off" cpe-orient="land">
     <button class="cpe-button cpe-is-square color-button">
 			<div class="rvbg1" style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:var(--content-bg);"></div>
     </button>
@@ -1969,9 +1970,9 @@ Checked = VisualEditor as default mode
 	</div>
     </div>
     
-    <button class="cpe-floating-button no-flex win10-off" onclick="RandomColor3()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+    <button class="cpe-floating-button no-flex forcedcolors-off" onclick="RandomColor3()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-information" />
-         </svg></button> <button class="cpe-floating-button no-flex win10-off" onclick="PickColor3()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+         </svg></button> <button class="cpe-floating-button no-flex forcedcolors-off" onclick="PickColor3()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-text" />
          </svg></button>
     <br><br>
@@ -1979,7 +1980,7 @@ Checked = VisualEditor as default mode
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-alert" />
          </svg><span>Color:</span></label> 
 
-    <div class="cpe-dropdown win10-off" cpe-orient="land">
+    <div class="cpe-dropdown forcedcolors-off" cpe-orient="land">
     <button class="cpe-button cpe-is-square color-button">
 <svg xmlns="http://www.w3.org/2000/svg" class="colora-on" enable-background="new 0 0 24 24" height="28px" viewBox="0 0 24 24" width="28px" fill="currentColor"><g><rect fill="none" height="24" width="24"/></g><g><g><g><g><path d="M12,22C6.49,22,2,17.51,2,12S6.49,2,12,2s10,4.04,10,9c0,3.31-2.69,6-6,6h-1.77c-0.28,0-0.5,0.22-0.5,0.5 c0,0.12,0.05,0.23,0.13,0.33c0.41,0.47,0.64,1.06,0.64,1.67C14.5,20.88,13.38,22,12,22z M12,4c-4.41,0-8,3.59-8,8s3.59,8,8,8 c0.28,0,0.5-0.22,0.5-0.5c0-0.16-0.08-0.28-0.14-0.35c-0.41-0.46-0.63-1.05-0.63-1.65c0-1.38,1.12-2.5,2.5-2.5H16 c2.21,0,4-1.79,4-4C20,7.14,16.41,4,12,4z"/><circle cx="6.5" cy="11.5" r="1.5"/><circle cx="9.5" cy="7.5" r="1.5"/><circle cx="14.5" cy="7.5" r="1.5"/><circle cx="17.5" cy="11.5" r="1.5"/></g></g></g></g></svg>
 
@@ -2011,9 +2012,9 @@ Checked = VisualEditor as default mode
     </div>
 
     
-    <button class="cpe-floating-button no-flex win10-off" onclick="RandomColor4()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+    <button class="cpe-floating-button no-flex forcedcolors-off" onclick="RandomColor4()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-information" />
-         </svg></button> <button class="cpe-floating-button no-flex win10-off" onclick="PickColor4()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+         </svg></button> <button class="cpe-floating-button no-flex forcedcolors-off" onclick="PickColor4()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-text" />
          </svg></button>
     <br><br>
@@ -2021,7 +2022,7 @@ Checked = VisualEditor as default mode
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-alert" />
          </svg><span>Border-color:</span></label> 
     
-    <div class="cpe-dropdown win10-off" cpe-orient="land">
+    <div class="cpe-dropdown forcedcolors-off" cpe-orient="land">
     <button class="cpe-button cpe-is-square color-button">
 <svg xmlns="http://www.w3.org/2000/svg" class="bordera-on" enable-background="new 0 0 24 24" height="28px" viewBox="0 0 24 24" width="28px" fill="currentColor"><g><rect fill="none" height="24" width="24"/></g><g><g><g><g><path d="M12,22C6.49,22,2,17.51,2,12S6.49,2,12,2s10,4.04,10,9c0,3.31-2.69,6-6,6h-1.77c-0.28,0-0.5,0.22-0.5,0.5 c0,0.12,0.05,0.23,0.13,0.33c0.41,0.47,0.64,1.06,0.64,1.67C14.5,20.88,13.38,22,12,22z M12,4c-4.41,0-8,3.59-8,8s3.59,8,8,8 c0.28,0,0.5-0.22,0.5-0.5c0-0.16-0.08-0.28-0.14-0.35c-0.41-0.46-0.63-1.05-0.63-1.65c0-1.38,1.12-2.5,2.5-2.5H16 c2.21,0,4-1.79,4-4C20,7.14,16.41,4,12,4z"/><circle cx="6.5" cy="11.5" r="1.5"/><circle cx="9.5" cy="7.5" r="1.5"/><circle cx="14.5" cy="7.5" r="1.5"/><circle cx="17.5" cy="11.5" r="1.5"/></g></g></g></g></svg>
 			<div class="bordera-off" style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:var(--content-border);"></div>
@@ -2051,9 +2052,9 @@ Checked = VisualEditor as default mode
 	</div>
     </div>
 
-    <button class="cpe-floating-button no-flex win10-off" onclick="RandomColor5()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+    <button class="cpe-floating-button no-flex forcedcolors-off" onclick="RandomColor5()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-information" />
-         </svg></button> <button class="cpe-floating-button no-flex win10-off" onclick="PickColor5()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+         </svg></button> <button class="cpe-floating-button no-flex forcedcolors-off" onclick="PickColor5()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-text" />
          </svg></button>
     <br><br>
@@ -2061,7 +2062,7 @@ Checked = VisualEditor as default mode
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-alert" />
          </svg><span>Link-color:</span></label> 
 
-    <div class="cpe-dropdown win10-off" cpe-orient="land">
+    <div class="cpe-dropdown forcedcolors-off" cpe-orient="land">
     <button class="cpe-button cpe-is-square color-button">
 			<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:rgb(var(--link-color));"></div>
     </button>
@@ -2090,9 +2091,9 @@ Checked = VisualEditor as default mode
     </div>
 
     
-    <button class="cpe-floating-button no-flex win10-off" onclick="RandomColor6()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+    <button class="cpe-floating-button no-flex forcedcolors-off" onclick="RandomColor6()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-information" />
-         </svg></button> <button class="cpe-floating-button no-flex win10-off" onclick="PickColor6()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+         </svg></button> <button class="cpe-floating-button no-flex forcedcolors-off" onclick="PickColor6()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-text" />
          </svg></button>
     <br><br>
@@ -2100,7 +2101,7 @@ Checked = VisualEditor as default mode
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-alert" />
          </svg><span>Button-color:</span></label> 
 
-    <div class="cpe-dropdown win10-off" cpe-orient="land">
+    <div class="cpe-dropdown forcedcolors-off" cpe-orient="land">
     <button class="cpe-button cpe-is-square color-button">
 			<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:var(--button-color);"></div>
     </button>
@@ -2129,9 +2130,9 @@ Checked = VisualEditor as default mode
     </div>
 
     
-    <button class="cpe-floating-button no-flex win10-off" onclick="RandomColor7()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+    <button class="cpe-floating-button no-flex forcedcolors-off" onclick="RandomColor7()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-information" />
-         </svg></button> <button class="cpe-floating-button no-flex win10-off" onclick="PickColor7()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+         </svg></button> <button class="cpe-floating-button no-flex forcedcolors-off" onclick="PickColor7()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-text" />
          </svg></button>
         <br>
@@ -2149,7 +2150,7 @@ Checked = VisualEditor as default mode
     <label>Secondary Font:</label><input class="cpe-input font_2nd" autocomplete="off" value="" placeholder="Enter your 2nd font (leave empty to default)" ></input> <button class="cpe-button cpe-is-squished" onclick="UpdateFont()">Update Font</button>
 	  <br>
 	  <div style="display:flex; align-items:center;">
-     <label>Button Radius:</label><input type="range" onchange="UpdateButtonRadi()" class="button_radi big" style="flex:1; padding:0 5px;" autocomplete="off" value="3" min="0" max="15" ></input>
+     <label>Border Radius:</label><input type="range" onchange="UpdateButtonRadi()" class="button_radi big" style="flex:1; padding:0 5px;" autocomplete="off" value="3" min="0" max="15" ></input>
      </div>
     <label>Wordmark Filter:</label><input class="cpe-input filter1" autocomplete="off" value="" placeholder="Enter your filter function here (Can be empty)" ></input> <button class="cpe-button cpe-is-squished" onclick="UpdateFilter1()">Update Filter</button>
 	  <br>

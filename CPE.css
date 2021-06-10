@@ -10,6 +10,7 @@ Catamaran = Tamil
 Noto Sans = Devanagari and Chinese
 Hind Siliguri = Bengali
 No Font (Baloo Tamma 2) = Kannada
+No Font (Baloo Tamma 2) = Kannada
 Kantumruy = Khmer
 Manjari = Malayalam
 Padauk = Myanmar
@@ -407,7 +408,7 @@ scrollbar-color:var(--button-color) var(--background-color);
 --secondary-foreign-fonts:"Jua","M PLUS Rounded 1c", "Mitr", "NTR", "Pavanam", "Mukta", "Noto Sans SC", "Noto Sans TC", "Noto Sans HK", "Baloo Da 2", "Baloo Tamma 2", "Battambang", "Baloo Chettan 2", "Padauk", "Baloo Bhaina 2", "Rubik";
 --secondary-font:var(--custom-secondary-font), "Rubik", "Arimo", "Liberation Sans", var(--secondary-foreign-fonts);
 --custom-secondary-font:"";
---button-radius:3px;
+--border-radius:3px;
 --max-width:2000px;
 /* Shapes */
 --cpe-teadrop:url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSI4Mi42NjY2NyIgaGVpZ2h0PSI4Mi42NjY2NyIgdmlld0JveD0iMCwwLDgyLjY2NjY3LDgyLjY2NjY3Ij4NCgk8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTk4LjY2NjY2LC0xMzguNjY2NjYpIj4NCgkJPGcgZGF0YS1wYXBlci1kYXRhPSJ7JnF1b3Q7aXNQYWludGluZ0xheWVyJnF1b3Q7OnRydWV9IiBmaWxsPSIjMDAwMDAwIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMCIgc3Ryb2tlLWxpbmVjYXA9ImJ1dHQiIHN0cm9rZS1saW5lam9pbj0ibWl0ZXIiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLWRhc2hhcnJheT0iIiBzdHJva2UtZGFzaG9mZnNldD0iMCIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPg0KCQkJPHBhdGggZmlsbD0iIzAwMDAwMCIgZD0iTTE5OC42NjY2NywxODBjMCwtMjIuODI3NzcgNDEuMzMzMzQsLTQxLjMzMzM0IDQxLjMzMzM0LC00MS4zMzMzNGMwLDAgNDEuMzMzMzMsMTguNTA1NTcgNDEuMzMzMzMsNDEuMzMzMzRjMCwyMi44Mjc3NyAtMTguNTA1NTYsNDEuMzMzMzQgLTQxLjMzMzMzLDQxLjMzMzM0Yy0yMi44Mjc3NywwIC00MS4zMzMzNCwtMTguNTA1NTcgLTQxLjMzMzM0LC00MS4zMzMzNHoiLz4NCgkJPC9nPg0KCTwvZz4NCjwvc3ZnPg==")
@@ -438,6 +439,27 @@ body {
 
 container {
     color:var(--background-color-text);
+	margin:0 auto;
+	max-width:var(--max-width);
+	position:relative;
+	display:block;
+	height:100vh;
+}
+
+
+.serif body { /* Noto Sans */
+--font-family:Aleo;
+--foreign-fonts:"Vollkorn", "Song Myung", "Noto Serif JP", "Pridi", "Amiri", "Ramaraja", "Catamaran", "Martel", "Noto Serif SC", "Noto Serif TC", "Hind Siliguri", "David Libre", "Benne", "Hanuman", "Manjari", "Padauk", "Baloo Bhaina 2";
+}
+
+.body-community-background {
+	top:0;
+	width:100%;
+	height:100%;
+	position:fixed!Important;
+	display:block;
+	content:"";
+	z-index:0;
 	background-repeat:no-repeat;
 	background-attachment:local;
 	background-attachment:fixed;
@@ -446,46 +468,42 @@ container {
 	background-size:cover;
 	background-image:var(--background-image);
 	background-color:var(--background-color);
-	margin:0 auto;
+	pointer-events:none;
 	max-width:var(--max-width);
-	position:relative;
-	display:block;
-}
+	image-rendering:initial;                  /* CSS4 Proposed  */
+	-qq-image-blurring:tick;                  /* 4x4 Web 1-2    */
 
-.serif body { /* Noto Sans */
---font-family:Aleo;
---foreign-fonts:"Vollkorn", "Song Myung", "Noto Serif JP", "Pridi", "Amiri", "Ramaraja", "Catamaran", "Martel", "Noto Serif SC", "Noto Serif TC", "Hind Siliguri", "David Libre", "Benne", "Hanuman", "Manjari", "Padauk", "Baloo Bhaina 2";
+
 }
 
 
-
-body[body-display*="legacy"] container {
+body[body-display*="legacy"] .body-community-background {
 	background-repeat:repeat;
 	--background-overlay:var(--background-color)!important;
 }
 
-body[body-display*="legacy"][background-size*="contain"] container {
+body[body-display*="legacy"][background-size*="contain"] .body-community-background {
 	background-size:contain;
 }
 
-body[body-display*="legacy"][background-size*="stretched"] container {
+body[body-display*="legacy"][background-size*="stretched"] .body-community-background {
 	background-size:100% 100%;
 	background-position:center;
 }
 
-body[body-display*="legacy"][background-size*="full"] container {
+body[body-display*="legacy"][background-size*="full"] .body-community-background {
 	background-size:auto;
 }
 
-body[body-display*="legacy"][body-no-tiling*="true"] container {
+body[body-display*="legacy"][body-no-tiling*="true"] .body-community-background {
 	background-repeat:no-repeat;
 }
 
 @media only screen and (min-width:2000px) {
-	body[body-display*="legacy"][background-size*="stretched"] container {
+	body[body-display*="legacy"][background-size*="stretched"] .body-community-background {
 		background-size:var(--max-width) 100%;
 	}
-	body[body-display*="legacy"][background-size*="contain"] container {
+	body[body-display*="legacy"][background-size*="contain"] .body-community-background {
 		background-size:var(--max-width);
 	}
 }
@@ -543,14 +561,18 @@ body[body-display*="legacy"] .gradient-overlay-2 {
 
 /* Option and Headings */
 button, input {
-position:relative;
-font-family:inherit;
-text-transform:none; /* Drops the inheritance in Edge and Firefox */
-letter-spacing:normal; /* Drops the inheritance of letter-spacing in Linux and Android Qorta Qorte */
-word-spacing:normal; /* Drops the inheritance of word-spacing in Linux and Android Qorta Qorte */
-box-shadow:none;
-text-shadow:none;
-cursor:var(--cpe-hand-cursor);
+	position:relative;
+	font-family:inherit;
+	text-transform:none; /* Drops the inheritance in Edge and Firefox */
+	letter-spacing:normal; /* Drops the inheritance of letter-spacing in Linux and Android Qorta Qorte */
+	word-spacing:normal; /* Drops the inheritance of word-spacing in Linux and Android Qorta Qorte */
+	box-shadow:none;
+	text-shadow:none;
+	cursor:var(--cpe-text-cursor);
+}
+
+button {
+	cursor:var(--cpe-body-cursor);
 }
 
 option {
@@ -722,7 +744,7 @@ cursor:var(--cpe-auto-cursor);
     color:var(--content-color);
     padding:9px 12px;
     border:0;
-    border-radius:var(--button-radius);
+    border-radius:var(--border-radius);
     display:inline-flex;
     align-items:center;
     justify-content:center;
@@ -810,7 +832,7 @@ select.cpe-input {
     font-weight:600;
     color:var(--button-color-text);
     padding:7px 12px;
-    border-radius:var(--button-radius);
+    border-radius:var(--border-radius);
     display:inline-flex;
     align-items:center;
     justify-content:center;
@@ -1183,7 +1205,7 @@ margin-left:0;
 background-color:transparent;
 color:var(--content-color);
 border:1px solid var(--content-border);
-border-radius:3px;
+border-radius:var(--border-radius);
 display:inline-block;
 left:50%;
 min-width:70%;
@@ -1233,7 +1255,7 @@ width:100%;
 height:100%;
 opacity:0.7;
 content:"";
-border-radius:2px;
+border-radius:calc(var(--border-radius) - 1px);
 }
 
 
@@ -1293,7 +1315,7 @@ z-index:1;
  transition-duration:200ms;
  transition-property: background-color,color;
  border:1px solid transparent;
- border-radius:var(--button-radius);
+ border-radius:var(--border-radius);
 }
 
  .cpe-dropdown__content .cpe-list.cpe-is-linked>li.cpe-is-selected>a:not(.cpe-button), .cpe-dropdown__content .cpe-list.cpe-is-linked>li:hover>a:not(.cpe-button){
@@ -1370,7 +1392,7 @@ top:auto;bottom:-8px
 
 .cpe-dropdown__content .cpe-list.cpe-is-linked .cpe-dropdown-level-2 .cpe-dropdown-level-2__content{
 border:1px solid var(--content-border);
-border-radius:3px;
+border-radius:var(--border-radius);
 display:none;
 left:100%;
 padding:8px 0;
@@ -1388,7 +1410,7 @@ width:100%;
 height:100%;
 opacity:0.85;
 content:"";
-border-radius:2px;
+border-radius:calc(var(--border-radius) - 1px);
 }
 
 .cpe-dropdown__content .cpe-list.cpe-is-linked .cpe-dropdown-level-2 .cpe-dropdown-level-2__content .cpe-list.cpe-is-linked>li>a:not(.cpe-button){
@@ -1547,10 +1569,13 @@ opacity:1;
 
 /* Floating Buttons */
 .cpe-floating-button {
+  --floating-button-color:var(--content-color);
+  --floating-button-background-color:var(--content-bg);
+  --floating-button-hover-background-color:var(--link-color-content-bg-mix-light);
   align-items: center;
   background-image:none;
-  background-color:var(--dropdown-bg);
-  color:var(--content-color);
+  background-color:var(--floating-button-background-color);
+  color:var(--floating-button-color);
   box-shadow: 0 0 10px 0 rgba(26, 26, 26, 0.25), 0 0 10px rgba(240, 240, 240, 0.25);
   border-radius: 50%;
   border: 0;
@@ -1572,9 +1597,9 @@ opacity:1;
 .cpe-floating-button:not(.cpe-is-disabled):hover {
   box-shadow: 0 0 10px 0 rgba(26, 26, 26, 0.5), 0 0 10px rgba(240, 240, 240, 0.5);
   background-image:none;
-  background-color:var(--link-color-content-bg-mix-light);
+  background-color:var(--floating-button-hover-background-color);
   border:0;
-  color:var(--content-color);
+  color:var(--floating-button-color);
 }
 .cpe-floating-button-group {
   display: inline-flex;
@@ -1595,15 +1620,13 @@ opacity:1;
 
 
 .cpe-floating-button.critical {
-	color:red;
+  --floating-button-color:#dd3333;
+  --floating-button-hover-background-color:var(--alert-color-content-bg-mix-light);
 }
 
 .cpe-floating-button.accent {
-	color:var(--content-border);
-}
-
-.cpe-floating-button.accent:hover {
-	background-color:var(--content-border-content-bg-mix-light);
+  --floating-button-color:var(--content-border);
+  --floating-button-hover-background-color:var(--content-border-content-bg-mix-light);
 }
 
 .cpe-floating-button.no-flex {
@@ -1846,7 +1869,9 @@ background-color:rgba(var(--link-color), 0.5);
 }
 
 
-:not(.unset)[disabled], :not(.unset):disabled {
+:not(.unset)[disabled], 
+:not(.unset):disabled, 
+html:not([visualcolors="standard"]) .forcedcolors-off {
 -webkit-filter:grayscale(100%)!important;
 filter:grayscale(100%)!important;
 opacity:1!important;

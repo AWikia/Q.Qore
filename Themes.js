@@ -1408,8 +1408,8 @@ function CompileRecColors() {
 function SocialCompile() {
 	$("head .social-colors").text('');	
 	let str = '';
-	var socialV = ['facebook','googleplus','line','linkedin','instagram','meneame','nk','odnoklassniki','reddit','tumblr','twitter','vkontakte','wykop','weibo','youtube','discord','fandom','asecure','steam','spotify','twitch','qore','mpisto','splashhol','gamepedia']
-	var socialC = ['#3b5998','#dd4b39','#00c300','#0077b5','#e02d69','#ff6400','#4077a7','#f96900','#ff4500','#34465d','#1da1f2','#587ca3','#fb803f','#ff8140','#cd201f','#5865f2','#00acac','#0009FF','#000','#1ed760','#563194','#ff4500','#18bbc5','#61448d','#f4801f']
+	var socialV = ['facebook','googleplus','line','linkedin','instagram','meneame','nk','odnoklassniki','reddit','tumblr','twitter','vkontakte','wykop','weibo','youtube','discord','fandom','asecure','steam','spotify','twitch','qore','mpisto','splashhol','gamepedia','info','success','warning','alert']
+	var socialC = ['#3b5998','#dd4b39','#00c300','#0077b5','#e02d69','#ff6400','#4077a7','#f96900','#ff4500','#34465d','#1da1f2','#587ca3','#fb803f','#ff8140','#cd201f','#5865f2','#00acac','#0009FF','#000','#1ed760','#563194','#ff4500','#18bbc5','#61448d','#f4801f','#575859','#14866d','#ffcc33','#dd3333']
 	var socialAM = socialC.length
 // Start Content BG
 		if ( (window.MW18darkmode === true) ) {
@@ -1695,6 +1695,30 @@ if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--backgr
 }
 
 document.querySelector('body').style.setProperty("--background-overlay", head_overlay);
+
+/* Info, Success, Warning and Alert color mixes */
+// Info
+infomixl = ColorTestTwin(content_color,'#575859',0.8,'rgb');
+infomix = ColorTestTwin(infomixl,'#575859',0.8,'rgb');
+document.querySelector('html').style.setProperty("--info-color-content-bg-mix-light", infomixl);
+document.querySelector('html').style.setProperty("--info-color-content-bg-mix", infomix);
+// Success
+successmixl = ColorTestTwin(content_color,'#14866d',0.8,'rgb');
+successmix = ColorTestTwin(successmixl,'#14866d',0.8,'rgb');
+document.querySelector('html').style.setProperty("--success-color-content-bg-mix-light", successmixl);
+document.querySelector('html').style.setProperty("--success-color-content-bg-mix", successmix);
+// Wanring
+warningmixl = ColorTestTwin(content_color,'#ffcc33',0.8,'rgb');
+warningmix = ColorTestTwin(warningmixl,'#ffcc33',0.8,'rgb');
+document.querySelector('html').style.setProperty("--warning-color-content-bg-mix-light", warningmixl);
+document.querySelector('html').style.setProperty("--warning-color-content-bg-mix", warningmix);
+// Alert
+alertmixl = ColorTestTwin(content_color,'#dd3333',0.8,'rgb');
+alertmix = ColorTestTwin(alertmixl,'#dd3333',0.8,'rgb');
+document.querySelector('html').style.setProperty("--alert-color-content-bg-mix-light", alertmixl);
+document.querySelector('html').style.setProperty("--alert-color-content-bg-mix", alertmix);
+
+
 
 
 /* Emphasis Themes */
@@ -2188,14 +2212,14 @@ var x = $('input.button_radi').val();
 	if (x=="0") {
 		$("style.designer-style.theme-Miscellaneous").append(
 		'html {' +
-		'--button-radius:0!important;' +
+		'--border-radius:0!important;' +
 		'}'
 		);	
 		
 	} else {
 		$("style.designer-style.theme-Miscellaneous").append(
 		'html {' +
-		'--button-radius:' + x + 'px!important;' +
+		'--border-radius:' + x + 'px!important;' +
 		'}'
 		);	
 	}
