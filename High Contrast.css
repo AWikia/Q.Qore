@@ -1142,9 +1142,8 @@ color:var(--button-color);
 }
 
 /* Forced Colors */
-[visualcolors*="forced"],
-[visualcolors*="forced"] body  {
---background-overlay:var(--background-color)!important;
+[visualcolors*="forced"]  {
+--background-overlay:auto!important;
 }
 
 .theme-A[visualcolors*="forced"]  {

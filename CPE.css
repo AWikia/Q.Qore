@@ -404,6 +404,69 @@ scrollbar-color:var(--button-color) var(--background-color);
 
 }
 
+/* Fandom Variable Aliases */
+:root {
+    --theme-body-dynamic-color-1: var(--background-color-text);
+    --theme-body-dynamic-color-1--rgb: var(--background-color-text-rgb);
+    --theme-body-dynamic-color-2: var(--background-color-text-dark);
+    --theme-body-dynamic-color-2--rgb: var(--background-color-dark-rgb);
+    --theme-page-dynamic-color-1: var(--content-color);
+    --theme-page-dynamic-color-1--rgb:  var(--content-color-rgb);
+    --theme-page-dynamic-color-2:  var(--content-color-dark);
+    --theme-page-dynamic-color-2--rgb:  var(--content-color-dark-rgb);
+    --theme-sticky-nav-dynamic-color-1:  var(--community-header-text);
+    --theme-sticky-nav-dynamic-color-1--rgb: var(--community-header-text-rgb);
+    --theme-sticky-nav-dynamic-color-2: var(--community-header-text-dark);
+    --theme-sticky-nav-dynamic-color-2--rgb: var(--community-header-text-dark-rgb);
+    --theme-link-dynamic-color-1: var(--link-color-text);
+    --theme-link-dynamic-color-1--rgb: var(--link-color-text-rgb);
+    --theme-link-dynamic-color-2: var(--link-color-text-dark);
+    --theme-link-dynamic-color-2--rgb: var(--link-color-text-dark-rgb);
+    --theme-accent-dynamic-color-1: var(--button-color-text);
+    --theme-accent-dynamic-color-1--rgb: var(--button-color-text-rgb);
+    --theme-accent-dynamic-color-2: var(--button-color-text-dark);
+    --theme-accent-dynamic-color-2--rgb: var(--button-color-text-dark-rgb);
+    --theme-body-background-color: var(--background-color);
+    --theme-body-background-color--rgb: var(--background-color-rgb);
+    --theme-body-background-image:var(--background-image);
+    --theme-body-text-color: var(--background-color-text);
+    --theme-body-text-color--hover: var(--background-color-text-dark);
+    --theme-sticky-nav-background-color: var(--community-header-bg);
+    --theme-sticky-nav-text-color: var(--community-header-text);
+    --theme-sticky-nav-text-color--hover: var(--community-header-text-dark);
+    --theme-page-background-color: var(--content-bg);
+    --theme-page-background-color--rgb: var(--content-bg-rgb);
+    --theme-page-background-color--secondary: var(--dropdown-bg);
+    --theme-page-text-color: var(--content-color);
+    --theme-page-text-color--rgb: var(--content-color-rgb);
+    --theme-page-text-color--hover: var(--content-color-dark);
+    --theme-page-text-mix-color: var(--content-bg-dark-super);
+    --theme-page-text-mix-color-95: var(--content-bg-dark);
+    --theme-page-accent-mix-color: var(--button-color-content-bg-mix);
+    --theme-page-headings-font: var(--secondary-font);
+    --theme-link-color: var(--link-color);
+    --theme-link-color--rgb: var(--link-color-rgb);
+    --theme-link-color--hover: var(--link-color-dark);
+    --theme-link-label-color: var(--link-color-text);
+    --theme-accent-color: var(--button-color);
+    --theme-accent-color--rgb: var(--button-color-rgb);
+    --theme-accent-color--hover: var(--button-color-dark);
+    --theme-accent-label-color: var(--button-color-text);
+    --theme-border-color: var(--content-border);
+    --theme-border-color--rgb: var(--content-border-rgb);
+    --theme-alert-color: #dd3333;
+    --theme-alert-color--rgb: 221,51,51;
+    --theme-alert-color--hover: #e66666;
+    --theme-alert-label: #fafafa;
+    --theme-warning-color: #e5ac00;
+    --theme-warning-label: #0a0a0a;
+    --theme-success-color: #14866d;
+    --theme-success-color--rgb: 20,134,109;
+    --theme-success-label: #fafafa;
+    --theme-message-color: #575859;
+    --theme-message-label: #fafafa;
+}
+
 :root { /* Standard */
 --background-image:url("loadbg_dev.png");
 --background-color:#441177;
