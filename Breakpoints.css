@@ -31,7 +31,7 @@
 @media only screen and (max-width:754px) {
 :root {
 	scrollbar-width:thin;
-	scrollbar-color:rgb(var(--community-header-bg)) var(--content-bg);
+	scrollbar-color:var(--community-header-bg) var(--content-bg);
 }
 
 

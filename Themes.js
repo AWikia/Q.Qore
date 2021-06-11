@@ -28,7 +28,7 @@ ColorUpdate(true);
 	}
 	if ( ($(".mpisto-gnav").length) ) {
 		$("head").append(
-		'<meta name="theme-color" content="' + chroma( getComputedStyle(document.querySelector('.mpisto-gnav')).getPropertyValue("--global-nav-color") ) + '">'
+		'<meta name="theme-color" content="' + chroma( 'rgb(' + getComputedStyle(document.querySelector('.mpisto-gnav')).getPropertyValue("--global-nav-color") + ')' ) + '">'
 		);	
 	} else {
 		$("head").append(
@@ -162,7 +162,7 @@ ContrastBanner();
 function ThemeColorMetaTag() {
 	/* Top bar for Mobile Devices */
 	if ( ($(".mpisto-gnav").length) ) {
-		$('meta[name*="theme-color"]').attr("content", chroma( getComputedStyle(document.querySelector('.mpisto-gnav')).getPropertyValue("--global-nav-color") ) );
+		$('meta[name*="theme-color"]').attr("content", chroma( 'rgb(' + getComputedStyle(document.querySelector('.mpisto-gnav')).getPropertyValue("--global-nav-color") + ')' ) );
 	} else {
 		$('meta[name*="theme-color"]').attr("content", chroma( $('body').css('background-color') ) );
 	}
@@ -365,7 +365,7 @@ function UploadPicture1B(image="") {
 
 	if ($("html.theme-C").length) {
 		$("style.designer-style.theme-C").append(
-		'.theme-B:not(.win10) {' +
+		'.theme-C:not(.win10) {' +
 		'--background-image:url("' + img + '")!important;' +
 		'}'
 		);	
@@ -811,7 +811,7 @@ UpdateValue()
 
 function PickColor2(color="") {
 if (color==="") {
-	var x= prompt("Header Background Color", chroma('rgb(' + getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg") + ')'));
+	var x= prompt("Header Background Color", chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg")));
 } else {
 	var x=color;
 }
@@ -937,7 +937,7 @@ function UpdateSet() {
 		$('input[type="range"][name="bg"].blue').val( chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--background-color")).get('rgb.b') );
 
 		/* Header */
-		var header_color =	'rgb(' + getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg") + ')';
+		var header_color =	getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg");
 		$('input[type="range"][name="header"].red').val(chroma(header_color).get('rgb.r') );
 		$('input[type="range"][name="header"].green').val( chroma(header_color).get('rgb.g') );
 		$('input[type="range"][name="header"].blue').val( chroma(header_color).get('rgb.b') );
@@ -962,7 +962,7 @@ function UpdateSet() {
 		}
 
 		/* Page Link */
-		var link_color =	'rgb(' + getComputedStyle(document.querySelector('html')).getPropertyValue("--link-color") + ')';
+		var link_color =	getComputedStyle(document.querySelector('html')).getPropertyValue("--link-color");
 		$('input[type="range"][name="linkcolor"].red').val(chroma(link_color).get('rgb.r') );
 		$('input[type="range"][name="linkcolor"].green').val( chroma(link_color).get('rgb.g') );
 		$('input[type="range"][name="linkcolor"].blue').val( chroma(link_color).get('rgb.b') );
@@ -985,8 +985,8 @@ function UpdateSet() {
 
 /* Updates all 8 required color variables for each theme to the values of the sliders */
 function UpdateValue() {
-	var linkcolor1final = $('input[type="range"][name="linkcolor"].red').val() + ',' + $('input[type="range"][name="linkcolor"].green').val() + ',' + $('input[type="range"][name="linkcolor"].blue').val(); ; 
-	var headercolorfinal = $('input[type="range"][name="header"].red').val() + ',' + $('input[type="range"][name="header"].green').val() + ',' + $('input[type="range"][name="header"].blue').val(); 
+	var linkcolor1final = chroma('rgb(' + $('input[type="range"][name="linkcolor"].red').val() + ',' + $('input[type="range"][name="linkcolor"].green').val() + ',' + $('input[type="range"][name="linkcolor"].blue').val() + ')') ;
+	var headercolorfinal = chroma('rgb(' + $('input[type="range"][name="header"].red').val() + ',' + $('input[type="range"][name="header"].green').val() + ',' + $('input[type="range"][name="header"].blue').val() + ')') ;
 	if ( $("body").attr('content-border-auto') === 'true' ) {
 		var contentborderfinal = 'auto' ;
 	} else {
@@ -1263,6 +1263,12 @@ function Color2(color) {
 	return chroma(color).get('rgb.r') + ',' + chroma(color).get('rgb.g') + ',' + chroma(color).get('rgb.b');
 }
 
+// Conversion for Hex
+function Color3(r=0,g=0,b=0) {
+	return chroma('rgb(' + r + ',' + g + ',' + b + ')' ).get('hex');
+}
+
+
 function isLightColor(color) {
 	return ((chroma.contrast('#0A0A0A', color)) > MW18LightThreshold*0.09);
 }
@@ -1533,6 +1539,14 @@ document.querySelector('html').style.setProperty("--content-bg-dark", content_co
 document.querySelector('html').style.setProperty("--content-bg-dark-super", content_color3); // Scrollbar
 document.querySelector('html').style.setProperty("--content-color-dark", content_text2);
 document.querySelector('html').style.setProperty("--content-color-dark-super", content_text3); // Scrollbar
+// RGB
+document.querySelector('html').style.setProperty("--dropdown-bg-rgb", Color2(dropdowncolor));
+document.querySelector('html').style.setProperty("--content-bg-rgb", Color2( getComputedStyle(document.querySelector('body')).getPropertyValue("--content-bg") ));
+document.querySelector('html').style.setProperty("--content-bg-dark-rgb", Color2(content_color2));
+document.querySelector('html').style.setProperty("--content-bg-dark-super-rgb", Color2(content_color3));
+document.querySelector('html').style.setProperty("--content-color-rgb", Color2( getComputedStyle(document.querySelector('body')).getPropertyValue("--content-color") ));
+document.querySelector('html').style.setProperty("--content-color-dark-rgb", Color2(content_text2));
+document.querySelector('html').style.setProperty("--content-color-dark-super-rgb", Color2(content_text3));
 
 
 /** Button Color **/
@@ -1563,22 +1577,30 @@ document.querySelector('html').style.setProperty("--button-color-text", buttonco
 document.querySelector('html').style.setProperty("--button-color-text-dark", buttoncolor2t);
 document.querySelector('html').style.setProperty("--button-color-content-bg-mix-light", buttonmixl);
 document.querySelector('html').style.setProperty("--button-color-content-bg-mix", buttonmix);
+// RGB
+document.querySelector('html').style.setProperty("--button-color-rgb", Color2(button_color));
+document.querySelector('html').style.setProperty("--button-color-dark-rgb", Color2(buttoncolor1));
+document.querySelector('html').style.setProperty("--button-color-dark-super-rgb", Color2(buttoncolor3));
+document.querySelector('html').style.setProperty("--button-color-text-rgb", Color2(buttoncolor2));
+document.querySelector('html').style.setProperty("--button-color-text-dark-rgb", Color2(buttoncolor2t));
+document.querySelector('html').style.setProperty("--button-color-blend-light-rgb", Color2( getComputedStyle(document.querySelector('html')).getPropertyValue("--button-color-blend-light") ));
+document.querySelector('html').style.setProperty("--button-color-blend-rgb", Color2( getComputedStyle(document.querySelector('html')).getPropertyValue("--button-color-blend") ));
 
 
 /** Header Color **/
 /* Set Vars */
-var header_color =	'rgb(' + getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg") + ')';
-var headercolor1 = ColorTest2(header_color,false);
-var headercolor2 = ColorTest2(header_color,true);
-var headercolor2t = ColorTest2('rgb(' + headercolor2 + ')',false);
-var headercolor3 = SuperColorTest2(header_color); // Scrollbar
+var header_color = getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg");
+var headercolor1 = ColorTest(header_color,false);
+var headercolor2 = ColorTest(header_color,true);
+var headercolor2t = ColorTest(headercolor2,false);
+var headercolor3 = SuperColorTest(header_color); // Scrollbar
 
 if (isLightColor(header_color)) {
-document.querySelector('html').style.setProperty("--community-header-bg-blend-light", getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg"));
+document.querySelector('html').style.setProperty("--community-header-bg-blend-light", header_color);
 document.querySelector('html').style.setProperty("--community-header-bg-blend", headercolor1);
 } else {
 document.querySelector('html').style.setProperty("--community-header-bg-blend-light", headercolor1);
-document.querySelector('html').style.setProperty("--community-header-bg-blend", getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg"));
+document.querySelector('html').style.setProperty("--community-header-bg-blend", header_color);
 }
 
 headermixl = ColorTestTwin(content_color,header_color,0.8,'rgb');
@@ -1593,24 +1615,32 @@ document.querySelector('html').style.setProperty("--community-header-text", head
 document.querySelector('html').style.setProperty("--community-header-text-dark", headercolor2t);
 document.querySelector('html').style.setProperty("--community-header-bg-content-bg-mix-light", headermixl);
 document.querySelector('html').style.setProperty("--community-header-bg-content-bg-mix", headermix);
+// RGB
+document.querySelector('html').style.setProperty("--community-header-bg-rgb", Color2(header_color));
+document.querySelector('html').style.setProperty("--community-header-dark-rgb", Color2(headercolor1));
+document.querySelector('html').style.setProperty("--community-header-dark-super-rgb", Color2(headercolor3));
+document.querySelector('html').style.setProperty("--community-header-text-rgb", Color2(headercolor2));
+document.querySelector('html').style.setProperty("--community-header-text-dark-rgb", Color2(headercolor2t));
+document.querySelector('html').style.setProperty("--community-header-bg-blend-light-rgb", Color2( getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg-blend-light") ));
+document.querySelector('html').style.setProperty("--community-header-bg-blend-rgb", Color2( getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg-blend") ));
 
 
 /** Link Color **/
 /* Set Vars */
-var link_color = 'rgb(' + getComputedStyle(document.querySelector('html')).getPropertyValue("--link-color") + ')';
-var linkcolor1 = ColorTest2(link_color,false);
+var link_color = getComputedStyle(document.querySelector('html')).getPropertyValue("--link-color");
+var linkcolor1 = ColorTest(link_color,false);
 var linkcolor2 = ColorTest(link_color,true);
 var linkcolor2t = ColorTest(linkcolor2,false);
-var linkcolor3 = SuperColorTest2(link_color); // Scrollbar
+var linkcolor3 = SuperColorTest(link_color); // Scrollbar
 
 
 
 if (isLightColor(link_color)) {
-document.querySelector('html').style.setProperty("--link-color-blend-light", getComputedStyle(document.querySelector('html')).getPropertyValue("--link-color"));
+document.querySelector('html').style.setProperty("--link-color-blend-light", link_color);
 document.querySelector('html').style.setProperty("--link-color-blend", linkcolor1);
 } else {
 document.querySelector('html').style.setProperty("--link-color-blend-light", linkcolor1);
-document.querySelector('html').style.setProperty("--link-color-blend", getComputedStyle(document.querySelector('html')).getPropertyValue("--link-color"));
+document.querySelector('html').style.setProperty("--link-color-blend", link_color);
 }
 
 linkmixl = ColorTestTwin(content_color,link_color,0.8,'rgb');
@@ -1624,6 +1654,14 @@ document.querySelector('html').style.setProperty("--link-color-text", linkcolor2
 document.querySelector('html').style.setProperty("--link-color-text-dark", linkcolor2t);
 document.querySelector('html').style.setProperty("--link-color-content-bg-mix-light", linkmixl);
 document.querySelector('html').style.setProperty("--link-color-content-bg-mix", linkmix);
+// RGB
+document.querySelector('html').style.setProperty("--link-color-rgb", Color2(link_color));
+document.querySelector('html').style.setProperty("--link-color-dark-rgb", Color2(linkcolor1));
+document.querySelector('html').style.setProperty("--link-color-dark-super-rgb", Color2(linkcolor3));
+document.querySelector('html').style.setProperty("--link-color-text-rgb", Color2(linkcolor2));
+document.querySelector('html').style.setProperty("--link-color-text-dark-rgb", Color2(linkcolor2t));
+document.querySelector('html').style.setProperty("--link-color-blend-light-rgb", Color2( getComputedStyle(document.querySelector('html')).getPropertyValue("--link-color-blend-light") ));
+document.querySelector('html').style.setProperty("--link-color-blend-rgb", Color2( getComputedStyle(document.querySelector('html')).getPropertyValue("--link-color-blend") ));
 
 /** Content Border **/
 /* Set Vars */
@@ -1657,6 +1695,14 @@ document.querySelector('html').style.setProperty("--content-border-text", border
 document.querySelector('html').style.setProperty("--content-border-text-dark", bordercolor2t);
 document.querySelector('html').style.setProperty("--content-border-content-bg-mix-light", bordermixl);
 document.querySelector('html').style.setProperty("--content-border-content-bg-mix", bordermix);
+// RGB
+document.querySelector('html').style.setProperty("--content-border-rgb", Color2(border_color));
+document.querySelector('html').style.setProperty("--content-border-dark-rgb", Color2(bordercolor1));
+document.querySelector('html').style.setProperty("--content-border-dark-super-rgb", Color2(bordercolor3));
+document.querySelector('html').style.setProperty("--content-border-text-rgb", Color2(bordercolor2));
+document.querySelector('html').style.setProperty("--content-border-text-dark-rgb", Color2(bordercolor2t));
+document.querySelector('html').style.setProperty("--content-border-blend-light-rgb", Color2( getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border-blend-light") ));
+document.querySelector('html').style.setProperty("--content-border-blend-rgb", Color2( getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border-blend") ));
 
 
 /** Body Bg **/
@@ -1685,7 +1731,14 @@ document.querySelector('html').style.setProperty("--background-color-text", head
 document.querySelector('html').style.setProperty("--background-color-text-dark", headcolor2t);
 document.querySelector('html').style.setProperty("--background-color-content-bg-mix-light", headmixl);
 document.querySelector('html').style.setProperty("--background-color-content-bg-mix", headmix);
-
+// RGB
+document.querySelector('html').style.setProperty("--background-color-rgb", Color2(head_color));
+document.querySelector('html').style.setProperty("--background-color-dark-rgb", Color2(headcolor1));
+document.querySelector('html').style.setProperty("--background-color-dark-super-rgb", Color2(headcolor3));
+document.querySelector('html').style.setProperty("--background-color-text-rgb", Color2(headcolor2));
+document.querySelector('html').style.setProperty("--background-color-text-dark-rgb", Color2(headcolor2t));
+document.querySelector('html').style.setProperty("--background-color-blend-light-rgb", Color2( getComputedStyle(document.querySelector('html')).getPropertyValue("--background-color-blend-light") ));
+document.querySelector('html').style.setProperty("--background-color-blend-rgb", Color2( getComputedStyle(document.querySelector('html')).getPropertyValue("--background-color-blend") ));
 
 /* Overlay Bg (For Adatpive mode) */
 if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--background-overlay") !== 'auto') && !($("html.contrast.win10").length)  ) {
@@ -1695,6 +1748,8 @@ if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--backgr
 }
 
 document.querySelector('body').style.setProperty("--background-overlay", head_overlay);
+// RGB
+document.querySelector('html').style.setProperty("--background-overlay-rgb", Color2(head_overlay));
 
 /* Info, Success, Warning and Alert color mixes */
 // Info
@@ -1726,6 +1781,9 @@ var emphasiscolor = chroma.mix(content_color, link_color, MW18HoverThreshold*2.5
 var emphasiscolor2 = chroma.mix(border_color, button_color, MW18HoverThreshold*2.5);
 document.querySelector('html').style.setProperty("--emphasis-bg", emphasiscolor);
 document.querySelector('html').style.setProperty("--accent-bg", emphasiscolor2);
+// RGB
+document.querySelector('html').style.setProperty("--emphasis-bg-rgb", Color2(emphasiscolor));
+document.querySelector('html').style.setProperty("--accent-bg-rgb", Color2(emphasiscolor2));
 
 ThemeColorMetaTag();
 
@@ -1760,7 +1818,7 @@ function CheckColorSuitability() {
 			var color1a = getComputedStyle(document.querySelector('body')).getPropertyValue("--content-color");
 			var color2  = getComputedStyle(document.querySelector('body')).getPropertyValue("--content-bg");
 		}
-		var color1b = 'rgb(' + getComputedStyle(document.querySelector('html')).getPropertyValue("--link-color") + ')';
+		var color1b = getComputedStyle(document.querySelector('html')).getPropertyValue("--link-color");
 		var color1c = getComputedStyle(document.querySelector('body')).getPropertyValue("--content-border");
 		var color1d = getComputedStyle(document.querySelector('html')).getPropertyValue("--button-color");
 		// Content Color

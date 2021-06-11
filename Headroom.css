@@ -1,14 +1,8 @@
 /* Headroom */
 .headroom .mpisto-gnav {
-	transition:/*-webkit-backdrop-filter 400ms ease, backdrop-filter 400ms ease,*/ transform 400ms ease;
-	will-change:color, background-color;
+	transition:/*-webkit-backdrop-filter 400ms ease, backdrop-filter 400ms ease,*/ transform 400ms ease, opacity 400ms ease, background-color 400ms ease;
+	will-change:color, background-color, opacity;
 }
-
-.headroom .mpisto-gnav:after {
-	transition:opacity 400ms ease, background-color 400ms ease;
-	will-change:opacity;
-}
-
 
 .headroom--bottom .mpisto-gnav /*, .phone.headroom.headroom--unpinned .mpisto-gnav */{
 	transform:translateY(-100%);
@@ -21,13 +15,13 @@ html:not([visualtheme*="contrast"]):not([visualtheme*="basic"]) body:not(.phone)
 */
 }
 
-html:not([visualtheme*="contrast"]):not([visualtheme*="basic"]) body:not(.phone).headroom.headroom--not-top .mpisto-gnav::after {
-	opacity:0.9;
+html:not([visualtheme*="contrast"]):not([visualtheme*="basic"]) body:not(.phone).headroom.headroom--not-top .mpisto-gnav {
+	--global-nav-opacity:0.9;
 }
 
 
 html:not([visualtheme*="basic"]) body:not(.phone).headroom.headroom--not-top .mpisto-gnav {
-	--global-nav-color:var(--accent-bg);
+	--global-nav-color:var(--accent-bg-rgb);
 }
 
 html:not([visualtheme*="basic"]) body:not(.phone).headroom.headroom--not-top .mpisto-gnav .cpe-input.cpe-is-alternate {

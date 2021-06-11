@@ -333,9 +333,9 @@ body *, :before, :after {
 }
 
 body:not([class*="page"]) .chat-content .wrapper section[pane] .list .channel:nth-child(1), .page-1 .chat-content .wrapper section[pane] .list .channel:nth-child(2) {
-	background-color:rgba(var(--link-color),0.2);
-	border-color:rgba(var(--link-color),0.2);
-	color:rgb(var(--link-color));
+	background-color:rgba(var(--link-color-rgb),0.2);
+	border-color:rgba(var(--link-color-rgb),0.2);
+	color:var(--link-color);
 }
 
 [visualtheme*="contrast"] body:not([class*="page"]) .chat-content .wrapper section[pane] .list .channel:nth-child(1), [visualtheme*="contrast"] .page-1 .chat-content .wrapper section[pane] .list .channel:nth-child(2) {

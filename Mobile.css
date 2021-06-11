@@ -15,45 +15,45 @@ font-family:'Inter', -apple-system, BlinkMacSystemFont, "Noto Sans", "Noto Sans 
 .store {
 --background-image:url("");
 --background-color:#f6f6f6;
---link-color:0,214,214;
+--link-color:#00d6d6;
 --content-bg:#ffffff;
 --content-border:#cccccc;
 --content-color:#002a32;
 --button-color:#00D6D6;
---community-header-bg:19,40,44;
+--community-header-bg:#13282c;
 }
 
 .store.theme-B {
 --background-image:url("");
 --background-color:#f6f6f6;
---link-color:0,183,224;
+--link-color:#00b7e0;
 --content-bg:#ffffff;
 --content-border:#cccccc;
 --content-color:#1a1a1a;
 --button-color:#00B7E0;
---community-header-bg:64,74,87;
+--community-header-bg:#404a57;
 }
 
 .store.theme-C {
 --background-image:url("");
---background-color:#002a32;
---link-color:26,94,184;
---content-bg:#0e191a;
---content-border:#7f9998;
---content-color:#d4d5d5;
---button-color:#1a5eb8;
---community-header-bg:64,74,86;
+--background-color:#f6f6f6;
+--link-color:#ff6a64;
+--content-bg:#f6f6f6;
+--content-border:#00d6d6;
+--content-color:#002a32;
+--button-color:#00D6D6;
+--community-header-bg:#13282c;
 }
 
 .store.theme-D {
 --background-image:url("");
 --background-color:#002a32;
---link-color:95,122,123;
+--link-color:#5f7a7b;
 --content-bg:#0e191a;
 --content-border:#7f9998;
 --content-color:#f2f5f5;
 --button-color:#5f7a7b;
---community-header-bg:190,207,208;
+--community-header-bg:#becfd0;
 }
 
 *:not(.store-header):not(.cpe-dropdown__content), :not(.store-header):before, :not(.store-header):after {
@@ -477,7 +477,7 @@ footer.mpisto-footer:after, footer.mpisto-footer:before {
 .cpe-dropdown__content .cpe-list.cpe-is-linked .cpe-dropdown-level-2 .cpe-dropdown-level-2__content {
 	border-color:transparent;
 	color:var(--link-color-text);
-	background-color:rgb(var(--link-color-blend-light));
+	background-color:var(--link-color-blend-light);
 }
 
 .cpe-dropdown__content:after,
@@ -486,18 +486,18 @@ footer.mpisto-footer:after, footer.mpisto-footer:before {
 }
 
 .cpe-dropdown__content .cpe-list.cpe-is-linked>li.cpe-is-selected>a:not(.cpe-button), .cpe-dropdown__content .cpe-list.cpe-is-linked>li:hover>a:not(.cpe-button){
-	background-color:rgb(var(--link-color-blend));
+	background-color:var(--link-color-blend);
 	color:var(--link-color-text-dark);
 }
 
 .cpe-dropdown::after{
-	border-bottom-color:rgb(var(--link-color-blend-light));
+	border-bottom-color:var(--link-color-blend-light);
 }
 
  .notification.cpe-dropdown__content .cpe-list > li:not(:last-child):not(.empty) a:hover:after {
 	opacity:1;
 	color:var(--link-color-text-dark);
-	background-color:rgb(var(--link-color-blend));
+	background-color:var(--link-color-blend);
 }
 
 .notification.cpe-dropdown__content .cpe-list > li:not(:last-child) a div h3,
@@ -591,7 +591,7 @@ padding:5px 0 0;
 .notification.cpe-dropdown__content .cpe-list.cpe-has-lines-between.cpe-has-ellipsis > li:not(:last-child) a img {
   line-height:nomral;
   vertical-align:middle;
-}
+}
 
 
 @media only screen and (max-width:754px) {
@@ -606,7 +606,7 @@ padding:5px 0 0;
 @media only screen and (max-width:959px) {
 :root {
 	scrollbar-width:thin;
-	scrollbar-color:rgb(var(--community-header-bg)) transparent;
+	scrollbar-color:ar(--community-header-bg) transparent;
 	min-width:360px;
 }
 

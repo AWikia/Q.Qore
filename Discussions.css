@@ -19,8 +19,8 @@
 	backdrop-filter:none;
 }
 
-.mpisto-content::after {
-	display:none;
+.mpisto-content {
+	background-color:transparent;
 }
 
 
@@ -125,7 +125,7 @@
 
 .mpisto-discussions-wrapper .card.main .post-send .post-area {
 	border-radius:10px;
-	box-shadow:0 0 10px 0.25px rgba(var(--link-color),0.6), 0 0 6px 0 rgba(0,0,0,.2), 0 0 6px 0 rgba(255,255,255,0.2);
+	box-shadow:0 0 10px 0.25px rgba(var(--link-color-rgb),0.6), 0 0 6px 0 rgba(0,0,0,.2), 0 0 6px 0 rgba(255,255,255,0.2);
 	border:0;
 	width:100%;
 	padding:10px;
@@ -232,7 +232,7 @@ body.editor1 .editor1off, body.editor2 .editor2off, body:not(.editor1) .editor1o
 @media only screen and (max-width:959px) {
 :root {
 	scrollbar-width:thin;
-	scrollbar-color:rgb(var(--community-header-bg)) transparent;
+	scrollbar-color:var(--community-header-bg) transparent;
 	min-width:360px;
 }
 
