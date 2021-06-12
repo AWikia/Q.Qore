@@ -915,10 +915,9 @@ background-image:linear-gradient(to bottom, var(--button-color-blend-light) 35%,
 
 
 [visualtheme*="simple"] .mpisto-gnav {
-	--global-nav-color:var(--button-color-blend-light)!important;
+	--global-nav-color:var(--button-color-blend-light-rgb)!important;
 	--global-nav-text-color:var(--button-color-text)!important;
 	--global-nav-opacity:1!important;
-	background-color:var(--global-nav-color);
 }
 
 
