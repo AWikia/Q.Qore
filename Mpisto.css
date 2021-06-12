@@ -661,8 +661,20 @@ background-color:rgba(var(--link-color-rgb), 0.1);
 		}
 
 /** Responsive Global Nav **/
+/* 
+**
+mob-only links only appear on XS breakpoint
+small-up links appears from S breakpoint onwards
+small-only links only appear on S breakpoint
+med-up links appear from M breakpoint onwards
+med-down links appear up to M breakpoint
+large-up links appear from L breakpoint onwards
+large-down links appear up to L breakpoint
+slarge-only links only appear on XL breakpoint
+**
+*/
 	@media only screen and (max-width:754px) {
-		.mpisto-global-navigation .link .small-up {
+		.mpisto-global-navigation .small-up {
 			display:none!important;
 		}
 
@@ -680,7 +692,7 @@ background-color:rgba(var(--link-color-rgb), 0.1);
 	}
 
 	@media only screen and (min-width:755px) {
-		.mpisto-global-navigation svg.mob-only {
+		.mpisto-global-navigation .mob-only {
 			display:none!important;
 		}
 	}
@@ -763,6 +775,9 @@ background-color:rgba(var(--link-color-rgb), 0.1);
 			display:none!important;
 		}
 */
+		.mpisto-global-navigation .slarge-only {
+			display:none!important;
+		}
 }
 
 
@@ -3140,7 +3155,7 @@ box-shadow:-1px 0 0 0 var(--dropdown-bg);
 .mpisto-right-pane .search-container {
 	width:100%;
 	display:flex;
-	margin-bottom:10px;
+	margin-bottom:0px;
 }
 
 .mpisto-right-pane .search-container .cpe-input {

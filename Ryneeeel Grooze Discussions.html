@@ -261,41 +261,28 @@ fill="currentColor" stroke="none">
 					</ul>
                   </div>
 					</div>
-       <div class="cpe-dropdown cpe-has-dark-shadow notifications-dropdown">
+       <div class="cpe-dropdown cpe-has-dark-shadow small-up">
         <div class="link cell cpe-dropdown__toggle"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon ">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-bell" /> 
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-flag" /> 
 </svg> <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown__toggle-chevron">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown-tiny" />
                   </svg>
     </div>
-        <div class="cpe-dropdown__content cpe-is-right-aligned cpe-is-not-scrollable notification">
+        <div class="cpe-dropdown__content cpe-is-right-aligned cpe-is-not-scrollable flags-dropdown">
           <ul class="cpe-list cpe-has-lines-between cpe-has-ellipsis">
-           <li class="notification">
-           <a>
-           <div class="wrapper">
-           <img class="mpisto-avatar" src="Frouda.jpg"></img><div><h3>Make your wiki even more better</h3> <br><h6>By Frouda<time>01 Mar 2018</time></h6></div>
-           </div>
-           </a>
-           </li>
-           <li class="notification">
-           <a>
-           <div class="wrapper">
-           <img class="mpisto-avatar" src="Zekzphire.png"></img><div><h3>Building a successfull site</h3> <br><h6>By Zekzphire<time>26 Feb 2018</time></h6></div>
-           </div>
-           </a>
-           </li>
-           <li class="empty">
-           No notifications
+           <li>
+           <button class="cpe-button cpe-is-squished cpe-is-full-width">Manage Flags</button>
            </li>
            <li>
-           <div>
-           <a href="#" class="markasread">Mark as read</a>
-           </div>
+           <button class="cpe-button cpe-is-squished cpe-is-full-width">Enforce Flags</button>
+           </li>
+           <li>
+           <button class="cpe-button cpe-is-squished cpe-is-full-width">Clear all Flags</button>
            </li>
           </ul>
         </div>
-      </div>
-				<a class="link cell mob-only" onclick="GNavSearch()">
+      </div>            
+				<a class="link cell" onclick="GNavSearch()">
 					<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon  search-on">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-magnifying-glass" /> 
 					</svg>
@@ -303,22 +290,26 @@ fill="currentColor" stroke="none">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-cross" />
 					</svg>
 				</a>
-				<div class="cpe-dropdown cpe-has-dark-shadow create-wiki">
+				<div class="cpe-dropdown cpe-has-dark-shadow create-wiki large-down">
 					<div class="link cpe-dropdown__toggle cell">
 						<span class="small-up">Wikis</span> <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown__toggle-chevron">
 						  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown-tiny" />
 						</svg> <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon mob-only">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-community" /></svg>
- 
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-community" /></svg> 
 					</div>
 					  <div class="cpe-dropdown__content cpe-is-right-aligned">
 						<ul class="cpe-list cpe-is-linked">
 						  <li><a>Create a Wiki</a></li>
-						  <li><a>Import a Wiki</a></li>
 						  <li><a>Report a Wiki</a></li>
 						</ul>
 					  </div>
 				</div>
+				<a class="link cell slarge-only">
+					<span>Create a Wiki</span>
+				</a>
+				<a class="link cell slarge-only">
+					<span>Report a Wiki</span>
+				</a>
 			</div>
 		</div>
 	</header>
