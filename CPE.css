@@ -440,8 +440,8 @@ scrollbar-color:var(--button-color) var(--background-color);
     --theme-page-text-color: var(--content-color);
     --theme-page-text-color--rgb: var(--content-color-rgb);
     --theme-page-text-color--hover: var(--content-color-dark);
-    --theme-page-text-mix-color: var(--content-bg-dark-super);
-    --theme-page-text-mix-color-95: var(--content-bg-dark);
+    --theme-page-text-mix-color: var(--content-color-content-bg-mix);
+    --theme-page-text-mix-color-95: var(--content-color-content-bg-mix-light);
     --theme-page-accent-mix-color: var(--button-color-content-bg-mix);
     --theme-page-headings-font: var(--secondary-font);
     --theme-link-color: var(--link-color);
@@ -791,6 +791,112 @@ cursor:var(--cpe-auto-cursor);
 	background-color:var(--scrollbar-track-text);
 }
 
+/* Misc */
+a {
+transition:color 200ms;
+text-decoration:none;
+color:var(--link-color);
+cursor:var(--cpe-hand-cursor);
+background-color:transparent;
+}
+
+a:hover {
+color:var(--link-color-dark);
+cursor:var(--cpe-hand-cursor);
+}
+
+abbr {
+  cursor:var(--cpe-help-cursor);
+}
+
+.cpe-dropdown__content .cpe-list label {
+	font-size:inherit;
+}
+
+a label, a input[type="checkbox"], a input[type="radio"] {
+cursor:var(--cpe-hand-cursor);
+}
+
+
+
+
+label, input[type="checkbox"], input[type="radio"] {
+cursor:inherit;
+vertical-align:middle;
+}
+
+label {
+	display:inline;
+	font-size:20px;
+	background:transparent;
+	transition:background-color 200ms;
+}
+
+mark {
+color:var(--content-color);
+background-color:rgba(var(--link-color-dark-rgb), 0.5);
+}
+
+mark * {
+color:inherit;
+}
+
+input[type="checkbox"] + label:active, input[type="radio"] + label:active,
+input[type="checkbox"]:active + label, input[type="radio"]:active + label {
+background-color:rgba(var(--link-color-rgb), 0.5);
+}
+
+
+:not(.unset)[disabled], 
+:not(.unset):disabled, 
+html:not([visualcolors="standard"]) .forcedcolors-off {
+-webkit-filter:grayscale(100%)!important;
+filter:grayscale(100%)!important;
+opacity:1!important;
+pointer-events:none!important;
+-webkit-user-select:none!important;
+-moz-user-select:none!important;
+user-select:none!important;
+cursor:var(--cpe-blocked-cursor)!important;
+}
+
+textarea, [contenteditable] {
+  cursor:var(--cpe-text-cursor);
+  scrollbar-width:thin;
+  scrollbar-color:var(--content-color) transparent;
+/** Scrollbar Styling **/
+	/* Width */
+	--scrollbar-width:8.5px;
+	/* Track */
+	--scrollbar-track-color-1:transparent;
+	--scrollbar-track-color-2:transparent;
+	--scrollbar-track-color-3:transparent;
+	--scrollbar-track-text:transparent;
+	/* Thumb */
+	--scrollbar-thumb-color-1:var(--content-color);
+	--scrollbar-thumb-color-2:var(--content-color-dark);
+	--scrollbar-thumb-color-3:var(--content-color-dark-super);
+	--scrollbar-thumb-text:var(--content-bg);
+
+}
+
+input[type="datetime-local"], input[type="date"], input[type="time"], input[type="week"], input[type="month"], input[type="year"] { /* Year is non-standard Qorta/mInerva input type */
+font-family:"LCD", monospace;
+}
+
+textarea {
+	border-color: #27a0da;
+	background-image:none;
+-webkit-appearance:none;
+appearance:none;
+font-family:monospace;
+}
+
+table {
+color:inherit;
+}
+
+
 
 
 /* Input Boxes */
@@ -882,6 +988,12 @@ select.cpe-input {
   --input-box-solid:var(--community-header-bg);
   --input-box-hover:var(--community-header-bg-content-bg-mix-light);
   --input-box-focus:var(--community-header-bg-content-bg-mix);
+}
+
+.cpe-input.cpe-is-colorline {
+  --input-box-solid:var(--content-color);
+  --input-box-hover:var(--content-color-content-bg-mix-light);
+  --input-box-focus:var(--content-color-content-bg-mix);
 }
 
 
@@ -1033,6 +1145,16 @@ a.cpe-button, button.cpe-button {
   --button-color-text-dark:var(--community-header-text-dark);
   --button-color-content-bg-mix-light:var(--community-header-bg-content-bg-mix-light);
   --button-color-content-bg-mix:var(--community-header-bg-content-bg-mix);
+}
+
+.cpe-button.cpe-is-colorline {
+  --button-color:var(--content-color);
+  --button-color-dark:var(--content-color-dark);
+  --button-color-dark-super:var(--content-color-dark-super);
+  --button-color-text:var(--content-color-text);
+  --button-color-text-dark:var(--content-color-text-dark);
+  --button-color-content-bg-mix-light:var(--content-color-content-bg-mix-light);
+  --button-color-content-bg-mix:var(--content-color-content-bg-mix);
 }
 
 
@@ -1264,7 +1386,7 @@ margin-left:0;
 
 /* Level A */
 .cpe-dropdown__content{
-	--dropdown-opacity:0.7!important;
+	--dropdown-opacity:0.7;
 background-color:rgba(var(--dropdown-bg-rgb),var(--dropdown-opacity));
 color:var(--content-color);
 border:1px solid var(--content-border);
@@ -1280,6 +1402,7 @@ position:absolute;
 transform:translateX(-50%);
 z-index:4;
 box-shadow:0 2px 6px 0 rgba(0,0,0,.2), 0 2px 6px 0 rgba(255,255,255,0.2);
+font-size:14px;
   scrollbar-width:thin;
   scrollbar-color:var(--content-border) transparent;
  /** Scrollbar Styling **/
@@ -1442,7 +1565,7 @@ top:auto;bottom:-8px
 }
 
 .cpe-dropdown__content .cpe-list.cpe-is-linked .cpe-dropdown-level-2 .cpe-dropdown-level-2__content{
-	--dropdown-opacity:0.85!important;
+	--dropdown-opacity:0.85;
 background-color:rgba(var(--dropdown-bg-rgb),var(--dropdown-opacity));
 border:1px solid var(--content-border);
 border-radius:var(--border-radius);
@@ -1611,7 +1734,7 @@ opacity:1;
 .cpe-floating-button {
   --floating-button-color:var(--content-color);
   --floating-button-background-color:var(--content-bg);
-  --floating-button-hover-background-color:var(--link-color-content-bg-mix-light);
+  --floating-button-hover-background-color:var(--content-color-content-bg-mix-light);
   align-items: center;
   background-image:none;
   background-color:var(--floating-button-background-color);
@@ -1770,6 +1893,13 @@ opacity:1;
 	--tabs-color-dark-super:var(--community-header-dark-super);
 }
 
+.cpe-tabs.cpe-is-colorline {
+	--tabs-color:var(--content-color);
+	--tabs-color-dark:var(--content-color-dark);
+	--tabs-color-dark-super:var(--content-color-dark-super);
+}
+
+
 
 /* Banners */
 .cpe-banner-notification{
@@ -1842,110 +1972,6 @@ border-top:1px solid var(--content-border);}
   z-index:19; /* Needed lower value to allow header dropdowns not to overlap */
 }
 
-
-
-
-/* Labels, Links, Markers and Textareas */
-a {
-transition:color 200ms;
-text-decoration:none;
-color:var(--link-color);
-cursor:var(--cpe-hand-cursor);
-background-color:transparent;
-}
-
-a:hover {
-color:var(--link-color-dark);
-cursor:var(--cpe-hand-cursor);
-}
-
-
-.cpe-dropdown__content .cpe-list label {
-	font-size:inherit;
-}
-
-a label, a input[type="checkbox"], a input[type="radio"] {
-cursor:var(--cpe-hand-cursor);
-}
-
-
-
-
-label, input[type="checkbox"], input[type="radio"] {
-cursor:inherit;
-vertical-align:middle;
-}
-
-label {
-	display:inline;
-	font-size:20px;
-	background:transparent;
-	transition:background-color 200ms;
-}
-
-mark {
-color:var(--content-color);
-background-color:rgba(var(--link-color-dark-rgb), 0.5);
-}
-
-mark * {
-color:inherit;
-}
-
-input[type="checkbox"] + label:active, input[type="radio"] + label:active,
-input[type="checkbox"]:active + label, input[type="radio"]:active + label {
-background-color:rgba(var(--link-color-rgb), 0.5);
-}
-
-
-:not(.unset)[disabled], 
-:not(.unset):disabled, 
-html:not([visualcolors="standard"]) .forcedcolors-off {
--webkit-filter:grayscale(100%)!important;
-filter:grayscale(100%)!important;
-opacity:1!important;
-pointer-events:none!important;
--webkit-user-select:none!important;
--moz-user-select:none!important;
-user-select:none!important;
-cursor:var(--cpe-blocked-cursor)!important;
-}
-
-textarea, [contenteditable] {
-  cursor:var(--cpe-text-cursor);
-  scrollbar-width:thin;
-  scrollbar-color:var(--content-color) transparent;
-/** Scrollbar Styling **/
-	/* Width */
-	--scrollbar-width:8.5px;
-	/* Track */
-	--scrollbar-track-color-1:transparent;
-	--scrollbar-track-color-2:transparent;
-	--scrollbar-track-color-3:transparent;
-	--scrollbar-track-text:transparent;
-	/* Thumb */
-	--scrollbar-thumb-color-1:var(--content-color);
-	--scrollbar-thumb-color-2:var(--content-color-dark);
-	--scrollbar-thumb-color-3:var(--content-color-dark-super);
-	--scrollbar-thumb-text:var(--content-bg);
-
-}
-
-input[type="datetime-local"], input[type="date"], input[type="time"], input[type="week"], input[type="month"], input[type="year"] { /* Year is non-standard Qorta/mInerva input type */
-font-family:"LCD", monospace;
-}
-
-textarea {
-	border-color: #27a0da;
-	background-image:none;
--webkit-appearance:none;
-appearance:none;
-font-family:monospace;
-}
-
-table {
-color:inherit;
-}
 
 /* Checkboxes */
 /* Commented Styles = Old Design */

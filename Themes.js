@@ -1448,6 +1448,8 @@ function ColorUpdate(refresh) {
 /** Page BG **/
 /* Set Vars */
 // content_text is Content Color
+// content_text4 is Text color of Content Color
+// content_text5 is Dark text color of Content Color
 // content_color is Content Bg
 // dropdowncolor is Dropdown Bg
 // dropdowncolor3 is Automatic Content Color
@@ -1521,10 +1523,19 @@ var dropdowncolor = chroma.mix(content_color,'#fafafa',MW18HoverThreshold*0.4, '
 if (getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color") != 'auto') {
 	var content_text2 = ColorTest(content_text);
 	var content_text3 = SuperColorTest(content_text); // Scrollbar
+	var content_text4 = ColorTest(content_text,true);
+	var content_text5 = ColorTest(content_text4,false);
+	colormixl = ColorTestTwin(content_color,content_text,0.8,'rgb');
+	colormix = ColorTestTwin(colormixl,content_text,0.8,'rgb');
 } else {
 	var content_text2 = ColorTest(dropdowncolor3);
 	var content_text3 = SuperColorTest(dropdowncolor3); // Scrollbar
+	var content_text4 = ColorTest(dropdowncolor3,true);
+	var content_text5 = ColorTest(content_text4,false);
+	colormixl = ColorTestTwin(content_color,dropdowncolor3,0.8,'rgb');
+	colormix = ColorTestTwin(colormixl,dropdowncolor3,0.8,'rgb');
 }
+
 
 document.querySelector('html').style.setProperty("--dropdown-bg", dropdowncolor);
 document.querySelector('body').style.setProperty("--content-border", dropdowncolor2);
@@ -1539,6 +1550,11 @@ document.querySelector('html').style.setProperty("--content-bg-dark", content_co
 document.querySelector('html').style.setProperty("--content-bg-dark-super", content_color3); // Scrollbar
 document.querySelector('html').style.setProperty("--content-color-dark", content_text2);
 document.querySelector('html').style.setProperty("--content-color-dark-super", content_text3); // Scrollbar
+document.querySelector('html').style.setProperty("--content-color-text", content_text4);
+document.querySelector('html').style.setProperty("--content-color-text-dark", content_text5);
+document.querySelector('html').style.setProperty("--content-color-content-bg-mix-light", colormixl);
+document.querySelector('html').style.setProperty("--content-color-content-bg-mix", colormix);
+
 // RGB
 document.querySelector('html').style.setProperty("--dropdown-bg-rgb", Color2(dropdowncolor));
 document.querySelector('html').style.setProperty("--content-bg-rgb", Color2( getComputedStyle(document.querySelector('body')).getPropertyValue("--content-bg") ));
@@ -1547,6 +1563,8 @@ document.querySelector('html').style.setProperty("--content-bg-dark-super-rgb", 
 document.querySelector('html').style.setProperty("--content-color-rgb", Color2( getComputedStyle(document.querySelector('body')).getPropertyValue("--content-color") ));
 document.querySelector('html').style.setProperty("--content-color-dark-rgb", Color2(content_text2));
 document.querySelector('html').style.setProperty("--content-color-dark-super-rgb", Color2(content_text3));
+document.querySelector('html').style.setProperty("--content-color-text-rgb", Color2(content_text4));
+document.querySelector('html').style.setProperty("--content-color-text-dark-rgb", Color2(content_text5));
 
 
 /** Button Color **/

@@ -255,12 +255,6 @@ floatingbanner {
 all:initial!important;
 }
 
-abbr[title] {
-  cursor:var(--cpe-help-cursor);
-  text-decoration:none;
-  border-bottom:1px dotted currentColor;
-}
-
 .desktop-wiki {
 display:block;
 }

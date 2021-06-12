@@ -167,7 +167,7 @@ document.getElementById("Handler").className += " mpisto-servers"
 			<div class="tr">
 				<div class="left-links table">
 					<a class="company cell link search-on logotype" href="https://awikia.github.io/Q.Qore">
-						<span class="small-up">Qora Qore</span><svg class="cpe-icon mob-only" version="1.0" xmlns="http://www.w3.org/2000/svg"
+						<span class="small-up" translate="no">Qora Qore</span><svg class="cpe-icon mob-only" version="1.0" xmlns="http://www.w3.org/2000/svg"
  width="464.000000pt" height="464.000000pt" viewBox="0 0 464.000000 464.000000"
  preserveAspectRatio="xMidYMid meet">
 <g transform="translate(0.000000,464.000000) scale(0.100000,-0.100000)"
@@ -208,9 +208,9 @@ fill="currentColor" stroke="none">
 							  <li class="small-only"><a href="http://github.com/Awikia">Github</a></li>
 							  <li class="small-only"><a href="https://alphafoundation.fandom.com/el/wiki/Techno Company">Company</a></li>
 							  <li class="small-only"><a>Hiring</a></li>
-							  <li><a href="https://alpha-technologies.fandom.com/el" translate="false">A Techno Wiki</a></li>
-							  <li><a href="https://alpha-styles.fandom.com/el" translate="false">A Techo Dev Wiki</a></li>
-							  <li><a href="https://alphafoundation.fandom.com/el" translate="false">A Wiki Foundation</a></li>
+							  <li><a href="https://alpha-technologies.fandom.com/el" translate="no">A Techno Wiki</a></li>
+							  <li><a href="https://alpha-styles.fandom.com/el" translate="no">A Techo Dev Wiki</a></li>
+							  <li><a href="https://alphafoundation.fandom.com/el" translate="no">A Wiki Foundation</a></li>
 							  <li><a>More Wikis</a></li>
 							</ul>
 						  </div>
@@ -1322,15 +1322,15 @@ Checked = VisualEditor as default mode
      </h2>
     <input type="radio" name="cur" id="cur-0" onclick="Cursor('mpisto')" checked></input><label for="cur-0">Normal</label>
 	<br>
-    <input type="radio" name="cur" id="cur-10" onclick="Cursor('mpisto4')"></input><label for="cur-10">Mpisto OS X 2021</label>
+    <input type="radio" name="cur" id="cur-10" onclick="Cursor('mpisto4')"></input><label translate="no" for="cur-10">Mpisto OS X 2021</label>
 	<br>
-    <input type="radio" name="cur" id="cur-5" onclick="Cursor('mpisto3')"></input><label for="cur-5">Mpisto OS X 2020</label>
+    <input type="radio" name="cur" id="cur-5" onclick="Cursor('mpisto3')"></input><label translate="no" for="cur-5">Mpisto OS X 2020</label>
 	<br>
-    <input type="radio" name="cur" id="cur-1" onclick="Cursor('mpisto2')"></input><label for="cur-1">Mpisto OS</label>
+    <input type="radio" name="cur" id="cur-1" onclick="Cursor('mpisto2')"></input><label translate="no" for="cur-1">Mpisto OS</label>
 	<br>
-    <input type="radio" name="cur" id="cur-2" onclick="Cursor('linux')"></input><label for="cur-2">Ubuntu Linux</label>
+    <input type="radio" name="cur" id="cur-2" onclick="Cursor('linux')"></input><label translate="no" for="cur-2">Ubuntu Linux</label>
  	<br>
-    <input type="radio" name="cur" id="cur-3" onclick="Cursor('apple')"></input><label for="cur-3">Apple macOS</label>
+    <input type="radio" name="cur" id="cur-3" onclick="Cursor('apple')"></input><label translate="no" for="cur-3">Apple macOS</label>
 	<br>
     <input type="radio" name="cur" id="cur-4" onclick="Cursor('none')"></input><label for="cur-4">System Defaults</label>
     </fieldset>
@@ -1697,7 +1697,14 @@ Checked = VisualEditor as default mode
 	</svg>
     Body
     </h2>
-    <label class="customization-label">Background-color:</label> 
+    <label class="customization-label">
+    <div class="cpe-dropdown">
+		<abbr>Background-color:</abbr>
+		<div class="cpe-dropdown__content" style="min-width:100%;">
+			This color is used on body's background color, top gradient of the modern background display and buttons, tabs and inputs that use the <code>cpe-is-headline</code> class.
+		</div>
+	</div>
+    </label> 
     <div class="cpe-dropdown forcedcolors-off" cpe-orient="land">
     <button class="cpe-button cpe-is-square color-button">
 			<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:var(--background-color);"></div>
@@ -1731,7 +1738,14 @@ Checked = VisualEditor as default mode
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-text" />
          </svg></button>
 	<br><br>
-    <label class="customization-label">Overlay-color:</label> 
+    <label class="customization-label">
+    <div class="cpe-dropdown">
+		<abbr>Overlay-color:</abbr>
+		<div class="cpe-dropdown__content" style="min-width:100%;">
+			This color is used on the bottom gradient of the modern background display. Aliases to Background-color on Classic Background mode.
+		</div>
+	</div>
+    </label> 
     <div class="cpe-dropdown forcedcolors-off legacy-off" cpe-orient="land">
     <button class="cpe-button cpe-is-square color-button">
 <svg xmlns="http://www.w3.org/2000/svg" class="overlaya-on" enable-background="new 0 0 24 24" height="28px" viewBox="0 0 24 24" width="28px" fill="currentColor"><g><rect fill="none" height="24" width="24"/></g><g><g><g><g><path d="M12,22C6.49,22,2,17.51,2,12S6.49,2,12,2s10,4.04,10,9c0,3.31-2.69,6-6,6h-1.77c-0.28,0-0.5,0.22-0.5,0.5 c0,0.12,0.05,0.23,0.13,0.33c0.41,0.47,0.64,1.06,0.64,1.67C14.5,20.88,13.38,22,12,22z M12,4c-4.41,0-8,3.59-8,8s3.59,8,8,8 c0.28,0,0.5-0.22,0.5-0.5c0-0.16-0.08-0.28-0.14-0.35c-0.41-0.46-0.63-1.05-0.63-1.65c0-1.38,1.12-2.5,2.5-2.5H16 c2.21,0,4-1.79,4-4C20,7.14,16.41,4,12,4z"/><circle cx="6.5" cy="11.5" r="1.5"/><circle cx="9.5" cy="7.5" r="1.5"/><circle cx="14.5" cy="7.5" r="1.5"/><circle cx="17.5" cy="11.5" r="1.5"/></g></g></g></g></svg>
@@ -1768,7 +1782,14 @@ Checked = VisualEditor as default mode
          </svg></button>
 
     <br><br>
-    <label>Background-image: (.png/.jpg/.gif needed, up to 1000KB possible)</label>
+    <label>
+    <div class="cpe-dropdown">
+		<abbr>Background-image: (.png/.jpg/.gif needed, up to 1000KB possible)</abbr>
+		<div class="cpe-dropdown__content" style="min-width:50%;">
+			This image is used on the body on screens with 960 or more pixels. On modern background mode, it appears below the fading effect.
+		</div>
+	</div>
+    </label>
     <br>
     Current Background:<div class="options-preview" style="background-image:url('headbg.jpg'); background-image:var(--background-image); background-size:contain; background-repeat:no-repeat; background-position:center;"></div>
     <div class="cpe-dropdown upload-actions forcedcolors-off" cpe-orient="land">
@@ -1801,16 +1822,37 @@ Checked = VisualEditor as default mode
          </div>
     </div>
     <br><br>
-    <label class="customization-label">Background Display:</label>  
+    <label class="customization-label">
+    <div class="cpe-dropdown">
+		<abbr>Background Display:</abbr>
+		<div class="cpe-dropdown__content" style="min-width:100%;">
+			Sets the display of the background. Modern mode adds a fading effect above the background but only works for the Cover sizing. Legacy mode allows you to choose any background size you wish but removes the fading effect above the background.
+		</div>
+	</div>
+    </label>  
     <input type="radio" checked name="themeBG" class="noncover-off forcedcolors-off" id="BG_1" autocomplete="off" onclick="ToggleBG()"></input> <label for="BG_1" class="noncover-off forcedcolors-off">Modern</label>  
     <input type="radio" name="themeBG" class="forcedcolors-off" id="BG_2" autocomplete="off" onclick="ToggleBG()"></input> <label for="BG_2" class="forcedcolors-off">Legacy</label>
     <br><br>
-    <label class="customization-label">Background Position:</label>  
+    <label class="customization-label">
+    <div class="cpe-dropdown">
+		<abbr>Background Position:</abbr>
+		<div class="cpe-dropdown__content" style="min-width:100%;">
+			Sets background vertical alignment. This may not have any effect on cover background sizing depending on the screen size and the background while it does nothing on stretched background size.
+		</div>
+	</div>
+    </label>  
     <input type="radio" name="themeBG1" class="stretch-off forcedcolors-off" id="BG1_1" autocomplete="off" onclick="ToggleBG1()"></input> <label for="BG1_1" class="stretch-off forcedcolors-off">Top</label> 
     <input type="radio" checked name="themeBG1" class="stretch-off forcedcolors-off" id="BG1_2" autocomplete="off" onclick="ToggleBG1()"></input> <label for="BG1_2" class="stretch-off forcedcolors-off">Middle</label>  
     <input type="radio" name="themeBG1" class="stretch-off forcedcolors-off" id="BG1_3" autocomplete="off" onclick="ToggleBG1()"></input> <label for="BG1_3" class="stretch-off forcedcolors-off">Bottom</label>
 	<br><br>
-    <label class="customization-label">Background Size:</label>    
+    <label class="customization-label">
+    <div class="cpe-dropdown">
+		<abbr>Background Size:</abbr>
+		<div class="cpe-dropdown__content" style="min-width:100%; max-height:160px; overflow-y:auto;">
+			Sets background size. Cover makes the whole background appear on the screen while cropping parts don't fit in. Contain works like Cover but doesn't crop any part that doesn't fit it, leaving <abbr title="Based on body's background-color">colorful</abbr> bars. Stretch works like contain but it doesn't leave any <abbr title="Based on body's background-color">colorful</abbr> bar and disables any background position setting. Full makes the background appear at its original size, revealing more of the background on larger screens (Up to 2000px).
+		</div>
+	</div>
+    </label>    
     <input type="radio"checked name="themeBG3" class="forcedcolors-off" id="BG3_1" autocomplete="off" onclick="ToggleBG3()"></input> <label for="BG3_1" class="forcedcolors-off">Cover</label> 
     <input type="radio" name="themeBG3" class="modern-off forcedcolors-off" id="BG3_2" autocomplete="off" onclick="ToggleBG3()"></input> <label for="BG3_2" class="modern-off forcedcolors-off">Contain</label>  
     <input type="radio" name="themeBG3" class="modern-off forcedcolors-off" id="BG3_3" autocomplete="off" onclick="ToggleBG3()"></input> <label for="BG3_3" class="modern-off forcedcolors-off">Stretched</label>
@@ -1828,7 +1870,14 @@ Checked = VisualEditor as default mode
 	</svg>
     Header
     </h2>
-    <label class="customization-label">Header-color:</label> 
+    <label class="customization-label">
+    <div class="cpe-dropdown">
+		<abbr>Header-color:</abbr>
+		<div class="cpe-dropdown__content" style="min-width:100%;">
+			This color is used on title bars, community header and buttons, tabs and inputs that use the <code>cpe-is-titleline</code> class.
+		</div>
+	</div>
+    </label> 
     
         <div class="cpe-dropdown forcedcolors-off" cpe-orient="land">
     <button class="cpe-button cpe-is-square color-button">
@@ -1865,7 +1914,14 @@ Checked = VisualEditor as default mode
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-text" />
          </svg></button>
     <br><br>
-    <label>Header-image: (.png/.jpg/.gif needed, up to 1000KB possible)</label>
+    <label>
+    <div class="cpe-dropdown">
+		<abbr>Header-image: (.png/.jpg/.gif needed, up to 1000KB possible)</abbr>
+		<div class="cpe-dropdown__content" style="min-width:50%;">
+			This image is used on community header on screens with 755 or more pixels.
+		</div>
+	</div>
+    </label>
     <br>
     Current Graphic:<div class="options-preview" style="background-image:url('Graphic.png'); background-image:var(--graphic, url('Graphic.png')); width:100%; max-width:410px; height:100px; background-repeat:no-repeat; background-position:center; background-size:contain;"></div>
     <div class="cpe-dropdown upload-actions" cpe-orient="land">
@@ -1898,7 +1954,14 @@ Checked = VisualEditor as default mode
          </div>
     </div>
     <br><br>
-    <label>Header-wordmark: (.png needed, up to 1000KB possible)</label>
+    <label>
+    <div class="cpe-dropdown">
+		<abbr>Header-wordmark: (.png needed, up to 1000KB possible)</abbr>
+		<div class="cpe-dropdown__content" style="min-width:50%;">
+			This image is used on community header and global footer as a logo on screens with 755 or more pixels.
+		</div>
+	</div>
+    </label>
     <br>
     Current wordmark:<div class="options-preview" style="background-image:url('Wordmark.png'); background-image:var(--wordmark, url('Wordmark.png')); width:100%; max-width:250px; background-size:contain; height:65px; background-repeat:no-repeat; background-position:center;"></div>
     <div class="cpe-dropdown upload-actions" cpe-orient="land">
@@ -1928,9 +1991,25 @@ Checked = VisualEditor as default mode
          </div>
     </div>
     <br><br>
-    <label>Wiki-URL:</label><input class="cpe-input" autocomplete="off" value="mpisto-war-2018" placeholder="Wiki URL" ></input>
+    <label>
+    <div class="cpe-dropdown">
+		<abbr>Wiki-URL:</abbr>
+		<div class="cpe-dropdown__content" style="min-width:100%;">
+			This is used as as a subdomain url and can create the initial community sitename
+		</div>
+	</div>
+    </label>
+    <input class="cpe-input" autocomplete="off" value="mpisto-war-2018" placeholder="Wiki URL" ></input>
     <br>
-    <label>Wiki Name:</label><input class="cpe-input sitename" autocomplete="off" maxlength="30" oninput="UpdateSitename()" value="Qora Qore Web" placeholder="Wiki Name" ></input>
+    <label>
+    <div class="cpe-dropdown">
+		<abbr>Wiki Name:</abbr>
+		<div class="cpe-dropdown__content" style="min-width:100%;">
+			This is used as the Community Name. It appears on the community header next to the wordmark and to the local search input.
+		</div>
+	</div>
+    </label>
+    <input class="cpe-input sitename" autocomplete="off" maxlength="30" oninput="UpdateSitename()" value="Qora Qore Web" placeholder="Wiki Name" ></input>
     <br>
     <input type="checkbox" onclick="UpdateSitename()" name="32" autocomplete="off" id="311"></input> <label for="311">Add the<b> Wiki</b> suffix to the compiled sitename</label>
 
@@ -1945,7 +2024,14 @@ Checked = VisualEditor as default mode
 	</svg>
     Page
     </h2>
-    <label class="customization-label">Background-color:</label> 
+    <label class="customization-label">
+    <div class="cpe-dropdown">
+		<abbr>Background-color:</abbr>
+		<div class="cpe-dropdown__content" style="min-width:100%;">
+			This color is used as a background on many containers and is used to generate the main emphasis background-color named <code>--dropdown-bg</code>.
+		</div>
+	</div>
+    </label> 
         <div class="cpe-dropdown forcedcolors-off" cpe-orient="land">
     <button class="cpe-button cpe-is-square color-button">
 			<div class="rvbg1" style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:var(--content-bg);"></div>
@@ -1980,9 +2066,19 @@ Checked = VisualEditor as default mode
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-text" />
          </svg></button>
     <br><br>
-    <label class="customization-label"><svg xmlns="http://www.w3.org/2000/svg" title="This color is not recommended. Please choose another one to ensure better readability." class="cpe-icon color-warn">
+    <label class="customization-label">
+		<svg xmlns="http://www.w3.org/2000/svg" title="This color is not recommended. Please choose another one to ensure better readability." class="cpe-icon color-warn">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-alert" />
-         </svg><span>Color:</span></label> 
+         </svg>
+         <span>
+		<div class="cpe-dropdown">
+			<abbr>Color:</abbr>
+			<div class="cpe-dropdown__content" style="min-width:100%;">
+				This color is used as a text color for many containers and buttons, tabs and inputs that use the <code>cpe-is-colorline</code> class.
+			</div>
+		</div>
+         </span>
+       </label> 
 
     <div class="cpe-dropdown forcedcolors-off" cpe-orient="land">
     <button class="cpe-button cpe-is-square color-button">
@@ -2022,9 +2118,19 @@ Checked = VisualEditor as default mode
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-text" />
          </svg></button>
     <br><br>
-    <label class="customization-label"><svg xmlns="http://www.w3.org/2000/svg" title="This color is not recommended. Please choose another one to ensure better readability." class="cpe-icon border-warn">
+    <label class="customization-label">
+		<svg xmlns="http://www.w3.org/2000/svg" title="This color is not recommended. Please choose another one to ensure better readability." class="cpe-icon border-warn">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-alert" />
-         </svg><span>Border-color:</span></label> 
+         </svg>
+         <span>
+		<div class="cpe-dropdown">
+			<abbr>Border-color:</abbr>
+			<div class="cpe-dropdown__content" style="min-width:100%;">
+				This color is used as a border color for many containers and buttons, tabs and inputs that use the <code>cpe-is-borderline</code> class.
+			</div>
+		</div>
+         </span>
+       </label> 
     
     <div class="cpe-dropdown forcedcolors-off" cpe-orient="land">
     <button class="cpe-button cpe-is-square color-button">
@@ -2062,9 +2168,19 @@ Checked = VisualEditor as default mode
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-text" />
          </svg></button>
     <br><br>
-    <label class="customization-label"><svg xmlns="http://www.w3.org/2000/svg" title="This color is not recommended. Please choose another one to ensure better readability." class="cpe-icon link-warn">
+    <label class="customization-label">
+		<svg xmlns="http://www.w3.org/2000/svg" title="This color is not recommended. Please choose another one to ensure better readability." class="cpe-icon link-warn">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-alert" />
-         </svg><span>Link-color:</span></label> 
+         </svg>
+         <span>
+		<div class="cpe-dropdown">
+			<abbr>Link-color:</abbr>
+			<div class="cpe-dropdown__content" style="min-width:100%;">
+				This color is used for links, selected menu items and buttons, tabs and inputs that use the <code>cpe-is-alternate</code> class.
+			</div>
+		</div>
+         </span>
+       </label> 
 
     <div class="cpe-dropdown forcedcolors-off" cpe-orient="land">
     <button class="cpe-button cpe-is-square color-button">
@@ -2101,9 +2217,19 @@ Checked = VisualEditor as default mode
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-text" />
          </svg></button>
     <br><br>
-    <label class="customization-label"><svg xmlns="http://www.w3.org/2000/svg" title="This color is not recommended. Please choose another one to ensure better readability." class="cpe-icon button-warn">
+    <label class="customization-label">
+		<svg xmlns="http://www.w3.org/2000/svg" title="This color is not recommended. Please choose another one to ensure better readability." class="cpe-icon button-warn">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-alert" />
-         </svg><span>Button-color:</span></label> 
+         </svg>
+         <span>
+		<div class="cpe-dropdown">
+			<abbr>Button-color:</abbr>
+			<div class="cpe-dropdown__content" style="min-width:100%;">
+				This color is used for buttons, tabs and inputs. It is also used for selected menu items in High Contrast mode.
+			</div>
+		</div>
+         </span>
+       </label> 
 
     <div class="cpe-dropdown forcedcolors-off" cpe-orient="land">
     <button class="cpe-button cpe-is-square color-button">
@@ -2151,19 +2277,67 @@ Checked = VisualEditor as default mode
 	</svg>
     Miscellaneous
     </h2>
-    <label>Secondary Font:</label><input class="cpe-input font_2nd" autocomplete="off" value="" placeholder="Enter your 2nd font (leave empty to default)" ></input> <button class="cpe-button cpe-is-squished" onclick="UpdateFont()">Update Font</button>
+    <label>
+	<div class="cpe-dropdown">
+		<abbr>Secondary Font:</abbr>
+		<div class="cpe-dropdown__content" style="min-width:100%;">
+			Sets a custom font stack to be used on Headings. If a given language does not support that font stack, it fallbacks to CPE defaults.
+		</div>
+	</div>
+    </label>
+    <input class="cpe-input font_2nd" autocomplete="off" value="" placeholder="Enter your 2nd font (leave empty to default)" ></input> <button class="cpe-button cpe-is-squished" onclick="UpdateFont()">Update Font</button>
 	  <br>
 	  <div style="display:flex; align-items:center;">
-     <label>Border Radius:</label><input type="range" onchange="UpdateButtonRadi()" class="button_radi big" style="flex:1; padding:0 5px;" autocomplete="off" value="3" min="0" max="15" ></input>
+     <label>
+	<div class="cpe-dropdown">
+		<abbr>Border Radius:</abbr>
+		<div class="cpe-dropdown__content" style="min-width:100%;">
+			Sets how much round should be every container and element that adapts this setting.
+		</div>
+	</div>
+     </label>
+     <input type="range" onchange="UpdateButtonRadi()" class="button_radi big" style="flex:1; padding:0 5px;" autocomplete="off" value="3" min="0" max="15" ></input>
      </div>
-    <label>Wordmark Filter:</label><input class="cpe-input filter1" autocomplete="off" value="" placeholder="Enter your filter function here (Can be empty)" ></input> <button class="cpe-button cpe-is-squished" onclick="UpdateFilter1()">Update Filter</button>
+    <label>
+	<div class="cpe-dropdown">
+		<abbr>Wordmark Filter:</abbr>
+		<div class="cpe-dropdown__content" style="min-width:100%;">
+			Sets the filter the wordmark should have. Multiple filters are allowed.
+		</div>
+	</div>
+    </label>
+    <input class="cpe-input filter1" autocomplete="off" value="" placeholder="Enter your filter function here (Can be empty)" ></input> <button class="cpe-button cpe-is-squished" onclick="UpdateFilter1()">Update Filter</button>
 	  <br>
-    <label>Wordmark Filter (Hover):</label><input class="cpe-input filter2" autocomplete="off" value="" placeholder="Enter your filter function here (Can be empty)" ></input> <button class="cpe-button cpe-is-squished" onclick="UpdateFilter2()">Update Filter</button>
+    <label>
+	<div class="cpe-dropdown">
+		<abbr>Wordmark Filter (Hover):</abbr>
+		<div class="cpe-dropdown__content" style="min-width:100%;">
+			Sets the filter the wordmark should have while hovering. Multiple filters are allowed. If left empty, it fallbacks to the above filter (If set).
+		</div>
+	</div>
+    </label>
+    <input class="cpe-input filter2" autocomplete="off" value="" placeholder="Enter your filter function here (Can be empty)" ></input> <button class="cpe-button cpe-is-squished" onclick="UpdateFilter2()">Update Filter</button>
 	  <div style="display:flex; align-items:center;">
-     <label>Filter Transition Duration:</label><input type="range" onchange="UpdateFilter3()" class="filter_duration big" style="flex:1; padding:0 5px;" autocomplete="off" value="300" min="0" max="1000" step="20" ></input>
+     <label>
+	<div class="cpe-dropdown">
+		<abbr>Filter Transition Duration::</abbr>
+		<div class="cpe-dropdown__content" style="min-width:100%;">
+			Sets the duration of the filter to be fully applied when hovering and leaving on the wordmark.
+		</div>
+	</div>
+     </label>
+     <input type="range" onchange="UpdateFilter3()" class="filter_duration big" style="flex:1; padding:0 5px;" autocomplete="off" value="300" min="0" max="1000" step="20" ></input>
      </div>
 	  <div style="display:flex; align-items:center;">
-     <label>Filter Transition Delay:</label><input type="range" onchange="UpdateFilter4()" class="filter_delay big" style="flex:1; padding:0 5px;" autocomplete="off" value="0" min="0" max="1000" step="20" ></input>
+     <label>
+	<div class="cpe-dropdown">
+		<abbr>Filter Transition Delay::</abbr>
+		<div class="cpe-dropdown__content" style="min-width:100%;">
+			Sets the delay before the filter can be fully applied when hovering and leaving on the wordmark.
+		</div>
+	</div>
+     </label>
+     <input type="range" onchange="UpdateFilter4()" class="filter_delay big" style="flex:1; padding:0 5px;" autocomplete="off" value="0" min="0" max="1000" step="20" ></input>
      </div>
      <button class="cpe-button cpe-is-squished cpe-is-alternate" onclick="ResetMisc()">Clear Customizations</button>
     </fieldset>
@@ -2187,7 +2361,7 @@ Checked = VisualEditor as default mode
 				<a class="wordmark cell"><img src="Wordmark.png"></img></a>
 			<header class="mobile-header">
 				<section class="title">
-					<a>Qora Qore Web</a>
+					<a translate="no">Qora Qore Web</a>
 				</section>
 				<section class="container">
 					<section class="counters">
@@ -2317,7 +2491,7 @@ Checked = VisualEditor as default mode
 				<header class="color-header">
 						<div class="table">
 							<div class="tr">
-								<h2 class="title cell" style="text-align:left"><a>Qora Qore Web</a></h2>
+								<h2 class="title cell" style="text-align:left" translate="no"><a>Qora Qore Web</a></h2>
 								<div class="counters cell">
 									<div class="counter"><big>77</big> <span>Articles</span></div>
 									<div class="counter"><big>145</big> <span>Photos</span></div>
@@ -2474,6 +2648,11 @@ Checked = VisualEditor as default mode
 		<button class="cpe-button cpe-is-titleline">Button Test</button>
 		<button class="cpe-button cpe-is-secondary cpe-is-titleline">Button Test</button>
 		<button class="cpe-button cpe-is-text cpe-is-titleline">Button Test</button>
+	   </div>
+	   <div class="cpe-button-group">
+		<button class="cpe-button cpe-is-colorline">Button Test</button>
+		<button class="cpe-button cpe-is-secondary cpe-is-colorline">Button Test</button>
+		<button class="cpe-button cpe-is-text cpe-is-colorline">Button Test</button>
 	   </div>
 	</div>
 <!-- End Groups -->
