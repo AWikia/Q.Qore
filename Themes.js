@@ -6,10 +6,10 @@ window.MW18HoverThreshold = 0.25;
 window.MW18ContrastNotice = false;
 
 /* Visual Themes */
-var visualThemes = ['basic','contrast','contrast','basic','simple'];
-var visualColors = ['standard','standard','forcedcolors','lunacolors','standard'];
-var visualThemeNames = ['Basic','High Contrast','High Contrast (Forced Colors)','Basic (XP Luna Colors)','Simple'];
-var contrastVisual = 1;
+var visualThemes = ['basic','basic','contrast','contrast','contrast','simple'];
+var visualColors = ['standard','lunacolors','standard','classicforced','forced','standard'];
+var visualThemeNames = ['Basic','Basic (XP Luna Colors)','High Contrast','High Contrast (Classic Forced Colors)','High Contrast (Modern Forced Colors)','Simple'];
+var contrastVisual = 2;
 
 (function () {
 document.querySelector('html').className += " theme-A"; // We begin with the first theme selected
@@ -44,13 +44,13 @@ ColorUpdate(true);
 		$("head").append('<style class="social-colors"></style>');
 		SocialCompile();
 		ManagerRows(); // For Task Manager Only
+		VisualStyleCompile(); // Compiles the Contrast Options
 		if ( ( window.matchMedia('(forced-colors: active)').matches ) ) {
 			VisualStyle(contrastVisual);
 		} else {
 			VisualStyle(-1); // We start without any visual style
 		}
 		ContrastBanner(); // Notice
-		VisualStyleCompile(); // Compiles the Contrast Options
 		
 })();
 
@@ -69,6 +69,10 @@ function VisualStyle(style) {
 	} else {
 		$('html').attr("visualtheme", visualThemes[style]);
 		$('html').attr("visualcolors", visualColors[style]);
+	}
+	if ($("body.options").length) {
+		$("input[class*='CPEVisual']").removeAttr('checked');
+		document.querySelector('input#CPEVisual_' + style ).checked = true;
 	}
 	if (oldvisual !==	$('html').attr("visualcolors")) { // If Visual Colors get changed, update automated variables
 		ColorUpdate(true);

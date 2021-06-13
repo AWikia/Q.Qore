@@ -1462,6 +1462,7 @@ transform:none
 .cpe-dropdown__content:not(.cpe-is-not-scrollable) .cpe-list{
 max-height:300px;
 overflow-y:auto;
+overflow-x:visible;
 position:relative;
 z-index:1;
 }
