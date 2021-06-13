@@ -1207,12 +1207,12 @@ color:var(--button-color);
 
 .theme-A[visualcolors*="lunacolors"]  { /* Blue */
 --background-color:#215dc6!important;
---link-color:#215dc6!important;
+--link-color:215dc6!important;
 --content-bg:#edead9!important;
 --content-border:#7292e1!important;
 --content-color:#333333!important;
 --button-color:#47ab47!important;
---community-header-bg:#8ea06e!important;
+--community-header-bg:#215dc6!important;
 }
 
 .theme-B[visualcolors*="lunacolors"]  { /* Olive */
@@ -1222,7 +1222,7 @@ color:var(--button-color);
 --content-border:#a8b689!important;
 --content-color:#333333!important;
 --button-color:#51824a!important;
---community-header-bg:142,160,110!important;
+--community-header-bg:#8ea06e!important;
 }
 
 .theme-C[visualcolors*="lunacolors"]  { /* Silver */
