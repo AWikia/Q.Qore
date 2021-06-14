@@ -181,18 +181,19 @@ border-left-color:var(--button-color);
 }
 */
 
-.mpisto-gnav, .mpisto-header-container {
+.mpisto-global-sidebar, .mpisto-header-container {
+    --global-nav-color:var(--button-color-blend-light-rgb);
 	background-color:var(--button-color-blend-light);
 	color:var(--button-color-text);
 }
 
 
-.mpisto-gnav:after, .mpisto-header-container:before {
+.mpisto-global-sidebar:after, .mpisto-header-container:before {
 	display:none;
 }
 
 
-.mpisto-global-navigation .link:active, .mpisto-global-navigation .link:focus,  .mpisto-global-navigation .cpe-dropdown.cpe-is-active .link,
+.mpisto-global-sidebar .link:active, .mpisto-global-sidebar .link:focus,  .mpisto-global-sidebar .cpe-dropdown.cpe-is-active .link,
 .mpisto-header-container .link:hover, .mpisto-header-container .link:focus, .mpisto-header-container .cpe-dropdown.cpe-is-active .link {
 	background-color:var(--button-color-blend-light);
 	-webkit-animation:none;
@@ -206,18 +207,18 @@ border-left-color:var(--button-color);
 
 
 .color-header .link:hover, .color-header .cpe-dropdown.cpe-is-active .link,
-.mpisto-global-navigation .link:active, .mpisto-global-navigation .link:focus,  .mpisto-global-navigation .cpe-dropdown.cpe-is-active .link {
+.mpisto-global-sidebar .link:active, .mpisto-global-sidebar .link:focus,  .mpisto-global-sidebar .cpe-dropdown.cpe-is-active .link {
 	background-color:var(--button-color-blend);
 }
 
 
 
-	.mpisto-header-container .link:hover *:not([filter]), .mpisto-header-container .link.active *:not([filter]), .mpisto-global-navigation .link:hover *:not([filter]):not([filter]) {
+	.mpisto-header-container .link:hover *:not([filter]), .mpisto-header-container .link.active *:not([filter]), .mpisto-global-sidebar .link:hover *:not([filter]):not([filter]) {
 		filter:none;
 	}
 
 
-.mpisto-gnav.headroom {
+.mpisto-global-sidebar.headroom {
 	transition:transform 400ms ease;
 	will-change:transform;
 }
@@ -274,7 +275,6 @@ overflow:hidden;
 .page-wrapper .store-content {
   border:1px var(--content-border);
   display:block;
-  min-height:100%;
   border-style:none solid solid;
 }
 
@@ -398,7 +398,7 @@ z-index:5;
 }
 */
 
-.mpisto-gnav.headroom--bottom {
+.mpisto-global-sidebar.headroom--bottom {
 	transform:translateY(-100%);
 }
 
@@ -610,7 +610,7 @@ padding:5px 0 0;
 	min-width:360px;
 }
 
-.mpisto-gnav.headroom--top {
+.mpisto-global-sidebar.headroom--top {
 	box-shadow:none;
 }
 

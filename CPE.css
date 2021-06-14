@@ -896,9 +896,6 @@ table {
 color:inherit;
 }
 
-
-
-
 /* Input Boxes */
 .cpe-input {
 	--input-box-color:var(--content-bg);
@@ -1441,7 +1438,6 @@ transform:none;
 
 .cpe-dropdown__content.cpe-is-left-aligned{
 left:-10px;
-left:-10px;
 transform:none
 }
 
@@ -1968,7 +1964,7 @@ border-top:1px solid var(--content-border);}
 .headroom.headroom--not-top .top-gap .cpe-banner-notification__container#floatingbanner,
 .options #floatingbanner {
   position:fixed;
-  top:49px;
+  top:0px;
   width:inherit;
   z-index:19; /* Needed lower value to allow header dropdowns not to overlap */
 }

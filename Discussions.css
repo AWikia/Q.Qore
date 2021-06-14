@@ -49,7 +49,7 @@
 
 .mpisto-discussions-wrapper .card.first, .mpisto-discussions-wrapper .card.last {
 	max-height:calc(100vh - 69px); /*179*/
-	top:59px;
+	top:10px;
 	position:-webkit-sticky;
 	position:sticky;
 	overflow-y:auto;
@@ -111,7 +111,7 @@
 	position:static;
 	position:-webkit-sticky;
 	position:sticky;
-	top:49px;
+	top:0px;
 	border-color:var(--accent-bg);	
 	border-top:0;
 	border-bottom-left-radius:10px;

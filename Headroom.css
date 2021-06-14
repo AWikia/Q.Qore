@@ -1,30 +1,26 @@
 /* Headroom */
-.headroom .mpisto-gnav {
+.headroom .mpisto-global-sidebar {
 	transition:/*-webkit-backdrop-filter 400ms ease, backdrop-filter 400ms ease,*/ transform 400ms ease, opacity 400ms ease, background-color 400ms ease;
 	will-change:color, background-color, opacity;
 }
 
-.headroom--bottom .mpisto-gnav /*, .phone.headroom.headroom--unpinned .mpisto-gnav */{
-	transform:translateY(-100%);
-}
-
-html:not([visualtheme*="contrast"]):not([visualtheme*="basic"]) body:not(.phone).headroom.headroom--not-top .mpisto-gnav {
+html:not([visualtheme*="contrast"]):not([visualtheme*="basic"]) body:not(.phone).headroom.headroom--not-top .mpisto-global-sidebar {
 /*
 	-webkit-backdrop-filter:blur(8px) sepia(12%) contrast(112%) invert(12%) grayscale(12%) saturate(112%) hue-rotate(12deg) brightness(112%);
 	backdrop-filter:blur(8px) sepia(12%) contrast(112%) invert(12%) grayscale(12%) saturate(112%) hue-rotate(12deg) brightness(112%);
 */
 }
 
-html:not([visualtheme*="contrast"]):not([visualtheme*="basic"]) body:not(.phone).headroom.headroom--not-top .mpisto-gnav {
+html:not([visualtheme*="contrast"]):not([visualtheme*="basic"]) body:not(.phone).headroom.headroom--not-top .mpisto-global-sidebar {
 	--global-nav-opacity:0.9;
 }
 
 
-html:not([visualtheme*="basic"]) body:not(.phone).headroom.headroom--not-top .mpisto-gnav {
+html:not([visualtheme*="basic"]) body:not(.phone).headroom.headroom--not-top .mpisto-global-sidebar {
 	--global-nav-color:var(--accent-bg-rgb);
 }
 
-html:not([visualtheme*="basic"]) body:not(.phone).headroom.headroom--not-top .mpisto-gnav .cpe-input.cpe-is-alternate {
+html:not([visualtheme*="basic"]) body:not(.phone).headroom.headroom--not-top .mpisto-global-sidebar .cpe-input.cpe-is-alternate {
 	--input-box-hover:var(--button-color-content-bg-mix-light);
 	--input-box-focus:var(--button-color-content-bg-mix);
 	--input-box-solid:var(--button-color);
@@ -32,7 +28,7 @@ html:not([visualtheme*="basic"]) body:not(.phone).headroom.headroom--not-top .mp
 
 
 
-html:not([visualtheme*="contrast"]):not([visualtheme*="basic"]) body:not(.phone).headroom.headroom--not-top .mpisto-gnav {
+html:not([visualtheme*="contrast"]):not([visualtheme*="basic"]) body:not(.phone).headroom.headroom--not-top .mpisto-global-sidebar {
 	color:var(--button-color-text);
 	box-shadow: 0 0 3px var(--content-color), 0 0 3px var(--dropdown-bg);
 }

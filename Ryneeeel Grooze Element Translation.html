@@ -135,138 +135,117 @@
   <div class="gradient-overlay-2" style="position:absolute; pointer-events:none;"></div>
   <div class="body-community-background" style="position:absolute; pointer-events:none;"></div>
 
-  <script>
-
-function GNavSearch() {
-    var x = document.getElementById("GlobalNavigation");
-    if (x.className.indexOf("active-search") == -1) {
-        x.className += " active-search";
-    } else {
-        x.className = x.className.replace(" active-search", "");
-    }
-}
-
-function GNavSearchOff() {
-    var x = document.getElementById("GlobalNavigation");
-        x.className = x.className.replace(" active-search", "");
-}
-/* CSS for App */
-if (navigator.userAgent.match("MW18")) {
-document.getElementById("Handler").className += " mpisto-servers"
-}
-
-  </script>
-<div style="visibility:hidden" class="mpisto-gnav">
-<header class="mpisto-global-navigation">
-</header>
-</div>
-
-<div class="mpisto-gnav">
-	<header class="table mpisto-global-navigation" id="GlobalNavigation">
-		<div class="mpisto-global-navigation-wrapper">
-			<div class="tr">
-				<div class="left-links table">
-					<a class="company cell link search-on logotype" href="https://awikia.github.io/Q.Qore">
-						<span class="small-up" translate="no">Qora Qore</span><svg class="cpe-icon mob-only" version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="464.000000pt" height="464.000000pt" viewBox="0 0 464.000000 464.000000"
- preserveAspectRatio="xMidYMid meet">
-<g transform="translate(0.000000,464.000000) scale(0.100000,-0.100000)"
-fill="currentColor" stroke="none">
-<path d="M2130 4414 c-546 -63 -945 -253 -1295 -615 -276 -285 -449 -612 -530
--999 -33 -155 -45 -455 -26 -603 83 -620 435 -1126 979 -1405 306 -158 637
--225 987 -201 152 11 337 44 455 83 41 13 75 23 76 23 0 -1 76 -96 169 -211
-176 -218 236 -275 344 -323 164 -73 356 -70 520 9 91 44 216 169 259 258 83
-171 84 358 2 525 -16 33 -99 147 -184 254 -94 116 -153 198 -148 205 4 6 32
-49 63 96 155 233 264 525 305 817 22 157 14 463 -15 603 -64 312 -186 579
--364 795 -361 440 -839 673 -1415 689 -81 2 -163 2 -182 0z m283 -1349 c180
--47 313 -188 352 -372 24 -111 22 -112 -67 -21 -64 64 -101 92 -159 121 -246
-121 -529 73 -710 -121 -102 -109 -157 -248 -160 -402 l-1 -75 -19 59 c-46 143
--31 287 47 446 39 79 62 110 133 180 132 132 281 197 451 199 42 1 102 -6 133
--14z"/>
-</g>
-</svg>
-					</a>
-					<a class="cell link med-up" href="https://github.com/AWikia">
-						<span>GitHub</span>
-					</a>
-					<a class="cell link med-up" href="https://alphafoundation.fandom.com/el/wiki/Techno Company">
-						<span>Company</span>
-					</a>
-					<a class="cell link med-up">
-						<span>Hiring</span>
-					</a>
-					<div class="cpe-dropdown cpe-has-dark-shadow menu">
-						<div class="link cpe-dropdown__toggle cell">
-							<span class="small-up">Explore</span> 					<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny small-up cpe-dropdown__toggle-chevron">
-		  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown-tiny" /></svg> 
-
-							<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon mob-only">
-		  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-menu" /></svg> 
+  <main>
+  <header class="mpisto-global-sidebar">
+	<div class="upper-links">
+		<a class="company link" cpe-tooltip="Qora Qore" href="https://awikia.github.io/Q.Qore">
+			<svg class="cpe-icon" version="1.0" xmlns="http://www.w3.org/2000/svg"
+			 width="464.000000pt" height="464.000000pt" viewBox="0 0 464.000000 464.000000"
+			 preserveAspectRatio="xMidYMid meet">
+			<g transform="translate(0.000000,464.000000) scale(0.100000,-0.100000)"
+			fill="currentColor" stroke="none">
+			<path d="M2130 4414 c-546 -63 -945 -253 -1295 -615 -276 -285 -449 -612 -530
+			-999 -33 -155 -45 -455 -26 -603 83 -620 435 -1126 979 -1405 306 -158 637
+			-225 987 -201 152 11 337 44 455 83 41 13 75 23 76 23 0 -1 76 -96 169 -211
+			176 -218 236 -275 344 -323 164 -73 356 -70 520 9 91 44 216 169 259 258 83
+			171 84 358 2 525 -16 33 -99 147 -184 254 -94 116 -153 198 -148 205 4 6 32
+			49 63 96 155 233 264 525 305 817 22 157 14 463 -15 603 -64 312 -186 579
+			-364 795 -361 440 -839 673 -1415 689 -81 2 -163 2 -182 0z m283 -1349 c180
+			-47 313 -188 352 -372 24 -111 22 -112 -67 -21 -64 64 -101 92 -159 121 -246
+			121 -529 73 -710 -121 -102 -109 -157 -248 -160 -402 l-1 -75 -19 59 c-46 143
+			-31 287 47 446 39 79 62 110 133 180 132 132 281 197 451 199 42 1 102 -6 133
+			-14z"/>
+			</g>
+			</svg>
+		</a>
+		<a class="github link" cpe-tooltip="GitHub" href="https://github.com/AWikia">
+			<svg class="cpe-icon" height="32" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+		</a>
+		<a class="company link" cpe-tooltip="Company" href="https://alphafoundation.fandom.com/el/wiki/Techno Company">
+			<svg class="cpe-icon" id="svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="336.88888888888886" viewBox="0, 0, 400,336.88888888888886"><g id="svgg"><path id="path0" d="M152.219 5.345 C 131.916 12.561,125.406 28.637,120.007 84.889 C 113.900 148.518,107.967 160.844,50.274 229.769 C 25.981 258.791,9.775 279.477,7.053 284.939 C -4.324 307.764,19.499 332.142,42.240 320.946 C 48.379 317.924,48.157 318.155,63.265 299.070 C 68.314 292.692,78.608 280.017,86.142 270.904 L 99.839 254.333 105.697 253.744 C 108.919 253.420,124.356 251.591,140.000 249.681 C 226.581 239.107,233.532 241.149,312.889 300.465 C 345.425 324.785,349.285 327.416,356.653 330.304 C 376.763 338.185,395.999 325.971,395.980 305.333 C 395.966 290.005,393.951 287.058,348.898 236.444 C 312.082 195.085,305.352 186.824,293.136 168.000 C 286.858 158.326,280.890 148.431,247.570 92.444 C 201.532 15.092,180.038 -4.542,152.219 5.345 M183.346 90.020 C 187.444 96.487,201.732 120.178,215.097 142.667 C 228.462 165.156,241.524 186.856,244.123 190.889 C 246.722 194.922,248.558 198.218,248.202 198.213 C 247.847 198.207,245.556 197.595,243.111 196.851 C 225.089 191.368,188.711 189.744,160.108 193.146 C 142.474 195.244,143.517 195.396,146.217 191.119 C 161.210 167.369,167.872 143.683,172.521 97.606 C 173.640 86.512,174.857 77.621,175.225 77.848 C 175.593 78.076,179.247 83.553,183.346 90.020 " stroke="none" fill="currentColor" fill-rule="evenodd"></path></g></svg>
+		</a>
+		<a class="discord link" cpe-tooltip="Discord" href="https://discord.gg/QHNUZddW">
+			<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
+		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-discord" /></svg>
+		</a>
+		<div class="cpe-dropdown cpe-has-dark-shadow explore-menu" cpe-orient="land">
+			<div class="link cpe-dropdown__toggle" cpe-tooltip="Explore">
+				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
+		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-menu-control" /></svg> 
+			</div>
+		    <div class="cpe-dropdown__content">
+				<ul class="cpe-list cpe-is-linked">
+					<li><a href="https://alpha-technologies.fandom.com/el" translate="no">A Techno Wiki</a></li>
+					<li><a href="https://alpha-styles.fandom.com/el" translate="no">A Techo Dev Wiki</a></li>
+					<li><a href="https://alphafoundation.fandom.com/el" translate="no">A Wiki Foundation</a></li>
+					<li><a>More Wikis</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="bottom-links">
+	<!-- Wikis -->
+		<div class="cpe-dropdown cpe-has-dark-shadow create-wiki" cpe-orient="land">
+			<div class="link cpe-dropdown__toggle cell" cpe-tooltip="Wikis">
+				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-community" /></svg> 
+			</div>
+		    <div class="cpe-dropdown__content cpe-is-left-aligned">
+				<ul class="cpe-list cpe-is-linked">
+				  <li><a>Create a Wiki</a></li>
+				  <li><a>Import a Wiki</a></li>
+				  <li><a>Report a Wiki</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- Search -->
+		<div class="cpe-dropdown cpe-has-dark-shadow search" cpe-orient="land">
+			<div class="link cpe-dropdown__toggle" cpe-tooltip="Search">
+				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
+		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-magnifying-glass" /></svg> 
+			</div>
+		    <div class="cpe-dropdown__content">
+				<ul class="cpe-list">
+					<li>
+						<div class="pageheader-search">
+							<input class="cpe-input cpe-is-borderline" type="search" placeholder="Search on Qora Qore..."></input>
+							<button class="cpe-button cpe-is-borderline">
+								<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-magnifying-glass" /></svg>
+							</button>
 						</div>
-						  <div class="cpe-dropdown__content cpe-is-left-aligned">
-							<ul class="cpe-list cpe-is-linked">
-							  <li class="small-only"><a href="http://github.com/Awikia">Github</a></li>
-							  <li class="small-only"><a href="https://alphafoundation.fandom.com/el/wiki/Techno Company">Company</a></li>
-							  <li class="small-only"><a>Hiring</a></li>
-							  <li><a href="https://alpha-technologies.fandom.com/el" translate="no">A Techno Wiki</a></li>
-							  <li><a href="https://alpha-styles.fandom.com/el" translate="no">A Techo Dev Wiki</a></li>
-							  <li><a href="https://alphafoundation.fandom.com/el" translate="no">A Wiki Foundation</a></li>
-							  <li><a>More Wikis</a></li>
-							</ul>
-						  </div>
-					</div>
-				</div>
-				<a class="cell search-link">
-					<input type="search" class="cpe-input cpe-is-alternate" placeholder="Search on Mpisto..."></input>
-				</a>
-				  <div class="cpe-dropdown cpe-has-dark-shadow">
-					<div class="link cell cpe-dropdown__toggle"><img class="mpisto-avatar" src="HM100.png"></img> <small class="name med-up">HM100</small> <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown__toggle-chevron">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown-tiny" />
-                  </svg>
-				</div>
-					<div class="cpe-dropdown__content cpe-is-right-aligned">
-					  <ul class="cpe-list cpe-is-linked">
-					   <li><a>View Profile</a></li>
-					   <li><a>Log Out</a></li>
-					  </ul>
-					</div>
-				  </div>
-				<div class="cpe-dropdown cpe-has-dark-shadow">
-					<div class="link cell cpe-dropdown__toggle"><svg class="cpe-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 0H0v24h24z" fill="none"/><path d="M17.66 7.93L12 2.27 6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58c2.05 0 4.1-.78 5.66-2.34 3.12-3.12 3.12-8.19 0-11.31zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/></svg> <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown__toggle-chevron">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown-tiny" />
-                  </svg></div>
-                  <div class="cpe-dropdown__content">
-					<ul class="cpe-list cpe-is-linked">
-						<li>
-							<a onclick="HCa()">
-								Theme A
-							</a>
-						</li>
-						<li>
-							<a onclick="HCb()">
-								Theme B
-							</a>
-						</li>
-						<li>
-							<a onclick="HCc()">
-								Theme C
-							</a>
-						</li>
-						<li>
-							<a onclick="HCd()" >
-								Theme D
-							</a>
-						</li>
-					</ul>
-                  </div>
-					</div>
-       <div class="cpe-dropdown cpe-has-dark-shadow notifications-dropdown">
-        <div class="link cell cpe-dropdown__toggle"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon ">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-bell" /> 
-</svg> <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown__toggle-chevron">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown-tiny" />
-                  </svg>
-    </div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- Flags -->
+		<div class="cpe-dropdown cpe-has-dark-shadow flags-menu" cpe-orient="land">
+			<div class="link cpe-dropdown__toggle" cpe-tooltip="Flags">
+				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon ">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-flag" /> 
+				</svg>
+			</div>
+			<div class="cpe-dropdown__content cpe-is-left-aligned cpe-is-not-scrollable flags-dropdown">
+				<ul class="cpe-list cpe-has-lines-between cpe-has-ellipsis">
+					<li>
+						<button class="cpe-button cpe-is-squished cpe-is-full-width">Manage Flags</button>
+					</li>
+					<li>
+						<button class="cpe-button cpe-is-squished cpe-is-full-width">Enforce Flags</button>
+					</li>
+					<li>
+						<button class="cpe-button cpe-is-squished cpe-is-full-width">Clear all Flags</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	   <!-- Notification -->
+       <div class="cpe-dropdown cpe-has-dark-shadow notifications-menu" cpe-orient="land">
+        <div class="link cpe-dropdown__toggle" cpe-tooltip="Notifications">
+			<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon ">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-bell" /> 
+			</svg>
+		</div>
         <div class="cpe-dropdown__content cpe-is-right-aligned cpe-is-not-scrollable notification">
           <ul class="cpe-list cpe-has-lines-between cpe-has-ellipsis">
            <li class="notification">
@@ -294,62 +273,54 @@ fill="currentColor" stroke="none">
           </ul>
         </div>
       </div>
-       <div class="cpe-dropdown cpe-has-dark-shadow small-up">
-        <div class="link cell cpe-dropdown__toggle"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon ">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-flag" /> 
-</svg> <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown__toggle-chevron">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown-tiny" />
-                  </svg>
-    </div>
-        <div class="cpe-dropdown__content cpe-is-right-aligned cpe-is-not-scrollable flags-dropdown">
-          <ul class="cpe-list cpe-has-lines-between cpe-has-ellipsis">
-           <li>
-           <button class="cpe-button cpe-is-squished cpe-is-full-width">Manage Flags</button>
-           </li>
-           <li>
-           <button class="cpe-button cpe-is-squished cpe-is-full-width">Enforce Flags</button>
-           </li>
-           <li>
-           <button class="cpe-button cpe-is-squished cpe-is-full-width">Clear all Flags</button>
-           </li>
-          </ul>
-        </div>
-      </div>            
-				<a class="link cell" onclick="GNavSearch()">
-					<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon  search-on">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-magnifying-glass" /> 
-					</svg>
-					<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon  search-off">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-cross" />
-					</svg>
-				</a>
-				<div class="cpe-dropdown cpe-has-dark-shadow create-wiki large-down">
-					<div class="link cpe-dropdown__toggle cell">
-						<span class="small-up">Wikis</span> <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown__toggle-chevron">
-						  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown-tiny" />
-						</svg> <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon mob-only">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-community" /></svg> 
-					</div>
-					  <div class="cpe-dropdown__content cpe-is-right-aligned">
-						<ul class="cpe-list cpe-is-linked">
-						  <li><a>Create a Wiki</a></li>
-						  <li><a>Report a Wiki</a></li>
-						</ul>
-					  </div>
-				</div>
-				<a class="link cell slarge-only">
-					<span>Create a Wiki</span>
-				</a>
-				<a class="link cell slarge-only">
-					<span>Report a Wiki</span>
-				</a>
+      <!-- Themes -->
+		  <div class="cpe-dropdown cpe-has-dark-shadow themes"  cpe-orient="land">
+			<div class="link cpe-dropdown__toggle" cpe-tooltip="Themes">
+				<svg class="cpe-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 0H0v24h24z" fill="none"/><path d="M17.66 7.93L12 2.27 6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58c2.05 0 4.1-.78 5.66-2.34 3.12-3.12 3.12-8.19 0-11.31zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/></svg>
+			</div>
+			<div class="cpe-dropdown__content cpe-is-right-aligned">
+				<ul class="cpe-list cpe-is-linked">
+					<li>
+						<a onclick="HCa()">
+							Theme A
+						</a>
+					</li>
+					<li>
+						<a onclick="HCb()">
+							Theme B
+						</a>
+					</li>
+					<li>
+						<a onclick="HCc()">
+							Theme C
+						</a>
+					</li>
+					<li>
+						<a onclick="HCd()" >
+							Theme D
+						</a>
+					</li>
+				</ul>
 			</div>
 		</div>
-	</header>
-
-
+		<div class="cpe-dropdown cpe-has-dark-shadow user-profile" cpe-orient="land">
+			<div class="link cell cpe-dropdown__toggle" cpe-tooltip="HM100">
+				<img class="mpisto-avatar" src="HM100.png"></img>
+			</div>
+			<div class="cpe-dropdown__content cpe-is-right-aligned">
+				<ul class="cpe-list cpe-is-linked">
+				<li><a>Discussions Statistics</a></li>
+				<li><a>View Profile</a></li>
+				<li><a>Manage A Secure Account</a></li>
+				<li><a>Log Out</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+  </header>
 <!-- End Global Nav -->
-</div>
+
+  <aside class="mpisto-wikispace">
 
   <div class="top-gap"></div>
   
@@ -2010,6 +1981,8 @@ fill="currentColor" stroke="none">
     </div>
 </div>
 
+</aside>
+</main>
 </container>
 </body>
 </html>
