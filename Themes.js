@@ -27,13 +27,13 @@ UpdateMisc();
 		UpdateSet()
 		CompileRecColors();
 	}
-	if ( ($(".mpisto-gnav").length) ) {
+	if ( ($(".mpisto-global-sidebar").length) ) {
 		$("head").append(
-		'<meta name="theme-color" content="' + chroma( 'rgb(' + getComputedStyle(document.querySelector('.mpisto-gnav')).getPropertyValue("--global-nav-color") + ')' ) + '">'
+		'<meta name="theme-color" content="' + chroma( 'rgb(' + getComputedStyle(document.querySelector('.mpisto-global-sidebar')).getPropertyValue("--global-nav-color") + ')' ) + '">'
 		);	
 	} else {
 		$("head").append(
-		'<meta name="theme-color" content="' + chroma( $('body').css('background-color') ) + '">'
+		'<meta name="theme-color" content="' + chroma( $('container').css('background-color') ) + '">'
 		);	
 	}
 		$("head").append(
@@ -166,10 +166,10 @@ ContrastBanner();
 
 function ThemeColorMetaTag() {
 	/* Top bar for Mobile Devices */
-	if ( ($(".mpisto-gnav").length) ) {
-		$('meta[name*="theme-color"]').attr("content", chroma( 'rgb(' + getComputedStyle(document.querySelector('.mpisto-gnav')).getPropertyValue("--global-nav-color") + ')' ) );
+	if ( ($(".mpisto-global-sidebar").length) ) {
+		$('meta[name*="theme-color"]').attr("content", chroma( 'rgb(' + getComputedStyle(document.querySelector('.mpisto-global-sidebar')).getPropertyValue("--global-nav-color") + ')' ) );
 	} else {
-		$('meta[name*="theme-color"]').attr("content", chroma( $('body').css('background-color') ) );
+		$('meta[name*="theme-color"]').attr("content", chroma( $('container').css('background-color') ) );
 	}
 	CheckColorSuitability()
 }
