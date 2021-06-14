@@ -115,7 +115,7 @@
 	/* Unset */
 	header.mpisto-footer-container,
 	.lightbox-container  {
-		--global-nav-size:0!important;
+		--global-nav-size:0px!important;
 	}
 	.mpisto-editors-content,
 	.mpisto-options-content {
