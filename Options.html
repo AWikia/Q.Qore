@@ -305,7 +305,7 @@
 		</div>
 		<div class="cpe-dropdown cpe-has-dark-shadow user-profile" cpe-orient="land">
 			<div class="link cell cpe-dropdown__toggle" cpe-tooltip="HM100">
-				<img class="mpisto-avatar" src="HM100.png"></img>
+				<img class="mpisto-avatar" alt="HM100" src="HM100.png"></img>
 			</div>
 			<div class="cpe-dropdown__content cpe-is-right-aligned">
 				<ul class="cpe-list cpe-is-linked">
@@ -1568,11 +1568,6 @@ Checked = VisualEditor as default mode
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-undo" />
                   </svg>
 				</a>
-				<a class="cpe-floating-button critical" onclick="ResetThemesB()" title="Reset everything (Except some header options) to factory">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-explore" />
-                  </svg>
-				</a>
 				<a class="cpe-floating-button" onclick="DownloadTheme()" title="Download theme to your computer">
                   <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-download" />
@@ -1894,7 +1889,7 @@ Checked = VisualEditor as default mode
 	</div>
     </label>
     <br>
-    Current Graphic:<div class="options-preview" style="background-image:url('Graphic.png'); background-image:var(--graphic, url('Graphic.png')); width:100%; max-width:400px; height:100px; background-repeat:no-repeat; background-position:center; background-size:contain;"></div>
+    Current Graphic:<div class="options-preview" style="background-image:url('Graphic.png'); background-image:var(--graphic, url('Graphic.png')); width:100%; max-width:375px; height:100px; background-repeat:no-repeat; background-position:center; background-size:contain;"></div>
     <div class="cpe-dropdown upload-actions" cpe-orient="land">
 		<div class="cpe-floating-button">
 		<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
@@ -2310,7 +2305,6 @@ Checked = VisualEditor as default mode
      </label>
      <input type="range" onchange="UpdateFilter4()" class="filter_delay big" style="flex:1; padding:0 5px;" autocomplete="off" value="0" min="0" max="1000" step="20" ></input>
      </div>
-     <button class="cpe-button cpe-is-squished cpe-is-alternate" onclick="ResetMisc()">Clear Customizations</button>
     </fieldset>
     </div>
 

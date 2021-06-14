@@ -14,6 +14,7 @@ var contrastVisual = 2;
 (function () {
 document.querySelector('html').className += " theme-A"; // We begin with the first theme selected
 ColorUpdate(true);
+UpdateMisc();
 	if ( ($("body.mpisto-2018").length) || ($("body.mpisto-2018-mobile").length)) {
 		$("head").append(
 		'<link rel="manifest" href="manifest.json" crossorigin="use-credentials">' +
@@ -1078,129 +1079,141 @@ function UpdateValue() {
 
 /* Downloads all modificative values of the current selected theme to a file */
 function DownloadTheme() {
-result = '.theme-A {\n' + // Beginning
-		 '--background-image:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-image")  + ';\n' +
-		 '--background-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-color")  + ';\n' +
-		 '--background-overlay:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-overlay")  + ';\n' +
-		 '--link-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--link-color")  + ';\n' +
-		 '--content-bg:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--content-bg")  + ';\n' +
-		 '--content-border:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border")  + ';\n' +
-		 '--content-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color")  + ';\n' +
-		 '--button-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--button-color")  + ';\n' +
-		 '--community-header-bg:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg")  + ';\n' +
-		 '--body-display:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--body-display")  + ';\n' +
-		 '--background-va:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-va")  + ';\n' +
-		 '--background-size:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-size")  + ';\n' +
-		 '--background-no-tiling:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-no-tiling")  + ';\n' +
-		 '}' // Ending
-DownloadData(result,'MyTheme','css');
-alert('Once you save the file, put the stylesheet contents to MpistoAgent.css for loading to other sessions or upload it to any website.');
+	wordfilter2 = getComputedStyle(document.querySelector('html')).getPropertyValue("--wordmark-filter2")
+	if ( wordfilter2 == "" ) {
+		wordfilter2 == 'initial'
+	}
+	result = '.theme-A {\n' + // Beginning
+			 '--background-image:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-image")  + ';\n' +
+			 '--background-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-color")  + ';\n' +
+			 '--background-overlay:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-overlay")  + ';\n' +
+			 '--link-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--link-color")  + ';\n' +
+			 '--content-bg:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--content-bg")  + ';\n' +
+			 '--content-border:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border")  + ';\n' +
+			 '--content-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color")  + ';\n' +
+			 '--button-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--button-color")  + ';\n' +
+			 '--community-header-bg:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg")  + ';\n' +
+			 '--body-display:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--body-display")  + ';\n' +
+			 '--background-va:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-va")  + ';\n' +
+			 '--background-size:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-size")  + ';\n' +
+			 '--background-no-tiling:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-no-tiling")  + ';\n' +
+			 '--custom-secondary-font:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--custom-secondary-font")  + ';\n' +
+			 '--border-radius:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--border-radius")  + ';\n' +
+			 '--wordmark-filter:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--wordmark-filter")  + ';\n' +
+			 '--wordmark-filter2:' + wordfilter2  + ';\n' +
+			 '--wordmark-filter-duration:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--wordmark-filter-duration")  + ';\n' +
+			 '--wordmark-filter-delay:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--wordmark-filter-delay")  + ';\n' +
+			 '}' // Ending
+	DownloadData(result,'MyTheme','css');
+	alert('Once you save the file, put the stylesheet contents to MpistoAgent.css for loading to other sessions or upload it to any website.');
 }
 
 /* Resets the Theme to defaults */
 function ResetTheme() {
-if (confirm('Are you sure you want to reset this theme to the pre-set ones? This action cannot be undone') === true) {
-	if ($("html.theme-A").length) {
-		$("style.designer-style.theme-A").text('/* This CSS left intentionally blank */');	
-	}
+	if (confirm('Are you sure you want to reset this theme to the pre-set ones? This action cannot be undone') === true) {
+		if ($("html.theme-A").length) {
+			$("style.designer-style.theme-A").text('/* This CSS left intentionally blank */');	
+		}
 
-	if ($("html.theme-B").length) {
-		$("style.designer-style.theme-B").text('/* This CSS left intentionally blank */');	
-	}
+		if ($("html.theme-B").length) {
+			$("style.designer-style.theme-B").text('/* This CSS left intentionally blank */');	
+		}
 
-	if ($("html.theme-C").length) {
-		$("style.designer-style.theme-C").text('/* This CSS left intentionally blank */');	
-	}
+		if ($("html.theme-C").length) {
+			$("style.designer-style.theme-C").text('/* This CSS left intentionally blank */');	
+		}
 
-	if ($("html.theme-D").length) {
-		$("style.designer-style.theme-D").text('/* This CSS left intentionally blank */');	
-	}
+		if ($("html.theme-D").length) {
+			$("style.designer-style.theme-D").text('/* This CSS left intentionally blank */');	
+		}
 
-	ColorUpdate(true);
-}
+		ColorUpdate(true);
+		UpdateMisc();
+	}
 }
 
 
 function ResetThemeA() {
-if (confirm('Are you sure you want to reset this theme to the pre-set ones? This action cannot be undone') === true) {
-		$("style.designer-style.theme-A").text('/* This CSS left intentionally blank */');	
-	if ($("html.theme-A").length) {
-		ColorUpdate(true);
+	if (confirm('Are you sure you want to reset theme A to the pre-set ones? This action cannot be undone') === true) {
+			$("style.designer-style.theme-A").text('/* This CSS left intentionally blank */');	
+		if ($("html.theme-A").length) {
+			ColorUpdate(true);
+			UpdateMisc();
+		}
 	}
-}
 }
 
 
 function ResetThemeB() {
-if (confirm('Are you sure you want to reset this theme to the pre-set ones? This action cannot be undone') === true) {
-		$("style.designer-style.theme-B").text('/* This CSS left intentionally blank */');	
-	if ($("html.theme-B").length) {
-		ColorUpdate(true);
+	if (confirm('Are you sure you want to reset theme B to the pre-set ones? This action cannot be undone') === true) {
+			$("style.designer-style.theme-B").text('/* This CSS left intentionally blank */');	
+		if ($("html.theme-B").length) {
+			ColorUpdate(true);
+			UpdateMisc();
+		}
 	}
-}
 }
 
 function ResetThemeC() {
-if (confirm('Are you sure you want to reset this theme to the pre-set ones? This action cannot be undone') === true) {
-		$("style.designer-style.theme-C").text('/* This CSS left intentionally blank */');	
-	if ($("html.theme-C").length) {
-		ColorUpdate(true);
+	if (confirm('Are you sure you want to reset theme C to the pre-set ones? This action cannot be undone') === true) {
+			$("style.designer-style.theme-C").text('/* This CSS left intentionally blank */');	
+		if ($("html.theme-C").length) {
+			ColorUpdate(true);
+			UpdateMisc();
+		}
 	}
-}
 }
 
 function ResetThemeD() {
-if (confirm('Are you sure you want to reset this theme to the pre-set ones? This action cannot be undone') === true) {
-		$("style.designer-style.theme-D").text('/* This CSS left intentionally blank */');	
-	if ($("html.theme-D").length) {
-		ColorUpdate(true);
+	if (confirm('Are you sure you want to reset theme D to the pre-set ones? This action cannot be undone') === true) {
+			$("style.designer-style.theme-D").text('/* This CSS left intentionally blank */');	
+		if ($("html.theme-D").length) {
+			ColorUpdate(true);
+			UpdateMisc();
+		}
 	}
-}
 }
 
 
 
 function ResetThemes() {
-if (confirm('Are you sure you want to reset all themes to the pre-set ones? This action cannot be undone') === true) {
-		$("style.designer-style.theme-A").text('/* This CSS left intentionally blank */');	
-		$("style.designer-style.theme-B").text('/* This CSS left intentionally blank */');	
-		$("style.designer-style.theme-C").text('/* This CSS left intentionally blank */');	
-		$("style.designer-style.theme-D").text('/* This CSS left intentionally blank */');	
+	if (confirm('Are you sure you want to reset all themes to the pre-set ones? This action cannot be undone') === true) {
+			$("style.designer-style.theme-A").text('/* This CSS left intentionally blank */');	
+			$("style.designer-style.theme-B").text('/* This CSS left intentionally blank */');	
+			$("style.designer-style.theme-C").text('/* This CSS left intentionally blank */');	
+			$("style.designer-style.theme-D").text('/* This CSS left intentionally blank */');	
 
-	ColorUpdate(true);
-}
-}
-
-function ResetThemesB() {
-if (confirm('Are you sure you want to reset everything to factory defaults? This action cannot be undone') === true) {
-		$("style.designer-style.theme-A").text('/* This CSS left intentionally blank */');	
-		$("style.designer-style.theme-B").text('/* This CSS left intentionally blank */');	
-		$("style.designer-style.theme-C").text('/* This CSS left intentionally blank */');	
-		$("style.designer-style.theme-D").text('/* This CSS left intentionally blank */');	
-		$("style.designer-style.theme-Miscellaneous").text('/* This CSS left intentionally blank */');	
-
-	ColorUpdate(true);
-	ResetMisc2();
-}
-}
-
-function ResetMisc() {
-if (confirm('Are you sure you want to reset every miscellaneous setting to factory defaults? This action cannot be undone') === true) {
-		$("style.designer-style.theme-Miscellaneous").text('/* This CSS left intentionally blank */');	
-
-	ResetMisc2();
-}
+		ColorUpdate(true);
+		UpdateMisc();
+	}
 }
 
 
-function ResetMisc2() {
-$('input.font_2nd').val('');
-$('input.button_radi').val(3);
-$('input.filter1').val('');
-$('input.filter2').val('');
-var x = $('input.filter_duration').val(300);
-var x = $('input.filter_delay').val(0);
+function UpdateMisc() {
+	if ($("body.options").length) {
+		var sfont = getComputedStyle(document.querySelector('html')).getPropertyValue("--custom-secondary-font");
+		if (sfont == '""') {
+			var sfont = '';
+		}
+
+		var wfilter = getComputedStyle(document.querySelector('html')).getPropertyValue("--wordmark-filter");
+		if (wfilter == 'initial') {
+			var wfilter = '';
+		}
+		var wfilter2 = getComputedStyle(document.querySelector('html')).getPropertyValue("--wordmark-filter2");
+		if (wfilter2 == 'initial') {
+			var wfilter2 = '';
+		}
+
+		$('input.font_2nd').val( sfont );
+		$('input.button_radi').val( parseInt( getComputedStyle(document.querySelector('html')).getPropertyValue("--border-radius") ) );
+		$('input.filter1').val( wfilter );
+		$('input.filter2').val( wfilter2 );
+		var x = $('input.filter_duration').val( parseInt( getComputedStyle(document.querySelector('html')).getPropertyValue("--wordmark-filter-duration") ) );
+		var x = $('input.filter_delay').val( parseInt( getComputedStyle(document.querySelector('html')).getPropertyValue("--wordmark-filter-delay") ) );
+	}
 }
+
 
 /* Begin Color Parsers */
 function ColorTestTwin(color,color2,intensity=1,inter='hsl') {
@@ -1800,12 +1813,27 @@ document.querySelector('html').style.setProperty("--alert-color-content-bg-mix",
 
 /* Emphasis Themes */
 var emphasiscolor = chroma.mix(content_color, link_color, MW18HoverThreshold*2.5);
-var emphasiscolor2 = chroma.mix(border_color, button_color, MW18HoverThreshold*2.5);
+var emphasiscolor2 = ColorTest(emphasiscolor,true);
+var emphasiscolor2t = ColorTest(emphasiscolor2,false);
+var accentcolor = chroma.mix(border_color, button_color, MW18HoverThreshold*2.5);
+var accentcolor2 = ColorTest(accentcolor,true);
+var accentcolor2t = ColorTest(accentcolor2,false);
+
+
 document.querySelector('html').style.setProperty("--emphasis-bg", emphasiscolor);
-document.querySelector('html').style.setProperty("--accent-bg", emphasiscolor2);
+document.querySelector('html').style.setProperty("--emphasis-bg-text", emphasiscolor2);
+document.querySelector('html').style.setProperty("--emphasis-bg-text-dark", emphasiscolor2t);
+document.querySelector('html').style.setProperty("--accent-bg", accentcolor);
+document.querySelector('html').style.setProperty("--accent-bg-text", accentcolor2);
+document.querySelector('html').style.setProperty("--accent-bg-text-dark", accentcolor2t);
 // RGB
 document.querySelector('html').style.setProperty("--emphasis-bg-rgb", Color2(emphasiscolor));
-document.querySelector('html').style.setProperty("--accent-bg-rgb", Color2(emphasiscolor2));
+document.querySelector('html').style.setProperty("--emphasis-bg-text-rgb", Color2(emphasiscolor2));
+document.querySelector('html').style.setProperty("--emphasis-bg-text-dark-rgb", Color2(emphasiscolor2t));
+document.querySelector('html').style.setProperty("--accent-bg-rgb", Color2(accentcolor));
+document.querySelector('html').style.setProperty("--accent-bg-text-rgb", Color2(accentcolor2));
+document.querySelector('html').style.setProperty("--accent-bg-text-dark-rgb", Color2(accentcolor2t));
+
 
 ThemeColorMetaTag();
 
@@ -2234,6 +2262,7 @@ function HCa() {
         x.className = x.className.replace(" theme-C", "");
         x.className = x.className.replace(" theme-D", "");
 		ColorUpdate(true);
+		UpdateMisc();
 }
 
 function HCb() {
@@ -2245,6 +2274,7 @@ function HCb() {
         x.className = x.className.replace(" theme-C", "");
         x.className = x.className.replace(" theme-D", "");
 		ColorUpdate(true);
+		UpdateMisc();
 }
 
 function HCc() {
@@ -2256,6 +2286,7 @@ function HCc() {
         x.className = x.className.replace(" theme-B", "");
         x.className = x.className.replace(" theme-D", "");
 		ColorUpdate(true);
+		UpdateMisc();
 }
 
 function HCd() {
@@ -2267,113 +2298,426 @@ function HCd() {
         x.className = x.className.replace(" theme-B", "");
         x.className = x.className.replace(" theme-C", "");
 		ColorUpdate(true);
+		UpdateMisc();
 }
 
 function UpdateFont() {
 var x = $('input.font_2nd').val();
 	if (x=="") {
-		$("style.designer-style.theme-Miscellaneous").append(
-		'html {' +
-		'--custom-secondary-font:""!important;' +
-		'}'
-		);	
+		if ($("html.theme-A").length) {
+			$("style.designer-style.theme-A").append(
+			'.theme-A {' +
+			'--custom-secondary-font:""!important;' +
+			'}'
+			);	
+		}
+
+		if ($("html.theme-B").length) {
+			$("style.designer-style.theme-B").append(
+			'.theme-B {' +
+			'--custom-secondary-font:""!important;' +
+			'}'
+			);	
+		}
+
+		if ($("html.theme-C").length) {
+			$("style.designer-style.theme-C").append(
+			'.theme-C {' +
+			'--custom-secondary-font:""!important;' +
+			'}'
+			);	
+		}
+
+		if ($("html.theme-D").length) {
+			$("style.designer-style.theme-D").append(
+			'.theme-D {' +
+			'--custom-secondary-font:""!important;' +
+			'}'
+			);	
+		}
 		
 	} else {
-		$("style.designer-style.theme-Miscellaneous").append(
-		'html {' +
-		'--custom-secondary-font:' + x + '!important;' +
-		'}'
-		);	
+		if ($("html.theme-A").length) {
+			$("style.designer-style.theme-A").append(
+			'.theme-A {' +
+			'--custom-secondary-font:' + x + '!important;' +
+			'}'
+			);	
+		}
+
+		if ($("html.theme-B").length) {
+			$("style.designer-style.theme-B").append(
+			'.theme-B {' +
+			'--custom-secondary-font:' + x + '!important;' +
+			'}'
+			);	
+		}
+
+		if ($("html.theme-C").length) {
+			$("style.designer-style.theme-C").append(
+			'.theme-C {' +
+			'--custom-secondary-font:' + x + '!important;' +
+			'}'
+			);	
+		}
+
+		if ($("html.theme-D").length) {
+			$("style.designer-style.theme-D").append(
+			'.theme-D {' +
+			'--custom-secondary-font:' + x + '!important;' +
+			'}'
+			);	
+		}
 	}
 }
 
 function UpdateButtonRadi() {
 var x = $('input.button_radi').val();
 	if (x=="0") {
-		$("style.designer-style.theme-Miscellaneous").append(
-		'html {' +
-		'--border-radius:0!important;' +
-		'}'
-		);	
+		if ($("html.theme-A").length) {
+			$("style.designer-style.theme-A").append(
+			'.theme-A {' +
+			'--border-radius:0!important;' +
+			'}'
+			);	
+		}
+
+		if ($("html.theme-B").length) {
+			$("style.designer-style.theme-B").append(
+			'.theme-B {' +
+			'--border-radius:0!important;' +
+			'}'
+			);	
+		}
+
+		if ($("html.theme-C").length) {
+			$("style.designer-style.theme-C").append(
+			'.theme-C {' +
+			'--border-radius:0!important;' +
+			'}'
+			);	
+		}
+
+		if ($("html.theme-D").length) {
+			$("style.designer-style.theme-D").append(
+			'.theme-D {' +
+			'--border-radius:0!important;' +
+			'}'
+			);	
+		}
 		
 	} else {
-		$("style.designer-style.theme-Miscellaneous").append(
-		'html {' +
-		'--border-radius:' + x + 'px!important;' +
-		'}'
-		);	
+		if ($("html.theme-A").length) {
+			$("style.designer-style.theme-A").append(
+			'.theme-A {' +
+			'--border-radius:' + x + 'px!important;' +
+			'}'
+			);	
+		}
+
+		if ($("html.theme-B").length) {
+			$("style.designer-style.theme-B").append(
+			'.theme-B {' +
+			'--border-radius:' + x + 'px!important;' +
+			'}'
+			);	
+		}
+
+		if ($("html.theme-C").length) {
+			$("style.designer-style.theme-C").append(
+			'.theme-C {' +
+			'--border-radius:' + x + 'px!important;' +
+			'}'
+			);	
+		}
+
+		if ($("html.theme-D").length) {
+			$("style.designer-style.theme-D").append(
+			'.theme-D {' +
+			'--border-radius:' + x + 'px!important;' +
+			'}'
+			);	
+		}
 	}
 }
 
 function UpdateFilter1() {
 var x = $('input.filter1').val();
 	if (x=="") {
-		$("style.designer-style.theme-Miscellaneous").append(
-		'html {' +
-		'--wordmark-filter:initial!important;' +
-		'}'
-		);	
+		if ($("html.theme-A").length) {
+			$("style.designer-style.theme-A").append(
+			'.theme-A {' +
+			'--wordmark-filter:initial!important;' +
+			'}'
+			);	
+		}
+
+		if ($("html.theme-B").length) {
+			$("style.designer-style.theme-B").append(
+			'.theme-B {' +
+			'--wordmark-filter:initial!important;' +
+			'}'
+			);	
+		}
+
+		if ($("html.theme-C").length) {
+			$("style.designer-style.theme-C").append(
+			'.theme-C {' +
+			'--wordmark-filter:initial!important;' +
+			'}'
+			);	
+		}
+
+		if ($("html.theme-D").length) {
+			$("style.designer-style.theme-D").append(
+			'.theme-D {' +
+			'--wordmark-filter:initial!important;' +
+			'}'
+			);	
+		}
 		
 	} else {
-		$("style.designer-style.theme-Miscellaneous").append(
-		'html {' +
-		'--wordmark-filter:' + x +'!important;' +
-		'}'
-		);	
+		if ($("html.theme-A").length) {
+			$("style.designer-style.theme-A").append(
+			'.theme-A {' +
+			'--wordmark-filter:' + x + '!important;' +
+			'}'
+			);	
+		}
+
+		if ($("html.theme-B").length) {
+			$("style.designer-style.theme-B").append(
+			'.theme-B {' +
+			'--wordmark-filter:' + x + '!important;' +
+			'}'
+			);	
+		}
+
+		if ($("html.theme-C").length) {
+			$("style.designer-style.theme-C").append(
+			'.theme-C {' +
+			'--wordmark-filter:' + x + '!important;' +
+			'}'
+			);	
+		}
+
+		if ($("html.theme-D").length) {
+			$("style.designer-style.theme-D").append(
+			'.theme-D {' +
+			'--wordmark-filter:' + x + '!important;' +
+			'}'
+			);	
+		}
 	}
 }
 
 function UpdateFilter2() {
 var x = $('input.filter2').val();
 	if (x=="") {
-		$("style.designer-style.theme-Miscellaneous").append(
-		'html {' +
-		'--wordmark-filter2:initial!important;' +
-		'}'
-		);	
+		if ($("html.theme-A").length) {
+			$("style.designer-style.theme-A").append(
+			'.theme-A {' +
+			'--wordmark-filter2:initial!important;' +
+			'}'
+			);	
+		}
+
+		if ($("html.theme-B").length) {
+			$("style.designer-style.theme-B").append(
+			'.theme-B {' +
+			'--wordmark-filter2:initial!important;' +
+			'}'
+			);	
+		}
+
+		if ($("html.theme-C").length) {
+			$("style.designer-style.theme-C").append(
+			'.theme-C {' +
+			'--wordmark-filter2:initial!important;' +
+			'}'
+			);	
+		}
+
+		if ($("html.theme-D").length) {
+			$("style.designer-style.theme-D").append(
+			'.theme-D {' +
+			'--wordmark-filter2:initial!important;' +
+			'}'
+			);	
+		}
 		
 	} else {
-		$("style.designer-style.theme-Miscellaneous").append(
-		'html {' +
-		'--wordmark-filter2:' + x +'!important;' +
-		'}'
-		);	
+		if ($("html.theme-A").length) {
+			$("style.designer-style.theme-A").append(
+			'.theme-A {' +
+			'--wordmark-filter2:' + x + '!important;' +
+			'}'
+			);	
+		}
+
+		if ($("html.theme-B").length) {
+			$("style.designer-style.theme-B").append(
+			'.theme-B {' +
+			'--wordmark-filter2:' + x + '!important;' +
+			'}'
+			);	
+		}
+
+		if ($("html.theme-C").length) {
+			$("style.designer-style.theme-C").append(
+			'.theme-C {' +
+			'--wordmark-filter2:' + x + '!important;' +
+			'}'
+			);	
+		}
+
+		if ($("html.theme-D").length) {
+			$("style.designer-style.theme-D").append(
+			'.theme-D {' +
+			'--wordmark-filter2:' + x + '!important;' +
+			'}'
+			);	
+		}
 	}
 }
 
 function UpdateFilter3() {
 var x = $('input.filter_duration').val();
 	if (x=="0") {
-		$("style.designer-style.theme-Miscellaneous").append(
-		'html {' +
-		'--wordmark-filter-duration:0!important;' +
-		'}'
-		);	
+		if ($("html.theme-A").length) {
+			$("style.designer-style.theme-A").append(
+			'.theme-A {' +
+			'--wordmark-filter-duration:0!important;' +
+			'}'
+			);	
+		}
+
+		if ($("html.theme-B").length) {
+			$("style.designer-style.theme-B").append(
+			'.theme-B {' +
+			'--wordmark-filter-duration:0!important;' +
+			'}'
+			);	
+		}
+
+		if ($("html.theme-C").length) {
+			$("style.designer-style.theme-C").append(
+			'.theme-C {' +
+			'--wordmark-filter-duration:0!important;' +
+			'}'
+			);	
+		}
+
+		if ($("html.theme-D").length) {
+			$("style.designer-style.theme-D").append(
+			'.theme-D {' +
+			'--wordmark-filter-duration:0!important;' +
+			'}'
+			);	
+		}
 		
 	} else {
-		$("style.designer-style.theme-Miscellaneous").append(
-		'html {' +
-		'--wordmark-filter-duration:' + x +'ms!important;' +
-		'}'
-		);	
+		if ($("html.theme-A").length) {
+			$("style.designer-style.theme-A").append(
+			'.theme-A {' +
+			'--wordmark-filter-duration:' + x +'ms!important;' +
+			'}'
+			);	
+		}
+
+		if ($("html.theme-B").length) {
+			$("style.designer-style.theme-B").append(
+			'.theme-B {' +
+			'--wordmark-filter-duration:' + x +'ms!important;' +
+			'}'
+			);	
+		}
+
+		if ($("html.theme-C").length) {
+			$("style.designer-style.theme-C").append(
+			'.theme-C {' +
+			'--wordmark-filter-duration:' + x +'ms!important;' +
+			'}'
+			);	
+		}
+
+		if ($("html.theme-D").length) {
+			$("style.designer-style.theme-D").append(
+			'.theme-D {' +
+			'--wordmark-filter-duration:' + x +'ms!important;' +
+			'}'
+			);	
+		}
 	}
 }
 
 function UpdateFilter4() {
 var x = $('input.filter_delay').val();
 	if (x=="0") {
-		$("style.designer-style.theme-Miscellaneous").append(
-		'html {' +
-		'--wordmark-filter-delay:0!important;' +
-		'}'
-		);	
+		if ($("html.theme-A").length) {
+			$("style.designer-style.theme-A").append(
+			'.theme-A {' +
+			'--wordmark-filter-delay:0!important;' +
+			'}'
+			);	
+		}
+
+		if ($("html.theme-B").length) {
+			$("style.designer-style.theme-B").append(
+			'.theme-B {' +
+			'--wordmark-filter-delay:0!important;' +
+			'}'
+			);	
+		}
+
+		if ($("html.theme-C").length) {
+			$("style.designer-style.theme-C").append(
+			'.theme-C {' +
+			'--wordmark-filter-delay:0!important;' +
+			'}'
+			);	
+		}
+
+		if ($("html.theme-D").length) {
+			$("style.designer-style.theme-D").append(
+			'.theme-D {' +
+			'--wordmark-filter-delay:0!important;' +
+			'}'
+			);	
+		}
 		
 	} else {
-		$("style.designer-style.theme-Miscellaneous").append(
-		'html {' +
-		'--wordmark-filter-delay:' + x +'ms!important;' +
-		'}'
-		);	
+		if ($("html.theme-A").length) {
+			$("style.designer-style.theme-A").append(
+			'.theme-A {' +
+			'--wordmark-filter-delay:' + x +'ms!important;' +
+			'}'
+			);	
+		}
+
+		if ($("html.theme-B").length) {
+			$("style.designer-style.theme-B").append(
+			'.theme-B {' +
+			'--wordmark-filter-delay:' + x +'ms!important;' +
+			'}'
+			);	
+		}
+
+		if ($("html.theme-C").length) {
+			$("style.designer-style.theme-C").append(
+			'.theme-C {' +
+			'--wordmark-filter-delay:' + x +'ms!important;' +
+			'}'
+			);	
+		}
+
+		if ($("html.theme-D").length) {
+			$("style.designer-style.theme-D").append(
+			'.theme-D {' +
+			'--wordmark-filter-delay:' + x +'ms!important;' +
+			'}'
+			);	
+		}
 	}
 }
 
