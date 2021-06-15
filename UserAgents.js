@@ -146,14 +146,17 @@ $(' .cpe-dropdown.cpe-select .cpe-dropdown__content .cpe-list li:not(.cpe-dropdo
 /* Enable New Global Navigation - No exception for now */
 window.MW18newnavblock=false;
 (function () {
+	$(' container > main').attr('wide', 'false');
 	DropDownUpdate();
 	if (window.MW18newnavblock === true) {
 		return
 	}
+/*
 	if ($("body.mpisto-2018").length || $("body.mpisto-discuss-2018").length) {
 		document.querySelector('.mpisto-gnav[style]').className += " newnav";
 		document.querySelector('.mpisto-gnav:not([style])').className += " newnav";
 	}
+*/
 })();
 
 
@@ -227,5 +230,15 @@ function AddFloatingBanner(content='Sample Content',kind='message',extraclass=''
 			'</div>' 
 	);
 
+
+}
+
+/* Width Toggler */
+function ToggleWidth() {
+	if 	($(' container > main').attr('wide') == 'true') {
+		$(' container > main').attr('wide', 'false');
+	} else {
+		$(' container > main').attr('wide', 'true');
+	}
 
 }
