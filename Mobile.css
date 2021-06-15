@@ -591,10 +591,10 @@ padding:5px 0 0;
 .notification.cpe-dropdown__content .cpe-list.cpe-has-lines-between.cpe-has-ellipsis > li:not(:last-child) a img {
   line-height:nomral;
   vertical-align:middle;
-}
+}
 
 
-@media only screen and (max-width:754px) {
+@media only screen and (max-width:759px) {
 .mpisto-header-container .color-header, .color-nav, .mpisto-header-container .wordmark, footer.mpisto-footer {
     display:none;
 }
@@ -603,7 +603,7 @@ padding:5px 0 0;
 }
 
 
-@media only screen and (max-width:959px) {
+@media only screen and (max-width:1019px) {
 :root {
 	scrollbar-width:thin;
 	scrollbar-color:ar(--community-header-bg) transparent;
@@ -655,13 +655,13 @@ body:not(.menuvisible) header.mpisto-navbar svg.close {
 
 }
 
-@media only screen and (min-width:755px) {
+@media only screen and (min-width:760px) {
 footer.mobile-footer, footer.footer, .mobile-header {
 display:none;
 }
 }
 
-@media only screen and (max-width:1099px) {
+@media only screen and (max-width:1279px) {
 
 .page-wrapper .store-content .store-header .counters {
 	font-size:14px;
@@ -690,7 +690,7 @@ height:30px;
 }
 }
 
-@media only screen and (min-width:960px) {
+@media only screen and (min-width:1020px) {
 footer.mpisto-footer {
 padding-bottom:0.1px;
 }
@@ -753,7 +753,7 @@ header.mpisto-navbar:after, footer.mpisto-footer:after {
 }
 }
 
-@media only screen and (min-width:1100px) {
+@media only screen and (min-width:1280px) {
 
 
 .page-wrapper .store-content .store-items .cpe-button .cpe-button {
@@ -771,7 +771,7 @@ height:60px;
 }
 
 
-@media only screen and (min-width:1380px) {
+@media only screen and (min-width:1500px) {
 .page-wrapper .store-content .store-header .counters {
 	font-size:18px;
 }
@@ -801,23 +801,6 @@ margin-bottom:6.25px;
 .page-wrapper .store-content .store-items .cpe-button .cpe-button .cpe-icon {
 width:75px;
 height:75px;
-}
-
-}
-
-@media only screen and (min-width:2000px) {
-.page-wrapper .store-content .store-header .counters {
-	font-size:20px;
-}
-
-.page-wrapper .store-content .store-header {
-font-size:70px;
-min-height:100px;
--webkit-text-stroke-width:4px;
-}
-
-.page-wrapper .store-content .store-header.small {
-font-size:38px;
 }
 
 }

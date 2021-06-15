@@ -1,19 +1,19 @@
 /** Breakpoints for mpisto Zekzphire **/
 .mpisto-content, .mpisto-options-content, .mpisto-editors-content, footer.mpisto-footer .mpisto-wrapper, .main .page-wrapper, .top-gap, .headroom.headroom--not-top .top-gap .cpe-banner-notification__container#floatingbanner  {
-	width:calc(1066px - var(--global-nav-size));
+	width:calc(1240px - var(--global-nav-size));
 	margin-left:auto;
 	margin-right:auto;
 	transition:width 150ms ease;
 }
 
 /* Wide */
-@media only screen and (min-width:755px) {
+@media only screen and (min-width:760px) {
 	main[wide="true"] .mpisto-content, main[wide="true"] .mpisto-options-content, main[wide="true"] .mpisto-editors-content, main[wide="true"] footer.mpisto-footer .mpisto-wrapper, main[wide="true"] .page-wrapper, main[wide="true"] .top-gap, .headroom.headroom--not-top .top-gap main[wide="true"] .cpe-banner-notification__container#floatingbanner  {
-		width:calc(100% - 36px);
+		width:calc(100% - 40px);
 	}
 }
 
-@media only screen and (min-width:1100px) and (max-width:1379px) {
+@media only screen and (min-width:1280px) and (max-width:1499px) {
 	.basicp .color-header .title, .modernp.pane-on .color-header .title {
 		font-size:26px;
 	}
@@ -138,7 +138,7 @@
 
 
 /* XS */
-@media only screen and (max-width:754px) {
+@media only screen and (max-width:759px) {
 :root {
 	scrollbar-width:thin;
 	scrollbar-color:var(--community-header-bg) var(--content-bg);
@@ -451,7 +451,7 @@ display:inline-flex;
 }
 
 /* XS + S */
-@media only screen and (max-width:959px) {
+@media only screen and (max-width:1019px) {
 .cpe-input {
 	min-width:auto!important;
 }
@@ -633,9 +633,9 @@ width:100%;
 
 
 /* S */
-@media only screen and (min-width:755px) and (max-width:959px) {
+@media only screen and (min-width:760px) and (max-width:1019px) {
 .mpisto-content, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .mpisto-options-content, .top-gap, .headroom.headroom--not-top .top-gap .cpe-banner-notification__container#floatingbanner  {
-  width:calc(721px - var(--global-nav-size));
+  width:calc(720px - var(--global-nav-size));
 }
 
 /*.basicp .mpisto-option-pane {
@@ -741,7 +741,7 @@ display:inline-flex;
 }
 
 /* M */
-@media only screen and (min-width:960px) and (max-width:1099px) {
+@media only screen and (min-width:1020px) and (max-width:1279px) {
 /*.mpisto-content {
 padding-left:10px;
 padding-right:10px;
@@ -765,7 +765,7 @@ padding-right:10px;
 
 
 .mpisto-content, header.mpisto-navbar .mpisto-navbar-wrapper, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .mpisto-options-content, .main .page-wrapper, .top-gap, .headroom.headroom--not-top .top-gap .cpe-banner-notification__container#floatingbanner  /*.lightbox */ {
-width:calc(926px - var(--global-nav-size));
+width:calc(980px - var(--global-nav-size));
 }
 
 .basicp .color-header .title, .modernp.pane-on .color-header .title {
@@ -786,7 +786,7 @@ width:calc(926px - var(--global-nav-size));
 }
 
 /* S + M */
-@media only screen and (max-width:1099px) {
+@media only screen and (max-width:1279px) {
 footer.mpisto-footer .mpisto-wrapper .mpisto-footer-container td h2 {
 font-size:20px;
 }
@@ -825,7 +825,7 @@ column-count:1;
 }
 
 /* M + L */
-@media only screen and (min-width:960px) and (max-width:1379px) {
+@media only screen and (min-width:1020px) and (max-width:1499px) {
 .basicp .mpisto-header-container .wordmark, .modernp.pane-on .mpisto-header-container .wordmark {
 	display:none!important
 }
@@ -833,7 +833,7 @@ column-count:1;
 
 
 /* XL */
-@media only screen and (min-width:1380px) {
+@media only screen and (min-width:1500px) {
 /*.mpisto-content {
 padding-left:30px;
 padding-right:30px;
@@ -841,7 +841,7 @@ padding-right:30px;
 */
 
 .mpisto-content, header.mpisto-navbar .mpisto-navbar-wrapper, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .mpisto-options-content, .main .page-wrapper, .top-gap, .headroom.headroom--not-top .top-gap .cpe-banner-notification__container#floatingbanner  /*.lightbox*/ {
-width:calc(1346px - var(--global-nav-size)); /* Was 1146px */
+width:calc(1440px - var(--global-nav-size)); /* Was 1146px */
 }
 
 .mpisto-content .mpisto-title {
@@ -927,7 +927,7 @@ font-size:30px;
 }
 
 /* L + XL */
-@media only screen and (min-width:1100px)  {
+@media only screen and (min-width:1280px)  {
 .mpisto-userpages-header .mpisto-profile-masthead {
 	border-top-left-radius:0;
 }

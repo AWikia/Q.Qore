@@ -229,7 +229,7 @@ body.editor1 .editor1off, body.editor2 .editor2off, body:not(.editor1) .editor1o
 
 /* Responsive Design */
 
-@media only screen and (max-width:959px) {
+@media only screen and (max-width:1019px) {
 :root {
 	scrollbar-width:thin;
 	scrollbar-color:var(--community-header-bg) transparent;
@@ -294,7 +294,7 @@ footer.mpisto-footer {
 }
 }
 
-@media only screen and (min-width:1380px) {
+@media only screen and (min-width:1500px) {
 .mpisto-discussions-wrapper .card.main .post-send .post-area {
 	font-size:16px;
 }

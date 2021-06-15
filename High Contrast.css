@@ -75,7 +75,7 @@ body *,body :before,body :after {
 filter:none!important;
 }
 
-@media only screen and (max-width:959px) {
+@media only screen and (max-width:1019px) {
 html:not([visualtheme="contrast"]) .pane-on .mpisto-article-wrapper:after {
 	opacity:1;
 }
@@ -147,7 +147,7 @@ filter:none!important;
 filter:none!important;
 }
 
-@media only screen and (max-width:959px) {
+@media only screen and (max-width:1019px) {
 html:not([visualtheme="contrast"]) .prt .pane-on .mpisto-article-wrapper:after {
 	opacity:1;
 }
@@ -764,7 +764,7 @@ color:inherit;
 
 }
 
-@media only screen and (max-width:959px) {
+@media only screen and (max-width:1019px) {
 [visualtheme="basic"] .mpisto-right-pane,
 [visualtheme="contrast"] .mpisto-right-pane {
 	box-shadow:0 -1px 0 var(--community-header-text),
