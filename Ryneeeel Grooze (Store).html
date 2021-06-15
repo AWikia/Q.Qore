@@ -1274,6 +1274,201 @@
 </footer>
 
 <!-- End Footer -->
+<div class="lightbox-container" id="ModalTCustom">
+    <div class="lightbox">
+      <h1>
+	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
+		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-gear" />
+	</svg>
+      <span>Customize Toolbar</span> <a class="cpe-button cpe-is-square cpe-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-cross" />
+                  </svg></a></h1>
+   <section>
+		You can specify the items that will appear on the right toolbar
+		<h2>Current Items</h2>
+		<div class="toolbar-added-items">
+			<button value="26" class="cpe-button cpe-is-secondary cpe-is-square whatlinkshere" title="What Links Here" onclick="RemoveItem(26)">
+				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-link"></use>
+				</svg>
+			</button>
+			<button value="18" class="cpe-button cpe-is-secondary cpe-is-square logs" title="Public Logd" onclick="RemoveItem(18)">
+				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-eye"></use>
+				</svg>
+			</button>
+			<button value="27" class="cpe-button cpe-is-secondary cpe-is-square designer" title="Wiki Personalization" onclick="RemoveItem(27)">
+				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon" enable-background="new 0 0 24 24" height="28px" viewBox="0 0 24 24" width="28px" fill="currentColor"><g><rect fill="none" height="24" width="24"/></g><g><g><g><g><path d="M12,22C6.49,22,2,17.51,2,12S6.49,2,12,2s10,4.04,10,9c0,3.31-2.69,6-6,6h-1.77c-0.28,0-0.5,0.22-0.5,0.5 c0,0.12,0.05,0.23,0.13,0.33c0.41,0.47,0.64,1.06,0.64,1.67C14.5,20.88,13.38,22,12,22z M12,4c-4.41,0-8,3.59-8,8s3.59,8,8,8 c0.28,0,0.5-0.22,0.5-0.5c0-0.16-0.08-0.28-0.14-0.35c-0.41-0.46-0.63-1.05-0.63-1.65c0-1.38,1.12-2.5,2.5-2.5H16 c2.21,0,4-1.79,4-4C20,7.14,16.41,4,12,4z"/><circle cx="6.5" cy="11.5" r="1.5"/><circle cx="9.5" cy="7.5" r="1.5"/><circle cx="14.5" cy="7.5" r="1.5"/><circle cx="17.5" cy="11.5" r="1.5"/></g></g></g></g></svg>
+			</button>
+			<button value="0" class="cpe-button cpe-is-secondary cpe-is-square dashbaord" title="Admin Dashboard" onclick="RemoveItem(0)">
+				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dashboard"></use>
+				</svg>
+			</button>
+			<button value="21" class="cpe-button cpe-is-secondary cpe-is-square discussions-reported" title="Reported Posts" onclick="RemoveItem(21)">
+				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-alert"></use>
+				</svg>
+			</button>
+			<button value="20" class="cpe-button cpe-is-secondary cpe-is-square activity" title="Recent Activity" onclick="RemoveItem(20)">
+				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-activity"></use>
+				</svg>
+			</button>
+		</div>
+		<h2>Available Items</h2>
+			<div class="toolbar-customization-items">
+				<button value="0" onclick="PutItem(0)" class="cpe-button dashboard" disabled>
+	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dashboard" />
+					  </svg> <span>Admin Dashboard</span>
+				</button>
+				<button value="1" onclick="PutItem(1)" class="cpe-button pages">
+	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-articles" />
+					  </svg> <span>All Pages</span>
+				</button>
+				<button value="2" onclick="PutItem(2)" class="cpe-button block">
+	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-lock" />
+					  </svg> <span>Block a User</span>
+				</button>
+				<button value="3" onclick="PutItem(3)" class="cpe-button bash">
+	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-preformat" />
+					  </svg> <span>Command Line</span>
+				</button>
+				<button value="4" onclick="PutItem(4)" class="cpe-button contributions">
+	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-user" />
+					  </svg> <span>Contributions</span>
+				</button>
+				<button value="5" onclick="PutItem(5)" class="cpe-button discuss">
+	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-reply" />
+					  </svg> <span>Discuss</span>
+				<button value="6" onclick="PutItem(6)" class="cpe-button delcontribs">
+	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-trash" />
+					  </svg> <span>Deleted Contributions</span>
+				</button>
+				<button value="7" onclick="PutItem(7)" class="cpe-button edits">
+	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-pencil" />
+					  </svg> <span>Editcount</span>
+				</button>
+				<button value="8" onclick="PutItem(8)" class="cpe-button export">
+	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-download" />
+					  </svg> <span>Export</span>
+				</button>
+				<button value="9" onclick="PutItem(9)" class="cpe-button followlist">
+	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-star" />
+					  </svg> <span>Followlist</span>
+				</button>
+				<button value="10" onclick="PutItem(10)" class="cpe-button gcontribs">
+	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-users" />
+					  </svg> <span>Global Contributions</span>
+				</button>
+				<button value="11" onclick="PutItem(11)" class="cpe-button history">
+	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-clock" />
+					  </svg> <span>History</span>
+				</button>
+				<button value="12" onclick="PutItem(12)" class="cpe-button images">
+	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-image" />
+					  </svg> <span>Images</span>
+				</button>
+				<button value="13" onclick="PutItem(13)" class="cpe-button import">
+	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-upload" />
+					  </svg> <span>Import</span>
+				</button>
+				<button value="14" onclick="PutItem(14)" class="cpe-button infobox">
+	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-article" />
+					  </svg> <span>Infobox Builder</span>
+				</button>
+				<button value="15" onclick="PutItem(15)" class="cpe-button interwiki">
+	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-external" />
+					  </svg> <span>Manage Interwiki</span>
+				</button>
+				<button value="16" onclick="PutItem(16)" class="cpe-button map">
+	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-map" />
+					  </svg> <span>Map Builder</span>
+				</button>
+				<button value="17" onclick="PutItem(17)" class="cpe-button noticeboard">
+	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-clipboard" />
+					  </svg> <span>Noticeboard</span>
+				</button>
+				<button value="18" onclick="PutItem(18)" class="cpe-button logs" disabled>
+	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-eye" />
+					  </svg> <span>Public Logs</span>
+				</button>
+				<button value="19" onclick="PutItem(19)" class="cpe-button quiz">
+	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-quiz" />
+					  </svg> <span>Quiz Management</span>
+				</button>
+				<button value="20" onclick="PutItem(20)" class="cpe-button activity" disabled>
+	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-activity" />
+					  </svg> <span>Recent Activity</span>
+				</button>
+				<button value="21" onclick="PutItem(21)" class="cpe-button discussions-reported" disabled>
+	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-alert" />
+					  </svg> <span>Reported Posts</span>
+				</button>
+				<button value="22" onclick="PutItem(22)" class="cpe-button random-page">
+	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-refresh" />
+					  </svg> <span>Random Page</span>
+				</button>
+				<button value="23" onclick="PutItem(23)" class="cpe-button special-pages">
+	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-gear" />
+					  </svg> <span>Special Pages</span>
+				</button>
+				<button value="24" onclick="PutItem(24)" class="cpe-button store">
+	<svg version="1.1" class="cpe-icon cpe-icon-small" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+<path fill="currentcolor" d="M52.053 0c-1.28 3.968-2.56 7.893-2.56 13.141v991.104c0 9.259 2.603 14.507 7.851 19.755l487.040-515.968-492.331-508.032zM577.237 542.208l125.909 129.92-179.755 102.4s-228.48 129.877-354.475 202.197l408.32-434.517zM611.413 506.752l135.083 140.459c21.163-11.776 186.496-106.325 210.091-119.467 24.917-14.421 22.4-34.133 1.237-44.629-19.584-10.88-184.917-105.6-209.92-120.96l-136.491 144.597zM577.152 472.619l127.317-135.211-181.717-103.723s-296.235-169.472-394.795-226.048l449.195 464.981z"></path>
+							</svg> <span>Store</span>
+				</button>
+				<button value="25" onclick="PutItem(25)" class="cpe-button unblock">
+	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-unlock" />
+					  </svg> <span>Unblock a user</span>
+				</button>
+				<button value="26" onclick="PutItem(26)" class="cpe-button whatlinkshere" disabled>
+	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-link" />
+					  </svg> <span>What Links Here</span>
+				</button>
+				<button value="27" onclick="PutItem(27)" class="cpe-button designer" disabled>
+<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" enable-background="new 0 0 24 24" height="28px" viewBox="0 0 24 24" width="28px" fill="currentColor"><g><rect fill="none" height="24" width="24"/></g><g><g><g><g><path d="M12,22C6.49,22,2,17.51,2,12S6.49,2,12,2s10,4.04,10,9c0,3.31-2.69,6-6,6h-1.77c-0.28,0-0.5,0.22-0.5,0.5 c0,0.12,0.05,0.23,0.13,0.33c0.41,0.47,0.64,1.06,0.64,1.67C14.5,20.88,13.38,22,12,22z M12,4c-4.41,0-8,3.59-8,8s3.59,8,8,8 c0.28,0,0.5-0.22,0.5-0.5c0-0.16-0.08-0.28-0.14-0.35c-0.41-0.46-0.63-1.05-0.63-1.65c0-1.38,1.12-2.5,2.5-2.5H16 c2.21,0,4-1.79,4-4C20,7.14,16.41,4,12,4z"/><circle cx="6.5" cy="11.5" r="1.5"/><circle cx="9.5" cy="7.5" r="1.5"/><circle cx="14.5" cy="7.5" r="1.5"/><circle cx="17.5" cy="11.5" r="1.5"/></g></g></g></g></svg>
+ <span>Wiki Personalization</span>
+				</button>
+			</div>
+   </section>
+   <footer>
+   <button class="cpe-button cpe-is-secondary cpe-is-squished cpe-is-alternate" onclick="ResetToolbarItems()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-refresh" />
+	</svg> <span>Reset Form</span></button>
+   <button class="cpe-button cpe-is-squished cpe-is-alternate" onclick="SaveToolbarItems()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-checkmark" />
+	</svg> <span>Save</span></button>
+   </footer>
+    </div>
+</div>
+
 </aside>
 <header class="mpisto-global-sidebar mpisto-personal-links">
 	<div class="upper-links">
@@ -1312,7 +1507,7 @@
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown-sort" />
 					  </svg>
 	  </a>
-	  <a class="link customize" cpe-tooltip="Customize">
+	  <a class="link customize" href="#ModalTCustom" cpe-tooltip="Customize">
 	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-gear" />
 					  </svg>
@@ -1335,6 +1530,7 @@
 
 <script src="jQuery.js"></script>
 <script src="Chroma.js"></script>
+<script src="Toolbar.js"></script>
 <script src="FileSaver.js"></script>
 <script src="UserAgents.js" ></script>
 <script src="MpistoAgent.js"></script>

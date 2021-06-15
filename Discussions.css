@@ -236,6 +236,10 @@ body.editor1 .editor1off, body.editor2 .editor2off, body:not(.editor1) .editor1o
 	min-width:360px;
 }
 
+.mpisto-personal-links .link.toggle-size {
+	display:none!important;
+}
+
 .mpisto-content {
 	background-color:var(--content-bg);
 	width:100%!important;

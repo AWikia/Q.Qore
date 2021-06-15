@@ -439,19 +439,6 @@ container > main {
 
 }
 
-.mpisto-personal-links .link[cpe-tooltip]:before {
-	margin-left:0;
-	margin-right:0;
-	transform:rotate(90deg);
-	left:-1px;
-	right:auto;
-}
-
-.mpisto-personal-links .link[cpe-tooltip]:after {
-	left:auto;
-	right:calc(100% + 1px);
-}
-
 	.mpisto-global-sidebar .link .cpe-icon {
 		width:26px;
 		height:26px;
@@ -593,6 +580,70 @@ container > main {
 
 	}
 }
+
+/* Personal Toolbar */
+.mpisto-personal-links .link[cpe-tooltip]:before {
+	margin-left:0;
+	margin-right:0;
+	transform:rotate(90deg);
+	left:-1px;
+	right:auto;
+}
+
+.mpisto-personal-links .link[cpe-tooltip]:after {
+	left:auto;
+	right:calc(100% + 1px);
+}
+
+#ModalTCustom .toolbar-customization-items {
+	display:grid;
+	max-width:800px;
+	margin:0 auto;
+	grid: auto-flow / repeat(3, 1fr);
+	grid-gap:4px;
+	gap:4px;
+}
+
+@media only screen and (min-width:540px) and (max-width:779px) {
+	#ModalTCustom .toolbar-customization-items {
+		grid:auto-flow / repeat(2, 1fr);
+	}
+}
+
+@media only screen and (min-width:440px) and (max-width:511px) {
+	#ModalTCustom .toolbar-customization-items {
+		grid:auto-flow / repeat(2, 1fr);
+	}
+}
+
+
+@media only screen and (min-width:512px) and (max-width:539px) {
+	#ModalTCustom .toolbar-customization-items {
+		grid:auto-flow / repeat(1, 1fr);
+	}
+}
+
+@media only screen and (max-width:439px) {
+	#ModalTCustom .toolbar-customization-items {
+		grid:auto-flow / repeat(1, 1fr);
+	}
+}
+
+#ModalTCustom .toolbar-added-items {
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	align-content:space-around;
+	flex-wrap:wrap;
+	gap:4px;
+	max-width:800px;
+	margin:0 auto;
+}
+#ModalTCustom .toolbar-added-items .cpe-button.cpe-is-square {
+	width:50px;
+	height:50px;
+}
+
 
 /* Old Global Nav
 ** Commented styles are the ones used in the old version
@@ -4940,7 +4991,7 @@ opacity:0.06;
 	max-height:68%;
 	max-height:68vh; /* Fix for firefox, also affecting other browsers */
 	overflow:auto;
-	background-color:var(--content-bg);
+	background-color:rgba(var(--content-bg-rgb), 0.95);
 	color:var(--content-color);
 	border-bottom:0;
 /*

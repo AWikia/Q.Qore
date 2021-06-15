@@ -35,7 +35,7 @@
 	}
 	container > main {
 		flex-direction:column;
-		margin-bottom:calc(var(--global-nav-size) / 2);
+		padding-bottom:calc(var(--global-nav-size) / 2);
 	}
 	
 	.mpisto-personal-links {
@@ -125,6 +125,9 @@
 	.mpisto-global-sidebar .search .cpe-dropdown__content {
 		transform:translateX(-246px)!important;
 	}
+	.mpisto-global-sidebar .create-wiki .cpe-dropdown__content {
+		transform:translateX(-100px)!important;
+	}
 	/* End */
 	/* Unset */
 	.lightbox-container  {
@@ -144,6 +147,9 @@
 	scrollbar-color:var(--community-header-bg) var(--content-bg);
 }
 
+.mpisto-personal-links .link.toggle-size {
+	display:none!important;
+}
 
 
 .mpisto-2018 .gradient-overlay {

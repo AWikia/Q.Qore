@@ -12,7 +12,7 @@ display:block;
 font-family:'Inter', -apple-system, BlinkMacSystemFont, "Noto Sans", "Noto Sans KR", "Noto Sans JP", "Noto Sans SC", "Noto Sans TC", sans-serif;
 }
 
-.store {
+html.store {
 --background-image:url("");
 --background-color:#f6f6f6;
 --link-color:#00d6d6;
@@ -23,7 +23,7 @@ font-family:'Inter', -apple-system, BlinkMacSystemFont, "Noto Sans", "Noto Sans 
 --community-header-bg:#13282c;
 }
 
-.store.theme-B {
+html.store.theme-B {
 --background-image:url("");
 --background-color:#f6f6f6;
 --link-color:#00b7e0;
@@ -34,7 +34,7 @@ font-family:'Inter', -apple-system, BlinkMacSystemFont, "Noto Sans", "Noto Sans 
 --community-header-bg:#404a57;
 }
 
-.store.theme-C {
+html.store.theme-C {
 --background-image:url("");
 --background-color:#f6f6f6;
 --link-color:#ff6a64;
@@ -45,7 +45,7 @@ font-family:'Inter', -apple-system, BlinkMacSystemFont, "Noto Sans", "Noto Sans 
 --community-header-bg:#13282c;
 }
 
-.store.theme-D {
+html.store.theme-D {
 --background-image:url("");
 --background-color:#002a32;
 --link-color:#5f7a7b;
@@ -608,6 +608,10 @@ padding:5px 0 0;
 	scrollbar-width:thin;
 	scrollbar-color:ar(--community-header-bg) transparent;
 	min-width:360px;
+}
+
+.mpisto-personal-links .link.toggle-size {
+	display:none!important;
 }
 
 .mpisto-global-sidebar.headroom--top {
