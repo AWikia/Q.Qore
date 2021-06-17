@@ -387,6 +387,7 @@ scrollbar-color:var(--button-color) var(--background-color);
 --background-overlay:auto;
 --content-border:auto;
 --content-color:auto;
+--floating-header-bg:auto;
 --body-display:modern;
 --background-va:top;
 --background-size:cover;
@@ -580,7 +581,9 @@ body[content-color-auto*="true"] .colora-off,
 body[content-border-auto*="false"] .bordera-on,
 body[content-border-auto*="true"] .bordera-off,
 body[background-overlay-auto*="false"] .overlaya-on,
-body[background-overlay-auto*="true"] .overlaya-off { 
+body[background-overlay-auto*="true"] .overlaya-off,
+body[floating-header-bg-auto*="false"] .floatinga-on,
+body[floating-header-bg-auto*="true"] .floatinga-off { 
 	display:none!important;
 }
 
@@ -996,6 +999,12 @@ select.cpe-input {
   --input-box-focus:var(--content-color-content-bg-mix);
 }
 
+.cpe-input.cpe-is-intitleline {
+  --input-box-solid:var(--floting-header-bg);
+  --input-box-hover:var(--floting-header-bg-content-bg-mix-light);
+  --input-box-focus:var(--floting-header-bg-content-bg-mix);
+}
+
 
 /** Buttons **/
 /* Primary */
@@ -1155,6 +1164,16 @@ a.cpe-button, button.cpe-button {
   --button-color-text-dark:var(--content-color-text-dark);
   --button-color-content-bg-mix-light:var(--content-color-content-bg-mix-light);
   --button-color-content-bg-mix:var(--content-color-content-bg-mix);
+}
+
+.cpe-button.cpe-is-intitleline {
+  --button-color:var(--floating-header-bg);
+  --button-color-dark:var(--floating-header-dark);
+  --button-color-dark-super:var(--floating-header-dark-super);
+  --button-color-text:var(--floating-header-text);
+  --button-color-text-dark:var(--floating-header-text-dark);
+  --button-color-content-bg-mix-light:var(--floating-header-bg-content-bg-mix-light);
+  --button-color-content-bg-mix:var(--floating-header-bg-content-bg-mix);
 }
 
 
@@ -1464,6 +1483,7 @@ overflow-y:auto;
 overflow-x:visible;
 position:relative;
 z-index:1;
+  scrollbar-width:thin;
 }
 
  .cpe-dropdown__content.cpe-is-not-scrollable .cpe-list{
@@ -1899,6 +1919,11 @@ opacity:1;
 	--tabs-color-dark-super:var(--content-color-dark-super);
 }
 
+.cpe-tabs__tab.cpe-is-intitleline {
+	--tabs-color:var(--floating-header-bg);
+	--tabs-color-dark:var(--floating-header-dark);
+	--tabs-color-dark-super:var(--floating-header-dark-super);
+}
 
 
 /* Banners */
@@ -1967,7 +1992,7 @@ border-top:1px solid var(--content-border);}
 .headroom.headroom--not-top .top-gap .cpe-banner-notification__container#floatingbanner,
 .options #floatingbanner {
   position:fixed;
-  top:0px;
+  top:50px;
   width:inherit;
   z-index:19; /* Needed lower value to allow header dropdowns not to overlap */
 }

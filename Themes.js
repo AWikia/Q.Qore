@@ -108,9 +108,11 @@ function UpdateSitename() {
 		console.log('No Sitename is used. Untitled will be used as a fallback')
     }
     if (x.checked) {
+	$(".mpisto-sticky-header-container .title a").text(y + ' Wiki');
 	$(".color-header .title a").text(y + ' Wiki');
 	$(".mobile-header .title a").text(y + ' Wiki');
 	} else {
+	$(".mpisto-sticky-header-container .title a").text(y);
 	$(".color-header .title a").text(y);
 	$(".mobile-header .title a").text(y);
 	}
@@ -627,6 +629,19 @@ $('input[type="range"][name="bgo"].blue').val( chroma(x).get('rgb.b'));
 UpdateValue()
 }
 
+function RandomColor9() {
+	$("body").attr('floating-header-bg-auto', 'false');
+// var x = chroma.random()
+	var Colors = ['ababab','8acfff','f598d6','f3d240','add85f','78d9d9','ffaf51','ff6f6f','f359a8','47cf74','c48aff','58b1fc','9898ff','c3b5a8','ffffff','576dcd','4074ff','4099e1','40b2cc','40c5ae','40c280','9bcc3f','fce840','f98a48','e1676a','ed4c5a','ef4086','bc3b8c','7e73a5','879289'] 
+ var x = '#' + Colors[getRandomInt(Colors.length)]
+$('input[type="range"][name="headerf"].red').val(chroma(x).get('rgb.r'));
+$('input[type="range"][name="headerf"].green').val( chroma(x).get('rgb.g'));
+$('input[type="range"][name="headerf"].blue').val( chroma(x).get('rgb.b'));
+
+
+UpdateValue()
+}
+
 
 function RandomColor() {
 	RandomColor1();
@@ -637,6 +652,7 @@ function RandomColor() {
 	RandomColor6();
 	RandomColor7();
 	RandomColor8();
+	RandomColor9();
 }
 
 
@@ -792,13 +808,14 @@ function PresetTheme(theme="") {
 	PickColor4('auto');
 	PickColor5('auto');
 	PickColor8('auto');
+	PickColor9('auto');
 	colortheme($('body').attr("wikitheme"))
 }
 
 /* These functions asks about what color should the user use if no value is set and sets it to an individual component such as Body Background color (The current color is used as initial answer in case of accidental use)
 ** If a value is set directly in the function, it instead uses that color instead of asking the user to write a color
 ** Used in Preferences only
-** Possible Variations of PickColor() 1 = Body Color | 2 = Header Color | 3 = Content Color | 4 = Content Text Color | 5 = Content Border Color | 6 = Link Color | 7 = Button Color | 8 = Body Overlay Color
+** Possible Variations of PickColor() 1 = Body Color | 2 = Header Color | 3 = Content Color | 4 = Content Text Color | 5 = Content Border Color | 6 = Link Color | 7 = Button Color | 8 = Body Overlay Color | 9 = Floating Header Color
 */
 function PickColor1(color="") {
 if (color==="") {
@@ -932,6 +949,29 @@ UpdateValue()
 
 }
 
+function PickColor9(color="") {
+if (color==="") {
+	if ( $("body").attr('floating-header-bg-auto') === 'true' ) {
+		var x= prompt("Floating Header Background Color", 'auto');
+	} else {
+	var x= prompt("Floating Header Background Color", chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--floating-header-bg")));
+	}
+} else {
+	var x=color;
+}
+if (x !=='auto') {
+	$("body").attr('floating-header-bg-auto', 'false');
+	$('input[type="range"][name="headerf"].red').val(chroma(x).get('rgb.r'));
+	$('input[type="range"][name="headerf"].green').val( chroma(x).get('rgb.g'));
+	$('input[type="range"][name="headerf"].blue').val( chroma(x).get('rgb.b'));
+} else {
+	$("body").attr('floating-header-bg-auto', 'true');
+}
+
+UpdateValue()
+
+}
+
 
 /* Updates all Sliders values found in each theme designer color selection to the red, green and blue of each color (Each color editor menu in theme designer consists of 3 sliders) */
 function UpdateSet() {
@@ -941,7 +981,7 @@ function UpdateSet() {
 		$('input[type="range"][name="bg"].green').val( chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--background-color")).get('rgb.g') );
 		$('input[type="range"][name="bg"].blue').val( chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--background-color")).get('rgb.b') );
 
-		/* Header */
+		/* Header (A.K.A. Active Title Bar) */
 		var header_color =	getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg");
 		$('input[type="range"][name="header"].red').val(chroma(header_color).get('rgb.r') );
 		$('input[type="range"][name="header"].green').val( chroma(header_color).get('rgb.g') );
@@ -983,6 +1023,12 @@ function UpdateSet() {
 			$('input[type="range"][name="bgo"].green').val( chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--background-overlay")).get('rgb.g') );
 			$('input[type="range"][name="bgo"].blue').val( chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--background-overlay")).get('rgb.b') );
 		}
+		if (getComputedStyle(document.querySelector('html')).getPropertyValue("--floating-header-bg") != 'auto') {
+			/* Floating Header (A.K.A. Inactive Title Bar) */
+			$('input[type="range"][name="headerf"].red').val(chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--floating-header-bg")).get('rgb.r') );
+			$('input[type="range"][name="headerf"].green').val( chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--floating-header-bg")).get('rgb.g') );
+			$('input[type="range"][name="headerf"].blue').val( chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--floating-header-bg")).get('rgb.b') );
+		}
 	}
 }
 
@@ -1009,6 +1055,12 @@ function UpdateValue() {
 	} else {
 		var overlaycolorfinal = chroma('rgb(' + $('input[type="range"][name="bgo"].red').val() + ',' + $('input[type="range"][name="bgo"].green').val() + ',' + $('input[type="range"][name="bgo"].blue').val() + ')') ;
 	}
+	if ( $("body").attr('floating-header-bg-auto') === 'true' ) {
+		var floatingheadercolorfinal = 'auto' ;
+	} else {
+		var floatingheadercolorfinal = chroma('rgb(' + $('input[type="range"][name="headerf"].red').val() + ',' + $('input[type="range"][name="headerf"].green').val() + ',' + $('input[type="range"][name="headerf"].blue').val() + ')') ;
+	}
+
 
 
 /* Processing */
@@ -1023,6 +1075,7 @@ function UpdateValue() {
 		'--content-color:' + contentcolorfinal + '!important;' +
 		'--button-color:' + chroma('rgb(' + $('input[type="range"][name="buttoncolor"].red').val() + ',' + $('input[type="range"][name="buttoncolor"].green').val() + ',' + $('input[type="range"][name="buttoncolor"].blue').val() + ')') + '!important;' +
 		'--community-header-bg:' + headercolorfinal + '!important;' +
+		'--floating-header-bg:' + floatingheadercolorfinal + '!important;' +
 		'}'
 		);	
 	}
@@ -1038,6 +1091,7 @@ function UpdateValue() {
 		'--content-color:' + contentcolorfinal + '!important;' +
 		'--button-color:' + chroma('rgb(' + $('input[type="range"][name="buttoncolor"].red').val() + ',' + $('input[type="range"][name="buttoncolor"].green').val() + ',' + $('input[type="range"][name="buttoncolor"].blue').val() + ')') + '!important;' +
 		'--community-header-bg:' + headercolorfinal + '!important;' +
+		'--floating-header-bg:' + floatingheadercolorfinal + '!important;' +
 		'}'
 		);	
 	}
@@ -1053,6 +1107,7 @@ function UpdateValue() {
 		'--content-color:' + contentcolorfinal + '!important;' +
 		'--button-color:' + chroma('rgb(' + $('input[type="range"][name="buttoncolor"].red').val() + ',' + $('input[type="range"][name="buttoncolor"].green').val() + ',' + $('input[type="range"][name="buttoncolor"].blue').val() + ')') + '!important;' +
 		'--community-header-bg:' + headercolorfinal + '!important;' +
+		'--floating-header-bg:' + floatingheadercolorfinal + '!important;' +
 		'}'
 		);	
 	}
@@ -1068,6 +1123,7 @@ function UpdateValue() {
 		'--content-color:' + contentcolorfinal + '!important;' +
 		'--button-color:' + chroma('rgb(' + $('input[type="range"][name="buttoncolor"].red').val() + ',' + $('input[type="range"][name="buttoncolor"].green').val() + ',' + $('input[type="range"][name="buttoncolor"].blue').val() + ')') + '!important;' +
 		'--community-header-bg:' + headercolorfinal + '!important;' +
+		'--floating-header-bg:' + floatingheadercolorfinal + '!important;' +
 		'}'
 		);	
 	}
@@ -1093,6 +1149,7 @@ function DownloadTheme() {
 			 '--content-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color")  + ';\n' +
 			 '--button-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--button-color")  + ';\n' +
 			 '--community-header-bg:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg")  + ';\n' +
+			 '--floating-header-bg:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--floating-header-bg")  + ';\n' +
 			 '--body-display:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--body-display")  + ';\n' +
 			 '--background-va:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-va")  + ';\n' +
 			 '--background-size:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-size")  + ';\n' +
@@ -1350,6 +1407,22 @@ function CompileRecColors() {
 	}
 
 	$(".rec-colors-header").append(str);
+
+// Floating Header Color
+	str = '';
+//	var Colors = ['fec356','6699ff','6c93b1','a47719','846d35','786c42','f14800','337800','006cb0','dd360a','a34112','474646','7b3b0a','4f4341','0038d8','2d2c18','611e03','003816','891100','012e59','721410','6f027c','7a0146'] 
+	var Colors = ['ababab','8acfff','f598d6','f3d240','add85f','78d9d9','ffaf51','ff6f6f','f359a8','47cf74','c48aff','58b1fc','9898ff','c3b5a8','ffffff','576dcd','4074ff','4099e1','40b2cc','40c5ae','40c280','9bcc3f','fce840','f98a48','e1676a','ed4c5a','ef4086','bc3b8c','7e73a5','879289'] 
+
+	var socialAM = Colors.length
+
+	for (let i = 0; i < socialAM; i++) {
+	  var color = Colors[i];
+	  var data = '<button class="cpe-button cpe-is-square color-button" onclick="PickColor9(' + "'#" + color + "'" + ')"> <div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div> </button>'
+	  str = str + data;
+	}
+
+	$(".rec-colors-floating-header").append(str);
+
 
 // Page Background Color
 	str = '';
@@ -1798,6 +1871,51 @@ document.querySelector('body').style.setProperty("--background-overlay", head_ov
 // RGB
 document.querySelector('html').style.setProperty("--background-overlay-rgb", Color2( getComputedStyle(document.querySelector('body')).getPropertyValue("--background-overlay") ));
 
+/* Floating Header Bg */
+if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--floating-header-bg") !== 'auto') && !($("html.contrast.win10").length)  ) {
+	var floating_header =	'inherit' ;
+} else {
+	var floating_header = ColorTestTwin(content_color,ColorTestTwin(header_color,button_color,1,'rgb'),2.5,'rgb');
+}
+
+document.querySelector('body').style.setProperty("--floating-header-bg", floating_header);
+var floating_color =getComputedStyle(document.querySelector('body')).getPropertyValue("--floating-header-bg");
+
+
+var floatingcolor1 = ColorTest(floating_color,false);
+var floatingcolor3 = SuperColorTest(floating_color); // Scrollbar
+var floatingcolor2 = ColorTest(floating_color,true);
+var floatingcolor2t = ColorTest(floatingcolor2,false);
+
+if (isLightColor(floating_color)) {
+document.querySelector('html').style.setProperty("--floating-header-bg-blend-light", floating_color);
+document.querySelector('html').style.setProperty("--floating-header-bg-blend", floatingcolor1);
+} else {
+document.querySelector('html').style.setProperty("--floating-header-bg-blend-light", floatingcolor1);
+document.querySelector('html').style.setProperty("--floating-header-bg-blend", floating_color);
+}
+
+floatmixl = ColorTestTwin(content_color,floating_color,0.8,'rgb');
+floatmix = ColorTestTwin(headmixl,floating_color,0.8,'rgb');
+
+
+document.querySelector('html').style.setProperty("--floating-header-dark", floatingcolor1);
+document.querySelector('html').style.setProperty("--floating-header-dark-super", floatingcolor3); // Scrollbar
+document.querySelector('html').style.setProperty("--floating-header-text", floatingcolor2);
+document.querySelector('html').style.setProperty("--floating-header-text-dark", floatingcolor2t);
+document.querySelector('html').style.setProperty("--floating-header-bg-content-bg-mix-light", floatmixl);
+document.querySelector('html').style.setProperty("--floating-header-bg-content-bg-mix", floatmix);
+
+// RGB
+document.querySelector('html').style.setProperty("--floating-header-bg-rgb", Color2( getComputedStyle(document.querySelector('body')).getPropertyValue("--floating-header-bg") ));
+document.querySelector('html').style.setProperty("--floating-header-dark-rgb", Color2(floatingcolor1));
+document.querySelector('html').style.setProperty("--floating-header-dark-super-rgb", Color2(floatingcolor3));
+document.querySelector('html').style.setProperty("--floating-header-text-rgb", Color2(floatingcolor2));
+document.querySelector('html').style.setProperty("--floating-header-text-dark-rgb", Color2(floatingcolor2t));
+document.querySelector('html').style.setProperty("--floating-header-bg-blend-light-rgb", Color2( getComputedStyle(document.querySelector('html')).getPropertyValue("--floating-header-bg-blend-light") ));
+document.querySelector('html').style.setProperty("--floating-header-bg-blend-rgb", Color2( getComputedStyle(document.querySelector('html')).getPropertyValue("--floating-header-bg-blend") ));
+
+
 /* Info, Success, Warning and Alert color mixes */
 // Info
 infomixl = ColorTestTwin(content_color,'#575859',0.8,'rgb');
@@ -1916,6 +2034,11 @@ function CheckAdapt() {
 				$("body").attr('background-overlay-auto', 'true');
 		} else {
 				$("body").attr('background-overlay-auto', 'false');
+		}
+		if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--floating-header-bg") === 'auto') && !($("html.contrast.win10").length)  ) {
+				$("body").attr('floating-header-bg-auto', 'true');
+		} else {
+				$("body").attr('floating-header-bg-auto', 'false');
 		}
 		if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border") === 'auto') && !($("html.contrast.win10").length)  ) {
 				$("body").attr('content-border-auto', 'true');

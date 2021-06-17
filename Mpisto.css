@@ -332,6 +332,7 @@ border-radius:0; /* Remove initial border-radius set by some agents such as FF f
 /* Global Navigation */
 container > main {
 	--global-nav-size:100px;
+	--sticky-nav-size:50px;
 	display:flex;
 	flex-direction:row;
 	overflow:visible!important;
@@ -1239,6 +1240,194 @@ color:var(--community-header-text-dark);
 	flex:1 1 auto;
 	display:inline-flex!important;
 }
+
+/* Desktop Sticky Header */
+	.mpisto-sticky-header-container {
+		background-color:var(--floating-header-bg);
+		color:var(--floating-header-text);
+		position:fixed;
+		top:0;
+		z-index:100;
+		height:var(--sticky-nav-size);
+		display:flex;
+		transition:transform 150ms;
+		width:calc(100% - var(--global-nav-size));
+		box-shadow: 0 0 3px #000, 0 0 3px #fff;
+		transform:translateY(calc(-100% - 3px));
+		align-items:center;
+	}
+
+	.headroom--not-top .mpisto-sticky-header-container,
+	.options .mpisto-sticky-header-container,
+	.editor .mpisto-sticky-header-container {
+		transform:translateY(0%);
+	}
+
+	.options .mpisto-sticky-header-container,
+	.editor .mpisto-sticky-header-container {
+		--global-nav-size:0;
+		position:relative;
+		top:-20px;
+	}
+
+	
+	.mpisto-sticky-header-container .wordmark {
+		vertical-align:middle;
+		height:55px;
+		float:left;
+		margin:0 0 0 6px;
+		z-index:25;
+		position:relative;
+		display:flex;
+	}
+	
+	.mpisto-sticky-header-container .wordmark img {
+		height:80%;
+		vertical-align:middle;
+		transition-property:filter;
+		transition-delay:var(--wordmark-filter-delay,0);
+		transition-duration:var(--wordmark-filter-duration,300ms) ;
+		filter:var(--wordmark-filter,none);
+		align-self:center;
+
+	}
+
+	.mpisto-sticky-header-container .wordmark:hover img {
+		filter:var(--wordmark-filter2,var(--wordmark-filter, none));
+	}
+
+
+	.mpisto-sticky-header-container .title {
+		flex:1;
+		line-height:1.4;
+		font-size:24px;
+		font-weight:700;
+		height:var(--sticky-nav-size);
+		padding:0 6px;
+		font-family:var(--secondary-font), cursive;
+		overflow:hidden;
+		display:flex;
+	}
+
+	.mpisto-sticky-header-container .title a {
+		text-decoration:none;
+		color:inherit;
+		transition:color 400ms ease;
+		overflow:hidden;
+		text-overflow:ellipsis;
+		align-self:center;
+	}
+
+	.mpisto-sticky-header-container .title a:hover {
+		color:var(--floating-header-text-dark);
+	}
+
+
+	.mpisto-sticky-header-container .counters {
+		height:var(--sticky-nav-size);
+		padding:0 6px;
+		font-size:14px;
+		font-weight:500;
+		text-align:left;
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+	}
+
+	
+	.mpisto-sticky-header-container .counter {
+		white-space:nowrap;
+	}
+
+	.mpisto-sticky-header-container .counter big {
+		font-weight:bolder;
+		font-size:120%;
+	}
+
+
+.mpisto-sticky-header-container .cpe-dropdown.small {
+	display:none;
+}
+
+	.mpisto-sticky-header-container .link {
+		transition:color 400ms ease, background-color 300ms linear, border-color 300ms linear, background-image 300ms linear, transform 300ms linear, box-shadow 50ms linear;
+		padding: 0 7px;
+		height:inherit;
+		color:inherit;
+		text-decoration:none!important;
+		font-size:14px;
+		border:1px solid transparent;
+		box-sizing:border-box;
+		border-radius:var(--border-radius);
+		margin:0 0 0 -1px;
+		display:flex;
+		align-items:center;
+	}
+	.mpisto-sticky-header-container .cpe-dropdown {
+		height:inherit;
+		display:inline-block;
+	}
+
+
+	.mpisto-sticky-header-container .link:hover, .mpisto-sticky-header-container .link:focus, .mpisto-sticky-header-container .cpe-dropdown.cpe-is-active .link, .mpisto-sticky-header-container .link.active  {
+/*		-webkit-animation: 600ms linear 200ms infinite normal color-header-hover;
+		     -o-animation: 600ms linear 200ms infinite normal color-header-hover;
+		        animation: 600ms linear 200ms infinite normal color-header-hover;
+*/
+		background-color:rgba(var(--community-header-text-rgb),0.15);
+		border-color:rgba(var(--community-header-dark-rgb),0.15);
+		color:var(--community-header-text-dark);
+	}
+
+	.mpisto-sticky-header-container .link:hover, .mpisto-sticky-header-container .link.active  {
+		box-shadow:0 0 2px 0.5px var(--community-header-dark) inset;
+	}
+
+
+	.mpisto-sticky-header-container .link:active, .mpisto-sticky-header-container .link:focus, .mpisto-sticky-header-container .cpe-dropdown.cpe-is-active  .link, .mpisto-sticky-header-container .link.active  {
+		/*transform:scale(0.9);*/
+		background-color:rgba(var(--community-header-text-rgb),0.3);
+		border-color:rgba(var(--community-header-dark-rgb),0.3);
+		color:rgba(var(--community-header-text-dark-rgb), 0.8);
+
+	}
+
+	.mpisto-sticky-header-container .link:hover > *:not([filter]), .mpisto-sticky-header-container .link.active > *:not([filter]) {
+		filter:drop-shadow(0 0 1px var(--community-header-dark)) drop-shadow(0 0 0.5px var(--community-header-bg)) drop-shadow(0 0 0.25px var(--community-header-text));
+	}
+	
+	.mpisto-sticky-header-container .link.active {		
+	-webkit-animation: none;
+		     -o-animation: none;
+		        animation:none;    
+		cursor:inherit;
+		font-weight:bolder;
+	}
+
+
+@media only screen and (max-width:1279px) {
+	.mpisto-sticky-header-container .title {
+		font-size:22px;
+	}
+	
+	.mpisto-sticky-header-container .link.large {
+		display:none;
+	}
+
+	.mpisto-sticky-header-container .cpe-dropdown.small {
+		display:inline-block;
+	}
+}
+
+@media only screen and (max-width:1019px) {
+	.mpisto-sticky-header-container .title {
+		font-size:20px;
+	}
+	.mpisto-sticky-header-container .wordmark {
+		display:none;
+	}
+}
+
 
 /* Desktop Header */
 	.mpisto-header-container {
@@ -3797,7 +3986,7 @@ padding-bottom:34px;
   box-shadow:/*0 0 7px 1.9px #ccc,*/ 0 4px 8px 0 rgba(0,0,0,.4), 0 4px 8px 0 rgba(255,255,255,0.4);
   position:relative;
   z-index:2;
-  height:calc(100vh - var(--extra-height));
+  height:calc(100vh - var(--extra-height) - var(--sticky-nav-size));
 scrollbar-color:var(--content-border) var(--content-bg);
 /** Scrollbar Styling **/
 	/* Track */
@@ -3819,14 +4008,14 @@ flex-direction:column;
 .mpisto-editors-content > div {
   overflow-y:auto;
   overflow-x:hidden; /* Fixes bottom scrollbar bug in IE/Edge */
-  height:calc(100vh - 61px - var(--extra-height));
+  height:calc(100vh - 61px - var(--extra-height) - var(--sticky-nav-size));
  }
 
 
 .mpisto-editors-content .mpisto-wrapper {
   padding:0 18px;
-  height:calc(100vh - 123px - var(--extra-height));
-  max-height:calc(100vh - 123px - var(--extra-height));
+  height:calc(100vh - 123px - var(--extra-height) - var(--sticky-nav-size));
+  max-height:calc(100vh - 123px - var(--extra-height) - var(--sticky-nav-size));
 }
 
 .mpisto-editors-content .mpisto-wrapper .mpisto-article-wrapper {
@@ -4174,7 +4363,7 @@ color:var(--content-color);
 background-color:rgba(var(--content-bg-rgb),0.95);
 border-top:0;
 height:calc(100% - 92px);
-height:calc(100vh - var(--extra-height));
+height:calc(100vh - var(--extra-height) - var(--sticky-nav-size));
 z-index:3;
 position:relative;
 box-shadow:/*0 0 7px 1.9px #ccc,*/ 0 4px 8px 0 rgba(0,0,0,.4), 0 4px 8px 0 rgba(255,255,255,0.4);
@@ -4200,7 +4389,7 @@ padding:9px;
 display:inline-flex;
 flex-direction:column;
 min-width:280px;
-height:calc(100vh - var(--extra-height));
+height:calc(100vh - var(--extra-height) - var(--sticky-nav-size));
 z-index:10;
 border:1px solid var(--content-border);
 border-width:0 1px 0 0;
@@ -4334,7 +4523,7 @@ display:flex;
     width:100%;
     border:1px var(--content-border);
     border-style:hidden;
-    height:calc(100vh - 63px - var(--extra-height));
+    height:calc(100vh - 63px - var(--extra-height) - var(--sticky-nav-size));
     margin:0 auto;    
 }
 
@@ -4731,9 +4920,9 @@ border:1px solid currentColor;
 
 
 .preview-window-window.inactive {
-	background-color:var(--content-border-blend-light);
-	box-shadow:0px 0px 0 1px var(--content-border-blend), 0 0 10px -3px var(--community-header-text)!important;
-	color:var(--content-border-blend);
+	background-color:var(--floating-header-bg);
+	box-shadow:0px 0px 0 1px var(--floating-header-dark), 0 0 10px -3px var(--community-header-text)!important;
+	color:var(--floating-header-text-dark);
 }
 
 
@@ -4783,7 +4972,7 @@ white-space:nowrap;
 }
 
 .preview-window-window.inactive h2 button {
-	--button-background-color:var(--content-border-text);
+	--button-background-color:var(--floating-header-text);
 }
 
 .preview-window-window h2 button.close {
