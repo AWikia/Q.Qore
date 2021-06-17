@@ -1896,7 +1896,7 @@ document.querySelector('html').style.setProperty("--floating-header-bg-blend", f
 }
 
 floatmixl = ColorTestTwin(content_color,floating_color,0.8,'rgb');
-floatmix = ColorTestTwin(headmixl,floating_color,0.8,'rgb');
+floatmix = ColorTestTwin(floatmixl,floating_color,0.8,'rgb');
 
 
 document.querySelector('html').style.setProperty("--floating-header-dark", floatingcolor1);
