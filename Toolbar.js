@@ -28,7 +28,7 @@ function SaveToolbarItems() {
 				 'star',
 				 'users',
 				 'clock',
-				 'image',
+				 'images',
 				 'upload',
 				 'article',
 				 'external',
@@ -179,7 +179,7 @@ function PutItem(value) {
 					  '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-error-small" />' +
 					'</svg>' +
 				  '</div>' +
-				  '<span class="cpe-banner-notification__text">You can only add up to 10 items in the toolbar!</span>' +
+				  '<span class="cpe-banner-notification__text">You can only have up to 10 items in the toolbar at once.</span>' +
 				  '<svg onclick="RemoveBannerTB1()" xmlns="http://www.w3.org/2000/svg" class="cpe-banner-notification__close cpe-icon cpe-icon-tiny">' +
 					'<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-cross-tiny" />' +
 				  '</svg>' +
@@ -209,7 +209,7 @@ function PutItem(value) {
 				 'star',
 				 'users',
 				 'clock',
-				 'image',
+				 'images',
 				 'upload',
 				 'article',
 				 'external',

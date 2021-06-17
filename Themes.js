@@ -1563,6 +1563,16 @@ if (window.MW18darkmode === true) {
 	document.querySelector('body').style.setProperty("--content-bg", 'inherit');
 	document.querySelector('body').style.setProperty("--content-color", dropdowncolor3);
 }
+
+if (isLightColor( getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color") )) {
+document.querySelector('html').style.setProperty("--content-color-blend-light", getComputedStyle(document.querySelector('body')).getPropertyValue("--content-color"));
+document.querySelector('html').style.setProperty("--content-color-blend", content_text2);
+} else {
+document.querySelector('html').style.setProperty("--content-color-blend-light", content_text2);
+document.querySelector('html').style.setProperty("--content-color-blend", getComputedStyle(document.querySelector('body')).getPropertyValue("--content-color"));
+}
+
+
 document.querySelector('html').style.setProperty("--content-bg-dark", content_color2);
 document.querySelector('html').style.setProperty("--content-bg-dark-super", content_color3); // Scrollbar
 document.querySelector('html').style.setProperty("--content-color-dark", content_text2);
@@ -1582,6 +1592,8 @@ document.querySelector('html').style.setProperty("--content-color-dark-rgb", Col
 document.querySelector('html').style.setProperty("--content-color-dark-super-rgb", Color2(content_text3));
 document.querySelector('html').style.setProperty("--content-color-text-rgb", Color2(content_text4));
 document.querySelector('html').style.setProperty("--content-color-text-dark-rgb", Color2(content_text5));
+document.querySelector('html').style.setProperty("--content-color-blend-light-rgb", Color2( getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color-blend-light") ));
+document.querySelector('html').style.setProperty("--content-color-blend-rgb", Color2( getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color-blend") ));
 
 
 /** Button Color **/
