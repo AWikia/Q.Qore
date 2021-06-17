@@ -1564,7 +1564,7 @@ if (window.MW18darkmode === true) {
 	document.querySelector('body').style.setProperty("--content-color", dropdowncolor3);
 }
 
-if (isLightColor( getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color") )) {
+if (isLightColor( getComputedStyle(document.querySelector('body')).getPropertyValue("--content-color") )) {
 document.querySelector('html').style.setProperty("--content-color-blend-light", getComputedStyle(document.querySelector('body')).getPropertyValue("--content-color"));
 document.querySelector('html').style.setProperty("--content-color-blend", content_text2);
 } else {
