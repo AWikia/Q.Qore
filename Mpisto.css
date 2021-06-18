@@ -1289,6 +1289,7 @@ color:var(--community-header-text-dark);
 		transition-duration:var(--wordmark-filter-duration,300ms) ;
 		filter:var(--wordmark-filter,none);
 		align-self:center;
+		content:var(--wordmark, url("Wordmark.png"));
 
 	}
 
@@ -1516,6 +1517,7 @@ color:var(--community-header-text-dark);
 		transition-delay:var(--wordmark-filter-delay,0);
 		transition-duration:var(--wordmark-filter-duration,300ms) ;
 		filter:var(--wordmark-filter,none);
+		content:var(--wordmark, url("Wordmark.png"));
 
 	}
 
@@ -3110,6 +3112,7 @@ footer.mpisto-footer .mpisto-wrapper .wordmark img {
 	width:inherit;
 	max-height:inherit;
 	height:inherit;
+	content:var(--wordmark, url("Wordmark.png"));
 }
 
 footer.mpisto-footer .mpisto-wrapper .wordmark:hover {

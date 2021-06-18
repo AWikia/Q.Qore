@@ -481,7 +481,7 @@ if (files[0].size > 1024000) {
 		'--wordmark:url("' + img.src + '")!important;' +
 		'}'
 		);
-		$(".mpisto-header-container .wordmark img").attr("src", img.src);
+//		$(".mpisto-header-container .wordmark img").attr("src", img.src);
 
 }
 

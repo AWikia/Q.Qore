@@ -149,7 +149,7 @@
 }
 
 container > main {
-	--sticky-nav-size:0!important;
+	--sticky-nav-size:0px!important;
 }
 
 container > main .mpisto-sticky-header-container {

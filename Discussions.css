@@ -49,7 +49,7 @@
 
 .mpisto-discussions-wrapper .card.first, .mpisto-discussions-wrapper .card.last {
 	max-height:calc(100vh - 69px); /*179*/
-	top:10px;
+	top:calc(10px + var(--sticky-nav-size));
 	position:-webkit-sticky;
 	position:sticky;
 	overflow-y:auto;
@@ -263,12 +263,14 @@ footer.mpisto-footer .mpisto-wrapper {
 	order:1;
 	position:static!important;
 	max-height:auto!important;
+	overscroll-behavior:auto!important;
 }
 
 .mpisto-discussions-wrapper .card.last {
 	order:2;
 	position:static!important;
 	max-height:auto!important;
+	overscroll-behavior:auto!important;
 }
 
 
