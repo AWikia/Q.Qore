@@ -15,7 +15,7 @@
 
 @media only screen and (min-width:1280px) and (max-width:1499px) {
 	.basicp .color-header .title, .modernp.pane-on .color-header .title {
-		font-size:26px;
+		font-size:24px;
 	}
 }
 
@@ -802,7 +802,7 @@ width:calc(980px - var(--global-nav-size) - var(--scrollbar-width));
 }
 
 .basicp .color-header .title, .modernp.pane-on .color-header .title {
-	font-size:22px;
+	font-size:20px;
 }
 
 

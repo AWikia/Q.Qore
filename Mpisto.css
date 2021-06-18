@@ -1634,9 +1634,9 @@ color:var(--community-header-text-dark);
 	.color-header .title {
 		width:100%;
 		line-height:1.4;
-		font-size:30px;
+		font-size:28px;
 		font-weight:700;
-		height:60px;
+		max-height:60px;
 		padding:0 16px 0 11px;
 		font-family:var(--secondary-font), cursive;
 		white-space:pre-wrap;
@@ -1650,6 +1650,8 @@ color:var(--community-header-text-dark);
 		transition:color 400ms ease;
 		overflow:hidden;
 		text-overflow:ellipsis;
+		display:block;
+		max-height:inherit;
 	}
 
 	.color-header .title a:hover {
@@ -1679,7 +1681,7 @@ color:var(--community-header-text-dark);
 /* XL */
 @media only screen and (min-width:1500px) {
 	.color-header .title {
-		font-size:34px;
+		font-size:32px;
 	}
 
 	.mpisto-header-container .link {
@@ -1711,7 +1713,7 @@ color:var(--community-header-text-dark);
 	}
 
 	.color-header .title {
-		font-size:26px;
+		font-size:24px;
 	}
 
 
@@ -1733,9 +1735,9 @@ color:var(--community-header-text-dark);
 /* S */
 @media only screen and (max-width:1019px) {
 	.color-header .title {
-		font-size:22px;
+		font-size:20px;
 		padding:0 14px 0 9px;
-		height:55px;
+		max-height:55px;
 	}
 
 	.color-header .link {
