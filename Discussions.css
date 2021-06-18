@@ -111,7 +111,7 @@
 	position:static;
 	position:-webkit-sticky;
 	position:sticky;
-	top:0px;
+	top:var(--sticky-nav-size);
 	border-color:var(--accent-bg);	
 	border-top:0;
 	border-bottom-left-radius:10px;
