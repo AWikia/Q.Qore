@@ -1,7 +1,7 @@
 /* Headroom */
 .headroom .mpisto-global-sidebar {
 	transition:/*-webkit-backdrop-filter 400ms ease, backdrop-filter 400ms ease,*/ transform 400ms ease, opacity 400ms ease, background-color 400ms ease;
-	will-change:color, background-color, opacity;
+	/*will-change:color, background-color, opacity;*/
 }
 
 html:not([visualtheme*="simple"]):not([visualtheme*="contrast"]):not([visualtheme*="basic"]) body:not(.phone).headroom.headroom--not-top .mpisto-global-sidebar {

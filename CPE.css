@@ -1064,21 +1064,21 @@ a.cpe-button, button.cpe-button {
 .cpe-button.cpe-is-secondary {
     border-color:var(--content-color);
     background-color:var(--content-bg);
-    color:var(--content-color);
+    color:var(--button-color);
     box-shadow:0 0 1.5px 1.5px var(--content-bg);
 }
 
 .cpe-button.cpe-is-secondary:hover {
     border-color:var(--content-color-dark);
     background-color:var(--button-color-content-bg-mix-light);
-    color:var(--content-color);
+    color:var(--button-color-dark);
     box-shadow:0 0 1.5px 1.5px var(--button-color-content-bg-mix-light);
 }
 
 .cpe-button.cpe-is-secondary:active, .cpe-button.cpe-is-secondary.cpe-is-active {
     border-color:var(--content-border-dark-super);
     background-color:var(--button-color-content-bg-mix);
-    color:var(--content-color); 
+    color:var(--button-color-dark-super); 
     box-shadow:0 0 1.5px 1.5px var(--button-color-content-bg-mix);
 }
 
@@ -1545,6 +1545,7 @@ display:none!important;
   display:inline-block; 
   opacity:1; 
   pointer-events:all;
+  -webkit-backdrop-filter:blur(8px) sepia(12%) contrast(112%) invert(12%) grayscale(12%) saturate(112%) hue-rotate(12deg) brightness(112%);
   backdrop-filter:blur(8px) sepia(12%) contrast(112%) invert(12%) grayscale(12%) saturate(112%) hue-rotate(12deg) brightness(112%);
 }
 
@@ -1604,6 +1605,7 @@ font-size:12px
 display:block; 
 opacity:1;
  pointer-events:all;
+ -webkit-backdrop-filter:blur(8px) sepia(12%) contrast(112%) invert(12%) grayscale(12%) saturate(112%) hue-rotate(12deg) brightness(112%);
  backdrop-filter:blur(8px) sepia(12%) contrast(112%) invert(12%) grayscale(12%) saturate(112%) hue-rotate(12deg) brightness(112%);
 }
 
@@ -1936,6 +1938,7 @@ opacity:1;
 	transform-origin:top center;
 	position:relative;
 	min-height:40px;
+    -webkit-backdrop-filter:blur(8px) sepia(12%) contrast(112%) invert(12%) grayscale(12%) saturate(112%) hue-rotate(12deg) brightness(112%);
     backdrop-filter:blur(8px) sepia(12%) contrast(112%) invert(12%) grayscale(12%) saturate(112%) hue-rotate(12deg) brightness(112%);
 }
 
