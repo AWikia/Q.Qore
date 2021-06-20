@@ -1,6 +1,6 @@
 /** Breakpoints for mpisto Zekzphire **/
 .mpisto-content, .mpisto-options-content, .mpisto-editors-content, footer.mpisto-footer .mpisto-wrapper, .main .page-wrapper, .top-gap, .headroom.headroom--not-top .top-gap .cpe-banner-notification__container#floatingbanner  {
-	width:calc(1240px - var(--global-nav-size) - var(--scrollbar-width) - var(--scrollbar-width));
+	width:calc(1240px - var(--global-nav-size) - var(--scrollbar-width));
 	margin-left:auto;
 	margin-right:auto;
 	transition:width 150ms ease;
@@ -881,7 +881,7 @@ padding-right:30px;
 */
 
 .mpisto-content, header.mpisto-navbar .mpisto-navbar-wrapper, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .mpisto-options-content, .main .page-wrapper, .top-gap, .headroom.headroom--not-top .top-gap .cpe-banner-notification__container#floatingbanner  /*.lightbox*/ {
-width:calc(1440px - var(--global-nav-size) - var(--scrollbar-width)); /* Was 1146px */
+width:calc(1460px - var(--global-nav-size) - var(--scrollbar-width)); /* Was 1146px */
 }
 
 .mpisto-content .mpisto-title {

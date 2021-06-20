@@ -320,7 +320,6 @@ resize:none;
 border-radius:0; /* Remove initial border-radius set by some agents such as FF for Android in input fields */
 -qq-invert-style:classic; /* Prevent extra 180deg hue-rotation on inverts on mInerva */
   scrollbar-color:inherit; /* Qorta Qorte does not seem to inherit scrollbar-color. This line forces that browser to inherit */
-  forced-color-adjust:none;
 }
 
 .pixelatedoff *, .pixelatedoff {
@@ -1243,7 +1242,8 @@ color:var(--community-header-text-dark);
 
 /* Desktop Sticky Header */
 	.mpisto-sticky-header-container {
-		background-color:var(--floating-header-bg);
+		--sticky-nav-opacity:0.95;
+		background-color:rgba(var(--floating-header-bg-rgb), var(--sticky-nav-opacity));
 		color:var(--floating-header-text);
 		position:fixed;
 		top:0;
@@ -1961,8 +1961,8 @@ footer.footer .wrapper .footer-container td a:hover {
   box-shadow:0 2px 6px 0 rgba(0,0,0,.2), 0 2px 6px 0 rgba(255,255,255,0.2);
   background-color:transparent;
   /*
-  -webkit-backdrop-filter:blur(8px) sepia(12%) contrast(112%) invert(12%) grayscale(12%) saturate(112%) hue-rotate(12deg) brightness(112%);
-  backdrop-filter:blur(8px) sepia(12%) contrast(112%) invert(12%) grayscale(12%) saturate(112%) hue-rotate(12deg) brightness(112%);
+  -webkit-backdrop-filter:var(--backdrop-filter);
+  backdrop-filter:var(--backdrop-filter);
   */
 }
 
@@ -2200,7 +2200,7 @@ left:0;
 	height:400px;
 	overflow-y:auto;
     scrollbar-width:thin;
-    scrollbar-color:var(--link-color) transparent;
+	scrollbar-color:var(--scrollbar-thumb-color-1) var(--scrollbar-track-color-1);
  /** Scrollbar Styling **/
 	/* Width */
 	--scrollbar-width:8.5px;
@@ -2832,16 +2832,16 @@ font-weight:bold;
 
 input[type="number"] {
 	border-radius:16px;
-	color:#040506;
-	background-color:#fdfeff;
-	box-shadow:inset 0 3px 1.5px -0.2px #d5d6d7;
-	border-color:#1a1b1c;
+	color:var(--content-color);
+	background-color:var(--content-bg);
+	box-shadow:inset 0 3px 1.5px -0.2px var(--content-color-content-bg-mix-light);
+	border-color:var(--content-border);
 	border-style:solid;
+	border-width:1px;
 	font-family:"LCD", Clockopia, monospace;
 	font-size:14px;
 	padding:8px 12px;
 	line-height:16px;
-	border:1px solid;
 	box-sizing:content-box;
 	-webkit-appearance:none;
 	appearance:none;
@@ -2849,7 +2849,7 @@ input[type="number"] {
 
 input[type="number"]:focus {
 	box-shadow:none;
-	border-color:#000102;
+	border-color:var(--content-color);
 }
 
 
@@ -2857,6 +2857,8 @@ input[type="number"]:focus {
 
 input[type="number"]::-placeholder {
 	font-family:Liberation Sans, Arial, sans-seirf;
+	opacity:1;
+	color:var(--content-color-content-bg-mix);
 }
 
 
@@ -3997,7 +3999,7 @@ padding-bottom:34px;
   position:relative;
   z-index:2;
   height:calc(100vh - var(--extra-height) - var(--sticky-nav-size));
-scrollbar-color:var(--content-border) var(--content-bg);
+	scrollbar-color:var(--scrollbar-thumb-color-1) var(--scrollbar-track-color-1);
 /** Scrollbar Styling **/
 	/* Track */
 	--scrollbar-track-color-1:var(--content-bg);
@@ -4378,7 +4380,7 @@ z-index:3;
 position:relative;
 box-shadow:/*0 0 7px 1.9px #ccc,*/ 0 4px 8px 0 rgba(0,0,0,.4), 0 4px 8px 0 rgba(255,255,255,0.4);
 /*box-shadow:0px 0 7px 1.9px var(--content-border), 0 4px 8px 0 rgba(0,0,0,.4), 0 4px 8px 0 rgba(255,255,255,0.4);*/
-scrollbar-color:var(--content-border) var(--content-bg);
+scrollbar-color:var(--scrollbar-thumb-color-1) var(--scrollbar-track-color-1);
 /** Scrollbar Styling **/
 	/* Track */
 	--scrollbar-track-color-1:var(--content-bg);
@@ -4422,7 +4424,6 @@ height:calc(100vh - 177px);
   flex:1;
   justify-content:space-between;
   scrollbar-width:thin;
-  scrollbar-color:var(--content-color) transparent ;
 	/* Width */
 	--scrollbar-width:8.5px;
 	/* Track */
@@ -5037,8 +5038,8 @@ white-space:nowrap;
 /*  transform:scale(1); */
   opacity:1;
   background-color: rgba(var(--content-color-rgb),var(--lightbox-opacity));
-  -webkit-backdrop-filter:blur(8px) sepia(12%) contrast(112%) invert(12%) grayscale(12%) saturate(112%) hue-rotate(12deg) brightness(112%);
-  backdrop-filter:blur(8px) sepia(12%) contrast(112%) invert(12%) grayscale(12%) saturate(112%) hue-rotate(12deg) brightness(112%);
+  -webkit-backdrop-filter:var(--backdrop-filter);
+  backdrop-filter:var(--backdrop-filter);
 }
 
 
@@ -5216,6 +5217,7 @@ opacity:0.06;
     box-shadow:0px 0px 5px var(--dropdown-bg), 0px 0px 1px #fff, inset 0px 1px 2px var(--content-border);
 */	padding:7px 10px;
 	overscroll-behavior:contain;
+scrollbar-color:var(--scrollbar-thumb-color-1) var(--scrollbar-track-color-1);
 /** Scrollbar Styling **/
 	/* Track */
 	--scrollbar-track-color-1:var(--content-bg);

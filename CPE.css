@@ -1,8 +1,8 @@
 /** Primary Fonts **/
 /* 
 **
-Gothic A1 = Korean
 M PLUS 1p = Japanese and Hebrew
+Nanum Gothic = Korean
 Prompt = Thailandish
 Cairo = Arabic
 Ramabhadra = Telegu
@@ -18,16 +18,18 @@ No font (Baloo Bhaina 2) = Oriya
 Inter/Didact Gothic = Greek, Latin and Cyrillic
 **
 */
+
 @import url('https://fonts.googleapis.com/css?family=Gothic+A1:100,200,300,400,500,600,700,800,900|M+PLUS+1p:100,300,400,500,700,800,900|Prompt:100,200,300,400,500,600,700,800,900|Source+Sans+Pro:200,300,400,600,700,900&subset=cyrillic,cyrillic-ext,greek,greek-ext,hebrew,japanese,korean,latin-ext,thai,vietnamese');
 
 @import url('https://fonts.googleapis.com/css?family=Cairo:200,300,400,600,700,900|Catamaran:100,200,300,400,500,600,700,800,900|Ramabhadra|Ubuntu:300,400,500,700&subset=arabic,cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,tamil,telugu');
 
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Noto+Sans+SC:100,300,400,500,700,900|Noto+Sans+TC:100,300,400,500,700,900|Noto+Sans+HK:100,300,400,500,700,900|Hind+Siliguri:300,400,500,600,700|Didact+Gothic|Kantumruy:300,400,700|Manjari:100,400,700|Padauk:400,700');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Noto+Sans+SC:100,300,400,500,700,900|Noto+Sans+TC:100,300,400,500,700,900|Noto+Sans+HK:100,300,400,500,700,900|Hind+Siliguri:300,400,500,600,700|Didact+Gothic|Kantumruy:300,400,700|Manjari:100,400,700|Padauk:400,700|Alef:400,700');
+
 /** Secondary Fonts **/
 /* 
 **
-Jua (Formerly Nanum Gothic) = Korean
 M PLUS Rounded 1c = Japanese
+Jua (Formerly Nanum Gothic) = Korean
 Mitr = Thailandish
 Mada = Arabic
 NTR = Telegu
@@ -98,6 +100,9 @@ Aleo = Latin
 /* Arimo */
 @import url('https://fonts.googleapis.com/css?family=Arimo:400,700&subset=cyrillic,cyrillic-ext,greek,greek-ext,hebrew,latin-ext,vietnamese');
 @import url('https://rsms.me/inter/inter.css');
+
+
+
 
 
 /* GTK Font (By GTK Team) */
@@ -369,7 +374,7 @@ Aleo = Latin
 
 :root {
 font-family:Trebuchet MS;
-scrollbar-color:var(--button-color) var(--background-color);
+scrollbar-color:var(--scrollbar-thumb-color-1) var(--scrollbar-track-color-1);
 /** Scrollbar Styling **/
 	/* Width */
 	--scrollbar-width:17px;
@@ -392,10 +397,11 @@ scrollbar-color:var(--button-color) var(--background-color);
 --background-va:top;
 --background-size:cover;
 --background-no-tiling:false;
+--backdrop-filter:blur(8px) sepia(12%) contrast(112%) invert(12%) grayscale(12%) saturate(112%) hue-rotate(12deg) brightness(112%);
 /* Fonts */
 --font-family:"Didact Gothic", "Inter", -apple-system, BlinkMacSystemFont;
---foreign-fonts:"Didact Gothic", "Nanum Gothic", "M PLUS 1p", "Prompt", "Cairo", "Ramabhadra", "Catamaran", "Noto Sans", "Noto Sans SC", "Noto Sans TC", "Noto Sans HK", "Hind Siliguri", "Baloo Tamma 2", "Kantumruy", "Manjari", "Padauk", "Baloo Bhaina 2";
---secondary-foreign-fonts:"Jua","M PLUS Rounded 1c", "Mitr", "NTR", "Pavanam", "Mukta", "Noto Sans SC", "Noto Sans TC", "Noto Sans HK", "Baloo Da 2", "Baloo Tamma 2", "Battambang", "Baloo Chettan 2", "Padauk", "Baloo Bhaina 2", "Rubik";
+--foreign-fonts:"Didact Gothic", "M PLUS 1p",  "Nanum Gothic", "Prompt", "Cairo", "Ramabhadra", "Catamaran", "Noto Sans", "Noto Sans SC", "Noto Sans TC", "Noto Sans HK", "Hind Siliguri", "Baloo Tamma 2", "Kantumruy", "Manjari", "Padauk", "Baloo Bhaina 2", "Alef";
+--secondary-foreign-fonts:"M PLUS Rounded 1c", "Jua", "Mitr", "NTR", "Pavanam", "Mukta", "Noto Sans SC", "Noto Sans TC", "Noto Sans HK", "Baloo Da 2", "Baloo Tamma 2", "Battambang", "Baloo Chettan 2", "Padauk", "Baloo Bhaina 2", "Rubik";
 --secondary-font:var(--custom-secondary-font), "Rubik", "Arimo", "Liberation Sans", var(--secondary-foreign-fonts);
 --custom-secondary-font:"";
 --border-radius:3px;
@@ -481,6 +487,10 @@ scrollbar-color:var(--button-color) var(--background-color);
 }
 
 
+* {
+	forced-color-adjust:none;
+}
+
 html {
 	max-width:var(--max-width);
 	position:relative;
@@ -515,7 +525,7 @@ container {
 
 .serif body { /* Noto Sans */
 --font-family:Aleo;
---foreign-fonts:"Vollkorn", "Song Myung", "Noto Serif JP", "Pridi", "Amiri", "Ramaraja", "Catamaran", "Martel", "Noto Serif SC", "Noto Serif TC", "Hind Siliguri", "David Libre", "Benne", "Hanuman", "Manjari", "Padauk", "Baloo Bhaina 2";
+--foreign-fonts:"Vollkorn", "Noto Serif JP", "Song Myung", "Pridi", "Amiri", "Ramaraja", "Catamaran", "Martel", "Noto Serif SC", "Noto Serif TC", "Hind Siliguri", "David Libre", "Benne", "Hanuman", "Manjari", "Padauk", "Baloo Bhaina 2";
 }
 
 .body-community-background {
@@ -869,7 +879,7 @@ cursor:var(--cpe-blocked-cursor)!important;
 textarea, [contenteditable] {
   cursor:var(--cpe-text-cursor);
   scrollbar-width:thin;
-  scrollbar-color:var(--content-color) transparent;
+  scrollbar-color:var(--scrollbar-thumb-color-1) var(--scrollbar-track-color-1);
 /** Scrollbar Styling **/
 	/* Width */
 	--scrollbar-width:8.5px;
@@ -1062,21 +1072,21 @@ a.cpe-button, button.cpe-button {
 
 /* Secondary */
 .cpe-button.cpe-is-secondary {
-    border-color:var(--content-color);
+    border-color:var(--button-color);
     background-color:var(--content-bg);
     color:var(--button-color);
     box-shadow:0 0 1.5px 1.5px var(--content-bg);
 }
 
 .cpe-button.cpe-is-secondary:hover {
-    border-color:var(--content-color-dark);
+    border-color:var(--button-color-dark);
     background-color:var(--button-color-content-bg-mix-light);
     color:var(--button-color-dark);
     box-shadow:0 0 1.5px 1.5px var(--button-color-content-bg-mix-light);
 }
 
 .cpe-button.cpe-is-secondary:active, .cpe-button.cpe-is-secondary.cpe-is-active {
-    border-color:var(--content-border-dark-super);
+    border-color:var(--button-border-dark-super);
     background-color:var(--button-color-content-bg-mix);
     color:var(--button-color-dark-super); 
     box-shadow:0 0 1.5px 1.5px var(--button-color-content-bg-mix);
@@ -1423,7 +1433,7 @@ z-index:4;
 box-shadow:0 2px 6px 0 rgba(0,0,0,.2), 0 2px 6px 0 rgba(255,255,255,0.2);
 font-size:14px;
   scrollbar-width:thin;
-  scrollbar-color:var(--content-border) transparent;
+  scrollbar-color:var(--scrollbar-thumb-color-1) var(--scrollbar-track-color-1);
  /** Scrollbar Styling **/
 	/* Width */
 	--scrollbar-width:8.5px;
@@ -1545,8 +1555,8 @@ display:none!important;
   display:inline-block; 
   opacity:1; 
   pointer-events:all;
-  -webkit-backdrop-filter:blur(8px) sepia(12%) contrast(112%) invert(12%) grayscale(12%) saturate(112%) hue-rotate(12deg) brightness(112%);
-  backdrop-filter:blur(8px) sepia(12%) contrast(112%) invert(12%) grayscale(12%) saturate(112%) hue-rotate(12deg) brightness(112%);
+  -webkit-backdrop-filter:var(--backdrop-filter);
+  backdrop-filter:var(--backdrop-filter);
 }
 
 .cpe-dropdown.cpe-is-active .cpe-dropdown__toggle-chevron {transform:rotate(180deg)}
@@ -1605,8 +1615,8 @@ font-size:12px
 display:block; 
 opacity:1;
  pointer-events:all;
- -webkit-backdrop-filter:blur(8px) sepia(12%) contrast(112%) invert(12%) grayscale(12%) saturate(112%) hue-rotate(12deg) brightness(112%);
- backdrop-filter:blur(8px) sepia(12%) contrast(112%) invert(12%) grayscale(12%) saturate(112%) hue-rotate(12deg) brightness(112%);
+ -webkit-backdrop-filter:var(--backdrop-filter);
+ backdrop-filter:var(--backdrop-filter);
 }
 
 
@@ -1938,8 +1948,8 @@ opacity:1;
 	transform-origin:top center;
 	position:relative;
 	min-height:40px;
-    -webkit-backdrop-filter:blur(8px) sepia(12%) contrast(112%) invert(12%) grayscale(12%) saturate(112%) hue-rotate(12deg) brightness(112%);
-    backdrop-filter:blur(8px) sepia(12%) contrast(112%) invert(12%) grayscale(12%) saturate(112%) hue-rotate(12deg) brightness(112%);
+    -webkit-backdrop-filter:var(--backdrop-filter);
+    backdrop-filter:var(--backdrop-filter);
 }
 
 

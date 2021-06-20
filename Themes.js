@@ -61,6 +61,10 @@ function getRandomInt(max) {
 }
 
 
+function SupportsColorMix() {
+	return CSS.supports("color","color-mix(in srgb, #34c9eb 70%, white)") || CSS.supports("color:color-mix(in srgb, #34c9eb 70%, white)") 
+}
+
 /* Visual Styles */
 function VisualStyle(style) {
 	var oldvisual = $('html').attr("visualcolors");
@@ -1277,7 +1281,6 @@ function ColorTestTwin(color,color2,intensity=1,inter='hsl') {
 	return chroma.mix(color,color2,MW18HoverThreshold*intensity, inter);
 }
 
-
 function ColorTest(color,text=false) {
 
 	if (isLightColor(color)) {
@@ -1520,7 +1523,7 @@ function SocialCompile() {
 	for (let i = 0; i < socialAM; i++) {
 	  var color = socialC[i];
 	  var colormixl = ColorTestTwin(content_color,color,0.8,'rgb');
-      var colormix = ColorTestTwin(colormixl,color,0.8,'rgb');
+      var colormix = ColorTestTwin(content_color,color,1.6,'rgb');
 	  var name = socialV[i];
 	  var data = '.cpe-button.cpe-is-' + name + '-color{' +'--button-color:' + color + '!important;' + '--button-color-dark:' + ColorTest(color,false) + '!important;' + '--button-color-dark-super:' + SuperColorTest(color,false) + '!important;' + '--button-color-text:' + ColorTest(color,true) + '!important;' + '--button-color-text-dark:' + ColorTest(ColorTest(color,true),false) + '!important;' + '--button-color-content-bg-mix-light:' + colormixl + '!important;' + '--button-color-content-bg-mix:' + colormix + '!important;' + '}'
 	  str = str + data;
@@ -1616,14 +1619,14 @@ if (getComputedStyle(document.querySelector('html')).getPropertyValue("--content
 	var content_text4 = ColorTest(content_text,true);
 	var content_text5 = ColorTest(content_text4,false);
 	colormixl = ColorTestTwin(content_color,content_text,0.8,'rgb');
-	colormix = ColorTestTwin(colormixl,content_text,0.8,'rgb');
+	colormix = ColorTestTwin(content_color,content_text,1.6,'rgb');
 } else {
 	var content_text2 = ColorTest(dropdowncolor3);
 	var content_text3 = SuperColorTest(dropdowncolor3); // Scrollbar
 	var content_text4 = ColorTest(dropdowncolor3,true);
 	var content_text5 = ColorTest(content_text4,false);
 	colormixl = ColorTestTwin(content_color,dropdowncolor3,0.8,'rgb');
-	colormix = ColorTestTwin(colormixl,dropdowncolor3,0.8,'rgb');
+	colormix = ColorTestTwin(content_color,dropdowncolor3,1.6,'rgb');
 }
 
 
@@ -1687,7 +1690,7 @@ document.querySelector('html').style.setProperty("--button-color-blend", button_
 }
 
 buttonmixl = ColorTestTwin(content_color,button_color,0.8,'rgb');
-buttonmix = ColorTestTwin(buttonmixl,button_color,0.8,'rgb');
+buttonmix = ColorTestTwin(content_color,button_color,1.6,'rgb');
 
 
 /* Set Values */
@@ -1724,7 +1727,7 @@ document.querySelector('html').style.setProperty("--community-header-bg-blend", 
 }
 
 headermixl = ColorTestTwin(content_color,header_color,0.8,'rgb');
-headermix = ColorTestTwin(headermixl,header_color,0.8,'rgb');
+headermix = ColorTestTwin(content_color,header_color,1.6,'rgb');
 
 
 
@@ -1764,7 +1767,7 @@ document.querySelector('html').style.setProperty("--link-color-blend", link_colo
 }
 
 linkmixl = ColorTestTwin(content_color,link_color,0.8,'rgb');
-linkmix = ColorTestTwin(linkmixl,link_color,0.8,'rgb');
+linkmix = ColorTestTwin(content_color,link_color,1.6,'rgb');
 
 
 /* Set Values */
@@ -1806,7 +1809,7 @@ document.querySelector('html').style.setProperty("--content-border-blend", borde
 }
 
 bordermixl = ColorTestTwin(content_color,border_color,0.8,'rgb');
-bordermix = ColorTestTwin(bordermixl,border_color,0.8,'rgb');
+bordermix = ColorTestTwin(content_color,border_color,1.6,'rgb');
 
 /* Set Values */
 document.querySelector('html').style.setProperty("--content-border-dark", bordercolor1);
@@ -1842,7 +1845,7 @@ document.querySelector('html').style.setProperty("--background-color-blend", hea
 }
 
 headmixl = ColorTestTwin(content_color,head_color,0.8,'rgb');
-headmix = ColorTestTwin(headmixl,head_color,0.8,'rgb');
+headmix = ColorTestTwin(content_color,head_color,1.6,'rgb');
 
 /* Set Values */
 document.querySelector('html').style.setProperty("--background-color-dark", headcolor1);
@@ -1896,7 +1899,7 @@ document.querySelector('html').style.setProperty("--floating-header-bg-blend", f
 }
 
 floatmixl = ColorTestTwin(content_color,floating_color,0.8,'rgb');
-floatmix = ColorTestTwin(floatmixl,floating_color,0.8,'rgb');
+floatmix = ColorTestTwin(content_color,floating_color,1.6,'rgb');
 
 
 document.querySelector('html').style.setProperty("--floating-header-dark", floatingcolor1);
@@ -1919,22 +1922,22 @@ document.querySelector('html').style.setProperty("--floating-header-bg-blend-rgb
 /* Info, Success, Warning and Alert color mixes */
 // Info
 infomixl = ColorTestTwin(content_color,'#575859',0.8,'rgb');
-infomix = ColorTestTwin(infomixl,'#575859',0.8,'rgb');
+infomix = ColorTestTwin(content_color,'#575859',1.6,'rgb');
 document.querySelector('html').style.setProperty("--info-color-content-bg-mix-light", infomixl);
 document.querySelector('html').style.setProperty("--info-color-content-bg-mix", infomix);
 // Success
 successmixl = ColorTestTwin(content_color,'#14866d',0.8,'rgb');
-successmix = ColorTestTwin(successmixl,'#14866d',0.8,'rgb');
+successmix = ColorTestTwin(content_color,'#14866d',1.6,'rgb');
 document.querySelector('html').style.setProperty("--success-color-content-bg-mix-light", successmixl);
 document.querySelector('html').style.setProperty("--success-color-content-bg-mix", successmix);
 // Wanring
 warningmixl = ColorTestTwin(content_color,'#ffcc33',0.8,'rgb');
-warningmix = ColorTestTwin(warningmixl,'#ffcc33',0.8,'rgb');
+warningmix = ColorTestTwin(content_color,'#ffcc33',1.6,'rgb');
 document.querySelector('html').style.setProperty("--warning-color-content-bg-mix-light", warningmixl);
 document.querySelector('html').style.setProperty("--warning-color-content-bg-mix", warningmix);
 // Alert
 alertmixl = ColorTestTwin(content_color,'#dd3333',0.8,'rgb');
-alertmix = ColorTestTwin(alertmixl,'#dd3333',0.8,'rgb');
+alertmix = ColorTestTwin(content_color,'#dd3333',1.6,'rgb');
 document.querySelector('html').style.setProperty("--alert-color-content-bg-mix-light", alertmixl);
 document.querySelector('html').style.setProperty("--alert-color-content-bg-mix", alertmix);
 
