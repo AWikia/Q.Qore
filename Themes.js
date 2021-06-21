@@ -647,6 +647,21 @@ UpdateValue()
 }
 
 
+function RandomColorCc() {
+	$("body").attr('caret-color-auto', 'false');
+// var x = chroma.random()
+	var Colors = ['bfff00','fafa00','ffbf00','ff00bf','00bfff','00ffbf','bf00ff'] 
+	var x = '#' + Colors[getRandomInt(Colors.length)]
+$('input[type="range"][name="caret"].red').val(chroma(x).get('rgb.r'));
+$('input[type="range"][name="caret"].green').val( chroma(x).get('rgb.g'));
+$('input[type="range"][name="caret"].blue').val( chroma(x).get('rgb.b'));
+
+
+UpdateValue()
+}
+
+
+
 function RandomColor() {
 	RandomColor1();
 	RandomColor2();
@@ -657,6 +672,7 @@ function RandomColor() {
 	RandomColor7();
 	RandomColor8();
 	RandomColor9();
+	RandomColorCc();
 }
 
 
@@ -819,7 +835,7 @@ function PresetTheme(theme="") {
 /* These functions asks about what color should the user use if no value is set and sets it to an individual component such as Body Background color (The current color is used as initial answer in case of accidental use)
 ** If a value is set directly in the function, it instead uses that color instead of asking the user to write a color
 ** Used in Preferences only
-** Possible Variations of PickColor() 1 = Body Color | 2 = Header Color | 3 = Content Color | 4 = Content Text Color | 5 = Content Border Color | 6 = Link Color | 7 = Button Color | 8 = Body Overlay Color | 9 = Floating Header Color
+** Possible Variations of PickColor() 1 = Body Color | 2 = Header Color | 3 = Content Color | 4 = Content Text Color | 5 = Content Border Color | 6 = Link Color | 7 = Button Color | 8 = Body Overlay Color | 9 = Floating Header Color | Cc = Caret Color
 */
 function PickColor1(color="") {
 if (color==="") {
@@ -977,6 +993,32 @@ UpdateValue()
 }
 
 
+
+function PickColorCc(color="") {
+if (color==="") {
+	if ( $("body").attr('caret-color-auto') === 'true' ) {
+		var x= prompt("Insertation Caret Color", 'auto');
+	} else {
+	var x= prompt("Insertation Caret Color", chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--caret-color")));
+	}
+} else {
+	var x=color;
+}
+if (x !=='auto') {
+	$("body").attr('caret-color-auto', 'false');
+	$('input[type="range"][name="caret"].red').val(chroma(x).get('rgb.r'));
+	$('input[type="range"][name="caret"].green').val( chroma(x).get('rgb.g'));
+	$('input[type="range"][name="caret"].blue').val( chroma(x).get('rgb.b'));
+} else {
+	$("body").attr('caret-color-auto', 'true');
+}
+
+UpdateValue()
+
+}
+
+
+
 /* Updates all Sliders values found in each theme designer color selection to the red, green and blue of each color (Each color editor menu in theme designer consists of 3 sliders) */
 function UpdateSet() {
 	if  (!($("html.contrast.win10").length)) {
@@ -1033,6 +1075,12 @@ function UpdateSet() {
 			$('input[type="range"][name="headerf"].green').val( chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--floating-header-bg")).get('rgb.g') );
 			$('input[type="range"][name="headerf"].blue').val( chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--floating-header-bg")).get('rgb.b') );
 		}
+		if (getComputedStyle(document.querySelector('html')).getPropertyValue("--caret-color") != 'auto') {
+			/* Insertation Caret */
+			$('input[type="range"][name="caret"].red').val(chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--caret-color")).get('rgb.r') );
+			$('input[type="range"][name="caret"].green').val( chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--caret-color")).get('rgb.g') );
+			$('input[type="range"][name="caret"].blue').val( chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--caret-color")).get('rgb.b') );
+		}
 	}
 }
 
@@ -1064,6 +1112,11 @@ function UpdateValue() {
 	} else {
 		var floatingheadercolorfinal = chroma('rgb(' + $('input[type="range"][name="headerf"].red').val() + ',' + $('input[type="range"][name="headerf"].green').val() + ',' + $('input[type="range"][name="headerf"].blue').val() + ')') ;
 	}
+	if ( $("body").attr('caret-color-auto') === 'true' ) {
+		var caretcolorfinal = 'auto' ;
+	} else {
+		var caretcolorfinal = chroma('rgb(' + $('input[type="range"][name="caret"].red').val() + ',' + $('input[type="range"][name="caret"].green').val() + ',' + $('input[type="range"][name="caret"].blue').val() + ')') ;
+	}
 
 
 
@@ -1080,6 +1133,7 @@ function UpdateValue() {
 		'--button-color:' + chroma('rgb(' + $('input[type="range"][name="buttoncolor"].red').val() + ',' + $('input[type="range"][name="buttoncolor"].green').val() + ',' + $('input[type="range"][name="buttoncolor"].blue').val() + ')') + '!important;' +
 		'--community-header-bg:' + headercolorfinal + '!important;' +
 		'--floating-header-bg:' + floatingheadercolorfinal + '!important;' +
+		'--caret-color:' + caretcolorfinal + '!important;' +
 		'}'
 		);	
 	}
@@ -1096,6 +1150,7 @@ function UpdateValue() {
 		'--button-color:' + chroma('rgb(' + $('input[type="range"][name="buttoncolor"].red').val() + ',' + $('input[type="range"][name="buttoncolor"].green').val() + ',' + $('input[type="range"][name="buttoncolor"].blue').val() + ')') + '!important;' +
 		'--community-header-bg:' + headercolorfinal + '!important;' +
 		'--floating-header-bg:' + floatingheadercolorfinal + '!important;' +
+		'--caret-color:' + caretcolorfinal + '!important;' +
 		'}'
 		);	
 	}
@@ -1112,6 +1167,7 @@ function UpdateValue() {
 		'--button-color:' + chroma('rgb(' + $('input[type="range"][name="buttoncolor"].red').val() + ',' + $('input[type="range"][name="buttoncolor"].green').val() + ',' + $('input[type="range"][name="buttoncolor"].blue').val() + ')') + '!important;' +
 		'--community-header-bg:' + headercolorfinal + '!important;' +
 		'--floating-header-bg:' + floatingheadercolorfinal + '!important;' +
+		'--caret-color:' + caretcolorfinal + '!important;' +
 		'}'
 		);	
 	}
@@ -1128,6 +1184,7 @@ function UpdateValue() {
 		'--button-color:' + chroma('rgb(' + $('input[type="range"][name="buttoncolor"].red').val() + ',' + $('input[type="range"][name="buttoncolor"].green').val() + ',' + $('input[type="range"][name="buttoncolor"].blue').val() + ')') + '!important;' +
 		'--community-header-bg:' + headercolorfinal + '!important;' +
 		'--floating-header-bg:' + floatingheadercolorfinal + '!important;' +
+		'--caret-color:' + caretcolorfinal + '!important;' +
 		'}'
 		);	
 	}
@@ -1147,6 +1204,10 @@ function DownloadTheme() {
 			 '--background-image:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-image")  + ';\n' +
 			 '--background-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-color")  + ';\n' +
 			 '--background-overlay:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-overlay")  + ';\n' +
+			 '--body-display:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--body-display")  + ';\n' +
+			 '--background-va:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-va")  + ';\n' +
+			 '--background-size:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-size")  + ';\n' +
+			 '--background-no-tiling:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-no-tiling")  + ';\n' +
 			 '--link-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--link-color")  + ';\n' +
 			 '--content-bg:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--content-bg")  + ';\n' +
 			 '--content-border:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border")  + ';\n' +
@@ -1154,11 +1215,8 @@ function DownloadTheme() {
 			 '--button-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--button-color")  + ';\n' +
 			 '--community-header-bg:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg")  + ';\n' +
 			 '--floating-header-bg:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--floating-header-bg")  + ';\n' +
-			 '--body-display:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--body-display")  + ';\n' +
-			 '--background-va:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-va")  + ';\n' +
-			 '--background-size:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-size")  + ';\n' +
-			 '--background-no-tiling:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-no-tiling")  + ';\n' +
 			 '--custom-secondary-font:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--custom-secondary-font")  + ';\n' +
+			 '--caret-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--caret-color")  + ';\n' +
 			 '--border-radius:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--border-radius")  + ';\n' +
 			 '--wordmark-filter:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--wordmark-filter")  + ';\n' +
 			 '--wordmark-filter2:' + wordfilter2  + ';\n' +
@@ -1499,6 +1557,20 @@ function CompileRecColors() {
 	}
 
 	$(".rec-colors-button").append(str);
+
+
+// Caret Color
+	str = '';
+	var Colors = ['bfff00','fafa00','ffbf00','ff00bf','00bfff','00ffbf','bf00ff']
+	var socialAM = Colors.length
+
+	for (let i = 0; i < socialAM; i++) {
+	  var color = Colors[i];
+	  var data = '<button class="cpe-button cpe-is-square color-button" onclick="PickColorCc(' + "'#" + color + "'" + ')"> <div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:' + "#" +  color + ';"></div> </button>'
+	  str = str + data;
+	}
+
+	$(".rec-colors-caret").append(str);
 
 
 }
@@ -2053,7 +2125,12 @@ function CheckAdapt() {
 		} else {
 				$("body").attr('content-color-auto', 'false');
 		}
-	ColorUpdate(false);
+		if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--caret-color") === 'auto') && !($("html.contrast.win10").length)  ) {
+				$("body").attr('caret-color-auto', 'true');
+		} else {
+				$("body").attr('caret-color-auto', 'false');
+		}
+//	ColorUpdate(false);
 }
 
 /* Different with the ToggleBG function, only one is present for all three */
@@ -2217,7 +2294,7 @@ var legacy = document.querySelector('input#BG_2');
 		);	
 	}
 	}	
-	ColorUpdate(true);
+	CheckBG();
 }
 
 function ToggleBG1() {
@@ -2263,7 +2340,7 @@ if (top.checked) {
 		'}'
 		);	
 	}
-	ColorUpdate(true);
+	CheckBG();
 }
 
 function ToggleBG2() {
@@ -2335,7 +2412,7 @@ var x = document.querySelector('input#BG2');
 		);	
 	}
 	}	
-	ColorUpdate(true);
+	CheckBG();
 }
 
 
@@ -2386,7 +2463,7 @@ if (cover.checked) {
 		'}'
 		);	
 	}
-	ColorUpdate(true);
+	CheckBG();
 }
 
 

@@ -403,6 +403,7 @@ scrollbar-color:var(--scrollbar-thumb-color-1) var(--scrollbar-track-color-1);
 --foreign-fonts:"Didact Gothic", "M PLUS 1p",  "Nanum Gothic", "Prompt", "Cairo", "Ramabhadra", "Catamaran", "Noto Sans", "Noto Sans SC", "Noto Sans TC", "Noto Sans HK", "Hind Siliguri", "Baloo Tamma 2", "Kantumruy", "Manjari", "Padauk", "Baloo Bhaina 2", "Alef";
 --secondary-foreign-fonts:"M PLUS Rounded 1c", "Jua", "Mitr", "NTR", "Pavanam", "Mukta", "Noto Sans SC", "Noto Sans TC", "Noto Sans HK", "Baloo Da 2", "Baloo Tamma 2", "Battambang", "Baloo Chettan 2", "Padauk", "Baloo Bhaina 2", "Rubik";
 --secondary-font:var(--custom-secondary-font), "Rubik", "Arimo", "Liberation Sans", var(--secondary-foreign-fonts);
+--caret-color:auto;
 --custom-secondary-font:"";
 --border-radius:3px;
 --wordmark-filter:initial;
@@ -593,7 +594,9 @@ body[content-border-auto*="true"] .bordera-off,
 body[background-overlay-auto*="false"] .overlaya-on,
 body[background-overlay-auto*="true"] .overlaya-off,
 body[floating-header-bg-auto*="false"] .floatinga-on,
-body[floating-header-bg-auto*="true"] .floatinga-off { 
+body[floating-header-bg-auto*="true"] .floatinga-off,
+body[caret-color-auto*="false"] .careta-on,
+body[caret-color-auto*="true"] .careta-off { 
 	display:none!important;
 }
 
@@ -647,6 +650,7 @@ button, input {
 	box-shadow:none;
 	text-shadow:none;
 	cursor:var(--cpe-text-cursor);
+	caret-color:var(--caret-color);
 }
 
 button {
@@ -814,6 +818,7 @@ text-decoration:none;
 color:var(--link-color);
 cursor:var(--cpe-hand-cursor);
 background-color:transparent;
+	caret-color:var(--caret-color);
 }
 
 a:hover {
@@ -876,7 +881,12 @@ user-select:none!important;
 cursor:var(--cpe-blocked-cursor)!important;
 }
 
+html:not([visualcolors="standard"]) .forcedcolors-off {
+	--caret-color:auto!important;
+}
+
 textarea, [contenteditable] {
+	caret-color:var(--caret-color);
   cursor:var(--cpe-text-cursor);
   scrollbar-width:thin;
   scrollbar-color:var(--scrollbar-thumb-color-1) var(--scrollbar-track-color-1);
