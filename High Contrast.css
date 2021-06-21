@@ -232,13 +232,20 @@ background-image:linear-gradient(to left,rgba(255,255,255, 0) 200px,var(--commun
 }
 
 
-[visualtheme="basic"] .mpisto-header-container .link:hover,
+[visualtheme="basic"] .mpisto-header-container .link:hover  {
+		background-color:rgba(var(--link-color-rgb),0.2);
+		color:inherit;
+		box-shadow:none;
+		border:1px solid var(--community-header-text);
+}
+
 [visualtheme="basic"] .mpisto-sticky-header-container .link:hover  {
 		background-color:rgba(var(--link-color-rgb),0.2);
 		color:inherit;
 		box-shadow:none;
 		border:1px solid var(--floating-header-text);
 }
+
 
 [visualtheme="basic"] .mpisto-header-container .link.active, 
 [visualtheme="basic"] .mpisto-header-container .link:active, 
