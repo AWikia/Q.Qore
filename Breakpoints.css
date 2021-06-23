@@ -310,8 +310,8 @@ column-count:1!important;
 	font-size:12px;
 }
 
-.mpisto-option-way > div .fieldset fieldset {
-	padding:0 5px;
+.mpisto-option-way > div .fieldset {
+	padding:5px;
 }
 
 label {
@@ -649,7 +649,7 @@ width:100%;
 }
 
 .mpisto-option-way {
-	--max-pic-width:310px;
+	--max-pic-width:300px;
 }
 
 
@@ -785,7 +785,7 @@ padding-right:10px;
 
 
 .mpisto-option-way {
-	--max-pic-width:340px;
+	--max-pic-width:330px;
 }
 
 .option-link {

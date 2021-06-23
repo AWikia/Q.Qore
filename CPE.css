@@ -509,10 +509,20 @@ body {
   margin:0 auto;
   font-family:var(--font-family), var(--foreign-fonts);
 	cursor:var(--cpe-body-cursor);
-	box-shadow:0 0 40px 0px;
 	max-width:var(--max-width);
 }
 
+
+body::after {
+	content:"";
+	width:100%;
+	max-width:var(--max-width);
+	height:100%;
+	display:block;
+	position:fixed;
+	top:0;
+	box-shadow:0 0 40px 0px;
+}
 
 container {
     color:var(--background-color-text);
@@ -881,7 +891,7 @@ user-select:none!important;
 cursor:var(--cpe-blocked-cursor)!important;
 }
 
-html:not([visualcolors="standard"]) .forcedcolors-off {
+html:not([visualcolors="standard"]) {
 	--caret-color:auto!important;
 }
 
@@ -2038,7 +2048,7 @@ input[type="checkbox"], input[type="radio"] {
   color:var(--checkbox-active-bg);
   border-radius:26%;
   position:relative;
-  transition:background-color 200ms, box-shadow 200ms, color 200ms, opacity 200ms;
+  transition:background-color 200ms, box-shadow 200ms, color 200ms, opacity 200ms, -webkit-mask-size 200ms, mask-size 200ms;
   height:22px;
   width:22px;
   display:inline-block;
@@ -2062,25 +2072,29 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 input[type="checkbox"]::after, input[type="radio"]::after {
-display:block!important;
-content:"";
-position:absolute;
-opacity:0;
-top:0;
-left:0;
-width:100%;
-height:100%;
-box-sizing:content-box;
+    background-color: currentcolor;
+	display:block!important;
+	content:"";
+	position:absolute;
+	transition:inherit;
+	opacity:0;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	box-sizing:content-box;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size:0%;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size:0%;
+
 }
 
 input[type="checkbox"]::after {
-    border:2.15px solid currentcolor;
-    border-style:hidden solid solid hidden;
-    transform:rotate(45deg);
-    width:30%;
-    height:62%;
-    top:5%;
-    left:30%;
+    -webkit-mask-image: url("https://awikia.github.io/CentralProcessingEnd_Language/Tickbox.svg");
+    mask-image: url("https://awikia.github.io/CentralProcessingEnd_Language/Tickbox.svg");
 }
 
 input[type="checkbox"]:hover::after, input[type="radio"]:hover::after {
@@ -2095,29 +2109,38 @@ input[type="checkbox"]:active::after, input[type="radio"]:active::after {
 /* These styles are not used in IE and Edge since we use the ms-check to display the square. This applies to other engines only to show a minus sign */
 input[type="checkbox"]:indeterminate::after {
     opacity:1;
+    -webkit-mask-size: 80%;
+    mask-size: 80%;
 }
 
 input[type="checkbox"]:indeterminate::after, input[type="checkbox"][indeterminate]:not(:checked)::after {
-    border-style:hidden solid hidden hidden;
-    transform:rotate(90deg);
-    left:35%;
+    -webkit-mask-image: url("https://awikia.github.io/CentralProcessingEnd_Language/Tickbox2.svg");
+    mask-image: url("https://awikia.github.io/CentralProcessingEnd_Language/Tickbox2.svg");
 }
 
 
 
 input[type="radio"]::after {
-  background-color:currentcolor;
-  border-radius:50%;
-  width:55%;
-  height:55%;
-  top:22.5%;
-  left:22.5%;
+    -webkit-mask-image: url("https://awikia.github.io/CentralProcessingEnd_Language/Tickbox3.svg");
+    mask-image: url("https://awikia.github.io/CentralProcessingEnd_Language/Tickbox3.svg");
 }
 
 
 
 input[type="checkbox"]:checked::after, input[type="radio"]:checked::after {
   opacity:1;
+}
+
+
+ input[type="radio"]:checked::after {
+    -webkit-mask-size: 60%;
+    mask-size: 60%;
+}
+
+
+input[type="checkbox"]:checked::after {
+    -webkit-mask-size: 80%;
+    mask-size: 80%;
 }
 
 

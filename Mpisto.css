@@ -4654,18 +4654,19 @@ text-shadow:0 0 2px var(--content-color);
 
 .mpisto-option-way > div .fieldset {
   border-radius:10px;
-  padding:6px 0;
-  margin:8px;
+  padding:10px;
+  margin:15px 10px;
   background-color:var(--dropdown-bg);
   border:1px solid var(--content-border);
-  box-shadow: 0 0 3px 0.4px rgba(26, 26, 26, 0.4), 0 0 3px 0.4px rgba(240, 240, 240, 0.4);
-  background-image:linear-gradient(to bottom, rgba(24,24,24,0.0), rgba(247,247,247,0.02), rgba(24,24,24,0)), linear-gradient(to bottom, rgba(247,247,247,0.0), rgba(24,24,24,0.02), rgba(247,247,247,0));
+  box-shadow: 0 0 10px 0.5px rgba(24, 24, 24, 0.3), 0 0 10px 0.5px rgba(247, 247, 247, 0.3);
+  background-image:linear-gradient(to bottom, rgba(24,24,24,0.01), rgba(247,247,247,0.02), rgba(24,24,24,0.01)), 
+				   linear-gradient(to bottom, rgba(247,247,247,0.01), rgba(24,24,24,0.02), rgba(247,247,247,0.01));
 }
 
 .mpisto-option-way > div .fieldset fieldset {
 color:inherit;
 border:0;
-padding:0 10px;
+padding:0;
 line-height:inherit;
 }
 
@@ -4695,6 +4696,7 @@ line-height:inherit;
   background-color:var(--accent-bg);
   color:var(--accent-bg-text);
   box-shadow:none;
+  margin:10px;
 }
 
 .option-link {
@@ -4799,7 +4801,7 @@ vertical-align:middle;
 
 .mpisto-option-way .store-cards .store-card .cpe-floating-button-group, .mpisto-option-way .store-cards .store-theme-card .cpe-floating-button-group {
 	position:absolute;
-	right:20px;
+	right:10px;
 	top:10px;
 }
 

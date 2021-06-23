@@ -703,7 +703,7 @@ function PresetTheme(theme="") {
 	} else {
 		var theme2= theme;
 	}
-	var body_bg=[
+	var body_bg=[ 		  // --background-color
 				'ffffff', // Fandom Light
 				'000000', // Fandom Dark
 				'f6f6f6', // CC
@@ -720,9 +720,11 @@ function PresetTheme(theme="") {
 				'0b284f', // Zelda Blue
 				'441177', // CPE Default
 				'BACDD8', // Oasis
-				'000000'  // Windows 10
+				'000000', // Windows 10
+				'017683', // FandomDesktop Light
+				'000000'  // FandomDesktop Dark
 				][theme2];
-	var body_image=[
+	var body_image=[					 // --backgrounud-image
 				'Empty.png',			 // Fandom Light
 				'Empty.png',			 // Fandom Dark
 				'Empty.png',			 // CC
@@ -739,9 +741,11 @@ function PresetTheme(theme="") {
 				'Empty.png',			 // Zelda Blue
 				'loadbg_dev.png',		 // CPE Default
 				'Empty.png',			 // Oasis
-				'Empty.png'				 // Windows 10
+				'Empty.png',			 // Windows 10
+				'Empty.png',			 // FandomDesktop Light
+				'Empty.png'				 // FandomDesktop Dark
 				][theme2];
-	var page_bg=[
+	var page_bg=[		  // --content-bg (--content-color on reversed colors)
 				'f3f5f4', // Fandom Light
 				'0e191a', // Fandom Dark
 				'ffffff', // CC
@@ -758,9 +762,11 @@ function PresetTheme(theme="") {
 				'17456e', // Zelda Blue
 				'f1f2f3', // CPE Default
 				'FFFFFF', // Oasis
-				'ffffff'  // Windows 10
+				'ffffff', // Windows 10
+				'ffffff', // FandomDesktop Light
+				'0e191a'  // FandomDesktop Dark
 				][theme2];
-	var button_bg=[
+	var button_bg=[		  // --button-color
 				'01cdd1', // Fandom Light
 				'01cdd1', // Fandom Dark
 				'404a57', // CC
@@ -777,9 +783,11 @@ function PresetTheme(theme="") {
 				'001339', // Zelda Blue
 				'dd8300', // CPE Default
 				'006CB0', // Oasis
-				'0066cc'  // Windows 10
+				'0066cc', // Windows 10
+				'005c62', // FandomDesktop Light
+				'005c62'  // FandomDesktop Dark
 				][theme2];
-	var header_bg=[
+	var header_bg=[		  // --community-header-bg
 				'01cdd1', // Fandom Light
 				'01cdd1', // Fandom Dark
 				'dee7e5', // CC
@@ -796,9 +804,11 @@ function PresetTheme(theme="") {
 				'1d578b', // Zelda Blue
 				'b88300', // CPE Default
 				'006CB0', // Oasis
-				'96b4d1'  // Windows 10
+				'96b4d1', // Windows 10
+				'005558', // FandomDesktop Light
+				'058d9d'  // FandomDesktop Dark
 				][theme2];
-	var link_bg=[
+	var link_bg=[		  // --link-color
 				'088488', // Fandom Light
 				'01cdd1', // Fandom Dark
 				'009bbe', // CC
@@ -815,7 +825,9 @@ function PresetTheme(theme="") {
 				'f4f26b', // Zelda Blue
 				'dd2300', // CPE Default
 				'006CB0', // Oasis
-				'0066cc'  // Windows 10
+				'0066cc', // Windows 10
+				'088488', // FandomDesktop Light
+				'00cdd0'  // FandomDesktop Dark
 				][theme2];
 	/* Change Colors */
 	PickColor1(body_bg);
