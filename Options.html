@@ -405,6 +405,12 @@
 			<path fill="currentcolor" d="M52.053 0c-1.28 3.968-2.56 7.893-2.56 13.141v991.104c0 9.259 2.603 14.507 7.851 19.755l487.040-515.968-492.331-508.032zM577.237 542.208l125.909 129.92-179.755 102.4s-228.48 129.877-354.475 202.197l408.32-434.517zM611.413 506.752l135.083 140.459c21.163-11.776 186.496-106.325 210.091-119.467 24.917-14.421 22.4-34.133 1.237-44.629-19.584-10.88-184.917-105.6-209.92-120.96l-136.491 144.597zM577.152 472.619l127.317-135.211-181.717-103.723s-296.235-169.472-394.795-226.048l449.195 464.981z"></path>
 		</svg>
 	 </a>
+	<a class="link darkmode-off" title="Dark Mode" onclick="ToggleMode()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
+		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dark-mode" /> 
+	</svg></a>
+	<a class="link darkmode-on" title="Light Mode" onclick="ToggleMode()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
+		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-light-mode" /> 
+	</svg></a>
 	<a class="link large" title="Videos"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-video-camera" /> 
 	</svg></a>
@@ -1463,21 +1469,21 @@ Checked = VisualEditor as default mode
 	</svg>
      Wiki Theme
      </h2>
-    <input type="radio" name="theme1" id="theme-1" onclick="colortheme('auto')" title="Picks the Wiki's theme in accordance of the Wiki Personalization configuration"></input><label for="theme-1" title="Picks the Wiki's theme in accordance of the Wiki Personalization configuration">Auto</label>
+    <input type="radio" name="themechooser" id="theme-auto" onclick="colortheme('auto')" title="Picks the Wiki's theme in accordance of the Wiki Personalization configuration"></input><label for="theme-auto" title="Picks the Wiki's theme in accordance of the Wiki Personalization configuration">Auto</label>
 	<br>
-    <input type="radio" name="theme1" id="theme-2" onclick="colortheme('auto-r')" title="Picks the Wiki's theme in accordance of the Wiki Personalization configuration but reversed"></input><label for="theme-2" title="Picks the Wiki's theme in accordance of the Wiki Personalization configuration but reversed">Auto-Dark</label>
+    <input type="radio" name="themechooser" id="theme-auto-r" onclick="colortheme('auto-r')" title="Picks the Wiki's theme in accordance of the Wiki Personalization configuration but reversed"></input><label for="theme-auto-r" title="Picks the Wiki's theme in accordance of the Wiki Personalization configuration but reversed">Auto-Dark</label>
 	<br>
-    <input type="radio" name="theme1" id="theme-3" onclick="colortheme('system-a')" checked title="Picks the Wiki's theme in accordance of the Wiki Personalization configuration but based on System's Color Scheme"></input><label for="theme-3" title="Picks the Wiki's theme in accordance of the Wiki Personalization configuration but based on System's Color Scheme">Auto-System</label>
+    <input type="radio" name="themechooser" id="theme-system-a" onclick="colortheme('system-a')" checked title="Picks the Wiki's theme in accordance of the Wiki Personalization configuration but based on System's Color Scheme"></input><label for="theme-system-a" title="Picks the Wiki's theme in accordance of the Wiki Personalization configuration but based on System's Color Scheme">Auto-System</label>
 	<br>
-    <input type="radio" name="theme1" id="theme-4" onclick="colortheme('system-ar')" title="Picks the Wiki's theme in accordance of the Wiki Personalization configuration but based on System's Color Scheme and reversed"></input><label for="theme-4" title="Picks the Wiki's theme in accordance of the Wiki Personalization configuration but based on System's Color Scheme and reversed">Auto-System-Dark</label>
+    <input type="radio" name="themechooser" id="theme-system-ar" onclick="colortheme('system-ar')" title="Picks the Wiki's theme in accordance of the Wiki Personalization configuration but based on System's Color Scheme and reversed"></input><label for="theme-system-ar" title="Picks the Wiki's theme in accordance of the Wiki Personalization configuration but based on System's Color Scheme and reversed">Auto-System-Dark</label>
 	<br>
-    <input type="radio" name="theme1" id="theme-5" onclick="colortheme('light')" title="Makes Wiki theme be light, even if that theme is dark-themed"></input><label for="theme-5" title="Makes Wiki theme be light, even if that theme is dark-themed">Light</label>
+    <input type="radio" name="themechooser" id="theme-light" onclick="colortheme('light')" title="Makes Wiki theme be light, even if that theme is dark-themed"></input><label for="theme-light" title="Makes Wiki theme be light, even if that theme is dark-themed">Light</label>
 	<br>
-    <input type="radio" name="theme1" id="theme-6" onclick="colortheme('dark')" title="Makes Wiki theme be dark, even if that theme is light-themed"></input><label for="theme-6" title="Makes Wiki theme be dark, even if that theme is light-themed">Dark</label>
+    <input type="radio" name="themechooser" id="theme-dark" onclick="colortheme('dark')" title="Makes Wiki theme be dark, even if that theme is light-themed"></input><label for="theme-dark" title="Makes Wiki theme be dark, even if that theme is light-themed">Dark</label>
 	<br>
-    <input type="radio" name="theme1" id="theme-7" onclick="colortheme('system')" title="Picks the Wiki's theme in accordance of System's Color Scheme"></input><label for="theme-7" title="Picks the Wiki's theme in accordance of System's Color Scheme">System</label>
+    <input type="radio" name="themechooser" id="theme-system" onclick="colortheme('system')" title="Picks the Wiki's theme in accordance of System's Color Scheme"></input><label for="theme-system" title="Picks the Wiki's theme in accordance of System's Color Scheme">System</label>
 	<br>
-    <input type="radio" name="theme1" id="theme-8" onclick="colortheme('system-r')" title="Picks the Wiki's theme in accordance of System's Color Scheme but reversed"></input><label for="theme-8" title="Picks the Wiki's theme in accordance of System's Color Scheme but reversed">System-Dark</label>
+    <input type="radio" name="themechooser" id="theme-system-r" onclick="colortheme('system-r')" title="Picks the Wiki's theme in accordance of System's Color Scheme but reversed"></input><label for="theme-system-r" title="Picks the Wiki's theme in accordance of System's Color Scheme but reversed">System-Dark</label>
     </fieldset>
     </div>
 

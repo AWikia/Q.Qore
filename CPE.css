@@ -878,6 +878,11 @@ background-color:rgba(var(--link-color-rgb), 0.5);
 }
 
 
+body[dark-mode="true"] .darkmode-off,
+body[dark-mode="false"] .darkmode-on {
+	display:none!important;
+}
+
 :not(.unset)[disabled], 
 :not(.unset):disabled, 
 html:not([visualcolors="standard"]) .forcedcolors-off {
@@ -2076,7 +2081,7 @@ input[type="checkbox"]::after, input[type="radio"]::after {
 	display:block!important;
 	content:"";
 	position:absolute;
-	transition:inherit;
+	transition:opacity 200ms, -webkit-mask-size 200ms, mask-size 200ms;
 	opacity:0;
 	top:0;
 	left:0;

@@ -300,9 +300,46 @@ function colortheme(theme) {
 			document.querySelector('.rvbg1').style.setProperty("background-color", 'var(--content-bg)');
 		}
 	}
+	if (window.MW18darkmode) {
+		$('body').attr("dark-mode", isLightColor(body_bg) );
+	} else {
+		$('body').attr("dark-mode", !(isLightColor(body_bg)) );
+	}
+	if ($("body.options").length) {
+		$("input[id*='theme-'][name='themechooser']").removeAttr('checked');
+		$("input[name='themechooser']#theme-" + theme ).attr('checked',true);
+	}
 	if (old_dark != window.MW18darkmode) {
 		ColorUpdate(false);
 	}
+
+}
+
+function ToggleMode() {
+	var theme = $('body').attr("wikitheme");
+	if (theme === 'auto') {
+		colortheme('auto-r');
+	} else 	if (theme === 'auto-r') {
+		colortheme('auto');
+	} else 	if (theme === 'system-a') {
+		colortheme('system-ar');
+	} else 	if (theme === 'system-ar') {
+		colortheme('system-a');
+	} else 	if (theme === 'light') {
+		colortheme('dark');
+	} else 	if (theme === 'dark') {
+		colortheme('light');
+	} else 	if (theme === 'system') {
+		colortheme('system-r');
+	} else 	if (theme === 'system-r') {
+		colortheme('system');
+	}
+
+
+
+
+
+
 
 }
 
