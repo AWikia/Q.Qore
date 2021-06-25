@@ -937,6 +937,31 @@ table {
 color:inherit;
 }
 
+/* Wikiatable style */
+.wikitable {
+	line-height:1.6;
+	border:1px solid var(--content-border);
+	background-color:var(--content-bg);
+	border-collapse:collapse;
+	font-size:inherit;
+}
+
+
+.wikitable th {
+	background-color:var(--dropdown-bg);
+	font-family:var(--secondary-font), cursive;
+	font-weight:900;
+	text-align:center;
+}
+
+.wikitable th, .wikitable td {
+	border:1px solid var(--content-border);
+	padding:5px;
+	margin:1px 0;
+	text-align:center
+}
+
+
 /* Input Boxes */
 .cpe-input {
 	--input-box-color:var(--content-bg);

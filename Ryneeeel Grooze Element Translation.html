@@ -1186,70 +1186,207 @@
 
 		  <!--Start Article-->
 		<section class="editor-edit" oninput="UpdateSource()">
-		  On Lineeeel War and above, due to CSS incombabilites, translation was required to be adjusted to proper selectors so as CSS to renaim combative. You can use the <code>/* NOCONVERT */</code> comment next to a selector to avoid the translation
-		  <h1>Common Senses</h1>
-		  As of Zekzphire 2018, most elements with <code>cpe</code> prefix no longer translate to other selectors since 2018 has implemented a raft of them. However, for some we still do it. He're some examples and how we do it.
-		  <h2>FANDOM</h2>
-		  Here's a list of what CSS converter will do:
-		  <ul style="list-style:outside disc; line-height:1.5;">
-			<!--Begin-->
-			<li>
-			<code>.WikiaPage</code> gets translated into <code>.mpisto-content</code>
-			</li>
-			<li>
-			<code>#WikiaPage</code> gets translated into <code>#content</code>
-			</li>
-			<li>
-			<code>.WikiaMainContent</code> gets translated into <code>.mpisto-article-wrapper</code>
-			</li>
-			<li>
-			<code>#WikiaMainContent</code> gets translated into <code>.mpisto-article</code>
-			</li>
-			<li>
-			<code>.WikiaArticle</code> and <code>#WikiaArticle</code> gets translated into <code>.mpisto-article</code>
-			</li>
-			<li>
-			<code>.page-header</code> gets translated into <code>.mpisto-page-header</code>
-			</li>
-			<li>
-			<code>.page-header__title</code> gets translated into <code>.mpisto-title</code>
-			</li>
-			<li>
-			<code>.page-header__main</code> gets translated into <code>.mpisto-page-header-main</code>
-			</li>
-			<li>
-			<code>.WikiaRail</code> gets translated into <code>.mpisto-right-pane</code>
-			</li>
-			<li>
-			<code>.EditPageHeader</code> gets translated into <code>.editor-header</code>
-			</li>
-			<li>
-			<code>.WikiaPageBackground</code> gets translated into <code>.mpisto-content</code> and may get <code>:before</code> or <code>:after</code> pseudo if <code>.WikiaPage</code> Styles are used
-			</li>
-			<li>
-			<code>.WikiaSiteWrapper</code> gets translated into <code>.mpisto-2018</code>
-			</li>
-			<li>
-			<code>.skin-oasis</code> gets translated into <code>.main</code>
-			</li>
-			<li>
-			<code>.mediawiki</code> gets translated into <code>.mpisto-2018</code>
-			</li>
-			<li>
-			<code>.cpe-global-navigation</code> gets translated into <code>header.mpisto-navbar</code>
-			</li>
-			<li>
-			<code>.WikiaBarWrapper</code> gets translated into <code>footer.mpisto-footer-container</code> and the after pseudo element will be disabled unless used
-			</li>
-			<li>
-			<code>.WikiaBarWrapper .wikia-bar</code> gets translated into <code>footer.mpisto-footer-container > div</code>
-			</li>
-			<li>
-			<code>.rail-module</code> gets translated into <code>.mpisto-module</code> and unless after pseudo element is used, we may remove it for compability.
-			</li>
-			<!--End-->
-		  </ul>
-		  </section>
+				  On Qora Qore and above, due to CSS incombabilites, translation was required to be adjusted to proper selectors so as CSS to renaim combative. You can use the <code>/* NOCONVERT */</code> comment next to a selector to avoid the translation
+				  <h1>Common Senses</h1>
+				  As of Qora Qore Web, most elements with <code>wds</code> prefix translate to their cpe ones with some changes. Here you can find common selectors from the FandomDesktop UCX experience that you should be aware when translating existing CSS to Q.Qore. Note that Qora Qore is much closer to UCX as many features from it have been implemented but be aware of some things differing between the two platforms
+				  <h2>Common Classes</h2>
+				  <table class="wikitable" style="width:100%;">
+					<tbody>
+						<tr>
+							<th>
+							FandomDesktop
+							</th>
+							<th>
+							Qora Qore
+							</th>
+						</tr>
+						<tr>
+							<td>
+							<code>.fandom-sticky-header</code>
+							</td>
+							<td>
+							<code>.mpisto-sticky-header-container</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<code>.global-navigation</code>
+							</td>
+							<td>
+							<code>.mpisto-global-sidebar</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<code>.global-navigation .global-navigation__top</code>
+							</td>
+							<td>
+							<code>.mpisto-global-sidebar .upper-links</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<code>.global-navigation .global-navigation__bottom</code>
+							</td>
+							<td>
+							<code>.mpisto-global-sidebar .bottom-links</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<code>.main-container</code>
+							</td>
+							<td>
+							<code>.mpisto-wikispace</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<code>.fandom-community-background</code>
+							</td>
+							<td>
+							<code>.body-community-background</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<code>.resizable-container</code>
+							</td>
+							<td>
+							<code>.mpisto-content</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<code>.fandom-community-header</code>
+							</td>
+							<td>
+							<code>.mpisto-header-container</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<code>.fandom-community-header__top-container</code>
+							</td>
+							<td>
+							<code>.color-header</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<code>.fandom-community-header__local-navigation</code>
+							</td>
+							<td>
+							<code>.color-nav</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<code>.page</code>
+							</td>
+							<td>
+							<code>.mpisto-content .mpisto-wrapper</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<code>.page</code>
+							</td>
+							<td>
+							<code>.mpisto-content .mpisto-wrapper</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<code>.page__main</code>
+							</td>
+							<td>
+							<code>.mpisto-left-pane</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<code>.page-header</code>
+							</td>
+							<td>
+							<code>.mpisto-page-header</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<code>.page-header__bottom</code>
+							</td>
+							<td>
+							<code>.mpisto-page-header-main</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<code>.page-header__title-wrapper</code>
+							</td>
+							<td>
+							<code>.mpisto-page-header-title</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<code>.page-header__title</code>
+							</td>
+							<td>
+							<code>.mpisto-title</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<code>.page-header__actions</code>
+							</td>
+							<td>
+							<code>.mpisto-page-header-contribution</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<code>.page-content</code>
+							</td>
+							<td>
+							<code>.mpisto-article</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<code>.page__right-rail</code>
+							</td>
+							<td>
+							<code>.mpisto-right-pane</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<code>.right-rail-wrapper</code>
+							</td>
+							<td>
+							<code>.mpisto-right-pane-wrapper</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<code>.rail-module</code>
+							</td>
+							<td>
+							<code>.mpisto-module</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<code>.wds-global-footer</code>
+							</td>
+							<td>
+							<code>.mpisto-footer</code>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			  </section>
 		  <!--Stop Article-->
 		  </article>
       </nav>

@@ -3589,23 +3589,6 @@ border-bottom-right-radius:inherit;
 	flex:1;
 }
 
-/* Tables */
-table.wikitable {
-	border-collapse:collapse;
-	border-color:var(--content-border);
-	background-color:var(--dropdown-bg);
-	width:100%;
-	margin:1px 0;
-}
-
-table.wikitable th, table.wikitable td {
-	border-color:var(--content-border-dark);
-	padding:2px;
-}
-
-table.wikitable th {
-	background-color:var(--content-border);
-}
 
 
 /* Extras */
