@@ -4385,7 +4385,7 @@ display:inline-flex;
 flex-direction:column;
 min-width:280px;
 height:calc(100vh - var(--extra-height) - var(--sticky-nav-size));
-z-index:10;
+z-index:7;
 border:1px solid var(--content-border);
 border-width:0 1px 0 0;
 background-color:var(--accent-bg);
@@ -4422,6 +4422,10 @@ height:calc(100vh - 177px);
 
 
   overflow-y:auto;
+}
+
+.mpisto-option-pane div label {
+	display:contents;
 }
 
 /* QortaWeb 9- fix so as to force max-height to work on child elements */
@@ -4469,30 +4473,13 @@ font-weight:bolder;
 text-align:center;
 }
 
-.page-1 .mpisto-option-way.p1 {
-display:block;
-display:flex;
-}
-.page-2 .mpisto-option-way.p2 {
-display:block;
-display:flex;
-}
-.page-3 .mpisto-option-way.p3 {
-display:block;
-display:flex;
-}
-.page-4 .mpisto-option-way.p4 {
-display:block;
-display:flex;
-}
-.page-5 .mpisto-option-way.p5 {
-display:block;
-display:flex;
-}
-
+.page-1 .mpisto-option-way.p1,
+.page-2 .mpisto-option-way.p2,
+.page-3 .mpisto-option-way.p3,
+.page-4 .mpisto-option-way.p4,
+.page-5 .mpisto-option-way.p5,
 .page-6 .mpisto-option-way.p6 {
-display:block;
-display:flex;
+	display:flex;
 }
 
 
@@ -4518,7 +4505,8 @@ display:flex;
     border:1px var(--content-border);
     border-style:hidden;
     height:calc(100vh - 63px - var(--extra-height) - var(--sticky-nav-size));
-    margin:0 auto;    
+    margin:0 auto;
+    overflow-x:hidden;
 }
 
 
@@ -4538,7 +4526,7 @@ display:flex;
   border-bottom:1px solid transparent;
   position:relative;
 /*  color:var(--button-color-text); */
-  z-index:1;
+  z-index:8;
   height:63px;
   background-clip:padding-box;
 /*	background-image:linear-gradient(to bottom, var(--button-color-blend-light) 65%, rgba(0,0,0,0)); */
@@ -4698,7 +4686,7 @@ border-radius:var(--border-radius);
 }
 
 .option-link:hover {
-color:var(--content-color);
+color:inherit;
 }
 
 .option-link span {
@@ -4707,8 +4695,7 @@ vertical-align:middle;
 }
 
 
-.page-1 .option-link.p1, .page-2 .option-link.p2, .page-3 .option-link.p3, .page-4 .option-link.p4, .page-5 .option-link.p5, .page-6 .option-link.p6 {
-/*
+.option-link.is-active {/*
   background-color:var(--content-bg);
   border-color:var(--content-border);
 */

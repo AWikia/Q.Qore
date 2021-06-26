@@ -275,14 +275,16 @@ background-image:linear-gradient(to left,rgba(255,255,255, 0) 200px,var(--commun
 }
 
 
-[visualtheme="basic"] .page-1 .option-link.p1, [visualtheme="basic"] .page-2 .option-link.p2, [visualtheme="basic"] .page-3 .option-link.p3, [visualtheme="basic"] .page-4 .option-link.p4, [visualtheme="basic"] .page-5 .option-link.p5, [visualtheme="basic"] .page-6 .option-link.p6  {
-  border-color:var(--link-color);
+[visualtheme="basic"] .option-link.is-active {
+  border-color:var(--community-header-text-dark);
+  color:var(--community-header-text-dark);
+  background-color:rgba(var(--community-header-text-rgb), 0.25);
 }
 
 
 [visualtheme="basic"] .preview-window-window h2 button {
 	--button-background-hover:rgba(var(--link-color-rgb),0.2);
-	--button-background-active:rgba(var(--link-color-dark),0.4);
+	--button-background-active:rgba(var(--link-color-dark-rgb),0.4);
 	--button-background-color:inherit;
 	border-color:currentColor;
 	border-top:0;
@@ -313,7 +315,7 @@ background-image:linear-gradient(to left,rgba(255,255,255, 0) 200px,var(--commun
 	--accent-bg-text-dark-rgb:var(--content-color-dark-rgb)!important;
 }
 
-[visualtheme="contrast"] *:not(body),[visualtheme="contrast"] :before,[visualtheme="contrast"] :after  {
+[visualtheme="contrast"] *:not(body),[visualtheme="contrast"] :before,[visualtheme="contrast"] :not(body):after  {
   text-shadow:none!important;
   box-shadow:none!important;
   -webkit-filter:none!important;
@@ -506,8 +508,13 @@ background-color:var(--button-color);
 }
 
 [visualtheme="contrast"] .mpisto-option-pane, [visualtheme="basic"] .mpisto-option-pane {
-  background-color:var(--accent-bg);
+  background-color:var(--community-header-bg);
+  color:var(--community-header-text);
+  box-shadow:-1px 0 var(--community-header-bg)!important;
+  border-color:var(--communitty-header-text);
 }
+
+
 
 
 
@@ -715,10 +722,10 @@ box-shadow:0 0 0 3px var(--content-border)!important;
 }
 
 
-[visualtheme="contrast"] .page-1 .option-link.p1, [visualtheme="contrast"] .page-2 .option-link.p2, [visualtheme="contrast"] .page-3 .option-link.p3, [visualtheme="contrast"] .page-4 .option-link.p4, [visualtheme="contrast"] .page-5 .option-link.p5, [visualtheme="contrast"] .page-6 .option-link.p6  {
-  background-color:var(--button-color-text);
-  border-color:var(--button-color);
-  color:var(--button-color);
+[visualtheme="contrast"] .option-link.is-active {
+  background-color:var(--button-color);
+  border-color:var(--button-color-text);
+  color:var(--button-color-text);
 }
 
 [visualtheme="contrast"] .option-link, [visualtheme="contrast"] .option-link span {
@@ -1094,6 +1101,7 @@ background-image:linear-gradient(to bottom, var(--button-color-blend-light) 35%,
 }
 
 [visualtheme="simple"] .mpisto-content .mpisto-page-header-title,
+[visualtheme="simple"] .mpisto-right-pane,
 [visualtheme="simple"] .editor-header,
 [visualtheme="simple"] .mpisto-option-way h1,
 [visualtheme="simple"] .mpisto-userpages-header {
@@ -1103,23 +1111,18 @@ background-image:linear-gradient(to bottom, var(--button-color-blend-light) 35%,
 }
 
 [visualtheme="simple"] .mpisto-option-pane {
-	background-color:var(--community-header-bg-blend-light);
-	color:var(--community-header-text);
+	background-color:var(--floating-header-bg-blend-light);
+	color:var(--floating-header-text);
 }
 
 [visualtheme="simple"] .mpisto-option-pane .option-link {
 	color:inherit;
 }
 
-[visualtheme="simple"] .page-1 .option-link.p1, 
-[visualtheme="simple"] .page-2 .option-link.p2, 
-[visualtheme="simple"] .page-3 .option-link.p3, 
-[visualtheme="simple"] .page-4 .option-link.p4, 
-[visualtheme="simple"] .page-5 .option-link.p5, 
-[visualtheme="simple"] .page-6 .option-link.p6 {
-	color:var(--community-header-text-dark);
-	background-color:var(--community-header-bg-blend);
-	border-color:var(--community-header-bg-blend);
+[visualtheme="simple"] .option-link.is-active {
+	color:var(--floating-header-text-dark);
+	background-color:var(--floating-header-bg-blend);
+	border-color:var(--floating-header-bg-blend);
 }
 
 [visualtheme="simple"] .cpe-dropdown__content,

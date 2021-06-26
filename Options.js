@@ -78,6 +78,8 @@ function p1() {
         x.className = x.className.replace(" page-6", "");
     if (x.className.indexOf("page-1") == -1) {
         x.className += " page-1";
+        $('.option-link').removeClass('is-active');
+        $('.option-link.p1').addClass('is-active');
         sleep(50);
     }/* else {
         x.className = x.className.replace(" pane-on", "");        
@@ -94,6 +96,8 @@ function p2() {
         x.className = x.className.replace(" page-6", "");
     if (x.className.indexOf("page-2") == -1) {
         x.className += " page-2";
+        $('.option-link').removeClass('is-active');
+        $('.option-link.p2').addClass('is-active');
         sleep(50);
     } /*else {
         x.className = x.className.replace(" pane-on", "");        
@@ -110,6 +114,8 @@ function p3() {
         x.className = x.className.replace(" page-6", "");
     if (x.className.indexOf("page-3") == -1) {
         x.className += " page-3";
+        $('.option-link').removeClass('is-active');
+        $('.option-link.p3').addClass('is-active');
         sleep(50);
     } /*else {
         x.className = x.className.replace(" pane-on", "");        
@@ -125,6 +131,8 @@ function p4() {
         x.className = x.className.replace(" page-6", "");
     if (x.className.indexOf("page-4") == -1) {
         x.className += " page-4";
+        $('.option-link').removeClass('is-active');
+        $('.option-link.p4').addClass('is-active');
         sleep(50);
     }  /*else {
         x.className = x.className.replace(" pane-on", "");        
@@ -140,6 +148,8 @@ function p5() {
         x.className = x.className.replace(" page-6", "");
     if (x.className.indexOf("page-5") == -1) {
         x.className += " page-5";
+        $('.option-link').removeClass('is-active');
+        $('.option-link.p5').addClass('is-active');
         sleep(50);
     }  /*else {
         x.className = x.className.replace(" pane-on", "");        
@@ -155,6 +165,8 @@ function p6() {
         x.className = x.className.replace(" page-5", "");
     if (x.className.indexOf("page-6") == -1) {
         x.className += " page-6";
+        $('.option-link').removeClass('is-active');
+        $('.option-link.p6').addClass('is-active');
         sleep(50);
     }  /*else {
         x.className = x.className.replace(" pane-on", "");        
