@@ -450,7 +450,7 @@
       down : 10
     },
     offset : 60,
-    scroller: window,
+    scroller: document.querySelector('container'),
     classes : {
       pinned : 'headroom--pinned',
       unpinned : 'headroom--unpinned',

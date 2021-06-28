@@ -244,6 +244,13 @@ body:not(.editor) .mpisto-article floatingbanner .cpe-banner-notification__conta
 }
 
 
+h1,h2,h3,h4,h5,h6 {
+padding:0;
+margin:8px 0;
+font-style:inherit;
+font-weight:inherit;
+}
+
 
 floatingbanner {
 all:initial!important;
@@ -316,15 +323,10 @@ resize:none;
   image-rendering:optimize-contrast;         /* CSS3 Proposed  */
   image-rendering:pixelated;                 /* CSS4 Proposed  */
   image-rendering:crisp-edges;               /* CSS4 Proposed  */
-  -qq-image-blurring:cross;                  /* 4x4 Web 1-2    */
-border-radius:0; /* Remove initial border-radius set by some agents such as FF for Android in input fields */
--qq-invert-style:classic; /* Prevent extra 180deg hue-rotation on inverts on mInerva */
-  scrollbar-color:inherit; /* Qorta Qorte does not seem to inherit scrollbar-color. This line forces that browser to inherit */
 }
 
 .pixelatedoff *, .pixelatedoff {
   image-rendering:initial;                  /* CSS4 Proposed  */
-  -qq-image-blurring:tick;                  /* 4x4 Web 1-2    */
   }
 
 
@@ -708,6 +710,9 @@ cursor:var(--cpe-auto-cursor);
 	color:inherit;
 }
 
+.notification.cpe-dropdown__content .cpe-list  { 
+}
+
 .notification.cpe-dropdown__content .cpe-list > li{ 
 	width:100%;
 	width:calc(100% - 18px);
@@ -726,6 +731,7 @@ cursor:var(--cpe-auto-cursor);
   display:table-cell;
   width:100%;
   padding:0 9px;
+  position:static;
 }
 
 
@@ -875,9 +881,7 @@ box-decoration-break:clone;
 -webkit-border-radius:50%;
 border-radius:50%;
 opacity:0.99;
--qq-imaage-flip:noflip; /* Avoid flipping images by some custom CSSes */
   image-rendering:initial;                  /* CSS4 Proposed  */
-  -qq-image-blurring:tick;                  /* 4x4 Web 1-2    */
 /*
   -webkit-mask-image:var(--cpe-teadrop);
   mask-image:var(--cpe-teadrop)
@@ -906,9 +910,7 @@ min-width:28px;
 width:28px;
 border:2px solid currentColor;
 border-radius:50%;
--qq-imaage-flip:noflip; /* Avoid flipping images by some custom CSSes */
   image-rendering:initial;                  /* CSS4 Proposed  */
-  -qq-image-blurring:tick;                  /* 4x4 Web 1-2    */
 }
 .cpe-avatar-stack{
 align-items:center;
@@ -919,7 +921,6 @@ margin:8px 18px 6px 40px
 .cpe-avatar-stack__avatar{
 color:#ccc;
   image-rendering:initial;                  /* CSS4 Proposed  */
-  -qq-image-blurring:tick;                  /* 4x4 Web 1-2    */
 }
 
 .cpe-avatar-stack .cpe-avatar-stack__avatar:nth-child(1){
@@ -1197,7 +1198,7 @@ color:var(--community-header-text-dark);
 
 
 	.mobile-header .counters {
-		font-size:16px;
+		font-size:14px;
 		flex-wrap:wrap;
 		flex:1;
 		padding-right:5px;
@@ -1245,23 +1246,25 @@ color:var(--community-header-text-dark);
 		--sticky-nav-opacity:0.95;
 		background-color:rgba(var(--floating-header-bg-rgb), var(--sticky-nav-opacity));
 		color:var(--floating-header-text);
-		position:fixed;
-		top:0;
+		position:-webkit-sticky;
+		position:sticky;
+		top:0px;
+		padding-top:1px;
 		z-index:90;
 		height:var(--sticky-nav-size);
 		display:flex;
 		transition:transform 400ms;
-		width:calc(100% - var(--global-nav-size));
-		max-width:calc(var(--max-width) - var(--global-nav-size));
+		width:100%;
+		max-width:var(--max-width);
 		box-shadow: 0 0 3px #000, 0 0 3px #fff;
-		transform:translateY(calc(-100% - 3px));
+		transform:translateY(calc(-100% - 4px));
 		align-items:center;
+		margin-top:calc(0px - var(--sticky-nav-size));
+		box-sizing:content-box;
 	}
 
-	.headroom--not-top .mpisto-sticky-header-container,
-	.options .mpisto-sticky-header-container,
-	.editor .mpisto-sticky-header-container {
-		transform:translateY(0%);
+	.headroom--not-top .mpisto-sticky-header-container {
+		transform:translateY(-1px);
 	}
 	
 	.constructor .mpisto-sticky-header-container {
@@ -1270,9 +1273,11 @@ color:var(--community-header-text-dark);
 
 	.options .mpisto-sticky-header-container,
 	.editor .mpisto-sticky-header-container {
-		--global-nav-size:0;
+		transform:translateY(0%);
 		position:relative;
 		top:-20px;
+		margin-top:0;
+		padding-top:0;
 	}
 
 	
@@ -2109,7 +2114,6 @@ backdrop-filter:blur(5px) contrast(110%) saturate(110%);
 	background-size:cover;
 	background-repeat:no-repeat;
 	  image-rendering:initial;                  /* CSS4 Proposed  */
-	  -qq-image-blurring:tick;                  /* 4x4 Web 1-2    */
 }
 
 .mpisto-spotlight-footer nav > a {
@@ -5587,7 +5591,7 @@ background-color:rgba(var(--link-color-rgb),0.33); color:var(--link-color);
 .mpisto-dropdown-content .mpisto-dropdown-2nd.stacked .mpisto-dropdown-2nd-content{top:auto;bottom:-8px;}
 .mpisto-dropdown-content .mpisto-dropdown-2nd .mpisto-dropdown-2nd-content {background-color:var(--dropdown-bg);border:1px solid;border-color:var(--content-border);border-radius:5px;transition:240ms;transform:scale(0);opacity:0;visibility:hidden;display:block;
 left:100%;padding:10px 14px; position:absolute; top:-1px; font-size:0.9em;}
-.mpisto-dropdown-content .mpisto-dropdown-2nd.stacked .mpisto-dropdown-2nd-content {margin-left:14px;}
+.mpisto-dropdown-content .mpisto-dropdown-2nd/*.stacked*/ .mpisto-dropdown-2nd-content {margin-left:14px;}
 .mpisto-dropdown-content .mpisto-dropdown-2nd:hover .mpisto-dropdown-2nd-content{display:block;visibility:visible;opacity:1;transform:scale(1);
 }
 
@@ -5600,7 +5604,7 @@ background-color:rgba(var(--link-color-rgb),0.33); color:var(--link-color);
 .mpisto-dropdown-content .mpisto-dropdown-3rd.stacked .mpisto-dropdown-3rd-content{top:auto;bottom:-8px;}
 .mpisto-dropdown-content .mpisto-dropdown-3rd .mpisto-dropdown-3rd-content {;background-color:var(--dropdown-bg);border:1px solid;border-color:var(--content-border);border-radius:5px;transition:240ms;transform:scale(0);opacity:0;visibility:hidden;display:block;
 left:100%;padding:10px 14px; position:absolute; top:-1px; font-size:0.8em;}
-.mpisto-dropdown-content .mpisto-dropdown-3rd.stacked .mpisto-dropdown-3rd-content {margin-left:14px;}
+.mpisto-dropdown-content .mpisto-dropdown-3rd/*.stacked*/ .mpisto-dropdown-3rd-content {margin-left:14px;}
 .mpisto-dropdown-content .mpisto-dropdown-3rd:hover .mpisto-dropdown-3rd-content{display:block;visibility:visible;opacity:1;transform:scale(1);
 }
 
