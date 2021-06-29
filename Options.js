@@ -173,6 +173,52 @@ function p6() {
     }*/
 }
 
+
+function Step1() {
+    var x = document.getElementById("WikiWizardContent");
+        x.className = x.className.replace(" page-2", "");
+        x.className = x.className.replace(" page-3", "");
+    if (x.className.indexOf("page-1") == -1) {
+        x.className += " page-1";
+        $('.option-link').removeClass('is-active');
+        $('.option-link.step-1').addClass('is-active');
+        sleep(50);
+    }/* else {
+        x.className = x.className.replace(" pane-on", "");        
+    }*/
+}
+
+function Step2() {
+    var x = document.getElementById("WikiWizardContent");
+        x.className = x.className.replace(" page-1", "");
+        x.className = x.className.replace(" page-3", "");
+    if (x.className.indexOf("page-2") == -1) {
+        x.className += " page-2";
+        $('.option-link').removeClass('is-active');
+        $('.option-link.step-1').addClass('is-active');
+        $('.option-link.step-2').addClass('is-active');
+        sleep(50);
+    }/* else {
+        x.className = x.className.replace(" pane-on", "");        
+    }*/
+}
+
+function Step3() {
+    var x = document.getElementById("WikiWizardContent");
+        x.className = x.className.replace(" page-1", "");
+        x.className = x.className.replace(" page-2", "");
+    if (x.className.indexOf("page-1") == -1) {
+        x.className += " page-3";
+        $('.option-link').removeClass('is-active');
+        $('.option-link').addClass('is-active');
+        sleep(50);
+    }/* else {
+        x.className = x.className.replace(" pane-on", "");        
+    }*/
+}
+
+
+
 function CustomVEOn() {
         document.getElementById("VEset").removeAttribute('disabled');
 }

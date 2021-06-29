@@ -310,7 +310,7 @@ column-count:1!important;
 	font-size:12px;
 }
 
-.mpisto-option-way > div .fieldset {
+.fieldset {
 	padding:5px;
 }
 
@@ -558,13 +558,13 @@ label {
 	font-size:18px;
 }
 
-.mpisto-option-way > div .fieldset fieldset legend,
-.mpisto-option-way > div .fieldset > fieldset > h2 {
+.fieldset fieldset legend,
+.fieldset > fieldset > h2 {
 	font-size:20px;
 }
 
-.mpisto-option-way > div .fieldset fieldset legend .cpe-icon,
-.mpisto-option-way > div .fieldset > fieldset > h2 .cpe-icon {
+.fieldset fieldset legend .cpe-icon,
+.fieldset > fieldset > h2 .cpe-icon {
 	margin-right:4px;
 	width:24px;
 	height:24px;
@@ -651,6 +651,11 @@ width:100%;
 .mpisto-option-way {
 	--max-pic-width:300px;
 }
+
+ .mpisto-wiki-wizard-content .mpisto-wiki-wizard-steps .option-link {
+font-size:18px;
+}
+
 
 
 }
@@ -935,13 +940,13 @@ label {
 	font-size:24px;
 }
 
-.mpisto-option-way > div .fieldset fieldset legend,
-.mpisto-option-way > div .fieldset > fieldset > h2 {
+.fieldset fieldset legend,
+.fieldset > fieldset > h2 {
 	font-size:28px;
 }
 
-.mpisto-option-way > div .fieldset fieldset legend .cpe-icon,
-.mpisto-option-way > div .fieldset > fieldset > h2 .cpe-icon {
+.fieldset fieldset legend .cpe-icon,
+.fieldset > fieldset > h2 .cpe-icon {
 	margin-right:6px;
 	width:32px;
 	height:32px;

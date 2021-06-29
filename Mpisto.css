@@ -310,6 +310,11 @@ border-color:#14866d!important;
 border-color:#575859!important;
 }
 
+.options container,
+.wiki-wizard container {
+	overflow:hidden;
+}
+
 
 *,:before,:after {
 box-sizing:border-box;
@@ -4508,7 +4513,7 @@ text-align:center;
     width:100%;
     border:1px var(--content-border);
     border-style:hidden;
-    height:calc(100vh - 63px - var(--extra-height) - var(--sticky-nav-size));
+	flex:1 0 0px;
     margin:0 auto;
     overflow-x:hidden;
 }
@@ -4627,7 +4632,7 @@ text-shadow:0 0 2px var(--content-color);
 }
 }
 
-.mpisto-option-way > div .fieldset {
+.fieldset {
   border-radius:10px;
   padding:10px;
   margin:15px 10px;
@@ -4638,15 +4643,15 @@ text-shadow:0 0 2px var(--content-color);
 				   linear-gradient(to bottom, rgba(247,247,247,0.01), rgba(24,24,24,0.02), rgba(247,247,247,0.01));
 }
 
-.mpisto-option-way > div .fieldset fieldset {
+.fieldset fieldset {
 color:inherit;
 border:0;
 padding:0;
 line-height:inherit;
 }
 
-.mpisto-option-way > div .fieldset fieldset legend,
-.mpisto-option-way > div .fieldset > fieldset > h2 {
+.fieldset fieldset legend,
+.fieldset > fieldset > h2 {
   font-size:23px;
   font-weight:bolder;
   display:block;
@@ -4655,8 +4660,8 @@ line-height:inherit;
   align-items:center;
 }
 
-.mpisto-option-way > div .fieldset fieldset legend .cpe-icon,
-.mpisto-option-way > div .fieldset > fieldset > h2 .cpe-icon {
+.fieldset fieldset legend .cpe-icon,
+.fieldset > fieldset > h2 .cpe-icon {
 	margin-right:5px;
 	width:27px;
 	height:27px;
@@ -4665,7 +4670,7 @@ line-height:inherit;
 	vertical-align:middle;
 }
 
-.mpisto-option-way > div .fieldset fieldset .fieldset {
+.fieldset fieldset .fieldset {
   border-color:var(--emphasis-bg);
   background-image:linear-gradient(to bottom, rgba(24,24,24,0.0), rgba(247,247,247,0.01), rgba(24,24,24,0));
   background-color:var(--accent-bg);
@@ -4709,7 +4714,7 @@ vertical-align:middle;
 }
 
 
-.mpisto-option-pane .option-link .cpe-icon {
+.option-link .cpe-icon {
   align-self:center;
 vertical-align:middle;
 }
@@ -4989,6 +4994,134 @@ white-space:nowrap;
 	border-bottom-left-radius:var(--border-radius);
 	border-bottom-right-radius:var(--border-radius);
 }
+
+/* Wiki Creation Wizard */
+
+html.wiki-wizard {
+--wordmark:url("StoreMark.png");
+--background-image:url("");
+--background-color:#f6f6f6;
+--link-color:#00d6d6;
+--content-bg:#ffffff;
+--content-border:#cccccc;
+--content-color:#002a32;
+--button-color:#00D6D6;
+--community-header-bg:#13282c;
+}
+
+html.wiki-wizard.theme-B {
+--background-image:url("");
+--background-color:#f6f6f6;
+--link-color:#00b7e0;
+--content-bg:#ffffff;
+--content-border:#cccccc;
+--content-color:#1a1a1a;
+--button-color:#00B7E0;
+--community-header-bg:#404a57;
+}
+
+html.wiki-wizard.theme-C {
+--background-image:url("");
+--background-color:#002a32;
+--link-color:#1a5eb8;
+--content-bg:#0e191a;
+--content-border:#7f9998;
+--content-color:#d4d5d5;
+--button-color:#1a5eb8;
+--community-header-bg:#404a56;
+}
+
+html.wiki-wizard.theme-D {
+--background-image:url("");
+--background-color:#002a32;
+--link-color:#5f7a7b;
+--content-bg:#0e191a;
+--content-border:#7f9998;
+--content-color:#f2f5f5;
+--button-color:#5f7a7b;
+--community-header-bg:#becfd0;
+}
+
+
+.mpisto-wiki-wizard-content {
+	--sticky-nav-size:0px;
+	margin-top:0;
+	display:flex;
+	flex-direction:column;
+}
+
+.mpisto-wiki-wizard-content .mpisto-wiki-wizard-steps {
+padding:9px;
+display:inline-flex;
+min-width:280px;
+z-index:7;
+border:1px solid var(--content-border);
+border-width:0 1px 0 0;
+background-color:var(--accent-bg);
+color:var(--accent-bg-text);
+font-weight:300;
+text-shadow:none; /* Disable Embolding caused by the update */
+justify-content:space-between;
+width:100%;
+}
+
+.mpisto-wiki-wizard-content .mpisto-wiki-wizard-steps .option-link.is-active {
+  color:var(--community-header-bg);
+  border-color:rgba(var(--community-header-bg-rgb), 0.25);
+  background-color:rgba(var(--community-header-bg-rgb), 0.25);
+}
+
+
+.mpisto-wiki-wizard-way footer {
+  font-size:32px;
+  font-weight:bolder;
+  display:block;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:10px 6px 11px;
+  margin:0 -1px;
+  border-bottom:1px solid transparent;
+  position:relative;
+  z-index:8;
+  height:63px;
+  background-clip:padding-box;
+	background-color:var(--dropdown-bg);
+	color:var(--content-color);
+}
+
+.mpisto-wiki-wizard-way {
+    display:none;
+    flex-direction:column;
+    position:relative;
+    font-size:15px;
+    flex:1;
+    font-weight:400;
+}
+
+.mpisto-wiki-wizard-way > aside {
+	flex:1 0 0px;
+	overflow-y:auto;
+}
+
+
+.mpisto-wiki-wizard-way > aside textarea.cpe-input.info {
+	display:block;
+	border:0;
+	width:100%;
+	height:120px;
+	resize:none;
+}
+
+.page-1 .mpisto-wiki-wizard-way.p1,
+.page-2 .mpisto-wiki-wizard-way.p2,
+.page-3 .mpisto-wiki-wizard-way.p3 {
+	display:flex;
+}
+
+
+
+/* Lightboxes */
 
 
 .lightbox-container {

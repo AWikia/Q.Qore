@@ -779,8 +779,8 @@ function PresetTheme(theme="") {
 				'loadbg_dev.png',		 // CPE Default
 				'Empty.png',			 // Oasis
 				'Empty.png',			 // Windows 10
-				'Empty.png',			 // FandomDesktop Light
-				'Empty.png'				 // FandomDesktop Dark
+				'FD Light.jfif',		 // FandomDesktop Light
+				'FD Dark.jfif'			 // FandomDesktop Dark
 				][theme2];
 	var page_bg=[		  // --content-bg (--content-color on reversed colors)
 				'f3f5f4', // Fandom Light
