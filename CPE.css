@@ -532,7 +532,7 @@ container {
 	position:relative;
 	display:block;
 	height:100vh;
-	z-index:1;
+	z-index:2;
 	overflow-y:auto;
 }
 
@@ -2373,12 +2373,12 @@ container {
 }
 
 .body-community-background {
-	z-index:-1;
+	z-index:0;
 }
 
 .gradient-overlay,
 .gradient-overlay-2 {
-	z-index:0;
+	z-index:1;
 }
 
 }
