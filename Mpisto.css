@@ -4359,6 +4359,7 @@ column-count:1;
 /* Options */
 .mpisto-options-content {
 --extra-height:0px;
+display:flex;
 padding:0;
   width:auto;
   margin:-20px 18px 0;

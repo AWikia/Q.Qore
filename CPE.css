@@ -2362,3 +2362,11 @@ input[type="checkbox"]:indeterminate:active, input[type="radio"]:indeterminate:a
 .phone ::-webkit-scrollbar {
 	display:none;
 }
+
+.phone:not(.wiki-wizard):not(.options) {
+	overflow-y:auto;
+}
+
+.phone:not(.wiki-wizard):not(.options) container {
+	overflow-y:hidden;
+}
