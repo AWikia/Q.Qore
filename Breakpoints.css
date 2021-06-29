@@ -1,5 +1,5 @@
 /** Breakpoints for mpisto Zekzphire **/
-.mpisto-content, .mpisto-options-content, .mpisto-editors-content, footer.mpisto-footer .mpisto-wrapper, .main .page-wrapper, .top-gap, .headroom.headroom--not-top .top-gap .cpe-banner-notification__container#floatingbanner  {
+.mpisto-content, .mpisto-options-content, .mpisto-editors-content, footer.mpisto-footer .mpisto-wrapper, .main .page-wrapper, .top-gap, .top-gap .cpe-banner-notification__container#floatingbanner  {
 	width:calc(1240px - var(--global-nav-size) - var(--scrollbar-width));
 	margin-left:auto;
 	margin-right:auto;
@@ -173,7 +173,7 @@ container > main .mpisto-sticky-header-container {
 column-count:1!important;
 }
 
-.mpisto-content, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .mpisto-options-content, .lightbox, .footer, .top-gap, .headroom.headroom--not-top .top-gap .cpe-banner-notification__container#floatingbanner  {
+.mpisto-content, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .mpisto-options-content, .lightbox, .footer, .top-gap, .top-gap .cpe-banner-notification__container#floatingbanner  {
   width:100%!important;
   border-color:transparent!Important;
   margin-top:0!important;
@@ -663,7 +663,7 @@ font-size:18px;
 
 /* S */
 @media only screen and (min-width:760px) and (max-width:1019px) {
-.mpisto-content, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .mpisto-options-content, .top-gap, .headroom.headroom--not-top .top-gap .cpe-banner-notification__container#floatingbanner  {
+.mpisto-content, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .mpisto-options-content, .top-gap, .top-gap .cpe-banner-notification__container#floatingbanner  {
   width:calc(720px - var(--global-nav-size) - var(--scrollbar-width));
 }
 
@@ -802,7 +802,7 @@ padding-right:10px;
 }
 
 
-.mpisto-content, header.mpisto-navbar .mpisto-navbar-wrapper, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .mpisto-options-content, .main .page-wrapper, .top-gap, .headroom.headroom--not-top .top-gap .cpe-banner-notification__container#floatingbanner  /*.lightbox */ {
+.mpisto-content, header.mpisto-navbar .mpisto-navbar-wrapper, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .mpisto-options-content, .main .page-wrapper, .top-gap, .top-gap .cpe-banner-notification__container#floatingbanner  /*.lightbox */ {
 width:calc(980px - var(--global-nav-size) - var(--scrollbar-width));
 }
 
@@ -885,7 +885,7 @@ padding-right:30px;
 }
 */
 
-.mpisto-content, header.mpisto-navbar .mpisto-navbar-wrapper, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .mpisto-options-content, .main .page-wrapper, .top-gap, .headroom.headroom--not-top .top-gap .cpe-banner-notification__container#floatingbanner  /*.lightbox*/ {
+.mpisto-content, header.mpisto-navbar .mpisto-navbar-wrapper, footer.mpisto-footer .mpisto-wrapper, .mpisto-editors-content, .mpisto-options-content, .main .page-wrapper, .top-gap, .top-gap .cpe-banner-notification__container#floatingbanner  /*.lightbox*/ {
 width:calc(1460px - var(--global-nav-size) - var(--scrollbar-width)); /* Was 1146px */
 }
 

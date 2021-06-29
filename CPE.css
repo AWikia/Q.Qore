@@ -2059,10 +2059,9 @@ opacity:1;
 border-top:1px solid var(--content-border);}
 
 
-.headroom.headroom--not-top .top-gap .cpe-banner-notification__container#floatingbanner,
-.options #floatingbanner {
+ #floatingbanner {
   position:fixed;
-  top:50px;
+  bottom:0px;
   width:inherit;
   z-index:19; /* Needed lower value to allow header dropdowns not to overlap */
 }
@@ -2371,6 +2370,4 @@ html:not(.wiki-wizard):not(.options) body{
 container {
 	overflow-y:initial!impportant;
 }
-
-
 }
