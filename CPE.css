@@ -2372,13 +2372,5 @@ container {
 	overflow-y:initial!impportant;
 }
 
-.body-community-background {
-	z-index:0;
-}
-
-.gradient-overlay,
-.gradient-overlay-2 {
-	z-index:1;
-}
 
 }
