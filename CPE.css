@@ -2365,11 +2365,11 @@ input[type="checkbox"]:indeterminate:active, input[type="radio"]:indeterminate:a
 
 @supports (-webkit-backdrop-filter:none;) {
 html:not(.wiki-wizard):not(.options) body{
-	overflow-y:auto;
+	overflow-y:auto!important;
 }
 
 container {
-	overflow-y:hidden;
+	overflow-y:initial!impportant;
 }
 
 .body-community-background {
