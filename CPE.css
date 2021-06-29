@@ -2363,10 +2363,12 @@ input[type="checkbox"]:indeterminate:active, input[type="radio"]:indeterminate:a
 	display:none;
 }
 
-.phone:not(.wiki-wizard):not(.options) {
+@supports (-webkit-backdrop-filter:none;) {
+html:not(.wiki-wizard):not(.options) body{
 	overflow-y:auto;
 }
 
-.phone:not(.wiki-wizard):not(.options) container {
+container {
 	overflow-y:hidden;
+}
 }
