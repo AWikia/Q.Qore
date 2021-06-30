@@ -1392,7 +1392,7 @@ function ColorTest(color,text=false) {
 
 	if (isLightColor(color)) {
 		if (text === true) {
-			return '#0a0a0a';
+			return '#182324'; // Was #0a0a0a
 		} else {
 			return ColorTestTwin(color,'#000000');
 		}
@@ -1422,18 +1422,7 @@ function SuperColorTest(color) {
 
 // Only used for link and header colors
 function ColorTest2(color,text=false) {
-
-	if (text === true) {
-		if (isLightColor(color)) {
-			return '10,10,10';
-		} else {
-			return '250,250,250';
-		}
-	} else {
-		return Color2(ColorTest(color));
-	}
-
-
+	return Color2(ColorTest(color,text));
 }
 
 
@@ -1454,11 +1443,11 @@ function Color3(r=0,g=0,b=0) {
 
 
 function isLightColor(color) {
-	return ((chroma.contrast('#0A0A0A', color)) > MW18LightThreshold*0.09);
+	return ((chroma.contrast('#182324', color)) > MW18LightThreshold*0.09);
 }
 
 function isSuperLightColor(color) {
-	return ((chroma.contrast('#0A0A0A', color)) > window.MW18LightThreshold*0.126);
+	return ((chroma.contrast('#182324', color)) > window.MW18LightThreshold*0.126);
 }
 
 

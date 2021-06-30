@@ -146,6 +146,7 @@ $(' .cpe-dropdown.cpe-select .cpe-dropdown__content .cpe-list li:not(.cpe-dropdo
 /* Enable New Global Navigation - No exception for now */
 window.MW18newnavblock=false;
 (function () {
+	UpdateCounters();
 	$(' container > main').attr('wide', 'false');
 	DropDownUpdate();
 	if (window.MW18newnavblock === true) {
@@ -240,5 +241,38 @@ function ToggleWidth() {
 	} else {
 		$(' container > main').attr('wide', 'true');
 	}
+
+}
+
+/* Header Counters */
+function UpdateCounters() {
+	var Articles = 208;
+	var Photos = 557;
+
+	if ($('.mpisto-header-container .counters .counter.articles, .mpisto-sticky-header-container .counters .counter.articles').length) {
+		$('.mpisto-header-container .counters .counter.articles > big, .mpisto-sticky-header-container .counters .counter.articles > big').html(Articles);
+	}
+	if ($('.mpisto-header-container .counters .counter.photos, .mpisto-sticky-header-container .counters .counter.photos').length) {
+		$('.mpisto-header-container .counters .counter.photos > big, .mpisto-sticky-header-container .counters .counter.photos > big').html(Photos);
+	}
+	
+	var Threads = 300;
+	var Replies = 1674;
+	var Images = 615;
+	var Polls = 88;
+	
+	if ($('.mpisto-header-container .counters .counter.threads, .mpisto-sticky-header-container .counters .counter.threads').length) {
+		$('.mpisto-header-container .counters .counter.threads > big, .mpisto-sticky-header-container .counters .counter.threads > big').html(Threads);
+	}
+	if ($('.mpisto-header-container .counters .counter.replies, .mpisto-sticky-header-container .counters .counter.replies').length) {
+		$('.mpisto-header-container .counters .counter.replies > big, .mpisto-sticky-header-container .counters .counter.replies > big').html(Replies);
+	}
+	if ($('.mpisto-header-container .counters .counter.images, .mpisto-sticky-header-container .counters .counter.images').length) {
+		$('.mpisto-header-container .counters .counter.images > big, .mpisto-sticky-header-container .counters .counter.images > big').html(Images);
+	}
+	if ($('.mpisto-header-container .counters .counter.polls, .mpisto-sticky-header-container .counters .counter.polls').length) {
+		$('.mpisto-header-container .counters .counter.polls > big, .mpisto-sticky-header-container .counters .counter.polls > big').html(Polls);
+	}
+
 
 }

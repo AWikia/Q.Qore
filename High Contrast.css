@@ -189,7 +189,8 @@ html:not([visualtheme="contrast"]) .prt .pane-on .mpisto-article-wrapper:after {
 [visualtheme="basic"] .mpisto-global-sidebar {
 	--global-nav-color:var(--community-header-bg-rgb);
 	--global-nav-text-color:var(--community-header-text);
-	--global-nav-link-color-active:var(--community-header-text-dark);
+	--global-nav-link-color-hover:var(--community-header-text-dark);
+	--global-nav-link-color-active:rgba(var(--community-header-text-dark-rgb),0.8);
 	--global-nav-link-background-active:var(--community-header-text-rgb);
 }
 
@@ -197,6 +198,7 @@ html:not([visualtheme="contrast"]) .prt .pane-on .mpisto-article-wrapper:after {
 [visualtheme="contrast"] .mpisto-global-sidebar {
 	--global-nav-color:var(--dropdown-bg-rgb);
 	--global-nav-text-color:var(--content-color);
+	--global-nav-link-color-hover:var(--content-color-dark);
 	--global-nav-link-color-active:var(--button-color-text);
 	--global-nav-link-background-active:var(--button-color-rgb);
 
@@ -1022,7 +1024,8 @@ background-image:linear-gradient(to bottom, var(--button-color-blend-light) 35%,
 [visualtheme="simple"] .mpisto-global-sidebar {
 	--global-nav-color:var(--button-color-blend-light-rgb)!important;
 	--global-nav-text-color:var(--button-color-text)!important;
-	--global-nav-link-color-active:var(--button-color-text-dark)!important;
+	--global-nav-link-color-hover:var(--button-color-text-dark)!important;
+	--global-nav-link-color-active:rgba(var(--button-color-text-dark-rgb),0.8)!important;
 	--global-nav-link-background-active:var(--button-color-blend-rgb)!important;
 	--global-nav-opacity:1!important;
 }
