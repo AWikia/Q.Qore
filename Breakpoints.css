@@ -516,12 +516,12 @@ display:inline-flex;
 }
 
 
-.mpisto-2018 .body-community-background, .mpisto-2018 .gradient-overlay , .mpisto-2018 .gradient-overlay-2 {
-  background-image:none!important
+.mpisto-2018 .gradient-overlay , .mpisto-2018 .gradient-overlay-2 {
+  visibility:hidden!Important;
 }
 
-.mpisto-2018 .gradient-overlay {
-  display:none!Important;
+.mpisto-2018 .body-community-background {
+  background-image:url("Empty.png")!important;
 }
 
 
