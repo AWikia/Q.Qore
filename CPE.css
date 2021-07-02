@@ -506,6 +506,7 @@ body {
   --cpe-help-cursor:url("Windows/help.cur"), help;
   --cpe-text-cursor:url("Windows/text.cur"), text;
   --cpe-hand-cursor:url("Windows/hand.cur"), pointer;
+  --global-filter:none;
   margin:0 auto;
   font-family:var(--font-family), var(--foreign-fonts);
 	cursor:var(--cpe-body-cursor);
@@ -534,6 +535,7 @@ container {
 	height:100vh;
 	z-index:2;
 	overflow-y:auto;
+	filter:var(--global-filter);
 }
 
 
@@ -562,6 +564,7 @@ container {
 	max-width:var(--max-width);
 	image-rendering:initial;                  /* CSS4 Proposed  */
 	-qq-image-blurring:tick;                  /* 4x4 Web 1-2    */
+	filter:var(--global-filter);
 
 
 }
@@ -635,6 +638,7 @@ body[body-display*="legacy"] .gradient-overlay-2 {
   image-rendering:initial;                  /* CSS4 Proposed  */
   -qq-image-blurring:tick;                  /* 4x4 Web 1-2    */
 	max-width:var(--max-width);
+	filter:var(--global-filter);
 }
 
 
@@ -651,6 +655,7 @@ body[body-display*="legacy"] .gradient-overlay-2 {
 	opacity:0.75;
 	pointer-events:none;
 	max-width:var(--max-width);
+	filter:var(--global-filter);
 }
 
 /* Option and Headings */
@@ -2220,6 +2225,36 @@ input[type="checkbox"]:indeterminate:active, input[type="radio"]:indeterminate:a
   color:var(--checkbox-active-bg);
 }
 
+/* Color Filters */
+[colorfilter="invert"] {
+	--global-filter:invert(1);
+}
+
+[colorfilter="night"] {
+	--global-filter:invert(1) hue-rotate(180deg);
+}
+
+[colorfilter="gray"] {
+	--global-filter:grayscale(1);
+}
+
+[colorfilter="darkgray"] {
+	--global-filter:invert(1) grayscale(1);
+}
+
+
+[colorfilter="darkgray"] {
+	--global-filter:invert(1) grayscale(1);
+}
+
+[colorfilter="yelblk"] {
+	--global-filter:sepia(1) hue-rotate(200deg) invert(1);
+}
+
+[colorfilter="bluwht"] {
+	--global-filter:sepia(1) hue-rotate(200deg);
+}
+
 /** Themed Cursors **/
 /* Apple */
 [cursor*="apple"],
@@ -2358,8 +2393,12 @@ input[type="checkbox"]:indeterminate:active, input[type="radio"]:indeterminate:a
 	--scrollbar-size:0!important;
 }
 
-.phone ::-webkit-scrollbar {
-	display:none;
+html:not(.wiki-wizard):not(.options) .phone {
+	overflow-y:auto!important;
+}
+
+.phone container {
+	overflow-y:initial!important;
 }
 
 @supports (-webkit-backdrop-filter:none;) {
@@ -2368,6 +2407,6 @@ html:not(.wiki-wizard):not(.options) body{
 }
 
 container {
-	overflow-y:initial!impportant;
+	overflow-y:initial!important;
 }
 }

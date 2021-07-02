@@ -52,6 +52,7 @@ UpdateMisc();
 			VisualStyle(-1); // We start without any visual style
 		}
 		ContrastBanner(); // Notice
+		ColorFilter('standard');
 		
 })();
 
@@ -64,6 +65,12 @@ function getRandomInt(max) {
 function SupportsColorMix() {
 	return CSS.supports("color","color-mix(in srgb, #34c9eb 70%, white)") || CSS.supports("color:color-mix(in srgb, #34c9eb 70%, white)") 
 }
+
+/* Color Filter */
+function ColorFilter(filt) {
+		$('body').attr("colorfilter", filt);
+}
+
 
 /* Visual Styles */
 function VisualStyle(style) {
@@ -166,7 +173,6 @@ function CheckTheme() {
 	ThemeColorMetaTag();
 ManagerRows();
 ContrastBanner();
-
 }
 
 

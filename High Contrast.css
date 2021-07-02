@@ -179,7 +179,7 @@ html:not([visualtheme="contrast"]) .prt .pane-on .mpisto-article-wrapper:after {
 }
 
 /* Basic Theme */
-[visualtheme="basic"] *:not(body),[visualtheme="basic"] :before,[visualtheme="basic"] :after {
+[visualtheme="basic"] *:not(body):not(container):not(.body-community-background):not(.gradient-overlay):not(.gradient-overlay-2),[visualtheme="basic"] :before,[visualtheme="basic"] :after {
   -webkit-filter:none!important;
   filter:none!important;
   backdrop-filter:none!important;
@@ -320,12 +320,15 @@ background-image:linear-gradient(to left,rgba(255,255,255, 0) 200px,var(--commun
 [visualtheme="contrast"] *:not(body),[visualtheme="contrast"] :before,[visualtheme="contrast"] :not(body):after  {
   text-shadow:none!important;
   box-shadow:none!important;
+	background-blend-mode:normal!important;
+	mix-blend-mode:normal!important;
+}
+
+[visualtheme="contrast"] *:not(body):not(container):not(.body-community-background):not(.gradient-overlay):not(.gradient-overlay-2),[visualtheme="contrast"] :before,[visualtheme="contrast"] :not(body):after  {
   -webkit-filter:none!important;
   filter:none!important;
   backdrop-filter:none!important;
   -webkit-backdrop-filter:none!important;
-	background-blend-mode:normal!important;
-	mix-blend-mode:normal!important;
 }
 
 [visualtheme="basic"] .mpisto-content, [visualtheme="contrast"] .mpisto-content,
