@@ -6,9 +6,9 @@ window.MW18HoverThreshold = 0.25;
 window.MW18ContrastNotice = false;
 
 /* Visual Themes */
-var visualThemes = ['basic','basic','contrast','contrast','contrast','simple'];
-var visualColors = ['standard','lunacolors','standard','classicforced','forced','standard'];
-var visualThemeNames = ['Basic','Basic (XP Luna Colors)','High Contrast','High Contrast (Classic Forced Colors)','High Contrast (Modern Forced Colors)','Simple'];
+var visualThemes = ['standard','basic','basic','basic','contrast','contrast','contrast','contrast','contrast','contrast','simple','simple'];
+var visualColors = ['factorycolors','standard','factorycolors','lunacolors','standard','factorycolors','classicforced','campbellforced','forced','tangoforced','standard','factorycolors'];
+var visualThemeNames = ['Standard (Factory Colors)','Basic','Basic (Factory Colors)','Basic (XP Luna Colors)','High Contrast','High Contrast (Factory Colors)','High Contrast (Windows Forced Colors)','High Contrast (Campbell Forced Colors)','High Contrast (Mpisto OSX Forced Colors)','High Contrast (Tango Forced Colors)','Simple','Simple (Factory Colors)'];
 var contrastVisual = 2;
 
 (function () {
@@ -977,7 +977,7 @@ UpdateValue()
 
 function PickColor6(color="") {
 if (color==="") {
-	var x= prompt("Page Link Color", chroma('rgb(' + getComputedStyle(document.querySelector('html')).getPropertyValue("--link-color") + ')'));
+	var x= prompt("Page Link Color", chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--link-color")));
 } else {
 	var x=color;
 }

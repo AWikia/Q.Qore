@@ -1674,7 +1674,7 @@ color:var(--community-header-text-dark);
 		line-height:1.4;
 		font-size:25px;
 		font-weight:700;
-		max-height:60px;
+		max-height:50px;
 		padding:0 16px 0 11px;
 		font-family:var(--secondary-font), cursive;
 		white-space:pre-wrap;
@@ -1740,7 +1740,7 @@ color:var(--community-header-text-dark);
 /* M */
 @media only screen and (max-width:1279px) {
 	.mpisto-header-container .wordmark {
-		height:50px;
+		height:44px;
 		margin:0 10px;
 	}
 
@@ -5029,45 +5029,53 @@ html.wiki-wizard {
 --wordmark:url("StoreMark.png");
 --background-image:url("");
 --background-color:#f6f6f6;
+--background-overlay:auto;
 --link-color:#00d6d6;
 --content-bg:#ffffff;
 --content-border:#cccccc;
 --content-color:#002a32;
 --button-color:#00D6D6;
 --community-header-bg:#13282c;
+--floating-header-bg:auto;
 }
 
 html.wiki-wizard.theme-B {
 --background-image:url("");
 --background-color:#f6f6f6;
+--background-overlay:auto;
 --link-color:#00b7e0;
 --content-bg:#ffffff;
 --content-border:#cccccc;
 --content-color:#1a1a1a;
 --button-color:#00B7E0;
 --community-header-bg:#404a57;
+--floating-header-bg:auto;
 }
 
 html.wiki-wizard.theme-C {
 --background-image:url("");
 --background-color:#002a32;
+--background-overlay:auto;
 --link-color:#1a5eb8;
 --content-bg:#0e191a;
 --content-border:#7f9998;
 --content-color:#d4d5d5;
 --button-color:#1a5eb8;
 --community-header-bg:#404a56;
+--floating-header-bg:auto;
 }
 
 html.wiki-wizard.theme-D {
 --background-image:url("");
 --background-color:#002a32;
+--background-overlay:auto;
 --link-color:#5f7a7b;
 --content-bg:#0e191a;
 --content-border:#7f9998;
 --content-color:#f2f5f5;
 --button-color:#5f7a7b;
 --community-header-bg:#becfd0;
+--floating-header-bg:auto;
 }
 
 
@@ -5167,6 +5175,7 @@ width:100%;
   justify-content: center;
   flex-direction:column;
   position:fixed;
+  pointer-events:none;
 }
 
 .lightbox-container:target {
@@ -5198,6 +5207,7 @@ width:100%;
 	transform:translateY(-100%);
 	transition:transform 100ms;
 	border-radius:10px;
+	pointer-events:auto;
 }
 
 
