@@ -6,10 +6,11 @@ window.MW18HoverThreshold = 0.25;
 window.MW18ContrastNotice = false;
 
 /* Visual Themes */
-var visualThemes = ['standard','basic','basic','basic','contrast','contrast','contrast','contrast','contrast','contrast','simple','simple'];
-var visualColors = ['factorycolors','standard','factorycolors','lunacolors','standard','factorycolors','classicforced','campbellforced','forced','tangoforced','standard','factorycolors'];
-var visualThemeNames = ['Standard (Factory Colors)','Basic','Basic (Factory Colors)','Basic (XP Luna Colors)','High Contrast','High Contrast (Factory Colors)','High Contrast (Windows Forced Colors)','High Contrast (Campbell Forced Colors)','High Contrast (Mpisto OSX Forced Colors)','High Contrast (Tango Forced Colors)','Simple','Simple (Factory Colors)'];
-var contrastVisual = 2;
+var visualThemes = ['basic', 'contrast', 'simple']
+var visualColors = ['factorycolors','lunacolors','classicforced','campbellforced','forced','tangoforced'];
+var visualThemeNames = ['Basic','High Contrast','Simple'];
+var visualColorNames = ['Factory Colors', 'XP Luna Colors', 'Windows Forced Colors', 'Campbell Forced Colors', 'Mpisto OSX Forced Colors', 'Tango Forced Colors'];
+var contrastVisual = 1;
 
 (function () {
 document.querySelector('html').className += " theme-A"; // We begin with the first theme selected
@@ -51,6 +52,7 @@ UpdateMisc();
 		} else {
 			VisualStyle(-1); // We start without any visual style
 		}
+		VisualColor(-1); // We start without any visual style
 		ContrastBanner(); // Notice
 		ColorFilter('standard');
 		
@@ -74,27 +76,37 @@ function ColorFilter(filt) {
 
 /* Visual Styles */
 function VisualStyle(style) {
-	var oldvisual = $('html').attr("visualcolors");
 	if (style === -1) { // Standard Style
 		$('html').attr("visualtheme", "standard");
-		$('html').attr("visualcolors", "standard");
 	} else {
 		$('html').attr("visualtheme", visualThemes[style]);
-		$('html').attr("visualcolors", visualColors[style]);
 	}
 	if ($("body.options").length) {
 		$("input[class*='CPEVisual']").removeAttr('checked');
 		document.querySelector('input#CPEVisual_' + style ).checked = true;
 	}
-	if (oldvisual !==	$('html').attr("visualcolors")) { // If Visual Colors get changed, update automated variables
-		ColorUpdate(true);
-	}
 		ThemeColorMetaTag();
 }
+
+function VisualColor(style) {
+	if (style === -1) { // Standard Style
+		$('html').attr("visualcolors", "standard");
+	} else {
+		$('html').attr("visualcolors", visualColors[style]);
+	}
+	if ($("body.options").length) {
+		$("input[class*='CPEVisualColor']").removeAttr('checked');
+		document.querySelector('input#CPEVisualColor_' + style ).checked = true;
+	}
+		ColorUpdate(true);
+		ThemeColorMetaTag();
+}
+
 
 function VisualStyleCompile() {
 // Puts new options
 // In the Visual Styles Dropdown
+/* Visual Styles */
 	for (let i = 0; i < visualThemes.length; i++) {
 		if ($("body.options").length) {
 			str = '<br><input type="radio" name="CPEVisual" id="CPEVisual_' + i + '" onclick="VisualStyle(' + i + ')"></input> <label for="CPEVisual_' + i + '">' + visualThemeNames[i] + '</label>'
@@ -103,6 +115,17 @@ function VisualStyleCompile() {
 		} else { // Non options page
 			str = '<li><a onclick="VisualStyle(' + i + ')">' + visualThemeNames[i] + '</a></li>'
 			$(".cpe-dropdown .cpe-dropdown__content .cpe-list.cpe-visual-styles").append(str);
+		}
+	}
+/* Visual Colors */
+	for (let i = 0; i < visualColors.length; i++) {
+		if ($("body.options").length) {
+			str = '<br><input type="radio" name="CPEVisualColor" id="CPEVisualColor_' + i + '" onclick="VisualColor(' + i + ')"></input> <label for="CPEVisualColor_' + i + '">' + visualColorNames[i] + '</label>'
+			$(".highcontrastmodes.cpe-visual-colors").append(str);
+
+		} else { // Non options page
+			str = '<li><a onclick="VisualColor(' + i + ')">' + visualColorNames[i] + '</a></li>'
+			$(".cpe-dropdown .cpe-dropdown__content .cpe-list.cpe-visual-colors").append(str);
 		}
 	}
 

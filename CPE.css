@@ -1555,6 +1555,11 @@ z-index:1;
   scrollbar-width:thin;
 }
 
+
+.cpe-dropdown__content.cpe-visual-appearance:not(.cpe-is-not-scrollable) .cpe-list{
+max-height:150px;
+}
+
  .cpe-dropdown__content.cpe-is-not-scrollable .cpe-list{
    position:relative
 }
