@@ -6,9 +6,9 @@ window.MW18HoverThreshold = 0.25;
 window.MW18ContrastNotice = false;
 
 /* Visual Themes */
-var visualThemes = ['basic', 'contrast', 'simple']
+var visualThemes = ['basic', 'contrast', 'simple','classic']
 var visualColors = ['factorycolors','lunacolors','classicforced','campbellforced','forced','tangoforced'];
-var visualThemeNames = ['Basic','High Contrast','Simple'];
+var visualThemeNames = ['Basic','High Contrast','Simple','Classic'];
 var visualColorNames = ['Factory Colors', 'XP Luna Colors', 'Windows Forced Colors', 'Campbell Forced Colors', 'Mpisto OSX Forced Colors', 'Tango Forced Colors'];
 var contrastVisual = 1;
 
