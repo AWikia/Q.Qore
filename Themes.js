@@ -1718,21 +1718,21 @@ if (isSuperLightColor(content_color) && (false)) {
 	}
 
 	if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border") === 'auto') && !($("html.contrast.win10").length)  ) {
-		var dropdowncolor2 = chroma.mix(content_color,'#0a0a0a',MW18HoverThreshold*1.32, 'hsv');
+		var dropdowncolor2 = chroma.mix(content_color,'#182324',MW18HoverThreshold*1.32, 'hsv');
 	} else {
 		var dropdowncolor2 = 'inherit';
 	}
 
 	
 } else if (isLightColor(content_color)) {
-var dropdowncolor = chroma.mix(content_color,'#0a0a0a',MW18HoverThreshold*0.4, 'hsv');
+var dropdowncolor = chroma.mix(content_color,'#182324',MW18HoverThreshold*0.4, 'hsv');
 	if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color") === 'auto') && !($("html.contrast.win10").length)  ) {
-		var dropdowncolor3 = '#0a0a0a';	
+		var dropdowncolor3 = '#182324';	
 	} else {
 		var dropdowncolor3 = 'inherit';
 	}
 	if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border") === 'auto') && !($("html.contrast.win10").length)  ) {
-		var dropdowncolor2 = chroma.mix(content_color,'#0a0a0a',MW18HoverThreshold*2.4, 'hsv');
+		var dropdowncolor2 = chroma.mix(content_color,'#182324',MW18HoverThreshold*2.4, 'hsv');
 	} else {
 		var dropdowncolor2 = 'inherit';
 	}

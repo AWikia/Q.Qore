@@ -147,6 +147,7 @@ $(' .cpe-dropdown.cpe-select .cpe-dropdown__content .cpe-list li:not(.cpe-dropdo
 window.MW18newnavblock=false;
 (function () {
 	UpdateCounters();
+	AliasFandomComponents();
 	$(' container > main').attr('wide', 'false');
 	DropDownUpdate();
 	if (window.MW18newnavblock === true) {
@@ -274,5 +275,32 @@ function UpdateCounters() {
 		$('.mpisto-header-container .counters .counter.polls > big, .mpisto-sticky-header-container .counters .counter.polls > big').html(Polls);
 	}
 
+
+}
+
+function AliasFandomComponents() {
+
+	var highlightedItems = document.querySelectorAll(":not(svg)[class*='wds-']");
+
+	while ($(':not(svg)[class*="wds-"]').length > 0) {
+		highlightedItems.forEach(function(x) {
+			x.className = x.className.replace("wds-midlight-aqua", "cpe-midlight-color");
+			x.className = x.className.replace("wds-", "cpe-");
+		});
+	}
+
+
+
+
+
+/*
+	var highlightedItems3 = document.querySelectorAll("svg[class*='wds-']");
+
+	while ($('svg[class*="wds"]').length > 0) {
+		highlightedItems3.forEach(function(x) {
+			x.getAttribute('class') = x.getAttribute('class').replace("wds-", "cpe-");
+		});
+	}
+*/
 
 }

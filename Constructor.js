@@ -93,6 +93,7 @@ UpdateSource();
 function UpdateVisual() {
 var x = $('.mpisto-article.source').val();
 $('.mpisto-content .mpisto-article section').html( x );
+AliasFandomComponents();
 $('#modalE12 .lightbox section').prepend ( 
       '<div class="cpe-banner-notification__container" id="floatingbanner" style="top:auto; position:relative;">' +
         '<div class="cpe-banner-notification cpe-success cpe-is-transparent" style="transform:none;" id="BannerSave">' +
@@ -420,4 +421,14 @@ function CategoryRemove() {
 
 function RawContent() {
 	DownloadData(window.MW18oldcontent, window.MW18oldtitle, 'html');
+}
+
+function UndoAction() {
+	document.querySelector('.mpisto-article > section[contenteditable]').focus(); 
+	document.execCommand('undo', false);
+}
+
+function RedoAction() {
+	document.querySelector('.mpisto-article > section[contenteditable]').focus(); 
+	document.execCommand('redo', false);
 }

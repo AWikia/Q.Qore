@@ -42,6 +42,7 @@ function UpdateVisual() {
 var x = $('.mpisto-editors-content .mpisto-article.source.sourceonly').val();
 $('.mpisto-editors-content .mpisto-article.visualonly').html( x );
 $('.mpisto-editors-content .mpisto-article.source.visualonly').val( x );
+AliasFandomComponents();
 }
 
 function UpdateSource() {
@@ -337,4 +338,24 @@ function CategoryRemove() {
 
 
 			});
+}
+
+function UndoAction() {
+		if ( $('.insource.mpisto-editors-content').length ) {
+			document.querySelector('textarea.source.sourceonly').focus(); 
+			document.execCommand('undo', false);
+		} else {
+			document.querySelector('.mpisto-article[contenteditable]').focus(); 
+			document.execCommand('undo', false);
+		}
+}
+
+function RedoAction() {
+		if ( $('.insource.mpisto-editors-content').length ) {
+			document.querySelector('textarea.source.sourceonly').focus(); 
+			document.execCommand('redo', false);
+		} else {
+			document.querySelector('.mpisto-article[contenteditable]').focus(); 
+			document.execCommand('redo', false);
+		}
 }

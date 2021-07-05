@@ -485,9 +485,9 @@
 					  <div class="cpe-dropdown__content cpe-is-not-scrollable">
 						<ul class="cpe-list cpe-is-linked">
 						  <li><a onclick="BoldText()"><span style="font-weight:bold">Bold</span></a></li>
-						  <li><a><span onclick="ItalText()" style="font-style:italic">Italics</span></a></li>
-						  <li><a><span onclick="UnderlText()" style="text-decoration:underline">Underline</span></a></li>
-						  <li><a><span onclick="LinedText()" style="text-decoration:line-through">Striked out</span></a></li>
+						  <li><a onclick="ItalText()"><span style="font-style:italic">Italics</span></a></li>
+						  <li><a onclick="UnderlText()"><span style="text-decoration:underline">Underline</span></a></li>
+						  <li><a onclick="LinedText()"><span style="text-decoration:line-through">Striked out</span></a></li>
 						  <li class="cpe-dropdown-level-2">
 							<a class="cpe-dropdown-level-2__toggle"><span>Shadow</span>                   
 						  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown-chevron" viewBox="0 0 12 12">
@@ -695,12 +695,12 @@
 						  </ul>
 						</div>
 					  </div>
-					  <a class="cpe-button cpe-is-squished" title="Undo last action">
+					  <a class="cpe-button cpe-is-squished" onclick="UndoAction()" title="Undo last action">
 								  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" viewBox="0 0 24 24">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-undo" />
 					</svg>
 					  </a>
-					  <a class="cpe-button cpe-is-squished" title="Redo last action">
+					  <a class="cpe-button cpe-is-squished" onclick="RedoAction()" title="Redo last action">
 								  <svg xmlns="http://www.w3.org/2000/svg"  class="cpe-icon cpe-icon-small" viewBox="0 0 24 24">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-redo" />
 					</svg>
