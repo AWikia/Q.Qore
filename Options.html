@@ -274,7 +274,7 @@
         </div>
       </div>
       <!-- Themes -->
-		  <div class="cpe-dropdown cpe-has-dark-shadow themes"  cpe-orient="land">
+		  <div class="cpe-dropdown cpe-has-dark-shadow themes she-she-off"  cpe-orient="land">
 			<div class="link cpe-dropdown__toggle" cpe-tooltip="Themes">
 				<svg class="cpe-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 0H0v24h24z" fill="none"/><path d="M17.66 7.93L12 2.27 6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58c2.05 0 4.1-.78 5.66-2.34 3.12-3.12 3.12-8.19 0-11.31zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/></svg>
 			</div>
@@ -302,6 +302,24 @@
 					</li>
 				</ul>
 			</div>
+		</div>
+      <!-- Visual Appearance -->
+		  <div class="cpe-dropdown cpe-has-dark-shadow themes she-she-on"  cpe-orient="land">
+			<div class="link cpe-dropdown__toggle" cpe-tooltip="Visual Appearance">
+				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon ">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-tv" /> 
+			</svg>
+			</div>
+					<div class="cpe-dropdown__content cpe-is-right-aligned cpe-visual-appearance">					
+					  <ul class="cpe-list cpe-is-linked cpe-visual-styles">						
+						<li><a onclick="VisualStyle(-1)">Standard</a></li>
+					  </ul>
+					  <hr>
+					  <ul class="cpe-list cpe-is-linked cpe-visual-colors">						
+						<li><a onclick="VisualColor(-1)">Standard</a></li>
+					  </ul>
+
+					</div>
 		</div>
 		<div class="cpe-dropdown cpe-has-dark-shadow user-profile" cpe-orient="land">
 			<div class="link cell cpe-dropdown__toggle" cpe-tooltip="HM100">
@@ -1411,7 +1429,7 @@ Checked = VisualEditor as default mode
                   </svg>
 				</a>
 			</div>
-    <div class="fieldset">
+    <div class="fieldset she-she-off">
     <fieldset>
     <h2>
     <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
@@ -1885,6 +1903,23 @@ Checked = VisualEditor as default mode
     Customize theme
     </h2>
 	You can alternatively customize your theme on your own if you want
+    <div class="fieldset she-she-on">
+    <fieldset>    
+    <h2>
+	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon" width="24" height="24" viewBox="0 0 24 24">
+		<path d="M17.66 7.93L12 2.27 6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58c2.05 0 4.1-.78 5.66-2.34 3.12-3.12 3.12-8.19 0-11.31zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/></svg>
+	</svg>
+    Themes
+    </h2>
+    Choose your favorite theme to customize it:
+    <br>
+    <input type="radio" id="CThemeA" checked name="CThemes" onclick="HCa()"></input><label for="CThemeA">Theme A</label>
+    <input type="radio" id="CThemeB" name="CThemes" onclick="HCb()"></input><label for="CThemeB">Theme B</label>
+    <input type="radio" id="CThemeC" name="CThemes" onclick="HCc()"></input><label for="CThemeC">Theme C</label>
+    <input type="radio" id="CThemeD" name="CThemes" onclick="HCd()"></input><label for="CThemeD">Theme D</label>
+    </h2>
+	</fieldset>
+	</div>
     <div class="fieldset">
     <fieldset>    
     <h2>
@@ -3967,7 +4002,7 @@ Checked = VisualEditor as default mode
 <link rel="stylesheet" type="text/css" href="Mpisto.css"> <!-- Main CSS -->
 <link rel="stylesheet" type="text/css" href="Breakpoints.css"> <!-- Non cpe-breakpoint CSS --> 
 <link rel="stylesheet" type="text/css" href="MpistoAgent.css"> <!-- Custom CSS -->
-<link rel="stylesheet" type="text/css" href="High Contrast.css"> <!-- High Contrast CSS -->
+<link rel="stylesheet" type="text/css" href="Visual Styles & Colors.css"> <!-- High Contrast CSS -->
 </head>
 
 <script src="jQuery.js"></script>

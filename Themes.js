@@ -7,15 +7,20 @@ window.MW18ContrastNotice = false;
 
 /* Visual Themes */
 var visualThemes = ['basic', 'contrast', 'simple','classic']
-var visualColors = ['factorycolors','lunacolors','classicforced','campbellforced','forced','tangoforced'];
+var visualColors = ['factorycolors','lunacolors','classicforced','campbellforced','forced','tangoforced','rgbcolors'];
 var visualThemeNames = ['Basic','High Contrast','Simple','Classic'];
-var visualColorNames = ['Factory Colors', 'XP Luna Colors', 'Windows Forced Colors', 'Campbell Forced Colors', 'Mpisto OSX Forced Colors', 'Tango Forced Colors'];
+var visualColorNames = ['Factory Colors', 'XP Luna Colors', 'Windows Forced Colors', 'Campbell Forced Colors', 'Mpisto OSX Forced Colors', 'Tango Forced Colors','RGB Celebration Colors'];
 var contrastVisual = 1;
 
 (function () {
 document.querySelector('html').className += " theme-A"; // We begin with the first theme selected
 ColorUpdate(true);
 UpdateMisc();
+	SheShe = 'auto'; // Allowed Values ('auto', true, false)
+	if (SheShe == 'auto') {
+		SheShe = ($("body.server").length != 0);
+	}
+	$('html').attr("she-she", SheShe);
 	if ( ($("body.mpisto-2018").length) || ($("body.mpisto-2018-mobile").length)) {
 		$("head").append(
 		'<link rel="manifest" href="manifest.json" crossorigin="use-credentials">' +
@@ -112,10 +117,9 @@ function VisualStyleCompile() {
 			str = '<br><input type="radio" name="CPEVisual" id="CPEVisual_' + i + '" onclick="VisualStyle(' + i + ')"></input> <label for="CPEVisual_' + i + '">' + visualThemeNames[i] + '</label>'
 			$(".highcontrastmodes.cpe-visual-styles").append(str);
 
-		} else { // Non options page
-			str = '<li><a onclick="VisualStyle(' + i + ')">' + visualThemeNames[i] + '</a></li>'
-			$(".cpe-dropdown .cpe-dropdown__content .cpe-list.cpe-visual-styles").append(str);
 		}
+		str = '<li><a onclick="VisualStyle(' + i + ')">' + visualThemeNames[i] + '</a></li>'
+		$(".cpe-dropdown .cpe-dropdown__content .cpe-list.cpe-visual-styles").append(str);
 	}
 /* Visual Colors */
 	for (let i = 0; i < visualColors.length; i++) {
@@ -123,10 +127,9 @@ function VisualStyleCompile() {
 			str = '<br><input type="radio" name="CPEVisualColor" id="CPEVisualColor_' + i + '" onclick="VisualColor(' + i + ')"></input> <label for="CPEVisualColor_' + i + '">' + visualColorNames[i] + '</label>'
 			$(".highcontrastmodes.cpe-visual-colors").append(str);
 
-		} else { // Non options page
-			str = '<li><a onclick="VisualColor(' + i + ')">' + visualColorNames[i] + '</a></li>'
-			$(".cpe-dropdown .cpe-dropdown__content .cpe-list.cpe-visual-colors").append(str);
 		}
+		str = '<li><a onclick="VisualColor(' + i + ')">' + visualColorNames[i] + '</a></li>'
+		$(".cpe-dropdown .cpe-dropdown__content .cpe-list.cpe-visual-colors").append(str);
 	}
 
 
@@ -1293,8 +1296,8 @@ function DownloadTheme() {
 			 '--button-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--button-color")  + ';\n' +
 			 '--community-header-bg:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg")  + ';\n' +
 			 '--floating-header-bg:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--floating-header-bg")  + ';\n' +
-			 '--custom-secondary-font:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--custom-secondary-font")  + ';\n' +
 			 '--caret-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--caret-color")  + ';\n' +
+			 '--custom-secondary-font:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--custom-secondary-font")  + ';\n' +
 			 '--border-radius:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--border-radius")  + ';\n' +
 			 '--wordmark-filter:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--wordmark-filter")  + ';\n' +
 			 '--wordmark-filter2:' + wordfilter2  + ';\n' +

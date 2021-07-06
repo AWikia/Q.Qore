@@ -3928,6 +3928,10 @@ body.constructor {
 	pointer-events:none;
 }
 
+body.constructor .cpe-dropdown.constructor-dropdown {
+	display:inline-flex!important;
+}
+
 
 body.constructor .mpisto-global-sidebar {
 	z-index:1;

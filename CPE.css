@@ -909,6 +909,15 @@ html:not([visualcolors="standard"]) {
 	--caret-color:auto!important;
 }
 
+html[she-she="true"] .she-she-off {
+	display:none!important
+}
+
+html[she-she="false"] .she-she-on {
+	display:none!important
+}
+
+
 textarea, [contenteditable] {
 	caret-color:var(--caret-color);
   cursor:var(--cpe-text-cursor);
