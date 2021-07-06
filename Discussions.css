@@ -239,8 +239,13 @@ body.editor1 .editor1off, body.editor2 .editor2off, body:not(.editor1) .editor1o
 	--community-header-dark-super-rgb:var(--background-color-dark-super-rgb);
 	--community-header-text-rgb:var(--background-color-text-rgb);
 	--community-header-text-dark-rgb:var(--background-color-text-dark-rgb);
-	background:transparent!important;
+	--header-bg:transparent;
+	background:var(--header-bg)!important;
 
+}
+
+body[body-display*="legacy"] .mpisto-header-container {
+	--header-bg:rgba(var(--community-header-bg-rgb), 0.5);
 }
 
 .mpisto-header-container::before,
