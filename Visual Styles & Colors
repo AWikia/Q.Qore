@@ -1,4 +1,4 @@
-﻿/* Buttons */
+/* Buttons */
 
 .mpisto-options-content .filtermodes {
   display:none;
@@ -332,7 +332,7 @@ background-image:linear-gradient(to left,rgba(255,255,255, 0) 200px,var(--commun
   filter:none!important;
 }
 
-[visualtheme="basic"] .mpisto-content, [visualtheme="contrast"] .mpisto-content,
+[visualtheme="basic"] .mpisto-content:not(.mpisto-discussions-content), [visualtheme="contrast"] .mpisto-content:not(.mpisto-discussions-content),
 [visualtheme="basic"] .mpisto-options-content, [visualtheme="contrast"] .mpisto-options-content,
 [visualtheme="basic"] .mpisto-editors-content, [visualtheme="contrast"] .mpisto-editors-content {
 	box-shadow:-4px 0 0 0 var(--community-header-bg),
@@ -1388,7 +1388,7 @@ color:var(--button-color-text);
 }
 
 
-[visualtheme="classic"] .mpisto-content,
+[visualtheme="classic"] .mpisto-content:not(.mpisto-discussions-content),
 [visualtheme="classic"] .mpisto-options-content,
 [visualtheme="classic"] .mpisto-editors-content {
 	background-color:var(--content-bg);
@@ -1463,11 +1463,6 @@ color:var(--button-color-text);
 /* Discussions specific CSS */
 [visualtheme="contrast"] .mpisto-discussions-wrapper .card {
 	border-color:var(--content-border);
-}
-
-[visualtheme="basic"] .mpisto-discuss-2018 .mpisto-content, 
-[visualtheme="contrast"] .mpisto-discuss-2018 .mpisto-content {
-	background-color:var(--community-header-bg);
 }
 
 [visualtheme="contrast"] .mpisto-discussions-wrapper .card.main .post-send .post-area {
@@ -1875,4 +1870,61 @@ color:var(--button-color);
 --button-color:#5f7a7b;
 --community-header-bg:#becfd0;
 --floating-header-bg:auto;
+}
+
+.theme-A[visualcolors="rgbcolors"]  {
+--background-image:url("");
+--background-color:#f73400;
+--background-overlay:#8d0017;
+--link-color:#600000;
+--content-bg:#fedfec;
+--content-border:#800000;
+--content-color:#3a3a3a;
+--button-color:#d13438;
+--community-header-bg:#e81023;
+--floating-header-bg:#ff6f6f;
+--caret-color:#ff00bf!important;
+}
+
+/* RGB Celebration Colors */
+.theme-B[visualcolors="rgbcolors"] {
+--background-image:url("");
+--background-color:#5ea200;
+--background-overlay:#1d5100;
+--link-color:#006412;
+--content-bg:#82ca9c;
+--content-border:#008000;
+--content-color:#3a3a3a;
+--button-color:#107c10;
+--community-header-bg:#10893e;
+--floating-header-bg:#47cf74;
+--caret-color:#bfff00!important;
+}
+
+.theme-C[visualcolors="rgbcolors"] {
+--background-image:url("");
+--background-color:#0068b7;
+--background-overlay:#003981;
+--link-color:#00007f;
+--content-bg:#99d9ea;
+--content-border:#008080;
+--content-color:#3a3a3a;
+--button-color:#0063b1;
+--community-header-bg:#0078d7;
+--floating-header-bg:#4099e1;
+--caret-color:#00bfff!important;
+}
+
+.theme-D[visualcolors="rgbcolors"] {
+--background-image:url("");
+--background-color:#e2e2e2;
+--background-overlay:#5e5e5e;
+--link-color:#404040;
+--content-bg:#dcdcdc;
+--content-border:#a3a3a3;
+--content-color:#3a3a3a;
+--button-color:#515c6b;
+--community-header-bg:#767676;
+--floating-header-bg:#879289;
+--caret-color:#bf00ff!important;
 }
