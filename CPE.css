@@ -389,7 +389,6 @@ scrollbar-color:var(--scrollbar-thumb-color-1) var(--scrollbar-track-color-1);
 	--scrollbar-thumb-color-3:var(--button-color-dark-super);
 	--scrollbar-thumb-text:var(--button-color-text);
 /* Aliases */
---background-overlay:auto;
 --content-border:auto;
 --content-color:auto;
 --floating-header-bg:auto;
@@ -572,7 +571,6 @@ container {
 
 body[body-display*="legacy"] .body-community-background {
 	background-repeat:repeat;
-	--background-overlay:var(--background-color)!important;
 }
 
 body[body-display*="legacy"][background-size*="contain"] .body-community-background {
