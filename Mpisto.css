@@ -1,47 +1,54 @@
-.theme-A { /* Standard */
---background-image:url("loadbg_dev.png");
---background-color:#441177;
---link-color:#dd2300;
---content-bg:#f1f2f3;
---content-border:#aaabbb;
---content-color:#222222;
---button-color:#dd8300;
---community-header-bg:#b88300;
+.theme-A {
+--background-image:url("QoreBG1.png");
+--background-color:#250a00;
+--background-va:center;
+--link-color:#cc3700;
+--content-bg:#ffece6;
+--content-border:#805140;
+--content-color:#1a0700;
+--button-color:#802200;
+--community-header-bg:#ff4500;
+--floating-header-bg:#ffa280;
 }
 
-.theme-B { /* Standard Gloved */
---background-image:url("headbg.jpg");
---background-color:#39bae6;
---link-color:#990f99;
---content-bg:#eefcee;
---content-border:#8cb114;
---content-color:#2a2a2a;
---button-color:#73dd2f;
---community-header-bg:#465abe;
-}
-
-
-.theme-C { /* Standard Dark */
---background-image:url("headbg3.jpg");
---background-color:#66144b;
---link-color:#0099dd;
---content-bg:#303030;
---content-border:#bebebe;
---content-color:#f9f9f9;
---button-color:#1f5299;
---community-header-bg:#7f5f5f;
+.theme-B {
+--background-image:url("QoreBG2.png");
+--background-color:#120025;
+--background-va:center;
+--link-color:#6600cc;
+--content-bg:#f2e6ff;
+--content-border:#604080;
+--content-color:#0d001a;
+--button-color:#400080;
+--community-header-bg:#8000ff;
+--floating-header-bg:#bf80ff;
 }
 
 
-.theme-D { /* Sagent */
---background-image:url("headbg4.jpg");
---background-color:#e95500;
---link-color:#9418c5;
---content-bg:#fdfeff;
---content-border:#d1d1d1;
---content-color:#1a2a3a;
---button-color:#FF7E09;
---community-header-bg:#ff7e09;
+.theme-C {
+--background-image:url("QoreBG3.png");
+--background-color:#252525;
+--background-va:center;
+--link-color:#bfbfbf;
+--content-bg:#1a1a1a;
+--content-border:#808080;
+--content-color:#e6e6e6;
+--button-color:#595959;
+--community-header-bg:#cccccc;
+--floating-header-bg:#ffffff;
+}
+
+.theme-D {
+--background-image:url("QoreBG4.png");
+--background-color:#251a00;
+--background-va:center;
+--link-color:#cc9200;
+--content-bg:#1a1200;
+--content-border:#806d40;
+--content-color:#fff8e6;
+--button-color:#805b00;
+--community-header-bg:#ffb600;
+--floating-header-bg:#ffdb80;
 }
 
 /* Dynamic Variables
