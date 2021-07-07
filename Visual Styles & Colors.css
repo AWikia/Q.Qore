@@ -848,9 +848,10 @@ color:inherit;
 [visualtheme="basic"] .mpisto-content .mpisto-page-header-title,
 [visualtheme="contrast"] .mpisto-content .mpisto-page-header-title {
 	box-shadow:-2px 0 0 0 var(--community-header-bg), 2px 0 0 0 var(--community-header-bg),
-				0 -1px 0 0 var(--community-header-bg),
+				0 -0.5px 0 0 var(--community-header-bg),
 				-1px 1px 0 var(--community-header-text)!important;
-	border-bottom:var(--community-header-bg) 1px solid;
+	border-bottom:0;
+	border-radius:0;
 }
 
 
@@ -865,7 +866,7 @@ color:inherit;
 [visualtheme="basic"] .mpisto-content .mpisto-page-header-title,
 [visualtheme="contrast"] .mpisto-content .mpisto-page-header-title {
 	box-shadow:-2px 0 0 0 var(--community-header-bg), 2px 0 0 0 var(--community-header-bg),
-				0 -1px 0 0 var(--community-header-bg),
+				0 -0.5px 0 0 var(--community-header-bg),
 				-1px 1px 0 var(--community-header-text), 1px 1px 0 var(--community-header-text)!important;
 }
 

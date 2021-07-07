@@ -2644,7 +2644,6 @@ align-items:center;
 	color:var(--content-color);
 flex-wrap:wrap;
 background-clip:padding-box;
-border-bottom:1px solid transparent;
 border-radius:var(--border-radius);
 border-bottom-left-radius:0;
 border-bottom-right-radius:0;
