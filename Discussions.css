@@ -227,32 +227,6 @@ body.editor1 .editor1off, body.editor2 .editor2off, body:not(.editor1) .editor1o
 	display:none!important;
 }
 
-/* Community Header */
-.mpisto-header-container {
-	--community-header-bg:var(--background-color);
-	--community-header-dark:var(--background-color-dark);
-	--community-header-dark-super:var(--background-color-dark-super);
-	--community-header-text:var(--background-color-text);
-	--community-header-text-dark:var(--background-color-text-dark);
-	--community-header-bg-rgb:var(--background-color-rgb);
-	--community-header-dark-rgb:var(--background-color-dark-rgb);
-	--community-header-dark-super-rgb:var(--background-color-dark-super-rgb);
-	--community-header-text-rgb:var(--background-color-text-rgb);
-	--community-header-text-dark-rgb:var(--background-color-text-dark-rgb);
-	--header-bg:transparent;
-	background:var(--header-bg)!important;
-
-}
-
-body[body-display*="legacy"] .mpisto-header-container {
-	--header-bg:rgba(var(--community-header-bg-rgb), 0.5);
-}
-
-.mpisto-header-container::before,
-.mpisto-header-container::after {
-	display:none!important;
-}
-
 /* Responsive Design */
 
 @media only screen and (max-width:1019px) {

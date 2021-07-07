@@ -148,6 +148,14 @@
 	--scrollbar-width:8.5px!important;
 }
 
+.mpisto-page-header {
+	margin-top:-1px;
+}
+
+.mpisto-page-header .mpisto-page-header-title {
+	border-radius:0;
+}
+
 container > main {
 	--sticky-nav-size:0px!important;
 }
@@ -160,10 +168,6 @@ container > main .mpisto-sticky-header-container {
 	display:none!important;
 }
 
-
-.mpisto-2018 .gradient-overlay {
-  background-color:var(--content-bg)!important;
-}
 
 
 
@@ -873,7 +877,13 @@ column-count:1;
 /* M + L + XL */
 @media only screen and (min-width:1020px) {
 	.mpisto-right-pane {
+		border-top-right-radius:var(--border-radius);
 		border-bottom-left-radius:0;
+		border-left:0;
+	}
+	.mpisto-content:not(.single) .mpisto-page-header-title {
+		border-top-right-radius:0;
+		border-right:0;
 	}
 }
 

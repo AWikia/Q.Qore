@@ -633,7 +633,7 @@ body[body-display*="legacy"] .gradient-overlay-2 {
 	display:block;
 	content:"";
 	z-index:-1;
-	background-color:var(--background-overlay);
+	background-color:var(--background-color);
 	-webkit-mask-image:linear-gradient(to bottom, rgba(0,0,0,0), black 98%);
   image-rendering:initial;                  /* CSS4 Proposed  */
   -qq-image-blurring:tick;                  /* 4x4 Web 1-2    */
@@ -651,8 +651,9 @@ body[body-display*="legacy"] .gradient-overlay-2 {
 	display:block;
 	content:"";
 	z-index:-1;
-	background-color:var(--background-color);
-	opacity:0.75;
+  -webkit-backdrop-filter:var(--backdrop-filter);
+  backdrop-filter:var(--backdrop-filter);
+	background-color:rgba(var(--community-header-bg-rgb),0.8);
 	pointer-events:none;
 	max-width:var(--max-width);
 	filter:var(--global-filter);
