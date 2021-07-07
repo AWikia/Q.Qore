@@ -2644,7 +2644,7 @@ align-items:center;
 	color:var(--content-color);
 flex-wrap:wrap;
 background-clip:padding-box;
-border-radius:var(--border-radius);
+border-radius:calc(var(--border-radius) - 1px);
 border-bottom-left-radius:0;
 border-bottom-right-radius:0;
 }
@@ -3260,7 +3260,7 @@ width:300px;
 background-clip:padding-box;
 border-top:1px solid transparent;
 background-color:var(--dropdown-bg);
-border-radius:var(--border-radius);
+border-radius:calc(var(--border-radius) - 1px);
 border-top-left-radius:0;
 border-top-right-radius:0;
 }
@@ -5020,6 +5020,7 @@ html.wiki-wizard {
 --button-color:#00D6D6;
 --community-header-bg:#13282c;
 --floating-header-bg:auto;
+--body-display:legacy;
 }
 
 html.wiki-wizard.theme-B {
