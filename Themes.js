@@ -1373,13 +1373,13 @@ function ColorTest(color,text=false) {
 
 	if (isLightColor(color)) {
 		if (text === true) {
-			return '#182324'; // Was #0a0a0a
+			return '#0e191a'; // Was #000000
 		} else {
 			return ColorTestTwin(color,'#000000');
 		}
 	} else {
 		if (text === true) {
-			return '#fafafa';
+			return '#ffffff';
 		} else {
 			return ColorTestTwin(color,'#ffffff');
 		}
@@ -1424,11 +1424,11 @@ function Color3(r=0,g=0,b=0) {
 
 
 function isLightColor(color) {
-	return ((chroma.contrast('#182324', color)) > MW18LightThreshold*0.09);
+	return ((chroma.contrast('#0e191a', color)) > MW18LightThreshold*0.09);
 }
 
 function isSuperLightColor(color) {
-	return ((chroma.contrast('#182324', color)) > window.MW18LightThreshold*0.126);
+	return ((chroma.contrast('#0e191a', color)) > window.MW18LightThreshold*0.126);
 }
 
 
@@ -1643,9 +1643,9 @@ if ( (window.MW18darkmode === true) ) {
 // Adaptive
 	if (getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color") === 'auto') {
 		if (isLightColor(content_text)) {
-			var content_color = '#2e2e2e';	
+			var content_color = '#0e191a';	
 		} else {
-			var content_color = '#e2e2e2';
+			var content_color = '#ffffff';
 		}
 	} else {
 		var content_color =	getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color");
@@ -1662,42 +1662,42 @@ var content_color3 = SuperColorTest(content_color); // Scrollbar
 
 
 if (isSuperLightColor(content_color) && (false)) {
-	var dropdowncolor = '#fafafa';
+	var dropdowncolor = '#ffffff';
 	if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color") === 'auto') && !($("html.contrast.win10").length)  ) {
-		var dropdowncolor3 = '#2e2e2e';	
+		var dropdowncolor3 = '#0e191a';	
 	} else {
 		var dropdowncolor3 = 'inherit';
 	}
 
 	if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border") === 'auto') && !($("html.contrast.win10").length)  ) {
-		var dropdowncolor2 = chroma.mix(content_color,'#182324',MW18HoverThreshold*1.32, 'hsv');
+		var dropdowncolor2 = chroma.mix(content_color,'#0e191a',MW18HoverThreshold*1.32, 'hsv');
 	} else {
 		var dropdowncolor2 = 'inherit';
 	}
 
 	
 } else if (isLightColor(content_color)) {
-var dropdowncolor = chroma.mix(content_color,'#182324',MW18HoverThreshold*0.4, 'hsv');
+var dropdowncolor = chroma.mix(content_color,'#0e191a',MW18HoverThreshold*0.4, 'hsv');
 	if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color") === 'auto') && !($("html.contrast.win10").length)  ) {
-		var dropdowncolor3 = '#182324';	
+		var dropdowncolor3 = '#0e191a';	
 	} else {
 		var dropdowncolor3 = 'inherit';
 	}
 	if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border") === 'auto') && !($("html.contrast.win10").length)  ) {
-		var dropdowncolor2 = chroma.mix(content_color,'#182324',MW18HoverThreshold*2.4, 'hsv');
+		var dropdowncolor2 = chroma.mix(content_color,'#0e191a',MW18HoverThreshold*2.4, 'hsv');
 	} else {
 		var dropdowncolor2 = 'inherit';
 	}
 
 } else {
-var dropdowncolor = chroma.mix(content_color,'#fafafa',MW18HoverThreshold*0.4, 'hsv');
+var dropdowncolor = chroma.mix(content_color,'#ffffff',MW18HoverThreshold*0.4, 'hsv');
 	if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color") === 'auto') && !($("html.contrast.win10").length)  ) {
-		var dropdowncolor3 = '#fafafa';	
+		var dropdowncolor3 = '#ffffff';	
 	} else {
 		var dropdowncolor3 = 'inherit';
 	}
 	if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border") === 'auto') && !($("html.contrast.win10").length)  ) {
-		var dropdowncolor2 = chroma.mix(content_color,'#fafafa',MW18HoverThreshold*2.4, 'hsv');
+		var dropdowncolor2 = chroma.mix(content_color,'#ffffff',MW18HoverThreshold*2.4, 'hsv');
 	} else {
 		var dropdowncolor2 = 'inherit';
 	}
