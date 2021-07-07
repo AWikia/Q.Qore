@@ -444,13 +444,19 @@
    * Default options
    * @type {Object}
    */
+    if (CSS.supports("-webkit-backdrop-filter","var(--color)") || CSS.supports("-webkit-backdrop-filter:var(--color)") )  {
+		var elem = window
+    } else {
+		var elem = document.querySelector('container')
+    }
+
   Headroom.options = {
     tolerance : {
       up : 10,
       down : 10
     },
     offset : 60,
-    scroller: document.querySelector('container'),
+	scroller: elem,
     classes : {
       pinned : 'headroom--pinned',
       unpinned : 'headroom--unpinned',
