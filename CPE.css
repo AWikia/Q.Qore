@@ -624,7 +624,7 @@ body[body-display*="legacy"] .gradient-overlay-2 {
 }
 
 .gradient-overlay-2 {
-	--overlay-transparency:0.95;
+	--overlay-transparency:0.92;
 	top:0;
 	width:100%;
 	height:100%;
@@ -642,7 +642,7 @@ body[body-display*="legacy"] .gradient-overlay-2 {
 
 
 .gradient-overlay {
-	--overlay-transparency:0.85;
+	--overlay-transparency:0.82;
 	top:0;
 	width:100%;
 	height:100%;
@@ -660,10 +660,10 @@ body[body-display*="legacy"] .gradient-overlay-2 {
 
 @supports ((-webkit-backdrop-filter:none) or (backdrop-filter:none)) {
 	.gradient-overlay {
-		--overlay-transparency:0.75;
+		--overlay-transparency:0.72;
 	}
 	.gradient-overlay-2 {
-		--overlay-transparency:0.9;
+		--overlay-transparency:0.87;
 	}
 
 }

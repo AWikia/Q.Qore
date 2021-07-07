@@ -473,12 +473,12 @@ box-shadow:0 4px 0 6px rgba(0,0,0,.4), 0 4px 0 6px rgba(255,255,255,0.4)!importa
 @supports ((-webkit-backdrop-filter:none) or (backdrop-filter:none)) {
 	[visualtheme="basic"] .gradient-overlay,
 	[visualtheme="contrast"] .gradient-overlay {
-		--overlay-transparency:0.85;
+		--overlay-transparency:0.82;
 	}
 	
 	[visualtheme="basic"] .gradient-overlay-2,
 	[visualtheme="contrast"] .gradient-overlay-2 {
-		--overlay-transparency:0.95;
+		--overlay-transparency:0.92;
 	}
 
 }
