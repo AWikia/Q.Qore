@@ -5013,6 +5013,88 @@ white-space:nowrap;
 	border-bottom-right-radius:var(--border-radius);
 }
 
+
+/* Preview Theme Wrapper */
+.preview-theme-section {
+	display:flex; 
+	gap:10px; 
+	flex-wrap:wrap; 
+	justify-content:flex-start; 
+	align-content:space-around;
+}
+
+.preview-theme-header {
+	font-size:24px;
+	margin:5px;
+	border-bottom:1px solid var(--content-border-blend);
+}
+
+.preview-theme-wrapper {
+	--bg-color:var(--background-color);
+	--bg-img:var(--background-image);
+	--window-color:var(--content-bg);
+	--window-text:var(--content-color);
+	--header-color:var(--community-header-bg);
+	--header-text:var(--community-header-text);
+	width:150px;
+	position:relative;
+	text-align:center;
+	padding:5px;
+	cursor:var(--cpe-hand-cursor);
+}
+
+.preview-theme-wrapper .background {
+	background-color:var(--bg-color);
+	background-image:var(--bg-img);
+	border:1px solid var(--content-border);
+	width:100px;
+	height:62px;
+	top:5px;
+	right:10%;
+	position:absolute;
+	background-size:cover;
+	background-position:center;
+}
+
+.preview-theme-wrapper .window {
+	width:64px;
+	height:64px;
+	background-color:var(--window-color);
+	color:var(--window-text);
+	padding:2px;
+	border:2px solid;
+	border-color:#c9c9c9 #767676 #767676 #c9c9c9;
+	position:relative;
+	margin-top:20px;
+}
+
+.preview-theme-wrapper .window .header {
+	background-color:var(--header-color);
+	color:var(--header-text);
+	width:100%;
+	height:20px;
+	margin-bottom:8px;
+	display:flex;
+	align-items:center;	
+}
+
+.preview-theme-wrapper .window text {
+	background-color:currentColor;
+	width:32px;
+	position:relative;
+	display:block;
+	height:5px;
+	margin-left:4px;
+}
+
+.preview-theme-wrapper .window .header text {
+	width:40px;
+}
+
+.preview-theme-wrapper .name {
+	text-align:center;
+}
+
 /* Wiki Creation Wizard */
 
 html.wiki-wizard {
