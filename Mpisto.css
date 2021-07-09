@@ -5065,6 +5065,11 @@ white-space:nowrap;
 
 .preview-theme-wrapper.visual-theme {
 	cursor:inherit;
+	margin:0 auto;
+}
+
+.preview-theme-wrapper.selection-theme {
+	margin:0 auto;
 }
 
 .theme-A .preview-theme-wrapper.selection-theme.theme-A,
