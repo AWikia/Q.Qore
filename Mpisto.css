@@ -5040,8 +5040,20 @@ white-space:nowrap;
 	width:150px;
 	position:relative;
 	text-align:center;
-	padding:5px;
+	padding:4px;
 	cursor:var(--cpe-hand-cursor);
+	border:1px solid transparent;
+	transition:border 200ms ease, background-color 200ms ease;
+}
+
+.theme-A .preview-theme-wrapper.selection-theme.theme-A,
+.theme-B .preview-theme-wrapper.selection-theme.theme-B,
+.theme-C .preview-theme-wrapper.selection-theme.theme-C,
+.theme-D .preview-theme-wrapper.selection-theme.theme-D {
+	border-color:var(--button-color-text);
+	color:var(--button-color-text);
+	background-color:var(--button-color);
+	
 }
 
 .preview-theme-wrapper .background {
