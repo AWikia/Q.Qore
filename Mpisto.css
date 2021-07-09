@@ -5041,6 +5041,7 @@ white-space:nowrap;
 	position:relative;
 	text-align:center;
 	padding:4px;
+	border-radius:var(--border-radius);
 	cursor:var(--cpe-hand-cursor);
 	border:1px solid transparent;
 	transition:border 200ms ease, background-color 200ms ease;
