@@ -5035,6 +5035,7 @@ white-space:nowrap;
 	--window-color:var(--content-bg);
 	--window-text:var(--content-color);
 	--header-color:var(--community-header-bg);
+	--header-color-dark:var(--community-header-dark);
 	--header-text:var(--community-header-text);
 	width:150px;
 	position:relative;
@@ -5046,7 +5047,7 @@ white-space:nowrap;
 .preview-theme-wrapper .background {
 	background-color:var(--bg-color);
 	background-image:var(--bg-img);
-	border:1px solid var(--content-border);
+	border:1px solid var(--bg-border);
 	width:100px;
 	height:62px;
 	top:5px;

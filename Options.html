@@ -225,7 +225,7 @@
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-flag" /> 
 				</svg>
 			</div>
-			<div class="cpe-dropdown__content cpe-is-left-aligned cpe-is-not-scrollable flags-dropdown">
+			<div class="cpe-dropdown__content cpe-is-right-aligned cpe-is-not-scrollable flags-dropdown">
 				<ul class="cpe-list cpe-has-lines-between cpe-has-ellipsis">
 					<li>
 						<button class="cpe-button cpe-is-squished cpe-is-full-width">Manage Flags</button>
@@ -273,54 +273,6 @@
           </ul>
         </div>
       </div>
-      <!-- Themes -->
-		  <div class="cpe-dropdown cpe-has-dark-shadow themes she-she-off"  cpe-orient="land">
-			<div class="link cpe-dropdown__toggle" cpe-tooltip="Themes">
-				<svg class="cpe-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 0H0v24h24z" fill="none"/><path d="M17.66 7.93L12 2.27 6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58c2.05 0 4.1-.78 5.66-2.34 3.12-3.12 3.12-8.19 0-11.31zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/></svg>
-			</div>
-			<div class="cpe-dropdown__content cpe-is-right-aligned">
-				<ul class="cpe-list cpe-is-linked">
-					<li>
-						<a onclick="HCa()">
-							Theme A
-						</a>
-					</li>
-					<li>
-						<a onclick="HCb()">
-							Theme B
-						</a>
-					</li>
-					<li>
-						<a onclick="HCc()">
-							Theme C
-						</a>
-					</li>
-					<li>
-						<a onclick="HCd()" >
-							Theme D
-						</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-      <!-- Visual Appearance -->
-		  <div class="cpe-dropdown cpe-has-dark-shadow themes she-she-on"  cpe-orient="land">
-			<div class="link cpe-dropdown__toggle" cpe-tooltip="Visual Appearance">
-				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon ">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-tv" /> 
-			</svg>
-			</div>
-					<div class="cpe-dropdown__content cpe-is-right-aligned cpe-visual-appearance">					
-					  <ul class="cpe-list cpe-is-linked cpe-visual-styles">						
-						<li><a onclick="VisualStyle(-1)">Standard</a></li>
-					  </ul>
-					  <hr>
-					  <ul class="cpe-list cpe-is-linked cpe-visual-colors">						
-						<li><a onclick="VisualColor(-1)">Standard</a></li>
-					  </ul>
-
-					</div>
-		</div>
 		<div class="cpe-dropdown cpe-has-dark-shadow user-profile" cpe-orient="land">
 			<div class="link cell cpe-dropdown__toggle" cpe-tooltip="HM100">
 				<img class="mpisto-avatar" alt="HM100" src="HM100.png"></img>
@@ -1429,7 +1381,7 @@ Checked = VisualEditor as default mode
                   </svg>
 				</a>
 			</div>
-    <div class="fieldset she-she-off">
+    <div class="fieldset">
     <fieldset>
     <h2>
     <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
@@ -1903,7 +1855,7 @@ Checked = VisualEditor as default mode
     Customize theme
     </h2>
 	You can alternatively customize your theme on your own if you want
-    <div class="fieldset she-she-on">
+    <div class="fieldset">
     <fieldset>    
     <h2>
 	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon" width="24" height="24" viewBox="0 0 24 24">
@@ -1911,13 +1863,61 @@ Checked = VisualEditor as default mode
 	</svg>
     Themes
     </h2>
-    Choose your favorite theme to customize it:
-    <br>
-    <input type="radio" id="CThemeA" checked name="CThemes" onclick="HCa()"></input><label for="CThemeA">Theme A</label>
-    <input type="radio" id="CThemeB" name="CThemes" onclick="HCb()"></input><label for="CThemeB">Theme B</label>
-    <input type="radio" id="CThemeC" name="CThemes" onclick="HCc()"></input><label for="CThemeC">Theme C</label>
-    <input type="radio" id="CThemeD" name="CThemes" onclick="HCd()"></input><label for="CThemeD">Theme D</label>
-    </h2>
+
+
+
+
+	<div style="width:100%;">
+		Choose your favorite theme to customize it:
+		<section class="preview-theme-section">
+
+			<div class="preview-theme-wrapper selection-theme theme-A" onclick="HCa()">
+				<div class="background"></div>
+				<div class="window">
+					<div class="header">
+						<text></text>
+					</div>
+					<text></text>
+				</div>
+				<span class="name">Theme A</span>
+			</div>
+
+			<div class="preview-theme-wrapper selection-theme theme-B" onclick="HCb()">
+				<div class="background"></div>
+				<div class="window">
+					<div class="header">
+						<text></text>
+					</div>
+					<text></text>
+				</div>
+				<span class="name">Theme B</span>
+			</div>
+
+			<div class="preview-theme-wrapper selection-theme theme-C" onclick="HCc()">
+				<div class="background"></div>
+				<div class="window">
+					<div class="header">
+						<text></text>
+					</div>
+					<text></text>
+				</div>
+				<span class="name">Theme C</span>
+			</div>
+
+			<div class="preview-theme-wrapper selection-theme theme-D" onclick="HCd()">
+				<div class="background"></div>
+				<div class="window">
+					<div class="header">
+						<text></text>
+					</div>
+					<text></text>
+				</div>
+				<span class="name">Theme D</span>
+			</div>
+
+
+		</section>
+	</div>
 	</fieldset>
 	</div>
     <div class="fieldset">
@@ -3060,7 +3060,7 @@ Checked = VisualEditor as default mode
 	<div style="width:100%;  background-color:var(--dropdown-bg); border:1px solid var(--content-border);">
 		<h2 class="preview-theme-header">User-Defined Themes (1)</h2>
 		<section class="preview-theme-section">
-			<div class="preview-theme-wrapper" title="Visual Style: Standard">
+			<div class="preview-theme-wrapper custom-theme" title="Visual Style: Standard">
 				<div class="background"></div>
 				<div class="window">
 					<div class="header">
@@ -3073,7 +3073,7 @@ Checked = VisualEditor as default mode
 		</section>
 		<h2 class="preview-theme-header">System Themes (6)</h2>
 		<section class="preview-theme-section">
-			<div class="preview-theme-wrapper" title="Visual Style: Standard" style="--bg-color:#663399; --bg-img:url('OSXBG.png'); --window-color:#f1f2f3; --window-text:#222222; --header-color:#b88300; --header-text:#0e191a;">
+			<div class="preview-theme-wrapper" title="Visual Style: Standard" style="--bg-color:#663399; --bg-img:url('OSXBG.png'); --window-color:#f1f2f3; --window-text:#222222; --header-color:#b88300;">
 				<div class="background"></div>
 				<div class="window">
 					<div class="header">
@@ -3084,7 +3084,7 @@ Checked = VisualEditor as default mode
 				<span class="name">Standard</span>
 			</div>
 
-			<div class="preview-theme-wrapper" title="Visual Style: Standard" style="--bg-color:#b88300; --bg-img:url('OSXBG.png'); --window-color:#0e0d0c; --window-text:#dddddd; --header-color:#663399; --header-text:#ffffff;">
+			<div class="preview-theme-wrapper" title="Visual Style: Standard" style="--bg-color:#b88300; --bg-img:url('OSXBG.png'); --window-color:#0e0d0c; --window-text:#dddddd; --header-color:#663399;">
 				<div class="background"></div>
 				<div class="window">
 					<div class="header">
@@ -3096,7 +3096,7 @@ Checked = VisualEditor as default mode
 			</div>
 
 
-			<div class="preview-theme-wrapper" title="Visual Style: Basic" style="--bg-color:#e995ca; --bg-img:url('headbg.jpg'); --window-color:#ffffff; --window-text:#000000; --header-color:#0000ff; --header-text:#ffffff;">
+			<div class="preview-theme-wrapper" title="Visual Style: Basic" style="--bg-color:#e995ca; --bg-img:url('headbg.jpg'); --window-color:#ffffff; --window-text:#000000; --header-color:#0000ff;">
 				<div class="background"></div>
 				<div class="window">
 					<div class="header">
@@ -3107,7 +3107,7 @@ Checked = VisualEditor as default mode
 				<span class="name">Memories</span>
 			</div>
 
-			<div class="preview-theme-wrapper" title="Visual Style: Basic" style="--bg-color:#000000; --bg-img:url(''); --window-color:#ffffff; --window-text:#323232; --header-color:#96b4d1; --header-text:#0e191a;">
+			<div class="preview-theme-wrapper" title="Visual Style: Basic" style="--bg-color:#000000; --bg-img:url(''); --window-color:#ffffff; --window-text:#323232; --header-color:#96b4d1;">
 				<div class="background"></div>
 				<div class="window">
 					<div class="header">
@@ -3119,7 +3119,7 @@ Checked = VisualEditor as default mode
 			</div>
 
 
-			<div class="preview-theme-wrapper" title="Visual Style: Simple" style="--bg-color:#f6f6f6; --bg-img:url(''); --window-color:#ffffff; --window-text:#002a32; --header-color:#13282c; --header-text:#ffffff;">
+			<div class="preview-theme-wrapper" title="Visual Style: Simple" style="--bg-color:#f6f6f6; --bg-img:url(''); --window-color:#ffffff; --window-text:#002a32; --header-color:#13282c;">
 				<div class="background"></div>
 				<div class="window">
 					<div class="header">
@@ -3131,7 +3131,7 @@ Checked = VisualEditor as default mode
 			</div>
 
 
-			<div class="preview-theme-wrapper" title="Visual Style: Classic" style="--bg-color:#3975a9; --bg-img:url(''); --window-color:#d6cec8; --window-text:#000000; --header-color:#2e5492; --header-text:#ffffff;">
+			<div class="preview-theme-wrapper" title="Visual Style: Classic" style="--bg-color:#3975a9; --bg-img:url(''); --window-color:#d6cec8; --window-text:#000000; --header-color:#2e5492;">
 				<div class="background"></div>
 				<div class="window">
 					<div class="header">
@@ -3145,7 +3145,7 @@ Checked = VisualEditor as default mode
 		</section>
 		<h2 class="preview-theme-header">Ease of Access Themes (4)</h2>
 		<section class="preview-theme-section">
-			<div class="preview-theme-wrapper" title="Visual Style: High Contrast" style="--bg-color:#000000; --bg-img:url(''); --window-color:#000000; --window-text:#fbf305; --header-color:#0000d3; --header-text:#ffffff;">
+			<div class="preview-theme-wrapper" title="Visual Style: High Contrast" style="--bg-color:#000000; --bg-img:url(''); --window-color:#000000; --window-text:#fbf305; --header-color:#0000d3;">
 				<div class="background"></div>
 				<div class="window">
 					<div class="header">
@@ -3156,7 +3156,7 @@ Checked = VisualEditor as default mode
 				<span class="name">High Contrast #1</span>
 			</div>
 
-			<div class="preview-theme-wrapper" title="Visual Style: High Contrast" style="--bg-color:#000000; --bg-img:url(''); --window-color:#000000; --window-text:#1fb714; --header-color:#02abea; --header-text:#0e191a;">
+			<div class="preview-theme-wrapper" title="Visual Style: High Contrast" style="--bg-color:#000000; --bg-img:url(''); --window-color:#000000; --window-text:#1fb714; --header-color:#02abea;">
 				<div class="background"></div>
 				<div class="window">
 					<div class="header">
@@ -3167,7 +3167,7 @@ Checked = VisualEditor as default mode
 				<span class="name">High Contrast #2</span>
 			</div>
 
-			<div class="preview-theme-wrapper" title="Visual Style: High Contrast" style="--bg-color:#000000; --bg-img:url(''); --window-color:#000000; --window-text:#ffffff; --header-color:#4700a5; --header-text:#ffffff;">
+			<div class="preview-theme-wrapper" title="Visual Style: High Contrast" style="--bg-color:#000000; --bg-img:url(''); --window-color:#000000; --window-text:#ffffff; --header-color:#4700a5;">
 				<div class="background"></div>
 				<div class="window">
 					<div class="header">
@@ -3179,7 +3179,7 @@ Checked = VisualEditor as default mode
 			</div>
 
 
-			<div class="preview-theme-wrapper" title="Visual Style: High Contrast" style="--bg-color:#ffffff; --bg-img:url(''); --window-color:#ffffff; --window-text:#000000; --header-color:#000000; --header-text:#ffffff;">
+			<div class="preview-theme-wrapper" title="Visual Style: High Contrast" style="--bg-color:#ffffff; --bg-img:url(''); --window-color:#ffffff; --window-text:#000000; --header-color:#000000;">
 				<div class="background"></div>
 				<div class="window">
 					<div class="header">

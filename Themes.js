@@ -32,6 +32,7 @@ UpdateMisc();
 	if ($("body.options").length) {
 		UpdateSet()
 		CompileRecColors();
+		CompileChosenThems();
 	}
 	if ( ($(".mpisto-global-sidebar").length) ) {
 		$("head").append(
@@ -96,8 +97,14 @@ function VisualStyle(style) {
 function VisualColor(style) {
 	if (style === -1) { // Standard Style
 		$('html').attr("visualcolors", "standard");
+		if ($('.preview-theme-wrapper.selection-theme').length) {
+			$('.preview-theme-wrapper.selection-theme').attr("visualcolors", "standard");
+		}
 	} else {
 		$('html').attr("visualcolors", visualColors[style]);
+		if ($('.preview-theme-wrapper.selection-theme').length) {
+			$('.preview-theme-wrapper.selection-theme').attr("visualcolors", visualColors[style]);
+		}
 	}
 	if ($("body.options").length) {
 		$("input[class*='CPEVisualColor']").removeAttr('checked');
@@ -344,7 +351,6 @@ function colortheme(theme) {
 	if (old_dark != window.MW18darkmode) {
 		ColorUpdate(false);
 	}
-
 }
 
 function ToggleMode() {
@@ -1579,6 +1585,37 @@ function CompileRecColors() {
 
 }
 
+function CompileChosenThems() {
+// Selection Themes
+	var highlightedItems = document.querySelectorAll(".preview-theme-wrapper.selection-theme");
+	highlightedItems.forEach(function(x) {
+	var text_color2 =	getComputedStyle(x).getPropertyValue("--window-color");
+	var text_color =	getComputedStyle(x).getPropertyValue("--content-color"); // --window_text for non selection
+	var header_color =	getComputedStyle(x).getPropertyValue("--header-color");
+	x.style.setProperty("--bg-border", getComputedStyle(document.querySelector('body')).getPropertyValue("--content-border") );
+	x.style.setProperty("--header-color-dark", ColorTest(header_color));
+	x.style.setProperty("--header-text", ColorTest(header_color,true));
+	if (text_color == "auto") {
+		x.style.setProperty("--window-text", ColorTest(text_color2,true));
+	} else {
+		x.style.removeProperty("--window-text");
+	}
+	});
+
+// Other Themes
+	var highlightedItems = document.querySelectorAll(".preview-theme-wrapper:not(.custom-theme):not(.selection-theme)");
+	highlightedItems.forEach(function(x) {
+	var text_color2 =	getComputedStyle(x).getPropertyValue("--window-color");
+	var text_color =	getComputedStyle(x).getPropertyValue("--window_text");
+	var header_color =	getComputedStyle(x).getPropertyValue("--header-color");
+	x.style.setProperty("--bg-border", getComputedStyle(document.querySelector('body')).getPropertyValue("--content-border") );
+	x.style.setProperty("--header-color-dark", ColorTest(header_color));
+	x.style.setProperty("--header-text", ColorTest(header_color,true));
+	if (text_color === 'auto') {
+		x.style.setProperty("--window-text", ColorTest(text_color2,true));
+	}
+	});
+}
 
 function SocialCompile() {
 	$("head .social-colors").text('');	
@@ -1627,11 +1664,7 @@ if ( (window.MW18darkmode === true) ) {
 	var content_text =	getComputedStyle(document.querySelector('html')).getPropertyValue("--content-bg");
 // Adaptive
 	if (getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color") === 'auto') {
-		if (isLightColor(content_text)) {
-			var content_color = '#0e191a';	
-		} else {
-			var content_color = '#ffffff';
-		}
+		var content_color = ColorTest(content_text,true);
 	} else {
 		var content_color =	getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color");
 	}
@@ -1645,15 +1678,13 @@ var content_color2 = ColorTest(content_color);
 var content_color3 = SuperColorTest(content_color); // Scrollbar
 
 
-
+if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color") === 'auto') && !($("html.contrast.win10").length)  ) {
+	var dropdowncolor3 = ColorTest(content_color,true);;	
+} else {
+	var dropdowncolor3 = 'inherit';
+}
 if (isSuperLightColor(content_color) && (false)) {
 	var dropdowncolor = '#ffffff';
-	if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color") === 'auto') && !($("html.contrast.win10").length)  ) {
-		var dropdowncolor3 = '#0e191a';	
-	} else {
-		var dropdowncolor3 = 'inherit';
-	}
-
 	if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border") === 'auto') && !($("html.contrast.win10").length)  ) {
 		var dropdowncolor2 = chroma.mix(content_color,'#0e191a',MW18HoverThreshold*1.32, 'hsv');
 	} else {
@@ -1662,12 +1693,7 @@ if (isSuperLightColor(content_color) && (false)) {
 
 	
 } else if (isLightColor(content_color)) {
-var dropdowncolor = chroma.mix(content_color,'#0e191a',MW18HoverThreshold*0.4, 'hsv');
-	if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color") === 'auto') && !($("html.contrast.win10").length)  ) {
-		var dropdowncolor3 = '#0e191a';	
-	} else {
-		var dropdowncolor3 = 'inherit';
-	}
+	var dropdowncolor = chroma.mix(content_color,'#0e191a',MW18HoverThreshold*0.4, 'hsv');
 	if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border") === 'auto') && !($("html.contrast.win10").length)  ) {
 		var dropdowncolor2 = chroma.mix(content_color,'#0e191a',MW18HoverThreshold*2.4, 'hsv');
 	} else {
@@ -1675,12 +1701,7 @@ var dropdowncolor = chroma.mix(content_color,'#0e191a',MW18HoverThreshold*0.4, '
 	}
 
 } else {
-var dropdowncolor = chroma.mix(content_color,'#ffffff',MW18HoverThreshold*0.4, 'hsv');
-	if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color") === 'auto') && !($("html.contrast.win10").length)  ) {
-		var dropdowncolor3 = '#ffffff';	
-	} else {
-		var dropdowncolor3 = 'inherit';
-	}
+	var dropdowncolor = chroma.mix(content_color,'#ffffff',MW18HoverThreshold*0.4, 'hsv');
 	if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border") === 'auto') && !($("html.contrast.win10").length)  ) {
 		var dropdowncolor2 = chroma.mix(content_color,'#ffffff',MW18HoverThreshold*2.4, 'hsv');
 	} else {
@@ -2042,8 +2063,10 @@ if (refresh === true) {
 	colortheme($('body').attr("wikitheme"))
 	if ($("body.options").length) {
 		UpdateSet();
-
 	}
+}
+if ($("body.options").length) {
+	CompileChosenThems()
 }
 SocialCompile();
 if (window.MW18auto === true) {
