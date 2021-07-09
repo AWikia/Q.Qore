@@ -755,9 +755,15 @@ color:inherit;
 	background-color:var(--content-bg);
 }
 
-[visualtheme="contrast"] .mpisto-option-way > div .fieldset fieldset .fieldset {
+[visualtheme="contrast"] .fieldset fieldset .fieldset {
 	border-color:currentColor;
 }
+
+[visualtheme="contrast"] .fieldset fieldset .fieldset fieldset .fieldset {
+	border-color:var(--content-border);
+}
+
+
 
 
 [visualtheme="basic"] .mpisto-option-way h1, [visualtheme="basic"] .editor-header, [visualtheme="basic"] .mpisto-content .mpisto-page-header-title,

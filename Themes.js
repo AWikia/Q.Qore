@@ -9,7 +9,7 @@ window.MW18ContrastNotice = false;
 var visualThemes = ['basic', 'contrast', 'simple','classic']
 var visualColors = ['factorycolors','lunacolors','classicforced','campbellforced','forced','tangoforced','rgbcolors'];
 var visualThemeNames = ['Basic','High Contrast','Simple','Classic'];
-var visualColorNames = ['Factory Colors', 'XP Luna Colors', 'Windows Forced Colors', 'Campbell Forced Colors', 'Mpisto OSX Forced Colors', 'Tango Forced Colors','RGB Celebration Colors'];
+var visualColorNames = ['Factory', 'XP Luna', 'Windows Forced', 'Campbell Forced', 'Mpisto OSX Forced', 'Tango Forced','RGB Celebration'];
 var contrastVisual = 1;
 
 (function () {
@@ -106,10 +106,6 @@ function VisualColor(style) {
 			$('.preview-theme-wrapper.selection-theme').attr("visualcolors", visualColors[style]);
 		}
 	}
-	if ($("body.options").length) {
-		$("input[class*='CPEVisualColor']").removeAttr('checked');
-		document.querySelector('input#CPEVisualColor_' + style ).checked = true;
-	}
 		ColorUpdate(true);
 		ThemeColorMetaTag();
 }
@@ -131,7 +127,61 @@ function VisualStyleCompile() {
 /* Visual Colors */
 	for (let i = 0; i < visualColors.length; i++) {
 		if ($("body.options").length) {
-			str = '<br><input type="radio" name="CPEVisualColor" id="CPEVisualColor_' + i + '" onclick="VisualColor(' + i + ')"></input> <label for="CPEVisualColor_' + i + '">' + visualColorNames[i] + '</label>'
+//			str = '<br><input type="radio" name="CPEVisualColor" id="CPEVisualColor_' + i + '" onclick="VisualColor(' + i + ')"></input> <label for="CPEVisualColor_' + i + '">' + visualColorNames[i] + '</label>'
+			str = '		<div class="fieldset store-theme-card">' +
+'			<fieldset>' +
+'			<h2> ' +
+'			<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon" enable-background="new 0 0 24 24" height="28px" viewBox="0 0 24 24" width="28px" fill="currentColor"><g><rect fill="none" height="24" width="24"/></g><g><g><g><g><path d="M12,22C6.49,22,2,17.51,2,12S6.49,2,12,2s10,4.04,10,9c0,3.31-2.69,6-6,6h-1.77c-0.28,0-0.5,0.22-0.5,0.5 c0,0.12,0.05,0.23,0.13,0.33c0.41,0.47,0.64,1.06,0.64,1.67C14.5,20.88,13.38,22,12,22z M12,4c-4.41,0-8,3.59-8,8s3.59,8,8,8 c0.28,0,0.5-0.22,0.5-0.5c0-0.16-0.08-0.28-0.14-0.35c-0.41-0.46-0.63-1.05-0.63-1.65c0-1.38,1.12-2.5,2.5-2.5H16 c2.21,0,4-1.79,4-4C20,7.14,16.41,4,12,4z"/><circle cx="6.5" cy="11.5" r="1.5"/><circle cx="9.5" cy="7.5" r="1.5"/><circle cx="14.5" cy="7.5" r="1.5"/><circle cx="17.5" cy="11.5" r="1.5"/></g></g></g></g></svg>' +
+			visualColorNames[i] + 
+'			</h2>' +
+'			<div class="cpe-floating-button-group">' +
+'				<a class="cpe-floating-button" onclick="VisualColor(' + i + ')" title="Apply ' + visualColorNames[i] + ' Colors to all Wikis">' +
+'                  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">' +
+'                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-checkmark" />' +
+'                  </svg>' +
+'				</a>' +
+'			</div>' +
+'			<section class="preview-theme-section">' +
+'				<div class="preview-theme-wrapper visual-theme theme-A" visualcolors="' + visualColors[i] + '">' +
+'					<div class="background"></div>' +
+'					<div class="window">' +
+'						<div class="header">' +
+'							<text></text>' +
+'						</div>' +
+'						<text></text>' +
+'					</div>' +
+'				</div>' +
+'				<div class="preview-theme-wrapper visual-theme theme-B" visualcolors="' + visualColors[i] + '">' +
+'					<div class="background"></div>' +
+'					<div class="window">' +
+'						<div class="header">' +
+'							<text></text>' +
+'						</div>' +
+'						<text></text>' +
+'					</div>' +
+'				</div>' +
+'				<div class="preview-theme-wrapper visual-theme theme-C" visualcolors="' + visualColors[i] + '">' +
+'					<div class="background"></div>' +
+'					<div class="window">' +
+'						<div class="header">' +
+'							<text></text>' +
+'						</div>' +
+'						<text></text>' +
+'					</div>' +
+'				</div>' +
+'				<div class="preview-theme-wrapper visual-theme theme-D" visualcolors="' + visualColors[i] + '">' +
+'					<div class="background"></div>' +
+'					<div class="window">' +
+'						<div class="header">' +
+'							<text></text>' +
+'						</div>' +
+'						<text></text>' +
+'					</div>' +
+'				</div>' +
+'			</section>' +			
+'			</fieldset>' +
+'			</div>'
+
 			$(".highcontrastmodes.cpe-visual-colors").append(str);
 
 		}
@@ -1236,7 +1286,7 @@ function DownloadTheme() {
 	if ( wordfilter2 == "" ) {
 		wordfilter2 == 'initial'
 	}
-	result = '.theme-A {\n' + // Beginning
+	result = '.theme-A[visualcolors="standard"] {\n' + // Beginning
 			 '--background-image:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-image")  + ';\n' +
 			 '--background-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-color")  + ';\n' +
 			 '--body-display:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--body-display")  + ';\n' +
@@ -1587,7 +1637,7 @@ function CompileRecColors() {
 
 function CompileChosenThems() {
 // Selection Themes
-	var highlightedItems = document.querySelectorAll(".preview-theme-wrapper.selection-theme");
+	var highlightedItems = document.querySelectorAll(".preview-theme-wrapper.selection-theme, .preview-theme-wrapper.visual-theme");
 	highlightedItems.forEach(function(x) {
 	var text_color2 =	getComputedStyle(x).getPropertyValue("--window-color");
 	var text_color =	getComputedStyle(x).getPropertyValue("--content-color"); // --window_text for non selection
@@ -2532,7 +2582,7 @@ var x = $('input.font_2nd').val();
 	if (x=="") {
 		if ($("html.theme-A").length) {
 			$("style.designer-style.theme-A").append(
-			'.theme-A {' +
+			'.theme-A[visualcolors="standard"] {' +
 			'--custom-secondary-font:""!important;' +
 			'}'
 			);	
@@ -2540,7 +2590,7 @@ var x = $('input.font_2nd').val();
 
 		if ($("html.theme-B").length) {
 			$("style.designer-style.theme-B").append(
-			'.theme-B {' +
+			'.theme-B[visualcolors="standard"] {' +
 			'--custom-secondary-font:""!important;' +
 			'}'
 			);	
@@ -2548,7 +2598,7 @@ var x = $('input.font_2nd').val();
 
 		if ($("html.theme-C").length) {
 			$("style.designer-style.theme-C").append(
-			'.theme-C {' +
+			'.theme-C[visualcolors="standard"] {' +
 			'--custom-secondary-font:""!important;' +
 			'}'
 			);	
@@ -2556,7 +2606,7 @@ var x = $('input.font_2nd').val();
 
 		if ($("html.theme-D").length) {
 			$("style.designer-style.theme-D").append(
-			'.theme-D {' +
+			'.theme-D[visualcolors="standard"] {' +
 			'--custom-secondary-font:""!important;' +
 			'}'
 			);	
@@ -2565,7 +2615,7 @@ var x = $('input.font_2nd').val();
 	} else {
 		if ($("html.theme-A").length) {
 			$("style.designer-style.theme-A").append(
-			'.theme-A {' +
+			'.theme-A[visualcolors="standard"] {' +
 			'--custom-secondary-font:' + x + '!important;' +
 			'}'
 			);	
@@ -2573,7 +2623,7 @@ var x = $('input.font_2nd').val();
 
 		if ($("html.theme-B").length) {
 			$("style.designer-style.theme-B").append(
-			'.theme-B {' +
+			'.theme-B[visualcolors="standard"] {' +
 			'--custom-secondary-font:' + x + '!important;' +
 			'}'
 			);	
@@ -2581,7 +2631,7 @@ var x = $('input.font_2nd').val();
 
 		if ($("html.theme-C").length) {
 			$("style.designer-style.theme-C").append(
-			'.theme-C {' +
+			'.theme-C[visualcolors="standard"] {' +
 			'--custom-secondary-font:' + x + '!important;' +
 			'}'
 			);	
@@ -2589,7 +2639,7 @@ var x = $('input.font_2nd').val();
 
 		if ($("html.theme-D").length) {
 			$("style.designer-style.theme-D").append(
-			'.theme-D {' +
+			'.theme-D[visualcolors="standard"] {' +
 			'--custom-secondary-font:' + x + '!important;' +
 			'}'
 			);	
@@ -2602,7 +2652,7 @@ var x = $('input.button_radi').val();
 	if (x=="0") {
 		if ($("html.theme-A").length) {
 			$("style.designer-style.theme-A").append(
-			'.theme-A {' +
+			'.theme-A[visualcolors="standard"] {' +
 			'--border-radius:0!important;' +
 			'}'
 			);	
@@ -2610,7 +2660,7 @@ var x = $('input.button_radi').val();
 
 		if ($("html.theme-B").length) {
 			$("style.designer-style.theme-B").append(
-			'.theme-B {' +
+			'.theme-B[visualcolors="standard"] {' +
 			'--border-radius:0!important;' +
 			'}'
 			);	
@@ -2618,7 +2668,7 @@ var x = $('input.button_radi').val();
 
 		if ($("html.theme-C").length) {
 			$("style.designer-style.theme-C").append(
-			'.theme-C {' +
+			'.theme-C[visualcolors="standard"] {' +
 			'--border-radius:0!important;' +
 			'}'
 			);	
@@ -2626,7 +2676,7 @@ var x = $('input.button_radi').val();
 
 		if ($("html.theme-D").length) {
 			$("style.designer-style.theme-D").append(
-			'.theme-D {' +
+			'.theme-D[visualcolors="standard"] {' +
 			'--border-radius:0!important;' +
 			'}'
 			);	
@@ -2635,7 +2685,7 @@ var x = $('input.button_radi').val();
 	} else {
 		if ($("html.theme-A").length) {
 			$("style.designer-style.theme-A").append(
-			'.theme-A {' +
+			'.theme-A[visualcolors="standard"] {' +
 			'--border-radius:' + x + 'px!important;' +
 			'}'
 			);	
@@ -2643,7 +2693,7 @@ var x = $('input.button_radi').val();
 
 		if ($("html.theme-B").length) {
 			$("style.designer-style.theme-B").append(
-			'.theme-B {' +
+			'.theme-B[visualcolors="standard"] {' +
 			'--border-radius:' + x + 'px!important;' +
 			'}'
 			);	
@@ -2651,7 +2701,7 @@ var x = $('input.button_radi').val();
 
 		if ($("html.theme-C").length) {
 			$("style.designer-style.theme-C").append(
-			'.theme-C {' +
+			'.theme-C[visualcolors="standard"] {' +
 			'--border-radius:' + x + 'px!important;' +
 			'}'
 			);	
@@ -2659,7 +2709,7 @@ var x = $('input.button_radi').val();
 
 		if ($("html.theme-D").length) {
 			$("style.designer-style.theme-D").append(
-			'.theme-D {' +
+			'.theme-D[visualcolors="standard"] {' +
 			'--border-radius:' + x + 'px!important;' +
 			'}'
 			);	
@@ -2672,7 +2722,7 @@ var x = $('input.filter1').val();
 	if (x=="") {
 		if ($("html.theme-A").length) {
 			$("style.designer-style.theme-A").append(
-			'.theme-A {' +
+			'.theme-A[visualcolors="standard"] {' +
 			'--wordmark-filter:initial!important;' +
 			'}'
 			);	
@@ -2680,7 +2730,7 @@ var x = $('input.filter1').val();
 
 		if ($("html.theme-B").length) {
 			$("style.designer-style.theme-B").append(
-			'.theme-B {' +
+			'.theme-B[visualcolors="standard"] {' +
 			'--wordmark-filter:initial!important;' +
 			'}'
 			);	
@@ -2688,7 +2738,7 @@ var x = $('input.filter1').val();
 
 		if ($("html.theme-C").length) {
 			$("style.designer-style.theme-C").append(
-			'.theme-C {' +
+			'.theme-C[visualcolors="standard"] {' +
 			'--wordmark-filter:initial!important;' +
 			'}'
 			);	
@@ -2696,7 +2746,7 @@ var x = $('input.filter1').val();
 
 		if ($("html.theme-D").length) {
 			$("style.designer-style.theme-D").append(
-			'.theme-D {' +
+			'.theme-D[visualcolors="standard"] {' +
 			'--wordmark-filter:initial!important;' +
 			'}'
 			);	
@@ -2705,7 +2755,7 @@ var x = $('input.filter1').val();
 	} else {
 		if ($("html.theme-A").length) {
 			$("style.designer-style.theme-A").append(
-			'.theme-A {' +
+			'.theme-A[visualcolors="standard"] {' +
 			'--wordmark-filter:' + x + '!important;' +
 			'}'
 			);	
@@ -2713,7 +2763,7 @@ var x = $('input.filter1').val();
 
 		if ($("html.theme-B").length) {
 			$("style.designer-style.theme-B").append(
-			'.theme-B {' +
+			'.theme-B[visualcolors="standard"] {' +
 			'--wordmark-filter:' + x + '!important;' +
 			'}'
 			);	
@@ -2721,7 +2771,7 @@ var x = $('input.filter1').val();
 
 		if ($("html.theme-C").length) {
 			$("style.designer-style.theme-C").append(
-			'.theme-C {' +
+			'.theme-C[visualcolors="standard"] {' +
 			'--wordmark-filter:' + x + '!important;' +
 			'}'
 			);	
@@ -2729,7 +2779,7 @@ var x = $('input.filter1').val();
 
 		if ($("html.theme-D").length) {
 			$("style.designer-style.theme-D").append(
-			'.theme-D {' +
+			'.theme-D[visualcolors="standard"] {' +
 			'--wordmark-filter:' + x + '!important;' +
 			'}'
 			);	
@@ -2742,7 +2792,7 @@ var x = $('input.filter2').val();
 	if (x=="") {
 		if ($("html.theme-A").length) {
 			$("style.designer-style.theme-A").append(
-			'.theme-A {' +
+			'.theme-A[visualcolors="standard"] {' +
 			'--wordmark-filter2:initial!important;' +
 			'}'
 			);	
@@ -2750,7 +2800,7 @@ var x = $('input.filter2').val();
 
 		if ($("html.theme-B").length) {
 			$("style.designer-style.theme-B").append(
-			'.theme-B {' +
+			'.theme-B[visualcolors="standard"] {' +
 			'--wordmark-filter2:initial!important;' +
 			'}'
 			);	
@@ -2758,7 +2808,7 @@ var x = $('input.filter2').val();
 
 		if ($("html.theme-C").length) {
 			$("style.designer-style.theme-C").append(
-			'.theme-C {' +
+			'.theme-C[visualcolors="standard"] {' +
 			'--wordmark-filter2:initial!important;' +
 			'}'
 			);	
@@ -2766,7 +2816,7 @@ var x = $('input.filter2').val();
 
 		if ($("html.theme-D").length) {
 			$("style.designer-style.theme-D").append(
-			'.theme-D {' +
+			'.theme-D[visualcolors="standard"] {' +
 			'--wordmark-filter2:initial!important;' +
 			'}'
 			);	
@@ -2775,7 +2825,7 @@ var x = $('input.filter2').val();
 	} else {
 		if ($("html.theme-A").length) {
 			$("style.designer-style.theme-A").append(
-			'.theme-A {' +
+			'.theme-A[visualcolors="standard"] {' +
 			'--wordmark-filter2:' + x + '!important;' +
 			'}'
 			);	
@@ -2783,7 +2833,7 @@ var x = $('input.filter2').val();
 
 		if ($("html.theme-B").length) {
 			$("style.designer-style.theme-B").append(
-			'.theme-B {' +
+			'.theme-B[visualcolors="standard"] {' +
 			'--wordmark-filter2:' + x + '!important;' +
 			'}'
 			);	
@@ -2791,7 +2841,7 @@ var x = $('input.filter2').val();
 
 		if ($("html.theme-C").length) {
 			$("style.designer-style.theme-C").append(
-			'.theme-C {' +
+			'.theme-C[visualcolors="standard"] {' +
 			'--wordmark-filter2:' + x + '!important;' +
 			'}'
 			);	
@@ -2799,7 +2849,7 @@ var x = $('input.filter2').val();
 
 		if ($("html.theme-D").length) {
 			$("style.designer-style.theme-D").append(
-			'.theme-D {' +
+			'.theme-D[visualcolors="standard"] {' +
 			'--wordmark-filter2:' + x + '!important;' +
 			'}'
 			);	
@@ -2812,7 +2862,7 @@ var x = $('input.filter_duration').val();
 	if (x=="0") {
 		if ($("html.theme-A").length) {
 			$("style.designer-style.theme-A").append(
-			'.theme-A {' +
+			'.theme-A[visualcolors="standard"] {' +
 			'--wordmark-filter-duration:0!important;' +
 			'}'
 			);	
@@ -2820,7 +2870,7 @@ var x = $('input.filter_duration').val();
 
 		if ($("html.theme-B").length) {
 			$("style.designer-style.theme-B").append(
-			'.theme-B {' +
+			'.theme-B[visualcolors="standard"] {' +
 			'--wordmark-filter-duration:0!important;' +
 			'}'
 			);	
@@ -2828,7 +2878,7 @@ var x = $('input.filter_duration').val();
 
 		if ($("html.theme-C").length) {
 			$("style.designer-style.theme-C").append(
-			'.theme-C {' +
+			'.theme-C[visualcolors="standard"] {' +
 			'--wordmark-filter-duration:0!important;' +
 			'}'
 			);	
@@ -2836,7 +2886,7 @@ var x = $('input.filter_duration').val();
 
 		if ($("html.theme-D").length) {
 			$("style.designer-style.theme-D").append(
-			'.theme-D {' +
+			'.theme-D[visualcolors="standard"] {' +
 			'--wordmark-filter-duration:0!important;' +
 			'}'
 			);	
@@ -2845,7 +2895,7 @@ var x = $('input.filter_duration').val();
 	} else {
 		if ($("html.theme-A").length) {
 			$("style.designer-style.theme-A").append(
-			'.theme-A {' +
+			'.theme-A[visualcolors="standard"] {' +
 			'--wordmark-filter-duration:' + x +'ms!important;' +
 			'}'
 			);	
@@ -2853,7 +2903,7 @@ var x = $('input.filter_duration').val();
 
 		if ($("html.theme-B").length) {
 			$("style.designer-style.theme-B").append(
-			'.theme-B {' +
+			'.theme-B[visualcolors="standard"] {' +
 			'--wordmark-filter-duration:' + x +'ms!important;' +
 			'}'
 			);	
@@ -2861,7 +2911,7 @@ var x = $('input.filter_duration').val();
 
 		if ($("html.theme-C").length) {
 			$("style.designer-style.theme-C").append(
-			'.theme-C {' +
+			'.theme-C[visualcolors="standard"] {' +
 			'--wordmark-filter-duration:' + x +'ms!important;' +
 			'}'
 			);	
@@ -2869,7 +2919,7 @@ var x = $('input.filter_duration').val();
 
 		if ($("html.theme-D").length) {
 			$("style.designer-style.theme-D").append(
-			'.theme-D {' +
+			'.theme-D[visualcolors="standard"] {' +
 			'--wordmark-filter-duration:' + x +'ms!important;' +
 			'}'
 			);	
@@ -2882,7 +2932,7 @@ var x = $('input.filter_delay').val();
 	if (x=="0") {
 		if ($("html.theme-A").length) {
 			$("style.designer-style.theme-A").append(
-			'.theme-A {' +
+			'.theme-A[visualcolors="standard"] {' +
 			'--wordmark-filter-delay:0!important;' +
 			'}'
 			);	
@@ -2890,7 +2940,7 @@ var x = $('input.filter_delay').val();
 
 		if ($("html.theme-B").length) {
 			$("style.designer-style.theme-B").append(
-			'.theme-B {' +
+			'.theme-B[visualcolors="standard"] {' +
 			'--wordmark-filter-delay:0!important;' +
 			'}'
 			);	
@@ -2898,7 +2948,7 @@ var x = $('input.filter_delay').val();
 
 		if ($("html.theme-C").length) {
 			$("style.designer-style.theme-C").append(
-			'.theme-C {' +
+			'.theme-C[visualcolors="standard"] {' +
 			'--wordmark-filter-delay:0!important;' +
 			'}'
 			);	
@@ -2906,7 +2956,7 @@ var x = $('input.filter_delay').val();
 
 		if ($("html.theme-D").length) {
 			$("style.designer-style.theme-D").append(
-			'.theme-D {' +
+			'.theme-D[visualcolors="standard"] {' +
 			'--wordmark-filter-delay:0!important;' +
 			'}'
 			);	
@@ -2915,7 +2965,7 @@ var x = $('input.filter_delay').val();
 	} else {
 		if ($("html.theme-A").length) {
 			$("style.designer-style.theme-A").append(
-			'.theme-A {' +
+			'.theme-A[visualcolors="standard"] {' +
 			'--wordmark-filter-delay:' + x +'ms!important;' +
 			'}'
 			);	
@@ -2923,7 +2973,7 @@ var x = $('input.filter_delay').val();
 
 		if ($("html.theme-B").length) {
 			$("style.designer-style.theme-B").append(
-			'.theme-B {' +
+			'.theme-B[visualcolors="standard"] {' +
 			'--wordmark-filter-delay:' + x +'ms!important;' +
 			'}'
 			);	
@@ -2931,7 +2981,7 @@ var x = $('input.filter_delay').val();
 
 		if ($("html.theme-C").length) {
 			$("style.designer-style.theme-C").append(
-			'.theme-C {' +
+			'.theme-C[visualcolors="standard"] {' +
 			'--wordmark-filter-delay:' + x +'ms!important;' +
 			'}'
 			);	
@@ -2939,7 +2989,7 @@ var x = $('input.filter_delay').val();
 
 		if ($("html.theme-D").length) {
 			$("style.designer-style.theme-D").append(
-			'.theme-D {' +
+			'.theme-D[visualcolors="standard"] {' +
 			'--wordmark-filter-delay:' + x +'ms!important;' +
 			'}'
 			);	

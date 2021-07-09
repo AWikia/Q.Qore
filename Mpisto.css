@@ -1,4 +1,4 @@
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("QoreBG1.png");
 --background-color:#250a00;
 --background-va:center;
@@ -11,7 +11,7 @@
 --floating-header-bg:#ffa280;
 }
 
-.theme-B {
+.theme-B[visualcolors="standard"] {
 --background-image:url("QoreBG2.png");
 --background-color:#120025;
 --background-va:center;
@@ -25,7 +25,7 @@
 }
 
 
-.theme-C {
+.theme-C[visualcolors="standard"] {
 --background-image:url("QoreBG3.png");
 --background-color:#252525;
 --background-va:center;
@@ -38,7 +38,7 @@
 --floating-header-bg:#ffffff;
 }
 
-.theme-D {
+.theme-D[visualcolors="standard"] {
 --background-image:url("QoreBG4.png");
 --background-color:#251a00;
 --background-va:center;
@@ -4688,6 +4688,7 @@ line-height:inherit;
 	vertical-align:middle;
 }
 
+/* Level B Fieldset */
 .fieldset fieldset .fieldset {
   border-color:var(--emphasis-bg);
   background-image:linear-gradient(to bottom, rgba(24,24,24,0.0), rgba(247,247,247,0.01), rgba(24,24,24,0));
@@ -4696,6 +4697,15 @@ line-height:inherit;
   box-shadow:none;
   margin:10px;
 }
+
+/* Level C Fieldset */
+.fieldset fieldset .fieldset fieldset .fieldset {
+	background-color:var(--emphasis-bg);
+	color:var(--emphasis-bg-text);
+	background-image:none;
+	border-color:var(--content-bg);
+}
+
 
 .option-link {
 transition:color 400ms ease, background-color 400ms ease, border 400ms ease, opacity 400ms ease, text-shadow 400ms ease;
@@ -5023,6 +5033,11 @@ white-space:nowrap;
 	align-content:space-around;
 }
 
+.store-theme-card .preview-theme-section {
+	max-width:310px;
+	margin:0 auto;
+}
+
 .preview-theme-header {
 	font-size:24px;
 	margin:5px;
@@ -5045,6 +5060,11 @@ white-space:nowrap;
 	cursor:var(--cpe-hand-cursor);
 	border:1px solid transparent;
 	transition:border 200ms ease, background-color 200ms ease;
+}
+
+
+.preview-theme-wrapper.visual-theme {
+	cursor:inherit;
 }
 
 .theme-A .preview-theme-wrapper.selection-theme.theme-A,
