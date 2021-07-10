@@ -7,10 +7,11 @@ window.MW18ContrastNotice = false;
 
 /* Visual Themes */
 var visualThemes = ['basic', 'contrast', 'simple','classic']
-var visualColors = ['factorycolors','lunacolors','classicforced','campbellforced','forced','tangoforced','rgbcolors'];
 var visualThemeNames = ['Basic','High Contrast','Simple','Classic'];
-var visualColorNames = ['Factory', 'XP Luna', 'Windows Forced', 'Campbell Forced', 'Mpisto OSX Forced', 'Tango Forced','RGB Celebration'];
 var contrastVisual = 1;
+/* Visual Colors */
+var visualColors = ['factorycolors','lunacolors','classicforced','campbellforced','forced','tangoforced','rgbcolors','retro','retro2','retro3'];
+var visualColorNames = ['Factory', 'XP Luna', 'Windows Forced', 'Campbell Forced', 'Mpisto OSX Forced', 'Tango Forced','RGB Celebration','Retro','Retro II','Retro III'];
 
 (function () {
 document.querySelector('html').className += " theme-A"; // We begin with the first theme selected

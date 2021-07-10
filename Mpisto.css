@@ -2360,11 +2360,14 @@ text-align:right;
 	flex-direction:column;
 	position:relative;
 	z-index:6;
-	padding:0 20px;
+	padding:0 19px;
 	font-size:18px;
 	background-color:var(--dropdown-bg);
-	margin:0 -19px 0;
+	margin:0 -18px 0;
     color:var(--content-color);
+	border-radius:calc(var(--border-radius) - 1px);
+	border-bottom-left-radius:0;
+	border-bottom-right-radius:0;
 }
 
 .constructor .mpisto-userpages-header {
@@ -2656,6 +2659,9 @@ border-bottom-left-radius:0;
 border-bottom-right-radius:0;
 }
 
+.mpisto-userpages-header + .mpisto-page-header .mpisto-page-header-title {
+	border-radius:0;
+}
 
 
 .mpisto-content .mpisto-page-header .mpisto-sub {

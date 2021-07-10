@@ -779,6 +779,8 @@ color:inherit;
 [visualtheme="basic"] .mpisto-userpages-header,
 [visualtheme="contrast"] .mpisto-userpages-header {
 	background-color:var(--community-header-bg);
+	box-shadow:-1px 0 0 0 var(--community-header-bg),
+				1px 0 0 0 var(--community-header-bg)!important;
 }
 
 
@@ -1911,6 +1913,7 @@ color:var(--button-color);
 --floating-header-bg:auto;
 }
 
+/* RGB Celebration Colors */
 .theme-A[visualcolors="rgbcolors"]  {
 --background-image:url("");
 --background-color:#f73400;
@@ -1924,7 +1927,6 @@ color:var(--button-color);
 --caret-color:#ff00bf!important;
 }
 
-/* RGB Celebration Colors */
 .theme-B[visualcolors="rgbcolors"] {
 --background-image:url("");
 --background-color:#5ea200;
@@ -1962,4 +1964,146 @@ color:var(--button-color);
 --community-header-bg:#767676;
 --floating-header-bg:#879289;
 --caret-color:#bf00ff!important;
+}
+
+/** Retro Colors **/
+
+/* First */
+.theme-A[visualcolors="retro"]  {
+--background-image:url("headbg.jpg");
+--background-color:#e995ca;
+--link-color:#0699a3;
+--content-bg:#ffffff;
+--content-border:#b0a8ad;
+--content-color:#000000;
+--button-color:#18BBC5;
+--community-header-bg:#18BBC5;
+--floating-header-bg:#f9f9f9;
+}
+
+.theme-B[visualcolors="retro"]  {
+--background-image:url("headbg3.jpg");
+--background-color:#166a35;
+--link-color:#e7443a;
+--content-bg:#000000;
+--content-border:#4f5752;
+--content-color:#ffffff;
+--button-color:#e7443a;
+--community-header-bg:#e7443a;
+--floating-header-bg:#060606;
+}
+
+.theme-C[visualcolors="retro"]  {
+--background-image:url("headbg.jpg");
+--background-color:#a99b3a;
+--link-color:#046691;
+--content-bg:#abc123;
+--content-border:#68a001;
+--content-color:#000111;
+--button-color:#3d3d99;
+--community-header-bg:#3d3d99;
+--floating-header-bg:#d9d9d9;
+}
+
+.theme-D[visualcolors="retro"]  {
+--background-image:url("headbg.jpg");
+--background-color:#e995ca;
+--link-color:#c900c9;
+--content-bg:#ffc0cb;
+--content-border:#dd94a0;
+--content-color:#020202;
+--button-color:#ff0051;
+--community-header-bg:#ff0051;
+--floating-header-bg:#f7f7f9;
+}
+
+
+/* Second */
+.theme-A[visualcolors="retro2"] {
+--background-image:url("headbg.jpg");
+--background-color:#e995ca;
+--link-color:#058892;
+--content-bg:#ffffff;
+--content-border:#ccc;
+--content-color:#000000;
+--button-color:#18BBC5;
+--community-header-bg:#0000ff;
+}
+
+.theme-B[visualcolors="retro2"] {
+--background-image:url("headbg.jpg");
+--background-color:#54d9f8;
+--link-color:#860498;
+--content-bg:#ffecff;
+--content-border:#aac426;
+--content-color:#2a2a2a;
+--button-color:#70C800;
+--community-header-bg:#50679b;
+}
+
+.theme-C[visualcolors="retro2"] {
+--background-image:url("headbg3.jpg");
+--background-color:#610038;
+--link-color:#5959ff;
+--content-bg:#282828;
+--content-border:#cccccc;
+--content-color:#f9f9f9;
+--button-color:#2239ae;
+--community-header-bg:#7f6969;
+}
+
+.theme-D[visualcolors="retro2"] {
+--background-image:url("headbg6.jpg");
+--background-color:#ac599e;
+--link-color:#298805;
+--content-bg:#ffffff;
+--content-border:#cccccc;
+--content-color:#000000;
+--button-color:#5CBB81;
+--community-header-bg:#ff0000;
+}
+
+/* Third */
+.theme-A[visualcolors="retro3"] {
+--background-image:url("");
+--background-color:#a2ddfe;
+--link-color:#e14a22;
+--content-bg:#fefeff;
+--content-border:#7e787d;
+--content-color:#020002;
+--button-color:#FEAFD3;
+--community-header-bg:#639d04;
+}
+
+.theme-B[visualcolors="retro3"] {
+--background-image:url("nightly.jpg");
+--background-color:#000;
+--link-color:#00ffff;
+--content-bg:#3a3a3a;
+--content-border:#cccddd;
+--content-color:#c9d4d5;
+--button-color:#375885;
+--community-header-bg:#663399;
+}
+
+.theme-C[visualcolors="retro3"] {
+--background-image:url("dev.jpg");
+--background-color:#0000aa;
+--link-color:#00aaff;
+--content-bg:#0000a8;
+--content-border:#aaaacc;
+--content-color:#f9f9f9;
+--button-color:#00699E;
+--community-header-bg:#16c4c4;
+}
+
+.theme-D[visualcolors="retro3"] {
+--background-image:url("headbg5.jpg");
+--background-color:#76f6ff;
+--link-color:#800080;
+--content-bg:#e0e8ee;
+--content-border:#dda0a9;
+--content-color:#1a2b3c;
+--button-color:#E78097;
+--community-header-bg:#c384df;
 }

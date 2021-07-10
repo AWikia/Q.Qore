@@ -1,5 +1,5 @@
 /* Standard (V1) */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("headbg.jpg");
 --background-color:#e995ca;
 --link-color:#18bbc5;
@@ -11,7 +11,7 @@
 }
 
 /* Standard (V2) */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("headbg2.jpg");
 --background-color:#e995ca;
 --link-color:#194dcc;
@@ -23,7 +23,7 @@
 }
 
 /* Standard (V3) */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("headbg7.jpg");
 --background-color:#672752;
 --link-color:#e81e28;
@@ -35,7 +35,7 @@
 }
 
 /* Standard (V4) */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("headbg7.jpg");
 --background-color:#672752;
 --link-color:#e81e28;
@@ -47,7 +47,7 @@
 }
 
 /* Standard (V5) */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("headbg8.jpg");
 --background-color:#67f0ff;
 --link-color:#a347d0;
@@ -59,7 +59,7 @@
 }
 
 /* Standard (V6) */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("headbg9.jpg");
 --background-color:#ffa257;
 --link-color:#ff0000;
@@ -71,7 +71,7 @@
 }
 
 /* Standard (V7) */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("headbg9.jpg");
 --background-color:#ffa257;
 --link-color:#ff0000;
@@ -83,7 +83,7 @@
 }
 
 /* Standard (V8) */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("headbg2.jpg");
 --background-color:#599ace;
 --link-color:#7289da;
@@ -95,7 +95,7 @@
 }
 
 /* Standard (V9) */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("headbg7.jpg");
 --background-color:#ff0000;
 --link-color:#4e5d94;
@@ -107,7 +107,7 @@
 }
 
 /* Standard (V10) */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("headbg7.jpg");
 --background-color:#ff0000;
 --link-color:#4e5d94;
@@ -119,7 +119,7 @@
 }
 
 /* Standard (V11) */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("headbg8.jpg");
 --background-color:#9df6fe;
 --link-color:#800080;
@@ -131,7 +131,7 @@
 }
 
 /* Standard (V12) */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("headbg9.jpg");
 --background-color:#ffddbb;
 --link-color:#e03987;
@@ -143,7 +143,7 @@
 }
 
 /* Standard (V13) */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("headbg9.jpg");
 --background-color:#ffddbb;
 --link-color:#e03987;
@@ -155,7 +155,7 @@
 }
 
 /* Standard (V14) */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("A Wikia Cover.png");
 --background-color:#01d7e5;
 --link-color:#1a4a4a;
@@ -167,7 +167,7 @@
 }
 
 /* Standard (V15) */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("loadbg_dev.png");
 --background-color:#ffa500;
 --link-color:#fa8072;
@@ -179,7 +179,7 @@
 }
 
 /* Standard */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("loadbg_dev.png");
 --background-color:#441177;
 --link-color:#dd2300;
@@ -192,7 +192,7 @@
 
 
 /* Standard Gloved Version (V1) */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("headbg.jpg");
 --background-color:#54d9f8;
 --link-color:#860498;
@@ -204,7 +204,7 @@
 }
 
 /* Standard Gloved Version (V2) */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("headbg.jpg");
 --background-color:#39bae6;
 --link-color:#990f99;
@@ -216,7 +216,7 @@
 }
 
 /* Standard Gloved Version ~~ */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("headbg.jpg");
 --background-color:#39bae6;
 --link-color:#990f99;
@@ -229,7 +229,7 @@
 
 
 /* Standard Dark Version (V1) */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("headbg3.jpg");
 --background-color:#610038;
 --link-color:#0000ff;
@@ -241,7 +241,7 @@
 }
 
 /* Standard Dark Version (V2) */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("headbg3.jpg");
 --background-color:#66144b;
 --link-color:#0055ff;
@@ -253,7 +253,7 @@
 }
 
 /* Standard Dark Version ~ */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("headbg3.jpg");
 --background-color:#66144b;
 --link-color:#0099dd;
@@ -265,8 +265,8 @@
 }
 
 /* Standard Nightly Version */
-.theme-A {
---background-image:url("https://d1u5p3l4wpay3k.cloudfront.net/maia_gamepedia/9/98/Bg.jpg?version=b5f279562cd466d98662305ef384edb0");
+.theme-A[visualcolors="standard"] {
+--background-image:url("nightly.jpg");
 --background-color:#000;
 --link-color:#00ffff;
 --content-bg:#3a3a3a;
@@ -277,7 +277,7 @@
 }
 
 /* Standard Canary Version (V1) */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("canary.jpg");
 --background-color:#fcc101;
 --link-color:#e76901;
@@ -289,7 +289,7 @@
 }
 
 /* Standard Canary Version */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("canary.jpg");
 --background-color:#f8e9ae;
 --link-color:#af4200;
@@ -301,7 +301,7 @@
 }
 
 /* Standard Beta Version */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("headbg6-1.jpg");
 --background-color:#ac599e;
 --link-color:#5cbb81;
@@ -314,7 +314,7 @@
 
 
 /* Standard Developer Edition Version */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("dev.jpg");
 --background-color:#0000aa;
 --link-color:#00aaff;
@@ -326,7 +326,7 @@
 }
 
 /* Standard Developer Version */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("headbg6-2.jpg");
 --background-color:#d9d9d9;
 --link-color:#bbbbbb;
@@ -338,7 +338,7 @@
 }
 
 /* Agent */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("headbg.jpg");
 --background-color:#aa00aa;
 --link-color:#dd9aff;
@@ -350,7 +350,7 @@
 }
 
 /* Sagent (V1) */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("headbg4.jpg");
 --background-color:#e95500;
 --link-color:#9418c5;
@@ -362,7 +362,7 @@
 }
 
 /* Sagent */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("headbg4.jpg");
 --background-color:#e95500;
 --link-color:#9418c5;
@@ -374,7 +374,7 @@
 }
 
 /* Flipin */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("headbg.jpg");
 --background-color:#9e55ac;
 --link-color:#81bb5c;
@@ -388,7 +388,7 @@
 
 
 /* Gleun */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("headbg6.jpg");
 --background-color:#ac599e;
 --link-color:#5cbb81;
@@ -400,7 +400,7 @@
 }
 
 /* GleunFlippin */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("headbg6.jpg");
 --background-color:#ca95e9;
 --link-color:#c5bb18;
@@ -412,7 +412,7 @@
 }
 
 /* Classic ~ */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("headbg.jpg");
 --background-color:#3975a9;
 --link-color:#9f0000;
@@ -424,7 +424,7 @@
 }
 
 /* Greeny ~ */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("headbg.jpg");
 --background-color:#aaffaa;
 --link-color:#18ffbb;
@@ -436,7 +436,7 @@
 }
 
 /* Brightness A */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("");
 --background-color:#000000;
 --link-color:#8080ff;
@@ -448,7 +448,7 @@
 }
 
 /* Brightness B */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("");
 --background-color:#000000;
 --link-color:#8080ff;
@@ -460,7 +460,7 @@
 }
 
 /* Brightness C */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("");
 --background-color:#000000;
 --link-color:#ffff00;
@@ -472,7 +472,7 @@
 }
 
 /* Brightness D */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("");
 --background-color:#ffffff;
 --link-color:#9f0000;
@@ -484,7 +484,7 @@
 }
 
 /* Gaming Wiki (V1) */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("headbg5.jpg");
 --background-color:#76f6ff;
 --link-color:#800080;
@@ -496,7 +496,7 @@
 }
 
 /* Gaming Wiki (V2) */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("headbg5.jpg");
 --background-color:#76f6ff;
 --link-color:#9113ce;
@@ -508,7 +508,7 @@
 }
 
 /* Gaming Wiki (V3) */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("grwbg.jpg");
 --background-color:#28d96d;
 --link-color:#4f0e8d;
@@ -520,7 +520,7 @@
 }
 
 /* Gaming Wiki */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("grwbg.jpg");
 --background-color:#ff00ff;
 --link-color:#28d96d;
@@ -532,7 +532,7 @@
 }
 
 /* Grays ~ */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("");
 --background-color:#eee;
 --link-color:#bbbbbb;
@@ -544,7 +544,7 @@
 }
 
 /* MameDev (V1) */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("");
 --background-color:#f8f8f8;
 --link-color:#4c8bca;
@@ -556,7 +556,7 @@
 }
 
 /* MameDev */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("");
 --background-color:#f8f7f6;
 --link-color:#46c68a;
@@ -569,7 +569,7 @@
 
 
 /* WDS (V1) */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("");
 --background-color:#f6f6f6;
 --link-color:#00b7e0;
@@ -581,7 +581,7 @@
 }
 
 /* WDS ~ */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("");
 --background-color:#f6f6f6;
 --link-color:#00d6d6;
@@ -594,7 +594,7 @@
 
 
 /* Zekzphire Faces ~ */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("");
 --background-color:#a2ddfe;
 --link-color:#e14a22;
@@ -606,7 +606,7 @@
 }
 
 /* Horoscope Referata */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("https://upload.wikimedia.org/wikipedia/commons/8/89/Meister_von_San_Vitale_in_Ravenna.jpg");
 --background-color:#4b0082;
 --link-color:#4bff82;
@@ -618,7 +618,7 @@
 }
 
 /* A Help Wiki */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("http://a-help.referata.com/w/images/Besto-BACK.jpg");
 --background-color:#012e55;
 --link-color:#a9ce3a;
@@ -630,7 +630,7 @@
 }
 
 /* Mpisto Scenes (V1) */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("headbg.jpg");
 --background-color:#a99b3a;
 --link-color:#18aad5;
@@ -642,7 +642,7 @@
 }
 
 /* Mpisto Scenes ~ */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("headbg8.jpg");
 --background-color:#52c0fb;
 --link-color:#7ab247;
@@ -654,7 +654,7 @@
 }
 
 /* Besto Besigns */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("");
 --background-color:#000000;
 --link-color:#ff7f50;
@@ -666,7 +666,7 @@
 }
 
 /* Besto Beta */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("headbg.jpg");
 --background-color:#e995ca;
 --link-color:#18bbc5;
@@ -677,7 +677,7 @@
 }
 
 /* Latex ~ */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("headbg7.jpg");
 --background-color:#ff3333;
 --link-color:#1717e6;
@@ -689,7 +689,7 @@
 }
 
 /* Sharp X1 ~ */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("");
 --background-color:#ff00ff;
 --link-color:#ffff00;
@@ -701,7 +701,7 @@
 }
 
 /* Medicore ~ */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("headbg2.jpg");
 --background-color:#18bbc5;
 --link-color:#67d6e1;
@@ -713,7 +713,7 @@
 }
 
 /* Maxthon ~ */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("headbg4.jpg");
 --background-color:#c9e2f8;
 --link-color:#ff32c2;
@@ -725,7 +725,7 @@
 }
 
 /* Prism ~ */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("prism.png");
 --background-color:#f20c0c;
 --link-color:#bb2222;
@@ -737,7 +737,7 @@
 }
 
 /* PokeViews A */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("views.png");
 --background-color:#32cd80;
 --link-color:#ff7f50;
@@ -749,7 +749,7 @@
 }
 
 /* PokeViews B */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("headbg9.jpg");
 --background-color:#ffc0cb;
 --link-color:#32cd32;
@@ -761,7 +761,7 @@
 }
 
 /* FANDOM 2.0 */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("");
 --background-color:#f6f6f6;
 --link-color:#ff6a64;
@@ -773,7 +773,7 @@
 }
 
 /* CSS Colors ~ */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("");
 --background-color:#ff6347;
 --link-color:#cd853f;
@@ -785,7 +785,7 @@
 }
 
 /* FrenzySpace */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("http://a-help.referata.com/w/images/Besto-BACK.jpg");
 --background-color:#012e55;
 --link-color:#cea93a;
@@ -797,7 +797,7 @@
 }
 
 /* Clearwriter */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("headbg8.jpg");
 --background-color:#ffd69f;
 --link-color:#dfd9b5;
@@ -809,7 +809,7 @@
 }
 
 /* Orbitron */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("headbg.jpg");
 --background-color:#e995ca;
 --link-color:#ff00ff;
@@ -821,7 +821,7 @@
 }
 
 /* Qora Qore Telecommunities */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("loadbg_dev.png");
 --background-color:#552288;
 --link-color:#ffa54a;
@@ -833,7 +833,7 @@
 }
 
 /* WDS Dark */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("");
 --background-color:#002a32;
 --link-color:#1a5eb8;
@@ -845,7 +845,7 @@
 }
 
 /* WDS Dark 2 */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("");
 --background-color:#002a32;
 --link-color:#5f7a7b;
@@ -857,7 +857,7 @@
 }
 
 /* Windows Theme Compat */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("");
 --background-color:#000000;
 --link-color:#0066cc;
@@ -869,7 +869,7 @@
 }
 
 /* Default Qortex Theme A */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("QoreBG1.png");
 --background-color:#250a00;
 --background-va:center;
@@ -883,7 +883,7 @@
 }
 
 /* Default Qortex Theme B */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("QoreBG2.png");
 --background-color:#120025;
 --background-va:center;
@@ -897,7 +897,7 @@
 }
 
 /* Default Qortex Theme C */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("QoreBG3.png");
 --background-color:#252525;
 --background-va:center;
@@ -911,7 +911,7 @@
 }
 
 /* Default Qortex Theme D */
-.theme-A {
+.theme-A[visualcolors="standard"] {
 --background-image:url("QoreBG4.png");
 --background-color:#251a00;
 --background-va:center;

@@ -152,7 +152,8 @@
 	margin-top:-1px;
 }
 
-.mpisto-page-header .mpisto-page-header-title {
+.mpisto-page-header .mpisto-page-header-title,
+.mpisto-userpages-header {
 	border-radius:0;
 }
 
@@ -881,7 +882,8 @@ column-count:1;
 		border-bottom-left-radius:0;
 		border-left:0;
 	}
-	.mpisto-content:not(.single) .mpisto-page-header-title {
+	.mpisto-content:not(.single) .mpisto-page-header-title,
+	.mpisto-userpages-header {
 		border-top-right-radius:0;
 		border-right:0;
 	}
