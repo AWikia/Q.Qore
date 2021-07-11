@@ -10,8 +10,8 @@ var visualThemes = ['basic', 'contrast', 'simple','classic']
 var visualThemeNames = ['Basic','High Contrast','Simple','Classic'];
 var contrastVisual = 1;
 /* Visual Colors */
-var visualColors = ['factorycolors','lunacolors','classicforced','campbellforced','forced','tangoforced','rgbcolors','retro','retro2','retro3'];
-var visualColorNames = ['Factory', 'XP Luna', 'Windows Forced', 'Campbell Forced', 'Mpisto OSX Forced', 'Tango Forced','RGB Celebration','Retro','Retro II','Retro III'];
+var visualColors = ['factorycolors','lunacolors','classicforced','campbellforced','forced','tangoforced','rgbcolors','retro','retro2','retro3','retro4','retro5','retro6','retro7'];
+var visualColorNames = ['Factory', 'XP Luna', 'Windows Forced', 'Campbell Forced', 'Mpisto OSX Forced', 'Tango Forced','RGB Celebration','Retro','Retro II','Retro III','Retro IV','Retro V','Retro VI','Retro VII'];
 
 (function () {
 document.querySelector('html').className += " theme-A"; // We begin with the first theme selected
@@ -2082,10 +2082,10 @@ document.querySelector('html').style.setProperty("--alert-color-content-bg-mix",
 
 
 /* Emphasis Themes */
-var emphasiscolor = chroma.mix(content_color, link_color, MW18HoverThreshold*2.5);
+var emphasiscolor = chroma.mix(content_color, chroma.mix(border_color, link_color, MW18HoverThreshold*2.5), MW18HoverThreshold*2.5);
 var emphasiscolor2 = ColorTest(emphasiscolor,true);
 var emphasiscolor2t = ColorTest(emphasiscolor2,false);
-var accentcolor = chroma.mix(border_color, button_color, MW18HoverThreshold*2.5);
+var accentcolor = chroma.mix(chroma.mix(content_color, border_color, MW18HoverThreshold*2.5), button_color, MW18HoverThreshold*2.5);
 var accentcolor2 = ColorTest(accentcolor,true);
 var accentcolor2t = ColorTest(accentcolor2,false);
 

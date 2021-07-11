@@ -2107,3 +2107,192 @@ color:var(--button-color);
 --button-color:#E78097;
 --community-header-bg:#c384df;
 }
+
+/* Fourth to Seventh*/
+
+[visualcolors="retro4"],
+[visualcolors="retro5"],
+[visualcolors="retro6"],
+[visualcolors="retro7"]    {
+--content-color:#000000!important;
+}
+
+/* Fourth */
+.theme-A[visualcolors="retro4"] {
+    --background-color:#420000;
+    --background-image:url("");
+    --link-color:#800000;
+    --content-bg:#c2bfa5;
+    --content-border:#8d8961;
+    --button-color:#8d8961;
+    --community-header-bg:#800000;
+    --floating-header-bg:#8d8961;
+}
+
+.theme-B[visualcolors="retro4"] {
+    --background-color:#a28d68;
+    --background-image:url("");
+    --link-color:#008080;
+    --content-bg:#d6ccbb;
+    --content-border:#a28d68;
+    --button-color:#008080;
+    --community-header-bg:#008080;
+    --floating-header-bg:#a28d68;
+}
+
+.theme-C[visualcolors="retro4"] {
+    --background-color:#400040;
+    --background-image:url("");
+    --link-color:#366056;
+    --content-bg:#90b0a8;
+    --content-border:#588078;
+    --button-color:#588078;
+    --community-header-bg:#588078;
+    --floating-header-bg:#90b0a8;
+}
+
+.theme-D[visualcolors="retro4"] {
+    --background-color:#000000;
+    --background-image:url("");
+    --link-color:#493da0;
+    --content-bg:#aea8d9;
+    --content-border:#5a4eb1;
+    --button-color:#5a4eb1;
+    --community-header-bg:#5a4eb1;
+    --floating-header-bg:#808080;
+}
+
+/* Fifth */
+.theme-A[visualcolors="retro5"] {
+    --background-color:#000000;
+    --background-image:url("");
+    --link-color:#937313;
+    --content-bg:#e6d8ae;
+    --content-border:#c6a646;
+    --button-color:#c6a646;
+    --community-header-bg:#800000;
+    --floating-header-bg:#c6a646;
+}
+
+.theme-B[visualcolors="retro5"] {
+    --background-color:#2c4e47;
+    --background-image:url("");
+    --link-color:#000080;
+    --content-bg:#88c0b8;
+    --content-border:#489088;
+    --button-color:#000080;
+    --community-header-bg:#000080;
+    --floating-header-bg:#489088;
+}
+
+.theme-C[visualcolors="retro5"] {
+    --background-color:#402840;
+    --background-image:url("");
+    --link-color:#484060;
+    --content-bg:#a89890;
+    --content-border:#786058;
+    --button-color:#008080;
+    --community-header-bg:#484060;
+    --floating-header-bg:#786058;
+}
+
+.theme-D[visualcolors="retro5"] {
+    --background-color:#420042;
+    --background-image:url("");
+    --link-color:#93610b;
+    --content-bg:#ecd59d;
+    --content-border:#d7a52f;
+    --button-color:#800080;
+    --community-header-bg:#d7a52f;
+    --floating-header-bg:#a0a0a4;
+}
+
+/* Sixth */
+.theme-A[visualcolors="retro6"] {
+    --background-color:#000000;
+    --background-image:url("");
+    --link-color:#2d435b;
+    --content-bg:#8399b1;
+    --content-border:#4f657d;
+    --button-color:#4f657d;
+    --community-header-bg:#4f657d;
+    --floating-header-bg:#808080;
+}
+
+.theme-B[visualcolors="retro6"] {
+    --background-color:#000042;
+    --background-image:url("");
+    --link-color:#800000;
+    --content-bg:#c0c0c0;
+    --content-border:#808080;
+    --button-color:#800000;
+    --community-header-bg:#800000;
+    --floating-header-bg:#808080;
+}
+
+.theme-C[visualcolors="retro6"] {
+    --background-color:#808080;
+    --background-image:url("");
+    --link-color:#8e5060;
+    --content-bg:#cfafb7;
+    --content-border:#9f6070;
+    --button-color:#9f6070;
+    --community-header-bg:#9f6070;
+    --floating-header-bg:#a0a0a4;
+}
+
+.theme-D[visualcolors="retro6"] {
+    --background-color:#414141;
+    --background-image:url("");
+    --link-color:#336075;
+    --content-bg:#9db9c8;
+    --content-border:#558097;
+    --button-color:#558097;
+    --community-header-bg:#558097;
+    --floating-header-bg:#808080;
+}
+
+/* Seventh */
+.theme-A[visualcolors="retro7"] {
+    --background-color:#213f21;
+    --background-image:url("");
+    --link-color:#599764;
+    --content-bg:#a2c8a9;
+    --content-border:#599764;
+    --button-color:#599764;
+    --community-header-bg:#599764;
+    --floating-header-bg:#808080;
+}
+
+.theme-B[visualcolors="retro7"] {
+    --background-color:#000000;
+    --background-image:url("");
+    --link-color:#800080;
+    --content-bg:#c0c0c0;
+    --content-border:#808080;
+    --button-color:#800080;
+    --community-header-bg:#800080;
+    --floating-header-bg:#808080;
+}
+
+.theme-C[visualcolors="retro7"] {
+    --background-color:#004040;
+    --background-image:url("");
+    --link-color:#007070;
+    --content-bg:#c0c0c0;
+    --content-border:#808080;
+    --button-color:#008080;
+    --community-header-bg:#008080;
+    --floating-header-bg:#808080;
+}
+
+.theme-D[visualcolors="retro7"] {
+    --background-color:#00401d;
+    --background-image:url("");
+    --link-color:#808000;
+    --content-bg:#dedea0;
+    --content-border:#abab30;
+    --button-color:#808000;
+    --community-header-bg:#808000;
+    --floating-header-bg:#bcbc41;
+}

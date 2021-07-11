@@ -5108,7 +5108,7 @@ white-space:nowrap;
 	color:var(--window-text);
 	padding:2px;
 	border:2px solid;
-	border-color:#c9c9c9 #767676 #767676 #c9c9c9;
+	border-color:#c0c0c0 #404040 #404040 #c0c0c0;
 	position:relative;
 	margin-top:20px;
 }
