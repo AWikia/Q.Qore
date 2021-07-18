@@ -276,7 +276,7 @@ background-image:linear-gradient(to left,rgba(255,255,255, 0) 200px,var(--commun
 }
 
 
-[visualtheme="basic"] ::-webkit-scrollbar-thumb {
+[visualtheme="basic"] body:not(.phone) ::-webkit-scrollbar-thumb {
 	border-color:var(--scrollbar-track-text);
 	border-width:1px;
 }
@@ -369,7 +369,7 @@ border-color:var(--community-header-text);
 		box-shadow:0 1px 0 0 var(--floating-header-text)!important;
 }
 
-[visualtheme="basic"] ::-webkit-scrollbar-thumb:vertical, [visualtheme="contrast"] ::-webkit-scrollbar-thumb:vertical {
+[visualtheme="basic"] body:not(.phone) ::-webkit-scrollbar-thumb:vertical, [visualtheme="contrast"] body:not(.phone) ::-webkit-scrollbar-thumb:vertical {
 	min-height:20px;
 	background-size:10px 100%;
 	background-image:
@@ -378,7 +378,7 @@ linear-gradient(180deg, transparent 0%, transparent calc(50% - 1px), currentColo
 linear-gradient(180deg, transparent 0%, transparent calc(50% - -3px), currentColor calc(50% - -3px), currentColor calc(50% - -5px), transparent calc(50% - -5px), transparent calc(50% - -7px));
 }
 
-[visualtheme="basic"] ::-webkit-scrollbar-thumb:horizontal, [visualtheme="contrast"] ::-webkit-scrollbar-thumb:horizontal {
+[visualtheme="basic"] body:not(.phone) ::-webkit-scrollbar-thumb:horizontal, [visualtheme="contrast"] body:not(.phone) ::-webkit-scrollbar-thumb:horizontal {
 	min-height:20px;
 	background-size:100% 10px;
 	background-image:
@@ -387,7 +387,7 @@ linear-gradient(90deg, transparent 0%, transparent calc(50% - 1px), currentColor
 linear-gradient(90deg, transparent 0%, transparent calc(50% - -3px), currentColor calc(50% - -3px), currentColor calc(50% - -5px), transparent calc(50% - -5px), transparent calc(50% - -7px));
 }
 
-[visualtheme="contrast"] ::-webkit-scrollbar-thumb {
+[visualtheme="contrast"] body:not(.phone) ::-webkit-scrollbar-thumb {
 	background-color:var(--scrollbar-track-color-1);
 	color:var(--scrollbar-track-text);
 	border-color:currentColor;
@@ -1294,7 +1294,7 @@ box-shadow:none!important;
 [visualtheme="classic"] .cpe-button:not(.cpe-is-text),
 [visualtheme="classic"] .cpe-floating-button,
 [visualtheme="classic"] .preview-window-window h2 button,
-[visualtheme="classic"] ::-webkit-scrollbar-thumb,
+[visualtheme="classic"] body:not(.phone) ::-webkit-scrollbar-thumb,
 [visualtheme="classic"] ::-webkit-scrollbar-button,
 [visualtheme="classic"] .fieldset,
 [visualtheme="classic"] .mpisto-module  {
@@ -1342,7 +1342,7 @@ box-shadow:none!important;
 	border-radius:0!important;
 }
 
-[visualtheme="classic"] ::-webkit-scrollbar-thumb,
+[visualtheme="classic"] body:not(.phone) ::-webkit-scrollbar-thumb,
 [visualtheme="classic"] ::-webkit-scrollbar-button  {
 	border-radius:0!important;
 }

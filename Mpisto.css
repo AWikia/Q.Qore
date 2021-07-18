@@ -457,7 +457,8 @@ container > main {
 	.mpisto-global-sidebar .link .cpe-icon {
 		width:26px;
 		height:26px;
-		
+		min-width:1px;
+		min-height:1px;
 	}
 
 	.mpisto-global-sidebar .link .cpe-icon.cpe-icon-small {
@@ -3003,39 +3004,6 @@ footer.mpisto-footer .cpe-button {
 	padding:8px 10px;
 	font-size:12.5px;
 }
-
-/* Button Styling */
-footer.mpisto-footer .cpe-button.cpe-is-secondary {
-  color:var(--link-color);
-  border-color:var(--link-color);
-}
-
-footer.mpisto-footer .cpe-button.cpe-is-secondary:hover {
-  color:var(--link-color-dark);
-  border-color:var(--link-color-dark);
-}
-
-
-footer.mpisto-footer .cpe-button:not(.cpe-is-secondary):not(.cpe-is-text) {
-  color:var(--link-color-text);
-  border-color:var(--link-color);
-  background-color:var(--link-color);
-}
-
-footer.mpisto-footer .cpe-button:not(.cpe-is-secondary):not(.cpe-is-text):hover, footer.mpisto-footer .cpe-button:not(.cpe-is-secondary):not(.cpe-is-text):active, footer.mpisto-footer .cpe-button:not(.cpe-is-secondary):not(.cpe-is-text):focus {
-  border-color:var(--link-color-dark);
-  background-color:var(--link-color-dark);
-}
-
-footer.mpisto-footer .cpe-button.cpe-is-text:not(.cpe-is-secondary) {
-  color:var(--link-color);
-  border:0;
-}
-
-footer.mpisto-footer .cpe-button.cpe-is-text:hover, footer.mpisto-footer .cpe-button.cpe-is-text:active, footer.mpisto-footer .cpe-button.cpe-is-text:focus {
-  color:var(--link-color-dark);
-}
-
 
 footer.mpisto-footer .mpisto-wrapper {
 /*

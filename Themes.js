@@ -390,17 +390,22 @@ function colortheme(theme) {
 			document.querySelector('.rvbg1').style.setProperty("background-color", 'var(--content-bg)');
 		}
 	}
-	if (window.MW18darkmode) {
-		$('body').attr("dark-mode", isLightColor(body_bg) );
-	} else {
-		$('body').attr("dark-mode", !(isLightColor(body_bg)) );
-	}
+	CheckDarkMode();
 	if ($("body.options").length) {
 		$("input[id*='theme-'][name='themechooser']").removeAttr('checked');
 		$("input[name='themechooser']#theme-" + theme ).attr('checked',true);
 	}
 	if (old_dark != window.MW18darkmode) {
 		ColorUpdate(false);
+	}
+}
+
+function CheckDarkMode() {
+    var body_bg =	getComputedStyle(document.querySelector('html')).getPropertyValue("--content-bg");
+	if (window.MW18darkmode) {
+		$('body').attr("dark-mode", isLightColor(body_bg) );
+	} else {
+		$('body').attr("dark-mode", !(isLightColor(body_bg)) );
 	}
 }
 
