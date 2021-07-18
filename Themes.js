@@ -390,7 +390,6 @@ function colortheme(theme) {
 			document.querySelector('.rvbg1').style.setProperty("background-color", 'var(--content-bg)');
 		}
 	}
-	CheckDarkMode();
 	if ($("body.options").length) {
 		$("input[id*='theme-'][name='themechooser']").removeAttr('checked');
 		$("input[name='themechooser']#theme-" + theme ).attr('checked',true);
@@ -2121,6 +2120,7 @@ if (refresh === true) {
 		UpdateSet();
 	}
 }
+CheckDarkMode();
 if ($("body.options").length) {
 	CompileChosenThems()
 }
