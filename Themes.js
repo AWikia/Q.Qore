@@ -1435,7 +1435,7 @@ function ColorTest(color,text=false) {
 		if (text === true) {
 			return '#0e191a'; // Was #000000
 		} else {
-			return ColorTestTwin(color,'#000000');
+			return ColorTestTwin(color,'#000000',0.6);
 		}
 	} else {
 		if (text === true) {
@@ -1450,8 +1450,8 @@ function ColorTest(color,text=false) {
 
 function SuperColorTest(color) {
 	if (isLightColor(color)) {
-		var mix = ColorTestTwin(color,'#000000');
-		return ColorTestTwin(mix,'#000000');
+		var mix = ColorTestTwin(color,'#000000',0.6);
+		return ColorTestTwin(mix,'#000000',0.6);
 	} else {
 		var mix = ColorTestTwin(color,'#ffffff');
 		return ColorTestTwin(mix,'#ffffff');

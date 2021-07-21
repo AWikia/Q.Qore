@@ -430,7 +430,9 @@ linear-gradient(90deg, transparent 0%, transparent calc(50% - -3px), currentColo
 }
 
 [visualtheme="contrast"] .mpisto-personal-links {
-	box-shadow:inset 1px 0px var(--content-border)!important;
+	box-shadow:inset 0 1px var(--content-border),
+			   inset 1px 0 var(--content-border),
+			   inset -1px 0 var(--content-border)!important;
 }
 
 @media only screen and (max-width:511px) {
@@ -1284,7 +1286,7 @@ box-shadow:none!important;
 }
 
 [visualtheme="classic"] .mpisto-personal-links {
-	border-left:2px outset var(--content-bg);
+	border-top:2px outset var(--content-bg);
 }
 
 
