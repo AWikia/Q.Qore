@@ -152,6 +152,10 @@
 	margin-top:-1px;
 }
 
+.mpisto-personal-links {
+	display:none!Important;
+}
+
 .mpisto-page-header .mpisto-page-header-title,
 .mpisto-userpages-header {
 	border-radius:0;
