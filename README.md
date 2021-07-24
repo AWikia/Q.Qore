@@ -1,3 +1,4 @@
+*This project has been discontinued. See [Evelution](https://github.com/AWikia/SkinEvelution) for the successor project*
 # Qortex Essentials Diadyktio
 OpenSource Mpirthi Project with great modern browser support.  (Formerly Mpisto War 2018)
 - Current Build: 			5850
