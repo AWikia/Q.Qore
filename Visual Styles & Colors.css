@@ -518,7 +518,7 @@ background-color:var(--button-color);
 
 [visualtheme="basic"] .mpisto-sticky-header-container,
 [visualtheme="contrast"] .mpisto-sticky-header-container {
-	background-color:var(--floating-header-bg);
+	background-color:var(--luna-background-color);
 }
 
 
