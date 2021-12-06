@@ -12,7 +12,7 @@ display:block;
 /*font-family:'Inter', -apple-system, BlinkMacSystemFont, "Noto Sans", "Noto Sans KR", "Noto Sans JP", "Noto Sans SC", "Noto Sans TC", sans-serif;*/
 }
 
-html.store {
+html.store.theme-A {
 --wordmark:url("StoreMark.png");
 --background-image:url("");
 --background-color:#f6f6f6;
@@ -22,6 +22,7 @@ html.store {
 --content-color:#002a32;
 --button-color:#00D6D6;
 --community-header-bg:#13282c;
+--body-display:legacy;
 }
 
 html.store.theme-B {
@@ -70,13 +71,12 @@ backdrop-filter:none!important;
 .mpisto-header-container {
 /*background-color:rgb(24,187,198);
 */
-margin:-1px;
-background-image:linear-gradient(to bottom, var(--button-color-blend-light) 35%, var(--button-color-blend) 70%)!important;
+/*background-image:linear-gradient(to bottom, var(--button-color-blend-light) 35%, var(--button-color-blend) 70%)!important;*/
 }
 
 .mpisto-sticky-header-container {
-	color:var(--community-header-text);
-	background-color:var(--community-header-bg-blend-light);
+	color:var(--luna-foreground-color);
+	background-color:var(--luna-background-color);
 }
 
 
@@ -88,11 +88,11 @@ background-image:linear-gradient(to bottom, var(--button-color-blend-light) 35%,
 	}
 
 	.color-header .title a:hover {
-	color:var(--button-color-text-dark);
+	color:var(--background-color-text-dark);
 }
 
 .mpisto-sticky-header-container .title a:hover {
-	color:var(--community-header-text-dark);
+	color:var(--luna-foreground-color-hover);
 }
 
 .mpisto-header-container::after {
@@ -193,8 +193,8 @@ border-left-color:var(--button-color);
 
 .mpisto-global-sidebar, .mpisto-header-container {
     --global-nav-color:var(--button-color-blend-light-rgb);
-	background-color:var(--button-color-blend-light);
-	color:var(--button-color-text);
+/*	background-color:var(--button-color-blend-light); */
+	color:var(--background-color-text);
 }
 
 
@@ -203,30 +203,38 @@ border-left-color:var(--button-color);
 }
 
 
-.mpisto-global-sidebar .link:active, .mpisto-global-sidebar .link:focus,  .mpisto-global-sidebar .cpe-dropdown.cpe-is-active .link,
 .mpisto-header-container .link:hover, .mpisto-header-container .link:focus, .mpisto-header-container .cpe-dropdown.cpe-is-active .link {
-	background-color:var(--button-color-blend-light);
+	background-color:var(--background-color-dark);
 	-webkit-animation:none;
 	animation:none;
-	transition:color 400ms ease, background-color 400ms ease, transform 300ms ease, opacity 300ms ease;
 	border-color:transparent;
-	color:inherit;
+	box-shadow:none;
+	color:var(--background-color-text-dark);
+}
+
+.mpisto-global-sidebar .link:active, .mpisto-global-sidebar .link:focus,  .mpisto-global-sidebar .cpe-dropdown.cpe-is-active .link {
+	background-color:var(--button-color-blend);
+	-webkit-animation:none;
+	animation:none;
+	border-color:transparent;
 	box-shadow:none;
 	color:var(--button-color-text-dark);
 }
 
 
+/*
 .color-header .link:hover, .color-header .cpe-dropdown.cpe-is-active .link,
 .mpisto-global-sidebar .link:active, .mpisto-global-sidebar .link:focus,  .mpisto-global-sidebar .cpe-dropdown.cpe-is-active .link {
 	background-color:var(--button-color-blend);
 }
+*/
 
 .mpisto-sticky-header-container .link.active, 
 .mpisto-sticky-header-container .link:hover, 
 .mpisto-sticky-header-container .link:focus, 
 .mpisto-sticky-header-container .cpe-dropdown.cpe-is-active .link {
-	background-color:var(--community-header-bg-blend);
-	color:var(--community-header-text-dark);
+	background-color:var(--luna-background-color-hover);
+	color:var(--luna-foreground-color-inverted);
 	box-shadow:none;
 	animation:none;
 	border-color:transparent;
@@ -282,17 +290,18 @@ overflow:hidden;
 }
 
 .page-wrapper {
-	background-color:var(--content-bg);
 	position:relative;
 	z-index:2;
 }
 
 .page-wrapper .wiki-container {
+  background-color:var(--content-bg);
   border:1px var(--content-border);
   border-style:none solid solid;
 }
 
 .page-wrapper .store-content {
+  background-color:var(--content-bg);
   border:1px var(--content-border);
   display:block;
   border-style:none solid solid;
@@ -658,7 +667,7 @@ box-shadow:none;
 }
 
 .top-gap {
-margin:0!important;
+/*margin:0!important;*/
 }
 
 .menuvisible {
@@ -745,7 +754,7 @@ background-position:center;
 
 
 .top-gap {
-margin-top:20px;
+margin-top:-6px;
 }
 
 
@@ -753,9 +762,13 @@ margin-top:20px;
 .page-wrapper {
 margin:0 18px;
 width:auto;
-box-shadow:0 2px 6px 0 rgba(0,0,0,.2), 0 2px 6px 0 rgba(255,255,255,0.2);
 border-top:1px solid transparent;
 background-clip:padding-box;
+}
+
+.page-wrapper .wiki-container,
+.page-wrapper .store-content {
+	box-shadow:0 2px 6px 0 rgba(0,0,0,.2), 0 2px 6px 0 rgba(255,255,255,0.2);
 }
 
 

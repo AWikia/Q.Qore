@@ -1,5 +1,4 @@
-// window.location.replace("https://hm100.github.io/UnsupportedBanners/Goodbye%20Web%20Qore.html");window.location.href = "https://hm100.github.io/UnsupportedBanners/Goodbye%20Web%20Qore.html";
-/* Make SmartTVs recognize cursors */
+﻿/* Make SmartTVs recognize cursors */
 if (navigator.userAgent.match("SmartTV")) {
 document.getElementById("Handler").className += " smart"
 }
