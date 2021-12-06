@@ -15,6 +15,9 @@ var visualColorNames = ['Factory', 'XP Luna', 'Windows Forced', 'Campbell Forced
 
 (function () {
 document.querySelector('html').className += " theme-A"; // We begin with the first theme selected
+$("head").prepend(
+'<style class="theming"></style>'
+);	
 ColorUpdate(true);
 UpdateMisc();
 	SheShe = 'auto'; // Allowed Values ('auto', true, false)
@@ -1765,6 +1768,8 @@ if (isSuperLightColor(content_color) && (false)) {
 
 }
 
+var dropdowncolorD = ColorTest(dropdowncolor);
+
 if (getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color") != 'auto') {
 	var content_text2 = ColorTest(content_text);
 	var content_text3 = SuperColorTest(content_text); // Scrollbar
@@ -1782,7 +1787,6 @@ if (getComputedStyle(document.querySelector('html')).getPropertyValue("--content
 }
 
 
-document.querySelector('html').style.setProperty("--dropdown-bg", dropdowncolor);
 document.querySelector('body').style.setProperty("--content-border", dropdowncolor2);
 if (window.MW18darkmode === true) {
 	document.querySelector('body').style.setProperty("--content-bg", content_color);
@@ -1793,35 +1797,12 @@ if (window.MW18darkmode === true) {
 }
 
 if (isLightColor( getComputedStyle(document.querySelector('body')).getPropertyValue("--content-color") )) {
-document.querySelector('html').style.setProperty("--content-color-blend-light", getComputedStyle(document.querySelector('body')).getPropertyValue("--content-color"));
-document.querySelector('html').style.setProperty("--content-color-blend", content_text2);
+var color_blend = getComputedStyle(document.querySelector('body')).getPropertyValue("--content-color")
+var color_blend2 = content_text2
 } else {
-document.querySelector('html').style.setProperty("--content-color-blend-light", content_text2);
-document.querySelector('html').style.setProperty("--content-color-blend", getComputedStyle(document.querySelector('body')).getPropertyValue("--content-color"));
+var color_blend = content_text2
+var color_blend2 = getComputedStyle(document.querySelector('body')).getPropertyValue("--content-color")
 }
-
-
-document.querySelector('html').style.setProperty("--content-bg-dark", content_color2);
-document.querySelector('html').style.setProperty("--content-bg-dark-super", content_color3); // Scrollbar
-document.querySelector('html').style.setProperty("--content-color-dark", content_text2);
-document.querySelector('html').style.setProperty("--content-color-dark-super", content_text3); // Scrollbar
-document.querySelector('html').style.setProperty("--content-color-text", content_text4);
-document.querySelector('html').style.setProperty("--content-color-text-dark", content_text5);
-document.querySelector('html').style.setProperty("--content-color-content-bg-mix-light", colormixl);
-document.querySelector('html').style.setProperty("--content-color-content-bg-mix", colormix);
-
-// RGB
-document.querySelector('html').style.setProperty("--dropdown-bg-rgb", Color2(dropdowncolor));
-document.querySelector('html').style.setProperty("--content-bg-rgb", Color2( getComputedStyle(document.querySelector('body')).getPropertyValue("--content-bg") ));
-document.querySelector('html').style.setProperty("--content-bg-dark-rgb", Color2(content_color2));
-document.querySelector('html').style.setProperty("--content-bg-dark-super-rgb", Color2(content_color3));
-document.querySelector('html').style.setProperty("--content-color-rgb", Color2( getComputedStyle(document.querySelector('body')).getPropertyValue("--content-color") ));
-document.querySelector('html').style.setProperty("--content-color-dark-rgb", Color2(content_text2));
-document.querySelector('html').style.setProperty("--content-color-dark-super-rgb", Color2(content_text3));
-document.querySelector('html').style.setProperty("--content-color-text-rgb", Color2(content_text4));
-document.querySelector('html').style.setProperty("--content-color-text-dark-rgb", Color2(content_text5));
-document.querySelector('html').style.setProperty("--content-color-blend-light-rgb", Color2( getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color-blend-light") ));
-document.querySelector('html').style.setProperty("--content-color-blend-rgb", Color2( getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color-blend") ));
 
 
 /** Button Color **/
@@ -1834,32 +1815,16 @@ var buttoncolor3 = SuperColorTest(button_color); // Scrollbar
 
 
 if (isLightColor(button_color)) {
-document.querySelector('html').style.setProperty("--button-color-blend-light", button_color);
-document.querySelector('html').style.setProperty("--button-color-blend", buttoncolor1);
+var button_blend = button_color
+var button_blend2 = buttoncolor1
 } else {
-document.querySelector('html').style.setProperty("--button-color-blend-light", buttoncolor1);
-document.querySelector('html').style.setProperty("--button-color-blend", button_color);
+var button_blend = buttoncolor1
+var button_blend2 = button_color
 }
 
 buttonmixl = ColorTestTwin(content_color,button_color,0.8,'rgb');
 buttonmix = ColorTestTwin(content_color,button_color,1.6,'rgb');
 
-
-/* Set Values */
-document.querySelector('html').style.setProperty("--button-color-dark", buttoncolor1);
-document.querySelector('html').style.setProperty("--button-color-dark-super", buttoncolor3); // Scrollbar
-document.querySelector('html').style.setProperty("--button-color-text", buttoncolor2);
-document.querySelector('html').style.setProperty("--button-color-text-dark", buttoncolor2t);
-document.querySelector('html').style.setProperty("--button-color-content-bg-mix-light", buttonmixl);
-document.querySelector('html').style.setProperty("--button-color-content-bg-mix", buttonmix);
-// RGB
-document.querySelector('html').style.setProperty("--button-color-rgb", Color2(button_color));
-document.querySelector('html').style.setProperty("--button-color-dark-rgb", Color2(buttoncolor1));
-document.querySelector('html').style.setProperty("--button-color-dark-super-rgb", Color2(buttoncolor3));
-document.querySelector('html').style.setProperty("--button-color-text-rgb", Color2(buttoncolor2));
-document.querySelector('html').style.setProperty("--button-color-text-dark-rgb", Color2(buttoncolor2t));
-document.querySelector('html').style.setProperty("--button-color-blend-light-rgb", Color2( getComputedStyle(document.querySelector('html')).getPropertyValue("--button-color-blend-light") ));
-document.querySelector('html').style.setProperty("--button-color-blend-rgb", Color2( getComputedStyle(document.querySelector('html')).getPropertyValue("--button-color-blend") ));
 
 
 /** Header Color **/
@@ -1871,33 +1836,15 @@ var headercolor2t = ColorTest(headercolor2,false);
 var headercolor3 = SuperColorTest(header_color); // Scrollbar
 
 if (isLightColor(header_color)) {
-document.querySelector('html').style.setProperty("--community-header-bg-blend-light", header_color);
-document.querySelector('html').style.setProperty("--community-header-bg-blend", headercolor1);
+var header_blend = header_color
+var header_blend2 = headercolor1
 } else {
-document.querySelector('html').style.setProperty("--community-header-bg-blend-light", headercolor1);
-document.querySelector('html').style.setProperty("--community-header-bg-blend", header_color);
+var header_blend = headercolor1
+var header_blend2 = header_color
 }
 
 headermixl = ColorTestTwin(content_color,header_color,0.8,'rgb');
 headermix = ColorTestTwin(content_color,header_color,1.6,'rgb');
-
-
-
-/* Set Values */
-document.querySelector('html').style.setProperty("--community-header-dark", headercolor1);
-document.querySelector('html').style.setProperty("--community-header-dark-super", headercolor3); // Scrollbar
-document.querySelector('html').style.setProperty("--community-header-text", headercolor2);
-document.querySelector('html').style.setProperty("--community-header-text-dark", headercolor2t);
-document.querySelector('html').style.setProperty("--community-header-bg-content-bg-mix-light", headermixl);
-document.querySelector('html').style.setProperty("--community-header-bg-content-bg-mix", headermix);
-// RGB
-document.querySelector('html').style.setProperty("--community-header-bg-rgb", Color2(header_color));
-document.querySelector('html').style.setProperty("--community-header-dark-rgb", Color2(headercolor1));
-document.querySelector('html').style.setProperty("--community-header-dark-super-rgb", Color2(headercolor3));
-document.querySelector('html').style.setProperty("--community-header-text-rgb", Color2(headercolor2));
-document.querySelector('html').style.setProperty("--community-header-text-dark-rgb", Color2(headercolor2t));
-document.querySelector('html').style.setProperty("--community-header-bg-blend-light-rgb", Color2( getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg-blend-light") ));
-document.querySelector('html').style.setProperty("--community-header-bg-blend-rgb", Color2( getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg-blend") ));
 
 
 /** Link Color **/
@@ -1911,32 +1858,17 @@ var linkcolor3 = SuperColorTest(link_color); // Scrollbar
 
 
 if (isLightColor(link_color)) {
-document.querySelector('html').style.setProperty("--link-color-blend-light", link_color);
-document.querySelector('html').style.setProperty("--link-color-blend", linkcolor1);
+var link_blend = link_color
+var link_blend2 = linkcolor1
 } else {
-document.querySelector('html').style.setProperty("--link-color-blend-light", linkcolor1);
-document.querySelector('html').style.setProperty("--link-color-blend", link_color);
+var link_blend = linkcolor1
+var link_blend2 = link_color
 }
 
 linkmixl = ColorTestTwin(content_color,link_color,0.8,'rgb');
 linkmix = ColorTestTwin(content_color,link_color,1.6,'rgb');
 
 
-/* Set Values */
-document.querySelector('html').style.setProperty("--link-color-dark", linkcolor1);
-document.querySelector('html').style.setProperty("--link-color-dark-super", linkcolor3); // Scrollbar
-document.querySelector('html').style.setProperty("--link-color-text", linkcolor2);
-document.querySelector('html').style.setProperty("--link-color-text-dark", linkcolor2t);
-document.querySelector('html').style.setProperty("--link-color-content-bg-mix-light", linkmixl);
-document.querySelector('html').style.setProperty("--link-color-content-bg-mix", linkmix);
-// RGB
-document.querySelector('html').style.setProperty("--link-color-rgb", Color2(link_color));
-document.querySelector('html').style.setProperty("--link-color-dark-rgb", Color2(linkcolor1));
-document.querySelector('html').style.setProperty("--link-color-dark-super-rgb", Color2(linkcolor3));
-document.querySelector('html').style.setProperty("--link-color-text-rgb", Color2(linkcolor2));
-document.querySelector('html').style.setProperty("--link-color-text-dark-rgb", Color2(linkcolor2t));
-document.querySelector('html').style.setProperty("--link-color-blend-light-rgb", Color2( getComputedStyle(document.querySelector('html')).getPropertyValue("--link-color-blend-light") ));
-document.querySelector('html').style.setProperty("--link-color-blend-rgb", Color2( getComputedStyle(document.querySelector('html')).getPropertyValue("--link-color-blend") ));
 
 /** Content Border **/
 /* Set Vars */
@@ -1953,31 +1885,16 @@ var bordercolor2t = ColorTest(bordercolor2,false);
 
 
 if (isLightColor(border_color)) {
-document.querySelector('html').style.setProperty("--content-border-blend-light", border_color);
-document.querySelector('html').style.setProperty("--content-border-blend", bordercolor1);
+var border_blend = border_color
+var border_blend2 = bordercolor1
 } else {
-document.querySelector('html').style.setProperty("--content-border-blend-light", bordercolor1);
-document.querySelector('html').style.setProperty("--content-border-blend", border_color);
+var border_blend = bordercolor1
+var border_blend2 = border_color
+
 }
 
 bordermixl = ColorTestTwin(content_color,border_color,0.8,'rgb');
 bordermix = ColorTestTwin(content_color,border_color,1.6,'rgb');
-
-/* Set Values */
-document.querySelector('html').style.setProperty("--content-border-dark", bordercolor1);
-document.querySelector('html').style.setProperty("--content-border-dark-super", bordercolor3); // Scrollbar
-document.querySelector('html').style.setProperty("--content-border-text", bordercolor2);
-document.querySelector('html').style.setProperty("--content-border-text-dark", bordercolor2t);
-document.querySelector('html').style.setProperty("--content-border-content-bg-mix-light", bordermixl);
-document.querySelector('html').style.setProperty("--content-border-content-bg-mix", bordermix);
-// RGB
-document.querySelector('html').style.setProperty("--content-border-rgb", Color2(border_color));
-document.querySelector('html').style.setProperty("--content-border-dark-rgb", Color2(bordercolor1));
-document.querySelector('html').style.setProperty("--content-border-dark-super-rgb", Color2(bordercolor3));
-document.querySelector('html').style.setProperty("--content-border-text-rgb", Color2(bordercolor2));
-document.querySelector('html').style.setProperty("--content-border-text-dark-rgb", Color2(bordercolor2t));
-document.querySelector('html').style.setProperty("--content-border-blend-light-rgb", Color2( getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border-blend-light") ));
-document.querySelector('html').style.setProperty("--content-border-blend-rgb", Color2( getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border-blend") ));
 
 
 /** Body Bg **/
@@ -1989,31 +1906,16 @@ var headcolor2 = ColorTest(head_color,true);
 var headcolor2t = ColorTest(headcolor2,false);
 
 if (isLightColor(head_color)) {
-document.querySelector('html').style.setProperty("--background-color-blend-light", head_color);
-document.querySelector('html').style.setProperty("--background-color-blend", headcolor1);
+var head_blend = head_color
+var head_blend2 = headcolor1
 } else {
-document.querySelector('html').style.setProperty("--background-color-blend-light", headcolor1);
-document.querySelector('html').style.setProperty("--background-color-blend", head_color);
+var head_blend = headcolor1
+var head_blend2 = head_color
 }
 
 headmixl = ColorTestTwin(content_color,head_color,0.8,'rgb');
 headmix = ColorTestTwin(content_color,head_color,1.6,'rgb');
 
-/* Set Values */
-document.querySelector('html').style.setProperty("--background-color-dark", headcolor1);
-document.querySelector('html').style.setProperty("--background-color-dark-super", headcolor3); // Scrollbar
-document.querySelector('html').style.setProperty("--background-color-text", headcolor2);
-document.querySelector('html').style.setProperty("--background-color-text-dark", headcolor2t);
-document.querySelector('html').style.setProperty("--background-color-content-bg-mix-light", headmixl);
-document.querySelector('html').style.setProperty("--background-color-content-bg-mix", headmix);
-// RGB
-document.querySelector('html').style.setProperty("--background-color-rgb", Color2(head_color));
-document.querySelector('html').style.setProperty("--background-color-dark-rgb", Color2(headcolor1));
-document.querySelector('html').style.setProperty("--background-color-dark-super-rgb", Color2(headcolor3));
-document.querySelector('html').style.setProperty("--background-color-text-rgb", Color2(headcolor2));
-document.querySelector('html').style.setProperty("--background-color-text-dark-rgb", Color2(headcolor2t));
-document.querySelector('html').style.setProperty("--background-color-blend-light-rgb", Color2( getComputedStyle(document.querySelector('html')).getPropertyValue("--background-color-blend-light") ));
-document.querySelector('html').style.setProperty("--background-color-blend-rgb", Color2( getComputedStyle(document.querySelector('html')).getPropertyValue("--background-color-blend") ));
 
 /* Floating Header Bg */
 if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--floating-header-bg") !== 'auto') && !($("html.contrast.win10").length)  ) {
@@ -2032,55 +1934,29 @@ var floatingcolor2 = ColorTest(floating_color,true);
 var floatingcolor2t = ColorTest(floatingcolor2,false);
 
 if (isLightColor(floating_color)) {
-document.querySelector('html').style.setProperty("--floating-header-bg-blend-light", floating_color);
-document.querySelector('html').style.setProperty("--floating-header-bg-blend", floatingcolor1);
+var floating_blend = floating_color
+var floating_blend2 = floatingcolor1
 } else {
-document.querySelector('html').style.setProperty("--floating-header-bg-blend-light", floatingcolor1);
-document.querySelector('html').style.setProperty("--floating-header-bg-blend", floating_color);
+var floating_blend = floatingcolor1
+var floating_blend2 = floating_color
 }
 
 floatmixl = ColorTestTwin(content_color,floating_color,0.8,'rgb');
 floatmix = ColorTestTwin(content_color,floating_color,1.6,'rgb');
 
-
-document.querySelector('html').style.setProperty("--floating-header-dark", floatingcolor1);
-document.querySelector('html').style.setProperty("--floating-header-dark-super", floatingcolor3); // Scrollbar
-document.querySelector('html').style.setProperty("--floating-header-text", floatingcolor2);
-document.querySelector('html').style.setProperty("--floating-header-text-dark", floatingcolor2t);
-document.querySelector('html').style.setProperty("--floating-header-bg-content-bg-mix-light", floatmixl);
-document.querySelector('html').style.setProperty("--floating-header-bg-content-bg-mix", floatmix);
-
-// RGB
-document.querySelector('html').style.setProperty("--floating-header-bg-rgb", Color2( getComputedStyle(document.querySelector('body')).getPropertyValue("--floating-header-bg") ));
-document.querySelector('html').style.setProperty("--floating-header-dark-rgb", Color2(floatingcolor1));
-document.querySelector('html').style.setProperty("--floating-header-dark-super-rgb", Color2(floatingcolor3));
-document.querySelector('html').style.setProperty("--floating-header-text-rgb", Color2(floatingcolor2));
-document.querySelector('html').style.setProperty("--floating-header-text-dark-rgb", Color2(floatingcolor2t));
-document.querySelector('html').style.setProperty("--floating-header-bg-blend-light-rgb", Color2( getComputedStyle(document.querySelector('html')).getPropertyValue("--floating-header-bg-blend-light") ));
-document.querySelector('html').style.setProperty("--floating-header-bg-blend-rgb", Color2( getComputedStyle(document.querySelector('html')).getPropertyValue("--floating-header-bg-blend") ));
-
-
 /* Info, Success, Warning and Alert color mixes */
 // Info
 infomixl = ColorTestTwin(content_color,'#575859',0.8,'rgb');
 infomix = ColorTestTwin(content_color,'#575859',1.6,'rgb');
-document.querySelector('html').style.setProperty("--info-color-content-bg-mix-light", infomixl);
-document.querySelector('html').style.setProperty("--info-color-content-bg-mix", infomix);
 // Success
 successmixl = ColorTestTwin(content_color,'#14866d',0.8,'rgb');
 successmix = ColorTestTwin(content_color,'#14866d',1.6,'rgb');
-document.querySelector('html').style.setProperty("--success-color-content-bg-mix-light", successmixl);
-document.querySelector('html').style.setProperty("--success-color-content-bg-mix", successmix);
 // Wanring
 warningmixl = ColorTestTwin(content_color,'#ffcc33',0.8,'rgb');
 warningmix = ColorTestTwin(content_color,'#ffcc33',1.6,'rgb');
-document.querySelector('html').style.setProperty("--warning-color-content-bg-mix-light", warningmixl);
-document.querySelector('html').style.setProperty("--warning-color-content-bg-mix", warningmix);
 // Alert
 alertmixl = ColorTestTwin(content_color,'#dd3333',0.8,'rgb');
 alertmix = ColorTestTwin(content_color,'#dd3333',1.6,'rgb');
-document.querySelector('html').style.setProperty("--alert-color-content-bg-mix-light", alertmixl);
-document.querySelector('html').style.setProperty("--alert-color-content-bg-mix", alertmix);
 
 
 
@@ -2093,20 +1969,143 @@ var accentcolor = chroma.mix(chroma.mix(content_color, border_color, MW18HoverTh
 var accentcolor2 = ColorTest(accentcolor,true);
 var accentcolor2t = ColorTest(accentcolor2,false);
 
+/* Writing */
+var result = '--dropdown-bg:' + dropdowncolor + ';\n' +
+			'--dropdown-bg-dark:' + dropdowncolorD + ';\n' +
+			'--content-bg-dark:' + content_color2 + ';\n' +
+			'--content-bg-dark-super:' + content_color3 + ';\n' +
+			'--content-color-dark:' + content_text2 + ';\n' +
+			'--content-color-dark-super:' + content_text3 + ';\n' +
+			'--content-color-text:' + content_text4 + ';\n' +
+			'--content-color-text-dark:' + content_text5 + ';\n' +
+			'--content-color-content-bg-mix-light:' + colormixl + ';\n' +
+			'--content-color-content-bg-mix:' + colormix + ';\n' +
+			'--content-color-blend-light:' + color_blend + ';\n' +
+			'--content-color-blend:' + color_blend2 + ';\n' +
+			'--dropdown-bg-rgb:' + Color2(dropdowncolor) + ';\n' +
+			'--content-bg-rgb:' + Color2(getComputedStyle(document.querySelector('body')).getPropertyValue("--content-bg")) + ';\n' +
+			'--content-bg-dark-rgb:' + Color2(content_color2) + ';\n' +
+			'--content-bg-dark-super-rgb:' + Color2(content_color3) + ';\n' +
+			'--content-color-rgb:' + Color2(getComputedStyle(document.querySelector('body')).getPropertyValue("--content-color")) + ';\n' +
+			'--content-color-dark-rgb:' + Color2(content_text2) + ';\n' +
+			'--content-color-dark-super-rgb:' + Color2(content_text3) + ';\n' +
+			'--content-color-text-rgb:' + Color2(content_text4) + ';\n' +
+			'--content-color-text-dark-rgb:' + Color2(content_text5) + ';\n' +
+			'--content-color-blend-light-rgb:' + Color2(color_blend) + ';\n' +
+			'--content-color-blend-rgb:' + Color2(color_blend2) + ';\n' +
+			'--button-color-dark:' + buttoncolor1 + ';\n' +
+			'--button-color-dark-super:' + buttoncolor3 + ';\n' +
+			'--button-color-text:' + buttoncolor2 + ';\n' +
+			'--button-color-text-dark:' + buttoncolor2t + ';\n' +
+			'--button-color-content-bg-mix-light:' + buttonmixl + ';\n' +
+			'--button-color-content-bg-mix:' + buttonmix + ';\n' +
+			'--button-color-blend-light:' + button_blend + ';\n' +
+			'--button-color-blend:' + button_blend2 + ';\n' +
+			'--button-color-rgb:' + Color2(button_color) + ';\n' +
+			'--button-color-dark-rgb:' + Color2(buttoncolor1) + ';\n' +
+			'--button-color-dark-super-rgb:' + Color2(buttoncolor3) + ';\n' +
+			'--button-color-text-rgb:' + Color2(buttoncolor2) + ';\n' +
+			'--button-color-text-dark-rgb:' + Color2(buttoncolor2t) + ';\n' +
+			'--button-color-blend-light-rgb:' + Color2(button_blend) + ';\n' +
+			'--button-color-blend-rgb:' + Color2(button_blend2) + ';\n' +
+			'--community-header-dark:' + headercolor1 + ';\n' +
+			'--community-header-dark-super:' + headercolor3 + ';\n' +
+			'--community-header-text:' + headercolor2 + ';\n' +
+			'--community-header-text-dark:' + headercolor2t + ';\n' +
+			'--community-header-bg-content-bg-mix-light:' + headermixl + ';\n' +
+			'--community-header-bg-content-bg-mix:' + headermix + ';\n' +
+			'--community-header-bg-blend-light:' + header_blend + ';\n' +
+			'--community-header-bg-blend:' + header_blend2 + ';\n' +
+			'--community-header-bg-rgb:' + Color2(header_color) + ';\n' +
+			'--community-header-dark-rgb:' + Color2(headercolor1) + ';\n' +
+			'--community-header-dark-super-rgb:' + Color2(headercolor3) + ';\n' +
+			'--community-header-text-rgb:' + Color2(headercolor2) + ';\n' +
+			'--community-header-text-dark-rgb:' + Color2(headercolor2t) + ';\n' +
+			'--community-header-bg-blend-light-rgb:' + Color2(header_blend) + ';\n' +
+			'--community-header-bg-blend-rgb:' + Color2(header_blend2) + ';\n' +
+			'--link-color-dark:' + linkcolor1 + ';\n' +
+			'--link-color-dark-super:' + linkcolor3 + ';\n' +
+			'--link-color-text:' + linkcolor2 + ';\n' +
+			'--link-color-text-dark:' + linkcolor2t + ';\n' +
+			'--link-color-content-bg-mix-light:' + linkmixl + ';\n' +
+			'--link-color-content-bg-mix:' + linkmix + ';\n' +
+			'--link-color-blend-light:' + link_blend + ';\n' +
+			'--link-color-blend:' + link_blend2 + ';\n' +
+			'--link-color-rgb:' + Color2(link_color) + ';\n' +
+			'--link-color-dark-rgb:' + Color2(linkcolor1) + ';\n' +
+			'--link-color-dark-super-rgb:' + Color2(linkcolor3) + ';\n' +
+			'--link-color-text-rgb:' + Color2(linkcolor2) + ';\n' +
+			'--link-color-text-dark-rgb:' + Color2(linkcolor2t) + ';\n' +
+			'--link-color-blend-light-rgb:' + Color2(link_blend) + ';\n' +
+			'--link-color-blend-rgb:' + Color2(link_blend2) + ';\n' +
+			'--content-border-dark:' + bordercolor1 + ';\n' +
+			'--content-border-dark-super:' + bordercolor3 + ';\n' +
+			'--content-border-text:' + bordercolor2 + ';\n' +
+			'--content-border-text-dark:' + bordercolor2t + ';\n' +
+			'--content-border-content-bg-mix-light:' + bordermixl + ';\n' +
+			'--content-border-content-bg-mix:' + bordermix + ';\n' +
+			'--content-border-blend-light:' + border_blend + ';\n' +
+			'--content-border-blend:' + border_blend2 + ';\n' +
+			'--content-border-rgb:' + Color2(border_color) + ';\n' +
+			'--content-border-dark-rgb:' + Color2(bordercolor1) + ';\n' +
+			'--content-border-dark-super-rgb:' + Color2(bordercolor3) + ';\n' +
+			'--content-border-text-rgb:' + Color2(bordercolor2) + ';\n' +
+			'--content-border-text-dark-rgb:' + Color2(bordercolor2t) + ';\n' +
+			'--content-border-blend-light-rgb:' + Color2(border_blend) + ';\n' +
+			'--content-border-blend-rgb:' + Color2(border_blend2) + ';\n' +
+			'--background-color-dark:' + headcolor1 + ';\n' +
+			'--background-color-dark-super:' + headcolor3 + ';\n' +
+			'--background-color-text:' + headcolor2 + ';\n' +
+			'--background-color-text-dark:' + headcolor2t + ';\n' +
+			'--background-color-content-bg-mix-light:' + headmixl + ';\n' +
+			'--background-color-content-bg-mix:' + headmix + ';\n' +
+			'--background-color-blend-light:' + head_blend + ';\n' +
+			'--background-color-blend:' + head_blend2 + ';\n' +
+			'--background-color-rgb:' + Color2(head_color) + ';\n' +
+			'--background-color-dark-rgb:' + Color2(headcolor1) + ';\n' +
+			'--background-color-dark-super-rgb:' + Color2(headcolor3) + ';\n' +
+			'--background-color-text-rgb:' + Color2(headcolor2) + ';\n' +
+			'--background-color-text-dark-rgb:' + Color2(headcolor2t) + ';\n' +
+			'--background-color-blend-light-rgb:' + Color2(head_blend) + ';\n' +
+			'--background-color-blend-rgb:' + Color2(head_blend2) + ';\n' +
+			'--floating-header-dark:' + floatingcolor1 + ';\n' +
+			'--floating-header-dark-super:' + floatingcolor3 + ';\n' +
+			'--floating-header-text:' + floatingcolor2 + ';\n' +
+			'--floating-header-text-dark:' + floatingcolor2t + ';\n' +
+			'--floating-header-bg-content-bg-mix-light:' + floatmixl + ';\n' +
+			'--floating-header-bg-content-bg-mix:' + floatmix + ';\n' +
+			'--floating-header-bg-blend-light:' + floating_blend + ';\n' +
+			'--floating-header-bg-blend:' + floating_blend2 + ';\n' +
+			'--floating-header-bg-rgb:' + Color2(floating_color) + ';\n' +
+			'--floating-header-dark-rgb:' + Color2(floatingcolor1) + ';\n' +
+			'--floating-header-dark-super-rgb:' + Color2(floatingcolor3) + ';\n' +
+			'--floating-header-text-rgb:' + Color2(floatingcolor2) + ';\n' +
+			'--floating-header-text-dark-rgb:' + Color2(floatingcolor2t) + ';\n' +
+			'--floating-header-bg-blend-light-rgb:' + Color2(floating_blend) + ';\n' +
+			'--floating-header-bg-blend-rgb:' + Color2(floating_blend2) + ';\n' +
+			'--info-color-content-bg-mix-light:' + infomixl + ';\n' +
+			'--info-color-content-bg-mix:' + infomix + ';\n' +
+			'--success-color-content-bg-mix-light:' + successmixl + ';\n' +
+			'--success-color-content-bg-mix:' + successmix + ';\n' +
+			'--warning-color-content-bg-mix-light:' + warningmixl + ';\n' +
+			'--warning-color-content-bg-mix:' + warningmix + ';\n' +
+			'--alert-color-content-bg-mix-light:' + alertmixl + ';\n' +
+			'--alert-color-content-bg-mix:' + alertmix + ';\n' +
+			'--emphasis-bg:' + emphasiscolor + ';\n' +
+			'--emphasis-bg-text:' + emphasiscolor2 + ';\n' +
+			'--emphasis-bg-text-dark:' + emphasiscolor2t + ';\n' +
+			'--accent-bg:' + accentcolor + ';\n' +
+			'--accent-bg-text:' + accentcolor2 + ';\n' +
+			'--accent-bg-text-dark:' + accentcolor2t + ';\n' +
+			'--emphasis-bg-rgb:' + Color2(emphasiscolor) + ';\n' +
+			'--emphasis-bg-text-rgb' + Color2(emphasiscolor2) + ';\n' +
+			'--emphasis-bg-text-dark-rgb:' + Color2(emphasiscolor2t) + ';\n' +
+			'--accent-bg-rgb:' + Color2(accentcolor) + ';\n' +
+			'--accent-bg-text-rgb:' + Color2(accentcolor2) + ';\n' +
+			'--accent-bg-text-dark-rgb:' + Color2(accentcolor2t) + ';\n'
 
-document.querySelector('html').style.setProperty("--emphasis-bg", emphasiscolor);
-document.querySelector('html').style.setProperty("--emphasis-bg-text", emphasiscolor2);
-document.querySelector('html').style.setProperty("--emphasis-bg-text-dark", emphasiscolor2t);
-document.querySelector('html').style.setProperty("--accent-bg", accentcolor);
-document.querySelector('html').style.setProperty("--accent-bg-text", accentcolor2);
-document.querySelector('html').style.setProperty("--accent-bg-text-dark", accentcolor2t);
-// RGB
-document.querySelector('html').style.setProperty("--emphasis-bg-rgb", Color2(emphasiscolor));
-document.querySelector('html').style.setProperty("--emphasis-bg-text-rgb", Color2(emphasiscolor2));
-document.querySelector('html').style.setProperty("--emphasis-bg-text-dark-rgb", Color2(emphasiscolor2t));
-document.querySelector('html').style.setProperty("--accent-bg-rgb", Color2(accentcolor));
-document.querySelector('html').style.setProperty("--accent-bg-text-rgb", Color2(accentcolor2));
-document.querySelector('html').style.setProperty("--accent-bg-text-dark-rgb", Color2(accentcolor2t));
+/* Write them to the stylesheet */
+document.querySelector("head .theming").innerHTML = 'html {\n' + result + '}';
 
 
 ThemeColorMetaTag();
