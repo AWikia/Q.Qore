@@ -671,7 +671,7 @@ if (alt) {
 ** Used in Preferences only
 ** Possible Variations of RandomColor() 1 = Body Color | 2 = Header Color | 3 = Content Color | 4 = Content Text Color | 5 = Content Border Color | 6 = Link Color | 7 = Button Color
 */
-function RandomColor1() {
+function RandomColor1(refresh=true) {
 // var x = chroma.random()
 var Colors = ['1d1d1d','8d0017','ac0000','d34500','eb9900','ffb317','7d9b34','5ea200','417800','1d5100','003c00','44a177','008d8f','00a8a9','009bf0','0068b7','003981','091a45','180052','490090','711993','8d37af','8c005a','ab0064','ea0098','5e5e5e','be0021','f73400','ff892b','ffc12c','ffc91a','8acb00','6db000','169900','58cc7d','00d1d2','41c3ff','008ee1','00baff','0075c6','4617b4','6800b3','a13bc9','bd56e5','c02883','f900a5','ff5fdc','e2e2e2']
  var x = '#' + Colors[getRandomInt(Colors.length)]
@@ -680,10 +680,12 @@ $('input[type="range"][name="bg"].green').val( chroma(x).get('rgb.g'));
 $('input[type="range"][name="bg"].blue').val( chroma(x).get('rgb.b'));
 
 
+if (refresh) {
 UpdateValue()
 }
+}
 
-function RandomColor2() {
+function RandomColor2(refresh=true) {
 // var x = chroma.random()
 	var Colors = ['ffb900','ff8c00','f7630c','ca5010','da3b01','ef6950','d13438','ff4343','e74856','e81023','ea005e','c30052','c30052','bf0077','c239b3','9a0089','0078d7','0063b1','8e8cd8','6b69d6','8764b8','744da9','b146c2','881798','0099bc','2d7d9a','00b7c3','028387','00b294','018574','00cc6a','10893e','7a7574','5d5a58','68768a','515c6b','567c73','486860','498205','107c10','767676','4c4a48','69797e','4a5459','647c64','525e54','847545','7e735f']
  var x = '#' + Colors[getRandomInt(Colors.length)]
@@ -691,10 +693,12 @@ $('input[type="range"][name="header"].red').val(chroma(x).get('rgb.r') );
 $('input[type="range"][name="header"].green').val( chroma(x).get('rgb.g') );
 $('input[type="range"][name="header"].blue').val( chroma(x).get('rgb.b') );
 
+if (refresh) {
 UpdateValue()
 }
+}
 
-function RandomColor3() {
+function RandomColor3(refresh=true) {
 // var x = chroma.random()
 	var Colors = ['000000','ffffff','dcdcdc','787878','464646','0a3b76','4395d1','99d9ea','0076a3','0d686b','00a99d','00a99d','7accc8','82ca9c','74a402','c4df9b','84871c','d9d56f','fff468','fff799','ffc20e','eb6119','fbaf5d','e57300','c14000','9e6b52','8c6239','c7b299','b82832','d85171','fedfec','563f7f','a186be','d9cfe5']
  var x = '#' + Colors[getRandomInt(Colors.length)]
@@ -702,10 +706,12 @@ $('input[type="range"][name="contentbg"].red').val(chroma(x).get('rgb.r') );
 $('input[type="range"][name="contentbg"].green').val( chroma(x).get('rgb.g') );
 $('input[type="range"][name="contentbg"].blue').val( chroma(x).get('rgb.b') );
 
+if (refresh) {
 UpdateValue()
 }
+}
 
-function RandomColor4() {
+function RandomColor4(refresh=true) {
 	$("body").attr('content-color-auto', 'false');
 // var x = chroma.random()
 	var Colors = ['000000','3a3a3a','bfbfbf','e6e6e6','ffffff','ff0000','00ff00','0000ff','ffff00','ff00ff','00ffff']
@@ -714,10 +720,12 @@ $('input[type="range"][name="contentcolor"].red').val(chroma(x).get('rgb.r') );
 $('input[type="range"][name="contentcolor"].green').val(chroma(x).get('rgb.g') );
 $('input[type="range"][name="contentcolor"].blue').val(chroma(x).get('rgb.b') );
 
+if (refresh) {
 UpdateValue()
 }
+}
 
-function RandomColor5() {
+function RandomColor5(refresh=true) {
 $("body").attr('content-border-auto', 'false');
 // var x = chroma.random()
 	  var Colors = ['808080','cccccc','6e6e6e','3c3c3c','a3a3a3','800000','008000','000080','808000','800080','008080']
@@ -726,10 +734,12 @@ $('input[type="range"][name="border"].red').val(chroma(x).get('rgb.r') );
 $('input[type="range"][name="border"].green').val(chroma(x).get('rgb.g') );
 $('input[type="range"][name="border"].blue').val(chroma(x).get('rgb.b') );
 
+if (refresh) {
 UpdateValue()
 }
+}
 
-function RandomColor6() {
+function RandomColor6(refresh=true) {
 // var x = chroma.random()
 	var Colors = ['00ff00','8080ff','c0c0c0','000000','ffffff','ffff00','77ffff','00007f','600000','ff0000','952aab','ff0066','fa6d6d','00ffff','ccffff','c056a2','ff6ec7','ff7f00','8e236b','7f500d','0366cc','fbf305','ff6403','dd0907','f20884','4700a5','0000d3','02abea','1fb714','006412','562c05','90713a','404040','117dbb','8b12ae','4da60c','a74f01'] 
  var x = '#' + Colors[getRandomInt(Colors.length)]
@@ -738,10 +748,12 @@ $('input[type="range"][name="linkcolor"].green').val(chroma(x).get('rgb.g') );
 $('input[type="range"][name="linkcolor"].blue').val(chroma(x).get('rgb.b') );
 
 
+if (refresh) {
 UpdateValue()
 }
+}
 
-function RandomColor7() {
+function RandomColor7(refresh=true) {
 // var x = chroma.random()
 	var Colors = ['ff8c00','e81123','d13438','c30052','bf0077','9a0089','881798','744da9','10893e','107c10','018574','2d7d9a','0063b1','6b69d6','8e8cd8','8764b8','038387','486860','525e54','7e735f','4c4a48','515c6b','4a5459','000000','ffffff']
  var x = '#' + Colors[getRandomInt(Colors.length)]
@@ -750,11 +762,13 @@ $('input[type="range"][name="buttoncolor"].green').val(chroma(x).get('rgb.g') );
 $('input[type="range"][name="buttoncolor"].blue').val(chroma(x).get('rgb.b') );
 
 
+if (refresh) {
 UpdateValue()
+}
 }
 
 
-function RandomColor9() {
+function RandomColor9(refresh=true) {
 	$("body").attr('floating-header-bg-auto', 'false');
 // var x = chroma.random()
 	var Colors = ['ababab','8acfff','f598d6','f3d240','add85f','78d9d9','ffaf51','ff6f6f','f359a8','47cf74','c48aff','58b1fc','9898ff','c3b5a8','ffffff','576dcd','4074ff','4099e1','40b2cc','40c5ae','40c280','9bcc3f','fce840','f98a48','e1676a','ed4c5a','ef4086','bc3b8c','7e73a5','879289'] 
@@ -764,11 +778,13 @@ $('input[type="range"][name="headerf"].green').val( chroma(x).get('rgb.g'));
 $('input[type="range"][name="headerf"].blue').val( chroma(x).get('rgb.b'));
 
 
+if (refresh) {
 UpdateValue()
+}
 }
 
 
-function RandomColorCc() {
+function RandomColorCc(refresh=true) {
 	$("body").attr('caret-color-auto', 'false');
 // var x = chroma.random()
 	var Colors = ['bfff00','fafa00','ffbf00','ff00bf','00bfff','00ffbf','bf00ff'] 
@@ -777,23 +793,25 @@ $('input[type="range"][name="caret"].red').val(chroma(x).get('rgb.r'));
 $('input[type="range"][name="caret"].green').val( chroma(x).get('rgb.g'));
 $('input[type="range"][name="caret"].blue').val( chroma(x).get('rgb.b'));
 
-
+if (refresh) {
 UpdateValue()
+}
 }
 
 
 
 function RandomColor() {
-	RandomColor1();
-	RandomColor2();
-	RandomColor3();
-	RandomColor4();
-	RandomColor5();
-	RandomColor6();
-	RandomColor7();
-	RandomColor8();
-	RandomColor9();
-	RandomColorCc();
+	RandomColor1(false);
+	RandomColor2(false);
+	RandomColor3(false);
+	RandomColor4(false);
+	RandomColor5(false);
+	RandomColor6(false);
+	RandomColor7(false);
+//	RandomColor8(false);
+	RandomColor9(false);
+	RandomColorCc(false);
+	UpdateValue()
 }
 
 
@@ -951,16 +969,17 @@ function PresetTheme(theme="") {
 				'00cdd0'  // FandomDesktop Dark
 				][theme2];
 	/* Change Colors */
-	PickColor1(body_bg);
+	PickColor1(body_bg,false);
 	UploadPicture1B(body_image);
-	PickColor2(header_bg);
-	PickColor3(page_bg);
-	PickColor6(link_bg);
-	PickColor7(button_bg);
+	PickColor2(header_bg,false);
+	PickColor3(page_bg,false);
+	PickColor6(link_bg,false);
+	PickColor7(button_bg,false);
 	/* Make theme adaptive, if it isn't */
-	PickColor4('auto');
-	PickColor5('auto');
-	PickColor9('auto');
+	PickColor4('auto',false);
+	PickColor5('auto',false);
+	PickColor9('auto',false);
+	UpdateValue();
 	colortheme($('body').attr("wikitheme"))
 }
 
@@ -969,7 +988,7 @@ function PresetTheme(theme="") {
 ** Used in Preferences only
 ** Possible Variations of PickColor() 1 = Body Color | 2 = Header Color | 3 = Content Color | 4 = Content Text Color | 5 = Content Border Color | 6 = Link Color | 7 = Button Color | 9 = Floating Header Color | Cc = Caret Color
 */
-function PickColor1(color="") {
+function PickColor1(color="",refresh=true) {
 if (color==="") {
 	var x= prompt("Body Background Color", chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--background-color")));
 } else {
@@ -980,10 +999,12 @@ $('input[type="range"][name="bg"].red').val(chroma(x).get('rgb.r'));
 $('input[type="range"][name="bg"].green').val( chroma(x).get('rgb.g'));
 $('input[type="range"][name="bg"].blue').val( chroma(x).get('rgb.b'));
 
+if (refresh) {
 UpdateValue()
 }
+}
 
-function PickColor2(color="") {
+function PickColor2(color="",refresh=true) {
 if (color==="") {
 	var x= prompt("Header Background Color", chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg")));
 } else {
@@ -993,10 +1014,12 @@ $('input[type="range"][name="header"].red').val(chroma(x).get('rgb.r') );
 $('input[type="range"][name="header"].green').val( chroma(x).get('rgb.g') );
 $('input[type="range"][name="header"].blue').val( chroma(x).get('rgb.b') );
 
+if (refresh) {
 UpdateValue()
 }
+}
 
-function PickColor3(color="") {
+function PickColor3(color="",refresh=true) {
 if (color==="") {
 	var x= prompt("Page Background Color", chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--content-bg")));
 } else {
@@ -1007,10 +1030,12 @@ $('input[type="range"][name="contentbg"].red').val(chroma(x).get('rgb.r') );
 $('input[type="range"][name="contentbg"].green').val( chroma(x).get('rgb.g') );
 $('input[type="range"][name="contentbg"].blue').val( chroma(x).get('rgb.b') );
 
+if (refresh) {
 UpdateValue()
 }
+}
 
-function PickColor4(color="") {
+function PickColor4(color="",refresh=true) {
 if (color==="") {
 	if ( $("body").attr('content-color-auto') === 'true' ) {
 		var x= prompt("Page Text Color", 'auto');
@@ -1028,10 +1053,12 @@ if (x !=='auto') {
 } else {
 	$("body").attr('content-color-auto', 'true');
 }
+if (refresh) {
 UpdateValue()
 }
+}
 
-function PickColor5(color="") {
+function PickColor5(color="",refresh=true) {
 if (color==="") {
 	if ( $("body").attr('content-border-auto') === 'true' ) {
 		var x= prompt("Page Border Color", 'auto');
@@ -1049,10 +1076,12 @@ if (x !=='auto') {
 } else {
 	$("body").attr('content-border-auto', 'true');
 }
+if (refresh) {
 UpdateValue()
 }
+}
 
-function PickColor6(color="") {
+function PickColor6(color="",refresh=true) {
 if (color==="") {
 	var x= prompt("Page Link Color", chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--link-color")));
 } else {
@@ -1065,7 +1094,7 @@ $('input[type="range"][name="linkcolor"].blue').val(chroma(x).get('rgb.b') );
 UpdateValue()
 }
 
-function PickColor7(color="") {
+function PickColor7(color="",refresh=true) {
 if (color==="") {
 	var x= prompt("Page Button Color", chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--button-color")));
 } else {
@@ -1075,10 +1104,12 @@ if (color==="") {
 $('input[type="range"][name="buttoncolor"].red').val(chroma(x).get('rgb.r') );
 $('input[type="range"][name="buttoncolor"].green').val(chroma(x).get('rgb.g') );
 $('input[type="range"][name="buttoncolor"].blue').val(chroma(x).get('rgb.b') );
+if (refresh) {
 UpdateValue()
 }
+}
 
-function PickColor9(color="") {
+function PickColor9(color="",refresh=true) {
 if (color==="") {
 	if ( $("body").attr('floating-header-bg-auto') === 'true' ) {
 		var x= prompt("Floating Header Background Color", 'auto');
@@ -1097,13 +1128,15 @@ if (x !=='auto') {
 	$("body").attr('floating-header-bg-auto', 'true');
 }
 
+if (refresh) {
 UpdateValue()
+}
 
 }
 
 
 
-function PickColorCc(color="") {
+function PickColorCc(color="",refresh=true) {
 if (color==="") {
 	if ( $("body").attr('caret-color-auto') === 'true' ) {
 		var x= prompt("Insertation Caret Color", 'auto');
@@ -1122,7 +1155,9 @@ if (x !=='auto') {
 	$("body").attr('caret-color-auto', 'true');
 }
 
+if (refresh) {
 UpdateValue()
+}
 
 }
 
@@ -1739,23 +1774,23 @@ var content_color3 = SuperColorTest(content_color); // Scrollbar
 if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color") === 'auto') && !($("html.contrast.win10").length)  ) {
 	var dropdowncolor3 = ColorTest(content_color,true);;	
 } else {
-	var dropdowncolor3 = 'inherit';
+	var dropdowncolor3 = getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color");
 }
 if (isSuperLightColor(content_color) && (false)) {
 	var dropdowncolor = '#ffffff';
 	if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border") === 'auto') && !($("html.contrast.win10").length)  ) {
-		var dropdowncolor2 = chroma.mix(content_color,'#0e191a',MW18HoverThreshold*1.32, 'hsv');
+		var dropdowncolor2 = chroma.mix(content_color,'#000000',MW18HoverThreshold*1.32, 'hsv');
 	} else {
-		var dropdowncolor2 = 'inherit';
+		var dropdowncolor2 = getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border");
 	}
 
 	
 } else if (isLightColor(content_color)) {
-	var dropdowncolor = chroma.mix(content_color,'#0e191a',MW18HoverThreshold*0.4, 'hsv');
+	var dropdowncolor = chroma.mix(content_color,'#000000',MW18HoverThreshold*0.4, 'hsv');
 	if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border") === 'auto') && !($("html.contrast.win10").length)  ) {
-		var dropdowncolor2 = chroma.mix(content_color,'#0e191a',MW18HoverThreshold*2.4, 'hsv');
+		var dropdowncolor2 = chroma.mix(content_color,'#000000',MW18HoverThreshold*2.4, 'hsv');
 	} else {
-		var dropdowncolor2 = 'inherit';
+		var dropdowncolor2 = getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border");
 	}
 
 } else {
@@ -1763,7 +1798,7 @@ if (isSuperLightColor(content_color) && (false)) {
 	if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border") === 'auto') && !($("html.contrast.win10").length)  ) {
 		var dropdowncolor2 = chroma.mix(content_color,'#ffffff',MW18HoverThreshold*2.4, 'hsv');
 	} else {
-		var dropdowncolor2 = 'inherit';
+		var dropdowncolor2 = getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border");
 	}
 
 }
@@ -1787,21 +1822,20 @@ if (getComputedStyle(document.querySelector('html')).getPropertyValue("--content
 }
 
 
-document.querySelector('body').style.setProperty("--content-border", dropdowncolor2);
 if (window.MW18darkmode === true) {
-	document.querySelector('body').style.setProperty("--content-bg", content_color);
-	document.querySelector('body').style.setProperty("--content-color", content_text);
+	contentcolorB = content_text
+	contentbgB = content_color
 } else {
-	document.querySelector('body').style.setProperty("--content-bg", 'inherit');
-	document.querySelector('body').style.setProperty("--content-color", dropdowncolor3);
+	contentcolorB = dropdowncolor3
+	contentbgB = getComputedStyle(document.querySelector('html')).getPropertyValue("--content-bg");
 }
 
-if (isLightColor( getComputedStyle(document.querySelector('body')).getPropertyValue("--content-color") )) {
-var color_blend = getComputedStyle(document.querySelector('body')).getPropertyValue("--content-color")
+if (isLightColor( contentcolorB )) {
+var color_blend = contentcolorB
 var color_blend2 = content_text2
 } else {
 var color_blend = content_text2
-var color_blend2 = getComputedStyle(document.querySelector('body')).getPropertyValue("--content-color")
+var color_blend2 = contentcolorB
 }
 
 
@@ -1873,7 +1907,7 @@ linkmix = ColorTestTwin(content_color,link_color,1.6,'rgb');
 /** Content Border **/
 /* Set Vars */
 if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border") === 'auto') && !($("html.contrast.win10").length)  ) {
-	var border_color =	getComputedStyle(document.querySelector('body')).getPropertyValue("--content-border");
+	var border_color =	dropdowncolor2
 } else {
 	var border_color =	getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border");
 }
@@ -1919,13 +1953,12 @@ headmix = ColorTestTwin(content_color,head_color,1.6,'rgb');
 
 /* Floating Header Bg */
 if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--floating-header-bg") !== 'auto') && !($("html.contrast.win10").length)  ) {
-	var floating_header =	'inherit' ;
+	var floating_header =	getComputedStyle(document.querySelector('html')).getPropertyValue("--floating-header-bg");
 } else {
 	var floating_header = ColorTestTwin(content_color,ColorTestTwin(header_color,button_color,1,'rgb'),2.5,'rgb');
 }
 
-document.querySelector('body').style.setProperty("--floating-header-bg", floating_header);
-var floating_color =getComputedStyle(document.querySelector('body')).getPropertyValue("--floating-header-bg");
+var floating_color =floating_header;
 
 
 var floatingcolor1 = ColorTest(floating_color,false);
@@ -1970,7 +2003,8 @@ var accentcolor2 = ColorTest(accentcolor,true);
 var accentcolor2t = ColorTest(accentcolor2,false);
 
 /* Writing */
-var result = '--dropdown-bg:' + dropdowncolor + ';\n' +
+var result = ':root {\n' + 
+			'--dropdown-bg:' + dropdowncolor + ';\n' +
 			'--dropdown-bg-dark:' + dropdowncolorD + ';\n' +
 			'--content-bg-dark:' + content_color2 + ';\n' +
 			'--content-bg-dark-super:' + content_color3 + ';\n' +
@@ -1983,10 +2017,10 @@ var result = '--dropdown-bg:' + dropdowncolor + ';\n' +
 			'--content-color-blend-light:' + color_blend + ';\n' +
 			'--content-color-blend:' + color_blend2 + ';\n' +
 			'--dropdown-bg-rgb:' + Color2(dropdowncolor) + ';\n' +
-			'--content-bg-rgb:' + Color2(getComputedStyle(document.querySelector('body')).getPropertyValue("--content-bg")) + ';\n' +
+			'--content-bg-rgb:' + Color2(contentbgB) + ';\n' +
 			'--content-bg-dark-rgb:' + Color2(content_color2) + ';\n' +
 			'--content-bg-dark-super-rgb:' + Color2(content_color3) + ';\n' +
-			'--content-color-rgb:' + Color2(getComputedStyle(document.querySelector('body')).getPropertyValue("--content-color")) + ';\n' +
+			'--content-color-rgb:' + Color2(contentcolorB) + ';\n' +
 			'--content-color-dark-rgb:' + Color2(content_text2) + ';\n' +
 			'--content-color-dark-super-rgb:' + Color2(content_text3) + ';\n' +
 			'--content-color-text-rgb:' + Color2(content_text4) + ';\n' +
@@ -2102,10 +2136,17 @@ var result = '--dropdown-bg:' + dropdowncolor + ';\n' +
 			'--emphasis-bg-text-dark-rgb:' + Color2(emphasiscolor2t) + ';\n' +
 			'--accent-bg-rgb:' + Color2(accentcolor) + ';\n' +
 			'--accent-bg-text-rgb:' + Color2(accentcolor2) + ';\n' +
-			'--accent-bg-text-dark-rgb:' + Color2(accentcolor2t) + ';\n'
+			'--accent-bg-text-dark-rgb:' + Color2(accentcolor2t) + '\n' +
+			'}' + '\n' +
+			'body {' +
+			'--content-bg:' + contentbgB + ';\n' +
+			'--content-border:' + dropdowncolor2 + ';\n' +
+			'--content-color:' + contentcolorB + ';\n' +
+			'--floating-header-bg:' + floating_color + ';\n' +
+			'}'
 
 /* Write them to the stylesheet */
-document.querySelector("head .theming").innerHTML = 'html {\n' + result + '}';
+document.querySelector("head .theming").innerHTML =  result ;
 
 
 ThemeColorMetaTag();
