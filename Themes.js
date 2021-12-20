@@ -6,8 +6,8 @@ window.MW18HoverThreshold = 0.25;
 window.MW18ContrastNotice = false;
 
 /* Visual Themes */
-var visualThemes = ['basic', 'contrast', 'simple','classic']
-var visualThemeNames = ['Basic','High Contrast','Simple','Classic'];
+var visualThemes = ['lite', 'basic', 'contrast', 'simple','classic']
+var visualThemeNames = ['Lite', 'Basic','High Contrast','Simple','Classic'];
 var contrastVisual = 1;
 /* Visual Colors */
 var visualColors = ['factorycolors','lunacolors','classicforced','campbellforced','forced','tangoforced','rgbcolors','retro','retro2','retro3','retro4','retro5','retro6','retro7'];
@@ -1354,6 +1354,42 @@ function DownloadTheme() {
 	DownloadData(result,'MyTheme','css');
 	alert('Once you save the file, put the stylesheet contents to MpistoAgent.css for loading to other sessions or upload it to any website.');
 }
+
+function DownloadTheme2() {
+	wordfilter2 = getComputedStyle(document.querySelector('html')).getPropertyValue("--wordmark-filter2")
+	if ( wordfilter2 == "" ) {
+		wordfilter2 == 'initial'
+	}
+	result = '[theme="A"][visualcolors="standard"] {\n' + // Beginning
+			 '--body-background-image:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-image")  + ';\n' +
+			 '--body-background-image-opacity:' + '100%'  + ';\n' +
+			 '--body-background-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-color")  + ';\n' +
+			 '--superbar-text-background-color:' + 'auto'  + ';\n' +
+			 '--body-background-mode:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--body-display")  + ';\n' +
+			 '--body-background-horizontal-alignment:' + 'center'  + ';\n' +
+			 '--body-background-vertical-alignment:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-va")  + ';\n' +
+			 '--body-background-size:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-size")  + ';\n' +
+			 '--body-background-no-horizontal-tiling:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-no-tiling")  + ';\n' +
+			 '--body-background-no-vertical-tiling:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-no-tiling")  + ';\n' +
+			 '--secondary-accent-background-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--link-color")  + ';\n' +
+			 '--page-background-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--content-bg")  + ';\n' +
+			 '--page-border-background-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border")  + ';\n' +
+			 '--page-text-background-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color")  + ';\n' +
+			 '--accent-background-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--button-color")  + ';\n' +
+			 '--tertiary-accent-background-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg")  + ';\n' +
+			 '--quaternary-accent-background-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--floating-header-bg")  + ';\n' +
+			 '--custom-secondary-font:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--custom-secondary-font")  + ';\n' +
+			 '--border-radius:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--border-radius")  + ';\n' +
+			 '--logo-filter:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--wordmark-filter")  + ';\n' +
+			 '--logo-filter2:' + wordfilter2  + ';\n' +
+			 '--logo-filter-duration:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--wordmark-filter-duration")  + ';\n' +
+			 '--logo-filter-delay:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--wordmark-filter-delay")  + ';\n' +
+			 '}' // Ending
+	DownloadData(result,'MyTheme','css');
+	alert('Once you save the file, put the stylesheet contents to MediaWiki:Common.css for use in any MediaWiki wiki with Evelution Installed or upload it to any website.');
+}
+
+
 
 /* Resets the Theme to defaults */
 function ResetTheme() {

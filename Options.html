@@ -1844,11 +1844,23 @@ Checked = VisualEditor as default mode
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-undo" />
                   </svg>
 				</a>
-				<a class="cpe-floating-button" onclick="DownloadTheme()" title="Download theme to your computer">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-download" />
-                  </svg>
-				</a>
+				<div class="cpe-dropdown">
+					<a class="cpe-floating-button" title="Download theme to your computer">
+					  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-download" />
+					  </svg>
+					</a>
+					<div class="cpe-dropdown__content">
+						<ul class="cpe-list cpe-is-linked">
+							<li>
+								<a onclick="DownloadTheme()">Classic</a>
+							</li>
+							<li>
+								<a onclick="DownloadTheme2()">Modern</a>
+							</li>
+						</ul>
+					</div>
+				</div>
 				<a class="cpe-floating-button critical" title="Reset all other pages to defaults">
                   <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-refresh" />

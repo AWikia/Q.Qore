@@ -192,10 +192,33 @@ border-left-color:var(--button-color);
 */
 
 .mpisto-global-sidebar, .mpisto-header-container {
-    --global-nav-color:var(--button-color-blend-light-rgb);
 /*	background-color:var(--button-color-blend-light); */
-	color:var(--background-color-text);
 }
+
+.mpisto-global-sidebar {
+	--page-accent-box-shadow:0 0 transparent;
+	--global-nav-link-opacity:1;
+	--global-nav-color:var(--button-color-rgb)!important;
+	--global-nav-text-color:var(--button-color-text)!important;
+	--global-nav-link-color-hover:var(--button-color-text-dark)!important;
+	--global-nav-link-background-hover:var(--button-color-dark-rgb)!important;
+	--global-nav-link-color-active:var(--button-color-text-dark)!important;
+	--global-nav-link-background-active:var(--button-color-dark-rgb)!important;
+	--global-nav-opacity:2!important;
+}
+
+
+.mpisto-personal-links {
+	--page-accent-box-shadow:0 0 transparent;
+	--global-nav-color:var(--floating-header-bg-rgb)!important;
+	--global-nav-text-color:var(--floating-header-text)!important;
+	--global-nav-link-color-hover:var(--floating-header-text-dark)!important;
+	--global-nav-link-background-hover:var(--floating-header-dark-rgb)!important;
+	--global-nav-link-color-active:var(--floating-header-text-dark)!important;
+	--global-nav-link-background-active:var(--floating-header-dark-rgb)!important;
+	--global-nav-opacity:2!important;
+}
+
 
 
 .mpisto-global-sidebar:after, .mpisto-header-container:before {
@@ -204,21 +227,17 @@ border-left-color:var(--button-color);
 
 
 .mpisto-header-container .link:hover, .mpisto-header-container .link:focus, .mpisto-header-container .cpe-dropdown.cpe-is-active .link {
-	background-color:var(--background-color-dark);
 	-webkit-animation:none;
 	animation:none;
 	border-color:transparent;
 	box-shadow:none;
-	color:var(--background-color-text-dark);
 }
 
 .mpisto-global-sidebar .link:active, .mpisto-global-sidebar .link:focus,  .mpisto-global-sidebar .cpe-dropdown.cpe-is-active .link {
-	background-color:var(--button-color-blend);
 	-webkit-animation:none;
 	animation:none;
 	border-color:transparent;
 	box-shadow:none;
-	color:var(--button-color-text-dark);
 }
 
 
