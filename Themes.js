@@ -1332,7 +1332,7 @@ function DownloadTheme() {
 	result = '.theme-A[visualcolors="standard"] {\n' + // Beginning
 			 '--background-image:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-image")  + ';\n' +
 			 '--background-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-color")  + ';\n' +
-			 '--body-display:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--body-display")  + ';\n' +
+			 '--desktop-display:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--desktop-display")  + ';\n' +
 			 '--background-va:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-va")  + ';\n' +
 			 '--background-size:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-size")  + ';\n' +
 			 '--background-no-tiling:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-no-tiling")  + ';\n' +
@@ -1361,29 +1361,29 @@ function DownloadTheme2() {
 		wordfilter2 == 'initial'
 	}
 	result = '[theme="A"][visualcolors="standard"] {\n' + // Beginning
-			 '--body-background-image:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-image")  + ';\n' +
-			 '--body-background-image-opacity:' + '100%'  + ';\n' +
-			 '--body-background-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-color")  + ';\n' +
-			 '--superbar-text-background-color:' + 'auto'  + ';\n' +
-			 '--body-background-mode:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--body-display")  + ';\n' +
-			 '--body-background-horizontal-alignment:' + 'center'  + ';\n' +
-			 '--body-background-vertical-alignment:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-va")  + ';\n' +
-			 '--body-background-size:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-size")  + ';\n' +
-			 '--body-background-no-horizontal-tiling:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-no-tiling")  + ';\n' +
-			 '--body-background-no-vertical-tiling:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-no-tiling")  + ';\n' +
-			 '--secondary-accent-background-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--link-color")  + ';\n' +
-			 '--page-background-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--content-bg")  + ';\n' +
-			 '--page-border-background-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border")  + ';\n' +
-			 '--page-text-background-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color")  + ';\n' +
-			 '--accent-background-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--button-color")  + ';\n' +
-			 '--tertiary-accent-background-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg")  + ';\n' +
-			 '--quaternary-accent-background-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--floating-header-bg")  + ';\n' +
+			 '--desktop-background-image:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-image")  + ';\n' +
+			 '--desktop-background-image-opacity:' + '100%'  + ';\n' +
+			 '--desktop-background-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-color")  + ';\n' +
+			 '--desktop-text-background-color:' + 'auto'  + ';\n' +
+			 '--desktop-background-mode:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--desktop-display")  + ';\n' +
+			 '--desktop-background-size:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-size")  + ';\n' +
+			 '--desktop-background-horizontal-alignment:' + 'center'  + ';\n' +
+			 '--desktop-background-vertical-alignment:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-va")  + ';\n' +
+			 '--desktop-background-no-horizontal-tiling:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-no-tiling")  + ';\n' +
+			 '--desktop-background-no-vertical-tiling:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-no-tiling")  + ';\n' +
+			 '--canvas-background-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--content-bg")  + ';\n' +
+			 '--inactive-text-background-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--content-border")  + ';\n' +
+			 '--canvas-text-background-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--content-color")  + ';\n' +
+			 '--highlight-background-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--button-color")  + ';\n' +
+			 '--hyperlink-background-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--link-color")  + ';\n' +
+			 '--active-title-background-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--community-header-bg")  + ';\n' +
+			 '--inactive-title-background-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--floating-header-bg")  + ';\n' +
 			 '--custom-secondary-font:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--custom-secondary-font")  + ';\n' +
 			 '--border-radius:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--border-radius")  + ';\n' +
-			 '--logo-filter:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--wordmark-filter")  + ';\n' +
-			 '--logo-filter2:' + wordfilter2  + ';\n' +
-			 '--logo-filter-duration:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--wordmark-filter-duration")  + ';\n' +
-			 '--logo-filter-delay:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--wordmark-filter-delay")  + ';\n' +
+			 '--icon-filter:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--wordmark-filter")  + ';\n' +
+			 '--icon-filter-hover:' + wordfilter2  + ';\n' +
+			 '--icon-filter-duration:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--wordmark-filter-duration")  + ';\n' +
+			 '--icon-filter-delay:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--wordmark-filter-delay")  + ';\n' +
 			 '}' // Ending
 	DownloadData(result,'MyTheme','css');
 	alert('Once you save the file, put the stylesheet contents to MediaWiki:Common.css for use in any MediaWiki wiki with Evelution Installed or upload it to any website.');
@@ -2164,15 +2164,15 @@ var result = ':root {\n' +
 			'--emphasis-bg:' + emphasiscolor + ';\n' +
 			'--emphasis-bg-text:' + emphasiscolor2 + ';\n' +
 			'--emphasis-bg-text-dark:' + emphasiscolor2t + ';\n' +
-			'--accent-bg:' + accentcolor + ';\n' +
-			'--accent-bg-text:' + accentcolor2 + ';\n' +
-			'--accent-bg-text-dark:' + accentcolor2t + ';\n' +
+			'--highlight-bg:' + accentcolor + ';\n' +
+			'--highlight-bg-text:' + accentcolor2 + ';\n' +
+			'--highlight-bg-text-dark:' + accentcolor2t + ';\n' +
 			'--emphasis-bg-rgb:' + Color2(emphasiscolor) + ';\n' +
 			'--emphasis-bg-text-rgb' + Color2(emphasiscolor2) + ';\n' +
 			'--emphasis-bg-text-dark-rgb:' + Color2(emphasiscolor2t) + ';\n' +
-			'--accent-bg-rgb:' + Color2(accentcolor) + ';\n' +
-			'--accent-bg-text-rgb:' + Color2(accentcolor2) + ';\n' +
-			'--accent-bg-text-dark-rgb:' + Color2(accentcolor2t) + '\n' +
+			'--highlight-bg-rgb:' + Color2(accentcolor) + ';\n' +
+			'--highlight-bg-text-rgb:' + Color2(accentcolor2) + ';\n' +
+			'--highlight-bg-text-dark-rgb:' + Color2(accentcolor2t) + '\n' +
 			'}' + '\n' +
 			'body {' +
 			'--content-bg:' + contentbgB + ';\n' +
@@ -2280,7 +2280,7 @@ function CheckAdapt() {
 function CheckBG() {
 	if ($("body.options").length   && !($("html.contrast.win10").length) ) { // Don't run if not on Preferences Page
 	/* BG */ // Background Style
-		if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--body-display") === 'legacy') && !($("html.contrast.win10").length)  ) {
+		if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--desktop-display") === 'legacy') && !($("html.contrast.win10").length)  ) {
 				document.querySelector('input#BG_2').checked = true;
 				document.querySelector('input#BG_1').checked = false;
 				$(".legacy-off").attr('disabled', 'true');
@@ -2355,7 +2355,7 @@ function CheckBG() {
 		}
 	}
 
-	$("body").attr('body-display', getComputedStyle(document.querySelector('html')).getPropertyValue("--body-display") );
+	$("body").attr('body-display', getComputedStyle(document.querySelector('html')).getPropertyValue("--desktop-display") );
 	$("body").attr('background-size', getComputedStyle(document.querySelector('html')).getPropertyValue("--background-size") );
 	$("body").attr('body-no-tiling', getComputedStyle(document.querySelector('html')).getPropertyValue("--background-no-tiling") );
 }
@@ -2375,7 +2375,7 @@ var legacy = document.querySelector('input#BG_2');
 	if ($("html.theme-A").length) {
 		$("style.designer-style.theme-A").append(
 		'.theme-A[visualcolors="standard"] {' +
-		'--body-display:legacy!important;' +
+		'--desktop-display:legacy!important;' +
 		'}'
 		);	
 	}
@@ -2383,7 +2383,7 @@ var legacy = document.querySelector('input#BG_2');
 	if ($("html.theme-B").length) {
 		$("style.designer-style.theme-B").append(
 		'.theme-B[visualcolors="standard"] {' +
-		'--body-display:legacy!important;' +
+		'--desktop-display:legacy!important;' +
 		'}'
 		);	
 	}
@@ -2391,7 +2391,7 @@ var legacy = document.querySelector('input#BG_2');
 	if ($("html.theme-C").length) {
 		$("style.designer-style.theme-C").append(
 		'.theme-C[visualcolors="standard"] {' +
-		'--body-display:legacy!important;' +
+		'--desktop-display:legacy!important;' +
 		'}'
 		);	
 	}
@@ -2399,7 +2399,7 @@ var legacy = document.querySelector('input#BG_2');
 	if ($("html.theme-D").length) {
 		$("style.designer-style.theme-D").append(
 		'.theme-D[visualcolors="standard"] {' +
-		'--body-display:legacy!important;' +
+		'--desktop-display:legacy!important;' +
 		'}'
 		);	
 	}
@@ -2408,7 +2408,7 @@ var legacy = document.querySelector('input#BG_2');
 	if ($("html.theme-A").length) {
 		$("style.designer-style.theme-A").append(
 		'.theme-A[visualcolors="standard"] {' +
-		'--body-display:modern!important;' +
+		'--desktop-display:modern!important;' +
 		'}'
 		);	
 	}
@@ -2416,7 +2416,7 @@ var legacy = document.querySelector('input#BG_2');
 	if ($("html.theme-B").length) {
 		$("style.designer-style.theme-B").append(
 		'.theme-B[visualcolors="standard"] {' +
-		'--body-display:modern!important;' +
+		'--desktop-display:modern!important;' +
 		'}'
 		);	
 	}
@@ -2424,7 +2424,7 @@ var legacy = document.querySelector('input#BG_2');
 	if ($("html.theme-C").length) {
 		$("style.designer-style.theme-C").append(
 		'.theme-C[visualcolors="standard"] {' +
-		'--body-display:modern!important;' +
+		'--desktop-display:modern!important;' +
 		'}'
 		);	
 	}
@@ -2432,7 +2432,7 @@ var legacy = document.querySelector('input#BG_2');
 	if ($("html.theme-D").length) {
 		$("style.designer-style.theme-D").append(
 		'.theme-D[visualcolors="standard"] {' +
-		'--body-display:modern!important;' +
+		'--desktop-display:modern!important;' +
 		'}'
 		);	
 	}
