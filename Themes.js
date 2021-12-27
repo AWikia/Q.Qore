@@ -2164,15 +2164,15 @@ var result = ':root {\n' +
 			'--emphasis-bg:' + emphasiscolor + ';\n' +
 			'--emphasis-bg-text:' + emphasiscolor2 + ';\n' +
 			'--emphasis-bg-text-dark:' + emphasiscolor2t + ';\n' +
-			'--highlight-bg:' + accentcolor + ';\n' +
-			'--highlight-bg-text:' + accentcolor2 + ';\n' +
-			'--highlight-bg-text-dark:' + accentcolor2t + ';\n' +
+			'--accent-bg:' + accentcolor + ';\n' +
+			'--accent-bg-text:' + accentcolor2 + ';\n' +
+			'--accent-bg-text-dark:' + accentcolor2t + ';\n' +
 			'--emphasis-bg-rgb:' + Color2(emphasiscolor) + ';\n' +
 			'--emphasis-bg-text-rgb' + Color2(emphasiscolor2) + ';\n' +
 			'--emphasis-bg-text-dark-rgb:' + Color2(emphasiscolor2t) + ';\n' +
-			'--highlight-bg-rgb:' + Color2(accentcolor) + ';\n' +
-			'--highlight-bg-text-rgb:' + Color2(accentcolor2) + ';\n' +
-			'--highlight-bg-text-dark-rgb:' + Color2(accentcolor2t) + '\n' +
+			'--accent-bg-rgb:' + Color2(accentcolor) + ';\n' +
+			'--accent-bg-text-rgb:' + Color2(accentcolor2) + ';\n' +
+			'--accent-bg-text-dark-rgb:' + Color2(accentcolor2t) + '\n' +
 			'}' + '\n' +
 			'body {' +
 			'--content-bg:' + contentbgB + ';\n' +
