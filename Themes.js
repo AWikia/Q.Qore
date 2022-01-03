@@ -1332,7 +1332,7 @@ function DownloadTheme() {
 	result = '.theme-A[visualcolors="standard"] {\n' + // Beginning
 			 '--background-image:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-image")  + ';\n' +
 			 '--background-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-color")  + ';\n' +
-			 '--desktop-display:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--desktop-display")  + ';\n' +
+			 '--body-display:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--body-display")  + ';\n' +
 			 '--background-va:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-va")  + ';\n' +
 			 '--background-size:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-size")  + ';\n' +
 			 '--background-no-tiling:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--background-no-tiling")  + ';\n' +
@@ -2280,7 +2280,7 @@ function CheckAdapt() {
 function CheckBG() {
 	if ($("body.options").length   && !($("html.contrast.win10").length) ) { // Don't run if not on Preferences Page
 	/* BG */ // Background Style
-		if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--desktop-display") === 'legacy') && !($("html.contrast.win10").length)  ) {
+		if ((getComputedStyle(document.querySelector('html')).getPropertyValue("--body-display") === 'legacy') && !($("html.contrast.win10").length)  ) {
 				document.querySelector('input#BG_2').checked = true;
 				document.querySelector('input#BG_1').checked = false;
 				$(".legacy-off").attr('disabled', 'true');
@@ -2355,7 +2355,7 @@ function CheckBG() {
 		}
 	}
 
-	$("body").attr('body-display', getComputedStyle(document.querySelector('html')).getPropertyValue("--desktop-display") );
+	$("body").attr('body-display', getComputedStyle(document.querySelector('html')).getPropertyValue("--body-display") );
 	$("body").attr('background-size', getComputedStyle(document.querySelector('html')).getPropertyValue("--background-size") );
 	$("body").attr('body-no-tiling', getComputedStyle(document.querySelector('html')).getPropertyValue("--background-no-tiling") );
 }
@@ -2375,7 +2375,7 @@ var legacy = document.querySelector('input#BG_2');
 	if ($("html.theme-A").length) {
 		$("style.designer-style.theme-A").append(
 		'.theme-A[visualcolors="standard"] {' +
-		'--desktop-display:legacy!important;' +
+		'--body-display:legacy!important;' +
 		'}'
 		);	
 	}
@@ -2383,7 +2383,7 @@ var legacy = document.querySelector('input#BG_2');
 	if ($("html.theme-B").length) {
 		$("style.designer-style.theme-B").append(
 		'.theme-B[visualcolors="standard"] {' +
-		'--desktop-display:legacy!important;' +
+		'--body-display:legacy!important;' +
 		'}'
 		);	
 	}
@@ -2391,7 +2391,7 @@ var legacy = document.querySelector('input#BG_2');
 	if ($("html.theme-C").length) {
 		$("style.designer-style.theme-C").append(
 		'.theme-C[visualcolors="standard"] {' +
-		'--desktop-display:legacy!important;' +
+		'--body-display:legacy!important;' +
 		'}'
 		);	
 	}
@@ -2399,7 +2399,7 @@ var legacy = document.querySelector('input#BG_2');
 	if ($("html.theme-D").length) {
 		$("style.designer-style.theme-D").append(
 		'.theme-D[visualcolors="standard"] {' +
-		'--desktop-display:legacy!important;' +
+		'--body-display:legacy!important;' +
 		'}'
 		);	
 	}
@@ -2408,7 +2408,7 @@ var legacy = document.querySelector('input#BG_2');
 	if ($("html.theme-A").length) {
 		$("style.designer-style.theme-A").append(
 		'.theme-A[visualcolors="standard"] {' +
-		'--desktop-display:modern!important;' +
+		'--body-display:modern!important;' +
 		'}'
 		);	
 	}
@@ -2416,7 +2416,7 @@ var legacy = document.querySelector('input#BG_2');
 	if ($("html.theme-B").length) {
 		$("style.designer-style.theme-B").append(
 		'.theme-B[visualcolors="standard"] {' +
-		'--desktop-display:modern!important;' +
+		'--body-display:modern!important;' +
 		'}'
 		);	
 	}
@@ -2424,7 +2424,7 @@ var legacy = document.querySelector('input#BG_2');
 	if ($("html.theme-C").length) {
 		$("style.designer-style.theme-C").append(
 		'.theme-C[visualcolors="standard"] {' +
-		'--desktop-display:modern!important;' +
+		'--body-display:modern!important;' +
 		'}'
 		);	
 	}
@@ -2432,7 +2432,7 @@ var legacy = document.querySelector('input#BG_2');
 	if ($("html.theme-D").length) {
 		$("style.designer-style.theme-D").append(
 		'.theme-D[visualcolors="standard"] {' +
-		'--desktop-display:modern!important;' +
+		'--body-display:modern!important;' +
 		'}'
 		);	
 	}

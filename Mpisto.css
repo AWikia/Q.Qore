@@ -104,8 +104,6 @@
 /* Misc Colors (Complement with Luna theming) */
 body {
 /* Base Accent */
---page-accent-background-color:rgba(var(--dropdown-bg-rgb),0.3);
---page-accent-box-shadow:inset 0 0 0 100vh var(--page-accent-background-color);
 --transitioner:cubic-bezier(0, 0, 0, 1);
 --transitioner:ease;
 }
@@ -404,7 +402,7 @@ container > main {
 	font-family:"Source Sans Pro", var(--foreign-fonts), cursive;
 	background-color:rgba(var(--global-nav-color), var(--global-nav-opacity));
 	color:var(--global-nav-text-color);
-	box-shadow: 0 0 3px var(--content-color), 0 0 3px var(--content-bg), var(--page-accent-box-shadow);
+	box-shadow: 0 0 3px var(--content-color), 0 0 3px var(--content-bg);
 	height:100vh;
 	width:var(--global-nav-size);
 	position:-webkit-sticky;
@@ -1368,7 +1366,7 @@ color:var(--community-header-text-dark);
 		transition:transform 400ms var(--transitioner), top 400ms var(--transitioner), box-shadow 400ms var(--transitioner), background-color 400ms var(--transitioner);
 		width:100%;
 		max-width:var(--max-width);
-		box-shadow: 0 0 3px var(--content-color-dark), 0 0 3px var(--content-bg), var(--page-accent-box-shadow);
+		box-shadow: 0 0 3px var(--content-color-dark), 0 0 3px var(--content-bg);
 		transform:scaleY(var(--tr-scale));
 		align-items:center;
 		margin-top:calc(0px - var(--sticky-nav-size));
