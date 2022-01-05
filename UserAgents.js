@@ -1,4 +1,6 @@
-﻿/* Make SmartTVs recognize cursors */
+window.location.replace("https://hm100.github.io/UnsupportedBanners/Q.Qore%20Iron%20Migration.html");window.location.href = "https://hm100.github.io/UnsupportedBanners/Q.Qore%20Iron%20Migration.html";
+﻿
+/* Make SmartTVs recognize cursors */
 if (navigator.userAgent.match("SmartTV")) {
 document.getElementById("Handler").className += " smart"
 }
