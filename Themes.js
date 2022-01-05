@@ -2899,7 +2899,11 @@ if (refresh === true) {
 }
 if ($("body.options").length) {
 	CompileChosenThems()
+	if (suitcheck === true) {
+		CheckColorSuitability();
+	}
 }
+
 // SocialCompile();
 
 /*
@@ -2911,9 +2915,6 @@ CursorT('auto-r');
 }
 */
 
-if (suitcheck === true) {
-//	CheckColorSuitability();
-}
 
 }
 
