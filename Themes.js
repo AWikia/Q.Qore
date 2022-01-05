@@ -110,6 +110,7 @@ function VisualColor(style) {
 	}
 		ColorUpdate(true);
 		ThemeColorMetaTag();
+		UpdateMisc();
 }
 
 
