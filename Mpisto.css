@@ -1300,13 +1300,14 @@ color:var(--sticky-header-foreground-color-hover);
 	.mpisto-sticky-header-container .cpe-dropdown__content {
 		--dropdown-opacity:0.8;
 	}
-
+/*
 	.constructor .mpisto-sticky-header-container {
 		display:none;
 	}
+*/
 
 	.options .mpisto-sticky-header-container,
-	.editor .mpisto-sticky-header-container {
+	.editor:not(.constructor) .mpisto-sticky-header-container {
 		transform:translateY(0%);
 		position:relative;
 		top:6px;
@@ -2566,10 +2567,11 @@ text-align:right;
 	border-bottom-left-radius:0;
 	border-bottom-right-radius:0;
 }
-
+/*
 .constructor .mpisto-userpages-header {
 	display:none
 }
+*/
 
 .mpisto-userpages-header .mpisto-userpages-tabs {
 display:block;
@@ -4080,23 +4082,27 @@ body.constructor .construct-off {
 	display:none!important;
 }
 
+/*
 body.constructor {
 	pointer-events:none;
 }
+*/
 
 body.constructor .cpe-dropdown.constructor-dropdown {
 	display:inline-flex!important;
 }
 
-
+/*
 body.constructor .mpisto-global-sidebar {
 	z-index:1;
 }
+*/
 
 body.constructor .mpisto-footer {
 	display:none;
 }
 
+/*
 body.constructor .mpisto-content .mpisto-wrapper, body.constructor .lightbox {
 	pointer-events:auto;
 	z-index:1000;
@@ -4115,6 +4121,7 @@ body.constructor .mpisto-content .mpisto-wrapper::before {
 	z-index:100;
 	pointer-events:none;
 }
+*/
 
 body.constructor .mpisto-right-pane {
   width:360px;
@@ -5743,7 +5750,7 @@ margin-right:0;
 .cpe-banner-notification__container.constructor-controls {
   position:-webkit-sticky;
   position:sticky;
-  top:0;
+  top:var(--sticky-nav-size);
   z-index:2; /* Needed lower value to allow header dropdowns not to overlap */
 }
 
