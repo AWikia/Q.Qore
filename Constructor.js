@@ -96,7 +96,7 @@ $('.mpisto-content .mpisto-article section').html( x );
 AliasFandomComponents();
 $('#modalE12 .lightbox section').prepend ( 
       '<div class="cpe-banner-notification__container" id="floatingbanner" style="top:auto; position:relative;">' +
-        '<div class="cpe-banner-notification cpe-success cpe-is-transparent" style="transform:none;" id="BannerSave">' +
+        '<div class="cpe-banner-notification cpe-success is-transparent" style="transform:none;" id="BannerSave">' +
           '<div class="cpe-banner-notification__icon">' +
             '<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">' +
               '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-checkmark-small" />' +
@@ -131,7 +131,7 @@ DropDownUpdate();
 title.className = title.className.replace (" unsaved", "");
 $('#modalE10 .lightbox .save-page-wrapper').prepend ( 
       '<div class="cpe-banner-notification__container" id="floatingbanner" style="top:auto; position:relative;">' +
-        '<div class="cpe-banner-notification cpe-success cpe-is-transparent" style="transform:none;" id="BannerSave">' +
+        '<div class="cpe-banner-notification cpe-success is-transparent" style="transform:none;" id="BannerSave">' +
           '<div class="cpe-banner-notification__icon">' +
             '<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">' +
               '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-checkmark-small" />' +
@@ -154,13 +154,13 @@ setTimeout(RemoveBannerSave, 2500);
 function RemoveBannerSave() {
 	$('#modaEl10 .lightbox .save-page-wrapper #BannerSave').attr("style", "");
     var x = document.getElementById("BannerSave");
-        x.className += " cpe-is-transparent";
+        x.className += " is-transparent";
 	    setTimeout(RemoveBannerSave1, 405) 
 }
 
 function RemoveBannerSave2() {
     var x = document.getElementById("BannerSave");
-       x.className = x.className.replace (" cpe-is-transparent", "");
+       x.className = x.className.replace (" is-transparent", "");
 }
 
 function RemoveBannerSave1() {

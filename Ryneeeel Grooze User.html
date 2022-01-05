@@ -130,9 +130,9 @@
 
 <html class="main">
   <body onfocus="CheckTheme()" onblur="CheckTheme()" class="mpisto-2018" id="Handler" onclick="">
-  <div class="gradient-overlay" style="position:absolute; pointer-events:none;"></div>
-  <div class="gradient-overlay-2" style="position:absolute; pointer-events:none;"></div>
-  <div class="body-community-background" style="position:absolute; pointer-events:none;"></div>
+	<div class="gradient-overlay" style="position:absolute; pointer-events:none;"></div>
+	<div class="invertion-on" style=" pointer-events: none; position: absolute; z-index: -2; width: 100%; height: 100%;"><div class="body-community-background " style="position:absolute; pointer-events:none;"></div></div>
+	<div class="body-community-background-color" style="position:absolute; pointer-events:none;"></div>
   <container>
 
   <main>
@@ -168,13 +168,13 @@
 			<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-discord" /></svg>
 		</a>
-		<div class="cpe-dropdown cpe-has-dark-shadow explore-menu" cpe-orient="land">
+		<div class="cpe-dropdown has-dark-shadow explore-menu" cpe-orient="land">
 			<div class="link cpe-dropdown__toggle" cpe-tooltip="Explore">
 				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-menu-control" /></svg> 
 			</div>
 		    <div class="cpe-dropdown__content">
-				<ul class="cpe-list cpe-is-linked">
+				<ul class="cpe-list is-linked">
 					<li><a href="https://alpha-technologies.fandom.com/el" translate="no">A Techno Wiki</a></li>
 					<li><a href="https://alpha-styles.fandom.com/el" translate="no">A Techo Dev Wiki</a></li>
 					<li><a href="https://alphafoundation.fandom.com/el" translate="no">A Wiki Foundation</a></li>
@@ -185,13 +185,13 @@
 	</div>
 	<div class="bottom-links">
 	<!-- Wikis -->
-		<div class="cpe-dropdown cpe-has-dark-shadow create-wiki" cpe-orient="land">
+		<div class="cpe-dropdown has-dark-shadow create-wiki" cpe-orient="land">
 			<div class="link cpe-dropdown__toggle cell" cpe-tooltip="Wikis">
 				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-community" /></svg> 
 			</div>
-		    <div class="cpe-dropdown__content cpe-is-left-aligned">
-				<ul class="cpe-list cpe-is-linked">
+		    <div class="cpe-dropdown__content is-left-aligned">
+				<ul class="cpe-list is-linked">
 				  <li><a>Create a Wiki</a></li>
 				  <li><a>Import a Wiki</a></li>
 				  <li><a>Report a Wiki</a></li>
@@ -199,7 +199,7 @@
 			</div>
 		</div>
 		<!-- Search -->
-		<div class="cpe-dropdown cpe-has-dark-shadow search" cpe-orient="land">
+		<div class="cpe-dropdown has-dark-shadow search" cpe-orient="land">
 			<div class="link cpe-dropdown__toggle" cpe-tooltip="Search">
 				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-magnifying-glass" /></svg> 
@@ -208,8 +208,8 @@
 				<ul class="cpe-list">
 					<li>
 						<div class="pageheader-search">
-							<input class="cpe-input cpe-is-borderline" type="search" placeholder="Search on Qora Qore..."></input>
-							<button class="cpe-button cpe-is-borderline">
+							<input class="cpe-input is-borderline" type="search" placeholder="Search on Qora Qore..."></input>
+							<button class="cpe-button is-borderline">
 								<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-magnifying-glass" /></svg>
 							</button>
@@ -219,35 +219,35 @@
 			</div>
 		</div>
 		<!-- Flags -->
-		<div class="cpe-dropdown cpe-has-dark-shadow flags-menu" cpe-orient="land">
+		<div class="cpe-dropdown has-dark-shadow flags-menu" cpe-orient="land">
 			<div class="link cpe-dropdown__toggle" cpe-tooltip="Flags">
 				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon ">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-flag" /> 
 				</svg>
 			</div>
-			<div class="cpe-dropdown__content cpe-is-left-aligned cpe-is-not-scrollable flags-dropdown">
-				<ul class="cpe-list cpe-has-lines-between cpe-has-ellipsis">
+			<div class="cpe-dropdown__content is-left-aligned is-not-scrollable flags-dropdown">
+				<ul class="cpe-list has-lines-between has-ellipsis">
 					<li>
-						<button class="cpe-button cpe-is-squished cpe-is-full-width">Manage Flags</button>
+						<button class="cpe-button is-squished is-full-width">Manage Flags</button>
 					</li>
 					<li>
-						<button class="cpe-button cpe-is-squished cpe-is-full-width">Enforce Flags</button>
+						<button class="cpe-button is-squished is-full-width">Enforce Flags</button>
 					</li>
 					<li>
-						<button class="cpe-button cpe-is-squished cpe-is-full-width">Clear all Flags</button>
+						<button class="cpe-button is-squished is-full-width">Clear all Flags</button>
 					</li>
 				</ul>
 			</div>
 		</div>
 	   <!-- Notification -->
-       <div class="cpe-dropdown cpe-has-dark-shadow notifications-menu" cpe-orient="land">
+       <div class="cpe-dropdown has-dark-shadow notifications-menu" cpe-orient="land">
         <div class="link cpe-dropdown__toggle" cpe-tooltip="Notifications">
 			<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon ">
 				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-bell" /> 
 			</svg>
 		</div>
-        <div class="cpe-dropdown__content cpe-is-right-aligned cpe-is-not-scrollable notification">
-          <ul class="cpe-list cpe-has-lines-between cpe-has-ellipsis">
+        <div class="cpe-dropdown__content is-right-aligned is-not-scrollable notification">
+          <ul class="cpe-list has-lines-between has-ellipsis">
            <li class="notification">
            <a>
            <div class="wrapper">
@@ -274,12 +274,12 @@
         </div>
       </div>
       <!-- Themes -->
-		  <div class="cpe-dropdown cpe-has-dark-shadow themes she-she-off"  cpe-orient="land">
+		  <div class="cpe-dropdown has-dark-shadow themes she-she-off"  cpe-orient="land">
 			<div class="link cpe-dropdown__toggle" cpe-tooltip="Themes">
 				<svg class="cpe-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 0H0v24h24z" fill="none"/><path d="M17.66 7.93L12 2.27 6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58c2.05 0 4.1-.78 5.66-2.34 3.12-3.12 3.12-8.19 0-11.31zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/></svg>
 			</div>
-			<div class="cpe-dropdown__content cpe-is-right-aligned">
-				<ul class="cpe-list cpe-is-linked">
+			<div class="cpe-dropdown__content is-right-aligned">
+				<ul class="cpe-list is-linked">
 					<li>
 						<a onclick="HCa()">
 							Theme A
@@ -304,29 +304,29 @@
 			</div>
 		</div>
       <!-- Visual Appearance -->
-		  <div class="cpe-dropdown cpe-has-dark-shadow themes she-she-on"  cpe-orient="land">
+		  <div class="cpe-dropdown has-dark-shadow themes she-she-on"  cpe-orient="land">
 			<div class="link cpe-dropdown__toggle" cpe-tooltip="Visual Appearance">
 				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon ">
 				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-tv" /> 
 			</svg>
 			</div>
-					<div class="cpe-dropdown__content cpe-is-right-aligned cpe-visual-appearance">					
-					  <ul class="cpe-list cpe-is-linked cpe-visual-styles">						
+					<div class="cpe-dropdown__content is-right-aligned cpe-visual-appearance">					
+					  <ul class="cpe-list is-linked cpe-visual-styles">						
 						<li><a onclick="VisualStyle(-1)">Standard</a></li>
 					  </ul>
 					  <hr>
-					  <ul class="cpe-list cpe-is-linked cpe-visual-colors">						
+					  <ul class="cpe-list is-linked cpe-visual-colors">						
 						<li><a onclick="VisualColor(-1)">Standard</a></li>
 					  </ul>
 
 					</div>
 		</div>
-		<div class="cpe-dropdown cpe-has-dark-shadow user-profile" cpe-orient="land">
+		<div class="cpe-dropdown has-dark-shadow user-profile" cpe-orient="land">
 			<div class="link cell cpe-dropdown__toggle" cpe-tooltip="HM100">
 				<img class="mpisto-avatar" alt="HM100" src="HM100.png"></img>
 			</div>
-			<div class="cpe-dropdown__content cpe-is-right-aligned">
-				<ul class="cpe-list cpe-is-linked">
+			<div class="cpe-dropdown__content is-right-aligned">
+				<ul class="cpe-list is-linked">
 				<li><a>Discussions Statistics</a></li>
 				<li><a>View Profile</a></li>
 				<li><a>Manage A Secure Account</a></li>
@@ -361,8 +361,8 @@
 				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-user" />
 			</svg>	
 		  </div>
-		  <div class="cpe-dropdown__content cpe-is-left-aligned">		
-			<ul class="cpe-list cpe-is-linked">
+		  <div class="cpe-dropdown__content is-left-aligned">		
+			<ul class="cpe-list is-linked">
 				<li>
 					<a>View Profile</a>
 				</li>
@@ -388,7 +388,7 @@
 			</svg>	
 		  </div>
 		  <div class="cpe-dropdown__content">		
-			  <ul class="cpe-list cpe-is-linked">
+			  <ul class="cpe-list is-linked">
 				<li>
 					<a>GMK Pages</a>
 				</li>
@@ -450,8 +450,8 @@
 		  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown" />
 		</svg>			
 	  </div>
-	  <div class="cpe-dropdown__content cpe-is-right-aligned">		
-		<ul class="cpe-list cpe-is-linked">					
+	  <div class="cpe-dropdown__content is-right-aligned">		
+		<ul class="cpe-list is-linked">					
 				  <li class="small">						
 					<a><svg version="1.1" class="cpe-icon cpe-icon-tiny" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
 						<path fill="currentcolor" d="M52.053 0c-1.28 3.968-2.56 7.893-2.56 13.141v991.104c0 9.259 2.603 14.507 7.851 19.755l487.040-515.968-492.331-508.032zM577.237 542.208l125.909 129.92-179.755 102.4s-228.48 129.877-354.475 202.197l408.32-434.517zM611.413 506.752l135.083 140.459c21.163-11.776 186.496-106.325 210.091-119.467 24.917-14.421 22.4-34.133 1.237-44.629-19.584-10.88-184.917-105.6-209.92-120.96l-136.491 144.597zM577.152 472.619l127.317-135.211-181.717-103.723s-296.235-169.472-394.795-226.048l449.195 464.981z"></path>
@@ -519,8 +519,8 @@
 					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown" />
 					</svg>			
 				  </div>
-				  <div class="cpe-dropdown__content cpe-is-right-aligned">		
-					<ul class="cpe-list cpe-is-linked">					
+				  <div class="cpe-dropdown__content is-right-aligned">		
+					<ul class="cpe-list is-linked">					
 					  <li class="small">						
 						<a><svg version="1.1" class="cpe-icon cpe-icon-tiny" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
 							<path fill="currentcolor" d="M52.053 0c-1.28 3.968-2.56 7.893-2.56 13.141v991.104c0 9.259 2.603 14.507 7.851 19.755l487.040-515.968-492.331-508.032zM577.237 542.208l125.909 129.92-179.755 102.4s-228.48 129.877-354.475 202.197l408.32-434.517zM611.413 506.752l135.083 140.459c21.163-11.776 186.496-106.325 210.091-119.467 24.917-14.421 22.4-34.133 1.237-44.629-19.584-10.88-184.917-105.6-209.92-120.96l-136.491 144.597zM577.152 472.619l127.317-135.211-181.717-103.723s-296.235-169.472-394.795-226.048l449.195 464.981z"></path>
@@ -566,8 +566,8 @@
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-user" />
 						  </svg>	
 				  </div>
-				  <div class="cpe-dropdown__content cpe-is-left-aligned">		
-						  <ul class="cpe-list cpe-is-linked">
+				  <div class="cpe-dropdown__content is-left-aligned">		
+						  <ul class="cpe-list is-linked">
 							<li>
 							<a>View Profile</a>
 							</li>
@@ -594,7 +594,7 @@
 						  </svg>	
 				  </div>
 				  <div class="cpe-dropdown__content">		
-						  <ul class="cpe-list cpe-is-linked">
+						  <ul class="cpe-list is-linked">
 							<li>
 							<a>GMK Pages</a>
 							</li>
@@ -627,8 +627,8 @@
 				  <div class="link cell cpe-dropdown__toggle">				
 					<svg class="cpe-icon" id="svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="336.88888888888886" viewBox="0, 0, 400,336.88888888888886"><g id="svgg"><path id="path0" d="M152.219 5.345 C 131.916 12.561,125.406 28.637,120.007 84.889 C 113.900 148.518,107.967 160.844,50.274 229.769 C 25.981 258.791,9.775 279.477,7.053 284.939 C -4.324 307.764,19.499 332.142,42.240 320.946 C 48.379 317.924,48.157 318.155,63.265 299.070 C 68.314 292.692,78.608 280.017,86.142 270.904 L 99.839 254.333 105.697 253.744 C 108.919 253.420,124.356 251.591,140.000 249.681 C 226.581 239.107,233.532 241.149,312.889 300.465 C 345.425 324.785,349.285 327.416,356.653 330.304 C 376.763 338.185,395.999 325.971,395.980 305.333 C 395.966 290.005,393.951 287.058,348.898 236.444 C 312.082 195.085,305.352 186.824,293.136 168.000 C 286.858 158.326,280.890 148.431,247.570 92.444 C 201.532 15.092,180.038 -4.542,152.219 5.345 M183.346 90.020 C 187.444 96.487,201.732 120.178,215.097 142.667 C 228.462 165.156,241.524 186.856,244.123 190.889 C 246.722 194.922,248.558 198.218,248.202 198.213 C 247.847 198.207,245.556 197.595,243.111 196.851 C 225.089 191.368,188.711 189.744,160.108 193.146 C 142.474 195.244,143.517 195.396,146.217 191.119 C 161.210 167.369,167.872 143.683,172.521 97.606 C 173.640 86.512,174.857 77.621,175.225 77.848 C 175.593 78.076,179.247 83.553,183.346 90.020 " stroke="none" fill="currentColor" fill-rule="evenodd"></path></g></svg>
 				  </div>
-				  <div class="cpe-dropdown__content cpe-is-right-aligned">		
-						  <ul class="cpe-list cpe-is-linked">
+				  <div class="cpe-dropdown__content is-right-aligned">		
+						  <ul class="cpe-list is-linked">
 							<li>
 							<a>Contact Mpisto</a>
 							</li>
@@ -687,8 +687,8 @@
 				  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown" />
 				</svg>			
 			  </div>
-			  <div class="cpe-dropdown__content cpe-is-right-aligned">		
-				<ul class="cpe-list cpe-is-linked">					
+			  <div class="cpe-dropdown__content is-right-aligned">		
+				<ul class="cpe-list is-linked">					
 				  <li class="small">						
 					<a><svg version="1.1" class="cpe-icon cpe-icon-tiny" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
 						<path fill="currentcolor" d="M52.053 0c-1.28 3.968-2.56 7.893-2.56 13.141v991.104c0 9.259 2.603 14.507 7.851 19.755l487.040-515.968-492.331-508.032zM577.237 542.208l125.909 129.92-179.755 102.4s-228.48 129.877-354.475 202.197l408.32-434.517zM611.413 506.752l135.083 140.459c21.163-11.776 186.496-106.325 210.091-119.467 24.917-14.421 22.4-34.133 1.237-44.629-19.584-10.88-184.917-105.6-209.92-120.96l-136.491 144.597zM577.152 472.619l127.317-135.211-181.717-103.723s-296.235-169.472-394.795-226.048l449.195 464.981z"></path>
@@ -738,7 +738,7 @@
 					  </svg>	
 			  </div>
 			  <div class="cpe-dropdown__content">		
-					  <ul class="cpe-list cpe-is-linked">
+					  <ul class="cpe-list is-linked">
 						<li>
 						<a>View Profile</a>
 						</li>
@@ -764,7 +764,7 @@
 					  </svg>	
 			  </div>
 			  <div class="cpe-dropdown__content">		
-					  <ul class="cpe-list cpe-is-linked">
+					  <ul class="cpe-list is-linked">
 						<li>
 						<a>GMK Pages</a>
 						</li>
@@ -814,7 +814,7 @@
 					<tag class="admin">Admin</tag>
 					<tag class="bureaucrat">Bureaucrat</tag>
 					<tag class="vanguard" id="Global">VanGuard</tag>
-					<a class="edit cpe-button cpe-is-secondary" href="#modal1"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+					<a class="edit cpe-button is-secondary" href="#modal1"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 						  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-pencil-small" />
 						</svg>	<span>Edit</span></a>
 					</hgroup>
@@ -844,41 +844,41 @@
 					</a>
 					<div class="cpe-button-groups">
 						<div class="cpe-button-group">
-						  <a class="cpe-button cpe-is-squished cpe-is-alternate site" title="My Site" href="https://awikia.github.io/Mpisto">
+						  <a class="cpe-button is-squished is-alternate site" title="My Site" href="https://awikia.github.io/Mpisto">
 						  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small single-icon">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-link" />
 						  </svg></a>
-						  <a class="cpe-button cpe-is-squished cpe-is-facebook-color facebook" title="My Facebook">
+						  <a class="cpe-button is-squished is-facebook-color facebook" title="My Facebook">
 						  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small single-icon">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-facebook" />
 						  </svg></a>
-						  <a class="cpe-button cpe-is-squished cpe-is-twitter-color twitter" title="My Twitter">
+						  <a class="cpe-button is-squished is-twitter-color twitter" title="My Twitter">
 						  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small single-icon">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-twitter" />
 						  </svg></a>
-						  <a class="cpe-button cpe-is-squished cpe-is-reddit-color reddit" title="My Reddit">
+						  <a class="cpe-button is-squished is-reddit-color reddit" title="My Reddit">
 						  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small single-icon">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-reddit" />
 						  </svg></a>
-						  <a class="cpe-button cpe-is-squished cpe-is-fandom-color fandom" href="https://www.community.fandom.com/wiki/User:HM100" title="My Fandom">
+						  <a class="cpe-button is-squished is-fandom-color fandom" href="https://www.community.fandom.com/wiki/User:HM100" title="My Fandom">
 						  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small single-icon">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-fandom-heart" />
 						  </svg></a>
 						</div>
 						<div class="cpe-button-group">
-						  <a class="cpe-button cpe-is-squished cpe-is-youtube-color youtube" title="My Youtube">
+						  <a class="cpe-button is-squished is-youtube-color youtube" title="My Youtube">
 						  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small single-icon">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-youtube" />
 						  </svg></a>
-						  <a class="cpe-button cpe-is-squished cpe-is-tumblr-color tumblr" title="My Tumblr">
+						  <a class="cpe-button is-squished is-tumblr-color tumblr" title="My Tumblr">
 						  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small single-icon">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-tumblr" />
 						  </svg></a>
-						  <a class="cpe-button cpe-is-squished cpe-is-steam-color steam" title="My Steam">
+						  <a class="cpe-button is-squished is-steam-color steam" title="My Steam">
 						  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" viewBox="0 0 496 512"><path class="" fill="currentColor" d="M 496 256 c 0 137 -111.2 248 -248.4 248 c -113.8 0 -209.6 -76.3 -239 -180.4 l 95.2 39.3 c 6.4 32.1 34.9 56.4 68.9 56.4 c 39.2 0 71.9 -32.4 70.2 -73.5 l 84.5 -60.2 c 52.1 1.3 95.8 -40.9 95.8 -93.5 c 0 -51.6 -42 -93.5 -93.7 -93.5 s -93.7 42 -93.7 93.5 v 1.2 L 176.6 279 c -15.5 -0.9 -30.7 3.4 -43.5 12.1 L 0 236.1 C 10.2 108.4 117.1 8 247.6 8 C 384.8 8 496 119 496 256 Z M 155.7 384.3 l -30.5 -12.6 a 52.79 52.79 0 0 0 27.2 25.8 c 26.9 11.2 57.8 -1.6 69 -28.4 c 5.4 -13 5.5 -27.3 0.1 -40.3 c -5.4 -13 -15.5 -23.2 -28.5 -28.6 c -12.9 -5.4 -26.7 -5.2 -38.9 -0.6 l 31.5 13 c 19.8 8.2 29.2 30.9 20.9 50.7 c -8.3 19.9 -31 29.2 -50.8 21 Z m 173.8 -129.9 c -34.4 0 -62.4 -28 -62.4 -62.3 s 28 -62.3 62.4 -62.3 s 62.4 28 62.4 62.3 s -27.9 62.3 -62.4 62.3 Z m 0.1 -15.6 c 25.9 0 46.9 -21 46.9 -46.8 c 0 -25.9 -21 -46.8 -46.9 -46.8 s -46.9 21 -46.9 46.8 c 0.1 25.8 21.1 46.8 46.9 46.8 Z" /></svg></a>
-						  <a class="cpe-button cpe-is-squished cpe-is-spotify-color spotify" title="My Spotify">
+						  <a class="cpe-button is-squished is-spotify-color spotify" title="My Spotify">
 						  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" viewBox="0 0 496 512"><path xmlns="http://www.w3.org/2000/svg" class="" fill="currentColor" d="M 248 8 C 111.1 8 0 119.1 0 256 s 111.1 248 248 248 s 248 -111.1 248 -248 S 384.9 8 248 8 Z m 100.7 364.9 c -4.2 0 -6.8 -1.3 -10.7 -3.6 c -62.4 -37.6 -135 -39.2 -206.7 -24.5 c -3.9 1 -9 2.6 -11.9 2.6 c -9.7 0 -15.8 -7.7 -15.8 -15.8 c 0 -10.3 6.1 -15.2 13.6 -16.8 c 81.9 -18.1 165.6 -16.5 237 26.2 c 6.1 3.9 9.7 7.4 9.7 16.5 s -7.1 15.4 -15.2 15.4 Z m 26.9 -65.6 c -5.2 0 -8.7 -2.3 -12.3 -4.2 c -62.5 -37 -155.7 -51.9 -238.6 -29.4 c -4.8 1.3 -7.4 2.6 -11.9 2.6 c -10.7 0 -19.4 -8.7 -19.4 -19.4 s 5.2 -17.8 15.5 -20.7 c 27.8 -7.8 56.2 -13.6 97.8 -13.6 c 64.9 0 127.6 16.1 177 45.5 c 8.1 4.8 11.3 11 11.3 19.7 c -0.1 10.8 -8.5 19.5 -19.4 19.5 Z m 31 -76.2 c -5.2 0 -8.4 -1.3 -12.9 -3.9 c -71.2 -42.5 -198.5 -52.7 -280.9 -29.7 c -3.6 1 -8.1 2.6 -12.9 2.6 c -13.2 0 -23.3 -10.3 -23.3 -23.6 c 0 -13.6 8.4 -21.3 17.4 -23.9 c 35.2 -10.3 74.6 -15.2 117.5 -15.2 c 73 0 149.5 15.2 205.4 47.8 c 7.8 4.5 12.9 10.7 12.9 22.6 c 0 13.6 -11 23.3 -23.2 23.3 Z" /></svg></a>
-						  <a class="cpe-button cpe-is-squished cpe-is-twitch-color twitch" title="My Twitch">
+						  <a class="cpe-button is-squished is-twitch-color twitch" title="My Twitch">
 						  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" viewBox="0 0 448 512"><path xmlns="http://www.w3.org/2000/svg" class="" fill="currentColor" d="M 40.1 32 L 10 108.9 v 314.3 h 107 V 480 h 60.2 l 56.8 -56.8 h 87 l 117 -117 V 32 H 40.1 Z m 357.8 254.1 L 331 353 H 224 l -56.8 56.8 V 353 H 76.9 V 72.1 h 321 v 214 Z M 331 149 v 116.9 h -40.1 V 149 H 331 Z m -107 0 v 116.9 h -40.1 V 149 H 224 Z" /></svg></a>
 						</div>
 
@@ -903,34 +903,34 @@
 						<br>
 					<div class="cpe-button-groups">
 						<div class="cpe-button-group">
-							  <a class="cpe-button cpe-is-squished cpe-is-alternate" title="Local Contributions">
+							  <a class="cpe-button is-squished is-alternate" title="Local Contributions">
 							  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small single-icon">
 								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-user" />
 							  </svg>
 							  </a>
-							  <a class="cpe-button cpe-is-squished cpe-is-alternate" title="Global Contributions">
+							  <a class="cpe-button is-squished is-alternate" title="Global Contributions">
 							  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small single-icon">
 								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-users" />
 							  </svg>
 							  </a>
-							  <a class="cpe-button cpe-is-squished cpe-is-alternate" title="Block">
+							  <a class="cpe-button is-squished is-alternate" title="Block">
 							  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small single-icon">
 								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-lock" />
 							  </svg>
 							  </a>
 						</div>
 						<div class="cpe-button-group">
-							  <a class="cpe-button cpe-is-squished cpe-is-alternate" title="User Logs">
+							  <a class="cpe-button is-squished is-alternate" title="User Logs">
 							  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small single-icon">
 								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-eye" />
 							  </svg>
 							  </a>
-							  <a class="cpe-button cpe-is-squished cpe-is-alternate" title="File Uploads">
+							  <a class="cpe-button is-squished is-alternate" title="File Uploads">
 							  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small single-icon">
 								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-upload" />
 							  </svg>
 							  </a>
-							  <a class="cpe-button cpe-is-squished cpe-is-alternate" title="Manage Rights">
+							  <a class="cpe-button is-squished is-alternate" title="Manage Rights">
 							  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small single-icon">
 								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-pencil" />
 							  </svg>
@@ -940,7 +940,7 @@
 					</section>
 
 			<!--
-			<div class="mpisto-userpages-header cpe-is-hidden">
+			<div class="mpisto-userpages-header is-hidden">
 			<section class="mpisto-userpages-main">
 				<img class="mpisto-avatar"  src="Zekzphire (Old Old).png"/>
 				<nav class="mpisto-profile-masthead">
@@ -989,41 +989,41 @@
 					</a>
 					<div class="cpe-button-groups">
 						<div class="cpe-button-group">
-						  <a class="cpe-button cpe-is-squished cpe-is-alternate" title="My Site" href="https://awikia.github.io/Mpisto">
+						  <a class="cpe-button is-squished is-alternate" title="My Site" href="https://awikia.github.io/Mpisto">
 						  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small single-icon">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-link" />
 						  </svg></a>
-						  <a class="cpe-button cpe-is-squished cpe-is-facebook-color" title="My Facebook">
+						  <a class="cpe-button is-squished is-facebook-color" title="My Facebook">
 						  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small single-icon">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-facebook" />
 						  </svg></a>
-						  <a class="cpe-button cpe-is-squished cpe-is-twitter-color" title="My Twitter">
+						  <a class="cpe-button is-squished is-twitter-color" title="My Twitter">
 						  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small single-icon">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-twitter" />
 						  </svg></a>
-						  <a class="cpe-button cpe-is-squished cpe-is-reddit-color" title="My Reddit">
+						  <a class="cpe-button is-squished is-reddit-color" title="My Reddit">
 						  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small single-icon">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-reddit" />
 						  </svg></a>
-						  <a class="cpe-button cpe-is-squished cpe-is-fandom-color" href="https://www.wikia.com/wiki/User:HM100" title="My Fandom">
+						  <a class="cpe-button is-squished is-fandom-color" href="https://www.wikia.com/wiki/User:HM100" title="My Fandom">
 						  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small single-icon">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-fandom-heart" />
 						  </svg></a>
 						</div>
 						<div class="cpe-button-group">
-						  <a class="cpe-button cpe-is-squished cpe-is-youtube-color" title="My Youtube">
+						  <a class="cpe-button is-squished is-youtube-color" title="My Youtube">
 						  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small single-icon">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-youtube" />
 						  </svg></a>
-						  <a class="cpe-button cpe-is-squished cpe-is-tumblr-color" title="My Tumblr">
+						  <a class="cpe-button is-squished is-tumblr-color" title="My Tumblr">
 						  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small single-icon">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-tumblr" />
 						  </svg></a>
-						  <a class="cpe-button cpe-is-squished cpe-is-steam-color" title="My Steam">
+						  <a class="cpe-button is-squished is-steam-color" title="My Steam">
 						  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" viewBox="0 0 496 512"><path class="" fill="currentColor" d="M 496 256 c 0 137 -111.2 248 -248.4 248 c -113.8 0 -209.6 -76.3 -239 -180.4 l 95.2 39.3 c 6.4 32.1 34.9 56.4 68.9 56.4 c 39.2 0 71.9 -32.4 70.2 -73.5 l 84.5 -60.2 c 52.1 1.3 95.8 -40.9 95.8 -93.5 c 0 -51.6 -42 -93.5 -93.7 -93.5 s -93.7 42 -93.7 93.5 v 1.2 L 176.6 279 c -15.5 -0.9 -30.7 3.4 -43.5 12.1 L 0 236.1 C 10.2 108.4 117.1 8 247.6 8 C 384.8 8 496 119 496 256 Z M 155.7 384.3 l -30.5 -12.6 a 52.79 52.79 0 0 0 27.2 25.8 c 26.9 11.2 57.8 -1.6 69 -28.4 c 5.4 -13 5.5 -27.3 0.1 -40.3 c -5.4 -13 -15.5 -23.2 -28.5 -28.6 c -12.9 -5.4 -26.7 -5.2 -38.9 -0.6 l 31.5 13 c 19.8 8.2 29.2 30.9 20.9 50.7 c -8.3 19.9 -31 29.2 -50.8 21 Z m 173.8 -129.9 c -34.4 0 -62.4 -28 -62.4 -62.3 s 28 -62.3 62.4 -62.3 s 62.4 28 62.4 62.3 s -27.9 62.3 -62.4 62.3 Z m 0.1 -15.6 c 25.9 0 46.9 -21 46.9 -46.8 c 0 -25.9 -21 -46.8 -46.9 -46.8 s -46.9 21 -46.9 46.8 c 0.1 25.8 21.1 46.8 46.9 46.8 Z" /></svg></a>
-						  <a class="cpe-button cpe-is-squished cpe-is-spotify-color" title="My Spotify">
+						  <a class="cpe-button is-squished is-spotify-color" title="My Spotify">
 						  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" viewBox="0 0 496 512"><path xmlns="http://www.w3.org/2000/svg" class="" fill="currentColor" d="M 248 8 C 111.1 8 0 119.1 0 256 s 111.1 248 248 248 s 248 -111.1 248 -248 S 384.9 8 248 8 Z m 100.7 364.9 c -4.2 0 -6.8 -1.3 -10.7 -3.6 c -62.4 -37.6 -135 -39.2 -206.7 -24.5 c -3.9 1 -9 2.6 -11.9 2.6 c -9.7 0 -15.8 -7.7 -15.8 -15.8 c 0 -10.3 6.1 -15.2 13.6 -16.8 c 81.9 -18.1 165.6 -16.5 237 26.2 c 6.1 3.9 9.7 7.4 9.7 16.5 s -7.1 15.4 -15.2 15.4 Z m 26.9 -65.6 c -5.2 0 -8.7 -2.3 -12.3 -4.2 c -62.5 -37 -155.7 -51.9 -238.6 -29.4 c -4.8 1.3 -7.4 2.6 -11.9 2.6 c -10.7 0 -19.4 -8.7 -19.4 -19.4 s 5.2 -17.8 15.5 -20.7 c 27.8 -7.8 56.2 -13.6 97.8 -13.6 c 64.9 0 127.6 16.1 177 45.5 c 8.1 4.8 11.3 11 11.3 19.7 c -0.1 10.8 -8.5 19.5 -19.4 19.5 Z m 31 -76.2 c -5.2 0 -8.4 -1.3 -12.9 -3.9 c -71.2 -42.5 -198.5 -52.7 -280.9 -29.7 c -3.6 1 -8.1 2.6 -12.9 2.6 c -13.2 0 -23.3 -10.3 -23.3 -23.6 c 0 -13.6 8.4 -21.3 17.4 -23.9 c 35.2 -10.3 74.6 -15.2 117.5 -15.2 c 73 0 149.5 15.2 205.4 47.8 c 7.8 4.5 12.9 10.7 12.9 22.6 c 0 13.6 -11 23.3 -23.2 23.3 Z" /></svg></a>
-						  <a class="cpe-button cpe-is-squished cpe-is-twitch-color" title="My Twitch">
+						  <a class="cpe-button is-squished is-twitch-color" title="My Twitch">
 						  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" viewBox="0 0 448 512"><path xmlns="http://www.w3.org/2000/svg" class="" fill="currentColor" d="M 40.1 32 L 10 108.9 v 314.3 h 107 V 480 h 60.2 l 56.8 -56.8 h 87 l 117 -117 V 32 H 40.1 Z m 357.8 254.1 L 331 353 H 224 l -56.8 56.8 V 353 H 76.9 V 72.1 h 321 v 214 Z M 331 149 v 116.9 h -40.1 V 149 H 331 Z m -107 0 v 116.9 h -40.1 V 149 H 224 Z" /></svg></a>
 						</div>
 
@@ -1048,34 +1048,34 @@
 						<br>
 					<div class="cpe-button-groups">
 						<div class="cpe-button-group">
-							  <a class="cpe-button cpe-is-squished cpe-is-alternate" title="Local Contributions">
+							  <a class="cpe-button is-squished is-alternate" title="Local Contributions">
 							  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small single-icon">
 								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-user" />
 							  </svg>
 							  </a>
-							  <a class="cpe-button cpe-is-squished cpe-is-alternate" title="Global Contributions">
+							  <a class="cpe-button is-squished is-alternate" title="Global Contributions">
 							  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small single-icon">
 								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-users" />
 							  </svg>
 							  </a>
-							  <a class="cpe-button cpe-is-squished cpe-is-alternate" title="Block">
+							  <a class="cpe-button is-squished is-alternate" title="Block">
 							  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small single-icon">
 								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-lock" />
 							  </svg>
 							  </a>
 						</div>
 						<div class="cpe-button-group">
-							  <a class="cpe-button cpe-is-squished cpe-is-alternate" title="User Logs">
+							  <a class="cpe-button is-squished is-alternate" title="User Logs">
 							  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small single-icon">
 								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-eye" />
 							  </svg>
 							  </a>
-							  <a class="cpe-button cpe-is-squished cpe-is-alternate" title="File Uploads">
+							  <a class="cpe-button is-squished is-alternate" title="File Uploads">
 							  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small single-icon">
 								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-upload" />
 							  </svg>
 							  </a>
-							  <a class="cpe-button cpe-is-squished cpe-is-alternate" title="Manage Rights">
+							  <a class="cpe-button is-squished is-alternate" title="Manage Rights">
 							  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small single-icon">
 								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-pencil" />
 							  </svg>
@@ -1090,24 +1090,24 @@
 			</section>
 			<section class="mpisto-userpages-tabs">
 					<div class="user-actions" style="float:left;">
-					  <a title="Profile" class="cpe-is-squished cpe-is-secondary cpe-button cpe-is-active cpe-is-borderline">				
+					  <a title="Profile" class="is-squished is-secondary cpe-button is-active is-borderline">				
 						<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 						  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-user-small" />
 						</svg>				
 						<span>About Me</span>
 						</a>
-					  <a title="Talk Page/Message Wall" class="cpe-is-squished cpe-is-secondary cpe-button cpe-is-borderline">				
+					  <a title="Talk Page/Message Wall" class="is-squished is-secondary cpe-button is-borderline">				
 						<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 						  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-note" />
 						</svg>				
 						<span>Talk Page</span>
 						</a>
-					  <a title="Blog Posts (Beta)" class="cpe-is-squished cpe-is-secondary cpe-button cpe-is-borderline">				
+					  <a title="Blog Posts (Beta)" class="is-squished is-secondary cpe-button is-borderline">				
 						<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 						  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-article" />
 						</svg>				
 						<span>Blog Posts</span>
-					  <a title="Following Articles" class="cpe-button cpe-is-secondary cpe-is-squished cpe-is-borderline">
+					  <a title="Following Articles" class="cpe-button is-secondary is-squished is-borderline">
 					  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small single-icon">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-eye" />
 					  </svg>
@@ -1120,20 +1120,20 @@
 		<!--
 			<section class="mpisto-userpages-actions">
 					<div class="cpe-button-group">
-					  <a class="cpe-is-squished cpe-button">				
+					  <a class="is-squished cpe-button">				
 						<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 						  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-pencil-small" />
 						</svg>				
 						<span>Edit Profile</span>
 						</a>
 					  <div class="cpe-dropdown">				
-						<div class="cpe-button cpe-is-squished cpe-dropdown__toggle">	
+						<div class="cpe-button is-squished cpe-dropdown__toggle">	
 						  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown__toggle-chevron">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown-tiny" />
 						  </svg>
 						</div>
-						<div class="cpe-dropdown__content cpe-is-right-aligned cpe-is-not-scrollable">					
-						  <ul class="cpe-list cpe-is-linked">						
+						<div class="cpe-dropdown__content is-right-aligned is-not-scrollable">					
+						  <ul class="cpe-list is-linked">						
 							<li><a><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny">
 						  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-clock-tiny" />
 						</svg> View History</a></li>
@@ -1159,20 +1159,20 @@
 						</div>
 					  </div>		
 					</div>
-					  <a class="cpe-button cpe-is-squished cpe-is-secondary">
+					  <a class="cpe-button is-squished is-secondary">
 					  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-note" />
 					  </svg>
 					  <span>Leave Message</span></a>
 
 				  <div class="cpe-dropdown">				
-					<div class="cpe-button cpe-is-squished cpe-dropdown__toggle">
+					<div class="cpe-button is-squished cpe-dropdown__toggle">
 					<svg class="cpe-icon cpe-icon-small" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 0H0v24h24z" fill="none"/><path d="M17.66 7.93L12 2.27 6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58c2.05 0 4.1-.78 5.66-2.34 3.12-3.12 3.12-8.19 0-11.31zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/></svg>
 					<span>Contrast Mode</span>                   <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown__toggle-chevron">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown-tiny" />
 						  </svg></div>
-						<div class="cpe-dropdown__content cpe-is-right-aligned cpe-is-not-scrollable">					
-						  <ul class="cpe-list cpe-is-linked">						
+						<div class="cpe-dropdown__content is-right-aligned is-not-scrollable">					
+						  <ul class="cpe-list is-linked">						
 							<li><a onclick="HCclear()">Disabled</a></li>
 							<li><a onclick="HCcustom2()">Semi-Enabled</a></li>
 							<li><a onclick="HCcustom()">Enabled</a></li>
@@ -1191,13 +1191,13 @@
 				<h4 class="mpisto-sub">From Qora Qore Web</h4>
 				<div class="mpisto-page-header-contribution">
 				  <div class="mpisto-page-header-contribution-buttons">
-					  <a class="cpe-is-squished cpe-button construct-only" href="#modalE10">				
+					  <a class="is-squished cpe-button construct-only" href="#modalE10">				
 						<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 						  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-article-small" />
 						</svg>				
 						<span>Save Changes</span>
 						</a>
-					  <a class="cpe-is-squished cpe-button cpe-is-secondary construct-only" onclick="EditSwitch()">				
+					  <a class="is-squished cpe-button is-secondary construct-only" onclick="EditSwitch()">				
 						<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 						  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-cross-small" />
 						</svg>				
@@ -1205,20 +1205,20 @@
 						</a>
 
 					<div class="cpe-button-group construct-off">
-					  <a class="cpe-is-squished cpe-button" onclick="EditSwitch()">				
+					  <a class="is-squished cpe-button" onclick="EditSwitch()">				
 						<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 						  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-pencil-small" />
 						</svg>				
 						<span>Edit</span>
 						</a>
 					  <div class="cpe-dropdown construct-off">				
-						<div class="cpe-button cpe-is-squished cpe-dropdown__toggle">	
+						<div class="cpe-button is-squished cpe-dropdown__toggle">	
 						  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown__toggle-chevron">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown-tiny" />
 						  </svg>
 						</div>
-						<div class="cpe-dropdown__content cpe-is-right-aligned cpe-is-not-scrollable">					
-						  <ul class="cpe-list cpe-is-linked">						
+						<div class="cpe-dropdown__content is-right-aligned is-not-scrollable">					
+						  <ul class="cpe-list is-linked">						
 							<li><a><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny">
 						  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-clock-tiny" />
 						</svg> View History</a></li>
@@ -1242,27 +1242,27 @@
 					  </div>		
 					</div>
 					<div class="cpe-button-group construct-off">
-					  <a class="cpe-button cpe-is-squished cpe-is-secondary">
+					  <a class="cpe-button is-squished is-secondary">
 					  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-reply-small" />
 					  </svg>
 					  <span>Comments</span></a>
-					  <a class="cpe-button cpe-is-squished cpe-is-secondary">
+					  <a class="cpe-button is-squished is-secondary">
 					  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-note" />
 					  </svg>
 					  <span>Talk</span></a>
 					</div>
 				  <div class="cpe-dropdown construct-off">				
-					<div class="cpe-button cpe-is-squished cpe-is-secondary cpe-dropdown__toggle">
+					<div class="cpe-button is-squished is-secondary cpe-dropdown__toggle">
 					<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-share-small" />
 					</svg>
 					<span>Share</span>                   <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown__toggle-chevron">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown-tiny" />
 						  </svg></div>
-						<div class="cpe-dropdown__content cpe-is-right-aligned cpe-is-not-scrollable">					
-						  <ul class="cpe-list cpe-is-linked">						
+						<div class="cpe-dropdown__content is-right-aligned is-not-scrollable">					
+						  <ul class="cpe-list is-linked">						
 							<li><a><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny">
 						  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-googleplus" />
 						</svg> Google+</a></li>
@@ -1287,13 +1287,13 @@
 					</div>
 
 			  <div class="cpe-dropdown">				
-				<div class="cpe-button cpe-is-squished cpe-dropdown__toggle">
+				<div class="cpe-button is-squished cpe-dropdown__toggle">
 				<svg class="cpe-icon cpe-icon-small" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 0H0v24h24z" fill="none"/><path d="M17.66 7.93L12 2.27 6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58c2.05 0 4.1-.78 5.66-2.34 3.12-3.12 3.12-8.19 0-11.31zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/></svg>
 				<span>Color Filters</span>                   <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown__toggle-chevron">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown-tiny" />
 					  </svg></div>
-					<div class="cpe-dropdown__content cpe-is-right-aligned cpe-is-not-scrollable">					
-					  <ul class="cpe-list cpe-is-linked">						
+					<div class="cpe-dropdown__content is-right-aligned is-not-scrollable">					
+					  <ul class="cpe-list is-linked">						
 						<li><a onclick="ColorFilter('standard')">Standard</a></li>
 						<li><a onclick="ColorFilter('invert')">Inverted Colors</a></li>
 						<li><a onclick="ColorFilter('night')">Night Colors</a></li>
@@ -1307,19 +1307,19 @@
 
 
 			  <div class="cpe-dropdown constructor-dropdown she-she-off">				
-				<div class="cpe-button cpe-is-squished cpe-dropdown__toggle">
+				<div class="cpe-button is-squished cpe-dropdown__toggle">
 				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-tv-small" />
 					  </svg>
 				<span>Visual Appearance</span>                   <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown__toggle-chevron">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown-tiny" />
 					  </svg></div>
-					<div class="cpe-dropdown__content cpe-is-right-aligned cpe-visual-appearance">					
-					  <ul class="cpe-list cpe-is-linked cpe-visual-styles">						
+					<div class="cpe-dropdown__content is-right-aligned cpe-visual-appearance">					
+					  <ul class="cpe-list is-linked cpe-visual-styles">						
 						<li><a onclick="VisualStyle(-1)">Standard</a></li>
 					  </ul>
 					  <hr>
-					  <ul class="cpe-list cpe-is-linked cpe-visual-colors">						
+					  <ul class="cpe-list is-linked cpe-visual-colors">						
 						<li><a onclick="VisualColor(-1)">Standard</a></li>
 					  </ul>
 
@@ -1328,13 +1328,13 @@
 
 
 			  <div class="cpe-dropdown constructor-dropdown she-she-on">				
-				<div class="cpe-button cpe-is-squished cpe-dropdown__toggle">
+				<div class="cpe-button is-squished cpe-dropdown__toggle">
 				<svg class="cpe-icon cpe-icon-small" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 0H0v24h24z" fill="none"/><path d="M17.66 7.93L12 2.27 6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58c2.05 0 4.1-.78 5.66-2.34 3.12-3.12 3.12-8.19 0-11.31zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/></svg>
 				<span>Themes</span>                   <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown__toggle-chevron">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown-tiny" />
 					  </svg></div>
-					<div class="cpe-dropdown__content cpe-is-right-aligned">					
-					  <ul class="cpe-list cpe-is-linked">						
+					<div class="cpe-dropdown__content is-right-aligned">					
+					  <ul class="cpe-list is-linked">						
 						<li>
 							<a onclick="HCa()">
 								Theme A
@@ -1380,13 +1380,13 @@
 		<div class="cpe-banner-notification  constructor-controls">
 			<span class="cpe-banner-notification__text">
 					<div class="cpe-dropdown">
-					  <div class="cpe-button cpe-is-alternate cpe-is-squished" title="Styling">
+					  <div class="cpe-button is-alternate is-squished" title="Styling">
 								  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 		  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-bold-small" /> 
 					</svg> 
 					  </div>
-					  <div class="cpe-dropdown__content cpe-is-not-scrollable">
-						<ul class="cpe-list cpe-is-linked">
+					  <div class="cpe-dropdown__content is-not-scrollable">
+						<ul class="cpe-list is-linked">
 						  <li><a onclick="BoldText()"><span style="font-weight:bold">Bold</span></a></li>
 						  <li><a><span onclick="ItalText()" style="font-style:italic">Italics</span></a></li>
 						  <li><a><span onclick="UnderlText()" style="text-decoration:underline">Underline</span></a></li>
@@ -1398,7 +1398,7 @@
 						  </svg>
 						  </a>
 						  <div class="cpe-dropdown-level-2__content">
-							<ul class="cpe-list cpe-is-linked">
+							<ul class="cpe-list is-linked">
 							  <li><a onclick="ShadowOI()"><shadow class="small">Small</shadow></a></li>
 							  <li><a onclick="ShadowBOI()"><shadow class="small blur">Small/Blurred</shadow></a></li>
 							  <li><a onclick="Shadow()"><shadow>Standard</shadow></a></li>
@@ -1417,7 +1417,7 @@
 						  </svg>
 						  </a>
 						  <div class="cpe-dropdown-level-2__content">
-							<ul class="cpe-list cpe-is-linked">
+							<ul class="cpe-list is-linked">
 							  <li><a onclick="StrokeOI()"><stroke class="small">Small</stroke></a></li>
 							  <li><a onclick="StrokeBOI()"><stroke class="small blur">Small/Blurred</stroke></a></li>
 							  <li><a onclick="Stroke()"><stroke>Standard</stroke></a></li>
@@ -1432,30 +1432,30 @@
 						</ul>
 					  </div>
 					</div>
-					  <a class="cpe-button cpe-is-alternate cpe-is-squished" title="Unordered List">
+					  <a class="cpe-button is-alternate is-squished" title="Unordered List">
 								  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" viewBox="0 0 18 18">
 		  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-numbered-list" /> 
 					</svg>
 					  </a>
-					  <a class="cpe-button cpe-is-alternate cpe-is-squished" title="Ordered List">
+					  <a class="cpe-button is-alternate is-squished" title="Ordered List">
 								  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" viewBox="0 0 18 18">
 		  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-bullet-list-small" /> 
 					</svg>
 					  </a>
-					  <a class="cpe-button cpe-is-alternate cpe-is-squished" title="Signature (Only use them in talk pages)">
+					  <a class="cpe-button is-alternate is-squished" title="Signature (Only use them in talk pages)">
 								  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" viewBox="0 0 18 18">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-reply" />
 					</svg> <span>Signature</span>
 					  </a>
 					<div class="cpe-dropdown">
-					  <div class="cpe-button cpe-is-alternate cpe-is-squished cpe-dropdown__toggle" title="Styling">
+					  <div class="cpe-button is-alternate is-squished cpe-dropdown__toggle" title="Styling">
 								  <span>Visual Styles</span>            <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown__toggle-chevron" viewBox="0 0 12 12">
 		  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown-tiny" /> 
 		  </svg>
 
 					  </div>
-					  <div class="cpe-dropdown__content cpe-is-not-scrollable">
-						<ul class="cpe-list cpe-is-linked">
+					  <div class="cpe-dropdown__content is-not-scrollable">
+						<ul class="cpe-list is-linked">
 						  <li class="cpe-dropdown-level-2">
 							<a class="cpe-dropdown-level-2__toggle"><span>Block elements</span>                   
 						  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown-chevron" viewBox="0 0 12 12">
@@ -1463,7 +1463,7 @@
 						  </svg>
 						  </a>
 						  <div class="cpe-dropdown-level-2__content">
-							<ul class="cpe-list cpe-is-linked">
+							<ul class="cpe-list is-linked">
 							  <li><a onclick="DivAdd()"><span>Div</span></a></li>
 							  <li><a onclick="DivAdd1()"><span>Section</span></a></li>
 							  <li><a onclick="DivAdd2()"><span>Article</span></a></li>
@@ -1479,7 +1479,7 @@
 						  </svg>
 						  </a>
 						  <div class="cpe-dropdown-level-2__content">
-							<ul class="cpe-list cpe-is-linked">
+							<ul class="cpe-list is-linked">
 							  <li><a onclick="InlineAdd()"><span>Paragraph</span></a></li>
 							  <li><a onclick="InlineAdd1()"><span>Span</span></a></li>
 							  <li><a onclick="Shadow()"><span>Shadow</span></a></li>
@@ -1495,7 +1495,7 @@
 						  </svg>
 						  </a>
 						  <div class="cpe-dropdown-level-2__content">
-							<ul class="cpe-list cpe-is-linked">
+							<ul class="cpe-list is-linked">
 							  <li><a onclick="Heading1()"><span>Heading 1</span></a></li>
 							  <li><a onclick="Heading2()"><span>Heading 2</span></a></li>
 							  <li><a onclick="Heading3()"><span>Heading 3</span></a></li>
@@ -1512,7 +1512,7 @@
 						  </svg>
 						  </a>
 						  <div class="cpe-dropdown-level-2__content">
-							<ul class="cpe-list cpe-is-linked">
+							<ul class="cpe-list is-linked">
 							  <li><a><span>Table</span></a></li>
 							  <li><a><span>Table body</span></a></li>
 							  <li><a><span>Table head</span></a></li>
@@ -1523,14 +1523,14 @@
 							</ul>
 						  </div>  
 						  </li>
-						  <li class="cpe-dropdown-level-2 cpe-is-sticked-to-parent">
+						  <li class="cpe-dropdown-level-2 is-sticked-to-parent">
 							<a class="cpe-dropdown-level-2__toggle"><span>Coding</span>                   
 						  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown-chevron" viewBox="0 0 12 12">
 							<path d="M6.003 10.002a.997.997 0 0 1-.707-.293L.293 4.707a.999.999 0 1 1 1.414-1.414l4.296 4.295 4.293-4.293A.999.999 0 1 1 11.71 4.71l-5 5a.997.997 0 0 1-.707.293" fill-rule="evenodd"/>
 						  </svg>
 						  </a>
 						  <div class="cpe-dropdown-level-2__content">
-							<ul class="cpe-list cpe-is-linked">
+							<ul class="cpe-list is-linked">
 							  <li><a onclick="PreCode()"><span>Preformated</span></a></li>
 							  <li><a onclick="CodeAdd()"><span>Code</span></a></li>
 							</ul>
@@ -1540,7 +1540,7 @@
 					  </div>
 					</div>
 					  <div class="cpe-dropdown">
-					  <div class="cpe-button cpe-is-alternate cpe-is-squished cpe-dropdown__toggle" title="Spelling">
+					  <div class="cpe-button is-alternate is-squished cpe-dropdown__toggle" title="Spelling">
 								  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" viewBox="0 0 24 24">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-document" />
 		 </svg> <span>Spellcheck</span> <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-tiny cpe-dropdown__toggle-chevron" viewBox="0 0 12 12">
@@ -1548,7 +1548,7 @@
 		  </svg>
 					  </div>
 					  <div class="cpe-dropdown__content">
-						  <ul class="cpe-list cpe-is-linked" style="line-height:1.2">
+						  <ul class="cpe-list is-linked" style="line-height:1.2">
 						  <li>
 							<a>
 							<input type="radio" name="spell" id="spell1" checked></input><label for="spell1">Autoselect</label>
@@ -1597,27 +1597,27 @@
 						  </ul>
 						</div>
 					  </div>
-					  <a class="cpe-button cpe-is-alternate cpe-is-squished" onclick="UndoAction()" title="Undo last action">
+					  <a class="cpe-button is-alternate is-squished" onclick="UndoAction()" title="Undo last action">
 								  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" viewBox="0 0 24 24">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-undo" />
 					</svg>
 					  </a>
-					  <a class="cpe-button cpe-is-alternate cpe-is-squished" onclick="RedoAction()" title="Redo last action">
+					  <a class="cpe-button is-alternate is-squished" onclick="RedoAction()" title="Redo last action">
 								  <svg xmlns="http://www.w3.org/2000/svg"  class="cpe-icon cpe-icon-small" viewBox="0 0 24 24">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-redo" />
 					</svg>
 					  </a>
-					  <a class="cpe-button cpe-is-alternate cpe-is-squished visualonly" title="Switch to source editing" href="#modalE12">
+					  <a class="cpe-button is-alternate is-squished visualonly" title="Switch to source editing" href="#modalE12">
 								  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" viewBox="0 0 24 24">
 					  <path d="M6.792 8.793L3.535 12.05l3.257 3.258a1.05 1.05 0 0 1-1.484 1.485l-4-4a1.05 1.05 0 0 1 0-1.485l4-4a1.049 1.049 0 1 1 1.484 1.485zm10.516 6.515l3.257-3.258-3.257-3.257a1.05 1.05 0 0 1 1.484-1.485l4 4c.41.41.41 1.075 0 1.485l-4 4a1.049 1.049 0 1 1-1.484-1.485zm-6.24 4.997a1.05 1.05 0 1 1-2.037-.512l4-16a1.05 1.05 0 1 1 2.041.51l-4 16z"/>
 					</svg> <span>Source</span>
 					  </a>
-					  <a class="cpe-button cpe-is-alternate cpe-is-squished visualonly" title="Convert Plain Text to HTML" onclick="HTMLize()">
+					  <a class="cpe-button is-alternate is-squished visualonly" title="Convert Plain Text to HTML" onclick="HTMLize()">
 								  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" viewBox="0 0 24 24">
 					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-document" />
 					</svg> <span>HTMLize</span>
 					  </a>
-					  <a class="cpe-button cpe-is-alternate cpe-is-squished visualonly" title="Convert HTML to Plain Text" onclick="unHTMLize()">
+					  <a class="cpe-button is-alternate is-squished visualonly" title="Convert HTML to Plain Text" onclick="unHTMLize()">
 								  <svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" viewBox="0 0 24 24">
 					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-text" />
 					</svg> <span>Plain text</span>
@@ -1645,8 +1645,8 @@
       </nav>
       <nav class="mpisto-right-pane">
 				<nav class="pageheader-search search-container">
-				  <input class="cpe-input cpe-is-borderline" placeholder="Search Qora Qore Web;"></input>
-				  <button class="cpe-button cpe-is-squished cpe-is-borderline"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+				  <input class="cpe-input is-borderline" placeholder="Search Qora Qore Web;"></input>
+				  <button class="cpe-button is-squished is-borderline"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 		  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-magnifying-glass" />
 		</svg>
 				  </button>
@@ -1669,7 +1669,7 @@
 	  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown-tiny" /> 
 	  </svg> </div> </div>
 					  <div class="cpe-dropdown__content">
-						<ol class="cpe-list cpe-is-linked">
+						<ol class="cpe-list is-linked">
 						  <li><a href="#modalE2"><span>Local</span></a></li>
 						  <li><a href="#modalE3"><span>Youtube</span></a></li>
 						  <li><a href="#modalE4"><span>Vimeo</span></a></li>
@@ -1687,7 +1687,7 @@
 					</li>
 				   </ul>
 				  <footer class="buttons">
-				  <a class="cpe-button cpe-is-squished cpe-is-secondary">Help me decide</a>
+				  <a class="cpe-button is-squished is-secondary">Help me decide</a>
 				  </footer>
 			  </section>
 			  
@@ -1728,8 +1728,8 @@
 					</li>
 				   </ul>
 				  <footer class="buttons">
-				  <a class="cpe-button cpe-is-squished cpe-is-secondary">How to use?</a>
-				  <a class="cpe-button cpe-is-squished cpe-is-secondary">Clear History</a>
+				  <a class="cpe-button is-squished is-secondary">How to use?</a>
+				  <a class="cpe-button is-squished is-secondary">Clear History</a>
 				  </footer>
 			  </section>
 
@@ -1753,12 +1753,12 @@
 						</div>
 						</div>
 						<div class="category-add">
-							<input class="cpe-input" placeholder="Add new category..." onchange="CategoryAdd()"></input> <button onclick="CategoryAdd()" class="cpe-button cpe-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-plus" /</svg> <span>Add</span></button>
+							<input class="cpe-input" placeholder="Add new category..." onchange="CategoryAdd()"></input> <button onclick="CategoryAdd()" class="cpe-button is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-plus" /</svg> <span>Add</span></button>
 						</div>
 					</li>
 				   </ul>
 				  <footer class="buttons">
-				  <a class="cpe-button cpe-is-squished cpe-is-secondary">How to use?</a>
+				  <a class="cpe-button is-squished is-secondary">How to use?</a>
 				  </footer>
 			  </section>
 
@@ -1778,7 +1778,7 @@
 					</li>
 				   </ul>
 				  <footer class="buttons">
-				  <a class="cpe-button cpe-is-squished cpe-is-secondary" href="#modalE11">Used Templates</a>
+				  <a class="cpe-button is-squished is-secondary" href="#modalE11">Used Templates</a>
 				  </footer>
 			  </section>
 
@@ -1793,7 +1793,7 @@
           </li>
           </ul>
               <footer class="buttons">
-              <a class="cpe-button cpe-is-squished cpe-is-secondary" href="https://discordapp.com/invite/signup">Don't have an account?</a>
+              <a class="cpe-button is-squished is-secondary" href="https://discordapp.com/invite/signup">Don't have an account?</a>
               </footer>
           </section>
           <section class="mpisto-module activity-module construct-off">
@@ -1817,7 +1817,7 @@
                 </li>
               </ul>
               <footer class="buttons">
-              <a class="cpe-button cpe-is-squished cpe-is-secondary">More Activity</a>
+              <a class="cpe-button is-squished is-secondary">More Activity</a>
               </footer>
           </section>
           <section class="mpisto-module logs-module construct-off">
@@ -1841,7 +1841,7 @@
                 </li>-->
               </ul>
               <footer class="buttons">
-              <a class="cpe-button cpe-is-squished cpe-is-secondary">More Logs</a>
+              <a class="cpe-button is-squished is-secondary">More Logs</a>
               </footer>
           </section>
           <section class="mpisto-module chat-module construct-off">
@@ -1854,7 +1854,7 @@
               <span class="stats">7 Members Online <i>(<a title="Click to see which memebrs chat now">Which?</a>)</i></span>
               </ul>
               <footer class="buttons">
-              <a class="cpe-button cpe-is-squished cpe-is-secondary">Join Chat</a>
+              <a class="cpe-button is-squished is-secondary">Join Chat</a>
               </footer>
           </section>
         </div>
@@ -1995,8 +1995,8 @@
 			<nav colspan="2" class="app-download" >
 					<h2><small>Want to start your work at Mpisto?<br>Start your new wiki now or Download our App?</small></h2>
 				<div>
-					<span><a class="cpe-button cpe-is-secondary">Create a Wiki</a></span>
-					<span><a class="cpe-button cpe-is-secondary" href="mpisto-store://Mpisto/MpistoWar">Download App</a></span>
+					<span><a class="cpe-button is-secondary">Create a Wiki</a></span>
+					<span><a class="cpe-button is-secondary" href="mpisto-store://Mpisto/MpistoWar">Download App</a></span>
 				</div>
 			</nav>
 		</section>
@@ -2062,7 +2062,7 @@
 	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-pencil" />
 	</svg>
-      <span>Edit Personal Info</span> <a class="cpe-button cpe-is-square cpe-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
+      <span>Edit Personal Info</span> <a class="cpe-button is-square is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-cross" />
                   </svg></a></h1>
    <section class="UP_editor">
@@ -2085,7 +2085,7 @@
 			</svg>		
 		</div>
 		<div class="cpe-dropdown__content">
-			<ul class="cpe-list cpe-is-linked">
+			<ul class="cpe-list is-linked">
 				<li value="1"><a>1</a></li>
 				<li value="2"><a>2</a></li>
 				<li value="3"><a>3</a></li>
@@ -2128,7 +2128,7 @@
 			</svg>		
 		</div>
 		<div class="cpe-dropdown__content">
-			<ul class="cpe-list cpe-is-linked">
+			<ul class="cpe-list is-linked">
 				<li value="January"><a>January</a></li>
 				<li value="February"><a>February</a></li>
 				<li value="March"><a>March</a></li>
@@ -2195,7 +2195,7 @@
    </aside>
    </section>
    <footer>
-   <button class="cpe-button cpe-is-squished" onclick="SaveUserContent()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+   <button class="cpe-button is-squished" onclick="SaveUserContent()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-checkmark" />
 	</svg> <span>Done</span></button>
    </footer>
@@ -2208,7 +2208,7 @@
 	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-user" />
 	</svg>
-      <span>Set your Avatar</span> <a class="cpe-button cpe-is-square cpe-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
+      <span>Set your Avatar</span> <a class="cpe-button is-square is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-cross" />
                   </svg></a></h1>
    <section>
@@ -2245,7 +2245,7 @@
 		<a onclick="SetAvatar('24')"><img src="QoreVatar/Avatar24.png" class="options-avatar" /></a>
 	</div>
 	<h2>Custom Avatar</h2>
-			<div class="cpe-is-hidden">
+			<div class="is-hidden">
 				<input name="05" id="41" onchange="UploadPicture2(this.files)" type="file"></input>
 			</div>
 	<div style="display:flex; margin:0 auto; max-width:640px; align-items:center; align-content:space-evenly; flex-wrap:wrap; justify-content:space-evenly;">
@@ -2267,7 +2267,7 @@
 	</div>
    </section>
    <footer>
-   <button class="cpe-button cpe-is-secondary cpe-is-alternate cpe-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+   <button class="cpe-button is-secondary is-alternate is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-question" />
 	</svg> <span>Which one is the bast?</span></button>
    </footer>
@@ -2281,11 +2281,11 @@
 	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-image" />
 	</svg>
-      <span>Add Image</span> <a class="cpe-button cpe-is-square cpe-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
+      <span>Add Image</span> <a class="cpe-button is-square is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-cross" />
                   </svg></a></h1>
    <section>
-   Horay, you're adding a picture<input type="file" class="cpe-is-hidden" id="FUpload1" accept="image/*"></input>
+   Horay, you're adding a picture<input type="file" class="is-hidden" id="FUpload1" accept="image/*"></input>
     <br>
     <label>Name:</label> <input class="cpe-input" value="" placeholder="Name of the pic"></input> <div class="cpe-button-group"><label class="uploadbutton" for="FUpload1"><a class="cpe-button"><span>Upload</span></a></label><a class="cpe-button"><span>Find Pic from wiki</span></a></div>
     <br>
@@ -2299,10 +2299,10 @@
     <label>Position:</label> <input type="radio" name="01" id="01" checked></input><label for="01">Left</label> <input type="radio" name="01" id="02"></input><label for="02">Center</label> <input type="radio" name="01" id="03"></input><label for="03">Right</label>
    </section>
    <footer>
-   <button class="cpe-button cpe-is-secondary cpe-is-alternate cpe-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+   <button class="cpe-button is-secondary is-alternate is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-checkmark" />
 	</svg> <span>Proceed</span></button>
-   <button class="cpe-button cpe-is-secondary cpe-is-alternate cpe-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+   <button class="cpe-button is-secondary is-alternate is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-refresh" />
 	</svg> <span>Reset form</span></button>   </footer>
     </div>
@@ -2314,11 +2314,11 @@
 	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-video" />
 	</svg>
-      <span>Add Video</span> <a class="cpe-button cpe-is-square cpe-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
+      <span>Add Video</span> <a class="cpe-button is-square is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-cross" />
                   </svg></a></h1>
    <section>
-   Horay, you're adding a Video<input type="file" class="cpe-is-hidden" id="FUpload2" accept="video/*"></input>
+   Horay, you're adding a Video<input type="file" class="is-hidden" id="FUpload2" accept="video/*"></input>
     <br>
     <label>Name:</label> <input class="cpe-input" value="" placeholder="Name of the video"></input> <div class="cpe-button-group"><label class="uploadbutton" for="FUpload2"><a class="cpe-button"><span>Upload</span></a></label><a class="cpe-button"><span>Find Video from wiki</span></a></div>
     <br>
@@ -2329,10 +2329,10 @@
     <label>Position:</label> <input type="radio" name="11" id="11" checked></input><label for="11">Left</label> <input type="radio" name="11" id="12"></input><label for="12">Center</label> <input type="radio" name="11" id="13"></input><label for="13">Right</label>
    </section>
    <footer>
-   <button class="cpe-button cpe-is-secondary cpe-is-alternate cpe-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+   <button class="cpe-button is-secondary is-alternate is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-checkmark" />
 	</svg> <span>Proceed</span></button>
-   <button class="cpe-button cpe-is-secondary cpe-is-alternate cpe-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+   <button class="cpe-button is-secondary is-alternate is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-refresh" />
 	</svg> <span>Reset form</span></button>   </footer>
     </div>
@@ -2344,7 +2344,7 @@
 	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-youtube" />
 	</svg>
-      <span>Add Youtube Video</span> <a class="cpe-button cpe-is-square cpe-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
+      <span>Add Youtube Video</span> <a class="cpe-button is-square is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-cross" />
                   </svg></a></h1>
    <section>
@@ -2359,10 +2359,10 @@
     <label>Position:</label> <input type="radio" name="21" id="21" checked></input><label for="21">Left</label> <input type="radio" name="21" id="22"></input><label for="22">Center</label> <input type="radio" name="21" id="23"></input><label for="23">Right</label>
    </section>
    <footer>
-   <button class="cpe-button cpe-is-secondary cpe-is-alternate cpe-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+   <button class="cpe-button is-secondary is-alternate is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-checkmark" />
 	</svg> <span>Proceed</span></button>
-   <button class="cpe-button cpe-is-secondary cpe-is-alternate cpe-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+   <button class="cpe-button is-secondary is-alternate is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-refresh" />
 	</svg> <span>Reset form</span></button>   </footer>
     </div>
@@ -2374,7 +2374,7 @@
 	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-video" />
 	</svg>
-      <span>Add Vimeo Video</span> <a class="cpe-button cpe-is-square cpe-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
+      <span>Add Vimeo Video</span> <a class="cpe-button is-square is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-cross" />
                   </svg></a></h1>
    <section>
@@ -2389,10 +2389,10 @@
     <label>Position:</label> <input type="radio" name="31" id="31" checked></input><label for="31">Left</label> <input type="radio" name="31" id="32"></input><label for="32">Center</label> <input type="radio" name="31" id="33"></input><label for="33">Right</label>
    </section>
    <footer>
-   <button class="cpe-button cpe-is-secondary cpe-is-alternate cpe-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+   <button class="cpe-button is-secondary is-alternate is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-checkmark" />
 	</svg> <span>Proceed</span></button>
-   <button class="cpe-button cpe-is-secondary cpe-is-alternate cpe-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+   <button class="cpe-button is-secondary is-alternate is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-refresh" />
 	</svg> <span>Reset form</span></button>
    </footer>
@@ -2406,7 +2406,7 @@
 	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-link" />
 	</svg>
-      <span>Add Link</span> <a class="cpe-button cpe-is-square cpe-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
+      <span>Add Link</span> <a class="cpe-button is-square is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-cross" />
                   </svg></a></h1>
    <section>
@@ -2421,10 +2421,10 @@
     <label>Kind:</label> <input type="radio" name="41" id="41" checked></input><label for="41">Qora Qore Wikis</label> <input type="radio" name="41" id="42"></input><label for="42">External Site</label>
    </section>
    <footer>
-   <button class="cpe-button cpe-is-secondary cpe-is-alternate cpe-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+   <button class="cpe-button is-secondary is-alternate is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-checkmark" />
 	</svg> <span>Proceed</span></button>
-   <button class="cpe-button cpe-is-secondary cpe-is-alternate cpe-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+   <button class="cpe-button is-secondary is-alternate is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-refresh" />
 	</svg> <span>Reset form</span></button>
    </footer>
@@ -2437,7 +2437,7 @@
 	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-grid" />
 	</svg>
-      <span>Add Table</span> <a class="cpe-button cpe-is-square cpe-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
+      <span>Add Table</span> <a class="cpe-button is-square is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-cross" />
                   </svg></a></h1>
    <section>
@@ -2452,10 +2452,10 @@
     <label>Headers:</label> <input type="radio" name="51" id="51" checked></input><label for="51">First Row</label> <input type="radio" name="51" id="52"></input><label for="52">First Column</label> <input type="radio" name="51" id="53"></input><label for="53">First Row & Column</label> <input type="radio" name="51" id="54"></input><label for="54">Nothing</label>
    </section>
    <footer>
-   <button class="cpe-button cpe-is-secondary cpe-is-alternate cpe-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+   <button class="cpe-button is-secondary is-alternate is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-checkmark" />
 	</svg> <span>Proceed</span></button>
-   <button class="cpe-button cpe-is-secondary cpe-is-alternate cpe-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+   <button class="cpe-button is-secondary is-alternate is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-refresh" />
 	</svg> <span>Reset form</span></button>
    </footer>
@@ -2468,7 +2468,7 @@
 	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-preformat" />
 	</svg>
-      <span>Add IFrame</span> <a class="cpe-button cpe-is-square cpe-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
+      <span>Add IFrame</span> <a class="cpe-button is-square is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-cross" />
                   </svg></a></h1>
    <section>
@@ -2501,10 +2501,10 @@
     <input type="checkbox" name="63" id="a1022"></input> <label for="a1022">Allow Top Navigation by User Activation</label>
    </section>
    <footer>
-   <button class="cpe-button cpe-is-secondary cpe-is-alternate cpe-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+   <button class="cpe-button is-secondary is-alternate is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-checkmark" />
 	</svg> <span>Proceed</span></button>
-   <button class="cpe-button cpe-is-secondary cpe-is-alternate cpe-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+   <button class="cpe-button is-secondary is-alternate is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-refresh" />
 	</svg> <span>Reset form</span></button>
    </footer>
@@ -2517,7 +2517,7 @@
 	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-page" />
 	</svg>
-      <span>Add Infobox</span> <a class="cpe-button cpe-is-square cpe-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
+      <span>Add Infobox</span> <a class="cpe-button is-square is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-cross" />
                   </svg></a></h1>
    <section>
@@ -2533,10 +2533,10 @@
     <label>Title:</label> <input class="cpe-input" value="" style="width:300px;" placeholder="Infobox Title"></input> <a class="cpe-button"><span>Configure data</span></a>
    </section>
    <footer>
-   <button class="cpe-button cpe-is-secondary cpe-is-alternate cpe-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+   <button class="cpe-button is-secondary is-alternate is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-checkmark" />
 	</svg> <span>Proceed</span></button>
-   <button class="cpe-button cpe-is-secondary cpe-is-alternate cpe-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+   <button class="cpe-button is-secondary is-alternate is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-refresh" />
 	</svg> <span>Reset form</span></button>
    </footer>
@@ -2549,7 +2549,7 @@
 	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-document" />
 	</svg>
-      <span>Add Template</span> <a class="cpe-button cpe-is-square cpe-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
+      <span>Add Template</span> <a class="cpe-button is-square is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-cross" />
                   </svg></a></h1>
    <section>
@@ -2575,10 +2575,10 @@
     </select> <div class="cpe-button-group"><a class="cpe-button"><span>Configure selected template</span></a><a class="cpe-button"><span>Find more templates from Zekzphire Store</span></a></div>
    </section>
    <footer>
-   <button class="cpe-button cpe-is-secondary cpe-is-alternate cpe-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+   <button class="cpe-button is-secondary is-alternate is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-checkmark" />
 	</svg> <span>Proceed</span></button>
-   <button class="cpe-button cpe-is-secondary cpe-is-alternate cpe-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+   <button class="cpe-button is-secondary is-alternate is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-refresh" />
 	</svg> <span>Reset form</span></button>
    </footer>
@@ -2591,7 +2591,7 @@
 	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-pencil" />
 	</svg>
-      <span>Save Page</span> <a class="cpe-button cpe-is-square cpe-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
+      <span>Save Page</span> <a class="cpe-button is-square is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-cross" />
                   </svg></a></h1>
    <section class="save-page-wrapper">
@@ -2612,10 +2612,10 @@
     <input type="checkbox" name="71" id="73"></input> <label for="73">Leave a redirect behind if page name was changed</label>
    </section>
    <footer>
-   <button class="cpe-button cpe-is-secondary cpe-is-alternate cpe-is-squished" onclick="SaveChanges()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+   <button class="cpe-button is-secondary is-alternate is-squished" onclick="SaveChanges()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-article" />
 	</svg> <span>Save Page</button>
-   <button class="cpe-button cpe-is-secondary cpe-is-alternate cpe-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+   <button class="cpe-button is-secondary is-alternate is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-refresh" />
 	</svg> <span>Reset form</span></button>
    </footer>
@@ -2629,7 +2629,7 @@
 	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-bookmark" />
 	</svg>
-      <span>List of used templates on "Main Page"</span> <a class="cpe-button cpe-is-square cpe-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
+      <span>List of used templates on "Main Page"</span> <a class="cpe-button is-square is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-cross" />
                   </svg></a></h1>
    <section>
@@ -2641,7 +2641,7 @@
 		</ul>
    </section>
    <footer>
-   <button class="cpe-button cpe-is-alternate cpe-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+   <button class="cpe-button is-alternate is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-question" />
 	</svg> <span>Help me</span></button>
    </footer>
@@ -2654,7 +2654,7 @@
 	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-preformat" />
 	</svg>
-      <span>Source Editor</span> <a class="cpe-button cpe-is-square cpe-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
+      <span>Source Editor</span> <a class="cpe-button is-square is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-cross" />
                   </svg></a></h1>
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-cross" />
@@ -2675,7 +2675,7 @@
       </textarea>
 	</section>
    <footer>
-   <button class="cpe-button cpe-is-alternate cpe-is-squished" onclick="UpdateVisual()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+   <button class="cpe-button is-alternate is-squished" onclick="UpdateVisual()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-pencil" />
 	</svg> <span>Save Changes</button>
    </footer>
@@ -2688,37 +2688,37 @@
 	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-gear" />
 	</svg>
-      <span>Customize Toolbar</span> <a class="cpe-button cpe-is-square cpe-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
+      <span>Customize Toolbar</span> <a class="cpe-button is-square is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-cross" />
                   </svg></a></h1>
    <section>
 		You can specify the items that will appear on the right toolbar
 		<h2>Current Items</h2>
 		<div class="toolbar-added-items">
-			<button value="26" class="cpe-button cpe-is-secondary cpe-is-square whatlinkshere" title="What Links Here" onclick="RemoveItem(26)">
+			<button value="26" class="cpe-button is-secondary is-square whatlinkshere" title="What Links Here" onclick="RemoveItem(26)">
 				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-link"></use>
 				</svg>
 			</button>
-			<button value="18" class="cpe-button cpe-is-secondary cpe-is-square logs" title="Public Logd" onclick="RemoveItem(18)">
+			<button value="18" class="cpe-button is-secondary is-square logs" title="Public Logd" onclick="RemoveItem(18)">
 				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-eye"></use>
 				</svg>
 			</button>
-			<button value="27" class="cpe-button cpe-is-secondary cpe-is-square designer" title="Wiki Personalization" onclick="RemoveItem(27)">
+			<button value="27" class="cpe-button is-secondary is-square designer" title="Wiki Personalization" onclick="RemoveItem(27)">
 				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon" enable-background="new 0 0 24 24" height="28px" viewBox="0 0 24 24" width="28px" fill="currentColor"><g><rect fill="none" height="24" width="24"/></g><g><g><g><g><path d="M12,22C6.49,22,2,17.51,2,12S6.49,2,12,2s10,4.04,10,9c0,3.31-2.69,6-6,6h-1.77c-0.28,0-0.5,0.22-0.5,0.5 c0,0.12,0.05,0.23,0.13,0.33c0.41,0.47,0.64,1.06,0.64,1.67C14.5,20.88,13.38,22,12,22z M12,4c-4.41,0-8,3.59-8,8s3.59,8,8,8 c0.28,0,0.5-0.22,0.5-0.5c0-0.16-0.08-0.28-0.14-0.35c-0.41-0.46-0.63-1.05-0.63-1.65c0-1.38,1.12-2.5,2.5-2.5H16 c2.21,0,4-1.79,4-4C20,7.14,16.41,4,12,4z"/><circle cx="6.5" cy="11.5" r="1.5"/><circle cx="9.5" cy="7.5" r="1.5"/><circle cx="14.5" cy="7.5" r="1.5"/><circle cx="17.5" cy="11.5" r="1.5"/></g></g></g></g></svg>
 			</button>
-			<button value="0" class="cpe-button cpe-is-secondary cpe-is-square dashbaord" title="Admin Dashboard" onclick="RemoveItem(0)">
+			<button value="0" class="cpe-button is-secondary is-square dashbaord" title="Admin Dashboard" onclick="RemoveItem(0)">
 				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dashboard"></use>
 				</svg>
 			</button>
-			<button value="21" class="cpe-button cpe-is-secondary cpe-is-square discussions-reported" title="Reported Posts" onclick="RemoveItem(21)">
+			<button value="21" class="cpe-button is-secondary is-square discussions-reported" title="Reported Posts" onclick="RemoveItem(21)">
 				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-alert"></use>
 				</svg>
 			</button>
-			<button value="20" class="cpe-button cpe-is-secondary cpe-is-square activity" title="Recent Activity" onclick="RemoveItem(20)">
+			<button value="20" class="cpe-button is-secondary is-square activity" title="Recent Activity" onclick="RemoveItem(20)">
 				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-activity"></use>
 				</svg>
@@ -2867,10 +2867,10 @@
 			</div>
    </section>
    <footer>
-   <button class="cpe-button cpe-is-secondary cpe-is-squished cpe-is-alternate" onclick="ResetToolbarItems()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+   <button class="cpe-button is-secondary is-squished is-alternate" onclick="ResetToolbarItems()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-refresh" />
 	</svg> <span>Reset Form</span></button>
-   <button class="cpe-button cpe-is-squished cpe-is-alternate" onclick="SaveToolbarItems()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+   <button class="cpe-button is-squished is-alternate" onclick="SaveToolbarItems()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-checkmark" />
 	</svg> <span>Save</span></button>
    </footer>
@@ -2958,7 +2958,7 @@ function dropFunction() {
     <div class="cpe-dropdown">
       <a class="link">Wikis</a>
       <div class="cpe-dropdown-content">
-        <ul class="cpe-list cpe-is-linked">
+        <ul class="cpe-list is-linked">
         </ul>
       </div>
     </div>

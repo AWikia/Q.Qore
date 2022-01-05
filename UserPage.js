@@ -85,7 +85,7 @@ if (x === "") {
 /* Rest of script */
 $('#modal1 .lightbox .UP_editor').prepend ( 
       '<div class="cpe-banner-notification__container" id="floatingbanner" style="top:auto; position:relative;">' +
-        '<div class="cpe-banner-notification cpe-success cpe-is-transparent" style="transform:none;" id="BannerSave">' +
+        '<div class="cpe-banner-notification cpe-success is-transparent" style="transform:none;" id="BannerSave">' +
           '<div class="cpe-banner-notification__icon">' +
             '<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">' +
               '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-checkmark-small" />' +
@@ -108,13 +108,13 @@ setTimeout(RemoveBannerUP, 2500);
 function RemoveBannerUP() {
 	$('#modaEl10 .lightbox .save-page-wrapper #BannerSave').attr("style", "");
     var x = document.getElementById("BannerSave");
-        x.className += " cpe-is-transparent";
+        x.className += " is-transparent";
 	    setTimeout(RemoveBannerUP1, 405) 
 }
 
 function RemoveBannerUP2() {
     var x = document.getElementById("BannerSave");
-       x.className = x.className.replace (" cpe-is-transparent", "");
+       x.className = x.className.replace (" is-transparent", "");
 }
 
 function RemoveBannerUP1() {

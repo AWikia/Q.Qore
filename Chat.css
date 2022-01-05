@@ -66,6 +66,10 @@ body *, :before, :after {
 	backdrop-filter:none!important;
 }
 
+container {
+	background-color:var(--community-background-color);
+}
+
 .chat-site-wrapper {
 	display:flex;
 	flex-direction:column;
@@ -76,7 +80,7 @@ body *, :before, :after {
 	margin:0 auto;
 	padding:10px;
 	overflow-y:hidden;
-	color:var(--content-color);
+	color:var(--page-text-background-color);
 }
 
 @media only screen and (max-width:1023px) {
@@ -92,8 +96,8 @@ body *, :before, :after {
 	height:75px;
 	margin:0 0 10px;
 	align-items:center;
-	border:1px solid var(--content-border);
-	background-color:var(--content-bg);
+	border:1px solid var(--page-border-background-color);
+	background-color:var(--page-background-color);
 	border-radius:6px 6px 0 0;
 	padding:0 18px;
 	font-size:14px;
@@ -112,7 +116,7 @@ body *, :before, :after {
 .chat-header .member-container {
 	display:flex;
 	align-items:center;
-	border-left-color:var(--content-border);
+	border-left-color:var(--page-border-background-color);
 	padding:0 5px 0 10px;
 	height:75px;
 	margin-left:5px;
@@ -123,7 +127,7 @@ body *, :before, :after {
 	height:57px;
 	border-width:4px;
 	box-sizing:border-box;
-	border-color:var(--content-border);
+	border-color:var(--page-border-background-color);
 	padding:2px;
 	box-shadow:0 0 0 2px currentColor, 0 0 0 2px currentColor inset;
 }
@@ -141,24 +145,24 @@ body *, :before, :after {
 	width:100%;
 	display:flex;
 	flex-direction:column;
-	border:1px solid var(--content-border);
-	background-color:var(--content-bg);
+	border:1px solid var(--page-border-background-color);
+	background-color:var(--page-background-color);
 	border-radius:0 0 6px 6px;
 }
 
 .chat-content * {
 	scrollbar-width:thin;
-	scrollbar-color:var(--emphasis-bg) transparent;
+	scrollbar-color:var(--page-secondary-background-color) transparent;
 }
 
 [visualtheme*="contrast"] .chat-content * {
-	scrollbar-color:var(--content-color) transparent;
+	scrollbar-color:var(--page-text-background-color) transparent;
 }
 
 .chat-content .wrapper {
 	display:flex;
 	flex:1;
-	border-bottom:1px solid var(--content-border);
+	border-bottom:1px solid var(--page-border-background-color);
 	width:100%;
 }
 
@@ -220,12 +224,12 @@ body *, :before, :after {
 
 
 .chat-content .wrapper section message[you] {
-	background-color:var(--dropdown-bg);
+	background-color:var(--page-secondary-background-color);
 }
 
 [visualtheme*="contrast"] .chat-content .wrapper section message[you] {
-	color:var(--button-color-text);
-	background-color:var(--button-color);
+	color:var(--accent-foreground-color);
+	background-color:var(--accent-background-color);
 }
 
 .chat-content .wrapper section message .cpe-avatar {
@@ -273,7 +277,7 @@ body *, :before, :after {
 
 .chat-content .wrapper section:not([pane]) {
 	flex:1;
-	border:1px solid var(--content-border);
+	border:1px solid var(--page-border-background-color);
 	border-style:hidden solid;
 	overflow-x:hidden;
 	overflow-y:auto;
@@ -287,7 +291,7 @@ body *, :before, :after {
 
 .chat-content .wrapper section[pane] .cpe-button-group {
 	display:flex;
-	border-top:1px solid var(--content-border);
+	border-top:1px solid var(--page-border-background-color);
 	padding:5px;
 }
 
@@ -302,7 +306,7 @@ body *, :before, :after {
 	font-weight:inherit;
 	line-height:20px;
 	text-align:center;
-	border-bottom:1px solid var(--content-border);
+	border-bottom:1px solid var(--page-border-background-color);
 }
 
 .chat-content .wrapper section[pane] .list {
@@ -334,15 +338,15 @@ body *, :before, :after {
 }
 
 body:not([class*="page"]) .chat-content .wrapper section[pane] .list .channel:nth-child(1), .page-1 .chat-content .wrapper section[pane] .list .channel:nth-child(2) {
-	background-color:rgba(var(--link-color-rgb),0.2);
-	border-color:rgba(var(--link-color-rgb),0.2);
-	color:var(--link-color);
+	background-color:rgba(var(--anchor-background-color-rgb),0.2);
+	border-color:rgba(var(--anchor-background-color-rgb),0.2);
+	color:var(--anchor-background-color);
 }
 
 [visualtheme*="contrast"] body:not([class*="page"]) .chat-content .wrapper section[pane] .list .channel:nth-child(1), [visualtheme*="contrast"] .page-1 .chat-content .wrapper section[pane] .list .channel:nth-child(2) {
-	border-color:var(--button-color-text);
-	background-color:var(--button-color);
-	color:var(--button-color-text);
+	border-color:var(--accent-foreground-color);
+	background-color:var(--accent-background-color);
+	color:var(--accent-foreground-color);
 }
 
 .chat-content .wrapper section[pane] .list .info {
@@ -355,13 +359,13 @@ body:not([class*="page"]) .chat-content .wrapper section[pane] .list .channel:nt
 }
 
 .chat-content .wrapper section[pane] .list .cpe-dropdown:hover .info {
-	background-color:var(--dropdown-bg);
+	background-color:var(--page-secondary-background-color);
 }
 
 
 [visualtheme*="contrast"] .chat-content .wrapper section[pane] .list .cpe-dropdown:hover .info {
-	background-color:var(--button-color);
-	color:var(--button-color-text);
+	background-color:var(--accent-background-colro);
+	color:var(--accent-foreground-color);
 }
 
 .chat-content .wrapper section[pane] .list .info:first-child {

@@ -131,9 +131,9 @@
 
 <html class="main">
   <body onfocus="CheckTheme()" onblur="CheckTheme()"  class="mpisto-2018 options" style="overflow:hidden;" id="Handler" onclick="">
-  <div class="gradient-overlay" style="position:absolute; pointer-events:none;"></div>
-  <div class="gradient-overlay-2" style="position:absolute; pointer-events:none;"></div>
-  <div class="body-community-background" style="position:absolute; pointer-events:none;"></div>
+	<div class="gradient-overlay" style="position:absolute; pointer-events:none;"></div>
+	<div class="invertion-on" style=" pointer-events: none; position: absolute; z-index: -2; width: 100%; height: 100%;"><div class="body-community-background " style="position:absolute; pointer-events:none;"></div></div>
+	<div class="body-community-background-color" style="position:absolute; pointer-events:none;"></div>
   <container>
   <main>
   <header class="mpisto-global-sidebar mpisto-global-navigation">
@@ -168,13 +168,13 @@
 			<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-discord" /></svg>
 		</a>
-		<div class="cpe-dropdown cpe-has-dark-shadow explore-menu" cpe-orient="land">
+		<div class="cpe-dropdown has-dark-shadow explore-menu" cpe-orient="land">
 			<div class="link cpe-dropdown__toggle" cpe-tooltip="Explore">
 				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-menu-control" /></svg> 
 			</div>
 		    <div class="cpe-dropdown__content">
-				<ul class="cpe-list cpe-is-linked">
+				<ul class="cpe-list is-linked">
 					<li><a href="https://alpha-technologies.fandom.com/el" translate="no">A Techno Wiki</a></li>
 					<li><a href="https://alpha-styles.fandom.com/el" translate="no">A Techo Dev Wiki</a></li>
 					<li><a href="https://alphafoundation.fandom.com/el" translate="no">A Wiki Foundation</a></li>
@@ -185,13 +185,13 @@
 	</div>
 	<div class="bottom-links">
 	<!-- Wikis -->
-		<div class="cpe-dropdown cpe-has-dark-shadow create-wiki" cpe-orient="land">
+		<div class="cpe-dropdown has-dark-shadow create-wiki" cpe-orient="land">
 			<div class="link cpe-dropdown__toggle cell" cpe-tooltip="Wikis">
 				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-community" /></svg> 
 			</div>
-		    <div class="cpe-dropdown__content cpe-is-left-aligned">
-				<ul class="cpe-list cpe-is-linked">
+		    <div class="cpe-dropdown__content is-left-aligned">
+				<ul class="cpe-list is-linked">
 				  <li><a>Create a Wiki</a></li>
 				  <li><a>Import a Wiki</a></li>
 				  <li><a>Report a Wiki</a></li>
@@ -199,7 +199,7 @@
 			</div>
 		</div>
 		<!-- Search -->
-		<div class="cpe-dropdown cpe-has-dark-shadow search" cpe-orient="land">
+		<div class="cpe-dropdown has-dark-shadow search" cpe-orient="land">
 			<div class="link cpe-dropdown__toggle" cpe-tooltip="Search">
 				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-magnifying-glass" /></svg> 
@@ -208,8 +208,8 @@
 				<ul class="cpe-list">
 					<li>
 						<div class="pageheader-search">
-							<input class="cpe-input cpe-is-borderline" type="search" placeholder="Search on Qora Qore..."></input>
-							<button class="cpe-button cpe-is-borderline">
+							<input class="cpe-input is-borderline" type="search" placeholder="Search on Qora Qore..."></input>
+							<button class="cpe-button is-borderline">
 								<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-magnifying-glass" /></svg>
 							</button>
@@ -219,35 +219,35 @@
 			</div>
 		</div>
 		<!-- Flags -->
-		<div class="cpe-dropdown cpe-has-dark-shadow flags-menu" cpe-orient="land">
+		<div class="cpe-dropdown has-dark-shadow flags-menu" cpe-orient="land">
 			<div class="link cpe-dropdown__toggle" cpe-tooltip="Flags">
 				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon ">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-flag" /> 
 				</svg>
 			</div>
-			<div class="cpe-dropdown__content cpe-is-right-aligned cpe-is-not-scrollable flags-dropdown">
-				<ul class="cpe-list cpe-has-lines-between cpe-has-ellipsis">
+			<div class="cpe-dropdown__content is-right-aligned is-not-scrollable flags-dropdown">
+				<ul class="cpe-list has-lines-between has-ellipsis">
 					<li>
-						<button class="cpe-button cpe-is-squished cpe-is-full-width">Manage Flags</button>
+						<button class="cpe-button is-squished is-full-width">Manage Flags</button>
 					</li>
 					<li>
-						<button class="cpe-button cpe-is-squished cpe-is-full-width">Enforce Flags</button>
+						<button class="cpe-button is-squished is-full-width">Enforce Flags</button>
 					</li>
 					<li>
-						<button class="cpe-button cpe-is-squished cpe-is-full-width">Clear all Flags</button>
+						<button class="cpe-button is-squished is-full-width">Clear all Flags</button>
 					</li>
 				</ul>
 			</div>
 		</div>
 	   <!-- Notification -->
-       <div class="cpe-dropdown cpe-has-dark-shadow notifications-menu" cpe-orient="land">
+       <div class="cpe-dropdown has-dark-shadow notifications-menu" cpe-orient="land">
         <div class="link cpe-dropdown__toggle" cpe-tooltip="Notifications">
 			<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon ">
 				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-bell" /> 
 			</svg>
 		</div>
-        <div class="cpe-dropdown__content cpe-is-right-aligned cpe-is-not-scrollable notification">
-          <ul class="cpe-list cpe-has-lines-between cpe-has-ellipsis">
+        <div class="cpe-dropdown__content is-right-aligned is-not-scrollable notification">
+          <ul class="cpe-list has-lines-between has-ellipsis">
            <li class="notification">
            <a>
            <div class="wrapper">
@@ -273,12 +273,12 @@
           </ul>
         </div>
       </div>
-		<div class="cpe-dropdown cpe-has-dark-shadow user-profile" cpe-orient="land">
+		<div class="cpe-dropdown has-dark-shadow user-profile" cpe-orient="land">
 			<div class="link cell cpe-dropdown__toggle" cpe-tooltip="HM100">
 				<img class="mpisto-avatar" alt="HM100" src="HM100.png"></img>
 			</div>
-			<div class="cpe-dropdown__content cpe-is-right-aligned">
-				<ul class="cpe-list cpe-is-linked">
+			<div class="cpe-dropdown__content is-right-aligned">
+				<ul class="cpe-list is-linked">
 				<li><a>Discussions Statistics</a></li>
 				<li><a>View Profile</a></li>
 				<li><a>Manage A Secure Account</a></li>
@@ -311,8 +311,8 @@
 				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-user" />
 			</svg>	
 		  </div>
-		  <div class="cpe-dropdown__content cpe-is-left-aligned">		
-			<ul class="cpe-list cpe-is-linked">
+		  <div class="cpe-dropdown__content is-left-aligned">		
+			<ul class="cpe-list is-linked">
 				<li>
 					<a>View Profile</a>
 				</li>
@@ -338,7 +338,7 @@
 			</svg>	
 		  </div>
 		  <div class="cpe-dropdown__content">		
-			  <ul class="cpe-list cpe-is-linked">
+			  <ul class="cpe-list is-linked">
 				<li>
 					<a>GMK Pages</a>
 				</li>
@@ -400,8 +400,8 @@
 		  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown" />
 		</svg>			
 	  </div>
-	  <div class="cpe-dropdown__content cpe-is-right-aligned">		
-		<ul class="cpe-list cpe-is-linked">					
+	  <div class="cpe-dropdown__content is-right-aligned">		
+		<ul class="cpe-list is-linked">					
 				  <li class="small">						
 					<a><svg version="1.1" class="cpe-icon cpe-icon-tiny" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
 						<path fill="currentcolor" d="M52.053 0c-1.28 3.968-2.56 7.893-2.56 13.141v991.104c0 9.259 2.603 14.507 7.851 19.755l487.040-515.968-492.331-508.032zM577.237 542.208l125.909 129.92-179.755 102.4s-228.48 129.877-354.475 202.197l408.32-434.517zM611.413 506.752l135.083 140.459c21.163-11.776 186.496-106.325 210.091-119.467 24.917-14.421 22.4-34.133 1.237-44.629-19.584-10.88-184.917-105.6-209.92-120.96l-136.491 144.597zM577.152 472.619l127.317-135.211-181.717-103.723s-296.235-169.472-394.795-226.048l449.195 464.981z"></path>
@@ -1176,13 +1176,13 @@
 		<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-plus" />
          </svg></div>
-         <div class="cpe-dropdown__content cpe-is-not-scrollable" style="top:-200%;">
+         <div class="cpe-dropdown__content is-not-scrollable" style="top:-200%;">
 			<ul class="cpe-list">
-			<li class="cpe-is-hidden">
+			<li class="is-hidden">
 				<input name="05" id="41" onchange="UploadPicture2(this.files)" type="file"></input>
 			</li>
 			<li>
-				<div class="cpe-floating-button-group cpe-is-vertical">
+				<div class="cpe-floating-button-group is-vertical">
 					<a class="cpe-floating-button" title="Wiki Files">		<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-community" />
          </svg></a>
@@ -1202,8 +1202,8 @@
     </div>
     <br>
     <br>
-    <a class="cpe-button cpe-is-squished" href="#modal2" onclick="">Change Avatar</a>
-<!--    <button class="cpe-button cpe-is-squished" onclick="RemovePicture2()">Remove avatar</button>-->
+    <a class="cpe-button is-squished" href="#modal2" onclick="">Change Avatar</a>
+<!--    <button class="cpe-button is-squished" onclick="RemovePicture2()">Remove avatar</button>-->
     </fieldset>
     </div>
     <div class="fieldset">
@@ -1224,13 +1224,13 @@
 		<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-plus" />
          </svg></div>
-         <div class="cpe-dropdown__content cpe-is-not-scrollable"  style="top:-200%;">
+         <div class="cpe-dropdown__content is-not-scrollable"  style="top:-200%;">
 			<ul class="cpe-list">
-			<li class="cpe-is-hidden">
+			<li class="is-hidden">
 				<input name="05" id="41-1" onchange="UploadPicture5(this.files)" type="file"></input>
 			</li>
 			<li>
-				<div class="cpe-floating-button-group cpe-is-vertical">
+				<div class="cpe-floating-button-group is-vertical">
 					<a class="cpe-floating-button" title="Wiki Files">		<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-community" />
          </svg></a>
@@ -1250,9 +1250,9 @@
     </div>
     <br>
     <br>
-    <a class="cpe-button cpe-is-squished" href="#modal3" onclick="">Change Avatar</a>
-<!--    <button class="cpe-button cpe-is-squished" onclick="RemovePicture5()">Remove avatar</button>-->
-    <button class="cpe-button cpe-is-squished">Reset Name</button>
+    <a class="cpe-button is-squished" href="#modal3" onclick="">Change Avatar</a>
+<!--    <button class="cpe-button is-squished" onclick="RemovePicture5()">Remove avatar</button>-->
+    <button class="cpe-button is-squished">Reset Name</button>
     </fieldset>
     </div>
     </div>
@@ -1563,21 +1563,13 @@ Checked = VisualEditor as default mode
 	</svg>
      Wiki Theme
      </h2>
-    <input type="radio" name="themechooser" id="theme-auto" onclick="colortheme('auto')" title="Picks the Wiki's theme in accordance of the Wiki Personalization configuration"></input><label for="theme-auto" title="Picks the Wiki's theme in accordance of the Wiki Personalization configuration">Auto</label>
+    <input type="radio" name="themechooser" id="theme-auto" checked onclick="colortheme('auto')" title="Picks the Wiki's theme in accordance of the Wiki Personalization configuration"></input><label for="theme-auto" title="Picks the Wiki's theme in accordance of the Wiki Personalization configuration">Auto</label>
 	<br>
     <input type="radio" name="themechooser" id="theme-auto-r" onclick="colortheme('auto-r')" title="Picks the Wiki's theme in accordance of the Wiki Personalization configuration but reversed"></input><label for="theme-auto-r" title="Picks the Wiki's theme in accordance of the Wiki Personalization configuration but reversed">Auto-Dark</label>
-	<br>
-    <input type="radio" name="themechooser" id="theme-system-a" onclick="colortheme('system-a')" checked title="Picks the Wiki's theme in accordance of the Wiki Personalization configuration but based on System's Color Scheme"></input><label for="theme-system-a" title="Picks the Wiki's theme in accordance of the Wiki Personalization configuration but based on System's Color Scheme">Auto-System</label>
-	<br>
-    <input type="radio" name="themechooser" id="theme-system-ar" onclick="colortheme('system-ar')" title="Picks the Wiki's theme in accordance of the Wiki Personalization configuration but based on System's Color Scheme and reversed"></input><label for="theme-system-ar" title="Picks the Wiki's theme in accordance of the Wiki Personalization configuration but based on System's Color Scheme and reversed">Auto-System-Dark</label>
 	<br>
     <input type="radio" name="themechooser" id="theme-light" onclick="colortheme('light')" title="Makes Wiki theme be light, even if that theme is dark-themed"></input><label for="theme-light" title="Makes Wiki theme be light, even if that theme is dark-themed">Light</label>
 	<br>
     <input type="radio" name="themechooser" id="theme-dark" onclick="colortheme('dark')" title="Makes Wiki theme be dark, even if that theme is light-themed"></input><label for="theme-dark" title="Makes Wiki theme be dark, even if that theme is light-themed">Dark</label>
-	<br>
-    <input type="radio" name="themechooser" id="theme-system" onclick="colortheme('system')" title="Picks the Wiki's theme in accordance of System's Color Scheme"></input><label for="theme-system" title="Picks the Wiki's theme in accordance of System's Color Scheme">System</label>
-	<br>
-    <input type="radio" name="themechooser" id="theme-system-r" onclick="colortheme('system-r')" title="Picks the Wiki's theme in accordance of System's Color Scheme but reversed"></input><label for="theme-system-r" title="Picks the Wiki's theme in accordance of System's Color Scheme but reversed">System-Dark</label>
     </fieldset>
     </div>
 
@@ -1614,21 +1606,6 @@ Checked = VisualEditor as default mode
     <br>
     <input type="radio" name="cfilters" id="cfilter6" onclick="ColorFilter('bluwht')"></input> <label for="cfilter6">Blue and White</label>
     <br>
-	</fieldset>
-	</div>
-    <div class="fieldset">
-    <fieldset>     
-     <h2>
-	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon" enable-background="new 0 0 24 24" height="28px" viewBox="0 0 24 24" width="28px" fill="currentColor"><g><rect fill="none" height="24" width="24"/></g><g><g><g><g><path d="M12,22C6.49,22,2,17.51,2,12S6.49,2,12,2s10,4.04,10,9c0,3.31-2.69,6-6,6h-1.77c-0.28,0-0.5,0.22-0.5,0.5 c0,0.12,0.05,0.23,0.13,0.33c0.41,0.47,0.64,1.06,0.64,1.67C14.5,20.88,13.38,22,12,22z M12,4c-4.41,0-8,3.59-8,8s3.59,8,8,8 c0.28,0,0.5-0.22,0.5-0.5c0-0.16-0.08-0.28-0.14-0.35c-0.41-0.46-0.63-1.05-0.63-1.65c0-1.38,1.12-2.5,2.5-2.5H16 c2.21,0,4-1.79,4-4C20,7.14,16.41,4,12,4z"/><circle cx="6.5" cy="11.5" r="1.5"/><circle cx="9.5" cy="7.5" r="1.5"/><circle cx="14.5" cy="7.5" r="1.5"/><circle cx="17.5" cy="11.5" r="1.5"/></g></g></g></g></svg>
-    Automated Theming Behavior
-     </h2>
-     Control the behavior of how automated color values shoul be created by adjusting these two sliders:
-		<div style="display:flex; align-items:center;">
-			<label>Light Background Threshold:</label><input type="range" onchange="UpdateColorThreshold()" class="color_threshold big" style="flex:1; padding:0 5px;" autocomplete="off" step="5" value="50" min="30" max="70" ></input>
-		</div>
-		<div style="display:flex; align-items:center;">
-			<label>Secondary Background Contrast:</label><input type="range" onchange="UpdateHoverRation()" class="hover_ration big" style="flex:1; padding:0 5px;" autocomplete="off" step="5" value="50" min="30" max="70" ></input>
-		</div>
 	</fieldset>
 	</div>
  <!-- 
@@ -1689,38 +1666,38 @@ Checked = VisualEditor as default mode
 </div>
 -->
 
-<div style="width:100px; height:100px; border-radius:30px; background-color:var(--background-color-blend-light);  color:var(--background-color-text); background-image:linear-gradient(to bottom, var(--background-color-blend-light), var(--background-color-blend));">
+<div style="width:100px; height:100px; border-radius:30px; background-color:var(--community-gradient-color);  color:var(--community-foreground-color); background-image:linear-gradient(to bottom, var(--community-gradient-color), var(--community-gradient-color-hover));">
 
 <svg id="svg" style="width:inherit; height:inherit; padding:4px;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="336.88888888888886" viewBox="0, 0, 400,336.88888888888886"><g id="svgg"><path id="path0" d="M152.219 5.345 C 131.916 12.561,125.406 28.637,120.007 84.889 C 113.900 148.518,107.967 160.844,50.274 229.769 C 25.981 258.791,9.775 279.477,7.053 284.939 C -4.324 307.764,19.499 332.142,42.240 320.946 C 48.379 317.924,48.157 318.155,63.265 299.070 C 68.314 292.692,78.608 280.017,86.142 270.904 L 99.839 254.333 105.697 253.744 C 108.919 253.420,124.356 251.591,140.000 249.681 C 226.581 239.107,233.532 241.149,312.889 300.465 C 345.425 324.785,349.285 327.416,356.653 330.304 C 376.763 338.185,395.999 325.971,395.980 305.333 C 395.966 290.005,393.951 287.058,348.898 236.444 C 312.082 195.085,305.352 186.824,293.136 168.000 C 286.858 158.326,280.890 148.431,247.570 92.444 C 201.532 15.092,180.038 -4.542,152.219 5.345 M183.346 90.020 C 187.444 96.487,201.732 120.178,215.097 142.667 C 228.462 165.156,241.524 186.856,244.123 190.889 C 246.722 194.922,248.558 198.218,248.202 198.213 C 247.847 198.207,245.556 197.595,243.111 196.851 C 225.089 191.368,188.711 189.744,160.108 193.146 C 142.474 195.244,143.517 195.396,146.217 191.119 C 161.210 167.369,167.872 143.683,172.521 97.606 C 173.640 86.512,174.857 77.621,175.225 77.848 C 175.593 78.076,179.247 83.553,183.346 90.020 " stroke="none" fill="currentColor" fill-rule="evenodd"></path></g></svg>
 </div>
 
-<div style="width:100px; height:100px; border-radius:30px; background-color:var(--community-header-bg-blend-light);  color:var(--community-header-text); background-image:linear-gradient(to bottom, var(--community-header-bg-blend-light), var(--community-header-bg-blend));">
+<div style="width:100px; height:100px; border-radius:30px; background-color:var(--sticky-header-gradient-color);  color:var(--sticky-header-foreground-color); background-image:linear-gradient(to bottom, var(--sticky-header-gradient-color), var(--sticky-header-gradient-color-hover));">
 
 <svg id="svg" style="width:inherit; height:inherit; padding:4px;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="336.88888888888886" viewBox="0, 0, 400,336.88888888888886"><g id="svgg"><path id="path0" d="M152.219 5.345 C 131.916 12.561,125.406 28.637,120.007 84.889 C 113.900 148.518,107.967 160.844,50.274 229.769 C 25.981 258.791,9.775 279.477,7.053 284.939 C -4.324 307.764,19.499 332.142,42.240 320.946 C 48.379 317.924,48.157 318.155,63.265 299.070 C 68.314 292.692,78.608 280.017,86.142 270.904 L 99.839 254.333 105.697 253.744 C 108.919 253.420,124.356 251.591,140.000 249.681 C 226.581 239.107,233.532 241.149,312.889 300.465 C 345.425 324.785,349.285 327.416,356.653 330.304 C 376.763 338.185,395.999 325.971,395.980 305.333 C 395.966 290.005,393.951 287.058,348.898 236.444 C 312.082 195.085,305.352 186.824,293.136 168.000 C 286.858 158.326,280.890 148.431,247.570 92.444 C 201.532 15.092,180.038 -4.542,152.219 5.345 M183.346 90.020 C 187.444 96.487,201.732 120.178,215.097 142.667 C 228.462 165.156,241.524 186.856,244.123 190.889 C 246.722 194.922,248.558 198.218,248.202 198.213 C 247.847 198.207,245.556 197.595,243.111 196.851 C 225.089 191.368,188.711 189.744,160.108 193.146 C 142.474 195.244,143.517 195.396,146.217 191.119 C 161.210 167.369,167.872 143.683,172.521 97.606 C 173.640 86.512,174.857 77.621,175.225 77.848 C 175.593 78.076,179.247 83.553,183.346 90.020 " stroke="none" fill="currentColor" fill-rule="evenodd"></path></g></svg>
 </div>
 
-<div style="width:100px; height:100px; border-radius:30px; background-color:var(--floating-header-bg-blend-light);  color:var(--floating-header-text); background-image:linear-gradient(to bottom, var(--floating-header-bg-blend-light), var(--floating-header-bg-blend));">
+<div style="width:100px; height:100px; border-radius:30px; background-color:var(--toolbar-gradient-color);  color:var(--toolbar-foreground-color); background-image:linear-gradient(to bottom, var(--toolbar-gradient-color), var(--toolbar-gradient-color-hover));">
 
 <svg id="svg" style="width:inherit; height:inherit; padding:4px;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="336.88888888888886" viewBox="0, 0, 400,336.88888888888886"><g id="svgg"><path id="path0" d="M152.219 5.345 C 131.916 12.561,125.406 28.637,120.007 84.889 C 113.900 148.518,107.967 160.844,50.274 229.769 C 25.981 258.791,9.775 279.477,7.053 284.939 C -4.324 307.764,19.499 332.142,42.240 320.946 C 48.379 317.924,48.157 318.155,63.265 299.070 C 68.314 292.692,78.608 280.017,86.142 270.904 L 99.839 254.333 105.697 253.744 C 108.919 253.420,124.356 251.591,140.000 249.681 C 226.581 239.107,233.532 241.149,312.889 300.465 C 345.425 324.785,349.285 327.416,356.653 330.304 C 376.763 338.185,395.999 325.971,395.980 305.333 C 395.966 290.005,393.951 287.058,348.898 236.444 C 312.082 195.085,305.352 186.824,293.136 168.000 C 286.858 158.326,280.890 148.431,247.570 92.444 C 201.532 15.092,180.038 -4.542,152.219 5.345 M183.346 90.020 C 187.444 96.487,201.732 120.178,215.097 142.667 C 228.462 165.156,241.524 186.856,244.123 190.889 C 246.722 194.922,248.558 198.218,248.202 198.213 C 247.847 198.207,245.556 197.595,243.111 196.851 C 225.089 191.368,188.711 189.744,160.108 193.146 C 142.474 195.244,143.517 195.396,146.217 191.119 C 161.210 167.369,167.872 143.683,172.521 97.606 C 173.640 86.512,174.857 77.621,175.225 77.848 C 175.593 78.076,179.247 83.553,183.346 90.020 " stroke="none" fill="currentColor" fill-rule="evenodd"></path></g></svg>
 </div>
 
-<div style="width:100px; height:100px; border-radius:30px; background-color:var(--content-color-blend-light);  color:var(--content-color-text); background-image:linear-gradient(to bottom, var(--content-color-blend-light), var(--content-color-blend));">
+<div style="width:100px; height:100px; border-radius:30px; background-color:var(--page-text-gradient-color);  color:var(--page-text-foreground-color); background-image:linear-gradient(to bottom, var(--page-text-gradient-color), var(--page-text-gradient-color-hover));">
 
 <svg id="svg" style="width:inherit; height:inherit; padding:4px;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="336.88888888888886" viewBox="0, 0, 400,336.88888888888886"><g id="svgg"><path id="path0" d="M152.219 5.345 C 131.916 12.561,125.406 28.637,120.007 84.889 C 113.900 148.518,107.967 160.844,50.274 229.769 C 25.981 258.791,9.775 279.477,7.053 284.939 C -4.324 307.764,19.499 332.142,42.240 320.946 C 48.379 317.924,48.157 318.155,63.265 299.070 C 68.314 292.692,78.608 280.017,86.142 270.904 L 99.839 254.333 105.697 253.744 C 108.919 253.420,124.356 251.591,140.000 249.681 C 226.581 239.107,233.532 241.149,312.889 300.465 C 345.425 324.785,349.285 327.416,356.653 330.304 C 376.763 338.185,395.999 325.971,395.980 305.333 C 395.966 290.005,393.951 287.058,348.898 236.444 C 312.082 195.085,305.352 186.824,293.136 168.000 C 286.858 158.326,280.890 148.431,247.570 92.444 C 201.532 15.092,180.038 -4.542,152.219 5.345 M183.346 90.020 C 187.444 96.487,201.732 120.178,215.097 142.667 C 228.462 165.156,241.524 186.856,244.123 190.889 C 246.722 194.922,248.558 198.218,248.202 198.213 C 247.847 198.207,245.556 197.595,243.111 196.851 C 225.089 191.368,188.711 189.744,160.108 193.146 C 142.474 195.244,143.517 195.396,146.217 191.119 C 161.210 167.369,167.872 143.683,172.521 97.606 C 173.640 86.512,174.857 77.621,175.225 77.848 C 175.593 78.076,179.247 83.553,183.346 90.020 " stroke="none" fill="currentColor" fill-rule="evenodd"></path></g></svg>
 </div>
 
 
-<div style="width:100px; height:100px; border-radius:30px; background-color:var(--content-border-blend-light);  color:var(--content-border-text); background-image:linear-gradient(to bottom, var(--content-border-blend-light), var(--content-border-blend));">
+<div style="width:100px; height:100px; border-radius:30px; background-color:var(--page-border-gradient-color);  color:var(--page-border-foreground-color); background-image:linear-gradient(to bottom, var(--page-border-gradient-color), var(--page-border-gradient-color-hover));">
 
 <svg id="svg" style="width:inherit; height:inherit; padding:4px;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="336.88888888888886" viewBox="0, 0, 400,336.88888888888886"><g id="svgg"><path id="path0" d="M152.219 5.345 C 131.916 12.561,125.406 28.637,120.007 84.889 C 113.900 148.518,107.967 160.844,50.274 229.769 C 25.981 258.791,9.775 279.477,7.053 284.939 C -4.324 307.764,19.499 332.142,42.240 320.946 C 48.379 317.924,48.157 318.155,63.265 299.070 C 68.314 292.692,78.608 280.017,86.142 270.904 L 99.839 254.333 105.697 253.744 C 108.919 253.420,124.356 251.591,140.000 249.681 C 226.581 239.107,233.532 241.149,312.889 300.465 C 345.425 324.785,349.285 327.416,356.653 330.304 C 376.763 338.185,395.999 325.971,395.980 305.333 C 395.966 290.005,393.951 287.058,348.898 236.444 C 312.082 195.085,305.352 186.824,293.136 168.000 C 286.858 158.326,280.890 148.431,247.570 92.444 C 201.532 15.092,180.038 -4.542,152.219 5.345 M183.346 90.020 C 187.444 96.487,201.732 120.178,215.097 142.667 C 228.462 165.156,241.524 186.856,244.123 190.889 C 246.722 194.922,248.558 198.218,248.202 198.213 C 247.847 198.207,245.556 197.595,243.111 196.851 C 225.089 191.368,188.711 189.744,160.108 193.146 C 142.474 195.244,143.517 195.396,146.217 191.119 C 161.210 167.369,167.872 143.683,172.521 97.606 C 173.640 86.512,174.857 77.621,175.225 77.848 C 175.593 78.076,179.247 83.553,183.346 90.020 " stroke="none" fill="currentColor" fill-rule="evenodd"></path></g></svg>
 </div>
 
-<div style="width:100px; height:100px; border-radius:30px; background-color:var(--link-color-blend-light);  color:var(--link-color-text); background-image:linear-gradient(to bottom, var(--link-color-blend-light), var(--link-color-blend));">
+<div style="width:100px; height:100px; border-radius:30px; background-color:var(--anchor-gradient-color);  color:var(--anchor-foregrond-color); background-image:linear-gradient(to bottom, var(--anchor-gradient-color), var(--anchor-gradient-color-hover));">
 
 <svg id="svg" style="width:inherit; height:inherit; padding:4px;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="336.88888888888886" viewBox="0, 0, 400,336.88888888888886"><g id="svgg"><path id="path0" d="M152.219 5.345 C 131.916 12.561,125.406 28.637,120.007 84.889 C 113.900 148.518,107.967 160.844,50.274 229.769 C 25.981 258.791,9.775 279.477,7.053 284.939 C -4.324 307.764,19.499 332.142,42.240 320.946 C 48.379 317.924,48.157 318.155,63.265 299.070 C 68.314 292.692,78.608 280.017,86.142 270.904 L 99.839 254.333 105.697 253.744 C 108.919 253.420,124.356 251.591,140.000 249.681 C 226.581 239.107,233.532 241.149,312.889 300.465 C 345.425 324.785,349.285 327.416,356.653 330.304 C 376.763 338.185,395.999 325.971,395.980 305.333 C 395.966 290.005,393.951 287.058,348.898 236.444 C 312.082 195.085,305.352 186.824,293.136 168.000 C 286.858 158.326,280.890 148.431,247.570 92.444 C 201.532 15.092,180.038 -4.542,152.219 5.345 M183.346 90.020 C 187.444 96.487,201.732 120.178,215.097 142.667 C 228.462 165.156,241.524 186.856,244.123 190.889 C 246.722 194.922,248.558 198.218,248.202 198.213 C 247.847 198.207,245.556 197.595,243.111 196.851 C 225.089 191.368,188.711 189.744,160.108 193.146 C 142.474 195.244,143.517 195.396,146.217 191.119 C 161.210 167.369,167.872 143.683,172.521 97.606 C 173.640 86.512,174.857 77.621,175.225 77.848 C 175.593 78.076,179.247 83.553,183.346 90.020 " stroke="none" fill="currentColor" fill-rule="evenodd"></path></g></svg>
 </div>
 
-<div style="width:100px; height:100px; border-radius:30px; background-color:var(--button-color-blend-light);  color:var(--button-color-text); background-image:linear-gradient(to bottom, var(--button-color-blend-light), var(--button-color-blend));">
+<div style="width:100px; height:100px; border-radius:30px; background-color:var(--accent-gradient-color);  color:var(--accent-foreground-color); background-image:linear-gradient(to bottom, var(--accent-gradient-color), var(--accent-gradient-color-hover));">
 
 <svg id="svg" style="width:inherit; height:inherit; padding:4px;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="336.88888888888886" viewBox="0, 0, 400,336.88888888888886"><g id="svgg"><path id="path0" d="M152.219 5.345 C 131.916 12.561,125.406 28.637,120.007 84.889 C 113.900 148.518,107.967 160.844,50.274 229.769 C 25.981 258.791,9.775 279.477,7.053 284.939 C -4.324 307.764,19.499 332.142,42.240 320.946 C 48.379 317.924,48.157 318.155,63.265 299.070 C 68.314 292.692,78.608 280.017,86.142 270.904 L 99.839 254.333 105.697 253.744 C 108.919 253.420,124.356 251.591,140.000 249.681 C 226.581 239.107,233.532 241.149,312.889 300.465 C 345.425 324.785,349.285 327.416,356.653 330.304 C 376.763 338.185,395.999 325.971,395.980 305.333 C 395.966 290.005,393.951 287.058,348.898 236.444 C 312.082 195.085,305.352 186.824,293.136 168.000 C 286.858 158.326,280.890 148.431,247.570 92.444 C 201.532 15.092,180.038 -4.542,152.219 5.345 M183.346 90.020 C 187.444 96.487,201.732 120.178,215.097 142.667 C 228.462 165.156,241.524 186.856,244.123 190.889 C 246.722 194.922,248.558 198.218,248.202 198.213 C 247.847 198.207,245.556 197.595,243.111 196.851 C 225.089 191.368,188.711 189.744,160.108 193.146 C 142.474 195.244,143.517 195.396,146.217 191.119 C 161.210 167.369,167.872 143.683,172.521 97.606 C 173.640 86.512,174.857 77.621,175.225 77.848 C 175.593 78.076,179.247 83.553,183.346 90.020 " stroke="none" fill="currentColor" fill-rule="evenodd"></path></g></svg>
 </div>
@@ -1851,7 +1828,7 @@ Checked = VisualEditor as default mode
 					  </svg>
 					</a>
 					<div class="cpe-dropdown__content">
-						<ul class="cpe-list cpe-is-linked">
+						<ul class="cpe-list is-linked">
 							<li>
 								<a onclick="DownloadTheme()">Classic</a>
 							</li>
@@ -1906,7 +1883,7 @@ Checked = VisualEditor as default mode
 					</svg>		
 				</div>
 				<div class="cpe-dropdown__content">
-					<ul class="cpe-list cpe-is-linked">
+					<ul class="cpe-list is-linked">
 						<li value="0"><a>Fandom Light</a></li>
 						<li value="1"><a>Fandom Dark</a></li>
 						<li value="2"><a>Community Central</a></li>
@@ -2022,15 +1999,15 @@ Checked = VisualEditor as default mode
     <div class="cpe-dropdown">
 		<abbr>Background-color:</abbr>
 		<div class="cpe-dropdown__content" style="min-width:100%;">
-			This color is used on body's background color, bottom gradient of the modern background display and buttons, tabs and inputs that use the <code>cpe-is-headline</code> class.
+			This color is used on body's background color, gradient of the standard background display and buttons, tabs and inputs that use the <code>is-headline</code> class.
 		</div>
 	</div>
     </label> 
     <div class="cpe-dropdown forcedcolors-off" cpe-orient="land">
-    <button class="cpe-button cpe-is-square color-button">
-			<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:var(--background-color);"></div>
+    <button class="cpe-button is-square color-button">
+			<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:var(--td-community-background-color);"></div>
     </button>
-	<div class="cpe-dropdown__content cpe-is-not-scrollable">
+	<div class="cpe-dropdown__content is-not-scrollable">
 		<ul class="cpe-list">
 			<li class="rec-colors">
 			<label></small>Recommended Colors:</small></label>
@@ -2060,6 +2037,53 @@ Checked = VisualEditor as default mode
          </svg></button>
 
     <br><br>
+    <label class="customization-label">
+    <div class="cpe-dropdown">
+		<abbr>Color:</abbr>
+		<div class="cpe-dropdown__content" style="min-width:100%;">
+			This color is used as a text color for the Community Header.
+		</div>
+	</div>
+    </label> 
+    <div class="cpe-dropdown forcedcolors-off" cpe-orient="land">
+    <button class="cpe-button is-square color-button">
+			<svg xmlns="http://www.w3.org/2000/svg" class="htexta-on" enable-background="new 0 0 24 24" height="28px" viewBox="0 0 24 24" width="28px" fill="currentColor"><g><rect fill="none" height="24" width="24"/></g><g><g><g><g><path d="M12,22C6.49,22,2,17.51,2,12S6.49,2,12,2s10,4.04,10,9c0,3.31-2.69,6-6,6h-1.77c-0.28,0-0.5,0.22-0.5,0.5 c0,0.12,0.05,0.23,0.13,0.33c0.41,0.47,0.64,1.06,0.64,1.67C14.5,20.88,13.38,22,12,22z M12,4c-4.41,0-8,3.59-8,8s3.59,8,8,8 c0.28,0,0.5-0.22,0.5-0.5c0-0.16-0.08-0.28-0.14-0.35c-0.41-0.46-0.63-1.05-0.63-1.65c0-1.38,1.12-2.5,2.5-2.5H16 c2.21,0,4-1.79,4-4C20,7.14,16.41,4,12,4z"/><circle cx="6.5" cy="11.5" r="1.5"/><circle cx="9.5" cy="7.5" r="1.5"/><circle cx="14.5" cy="7.5" r="1.5"/><circle cx="17.5" cy="11.5" r="1.5"/></g></g></g></g></svg>
+
+			<div class="htexta-off" style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:var(--td-community-header-text-color);"></div>
+    </button>
+	<div class="cpe-dropdown__content is-not-scrollable">
+		<ul class="cpe-list">
+			<li class="rec-colors">
+			<label></small>Recommended Colors:</small></label>
+				<div style="grid: auto-flow / repeat(5, 1fr); max-height: 115px; width:180px;overflow: auto;margin-bottom: -8px;display: grid;white-space: normal;justify-items: self-start;" class="rec-colors-body-text">
+					<button class="cpe-button is-square color-button" onclick="PickColor8('auto')"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor"><g><rect fill="none" height="24" width="24"/></g><g><g><g><g><path d="M12,22C6.49,22,2,17.51,2,12S6.49,2,12,2s10,4.04,10,9c0,3.31-2.69,6-6,6h-1.77c-0.28,0-0.5,0.22-0.5,0.5 c0,0.12,0.05,0.23,0.13,0.33c0.41,0.47,0.64,1.06,0.64,1.67C14.5,20.88,13.38,22,12,22z M12,4c-4.41,0-8,3.59-8,8s3.59,8,8,8 c0.28,0,0.5-0.22,0.5-0.5c0-0.16-0.08-0.28-0.14-0.35c-0.41-0.46-0.63-1.05-0.63-1.65c0-1.38,1.12-2.5,2.5-2.5H16 c2.21,0,4-1.79,4-4C20,7.14,16.41,4,12,4z"/><circle cx="6.5" cy="11.5" r="1.5"/><circle cx="9.5" cy="7.5" r="1.5"/><circle cx="14.5" cy="7.5" r="1.5"/><circle cx="17.5" cy="11.5" r="1.5"/></g></g></g></g></svg> </button>
+
+					<!--Generated by JS-->
+				</div>
+			</li>
+			<li>
+			<label><small>Red:</small></label>
+				<input type="range" onchange="UpdateValue()" name="bgt" class="red" min="0" max="255" value="0"></input>
+			</li>
+			<li>
+			<label><small>Green:</small></label>
+				<input type="range" onchange="UpdateValue()" name="bgt" class="green" min="0" max="255" value="0"></input>
+			</li>
+			<li>
+			<label><small>Blue:</small></label>
+				<input type="range" onchange="UpdateValue()" name="bgt" class="blue" min="0" max="255" value="0"></input>
+			</li>
+		</ul>
+	</div>
+    </div>
+     <button class="cpe-floating-button no-flex forcedcolors-off" onclick="RandomColor8()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-information" />
+         </svg></button> <button class="cpe-floating-button no-flex forcedcolors-off" onclick="PickColor8()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-text" />
+         </svg></button>
+
+    <br><br>
+
     <label>
     <div class="cpe-dropdown">
 		<abbr>Background-image: (.png/.jpg/.gif needed, up to 1000KB possible)</abbr>
@@ -2068,20 +2092,20 @@ Checked = VisualEditor as default mode
 		</div>
 	</div>
     </label>
-    <br>
-    Current Background:<div class="options-preview" style="background-image:url('headbg.jpg'); background-image:var(--background-image); background-size:contain; background-repeat:no-repeat; background-position:center;"></div>
+    <br><br>
+    Current Background:<div class="options-preview" style="background-image:url('headbg.jpg'); background-image:var(--community-background-image); background-size:contain; background-repeat:no-repeat; background-position:center;"></div>
     <div class="cpe-dropdown upload-actions forcedcolors-off" cpe-orient="land">
 		<div class="cpe-floating-button">
 		<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-plus" />
          </svg></div>
-         <div class="cpe-dropdown__content cpe-is-not-scrollable" style="top:-200%;">
+         <div class="cpe-dropdown__content is-not-scrollable" style="top:-200%;">
 			<ul class="cpe-list">
-			<li class="cpe-is-hidden">
+			<li class="is-hidden">
 				<input name="05" id="41-5" onchange="UploadPicture1(this.files)" name="bodybg" type="file"></input>
 			</li>
 			<li>
-				<div class="cpe-floating-button-group cpe-is-vertical">
+				<div class="cpe-floating-button-group is-vertical">
 					<a class="cpe-floating-button" title="Wiki Files">		<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-community" />
          </svg></a>
@@ -2099,21 +2123,47 @@ Checked = VisualEditor as default mode
 			</ul>
          </div>
     </div>
-    <br><br>
+
+
+	  <br>
+	  <div style="display:flex; align-items:center;">
+     <label>
+	<div class="cpe-dropdown">
+		<abbr>Background Image Opacity:</abbr>
+		<div class="cpe-dropdown__content" style="min-width:100%;">
+			Sets translucency of background image. 0% means invisible, 50% means translucent and 100% means opaque
+		</div>
+	</div>
+     </label>
+     <input type="range" onchange="UpdateImageOpacity()" class="image_opacity big forcedcolors-off" style="flex:1; padding:0 5px;" autocomplete="off" min="0" max="100" ></input>
+     </div>
+	<br>
     <label class="customization-label">
     <div class="cpe-dropdown">
 		<abbr>Background Display:</abbr>
 		<div class="cpe-dropdown__content" style="min-width:100%;">
-			Sets the display of the background. Modern mode adds a fading effect above the background but only works for the Cover sizing. Legacy mode allows you to choose any background size you wish but removes the fading effect above the background.
+			Sets the display of the background. Standard mode makes the background display only under the Community Header. Full mode makes the background display in the whole screen
 		</div>
 	</div>
     </label>  
-    <input type="radio" checked name="themeBG" class="noncover-off forcedcolors-off" id="BG_1" autocomplete="off" onclick="ToggleBG()"></input> <label for="BG_1" class="noncover-off forcedcolors-off">Modern</label>  
-    <input type="radio" name="themeBG" class="forcedcolors-off" id="BG_2" autocomplete="off" onclick="ToggleBG()"></input> <label for="BG_2" class="forcedcolors-off">Legacy</label>
+    <input type="radio" checked name="themeBG" class=" forcedcolors-off" id="BG_1" autocomplete="off" onclick="ToggleBG()"></input> <label for="BG_1" class=" forcedcolors-off">Standard</label>  
+    <input type="radio" name="themeBG" class="forcedcolors-off" id="BG_2" autocomplete="off" onclick="ToggleBG()"></input> <label for="BG_2" class="forcedcolors-off">Full</label>
     <br><br>
     <label class="customization-label">
     <div class="cpe-dropdown">
-		<abbr>Background Position:</abbr>
+		<abbr>Horizontal Background Position:</abbr>
+		<div class="cpe-dropdown__content" style="min-width:100%;">
+			Sets background horizontal alignment. This may not have any effect on cover background sizing depending on the screen size and the background while it does nothing on stretched background size.
+		</div>
+	</div>
+    </label>  
+    <input type="radio" name="themeBG4" class="stretch-off forcedcolors-off" id="BG4_1" autocomplete="off" onclick="ToggleBG4()"></input> <label for="BG4_1" class="stretch-off forcedcolors-off">Left</label> 
+    <input type="radio" checked name="themeBG4" class="stretch-off forcedcolors-off" id="BG4_2" autocomplete="off" onclick="ToggleBG4()"></input> <label for="BG4_2" class="stretch-off forcedcolors-off">Middle</label>  
+    <input type="radio" name="themeBG4" class="stretch-off forcedcolors-off" id="BG4_3" autocomplete="off" onclick="ToggleBG4()"></input> <label for="BG4_3" class="stretch-off forcedcolors-off">Right</label>
+    <br><br>
+    <label class="customization-label">
+    <div class="cpe-dropdown">
+		<abbr>Vertical Background Position:</abbr>
 		<div class="cpe-dropdown__content" style="min-width:100%;">
 			Sets background vertical alignment. This may not have any effect on cover background sizing depending on the screen size and the background while it does nothing on stretched background size.
 		</div>
@@ -2122,6 +2172,7 @@ Checked = VisualEditor as default mode
     <input type="radio" name="themeBG1" class="stretch-off forcedcolors-off" id="BG1_1" autocomplete="off" onclick="ToggleBG1()"></input> <label for="BG1_1" class="stretch-off forcedcolors-off">Top</label> 
     <input type="radio" checked name="themeBG1" class="stretch-off forcedcolors-off" id="BG1_2" autocomplete="off" onclick="ToggleBG1()"></input> <label for="BG1_2" class="stretch-off forcedcolors-off">Middle</label>  
     <input type="radio" name="themeBG1" class="stretch-off forcedcolors-off" id="BG1_3" autocomplete="off" onclick="ToggleBG1()"></input> <label for="BG1_3" class="stretch-off forcedcolors-off">Bottom</label>
+
 	<br><br>
     <label class="customization-label">
     <div class="cpe-dropdown">
@@ -2136,7 +2187,7 @@ Checked = VisualEditor as default mode
     <input type="radio" name="themeBG3" class="modern-off forcedcolors-off" id="BG3_3" autocomplete="off" onclick="ToggleBG3()"></input> <label for="BG3_3" class="modern-off forcedcolors-off">Stretched</label>
     <input type="radio" name="themeBG3" class="modern-off forcedcolors-off" id="BG3_4" autocomplete="off" onclick="ToggleBG3()"></input> <label for="BG3_4" class="modern-off forcedcolors-off">Full</label>
 	<br><br>
-        <input type="checkbox" class="cover-off stretch-off modern-off forcedcolors-off" id="BG2" autocomplete="off" onclick="ToggleBG2()"></input> <label for="BG2" class="cover-off stretch-off modern-off forcedcolors-off">Disable Background Tiling</label>
+        <input type="checkbox" class="cover-off stretch-off modern-off forcedcolors-off" id="BG2" autocomplete="off" onclick="ToggleBG2()"></input> <label for="BG2" class="cover-off stretch-off forcedcolors-off">Disable Background Tiling</label>
     </fieldset>
     </div>
 
@@ -2152,16 +2203,16 @@ Checked = VisualEditor as default mode
     <div class="cpe-dropdown">
 		<abbr>Header-color:</abbr>
 		<div class="cpe-dropdown__content" style="min-width:100%;">
-			This color is used on title bars, community header, top gradient of the modern background display and buttons, tabs and inputs that use the <code>cpe-is-titleline</code> class.
+			This color is used on title bars and buttons, tabs and inputs that use the <code>is-titleline</code> class.
 		</div>
 	</div>
     </label> 
     
         <div class="cpe-dropdown forcedcolors-off" cpe-orient="land">
-    <button class="cpe-button cpe-is-square color-button">
-			<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:var(--community-header-bg);"></div>
+    <button class="cpe-button is-square color-button">
+			<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:var(--td-sticky-header-background-color);"></div>
     </button>
-	<div class="cpe-dropdown__content cpe-is-not-scrollable">
+	<div class="cpe-dropdown__content is-not-scrollable">
 		<ul class="cpe-list">
 			<li class="rec-colors">
 			<label></small>Recommended Colors:</small></label>
@@ -2196,22 +2247,22 @@ Checked = VisualEditor as default mode
     <div class="cpe-dropdown">
 		<abbr>Floating Header-color:</abbr>
 		<div class="cpe-dropdown__content" style="min-width:100%;">
-			This color is used on inactive title bars, sticky navigation and buttons, tabs and inputs that use the <code>cpe-is-intitleline</code> class.
+			This color is used on inactive title bars, sticky navigation and buttons, tabs and inputs that use the <code>is-intitleline</code> class.
 		</div>
 	</div>
     </label> 
     
         <div class="cpe-dropdown forcedcolors-off" cpe-orient="land">
-    <button class="cpe-button cpe-is-square color-button">
+    <button class="cpe-button is-square color-button">
 			<svg xmlns="http://www.w3.org/2000/svg" class="floatinga-on" enable-background="new 0 0 24 24" height="28px" viewBox="0 0 24 24" width="28px" fill="currentColor"><g><rect fill="none" height="24" width="24"/></g><g><g><g><g><path d="M12,22C6.49,22,2,17.51,2,12S6.49,2,12,2s10,4.04,10,9c0,3.31-2.69,6-6,6h-1.77c-0.28,0-0.5,0.22-0.5,0.5 c0,0.12,0.05,0.23,0.13,0.33c0.41,0.47,0.64,1.06,0.64,1.67C14.5,20.88,13.38,22,12,22z M12,4c-4.41,0-8,3.59-8,8s3.59,8,8,8 c0.28,0,0.5-0.22,0.5-0.5c0-0.16-0.08-0.28-0.14-0.35c-0.41-0.46-0.63-1.05-0.63-1.65c0-1.38,1.12-2.5,2.5-2.5H16 c2.21,0,4-1.79,4-4C20,7.14,16.41,4,12,4z"/><circle cx="6.5" cy="11.5" r="1.5"/><circle cx="9.5" cy="7.5" r="1.5"/><circle cx="14.5" cy="7.5" r="1.5"/><circle cx="17.5" cy="11.5" r="1.5"/></g></g></g></g></svg>
-			<div class="floatinga-off" style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:var(--floating-header-bg);"></div>
+			<div class="floatinga-off" style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:var(--td-toolbar-background-color);"></div>
     </button>
-	<div class="cpe-dropdown__content cpe-is-not-scrollable">
+	<div class="cpe-dropdown__content is-not-scrollable">
 		<ul class="cpe-list">
 			<li class="rec-colors">
 			<label></small>Recommended Colors:</small></label>
 				<div style="grid: auto-flow / repeat(5, 1fr);max-height: 115px;width:180px;overflow: auto;margin-bottom: -8px;display: grid;white-space: normal;justify-items: self-start;" class="rec-colors-floating-header">
-					<button class="cpe-button cpe-is-square color-button" onclick="PickColor9('auto')"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor"><g><rect fill="none" height="24" width="24"/></g><g><g><g><g><path d="M12,22C6.49,22,2,17.51,2,12S6.49,2,12,2s10,4.04,10,9c0,3.31-2.69,6-6,6h-1.77c-0.28,0-0.5,0.22-0.5,0.5 c0,0.12,0.05,0.23,0.13,0.33c0.41,0.47,0.64,1.06,0.64,1.67C14.5,20.88,13.38,22,12,22z M12,4c-4.41,0-8,3.59-8,8s3.59,8,8,8 c0.28,0,0.5-0.22,0.5-0.5c0-0.16-0.08-0.28-0.14-0.35c-0.41-0.46-0.63-1.05-0.63-1.65c0-1.38,1.12-2.5,2.5-2.5H16 c2.21,0,4-1.79,4-4C20,7.14,16.41,4,12,4z"/><circle cx="6.5" cy="11.5" r="1.5"/><circle cx="9.5" cy="7.5" r="1.5"/><circle cx="14.5" cy="7.5" r="1.5"/><circle cx="17.5" cy="11.5" r="1.5"/></g></g></g></g></svg> </button>
+					<button class="cpe-button is-square color-button" onclick="PickColor9('auto')"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor"><g><rect fill="none" height="24" width="24"/></g><g><g><g><g><path d="M12,22C6.49,22,2,17.51,2,12S6.49,2,12,2s10,4.04,10,9c0,3.31-2.69,6-6,6h-1.77c-0.28,0-0.5,0.22-0.5,0.5 c0,0.12,0.05,0.23,0.13,0.33c0.41,0.47,0.64,1.06,0.64,1.67C14.5,20.88,13.38,22,12,22z M12,4c-4.41,0-8,3.59-8,8s3.59,8,8,8 c0.28,0,0.5-0.22,0.5-0.5c0-0.16-0.08-0.28-0.14-0.35c-0.41-0.46-0.63-1.05-0.63-1.65c0-1.38,1.12-2.5,2.5-2.5H16 c2.21,0,4-1.79,4-4C20,7.14,16.41,4,12,4z"/><circle cx="6.5" cy="11.5" r="1.5"/><circle cx="9.5" cy="7.5" r="1.5"/><circle cx="14.5" cy="7.5" r="1.5"/><circle cx="17.5" cy="11.5" r="1.5"/></g></g></g></g></svg> </button>
 					<!--Generated by JS-->
 				</div>
 			</li>
@@ -2253,13 +2304,13 @@ Checked = VisualEditor as default mode
 		<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-plus" />
          </svg></div>
-         <div class="cpe-dropdown__content cpe-is-not-scrollable" style="top:-150%;">
+         <div class="cpe-dropdown__content is-not-scrollable" style="top:-150%;">
 			<ul class="cpe-list">
-			<li class="cpe-is-hidden">
+			<li class="is-hidden">
 				<input name="05" id="42-5"  onchange="UploadPicture4(this.files)" type="file"></input>
 			</li>
 			<li>
-				<div class="cpe-floating-button-group cpe-is-vertical">
+				<div class="cpe-floating-button-group is-vertical">
 					<a class="cpe-floating-button" title="Wiki Files">		<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 			<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-community" />
          </svg></a>
@@ -2312,15 +2363,15 @@ Checked = VisualEditor as default mode
     <div class="cpe-dropdown">
 		<abbr>Background-color:</abbr>
 		<div class="cpe-dropdown__content" style="min-width:100%;">
-			This color is used as a background on many containers and is used to generate the main emphasis background-color named <code>--dropdown-bg</code>.
+			This color is used as a background on many containers and is used to generate the main emphasis background-color named <code>--page-secondary-background-color</code>.
 		</div>
 	</div>
     </label> 
         <div class="cpe-dropdown forcedcolors-off" cpe-orient="land">
-    <button class="cpe-button cpe-is-square color-button">
-			<div class="rvbg1" style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:var(--content-bg);"></div>
+    <button class="cpe-button is-square color-button">
+			<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:var(--td-page-background-color);"></div>
     </button>
-	<div class="cpe-dropdown__content cpe-is-not-scrollable">
+	<div class="cpe-dropdown__content is-not-scrollable">
 		<ul class="cpe-list">
 			<li class="rec-colors">
 			<label></small>Recommended Colors:</small></label>
@@ -2358,24 +2409,24 @@ Checked = VisualEditor as default mode
 		<div class="cpe-dropdown">
 			<abbr>Color:</abbr>
 			<div class="cpe-dropdown__content" style="min-width:100%;">
-				This color is used as a text color for many containers and buttons, tabs and inputs that use the <code>cpe-is-colorline</code> class.
+				This color is used as a text color for many containers and buttons, tabs and inputs that use the <code>is-colorline</code> class.
 			</div>
 		</div>
          </span>
        </label> 
 
     <div class="cpe-dropdown forcedcolors-off" cpe-orient="land">
-    <button class="cpe-button cpe-is-square color-button">
+    <button class="cpe-button is-square color-button">
 <svg xmlns="http://www.w3.org/2000/svg" class="colora-on" enable-background="new 0 0 24 24" height="28px" viewBox="0 0 24 24" width="28px" fill="currentColor"><g><rect fill="none" height="24" width="24"/></g><g><g><g><g><path d="M12,22C6.49,22,2,17.51,2,12S6.49,2,12,2s10,4.04,10,9c0,3.31-2.69,6-6,6h-1.77c-0.28,0-0.5,0.22-0.5,0.5 c0,0.12,0.05,0.23,0.13,0.33c0.41,0.47,0.64,1.06,0.64,1.67C14.5,20.88,13.38,22,12,22z M12,4c-4.41,0-8,3.59-8,8s3.59,8,8,8 c0.28,0,0.5-0.22,0.5-0.5c0-0.16-0.08-0.28-0.14-0.35c-0.41-0.46-0.63-1.05-0.63-1.65c0-1.38,1.12-2.5,2.5-2.5H16 c2.21,0,4-1.79,4-4C20,7.14,16.41,4,12,4z"/><circle cx="6.5" cy="11.5" r="1.5"/><circle cx="9.5" cy="7.5" r="1.5"/><circle cx="14.5" cy="7.5" r="1.5"/><circle cx="17.5" cy="11.5" r="1.5"/></g></g></g></g></svg>
 
-			<div class="rvbg2 colora-off" style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:var(--content-color);"></div>
+			<div class="rvbg2 colora-off" style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:var(--td-page-text-background-color);"></div>
     </button>
-	<div class="cpe-dropdown__content cpe-is-not-scrollable">
+	<div class="cpe-dropdown__content is-not-scrollable">
 		<ul class="cpe-list">
 			<li class="rec-colors">
 			<label></small>Recommended Colors:</small></label>
 				<div style="grid: auto-flow / repeat(5, 1fr);max-height: 115px;width:180px;overflow: auto;margin-bottom: -8px;display: grid;white-space: normal;justify-items: self-start;" class="rec-colors-cntxt">
-					<button class="cpe-button cpe-is-square color-button" onclick="PickColor4('auto')"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor"><g><rect fill="none" height="24" width="24"/></g><g><g><g><g><path d="M12,22C6.49,22,2,17.51,2,12S6.49,2,12,2s10,4.04,10,9c0,3.31-2.69,6-6,6h-1.77c-0.28,0-0.5,0.22-0.5,0.5 c0,0.12,0.05,0.23,0.13,0.33c0.41,0.47,0.64,1.06,0.64,1.67C14.5,20.88,13.38,22,12,22z M12,4c-4.41,0-8,3.59-8,8s3.59,8,8,8 c0.28,0,0.5-0.22,0.5-0.5c0-0.16-0.08-0.28-0.14-0.35c-0.41-0.46-0.63-1.05-0.63-1.65c0-1.38,1.12-2.5,2.5-2.5H16 c2.21,0,4-1.79,4-4C20,7.14,16.41,4,12,4z"/><circle cx="6.5" cy="11.5" r="1.5"/><circle cx="9.5" cy="7.5" r="1.5"/><circle cx="14.5" cy="7.5" r="1.5"/><circle cx="17.5" cy="11.5" r="1.5"/></g></g></g></g></svg> </button>
+					<button class="cpe-button is-square color-button" onclick="PickColor4('auto')"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor"><g><rect fill="none" height="24" width="24"/></g><g><g><g><g><path d="M12,22C6.49,22,2,17.51,2,12S6.49,2,12,2s10,4.04,10,9c0,3.31-2.69,6-6,6h-1.77c-0.28,0-0.5,0.22-0.5,0.5 c0,0.12,0.05,0.23,0.13,0.33c0.41,0.47,0.64,1.06,0.64,1.67C14.5,20.88,13.38,22,12,22z M12,4c-4.41,0-8,3.59-8,8s3.59,8,8,8 c0.28,0,0.5-0.22,0.5-0.5c0-0.16-0.08-0.28-0.14-0.35c-0.41-0.46-0.63-1.05-0.63-1.65c0-1.38,1.12-2.5,2.5-2.5H16 c2.21,0,4-1.79,4-4C20,7.14,16.41,4,12,4z"/><circle cx="6.5" cy="11.5" r="1.5"/><circle cx="9.5" cy="7.5" r="1.5"/><circle cx="14.5" cy="7.5" r="1.5"/><circle cx="17.5" cy="11.5" r="1.5"/></g></g></g></g></svg> </button>
 					<!--Generated by JS-->
 				</div>
 			</li>
@@ -2410,23 +2461,23 @@ Checked = VisualEditor as default mode
 		<div class="cpe-dropdown">
 			<abbr>Border-color:</abbr>
 			<div class="cpe-dropdown__content" style="min-width:100%;">
-				This color is used as a border color for many containers and buttons, tabs and inputs that use the <code>cpe-is-borderline</code> class.
+				This color is used as a border color for many containers and buttons, tabs and inputs that use the <code>is-borderline</code> class.
 			</div>
 		</div>
          </span>
        </label> 
     
     <div class="cpe-dropdown forcedcolors-off" cpe-orient="land">
-    <button class="cpe-button cpe-is-square color-button">
+    <button class="cpe-button is-square color-button">
 <svg xmlns="http://www.w3.org/2000/svg" class="bordera-on" enable-background="new 0 0 24 24" height="28px" viewBox="0 0 24 24" width="28px" fill="currentColor"><g><rect fill="none" height="24" width="24"/></g><g><g><g><g><path d="M12,22C6.49,22,2,17.51,2,12S6.49,2,12,2s10,4.04,10,9c0,3.31-2.69,6-6,6h-1.77c-0.28,0-0.5,0.22-0.5,0.5 c0,0.12,0.05,0.23,0.13,0.33c0.41,0.47,0.64,1.06,0.64,1.67C14.5,20.88,13.38,22,12,22z M12,4c-4.41,0-8,3.59-8,8s3.59,8,8,8 c0.28,0,0.5-0.22,0.5-0.5c0-0.16-0.08-0.28-0.14-0.35c-0.41-0.46-0.63-1.05-0.63-1.65c0-1.38,1.12-2.5,2.5-2.5H16 c2.21,0,4-1.79,4-4C20,7.14,16.41,4,12,4z"/><circle cx="6.5" cy="11.5" r="1.5"/><circle cx="9.5" cy="7.5" r="1.5"/><circle cx="14.5" cy="7.5" r="1.5"/><circle cx="17.5" cy="11.5" r="1.5"/></g></g></g></g></svg>
-			<div class="bordera-off" style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:var(--content-border);"></div>
+			<div class="bordera-off" style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:var(--td-page-border-background-color);"></div>
     </button>
-	<div class="cpe-dropdown__content cpe-is-not-scrollable">
+	<div class="cpe-dropdown__content is-not-scrollable">
 		<ul class="cpe-list">
 			<li class="rec-colors">
 			<label></small>Recommended Colors:</small></label>
 				<div style="grid: auto-flow / repeat(5, 1fr);max-height: 115px;width:180px;overflow: auto;margin-bottom: -8px;display: grid;white-space: normal;justify-items: self-start;" class="rec-colors-cnbrd">
-					<button class="cpe-button cpe-is-square color-button" onclick="PickColor5('auto')"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor"><g><rect fill="none" height="24" width="24"/></g><g><g><g><g><path d="M12,22C6.49,22,2,17.51,2,12S6.49,2,12,2s10,4.04,10,9c0,3.31-2.69,6-6,6h-1.77c-0.28,0-0.5,0.22-0.5,0.5 c0,0.12,0.05,0.23,0.13,0.33c0.41,0.47,0.64,1.06,0.64,1.67C14.5,20.88,13.38,22,12,22z M12,4c-4.41,0-8,3.59-8,8s3.59,8,8,8 c0.28,0,0.5-0.22,0.5-0.5c0-0.16-0.08-0.28-0.14-0.35c-0.41-0.46-0.63-1.05-0.63-1.65c0-1.38,1.12-2.5,2.5-2.5H16 c2.21,0,4-1.79,4-4C20,7.14,16.41,4,12,4z"/><circle cx="6.5" cy="11.5" r="1.5"/><circle cx="9.5" cy="7.5" r="1.5"/><circle cx="14.5" cy="7.5" r="1.5"/><circle cx="17.5" cy="11.5" r="1.5"/></g></g></g></g></svg> </button>
+					<button class="cpe-button is-square color-button" onclick="PickColor5('auto')"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor"><g><rect fill="none" height="24" width="24"/></g><g><g><g><g><path d="M12,22C6.49,22,2,17.51,2,12S6.49,2,12,2s10,4.04,10,9c0,3.31-2.69,6-6,6h-1.77c-0.28,0-0.5,0.22-0.5,0.5 c0,0.12,0.05,0.23,0.13,0.33c0.41,0.47,0.64,1.06,0.64,1.67C14.5,20.88,13.38,22,12,22z M12,4c-4.41,0-8,3.59-8,8s3.59,8,8,8 c0.28,0,0.5-0.22,0.5-0.5c0-0.16-0.08-0.28-0.14-0.35c-0.41-0.46-0.63-1.05-0.63-1.65c0-1.38,1.12-2.5,2.5-2.5H16 c2.21,0,4-1.79,4-4C20,7.14,16.41,4,12,4z"/><circle cx="6.5" cy="11.5" r="1.5"/><circle cx="9.5" cy="7.5" r="1.5"/><circle cx="14.5" cy="7.5" r="1.5"/><circle cx="17.5" cy="11.5" r="1.5"/></g></g></g></g></svg> </button>
 					<!--Generated by JS-->
 				</div>
 			</li>
@@ -2460,17 +2511,17 @@ Checked = VisualEditor as default mode
 		<div class="cpe-dropdown">
 			<abbr>Link-color:</abbr>
 			<div class="cpe-dropdown__content" style="min-width:100%;">
-				This color is used for links, selected menu items and buttons, tabs and inputs that use the <code>cpe-is-alternate</code> class.
+				This color is used for links, selected menu items and buttons, tabs and inputs that use the <code>is-alternate</code> class.
 			</div>
 		</div>
          </span>
        </label> 
 
     <div class="cpe-dropdown forcedcolors-off" cpe-orient="land">
-    <button class="cpe-button cpe-is-square color-button">
-			<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:var(--link-color);"></div>
+    <button class="cpe-button is-square color-button">
+			<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:var(--td-anchor-background-color);"></div>
     </button>
-	<div class="cpe-dropdown__content cpe-is-not-scrollable">
+	<div class="cpe-dropdown__content is-not-scrollable">
 		<ul class="cpe-list">
 			<li class="rec-colors">
 			<label></small>Recommended Colors:</small></label>
@@ -2516,10 +2567,10 @@ Checked = VisualEditor as default mode
        </label> 
 
     <div class="cpe-dropdown forcedcolors-off" cpe-orient="land">
-    <button class="cpe-button cpe-is-square color-button">
-			<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:var(--button-color);"></div>
+    <button class="cpe-button is-square color-button">
+			<div style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:var(--td-accent-background-color);"></div>
     </button>
-	<div class="cpe-dropdown__content cpe-is-not-scrollable">
+	<div class="cpe-dropdown__content is-not-scrollable">
 		<ul class="cpe-list">
 			<li class="rec-colors">
 			<label></small>Recommended Colors:</small></label>
@@ -2571,16 +2622,16 @@ Checked = VisualEditor as default mode
     </label> 
     
         <div class="cpe-dropdown forcedcolors-off" cpe-orient="land">
-    <button class="cpe-button cpe-is-square color-button">
+    <button class="cpe-button is-square color-button">
 			<svg xmlns="http://www.w3.org/2000/svg" class="careta-on" enable-background="new 0 0 24 24" height="28px" viewBox="0 0 24 24" width="28px" fill="currentColor"><g><rect fill="none" height="24" width="24"/></g><g><g><g><g><path d="M12,22C6.49,22,2,17.51,2,12S6.49,2,12,2s10,4.04,10,9c0,3.31-2.69,6-6,6h-1.77c-0.28,0-0.5,0.22-0.5,0.5 c0,0.12,0.05,0.23,0.13,0.33c0.41,0.47,0.64,1.06,0.64,1.67C14.5,20.88,13.38,22,12,22z M12,4c-4.41,0-8,3.59-8,8s3.59,8,8,8 c0.28,0,0.5-0.22,0.5-0.5c0-0.16-0.08-0.28-0.14-0.35c-0.41-0.46-0.63-1.05-0.63-1.65c0-1.38,1.12-2.5,2.5-2.5H16 c2.21,0,4-1.79,4-4C20,7.14,16.41,4,12,4z"/><circle cx="6.5" cy="11.5" r="1.5"/><circle cx="9.5" cy="7.5" r="1.5"/><circle cx="14.5" cy="7.5" r="1.5"/><circle cx="17.5" cy="11.5" r="1.5"/></g></g></g></g></svg>
 			<div class="careta-off" style="border:1px solid; width:inherit; height:inherit; pointer-events:none; border-radius:50%; background-color:var(--caret-color);"></div>
     </button>
-	<div class="cpe-dropdown__content cpe-is-not-scrollable">
+	<div class="cpe-dropdown__content is-not-scrollable">
 		<ul class="cpe-list">
 			<li class="rec-colors">
 			<label></small>Recommended Colors:</small></label>
 				<div style="grid: auto-flow / repeat(5, 1fr);max-height: 115px;width:180px;overflow: auto;margin-bottom: -8px;display: grid;white-space: normal;justify-items: self-start;" class="rec-colors-caret">
-					<button class="cpe-button cpe-is-square color-button" onclick="PickColorCc('auto')"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor"><g><rect fill="none" height="24" width="24"/></g><g><g><g><g><path d="M12,22C6.49,22,2,17.51,2,12S6.49,2,12,2s10,4.04,10,9c0,3.31-2.69,6-6,6h-1.77c-0.28,0-0.5,0.22-0.5,0.5 c0,0.12,0.05,0.23,0.13,0.33c0.41,0.47,0.64,1.06,0.64,1.67C14.5,20.88,13.38,22,12,22z M12,4c-4.41,0-8,3.59-8,8s3.59,8,8,8 c0.28,0,0.5-0.22,0.5-0.5c0-0.16-0.08-0.28-0.14-0.35c-0.41-0.46-0.63-1.05-0.63-1.65c0-1.38,1.12-2.5,2.5-2.5H16 c2.21,0,4-1.79,4-4C20,7.14,16.41,4,12,4z"/><circle cx="6.5" cy="11.5" r="1.5"/><circle cx="9.5" cy="7.5" r="1.5"/><circle cx="14.5" cy="7.5" r="1.5"/><circle cx="17.5" cy="11.5" r="1.5"/></g></g></g></g></svg> </button>
+					<button class="cpe-button is-square color-button" onclick="PickColorCc('auto')"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor"><g><rect fill="none" height="24" width="24"/></g><g><g><g><g><path d="M12,22C6.49,22,2,17.51,2,12S6.49,2,12,2s10,4.04,10,9c0,3.31-2.69,6-6,6h-1.77c-0.28,0-0.5,0.22-0.5,0.5 c0,0.12,0.05,0.23,0.13,0.33c0.41,0.47,0.64,1.06,0.64,1.67C14.5,20.88,13.38,22,12,22z M12,4c-4.41,0-8,3.59-8,8s3.59,8,8,8 c0.28,0,0.5-0.22,0.5-0.5c0-0.16-0.08-0.28-0.14-0.35c-0.41-0.46-0.63-1.05-0.63-1.65c0-1.38,1.12-2.5,2.5-2.5H16 c2.21,0,4-1.79,4-4C20,7.14,16.41,4,12,4z"/><circle cx="6.5" cy="11.5" r="1.5"/><circle cx="9.5" cy="7.5" r="1.5"/><circle cx="14.5" cy="7.5" r="1.5"/><circle cx="17.5" cy="11.5" r="1.5"/></g></g></g></g></svg> </button>
 					<!--Generated by JS-->
 				</div>
 			</li>
@@ -2616,7 +2667,7 @@ Checked = VisualEditor as default mode
 		</div>
 	</div>
     </label>
-    <input class="cpe-input font_2nd forcedcolors-off" autocomplete="off" value="" placeholder="Enter your 2nd font (leave empty to default)" ></input> <button class="cpe-button cpe-is-squished forcedcolors-off" onclick="UpdateFont()">Update Font</button>
+    <input class="cpe-input font_2nd forcedcolors-off" autocomplete="off" value="" placeholder="Enter your 2nd font (leave empty to default)" ></input> <button class="cpe-button is-squished forcedcolors-off" onclick="UpdateFont()">Update Font</button>
 	  <br>
 	  <div style="display:flex; align-items:center;">
      <label>
@@ -2637,7 +2688,7 @@ Checked = VisualEditor as default mode
 		</div>
 	</div>
     </label>
-    <input class="cpe-input filter1 forcedcolors-off" autocomplete="off" value="" placeholder="Enter your filter function here (Can be empty)" ></input> <button class="cpe-button cpe-is-squished forcedcolors-off" onclick="UpdateFilter1()">Update Filter</button>
+    <input class="cpe-input filter1 forcedcolors-off" autocomplete="off" value="" placeholder="Enter your filter function here (Can be empty)" ></input> <button class="cpe-button is-squished forcedcolors-off" onclick="UpdateFilter1()">Update Filter</button>
 	  <br>
     <label>
 	<div class="cpe-dropdown">
@@ -2647,7 +2698,7 @@ Checked = VisualEditor as default mode
 		</div>
 	</div>
     </label>
-    <input class="cpe-input filter2 forcedcolors-off" autocomplete="off" value="" placeholder="Enter your filter function here (Can be empty)" ></input> <button class="cpe-button cpe-is-squished forcedcolors-off" onclick="UpdateFilter2()">Update Filter</button>
+    <input class="cpe-input filter2 forcedcolors-off" autocomplete="off" value="" placeholder="Enter your filter function here (Can be empty)" ></input> <button class="cpe-button is-squished forcedcolors-off" onclick="UpdateFilter2()">Update Filter</button>
 	  <div style="display:flex; align-items:center;">
      <label>
 	<div class="cpe-dropdown">
@@ -2686,8 +2737,11 @@ Checked = VisualEditor as default mode
     Preview
     </h2>
 <!-- Begin Header -->
-		<div class="mpisto-header-container" style="margin:0; z-index:1; background-color:var(--background-color);">
-			<section class="mpisto-header-container-wrapper">
+		<div class="mpisto-header-container preview-header" style="margin:0; min-height:164px; z-index:1; background-color:var(--community-background-color);">
+	<div class="gradient-overlay" style="position:absolute; pointer-events:none;"></div>
+	<div class="invertion-on" style=" pointer-events: none; position: absolute; z-index: -2; width: 100%; height: 100%;"><div class="body-community-background " style="position:absolute; pointer-events:none;"></div></div>
+	<div class="body-community-background-color" style="position:absolute; pointer-events:none;"></div>
+			<section class="mpisto-header-container-wrapper" style="padding-bottom:15px;">
 				<a class="wordmark cell"><img src="Wordmark.png"></img></a>
 			<header class="mobile-header">
 				<section class="title">
@@ -2715,8 +2769,8 @@ Checked = VisualEditor as default mode
 					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown" />
 					</svg>			
 				  </div>
-				  <div class="cpe-dropdown__content cpe-is-right-aligned">		
-					<ul class="cpe-list cpe-is-linked">					
+				  <div class="cpe-dropdown__content is-right-aligned">		
+					<ul class="cpe-list is-linked">					
 					  <li class="small">						
 						<a><svg version="1.1" class="cpe-icon cpe-icon-tiny" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
 							<path fill="currentcolor" d="M52.053 0c-1.28 3.968-2.56 7.893-2.56 13.141v991.104c0 9.259 2.603 14.507 7.851 19.755l487.040-515.968-492.331-508.032zM577.237 542.208l125.909 129.92-179.755 102.4s-228.48 129.877-354.475 202.197l408.32-434.517zM611.413 506.752l135.083 140.459c21.163-11.776 186.496-106.325 210.091-119.467 24.917-14.421 22.4-34.133 1.237-44.629-19.584-10.88-184.917-105.6-209.92-120.96l-136.491 144.597zM577.152 472.619l127.317-135.211-181.717-103.723s-296.235-169.472-394.795-226.048l449.195 464.981z"></path>
@@ -2762,8 +2816,8 @@ Checked = VisualEditor as default mode
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-user" />
 						  </svg>	
 				  </div>
-				  <div class="cpe-dropdown__content cpe-is-left-aligned">		
-						  <ul class="cpe-list cpe-is-linked">
+				  <div class="cpe-dropdown__content is-left-aligned">		
+						  <ul class="cpe-list is-linked">
 							<li>
 							<a>View Profile</a>
 							</li>
@@ -2790,7 +2844,7 @@ Checked = VisualEditor as default mode
 						  </svg>	
 				  </div>
 				  <div class="cpe-dropdown__content">		
-						  <ul class="cpe-list cpe-is-linked">
+						  <ul class="cpe-list is-linked">
 							<li>
 							<a>GMK Pages</a>
 							</li>
@@ -2823,8 +2877,8 @@ Checked = VisualEditor as default mode
 				  <div class="link cell cpe-dropdown__toggle">				
 					<svg class="cpe-icon" id="svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="336.88888888888886" viewBox="0, 0, 400,336.88888888888886"><g id="svgg"><path id="path0" d="M152.219 5.345 C 131.916 12.561,125.406 28.637,120.007 84.889 C 113.900 148.518,107.967 160.844,50.274 229.769 C 25.981 258.791,9.775 279.477,7.053 284.939 C -4.324 307.764,19.499 332.142,42.240 320.946 C 48.379 317.924,48.157 318.155,63.265 299.070 C 68.314 292.692,78.608 280.017,86.142 270.904 L 99.839 254.333 105.697 253.744 C 108.919 253.420,124.356 251.591,140.000 249.681 C 226.581 239.107,233.532 241.149,312.889 300.465 C 345.425 324.785,349.285 327.416,356.653 330.304 C 376.763 338.185,395.999 325.971,395.980 305.333 C 395.966 290.005,393.951 287.058,348.898 236.444 C 312.082 195.085,305.352 186.824,293.136 168.000 C 286.858 158.326,280.890 148.431,247.570 92.444 C 201.532 15.092,180.038 -4.542,152.219 5.345 M183.346 90.020 C 187.444 96.487,201.732 120.178,215.097 142.667 C 228.462 165.156,241.524 186.856,244.123 190.889 C 246.722 194.922,248.558 198.218,248.202 198.213 C 247.847 198.207,245.556 197.595,243.111 196.851 C 225.089 191.368,188.711 189.744,160.108 193.146 C 142.474 195.244,143.517 195.396,146.217 191.119 C 161.210 167.369,167.872 143.683,172.521 97.606 C 173.640 86.512,174.857 77.621,175.225 77.848 C 175.593 78.076,179.247 83.553,183.346 90.020 " stroke="none" fill="currentColor" fill-rule="evenodd"></path></g></svg>
 				  </div>
-				  <div class="cpe-dropdown__content cpe-is-right-aligned">		
-						  <ul class="cpe-list cpe-is-linked">
+				  <div class="cpe-dropdown__content is-right-aligned">		
+						  <ul class="cpe-list is-linked">
 							<li>
 							<a>Contact Mpisto</a>
 							</li>
@@ -2883,8 +2937,8 @@ Checked = VisualEditor as default mode
 				  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dropdown" />
 				</svg>			
 			  </div>
-			  <div class="cpe-dropdown__content cpe-is-right-aligned">		
-				<ul class="cpe-list cpe-is-linked">					
+			  <div class="cpe-dropdown__content is-right-aligned">		
+				<ul class="cpe-list is-linked">					
 				  <li class="small">						
 					<a><svg version="1.1" class="cpe-icon cpe-icon-tiny" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
 						<path fill="currentcolor" d="M52.053 0c-1.28 3.968-2.56 7.893-2.56 13.141v991.104c0 9.259 2.603 14.507 7.851 19.755l487.040-515.968-492.331-508.032zM577.237 542.208l125.909 129.92-179.755 102.4s-228.48 129.877-354.475 202.197l408.32-434.517zM611.413 506.752l135.083 140.459c21.163-11.776 186.496-106.325 210.091-119.467 24.917-14.421 22.4-34.133 1.237-44.629-19.584-10.88-184.917-105.6-209.92-120.96l-136.491 144.597zM577.152 472.619l127.317-135.211-181.717-103.723s-296.235-169.472-394.795-226.048l449.195 464.981z"></path>
@@ -2934,7 +2988,7 @@ Checked = VisualEditor as default mode
 					  </svg>	
 			  </div>
 			  <div class="cpe-dropdown__content">		
-					  <ul class="cpe-list cpe-is-linked">
+					  <ul class="cpe-list is-linked">
 						<li>
 						<a>View Profile</a>
 						</li>
@@ -2960,7 +3014,7 @@ Checked = VisualEditor as default mode
 					  </svg>	
 			  </div>
 			  <div class="cpe-dropdown__content">		
-					  <ul class="cpe-list cpe-is-linked">
+					  <ul class="cpe-list is-linked">
 						<li>
 						<a>GMK Pages</a>
 						</li>
@@ -2997,43 +3051,47 @@ Checked = VisualEditor as default mode
 	<div class="cpe-button-groups" style="position:relative; z-index:0; width:100%; align-items:center;">
 	   <div class="cpe-button-group">
 		<button class="cpe-button">Button Test</button>
-		<button class="cpe-button cpe-is-secondary">Button Test</button>
-		<button class="cpe-button cpe-is-text">Button Test</button>
+		<button class="cpe-button is-secondary">Button Test</button>
+		<button class="cpe-button is-text">Button Test</button>
 	   </div>
 	   <div class="cpe-button-group">
-		<button class="cpe-button cpe-is-alternate">Button Test</button>
-		<button class="cpe-button cpe-is-secondary cpe-is-alternate">Button Test</button>
-		<button class="cpe-button cpe-is-text cpe-is-alternate">Button Test</button>
+		<button class="cpe-button is-alternate">Button Test</button>
+		<button class="cpe-button is-secondary is-alternate">Button Test</button>
+		<button class="cpe-button is-text is-alternate">Button Test</button>
 	   </div>
 	   <div class="cpe-button-group">
-		<button class="cpe-button cpe-is-borderline">Button Test</button>
-		<button class="cpe-button cpe-is-secondary cpe-is-borderline">Button Test</button>
-		<button class="cpe-button cpe-is-text cpe-is-borderline">Button Test</button>
+		<button class="cpe-button is-borderline">Button Test</button>
+		<button class="cpe-button is-secondary is-borderline">Button Test</button>
+		<button class="cpe-button is-text is-borderline">Button Test</button>
 	   </div>
 	   <div class="cpe-button-group">
-		<button class="cpe-button cpe-is-headline">Button Test</button>
-		<button class="cpe-button cpe-is-secondary cpe-is-headline">Button Test</button>
-		<button class="cpe-button cpe-is-text cpe-is-headline">Button Test</button>
+		<button class="cpe-button is-headline">Button Test</button>
+		<button class="cpe-button is-secondary is-headline">Button Test</button>
+		<button class="cpe-button is-text is-headline">Button Test</button>
 	   </div>
 	   <div class="cpe-button-group">
-		<button class="cpe-button cpe-is-titleline">Button Test</button>
-		<button class="cpe-button cpe-is-secondary cpe-is-titleline">Button Test</button>
-		<button class="cpe-button cpe-is-text cpe-is-titleline">Button Test</button>
+		<button class="cpe-button is-titleline">Button Test</button>
+		<button class="cpe-button is-secondary is-titleline">Button Test</button>
+		<button class="cpe-button is-text is-titleline">Button Test</button>
 	   </div>
 	   <div class="cpe-button-group">
-		<button class="cpe-button cpe-is-colorline">Button Test</button>
-		<button class="cpe-button cpe-is-secondary cpe-is-colorline">Button Test</button>
-		<button class="cpe-button cpe-is-text cpe-is-colorline">Button Test</button>
+		<button class="cpe-button is-colorline">Button Test</button>
+		<button class="cpe-button is-secondary is-colorline">Button Test</button>
+		<button class="cpe-button is-text is-colorline">Button Test</button>
 	   </div>
 	   <div class="cpe-button-group">
-		<button class="cpe-button cpe-is-intitleline">Button Test</button>
-		<button class="cpe-button cpe-is-secondary cpe-is-intitleline">Button Test</button>
-		<button class="cpe-button cpe-is-text cpe-is-intitleline">Button Test</button>
+		<button class="cpe-button is-intitleline">Button Test</button>
+		<button class="cpe-button is-secondary is-intitleline">Button Test</button>
+		<button class="cpe-button is-text is-intitleline">Button Test</button>
 	   </div>
 	</div>
 <!-- End Groups -->
 <!-- Begin Sample -->
 <div class="preview-window-desk">
+	<div class="gradient-overlay" style="position:absolute; pointer-events:none;"></div>
+	<div class="invertion-on" style=" pointer-events: none; position: absolute; z-index: -2; width: 100%; height: 100%;"><div class="body-community-background " style="position:absolute; pointer-events:none;"></div></div>
+	<div class="body-community-background-color" style="position:absolute; pointer-events:none;"></div>
+
 	<div class="preview-window-window">
 		<h2>
 <!--			<img src="TaskManager Icon.png" /> -->
@@ -3856,7 +3914,7 @@ Checked = VisualEditor as default mode
 	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon" width="1024" height="1024" viewBox="0 0 1024 1024">
 		<path fill="currentcolor" d="M52.053 0c-1.28 3.968-2.56 7.893-2.56 13.141v991.104c0 9.259 2.603 14.507 7.851 19.755l487.040-515.968-492.331-508.032zM577.237 542.208l125.909 129.92-179.755 102.4s-228.48 129.877-354.475 202.197l408.32-434.517zM611.413 506.752l135.083 140.459c21.163-11.776 186.496-106.325 210.091-119.467 24.917-14.421 22.4-34.133 1.237-44.629-19.584-10.88-184.917-105.6-209.92-120.96l-136.491 144.597zM577.152 472.619l127.317-135.211-181.717-103.723s-296.235-169.472-394.795-226.048l449.195 464.981z"></path>
 	</svg>
-      <span>Submit to Store</span> <a class="cpe-button cpe-is-square cpe-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
+      <span>Submit to Store</span> <a class="cpe-button is-square is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-cross" />
                   </svg></a></h1>
    <section>
@@ -3871,10 +3929,10 @@ Checked = VisualEditor as default mode
     <label>Description:</label> <textarea class="cpe-input" placeholder="Description" style="resize:horizontal;"></textarea>
    </section>
    <footer>
-   <button class="cpe-button cpe-is-secondary cpe-is-alternate cpe-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+   <button class="cpe-button is-secondary is-alternate is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-upload" />
 	</svg> <span>Submit Theme</span></button>
-   <button class="cpe-button cpe-is-secondary cpe-is-alternate cpe-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+   <button class="cpe-button is-secondary is-alternate is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-refresh" />
 	</svg> <span>Reset form</span></button>
    </footer>
@@ -3887,7 +3945,7 @@ Checked = VisualEditor as default mode
 	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-user" />
 	</svg>
-      <span>Set your Avatar</span> <a class="cpe-button cpe-is-square cpe-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+      <span>Set your Avatar</span> <a class="cpe-button is-square is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-cross" />
                   </svg></a></h1>
    <section>
@@ -3925,7 +3983,7 @@ Checked = VisualEditor as default mode
 	</div>	
    </section>
    <footer>
-   <button class="cpe-button cpe-is-secondary cpe-is-alternate cpe-is-squished">	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+   <button class="cpe-button is-secondary is-alternate is-squished">	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-question" />
 	</svg> <span>Which one is the bast?</span></button>
    </footer>
@@ -3938,7 +3996,7 @@ Checked = VisualEditor as default mode
 	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-user" />
 	</svg>
-      <span>Set your Bot's Avatar</span> <a class="cpe-button cpe-is-square cpe-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
+      <span>Set your Bot's Avatar</span> <a class="cpe-button is-square is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-cross" />
                   </svg></a></h1>
    <section>
@@ -3976,7 +4034,7 @@ Checked = VisualEditor as default mode
 	</div>	
    </section>
    <footer>
-   <button class="cpe-button cpe-is-secondary cpe-is-alternate cpe-is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+   <button class="cpe-button is-secondary is-alternate is-squished"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-question" />
 	</svg> <span>Which one is the bast?</span></button>
    </footer>
@@ -3988,37 +4046,37 @@ Checked = VisualEditor as default mode
 	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-gear" />
 	</svg>
-      <span>Customize Toolbar</span> <a class="cpe-button cpe-is-square cpe-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
+      <span>Customize Toolbar</span> <a class="cpe-button is-square is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-cross" />
                   </svg></a></h1>
    <section>
 		You can specify the items that will appear on the right toolbar
 		<h2>Current Items</h2>
 		<div class="toolbar-added-items">
-			<button value="26" class="cpe-button cpe-is-secondary cpe-is-square whatlinkshere" title="What Links Here" onclick="RemoveItem(26)">
+			<button value="26" class="cpe-button is-secondary is-square whatlinkshere" title="What Links Here" onclick="RemoveItem(26)">
 				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-link"></use>
 				</svg>
 			</button>
-			<button value="18" class="cpe-button cpe-is-secondary cpe-is-square logs" title="Public logs" onclick="RemoveItem(18)">
+			<button value="18" class="cpe-button is-secondary is-square logs" title="Public logs" onclick="RemoveItem(18)">
 				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-eye"></use>
 				</svg>
 			</button>
-			<button value="27" class="cpe-button cpe-is-secondary cpe-is-square designer" title="Wiki Personalization" onclick="RemoveItem(27)">
+			<button value="27" class="cpe-button is-secondary is-square designer" title="Wiki Personalization" onclick="RemoveItem(27)">
 				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon" enable-background="new 0 0 24 24" height="28px" viewBox="0 0 24 24" width="28px" fill="currentColor"><g><rect fill="none" height="24" width="24"/></g><g><g><g><g><path d="M12,22C6.49,22,2,17.51,2,12S6.49,2,12,2s10,4.04,10,9c0,3.31-2.69,6-6,6h-1.77c-0.28,0-0.5,0.22-0.5,0.5 c0,0.12,0.05,0.23,0.13,0.33c0.41,0.47,0.64,1.06,0.64,1.67C14.5,20.88,13.38,22,12,22z M12,4c-4.41,0-8,3.59-8,8s3.59,8,8,8 c0.28,0,0.5-0.22,0.5-0.5c0-0.16-0.08-0.28-0.14-0.35c-0.41-0.46-0.63-1.05-0.63-1.65c0-1.38,1.12-2.5,2.5-2.5H16 c2.21,0,4-1.79,4-4C20,7.14,16.41,4,12,4z"/><circle cx="6.5" cy="11.5" r="1.5"/><circle cx="9.5" cy="7.5" r="1.5"/><circle cx="14.5" cy="7.5" r="1.5"/><circle cx="17.5" cy="11.5" r="1.5"/></g></g></g></g></svg>
 			</button>
-			<button value="0" class="cpe-button cpe-is-secondary cpe-is-square dashbaord" title="Admin Dashboard" onclick="RemoveItem(0)">
+			<button value="0" class="cpe-button is-secondary is-square dashbaord" title="Admin Dashboard" onclick="RemoveItem(0)">
 				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dashboard"></use>
 				</svg>
 			</button>
-			<button value="21" class="cpe-button cpe-is-secondary cpe-is-square discussions-reported" title="Reported Posts" onclick="RemoveItem(21)">
+			<button value="21" class="cpe-button is-secondary is-square discussions-reported" title="Reported Posts" onclick="RemoveItem(21)">
 				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-alert"></use>
 				</svg>
 			</button>
-			<button value="20" class="cpe-button cpe-is-secondary cpe-is-square activity" title="Recent Activity" onclick="RemoveItem(20)">
+			<button value="20" class="cpe-button is-secondary is-square activity" title="Recent Activity" onclick="RemoveItem(20)">
 				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-activity"></use>
 				</svg>
@@ -4167,10 +4225,10 @@ Checked = VisualEditor as default mode
 			</div>
    </section>
    <footer>
-   <button class="cpe-button cpe-is-secondary cpe-is-squished cpe-is-alternate" onclick="ResetToolbarItems()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+   <button class="cpe-button is-secondary is-squished is-alternate" onclick="ResetToolbarItems()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-refresh" />
 	</svg> <span>Reset Form</span></button>
-   <button class="cpe-button cpe-is-squished cpe-is-alternate" onclick="SaveToolbarItems()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+   <button class="cpe-button is-squished is-alternate" onclick="SaveToolbarItems()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-checkmark" />
 	</svg> <span>Save</span></button>
    </footer>
@@ -4329,7 +4387,7 @@ function dropFunction() {
     <div class="cpe-dropdown">
       <a class="link">Wikis</a>
       <div class="cpe-dropdown-content">
-        <ul class="cpe-list cpe-is-linked">
+        <ul class="cpe-list is-linked">
         </ul>
       </div>
     </div>

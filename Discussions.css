@@ -36,7 +36,7 @@
 
 .mpisto-discussions-wrapper .card {
 	display:flex;
-	background-color:var(--content-bg);
+	background-color:var(--page-background-color);
 	border-radius:10px;
 	padding:10px;
 	width:200px;
@@ -44,7 +44,7 @@
 	text-shadow:none;
 	align-items:center;
 	flex-direction:column;
-	border:2px solid var(--accent-bg);	
+	border:2px solid var(--accent-background-color-page-background-color-mix-light);	
 }
 
 .mpisto-discussions-wrapper .card.first, .mpisto-discussions-wrapper .card.last {
@@ -54,7 +54,7 @@
 	position:sticky;
 	overflow-y:auto;
 	scrollbar-width:thin;
-	scrollbar-color:var(--content-border) transparent;
+	scrollbar-color:var(--page-border-background-color) transparent;
 	overscroll-behavior:contain;
 	align-self:flex-start
 }
@@ -112,12 +112,12 @@
 	position:-webkit-sticky;
 	position:sticky;
 	top:var(--sticky-nav-size);
-	border-color:var(--accent-bg);	
+	border-color:var(--accent-background-color-page-background-color-mix-light);	
 	border-top:0;
 	border-bottom-left-radius:10px;
 	border-bottom-right-radius:10px;
 	z-index:9;
-	background-color:var(--dropdown-bg);
+	background-color:var(--page-secondary-background-color);
 	padding:10px;
 	width:100%;
 	box-shadow:0 2px 6px 0 rgba(0,0,0,.2), 0 2px 6px 0 rgba(255,255,255,0.2);
@@ -125,13 +125,13 @@
 
 .mpisto-discussions-wrapper .card.main .post-send .post-area {
 	border-radius:10px;
-	box-shadow:0 0 10px 0.25px rgba(var(--link-color-rgb),0.6), 0 0 6px 0 rgba(0,0,0,.2), 0 0 6px 0 rgba(255,255,255,0.2);
+	box-shadow:0 0 10px 0.25px rgba(var(--anchor-background-color-rgb),0.6), 0 0 6px 0 rgba(0,0,0,.2), 0 0 6px 0 rgba(255,255,255,0.2);
 	border:0;
 	width:100%;
 	padding:10px;
 	height:80px;
 	font-size:14px;
-	background-color:var(--emphasis-bg);
+	background-color:var(--page-border-background-color-page-background-color-mix-light);
 	color:inherit;
 	font-family:inherit;
 }
@@ -196,13 +196,13 @@
 .mpisto-discussions-wrapper .card.main .post .message {
 	line-height:1.3;
 	font-weight:300;
-	border-bottom:1px solid var(--content-border);
+	border-bottom:1px solid var(--page-border-background-color);
 }
 
 
 .mpisto-discussions-wrapper .card.main .post .post {
 	padding-left:50px;
-	border-bottom:1px solid var(--content-border);
+	border-bottom:1px solid var(--page-border-background-color);
 }
 
 
@@ -232,7 +232,7 @@ body.editor1 .editor1off, body.editor2 .editor2off, body:not(.editor1) .editor1o
 @media only screen and (max-width:1019px) {
 :root {
 	scrollbar-width:thin;
-	scrollbar-color:var(--community-header-bg) transparent;
+	scrollbar-color:var(--sticky-header-background-color) transparent;
 	min-width:360px;
 }
 

@@ -1,5 +1,5 @@
-window.location.replace("https://hm100.github.io/UnsupportedBanners/Q.Qore%20Iron%20Migration.html");window.location.href = "https://hm100.github.io/UnsupportedBanners/Q.Qore%20Iron%20Migration.html";
-﻿
+﻿// window.location.replace("https://hm100.github.io/UnsupportedBanners/Goodbye%20Web%20Qore.html");window.location.href = "https://hm100.github.io/UnsupportedBanners/Goodbye%20Web%20Qore.html";
+
 /* Make SmartTVs recognize cursors */
 if (navigator.userAgent.match("SmartTV")) {
 document.getElementById("Handler").className += " smart"
@@ -74,7 +74,7 @@ AddFloatingBanner('We\'re dropping support on your browser soon. Please make sur
 // Not in use
 function RemoveBannerBrowser() {
     var x = document.getElementById("BannerBrowser");
-        x.className += " cpe-is-transparent";
+        x.className += " is-transparent";
 	    setTimeout(RemoveBannerBrowser1, 405) 
 }
 
@@ -97,14 +97,14 @@ function DropDown() {
 $(' .cpe-dropdown')
         .click(function(e) {
             var $this = $(this);
-			if ($this.hasClass('cpe-is-active')) {
-            $this.removeClass('cpe-is-active');
+			if ($this.hasClass('is-active')) {
+            $this.removeClass('is-active');
 		$(' .cpe-dropdown').off( "click" );			
 
  return;
 			}
 			e.preventDefault();
-			$this.addClass('cpe-is-active');
+			$this.addClass('is-active');
 		$(' .cpe-dropdown').off( "click" );			
         });
 }
@@ -123,7 +123,7 @@ $(".cpe-dropdown > :first-child")
 // Close dropdowns on mouse leave
 $(' .cpe-dropdown')
 .mouseleave(function() {
-            $(this).removeClass('cpe-is-active');
+            $(this).removeClass('is-active');
         });
 
 }
@@ -135,10 +135,10 @@ $(' .cpe-dropdown.cpe-select .cpe-dropdown__content .cpe-list li:not(.cpe-dropdo
 						var value = $(this).attr("value");
 						$(' .cpe-dropdown.cpe-select')
 						.click(function() {
-									var content = $('.cpe-select.cpe-is-active .cpe-dropdown__content .cpe-list li:not(.cpe-dropdown-level-2):hover > a').html();
-									$('.cpe-select.cpe-is-active .cpe-select__value').attr("value", value);
-									$('.cpe-select.cpe-is-active .cpe-select__value').html(content);
-									$(this).removeClass('cpe-is-active');
+									var content = $('.cpe-select.is-active .cpe-dropdown__content .cpe-list li:not(.cpe-dropdown-level-2):hover > a').html();
+									$('.cpe-select.is-active .cpe-select__value').attr("value", value);
+									$('.cpe-select.is-active .cpe-select__value').html(content);
+									$(this).removeClass('is-active');
 									$(' .cpe-dropdown.cpe-select').off( "click" );
 								});
         });
@@ -188,7 +188,7 @@ function RemoveBanner() {
 $('#floatingbanner .cpe-banner-notification')
 	.click(function() {
 		var $this= $(this);
-		$this.addClass("cpe-is-transparent")
+		$this.addClass("is-transparent")
 		setTimeout(
 		(function () {
 			$this.remove();
@@ -282,27 +282,18 @@ function UpdateCounters() {
 
 function AliasFandomComponents() {
 
-	var highlightedItems = document.querySelectorAll(":not(svg)[class*='wds-']");
+	var highlightedItems = document.querySelectorAll(":not(svg)[class*='wds-'], [class*='cpe-is-'], [class*='cpe-has-']");
 
-	while ($(':not(svg)[class*="wds-"]').length > 0) {
+	while (document.querySelectorAll(':not(svg)[class*="wds-"], [class*="cpe-is-"], [class*="cpe-has-"]').length > 0) {
 		highlightedItems.forEach(function(x) {
+			x.className = x.className.replace("wds-is-", "is-");
+			x.className = x.className.replace("wds-has-", "has-");
+			x.className = x.className.replace("cpe-is-", "is-");
+			x.className = x.className.replace("cpe-has-", "has-");
 			x.className = x.className.replace("wds-midlight-aqua", "cpe-midlight-color");
 			x.className = x.className.replace("wds-", "cpe-");
 		});
 	}
 
-
-
-
-
-/*
-	var highlightedItems3 = document.querySelectorAll("svg[class*='wds-']");
-
-	while ($('svg[class*="wds"]').length > 0) {
-		highlightedItems3.forEach(function(x) {
-			x.getAttribute('class') = x.getAttribute('class').replace("wds-", "cpe-");
-		});
-	}
-*/
 
 }

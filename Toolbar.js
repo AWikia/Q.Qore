@@ -130,7 +130,7 @@ function SaveToolbarItems() {
 /* Rest of script */
 $('#ModalTCustom .lightbox > section').prepend ( 
       '<div class="cpe-banner-notification__container" id="floatingbanner" style="top:auto; position:relative;">' +
-        '<div class="cpe-banner-notification cpe-success cpe-is-transparent" style="transform:none;" id="BannerToolbar">' +
+        '<div class="cpe-banner-notification cpe-success is-transparent" style="transform:none;" id="BannerToolbar">' +
           '<div class="cpe-banner-notification__icon">' +
             '<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">' +
               '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-checkmark-small" />' +
@@ -153,13 +153,13 @@ setTimeout(RemoveBannerTB, 2500);
 function RemoveBannerTB() {
 	$('#ModalTCustom .lightbox section #BannerToolbar').attr("style", "");
     var x = document.getElementById("BannerToolbar");
-        x.className += " cpe-is-transparent";
+        x.className += " is-transparent";
 	    setTimeout(RemoveBannerTB1, 405) 
 }
 
 function RemoveBannerTB2() {
     var x = document.getElementById("BannerToolbar");
-       x.className = x.className.replace (" cpe-is-transparent", "");
+       x.className = x.className.replace (" is-transparent", "");
 }
 
 function RemoveBannerTB1() {
@@ -173,7 +173,7 @@ function PutItem(value) {
 		/* Rest of script */
 		$('#ModalTCustom .lightbox > section').prepend ( 
 			  '<div class="cpe-banner-notification__container" id="floatingbanner" style="top:auto; position:relative;">' +
-				'<div class="cpe-banner-notification cpe-alert cpe-is-transparent" style="transform:none;" id="BannerToolbar">' +
+				'<div class="cpe-banner-notification cpe-alert is-transparent" style="transform:none;" id="BannerToolbar">' +
 				  '<div class="cpe-banner-notification__icon">' +
 					'<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">' +
 					  '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-error-small" />' +
@@ -296,7 +296,7 @@ function PutItem(value) {
 	}
 
 	$('#ModalTCustom  .toolbar-added-items').append(
-	'<button value=' + value + ' class="cpe-button cpe-is-secondary cpe-is-square ' + classes[value] + '" title="' + names[value] + '" onclick="RemoveItem(' + value + ')">' +
+	'<button value=' + value + ' class="cpe-button is-secondary is-square ' + classes[value] + '" title="' + names[value] + '" onclick="RemoveItem(' + value + ')">' +
 		iconic +
 	'</button>' 
 	);

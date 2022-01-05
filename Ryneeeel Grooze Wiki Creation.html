@@ -131,9 +131,9 @@
 
 <html class="main wiki-wizard">
   <body onfocus="CheckTheme()" onblur="CheckTheme()"  class="mpisto-2018" style="overflow:hidden;" id="Handler" onclick="">
-  <div class="gradient-overlay" style="position:absolute; pointer-events:none;"></div>
-  <div class="gradient-overlay-2" style="position:absolute; pointer-events:none;"></div>
-  <div class="body-community-background" style="position:absolute; pointer-events:none;"></div>
+	<div class="gradient-overlay" style="position:absolute; pointer-events:none;"></div>
+	<div class="invertion-on" style=" pointer-events: none; position: absolute; z-index: -2; width: 100%; height: 100%;"><div class="body-community-background " style="position:absolute; pointer-events:none;"></div></div>
+	<div class="body-community-background-color" style="position:absolute; pointer-events:none;"></div>
   <container>
   <main>
   <header class="mpisto-global-sidebar mpisto-global-navigation">
@@ -168,13 +168,13 @@
 			<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-discord" /></svg>
 		</a>
-		<div class="cpe-dropdown cpe-has-dark-shadow explore-menu" cpe-orient="land">
+		<div class="cpe-dropdown has-dark-shadow explore-menu" cpe-orient="land">
 			<div class="link cpe-dropdown__toggle" cpe-tooltip="Explore">
 				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-menu-control" /></svg> 
 			</div>
 		    <div class="cpe-dropdown__content">
-				<ul class="cpe-list cpe-is-linked">
+				<ul class="cpe-list is-linked">
 					<li><a href="https://alpha-technologies.fandom.com/el" translate="no">A Techno Wiki</a></li>
 					<li><a href="https://alpha-styles.fandom.com/el" translate="no">A Techo Dev Wiki</a></li>
 					<li><a href="https://alphafoundation.fandom.com/el" translate="no">A Wiki Foundation</a></li>
@@ -185,13 +185,13 @@
 	</div>
 	<div class="bottom-links">
 	<!-- Wikis -->
-		<div class="cpe-dropdown cpe-has-dark-shadow create-wiki" cpe-orient="land">
+		<div class="cpe-dropdown has-dark-shadow create-wiki" cpe-orient="land">
 			<div class="link cpe-dropdown__toggle cell" cpe-tooltip="Wikis">
 				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-community" /></svg> 
 			</div>
-		    <div class="cpe-dropdown__content cpe-is-left-aligned">
-				<ul class="cpe-list cpe-is-linked">
+		    <div class="cpe-dropdown__content is-left-aligned">
+				<ul class="cpe-list is-linked">
 				  <li><a>Create a Wiki</a></li>
 				  <li><a>Import a Wiki</a></li>
 				  <li><a>Report a Wiki</a></li>
@@ -199,7 +199,7 @@
 			</div>
 		</div>
 		<!-- Search -->
-		<div class="cpe-dropdown cpe-has-dark-shadow search" cpe-orient="land">
+		<div class="cpe-dropdown has-dark-shadow search" cpe-orient="land">
 			<div class="link cpe-dropdown__toggle" cpe-tooltip="Search">
 				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-magnifying-glass" /></svg> 
@@ -208,8 +208,8 @@
 				<ul class="cpe-list">
 					<li>
 						<div class="pageheader-search">
-							<input class="cpe-input cpe-is-borderline" type="search" placeholder="Search on Qora Qore..."></input>
-							<button class="cpe-button cpe-is-borderline">
+							<input class="cpe-input is-borderline" type="search" placeholder="Search on Qora Qore..."></input>
+							<button class="cpe-button is-borderline">
 								<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-magnifying-glass" /></svg>
 							</button>
@@ -219,35 +219,35 @@
 			</div>
 		</div>
 		<!-- Flags -->
-		<div class="cpe-dropdown cpe-has-dark-shadow flags-menu" cpe-orient="land">
+		<div class="cpe-dropdown has-dark-shadow flags-menu" cpe-orient="land">
 			<div class="link cpe-dropdown__toggle" cpe-tooltip="Flags">
 				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon ">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-flag" /> 
 				</svg>
 			</div>
-			<div class="cpe-dropdown__content cpe-is-left-aligned cpe-is-not-scrollable flags-dropdown">
-				<ul class="cpe-list cpe-has-lines-between cpe-has-ellipsis">
+			<div class="cpe-dropdown__content is-left-aligned is-not-scrollable flags-dropdown">
+				<ul class="cpe-list has-lines-between has-ellipsis">
 					<li>
-						<button class="cpe-button cpe-is-squished cpe-is-full-width">Manage Flags</button>
+						<button class="cpe-button is-squished is-full-width">Manage Flags</button>
 					</li>
 					<li>
-						<button class="cpe-button cpe-is-squished cpe-is-full-width">Enforce Flags</button>
+						<button class="cpe-button is-squished is-full-width">Enforce Flags</button>
 					</li>
 					<li>
-						<button class="cpe-button cpe-is-squished cpe-is-full-width">Clear all Flags</button>
+						<button class="cpe-button is-squished is-full-width">Clear all Flags</button>
 					</li>
 				</ul>
 			</div>
 		</div>
 	   <!-- Notification -->
-       <div class="cpe-dropdown cpe-has-dark-shadow notifications-menu" cpe-orient="land">
+       <div class="cpe-dropdown has-dark-shadow notifications-menu" cpe-orient="land">
         <div class="link cpe-dropdown__toggle" cpe-tooltip="Notifications">
 			<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon ">
 				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-bell" /> 
 			</svg>
 		</div>
-        <div class="cpe-dropdown__content cpe-is-right-aligned cpe-is-not-scrollable notification">
-          <ul class="cpe-list cpe-has-lines-between cpe-has-ellipsis">
+        <div class="cpe-dropdown__content is-right-aligned is-not-scrollable notification">
+          <ul class="cpe-list has-lines-between has-ellipsis">
            <li class="notification">
            <a>
            <div class="wrapper">
@@ -274,12 +274,12 @@
         </div>
       </div>
       <!-- Themes -->
-		  <div class="cpe-dropdown cpe-has-dark-shadow themes"  cpe-orient="land">
+		  <div class="cpe-dropdown has-dark-shadow themes"  cpe-orient="land">
 			<div class="link cpe-dropdown__toggle" cpe-tooltip="Themes">
 				<svg class="cpe-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 0H0v24h24z" fill="none"/><path d="M17.66 7.93L12 2.27 6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58c2.05 0 4.1-.78 5.66-2.34 3.12-3.12 3.12-8.19 0-11.31zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/></svg>
 			</div>
-			<div class="cpe-dropdown__content cpe-is-right-aligned">
-				<ul class="cpe-list cpe-is-linked">
+			<div class="cpe-dropdown__content is-right-aligned">
+				<ul class="cpe-list is-linked">
 					<li>
 						<a onclick="HCa()">
 							Theme A
@@ -303,12 +303,12 @@
 				</ul>
 			</div>
 		</div>
-		<div class="cpe-dropdown cpe-has-dark-shadow user-profile" cpe-orient="land">
+		<div class="cpe-dropdown has-dark-shadow user-profile" cpe-orient="land">
 			<div class="link cell cpe-dropdown__toggle" cpe-tooltip="HM100">
 				<img class="mpisto-avatar" alt="HM100" src="HM100.png"></img>
 			</div>
-			<div class="cpe-dropdown__content cpe-is-right-aligned">
-				<ul class="cpe-list cpe-is-linked">
+			<div class="cpe-dropdown__content is-right-aligned">
+				<ul class="cpe-list is-linked">
 				<li><a>Discussions Statistics</a></li>
 				<li><a>View Profile</a></li>
 				<li><a>Manage A Secure Account</a></li>
@@ -389,7 +389,7 @@
 
 			</aside>
 			<footer>
-				<button disabled onclick="Step1()" class="cpe-button cpe-is-text cpe-is-colorline">Previous Page</button>
+				<button disabled onclick="Step1()" class="cpe-button is-text is-colorline">Previous Page</button>
 				<button onclick="Step2()" class="cpe-button">Next Page</button>
 			</footer>
 		</div>
@@ -467,7 +467,7 @@
 
 			</aside>
 			<footer>
-				<button onclick="Step1()" class="cpe-button cpe-is-text cpe-is-colorline">Previous Page</button>
+				<button onclick="Step1()" class="cpe-button is-text is-colorline">Previous Page</button>
 				<button onclick="Step3()" class="cpe-button">Next Page</button>
 			</footer>
 		</div>
@@ -556,7 +556,7 @@
 				</div>
 			</aside>
 			<footer>
-				<button onclick="Step2()" class="cpe-button cpe-is-text cpe-is-colorline">Previous Page</button>
+				<button onclick="Step2()" class="cpe-button is-text is-colorline">Previous Page</button>
 				<button class="cpe-button">Create Wiki</button>
 			</footer>
 		</div>
@@ -613,37 +613,37 @@
 	<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-gear" />
 	</svg>
-      <span>Customize Toolbar</span> <a class="cpe-button cpe-is-square cpe-is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
+      <span>Customize Toolbar</span> <a class="cpe-button is-square is-text" href="#" title="close modal"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-cross" />
                   </svg></a></h1>
    <section>
 		You can specify the items that will appear on the right toolbar
 		<h2>Current Items</h2>
 		<div class="toolbar-added-items">
-			<button value="26" class="cpe-button cpe-is-secondary cpe-is-square whatlinkshere" title="What Links Here" onclick="RemoveItem(26)">
+			<button value="26" class="cpe-button is-secondary is-square whatlinkshere" title="What Links Here" onclick="RemoveItem(26)">
 				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-link"></use>
 				</svg>
 			</button>
-			<button value="18" class="cpe-button cpe-is-secondary cpe-is-square logs" title="Public logs" onclick="RemoveItem(18)">
+			<button value="18" class="cpe-button is-secondary is-square logs" title="Public logs" onclick="RemoveItem(18)">
 				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-eye"></use>
 				</svg>
 			</button>
-			<button value="27" class="cpe-button cpe-is-secondary cpe-is-square designer" title="Wiki Personalization" onclick="RemoveItem(27)">
+			<button value="27" class="cpe-button is-secondary is-square designer" title="Wiki Personalization" onclick="RemoveItem(27)">
 				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon" enable-background="new 0 0 24 24" height="28px" viewBox="0 0 24 24" width="28px" fill="currentColor"><g><rect fill="none" height="24" width="24"/></g><g><g><g><g><path d="M12,22C6.49,22,2,17.51,2,12S6.49,2,12,2s10,4.04,10,9c0,3.31-2.69,6-6,6h-1.77c-0.28,0-0.5,0.22-0.5,0.5 c0,0.12,0.05,0.23,0.13,0.33c0.41,0.47,0.64,1.06,0.64,1.67C14.5,20.88,13.38,22,12,22z M12,4c-4.41,0-8,3.59-8,8s3.59,8,8,8 c0.28,0,0.5-0.22,0.5-0.5c0-0.16-0.08-0.28-0.14-0.35c-0.41-0.46-0.63-1.05-0.63-1.65c0-1.38,1.12-2.5,2.5-2.5H16 c2.21,0,4-1.79,4-4C20,7.14,16.41,4,12,4z"/><circle cx="6.5" cy="11.5" r="1.5"/><circle cx="9.5" cy="7.5" r="1.5"/><circle cx="14.5" cy="7.5" r="1.5"/><circle cx="17.5" cy="11.5" r="1.5"/></g></g></g></g></svg>
 			</button>
-			<button value="0" class="cpe-button cpe-is-secondary cpe-is-square dashbaord" title="Admin Dashboard" onclick="RemoveItem(0)">
+			<button value="0" class="cpe-button is-secondary is-square dashbaord" title="Admin Dashboard" onclick="RemoveItem(0)">
 				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-dashboard"></use>
 				</svg>
 			</button>
-			<button value="21" class="cpe-button cpe-is-secondary cpe-is-square discussions-reported" title="Reported Posts" onclick="RemoveItem(21)">
+			<button value="21" class="cpe-button is-secondary is-square discussions-reported" title="Reported Posts" onclick="RemoveItem(21)">
 				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-alert"></use>
 				</svg>
 			</button>
-			<button value="20" class="cpe-button cpe-is-secondary cpe-is-square activity" title="Recent Activity" onclick="RemoveItem(20)">
+			<button value="20" class="cpe-button is-secondary is-square activity" title="Recent Activity" onclick="RemoveItem(20)">
 				<svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-activity"></use>
 				</svg>
@@ -792,10 +792,10 @@
 			</div>
    </section>
    <footer>
-   <button class="cpe-button cpe-is-secondary cpe-is-squished cpe-is-alternate" onclick="ResetToolbarItems()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+   <button class="cpe-button is-secondary is-squished is-alternate" onclick="ResetToolbarItems()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-refresh" />
 	</svg> <span>Reset Form</span></button>
-   <button class="cpe-button cpe-is-squished cpe-is-alternate" onclick="SaveToolbarItems()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
+   <button class="cpe-button is-squished is-alternate" onclick="SaveToolbarItems()"><svg xmlns="http://www.w3.org/2000/svg" class="cpe-icon cpe-icon-small">
 		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cpe-icons-checkmark" />
 	</svg> <span>Save</span></button>
    </footer>
@@ -956,7 +956,7 @@ function dropFunction() {
     <div class="cpe-dropdown">
       <a class="link">Wikis</a>
       <div class="cpe-dropdown-content">
-        <ul class="cpe-list cpe-is-linked">
+        <ul class="cpe-list is-linked">
         </ul>
       </div>
     </div>
