@@ -2003,7 +2003,7 @@ function CompileRecColors() {
 	  str = str + data;
 	}
 
-	$(".rec-colors-toolbar-background-color").append(str);
+	$(".rec-colors-floating-header").append(str);
 
 
 // Page Background Color
