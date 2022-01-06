@@ -5275,7 +5275,7 @@ white-space:nowrap;
 .theme-D .preview-theme-wrapper.selection-theme.theme-D {
 	border-color:var(--accent-foreground-color);
 	color:var(--accent-foreground-color);
-	background-color:var(--accent-background-color);
+	background-color:var(--td-selected-theme-background-color);
 	
 }
 

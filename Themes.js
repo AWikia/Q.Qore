@@ -2871,6 +2871,7 @@ var result = ':root {\n' +
 			'--td-anchor-background-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--anchor-background-color") + ';\n' +
 			'--td-sticky-header-background-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--sticky-header-background-color") + ';\n' +
 			'--td-toolbar-background-color:' + getComputedStyle(document.querySelector('html')).getPropertyValue("--toolbar-background-color") + ';\n' +
+			'--td-selected-theme-background-color:' + button_color + ';\n' +
 
 			'--community-background-color:' + head_color + ';\n' +
 			'--community-header-text-color:' + headertext_color + ';\n' +
@@ -2899,11 +2900,7 @@ if (refresh === true) {
 }
 if ($("body.options").length) {
 	CompileChosenThems()
-	if (suitcheck === true) {
-		CheckColorSuitability();
-	}
 }
-
 // SocialCompile();
 
 /*
@@ -2915,6 +2912,9 @@ CursorT('auto-r');
 }
 */
 
+if (suitcheck === true) {
+//	CheckColorSuitability();
+}
 
 }
 
