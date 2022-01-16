@@ -716,6 +716,9 @@ function RandomColor4(refresh=true) {
 // var x = chroma.random()
 	var Colors = ['000000','3a3a3a','bfbfbf','e6e6e6','ffffff','ff0000','00ff00','0000ff','ffff00','ff00ff','00ffff']
  var x = '#' + Colors[getRandomInt(Colors.length)]
+	while ( !(isSuitableColor(x, chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--page-background-color"))))  ) {
+		var x = '#' + Colors[getRandomInt(Colors.length)]
+	}
 $('input[type="range"][name="contentcolor"].red').val(chroma(x).get('rgb.r') );
 $('input[type="range"][name="contentcolor"].green').val(chroma(x).get('rgb.g') );
 $('input[type="range"][name="contentcolor"].blue').val(chroma(x).get('rgb.b') );
@@ -730,6 +733,10 @@ $("body").attr('page-border-background-color-auto', 'false');
 // var x = chroma.random()
 	  var Colors = ['808080','cccccc','6e6e6e','3c3c3c','a3a3a3','800000','008000','000080','808000','800080','008080']
  var x = '#' + Colors[getRandomInt(Colors.length)]
+	while ( !(isSuitableColor(x, chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--page-background-color"))))  ) {
+		var x = '#' + Colors[getRandomInt(Colors.length)]
+	}
+
 $('input[type="range"][name="border"].red').val(chroma(x).get('rgb.r') );
 $('input[type="range"][name="border"].green').val(chroma(x).get('rgb.g') );
 $('input[type="range"][name="border"].blue').val(chroma(x).get('rgb.b') );
@@ -743,6 +750,9 @@ function RandomColor6(refresh=true) {
 // var x = chroma.random()
 	var Colors = ['00ff00','8080ff','c0c0c0','000000','ffffff','ffff00','77ffff','00007f','600000','ff0000','952aab','ff0066','fa6d6d','00ffff','ccffff','c056a2','ff6ec7','ff7f00','8e236b','7f500d','0366cc','fbf305','ff6403','dd0907','f20884','4700a5','0000d3','02abea','1fb714','006412','562c05','90713a','404040','117dbb','8b12ae','4da60c','a74f01'] 
  var x = '#' + Colors[getRandomInt(Colors.length)]
+	while ( !(isSuitableColor(x, chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--page-background-color"))))  ) {
+		var x = '#' + Colors[getRandomInt(Colors.length)]
+	}
 $('input[type="range"][name="linkcolor"].red').val(chroma(x).get('rgb.r') );
 $('input[type="range"][name="linkcolor"].green').val(chroma(x).get('rgb.g') );
 $('input[type="range"][name="linkcolor"].blue').val(chroma(x).get('rgb.b') );
@@ -757,6 +767,9 @@ function RandomColor7(refresh=true) {
 // var x = chroma.random()
 	var Colors = ['ff8c00','e81123','d13438','c30052','bf0077','9a0089','881798','744da9','10893e','107c10','018574','2d7d9a','0063b1','6b69d6','8e8cd8','8764b8','038387','486860','525e54','7e735f','4c4a48','515c6b','4a5459','000000','ffffff']
  var x = '#' + Colors[getRandomInt(Colors.length)]
+	while ( !(isSuitableColor(x, chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--page-background-color"))))  ) {
+		var x = '#' + Colors[getRandomInt(Colors.length)]
+	}
 $('input[type="range"][name="buttoncolor"].red').val(chroma(x).get('rgb.r') );
 $('input[type="range"][name="buttoncolor"].green').val(chroma(x).get('rgb.g') );
 $('input[type="range"][name="buttoncolor"].blue').val(chroma(x).get('rgb.b') );

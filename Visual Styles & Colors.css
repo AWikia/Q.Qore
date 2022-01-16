@@ -1174,12 +1174,12 @@ border:0;
 [visualtheme="simple"] .mpisto-global-sidebar {
 	--page-accent-box-shadow:0 0 transparent;
 	--global-nav-link-opacity:1;
-	--global-nav-color:var(--accent-background-color-rgb)!important;
-	--global-nav-text-color:var(--accent-foreground-color)!important;
-	--global-nav-link-color-hover:var(--accent-foreground-color-hover)!important;
-	--global-nav-link-background-hover:var(--accent-background-color-hover-rgb)!important;
-	--global-nav-link-color-active:var(--accent-foreground-color-hover)!important;
-	--global-nav-link-background-active:var(--accent-background-color-hover-rgb)!important;
+	--global-nav-color:var(--luna-background-color-rgb)!important;
+	--global-nav-text-color:var(--luna-foreground-color)!important;
+	--global-nav-link-color-hover:var(--luna-foreground-color-inverted)!important;
+	--global-nav-link-background-hover:var(--luna-background-color-hover)!important;
+	--global-nav-link-color-active:var(--luna-foreground-color-inverted)!important;
+	--global-nav-link-background-active:var(--luna-background-color-hover)!important;
 	--global-nav-opacity:2!important;
 }
 
