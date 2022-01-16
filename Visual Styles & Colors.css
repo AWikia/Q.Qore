@@ -1243,7 +1243,7 @@ border:0;
 [visualtheme="simple"] .mpisto-global-sidebar .link:focus,
 [visualtheme="simple"] .mpisto-global-sidebar .link.active,
 [visualtheme="simple"] .mpisto-global-sidebar .cpe-dropdown.is-active .link {
-	background-color:rgb(var(--global-nav-link-background-active));
+	background-color:var(--global-nav-link-background-active);
 }
 
 	[visualtheme="simple"] .mpisto-header-container .link:hover *:not([filter]), 
