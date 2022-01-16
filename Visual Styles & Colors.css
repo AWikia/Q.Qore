@@ -1189,9 +1189,9 @@ border:0;
 	--global-nav-color:var(--toolbar-background-color-rgb)!important;
 	--global-nav-text-color:var(--toolbar-foreground-color)!important;
 	--global-nav-link-color-hover:var(--toolbar-foreground-color-hover)!important;
-	--global-nav-link-background-hover:var(--toolbar-background-color-hover-rgb)!important;
+	--global-nav-link-background-hover:var(--toolbar-background-color-hover)!important;
 	--global-nav-link-color-active:var(--toolbar-foreground-color-hover)!important;
-	--global-nav-link-background-active:var(--toolbar-background-color-hover-rgb)!important;
+	--global-nav-link-background-active:var(--toolbar-background-color-hover)!important;
 	--global-nav-opacity:2!important;
 }
 
@@ -1238,11 +1238,17 @@ border:0;
 }
 
 
+[visualtheme="simple"] .mpisto-global-sidebar .link:hover {
+	border-color:var(--global-nav-link-background-hover);
+	background-color:var(--global-nav-link-background-hover);
+}
+
 
 [visualtheme="simple"] .mpisto-global-sidebar .link:active, 
 [visualtheme="simple"] .mpisto-global-sidebar .link:focus,
 [visualtheme="simple"] .mpisto-global-sidebar .link.active,
 [visualtheme="simple"] .mpisto-global-sidebar .cpe-dropdown.is-active .link {
+	border-color:var(--global-nav-link-background-active);
 	background-color:var(--global-nav-link-background-active);
 }
 
