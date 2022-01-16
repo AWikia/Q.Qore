@@ -2,6 +2,7 @@
 window.MW18autoDark = false;
 window.MW18darkmode = false;
 window.MW18ContrastNotice = false;
+window.MW18PageColor = '#000000'
 
 /* Visual Themes */
 var visualThemes = ['lite','basic', 'contrast', 'simple','classic']
@@ -702,6 +703,7 @@ function RandomColor3(refresh=true) {
 // var x = chroma.random()
 	var Colors = ['000000','ffffff','dcdcdc','787878','464646','0a3b76','4395d1','99d9ea','0076a3','0d686b','00a99d','00a99d','7accc8','82ca9c','74a402','c4df9b','84871c','d9d56f','fff468','fff799','ffc20e','eb6119','fbaf5d','e57300','c14000','9e6b52','8c6239','c7b299','b82832','d85171','fedfec','563f7f','a186be','d9cfe5']
  var x = '#' + Colors[getRandomInt(Colors.length)]
+	window.MW18PageColor = x
 $('input[type="range"][name="contentbg"].red').val(chroma(x).get('rgb.r') );
 $('input[type="range"][name="contentbg"].green').val( chroma(x).get('rgb.g') );
 $('input[type="range"][name="contentbg"].blue').val( chroma(x).get('rgb.b') );
@@ -716,7 +718,7 @@ function RandomColor4(refresh=true) {
 // var x = chroma.random()
 	var Colors = ['000000','3a3a3a','bfbfbf','e6e6e6','ffffff','ff0000','00ff00','0000ff','ffff00','ff00ff','00ffff']
  var x = '#' + Colors[getRandomInt(Colors.length)]
-	while ( !(isSuitableColor(x, chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--page-background-color"))))  ) {
+	while ( !(isSuitableColor(x, window.MW18PageColor))  ) {
 		var x = '#' + Colors[getRandomInt(Colors.length)]
 	}
 $('input[type="range"][name="contentcolor"].red').val(chroma(x).get('rgb.r') );
@@ -733,7 +735,7 @@ $("body").attr('page-border-background-color-auto', 'false');
 // var x = chroma.random()
 	  var Colors = ['808080','cccccc','6e6e6e','3c3c3c','a3a3a3','800000','008000','000080','808000','800080','008080']
  var x = '#' + Colors[getRandomInt(Colors.length)]
-	while ( !(isSuitableColor(x, chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--page-background-color"))))  ) {
+	while ( !(isSuitableColor(x, window.MW18PageColor))  ) {
 		var x = '#' + Colors[getRandomInt(Colors.length)]
 	}
 
@@ -750,7 +752,7 @@ function RandomColor6(refresh=true) {
 // var x = chroma.random()
 	var Colors = ['00ff00','8080ff','c0c0c0','000000','ffffff','ffff00','77ffff','00007f','600000','ff0000','952aab','ff0066','fa6d6d','00ffff','ccffff','c056a2','ff6ec7','ff7f00','8e236b','7f500d','0366cc','fbf305','ff6403','dd0907','f20884','4700a5','0000d3','02abea','1fb714','006412','562c05','90713a','404040','117dbb','8b12ae','4da60c','a74f01'] 
  var x = '#' + Colors[getRandomInt(Colors.length)]
-	while ( !(isSuitableColor(x, chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--page-background-color"))))  ) {
+	while ( !(isSuitableColor(x, window.MW18PageColor))  ) {
 		var x = '#' + Colors[getRandomInt(Colors.length)]
 	}
 $('input[type="range"][name="linkcolor"].red').val(chroma(x).get('rgb.r') );
@@ -767,7 +769,7 @@ function RandomColor7(refresh=true) {
 // var x = chroma.random()
 	var Colors = ['ff8c00','e81123','d13438','c30052','bf0077','9a0089','881798','744da9','10893e','107c10','018574','2d7d9a','0063b1','6b69d6','8e8cd8','8764b8','038387','486860','525e54','7e735f','4c4a48','515c6b','4a5459','000000','ffffff']
  var x = '#' + Colors[getRandomInt(Colors.length)]
-	while ( !(isSuitableColor(x, chroma(getComputedStyle(document.querySelector('html')).getPropertyValue("--page-background-color"))))  ) {
+	while ( !(isSuitableColor(x, window.MW18PageColor))  ) {
 		var x = '#' + Colors[getRandomInt(Colors.length)]
 	}
 $('input[type="range"][name="buttoncolor"].red').val(chroma(x).get('rgb.r') );
@@ -2187,6 +2189,7 @@ if (refresh === true) {
 // dropdowncolor is Dropdown Bg
 // dropdowncolor3 is Automatic Content Color
 // dropdowncolor2 is Content Border
+window.MW18PageColor = getComputedStyle(document.querySelector('html')).getPropertyValue("--page-background-color");
 if ( (window.MW18darkmode === true) ) {
 	var content_text =	getComputedStyle(document.querySelector('html')).getPropertyValue("--page-background-color");
 // Adaptive
