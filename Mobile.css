@@ -196,12 +196,12 @@ border-left-color:var(--accent-background-color);
 .mpisto-global-sidebar {
 	--page-accent-box-shadow:0 0 transparent;
 	--global-nav-link-opacity:1;
-	--global-nav-color:var(--accent-background-color-rgb)!important;
-	--global-nav-text-color:var(--accent-foreground-color)!important;
-	--global-nav-link-color-hover:var(--accent-foreground-color-hover)!important;
-	--global-nav-link-background-hover:var(--accent-background-color-hover-rgb)!important;
-	--global-nav-link-color-active:var(--accent-foreground-color-hover)!important;
-	--global-nav-link-background-active:var(--accent-background-color-hover-rgb)!important;
+	--global-nav-color:var(--luna-background-color-rgb)!important;
+	--global-nav-text-color:var(--luna-foreground-color)!important;
+	--global-nav-link-color-hover:var(--luna-foreground-color-inverted)!important;
+	--global-nav-link-background-hover:var(--luna-background-color-hover)!important;
+	--global-nav-link-color-active:var(--luna-foreground-color-inverted)!important;
+	--global-nav-link-background-active:var(--luna-background-color-hover)!important;
 	--global-nav-opacity:2!important;
 }
 
@@ -211,9 +211,9 @@ border-left-color:var(--accent-background-color);
 	--global-nav-color:var(--toolbar-background-color-rgb)!important;
 	--global-nav-text-color:var(--toolbar-foreground-color)!important;
 	--global-nav-link-color-hover:var(--toolbar-foreground-color-hover)!important;
-	--global-nav-link-background-hover:var(--toolbar-background-color-hover-rgb)!important;
+	--global-nav-link-background-hover:var(--toolbar-background-color-hover)!important;
 	--global-nav-link-color-active:var(--toolbar-foreground-color-hover)!important;
-	--global-nav-link-background-active:var(--toolbar-background-color-hover-rgb)!important;
+	--global-nav-link-background-active:var(--toolbar-background-color-hover)!important;
 	--global-nav-opacity:2!important;
 }
 
@@ -237,11 +237,19 @@ border-left-color:var(--accent-background-color);
 }
 
 .mpisto-global-sidebar .link:active, .mpisto-global-sidebar .link:focus,  .mpisto-global-sidebar .cpe-dropdown.is-active .link {
+	border-color:var(--global-nav-link-background-active);
+	background-color:var(--global-nav-link-background-active);
 	-webkit-animation:none;
 	animation:none;
 	border-color:transparent;
 	box-shadow:none;
 }
+
+.mpisto-global-sidebar .link:hover {
+	border-color:var(--global-nav-link-background-hover);
+	background-color:var(--global-nav-link-background-hover);
+}
+
 
 
 /*
