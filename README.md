@@ -1,10 +1,10 @@
 *This project has been positioned to a legacy position in where the core CPE Language component will no longer be updated. See [Evelution](https://github.com/AWikia/SkinEvelution) for the successor project with newer CPE Language and Performance. This project will be discontinued by Oct 23, 2025*
 # Qortex Essentials Diadyktio
 OpenSource Mpirthi Project with great modern browser support.  (Formerly Mpisto War 2018)
-- Current Build: 			5950
-- Current Internet Release: 226
-- Current API Version:		595.0
-- Current Version:			5.95.0
+- Current Build: 			5975
+- Current Internet Release: 227
+- Current API Version:		597.5
+- Current Version:			5.97.5
 
 # Wrappers
 ## Main aka Mpistoskin2

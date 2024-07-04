@@ -470,6 +470,16 @@ container > main {
 	right:auto;
 }
 
+	.mpisto-global-sidebar .link .cpe-icon.company-icon {
+		background-color:currentColor;
+		-webkit-mask-image:url("MaskedLogo.png");
+		mask-image:url("MaskedLogo.png");
+		-webkit-mask-size:contain;
+		mask-size:contain;
+		image-rendering:initial;
+	}
+
+
 	.mpisto-global-sidebar .link .cpe-icon {
 		--icon-size:calc(1.1 * calc(var(--global-nav-icon-scale-factor) / 50));
 	}

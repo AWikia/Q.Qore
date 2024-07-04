@@ -2147,7 +2147,7 @@ function SocialCompile() {
 	$("head .social-colors").text('');	
 	let str = '';
 	var socialV = ['facebook','googleplus','line','linkedin','instagram','meneame','nk','odnoklassniki','reddit','tumblr','twitter','vkontakte','wykop','weibo','youtube','discord','fandom','asecure','steam','spotify','twitch','qore','mpisto','splashhol','gamepedia','github','xbox']
-	var socialC = ['#3b5998','#dd4b39','#00c300','#0077b5','#e02d69','#ff6400','#4077a7','#f96900','#ff4500','#34465d','#1da1f2','#587ca3','#fb803f','#ff8140','#cd201f','#5865f2','#00acac','#0009FF','#000','#1ed760','#563194','#ff4500','#18bbc5','#61448d','#f4801f','#191717','#5dc21e']
+	var socialC = ['#3b5998','#dd4b39','#00c300','#0077b5','#e02d69','#ff6400','#4077a7','#f96900','#ff4500','#34465d','#1da1f2','#587ca3','#fb803f','#ff8140','#cd201f','#5865f2','#fa005a','#0066ff','#000','#1ed760','#563194','#ff4500','#18bbc5','#61448d','#f4801f','#191717','#5dc21e']
 	var socialAM = socialC.length
 // Start Content BG
 		if ( (window.MW18darkmode === true) ) {
